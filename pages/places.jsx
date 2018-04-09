@@ -16,7 +16,6 @@ class Places extends Page {
       <h2>University of Croydon</h2>
       <h1>Schedule of Premises</h1>
 
-      // render a table of the "places" data from ./data folder
       <Table dataset={ this.props.data.places } columns={ columns } />
     </div>
   }
