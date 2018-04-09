@@ -1,0 +1,23 @@
+{
+  "name": "asl-prototypes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "prototype-kit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UKHomeOffice/asl-prototypes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UKHomeOffice/asl-prototypes/issues"
+  },
+  "homepage": "https://github.com/UKHomeOffice/asl-prototypes#readme",
+  "dependencies": {
+    "prototype-kit": "^1.6.1"
+  }
+}
