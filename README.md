@@ -25,3 +25,7 @@ npm run dev
 ```
 
 In both cases, you can navigate to http://localhost:3000/ in a browser and see the prototype.
+
+## Prototype kit
+
+[Documentation for prototype kit](https://github.com/lennym/prototype-kit)
