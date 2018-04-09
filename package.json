@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "prototype-kit"
+    "start": "prototype-kit",
+    "dev": "prototype-kit --watch"
   },
   "repository": {
     "type": "git",
