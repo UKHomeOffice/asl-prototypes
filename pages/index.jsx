@@ -18,7 +18,7 @@ class Login extends Form {
   fields() {
     return [
       { label: 'Username' },
-      { label: 'Password' }
+      { type: 'password', label: 'Password' }
     ]
   }
 
