@@ -1,35 +1,21 @@
 import React from 'react';
-import { Page } from 'prototype-kit';
+import { Page, Table } from 'prototype-kit';
 
 class Home extends Page {
 
   content() {
-    console.log(this.props);
+    const columns = {
+      site: 'Site',
+      building: 'Building',
+      name: 'Name'
+    };
+
     return <div>
 
       <h2>University of Croydon</h2>
       <h1>Schedule of Premises</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Site</th>
-            <th>Building</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            this.props.data.places.map(place => (
-              <tr>
-                <td>{ place.site }</td>
-                <td>{ place.building }</td>
-                <td>{ place.name }</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
+      <Table dataset={ this.props.data.places } columns={ columns } />
     </div>
   }
 
