@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/UKHomeOffice/asl-prototypes#readme",
   "dependencies": {
-    "prototype-kit": "^1.9.1"
+    "prototype-kit": "^1.10.0"
   }
 }
