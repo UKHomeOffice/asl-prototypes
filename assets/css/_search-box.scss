@@ -1,0 +1,30 @@
+@import "prototype-kit";
+
+.search-box {
+  p {
+    padding-right: 38px;
+
+    input {
+      width: 100%;
+      border-right: none;
+      vertical-align: middle;
+      box-sizing: border-box;
+    }
+    button {
+      height:33px;
+      width:33px;
+      margin-right: -33px;
+      padding: 5px 0 4px;
+      border: none;
+      background: $govuk-blue url('../images/search.png') no-repeat left center;
+      cursor: pointer;
+      vertical-align: middle;
+
+      @include media(tablet){
+        height:38px;
+        width:38px;
+        margin-right: -38px;
+      }
+    }
+  }
+}

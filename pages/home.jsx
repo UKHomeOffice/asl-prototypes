@@ -3,6 +3,7 @@ import { Page, Form, Table } from 'prototype-kit';
 import { some } from 'lodash';
 
 import BigNumber from './components/big-number';
+import SearchBox from './components/search';
 
 class Home extends Page {
 
@@ -46,11 +47,10 @@ class Home extends Page {
         </div>
         <div className="column-one-quarter">
           <aside>
-            <Form.Input
-              className="form-control-3-4"
+            <SearchBox
               label="Search establishments"
               hint="By establishment name or licence number"
-              onChange={e => this.setState({ searchTerm: e.target.value})}
+              onChange={searchTerm => this.setState({ searchTerm })}
               />
           </aside>
         </div>
