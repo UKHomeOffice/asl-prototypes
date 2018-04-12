@@ -9,3 +9,19 @@ aside {
 table {
   table-layout: fixed;
 }
+
+dl {
+  margin-bottom: $gutter;
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin-bottom: $gutter/2;
+    white-space: pre-line;
+  }
+}
+
+ul {
+  @extend .list;
+  @extend .list-bullet;
+}
