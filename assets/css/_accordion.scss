@@ -36,6 +36,10 @@
 
   .content {
     padding: $gutter-half;
+
+    h2:first-child {
+      margin-top:0;
+    }
   }
 }
 

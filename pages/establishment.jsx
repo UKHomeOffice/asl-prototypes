@@ -44,13 +44,39 @@ class Establishment extends Page {
 
           <Accordion>
             <ExpandingPanel title="Conditions">
-              <p>Lorem ipsum dolor</p>
+              <p>In addition to the standard conditions of Section 2C licences, this establishment will also:</p>
+              <p>Ensure that Natalie Page and Terrance Lang attend an accredited NACWO training course within the next 6 months. They are forbidden to work with LA until proof of this training has been provided to ASRU.</p>
             </ExpandingPanel>
             <ExpandingPanel title="Authorisations">
-              <p>Lorem ipsum dolor</p>
+              <h2>Methods of killing not mentioned in Schedule 1</h2>
+              <h3>Method</h3>
+              <p>Use of concussion with captive bolt for LA</p>
+              <h3>Applicable animals</h3>
+              <p>All infant large animals under 6 months. This may apply to calves, lambs, and piglets. This method has been proven to be the most human way of killing infant livestock.</p>
+
+              <h2>Setting free and re-homing of protected animals</h2>
+              <h3>Cirumstances</h3>
+              <p>{ establishment.name } is currently undertaking major research into the levels of fertility in livestock. During the course of this research, some surplus stock may be produced. We have come to an agreement with 3 local sheep farmers to re-integrate these animals into the national flock.</p>
+              <h3>Applicable animals</h3>
+              <p>Only infant lambs between 3 and 6 months. Older animals and other species are not covered by this authorisation.</p>
             </ExpandingPanel>
             <ExpandingPanel title="Related contacts">
-              <p>Lorem ipsum dolor</p>
+              <h2>Inspector</h2>
+              <p>Jon Hills</p>
+              <dl>
+                <dt>Email address</dt>
+                <dd><a href="#">jon.hills@example.com</a></dd>
+
+                <dt>Contact number</dt>
+                <dd>01234 567890</dd>
+              </dl>
+
+              <h2>ASRU contact</h2>
+              <p>Sean Jones</p>
+              <dl>
+                <dt>Email address</dt>
+                <dd><a href="#">asru@example.com</a></dd>
+              </dl>
             </ExpandingPanel>
           </Accordion>
         </div>
