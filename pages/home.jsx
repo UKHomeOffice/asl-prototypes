@@ -31,11 +31,12 @@ class Home extends Page {
 
   content() {
     const filtered = this.search();
+    const all = this.props.data.establishments;
     return <React.Fragment>
       <h1>{ this.greet() }</h1>
       <div className="grid-row">
         <div className="column-one-quarter">
-          <BigNumber number={ this.props.data.establishments.length } label="Establishments" />
+          <BigNumber number={ all.length } label="Establishments" />
         </div>
         <div className="column-one-quarter">
           <BigNumber number="17000" label={<a href="/personal-licences">Personal licences</a>} />
@@ -54,6 +55,7 @@ class Home extends Page {
           </aside>
         </div>
       </div>
+      <h2>{ filtered.length === all.length ? 'All establishments' : `${filtered.length} of ${all.length} establishments` }</h2>
       <Table
         dataset={ filtered }
         columns={ { name: 'Establishment name', licenceNumber: 'Licence number' } }
