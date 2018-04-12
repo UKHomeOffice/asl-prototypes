@@ -49,7 +49,7 @@ class Home extends Page {
           <aside>
             <SearchBox
               label="Search establishments"
-              hint="By establishment name or licence number"
+              hint="By name or licence number"
               onChange={searchTerm => this.setState({ searchTerm })}
               />
           </aside>
@@ -58,7 +58,7 @@ class Home extends Page {
       <h2>{ filtered.length === all.length ? 'All establishments' : `${filtered.length} of ${all.length} establishments` }</h2>
       <Table
         dataset={ filtered }
-        columns={ { name: 'Establishment name', licenceNumber: 'Licence number' } }
+        columns={ { name: 'Name', licenceNumber: 'Licence number' } }
         formatter={ (key, value, row) => this.cell(key, value, row) }
         sort="name"
         />
