@@ -1,1 +1,10 @@
 @import "prototype-kit";
+
+aside {
+  border-top: 2px solid $govuk-blue;
+  padding-top: $gutter-half;
+}
+
+table {
+  table-layout: fixed;
+}
