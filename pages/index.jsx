@@ -3,7 +3,7 @@ import { Form } from 'prototype-kit';
 
 class Login extends Form {
 
-  onSubmit() {
+  onSubmit(values) {
     this.redirect('/home');
   }
 
