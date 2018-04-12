@@ -23,7 +23,7 @@ class Search extends React.Component {
             className="form-control"
             id="search"
             name="search"
-            type="search"
+            type="text"
             value={ this.state ? this.state.value : '' }
             onChange={e => this.setState({ value: e.target.value })}
             />
