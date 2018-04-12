@@ -1,0 +1,54 @@
+.expanding-panel {
+  border-top: 1px solid $border-colour;
+  &:last-child {
+    border-bottom: 1px solid $border-colour;
+  }
+
+  header {
+    padding: $gutter-half;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background: $highlight-colour;
+    }
+
+    h3 {
+      margin: 0;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: $gutter-half ;
+        right: $gutter-half;
+        width: 16px;
+        height: 16px;
+        margin-top: 4px;
+        background: url(../images/plus-minus.svg) no-repeat bottom left;
+      }
+    }
+  }
+
+  &.open {
+    h3:after {
+      background: url(../images/plus-minus.svg) no-repeat top left;
+    }
+  }
+
+  .content {
+    padding: $gutter-half;
+  }
+}
+
+.accordion {
+  .toggles {
+    margin: 0;
+    text-align: right;
+    button {
+      background: none;
+      border: none;
+      color: $link-colour;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
