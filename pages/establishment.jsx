@@ -3,9 +3,20 @@ import { Page } from 'prototype-kit';
 
 class Establishment extends Page {
 
+  establishment() {
+    return this.props.data.establishments.find(row => row.id === this.props.query.id);
+  }
+
+  breadcrumb() {
+    return [
+      { label: 'Home', href: '/home' },
+      this.establishment().name
+    ];
+  }
+
   content() {
     // get the establishment with the id specified in the query string
-    const establishment = this.props.data.establishments.find(row => row.id === this.props.query.id);
+    const establishment = this.establishment();
 
     return <React.Fragment>
       <h1>{ establishment.name }</h1>

@@ -6,9 +6,20 @@ import ExpandingPanel from './components/expanding-panel';
 
 class Details extends Page {
 
+  establishment() {
+    return this.props.data.establishments.find(row => row.id === this.props.query.id);
+  }
+
+  breadcrumb() {
+    return [
+      { label: 'Home', href: '/home' },
+      { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
+      'Establishment details'
+    ];
+  }
+
   content() {
-    // get the establishment with the id specified in the query string
-    const establishment = this.props.data.establishments.find(row => row.id === this.props.query.id);
+    const establishment = this.establishment();
 
     return <React.Fragment>
       <div className="grid-row">
