@@ -4,11 +4,12 @@ import { Page } from 'prototype-kit';
 import Accordion from './components/accordion';
 import ExpandingPanel from './components/expanding-panel';
 
-class Establishment extends Page {
+class Details extends Page {
 
   content() {
     // get the establishment with the id specified in the query string
     const establishment = this.props.data.establishments.find(row => row.id === this.props.query.id);
+
     return <React.Fragment>
       <div className="grid-row">
         <div className="column-two-thirds">
@@ -86,4 +87,4 @@ class Establishment extends Page {
 
 }
 
-export default Establishment;
+export default Details;
