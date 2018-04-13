@@ -35,10 +35,10 @@ class Home extends Page {
           <BigNumber number={ all.length } label="Establishments" />
         </div>
         <div className="column-one-quarter">
-          <BigNumber number="17000" label={<a href="/personal-licences">Personal licences</a>} />
+          <BigNumber number="17231" label={<a href="/personal-licences">Personal licences</a>} />
         </div>
         <div className="column-one-quarter">
-          <BigNumber number="500" label={<a href="/projects">Projects</a>} />
+          <BigNumber number="3209" label={<a href="/projects">Projects</a>} />
         </div>
         <div className="column-one-quarter">
           <aside>
