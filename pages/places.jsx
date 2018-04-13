@@ -45,10 +45,12 @@ class Places extends Page {
         site: [],
         suitability: [],
         holding: []
-      }
+      },
+      data: this.props.data.places
     });
     this.onSelectChange = this.onSelectChange.bind(this);
     this.filterData = this.filterData.bind(this);
+    this.emitChange = this.emitChange.bind(this);
   }
 
   establishment() {
@@ -85,7 +87,6 @@ class Places extends Page {
     }
     filters[e.target.name] = col;
     this.setState({ filters });
-    this.filterData();
   }
 
   filterData() {
@@ -97,6 +98,12 @@ class Places extends Page {
       Object.keys(this.state.filters).reduce((matches, filter) =>
         matches && matchesHelper(row[filter], this.state.filters[filter]), true)
     );
+  }
+
+  emitChange() {
+    this.setState({
+      data: this.filterData()
+    });
   }
 
   content() {
@@ -148,7 +155,8 @@ class Places extends Page {
           </OptionSelect>
         </div>
       </div>
-      <Table dataset={ this.filterData() } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
+      <button className="button" onClick={() => this.emitChange()}>Apply filters</button>
+      <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
     </React.Fragment>
   }
 
