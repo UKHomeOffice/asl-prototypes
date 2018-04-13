@@ -1,6 +1,265 @@
-site,area,suitability,holding,nacwo,restrictions
-Apollo House,G10 Lab,LA,"SEP,NOH",Barry Rogers,
-Apollo House,G11 Lab,AQ,"SEP,NOH",Edward Lee,
-Apollo House,G12 Lab,"AQ,SA",SEP,Edward Lee,
-Apollo House,G13 Lab,SA,"SEP,STH",Natalie Page,
-Apollo House,G14 Lab,"AQ,SA",STH,Edward Lee,
+id,site,area,name,suitability,holding,nacwo
+45a98d10-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,,Basement holding room,SA,"STH, NSEP",Brian Proudfoot
+45a8c9c0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,1st Floor,20.15,SA,"STH, NSEP",Brian Proudfoot
+45a82d80-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,1st Floor,20.36,SA,"STH, NSEP",Brian Proudfoot
+45a79140-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,1st Floor,40.17,SA,"STH, NSEP",Brian Proudfoot
+45a4d220-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C-80,SA,"STH, SEP, NSEP",Brian Proudfoot
+45a1c4e0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C42-2,SA,"STH, NSEP",Brian Proudfoot
+45a6cdf0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C56.1,SA,"LTH, NSEP",Brian Proudfoot
+45a631b0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C76,SA,"STH, NSEP",Brian Proudfoot
+45a56e60-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C78,SA,"STH, NSEP",Brian Proudfoot
+45a40ed0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C83,SA,"STH, NSEP",Brian Proudfoot
+45a32470-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C83-1,SA,"STH, SEP, NSEP",Brian Proudfoot
+45a26120-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,2nd Floor,C91,SA,"STH, SEP, NSEP",Brian Proudfoot
+45a10190-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,3rd Floor,D96,SA,"STH, NSEP",Brian Proudfoot
+45a06550-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,3rd Floor,D96-1,SA,"STH, NSEP",Brian Proudfoot
+459fa200-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,3rd Floor,D96-2,SA,"STH, NSEP",Brian Proudfoot
+459edeb0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,3rd Floor,E29,SA,"STH, NSEP",Brian Proudfoot
+459e4270-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,3rd Floor,E30,SA,LTH,Brian Proudfoot
+45ae9620-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Peel,1.01,SA,"STH, NSEP",Brian Proudfoot
+45ae20f0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Peel,1.02,SA,"STH, SEP, NSEP",Brian Proudfoot
+45ad84b0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Peel,1.03,SA,"STH, NSEP",Brian Proudfoot
+45acc160-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Seacole,2.05,SA,"STH, NSEP",Brian Proudfoot
+45abfe10-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Seacole,2.06,SA,"STH, NSEP",Brian Proudfoot
+45ab61d0-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Seacole,2.07,AQ,"STH, NSEP",Brian Proudfoot
+45aac590-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Seacole,3.10,SA,"STH, NSEP",Brian Proudfoot
+45aa2950-31a3-11e8-841f-b7a84abc1449,2 Marsham Street,Seacole,4.10,SA,"STH, NSEP",Brian Proudfoot
+45b4fec0-31a3-11e8-841f-b7a84abc1449,Apollo House,1st Floor,112,SA,"STH, NSEP",Megan Alberts
+45b43b70-31a3-11e8-841f-b7a84abc1449,Apollo House,1st Floor,113,SA,"STH, NSEP",Megan Alberts
+45b37820-31a3-11e8-841f-b7a84abc1449,Apollo House,1st Floor,128,SA,"STH, NSEP",Megan Alberts
+45b2dbe0-31a3-11e8-841f-b7a84abc1449,Apollo House,2nd Floor,224,SA,"STH, NSEP",Megan Alberts
+45b1a360-31a3-11e8-841f-b7a84abc1449,Apollo House,3rd Floor,311,SA,"STH, NSEP",Megan Alberts
+45b10720-31a3-11e8-841f-b7a84abc1449,Apollo House,3rd Floor,312,SA,"LTH, NSEP",Megan Alberts
+45b06ae0-31a3-11e8-841f-b7a84abc1449,Apollo House,3rd Floor,320,SA,"STH, NSEP",Megan Alberts
+45b23fa0-31a3-11e8-841f-b7a84abc1449,Apollo House,3rd Floor,Room 3,SA,"STH, NSEP",Megan Alberts
+45aff5b0-31a3-11e8-841f-b7a84abc1449,Apollo House,4th Floor,418,SA,"STH, NSEP",Megan Alberts
+45af5970-31a3-11e8-841f-b7a84abc1449,Apollo House,4th Floor,419,SA,"STH, NSEP",Megan Alberts
+456c35f0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z05,AQ,"STH, NSEP",Gareth Tindall
+456b72a0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z05A,AQ,"STH, SEP, NSEP",Gareth Tindall
+456ad660-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z06,AQ,"LTH, NSEP",Gareth Tindall
+456a3a20-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z07,AQ,"LTH, NSEP",Gareth Tindall
+456976d0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z08,AQ,"LTH, NSEP",Gareth Tindall
+4568b380-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z09,AQ,"STH, SEP, NSEP",Gareth Tindall
+45681740-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,"2Z13, 2Z14, 2Z15",AQ,"LTH, NSEP",Gareth Tindall
+456753f0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Aquatics,2Z15B,AQ,"STH, SEP, NSEP",Gareth Tindall
+456690a0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing A,"2Z21, 2Z24, 2Z27",SA,"STH, SEP, NSEP",Gareth Tindall
+4565cd50-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing A,"2Z22, 2Z20, 2Z28",SA,"LTH, NSEP",Gareth Tindall
+45650a00-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing A,"2Z25, 2Z23, 2Z26",SA,"STH, SEP, NSEP",Gareth Tindall
+45713f00-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing B,2Z30,SA,"STH, NSEP",Gareth Tindall
+4570a2c0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing B,"2Z31, 2Z42",SA,"LTH, NSEP",Gareth Tindall
+456ea6f0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing B,2Z36,SA,"LTH, NSEP",Gareth Tindall
+456f4330-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing B,"2Z38, 2Z46",SA,"STH, SEP, NSEP",Gareth Tindall
+45700680-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing B,"2Z43, 2Z48",SA,"LTH, NSEP",Gareth Tindall
+456e0ab0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing C,2Z40,SA,"STH, SEP, NSEP",Gareth Tindall
+456d6e70-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing C,2Z41,SA,"LTH, NSEP",Gareth Tindall
+456cd230-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing C,2Z51,SA,"LTH, NSEP",Gareth Tindall
+45602800-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z81,SA,"LTH, NSEP",Gareth Tindall
+4563aa70-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z82,SA,"LTH, NSEP",Gareth Tindall
+45646dc0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z83,SA,"STH, NSEP",Gareth Tindall
+4562e720-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z84 2Z85,SA,"STH, SEP, NSEP",Gareth Tindall
+456223d0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z86,SA,"STH, SEP, NSEP",Gareth Tindall
+4560eb50-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z87 2Z88,SA,"LTH, NSEP",Gareth Tindall
+45618790-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z90 2Z91,SA,"STH, SEP, NSEP",Gareth Tindall
+455f64b0-31a3-11e8-841f-b7a84abc1449,"Croydon General Hospital, Research Centre",Wing D,2Z92,SA,"LTH, NSEP",Gareth Tindall
+455dde10-31a3-11e8-841f-b7a84abc1449,Lunar House,1st Floor,1.01,SA,"STH, NSEP",
+46058fc0-31a3-11e8-841f-b7a84abc1449,Lunar House,1st Floor,1.02,SA,"LTH, NSEP",John Sharp
+46051a90-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.01,SA,"STH, NSEP",John Sharp
+46047e50-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.02,SA,"STH, NSEP",John Sharp
+46040920-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.03,SA,"STH, NSEP",John Sharp
+46036ce0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.04,SA,"STH, NSEP",John Sharp
+4602f7b0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.05,SA,"STH, NSEP",John Sharp
+46025b70-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.06,SA,"STH, NSEP",John Sharp
+4601bf30-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.07,SA,"STH, NSEP",John Sharp
+46014a00-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.08,SA,"STH, NSEP",John Sharp
+46005fa0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.09,SA,"STH, NSEP",John Sharp
+45ffc360-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.1,SA,"STH, SEP",John Sharp
+45ff2720-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.11,SA,"STH, NSEP",John Sharp
+45feb1f0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.12,SA,"STH, NSEP",John Sharp
+45fe15b0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.13,SA,"STH, NSEP",John Sharp
+45fd7970-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.14,SA,"STH, SEP",John Sharp
+45fd0440-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.15,SA,"STH, NSEP",John Sharp
+45fc6800-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.16,SA,"LTH, NSEP",John Sharp
+45fbcbc0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.17,SA,"STH, NSEP",John Sharp
+45fb2f80-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.18,SA,"STH, NSEP",John Sharp
+45fa9340-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.19,"SA, AQ","LTH, NSEP",John Sharp
+45fa1e10-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.2,AQ,"STH, NSEP",John Sharp
+45f981d0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.21,AQ,"LTH, NSEP",John Sharp
+45f8e590-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.22,SA,"LTH, NSEP",John Sharp
+45f87060-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.23,SA,"LTH, NSEP",John Sharp
+45f7d420-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.24,SA,"STH, NSEP",John Sharp
+45f737e0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.25,SA,"LTH, NSEP",John Sharp
+45f6c2b0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.26,SA,"STH, NSEP",John Sharp
+45f62670-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.27,SA,"STH, NSEP",John Sharp
+45f5b140-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.28,SA,"LTH, NSEP",John Sharp
+45f53c10-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.29,SA,"STH, NSEP",John Sharp
+45f49fd0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.3,SA,"LTH, NSEP",John Sharp
+45f42aa0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.31,SA,"LTH, NSEP",John Sharp
+45f38e60-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.32,SA,"STH, NSEP",John Sharp
+45f2f220-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.33,SA,"LTH, NSEP",John Sharp
+45f27cf0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.34,SA,"STH, NSEP",John Sharp
+45f1e0b0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.35,SA,"STH, NSEP",John Sharp
+45f14470-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.36,SA,"LTH, NSEP",John Sharp
+45f0a830-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.37,SA,"STH, NSEP",John Sharp
+45f03300-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.38,SA,"LTH, NSEP",John Sharp
+45ef96c0-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.39,SA,"STH, NSEP",John Sharp
+45ef2190-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.4,SA,"LTH, NSEP",John Sharp
+45eeac60-31a3-11e8-841f-b7a84abc1449,Lunar House,2nd Floor,2.41,SA,"LTH, NSEP",John Sharp
+45ee1020-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.01,SA,"STH, NSEP",John Sharp
+45ed73e0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.02,SA,"STH, NSEP",John Sharp
+45ecd7a0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.03,SA,"STH, NSEP",John Sharp
+45ec3b60-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.04,SA,"STH, NSEP",John Sharp
+45eb9f20-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.05,SA,"STH, NSEP",John Sharp
+45eb02e0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.06,SA,"STH, NSEP",John Sharp
+45ea66a0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.07,SA,"STH, NSEP",John Sharp
+45e9ca60-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.08,SA,"STH, SEP",John Sharp
+45e95530-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.09,SA,"STH, NSEP",John Sharp
+45e8b8f0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.1,SA,"STH, SEP",John Sharp
+45e81cb0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.11,SA,"STH, NSEP",John Sharp
+45e7a780-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.12,SA,"STH, SEP",John Sharp
+45e70b40-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.13,SA,"STH, NSEP",John Sharp
+45e69610-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.14,SA,"LTH, NSEP",John Sharp
+45e620e0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.15,SA,"STH, NSEP",John Sharp
+45e584a0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.16,SA,"LTH, NSEP",John Sharp
+45e4e860-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.17,SA,"STH, NSEP",John Sharp
+45e47330-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.18,SA,"LTH, NSEP",John Sharp
+45e3fe00-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.19,SA,"STH, NSEP",John Sharp
+45e361c0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.2,SA,"LTH, NSEP",John Sharp
+45e2ec90-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.21,SA,"STH, NSEP",John Sharp
+45e22940-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.22,SA,"LTH, NSEP",John Sharp
+45e165f0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.23,SA,"STH, NSEP",John Sharp
+45e0c9b0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.24,SA,"LTH, NSEP",John Sharp
+45e02d70-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.25,SA,"STH, NSEP",John Sharp
+45df9130-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.26,SA,"STH, NSEP",John Sharp
+45def4f0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.27,SA,"LTH, NSEP",John Sharp
+45de7fc0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.28,SA,"STH, NSEP",John Sharp
+45dde380-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.29,SA,"STH, NSEP",John Sharp
+45dd6e50-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.3,SA,"STH, NSEP",John Sharp
+45dcd210-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.31,SA,"STH, NSEP",John Sharp
+45dc5ce0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.32,SA,"STH, NSEP",John Sharp
+45dbc0a0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.33,SA,"STH, NSEP",John Sharp
+45dafd50-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.34,SA,"STH, NSEP",John Sharp
+45da6110-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.35,SA,"STH, NSEP",John Sharp
+45d9c4d0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.36,SA,"STH, SEP",John Sharp
+45d92890-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.37,SA,"STH, NSEP",John Sharp
+45d88c50-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.38,SA,"STH, NSEP",John Sharp
+45d7f010-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.39,SA,"STH, NSEP",John Sharp
+45d77ae0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.4,SA,"STH, NSEP",John Sharp
+45d6dea0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.41,SA,"STH, NSEP",John Sharp
+45d66970-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.42,SA,"STH, NSEP",John Sharp
+45d5cd30-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.43,SA,"STH, NSEP",John Sharp
+45d530f0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.44,SA,"STH, NSEP",John Sharp
+45d4bbc0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.45,SA,"STH, NSEP",John Sharp
+45d41f80-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.46,SA,"STH, NSEP",John Sharp
+45d38340-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.47,SA,"STH, NSEP",John Sharp
+45d2e700-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.48,SA,"STH, NSEP",John Sharp
+45d24ac0-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.49,SA,"STH, NSEP",John Sharp
+45d1ae80-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.5,SA,"STH, NSEP",John Sharp
+45d0eb30-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.51,SA,"STH, NSEP",John Sharp
+45d07600-31a3-11e8-841f-b7a84abc1449,Lunar House,3rd Floor,3.52,SA,"STH, NSEP",John Sharp
+45cfd9c0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.01,"SA, LA, NHP","STH, SEP",John Sharp
+45cf6490-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.02,"SA, LA, NHP","STH, SEP",John Sharp
+45cec850-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.03,"SA, LA, NHP","STH, SEP",John Sharp
+45ce2c10-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.04,"SA, NHP","LTH, SEP",John Sharp
+45cdb6e0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.05,"SA, NHP","LTH, NSEP",John Sharp
+45cd41b0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.06,NHP,"LTH, SEP",John Sharp
+45cca570-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.07,NHP,"LTH, SEP",John Sharp
+45cc0930-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.08,NHP,"STH, NSEP",John Sharp
+45cb6cf0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.09,SA,"LTH, NSEP",John Sharp
+45cad0b0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.1,SA,"LTH, NSEP",John Sharp
+45ca3470-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.11,SA,"STH, SEP",John Sharp
+45c99830-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.12,SA,"LTH, NSEP",John Sharp
+45c8fbf0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.13,SA,"LTH, NSEP",John Sharp
+45c886c0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.14,SA,"LTH, NSEP",John Sharp
+45c7ea80-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.15,NHP,"SEP, NSEP",John Sharp
+45c77550-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.16,NHP,"LTH, NSEP",John Sharp
+45c6d910-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.17,NHP,"LTH, NSEP",John Sharp
+45c63cd0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.18,NHP,"LTH, NSEP",John Sharp
+45c5c7a0-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,4.19,NHP,"LTH, NSEP",John Sharp
+45c50450-31a3-11e8-841f-b7a84abc1449,Lunar House,4th Floor,5.01,"LA, NHP","STH, LTH, NSEP",John Sharp
+45c46810-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.02,NHP,"STH, NSEP",John Sharp
+45c3cbd0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.03,NHP,"STH, NSEP",John Sharp
+45c30880-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.04,NHP,"STH, NSEP",John Sharp
+45c26c40-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.05,NHP,"STH, NSEP",John Sharp
+45c1d000-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.06,NHP,"STH, NSEP",John Sharp
+45c133c0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.07,NHP,"STH, NSEP",John Sharp
+45c0be90-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.08,NHP,"STH, NSEP",John Sharp
+45c02250-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.09,NHP,"STH, NSEP",John Sharp
+45bf5f00-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.1,NHP,"STH, NSEP",John Sharp
+45bec2c0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.11,NHP,"STH, NSEP",John Sharp
+45bdff70-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.12,NHP,"STH, NSEP",John Sharp
+45bd3c20-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.13,NHP,"STH, NSEP",John Sharp
+45bc9fe0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.14,NHP,"STH, NSEP",John Sharp
+45bc03a0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.15,NHP,"STH, NSEP",John Sharp
+45bb6760-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.16,NHP,"STH, NSEP",John Sharp
+45baa410-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.17,NHP,"STH, NSEP",John Sharp
+45ba07d0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.18,NHP,"STH, NSEP",John Sharp
+45b96b90-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.19,NHP,"STH, NSEP",John Sharp
+45b8cf50-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.2,NHP,"STH, NSEP",John Sharp
+45b83310-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.21,NHP,"STH, NSEP",John Sharp
+45b76fc0-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.22,NHP,"STH, NSEP",John Sharp
+45b6d380-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.23,NHP,"STH, NSEP",John Sharp
+45b63740-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.23,NHP,"STH, NSEP",John Sharp
+45b59b00-31a3-11e8-841f-b7a84abc1449,Lunar House,5th Floor,5.24,NHP,"STH, NSEP",John Sharp
+459d7f20-31a3-11e8-841f-b7a84abc1449,Metro Point,2nd Floor,30.15,SA,"STH, NSEP",Megan Alberts
+459ce2e0-31a3-11e8-841f-b7a84abc1449,Metro Point,2nd Floor,30.21,SA,"STH, NSEP",Megan Alberts
+459c1f90-31a3-11e8-841f-b7a84abc1449,Metro Point,2nd Floor,30.22,SA,"STH, NSEP",Megan Alberts
+459b5c40-31a3-11e8-841f-b7a84abc1449,Regus Building,,Ground 10.28,SA,"STH, NSEP",Megan Alberts
+4571db40-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,,510.10.29,SA,"STH, NSEP",Ian Ayers
+457c6290-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.21,SA,"LTH, SEP, NSEP",Ian Ayers
+457bc650-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.22,SA,"STH, SEP, NSEP",Ian Ayers
+457b2a10-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.23,SA,LTH,Ian Ayers
+457a66c0-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.25,SA,LTH,Ian Ayers
+45792e40-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.36,SA,"STH, SEP, NSEP",Ian Ayers
+45786af0-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.37,SA,LTH,Ian Ayers
+45775980-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.00.38,SA,"STH, NSEP",Ian Ayers
+4579ca80-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.0027,SA,"STH, SEP, NSEP",Ian Ayers
+4576bd40-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.20.09/11,SA,LTH,Ian Ayers
+45750f90-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.20.17,SA,"STH, SEP, NSEP",Ian Ayers
+45744c40-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.20.21,SA,"STH, NSEP",Ian Ayers
+4573b000-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.30.09/11,SA,LTH,Ian Ayers
+457313c0-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.30.15/16,SA,"STH, SEP, NSEP",Ian Ayers
+45727780-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,304.30.17,SA,"STH, SEP, NSEP",Ian Ayers
+4575d2e0-31a3-11e8-841f-b7a84abc1449,The Granby Research Centre,Storage basement,"First Floor, 304.20.15/16/18",SA,"STH, SEP, NSEP",Ian Ayers
+459ac000-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,0.02,SA,"STH, NSEP",Benjamin Patton
+45989d20-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,0.07,"SA, AQ","STH, NSEP",Benjamin Patton
+45973d90-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,0.28,SA,"STH, NSEP",Benjamin Patton
+459a23c0-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,00.03C,SA,"STH, NSEP",Benjamin Patton
+45996070-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,00.05A/B,SA,"STH, NSEP",Benjamin Patton
+459800e0-31a3-11e8-841f-b7a84abc1449,Vulcan House,1st Floor,00.07A,AQ,"STH, NSEP",Benjamin Patton
+45967a40-31a3-11e8-841f-b7a84abc1449,Vulcan House,2nd Floor,10.42,SA,"STH, NSEP",Benjamin Patton
+4595de00-31a3-11e8-841f-b7a84abc1449,Vulcan House,3rd Floor,20.66D,SA,"STH, NSEP",Benjamin Patton
+459541c0-31a3-11e8-841f-b7a84abc1449,Vulcan House,3rd Floor,20.66E,SA,"STH, NSEP",Benjamin Patton
+45947e70-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,1,SA,"STH, NSEP",Benjamin Patton
+45920d70-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,20.37,SA,"STH, NSEP",Benjamin Patton
+45917130-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.23B,SA,"STH, NSEP",Benjamin Patton
+4589f720-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.25B,SA,"STH, SEP, NSEP",Benjamin Patton
+458a9360-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.26,SA,"STH, NSEP",Benjamin Patton
+45895ae0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.27,SA,"STH, NSEP",Benjamin Patton
+4590d4f0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.31,SA,"STH, NSEP",Benjamin Patton
+459038b0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.31A,SA,"STH, SEP, NSEP",Benjamin Patton
+458f7560-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.32,SA,"STH, SEP, NSEP",Benjamin Patton
+458ed920-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.33,SA,"STH, NSEP",Benjamin Patton
+458b56b0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.34,SA,"STH, NSEP",Benjamin Patton
+458bf2f0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.35,SA,"STH, NSEP",Benjamin Patton
+458c6820-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.38,SA,"LTH, NSEP",Benjamin Patton
+458d0460-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.40,SA,LTH,Benjamin Patton
+458da0a0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.41,SA,LTH,Benjamin Patton
+458e3ce0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.42,SA,LTH,Benjamin Patton
+4593e230-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.72,SA,"STH, NSEP",Benjamin Patton
+459345f0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.72A,SA,"STH, SEP",Benjamin Patton
+4592a9b0-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.72C,SA,"STH, SEP",Benjamin Patton
+45889790-31a3-11e8-841f-b7a84abc1449,Vulcan House,4th Floor,30.85,SA,"STH, NSEP",Benjamin Patton
+4582cb30-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.21,SA,"STH, NSEP",Benjamin Patton
+45822ef0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.22,SA,"LTH, NSEP",Benjamin Patton
+458192b0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.23,SA,"LTH, NSEP",Benjamin Patton
+4580f670-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.25,SA,"LTH, NSEP",Benjamin Patton
+45805a30-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.26,SA,"STH, NSEP",Benjamin Patton
+457fbdf0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.27,SA,"STH, NSEP",Benjamin Patton
+457f21b0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.28,SA,"STH, NSEP",Benjamin Patton
+457e5e60-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.29,SA,"STH, NSEP",Benjamin Patton
+457dc220-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.30,SA,"STH, NSEP",Benjamin Patton
+457cfed0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.31,SA,"STH, SEP",Benjamin Patton
+4587d440-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.35,SA,"STH, SEP",Benjamin Patton
+4584ee10-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.35A,SA,"STH, SEP",Benjamin Patton
+45842ac0-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.36,SA,"STH, NSEP",Benjamin Patton
+45838e80-31a3-11e8-841f-b7a84abc1449,Vulcan House,Level 4,40.36A,SA,"STH, SEP",Benjamin Patton
