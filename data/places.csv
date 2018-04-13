@@ -1,5 +1,6 @@
-site,building,name
-Croydon,Lunar House,Meeting Room 4
-Croydon,Lunar House,Meeting Room 5
-Croydon,Lunar House,Meeting Room 6
-Croydon,Lunar House,Meeting Room 7
+site,area,suitability,holding,nacwo,restrictions
+Apollo House,G10 Lab,LA,"SEP,NOH",Barry Rogers,
+Apollo House,G11 Lab,AQ,"SEP,NOH",Edward Lee,
+Apollo House,G12 Lab,"AQ,SA",SEP,Edward Lee,
+Apollo House,G13 Lab,SA,"SEP,STH",Natalie Page,
+Apollo House,G14 Lab,"AQ,SA",STH,Edward Lee,
