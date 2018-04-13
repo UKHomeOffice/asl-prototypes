@@ -16,10 +16,6 @@ class Home extends Page {
     }
   }
 
-  greet() {
-    return (new Date()).getHours() < 12 ? 'Good morning Ben' : 'Good afternoon Ben';
-  }
-
   search() {
     if (!this.state || !this.state.searchTerm) {
       return this.props.data.establishments;
@@ -34,7 +30,6 @@ class Home extends Page {
     const filtered = this.search();
     const all = this.props.data.establishments;
     return <React.Fragment>
-      <h1>{ this.greet() }</h1>
       <div className="grid-row">
         <div className="column-one-quarter">
           <BigNumber number={ all.length } label="Establishments" />
