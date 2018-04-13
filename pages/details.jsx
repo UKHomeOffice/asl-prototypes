@@ -64,10 +64,10 @@ class Details extends Page {
               <h3>Method</h3>
               <p>Use of concussion with captive bolt for LA</p>
               <h3>Applicable animals</h3>
-              <p>All infant large animals under 6 months. This may apply to calves, lambs, and piglets. This method has been proven to be the most human way of killing infant livestock.</p>
+              <p>All infant large animals under 6 months. This may apply to calves, lambs, and piglets. This method has been proven to be the most humane way of killing infant livestock.</p>
 
               <h2>Setting free and re-homing of protected animals</h2>
-              <h3>Cirumstances</h3>
+              <h3>Circumstances</h3>
               <p>{ establishment.name } is currently undertaking major research into the levels of fertility in livestock. During the course of this research, some surplus stock may be produced. We have come to an agreement with 3 local sheep farmers to re-integrate these animals into the national flock.</p>
               <h3>Applicable animals</h3>
               <p>Only infant lambs between 3 and 6 months. Older animals and other species are not covered by this authorisation.</p>
