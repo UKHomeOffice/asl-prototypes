@@ -20,6 +20,6 @@
   "homepage": "https://github.com/UKHomeOffice/asl-prototypes#readme",
   "dependencies": {
     "govuk-react-components": "^0.4.0",
-    "prototype-kit": "^1.12.0"
+    "prototype-kit": "^1.12.1"
   }
 }
