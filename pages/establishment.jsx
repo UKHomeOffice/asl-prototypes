@@ -44,7 +44,7 @@ class Establishment extends Page {
 
           <Accordion>
             <ExpandingPanel title="Conditions">
-              <p>In addition to the standard conditions of Section 2C licences, this establishment will also:</p>
+              <p>In addition to the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/193124/Project_Licence_-_Standard_Conditions.pdf">standard conditions of Section 2C licences</a>, this establishment will also:</p>
               <p>Ensure that Natalie Page and Terrance Lang attend an accredited NACWO training course within the next 6 months. They are forbidden to work with LA until proof of this training has been provided to ASRU.</p>
             </ExpandingPanel>
             <ExpandingPanel title="Authorisations">
@@ -61,7 +61,7 @@ class Establishment extends Page {
               <p>Only infant lambs between 3 and 6 months. Older animals and other species are not covered by this authorisation.</p>
             </ExpandingPanel>
             <ExpandingPanel title="Related contacts">
-              <h2>Inspector</h2>
+              <h2>Inspectors</h2>
               <p>Jon Hills</p>
               <dl>
                 <dt>Email address</dt>
@@ -71,7 +71,7 @@ class Establishment extends Page {
                 <dd>01234 567890</dd>
               </dl>
 
-              <h2>ASRU contact</h2>
+              <h2>Single point of contact (SPoC)</h2>
               <p>Sean Jones</p>
               <dl>
                 <dt>Email address</dt>
