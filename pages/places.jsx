@@ -3,6 +3,19 @@ import { Page, Table } from 'prototype-kit';
 
 class Places extends Page {
 
+
+  establishment() {
+    return this.props.data.establishments.find(row => row.id === this.props.query.id);
+  }
+
+  breadcrumb() {
+    return [
+      { label: 'Home', href: '/home' },
+      { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
+      'Schedule of premises'
+    ];
+  }
+
   content() {
     // set the column headings
     const columns = {
@@ -10,14 +23,15 @@ class Places extends Page {
       building: 'Building',
       name: 'Name'
     };
+    const establishment = this.establishment();
 
-    return <div>
+    return <React.Fragment>
 
-      <h2>University of Croydon</h2>
-      <h1>Schedule of Premises</h1>
+      <h1>{ establishment.name }</h1>
+      <h2>Schedule of Premises</h2>
 
       <Table dataset={ this.props.data.places } columns={ columns } />
-    </div>
+    </React.Fragment>
   }
 
 }
