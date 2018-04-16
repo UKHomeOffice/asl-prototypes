@@ -31,11 +31,14 @@ ul {
   @extend .list-bullet;
 }
 
-#page-container header {
-  margin-bottom: $gutter;
+.main header {
 
   h1, h2 {
     margin: 0;
+  }
+
+  h1 {
+    margin-bottom: $gutter;
   }
 
   h2 {
