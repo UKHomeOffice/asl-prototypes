@@ -5,6 +5,18 @@ import { TabItem } from 'govuk-react-components/components/tabbar/tabitem';
 
 
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const tabs = [
+  'All',
+  'NACWO',
+  'NIO',
+  'NVS',
+  'NTCO',
+  'NPRC',
+  'PELH',
+  'PIL',
+  'HOLC',
+  'PPL'
+];
 
 class NamedPeople extends Page {
   establishment() {
@@ -21,6 +33,11 @@ class NamedPeople extends Page {
 
   onLetterClick(e) {
     e.preventDefault();
+  }
+
+  getPeople() {
+    const people = this.props.data.people;
+    return people || [];
   }
 
   content() {
@@ -40,9 +57,24 @@ class NamedPeople extends Page {
           }
         </ul>
         <TabBar>
-          <TabItem href="#tab1">Tab 1</TabItem>
-          <TabItem href="#tab2" active={true}>Tab 2</TabItem>
-          <TabItem href="#tab3">Tab 3</TabItem>
+          {
+            tabs.map((tab, index) =>
+              <TabItem href={`#${tab.toLowerCase()}`} active={index === 2}>{tab}</TabItem>
+            )
+          }
+        </TabBar>
+        <TabBar vertical={true}>
+          {
+            this.getPeople().map((person, index) => (
+              <TabItem href={`#${person.id}`} active={index === 2}>
+                <div className='person'>
+                  {person.first_name} {person.last_name}
+                  <br />
+                  {person.role.toUpperCase()}
+                </div>
+              </TabItem>
+            ))
+          }
         </TabBar>
       </Fragment>
     )
