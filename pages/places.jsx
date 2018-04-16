@@ -61,7 +61,7 @@ class Places extends Page {
     return [
       { label: 'Home', href: '/home' },
       { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
-      'Schedule of premises'
+      'Schedule of Premises'
     ];
   }
 
@@ -160,7 +160,7 @@ class Places extends Page {
       {
         this.state && this.state.data.length !== this.props.data.places.length
           ? <p>Showing { this.state.data.length } of { this.props.data.places.length } premises</p>
-          : <p>All results { this.props.data.places.length } premises</p>
+          : <p>All { this.props.data.places.length } premises</p>
       }
       <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
     </React.Fragment>
