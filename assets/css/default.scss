@@ -28,13 +28,15 @@ ul {
   @extend .list-bullet;
 }
 
-header {
+#page-container header {
+  margin-bottom: $gutter;
+
   h1, h2 {
-    margin: 0
+    margin: 0;
   }
 
   h2 {
-    margin-bottom: 0.25em;
+    margin-bottom: $gutter/4;
     font-weight: normal;
   }
 }

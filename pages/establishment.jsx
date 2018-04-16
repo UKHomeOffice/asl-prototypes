@@ -19,7 +19,11 @@ class Establishment extends Page {
     const establishment = this.establishment();
 
     return <React.Fragment>
-      <h1>{ establishment.name }</h1>
+      <header>
+        <h2>&nbsp;</h2>
+        <h1>{ establishment.name }</h1>
+      </header>
+
       <div className="grid-row">
         <div className="column-two-thirds">
           <ul>
