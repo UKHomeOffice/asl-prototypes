@@ -1,6 +1,13 @@
-.person {
-  background: url(../images/avatar.png) no-repeat center right;
-  background-size: contain;
-  padding: $gutter;
-  border: 1px solid $grey-2;
+.people {
+  margin: 0;
+  padding: 0;
+
+  .person {
+    background: url(../images/avatar.png) no-repeat center right;
+    background-size: contain;
+    padding: $gutter;
+    border: 2px solid $grey-2;
+    margin: $gutter/2 0;
+  }
+
 }
