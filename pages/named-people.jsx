@@ -12,19 +12,19 @@ const appendToQueryString = data => {
   Object.assign(search, data);
   u.search = qs.stringify(search);
   window.history.replaceState(undefined, undefined, u.format());
-}
+};
 
 const roles = {
   nacwo: 'Named Animal Care and Welfare Officer',
   nio: 'Named Information Officer',
   nvs: 'Named Veterinary Surgeon',
   ntco: 'Named Training and Competency Officer',
-  nprc: '',
-  pelh: '',
-  pil: '',
+  nprc: 'Named Person Responsible for Compliance',
+  pel: 'Establishment Licence Holder',
+  pil: 'Personal Licence Holder',
   holc: 'Home Office Liaison Contact',
-  ppl: ''
-}
+  ppl: 'Project Licence Holder'
+};
 
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
@@ -62,7 +62,7 @@ const People = ({
       }
     </TabBar>
   )
-}
+};
 
 const Person = ({
   person: {
@@ -124,7 +124,7 @@ const Person = ({
       </article>
     </Fragment>
   )
-}
+};
 
 class NamedPeople extends Page {
   componentDidMount() {
