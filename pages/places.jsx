@@ -119,9 +119,10 @@ class Places extends Page {
     const establishment = this.establishment();
 
     return <React.Fragment>
-
-      <h1>{ establishment.name }</h1>
-      <h2>Schedule of Premises</h2>
+      <header>
+        <h2>{ establishment.name }</h2>
+        <h1>Schedule of Premises</h1>
+      </header>
 
       <h3>Filter by</h3>
       <div className="filters grid-row">
@@ -155,7 +156,12 @@ class Places extends Page {
           </OptionSelect>
         </div>
       </div>
-      <button className="button" onClick={() => this.emitChange()}>Apply filters</button>
+      <button className="button" onClick={() => this.emitChange()} style={{ marginBottom: '1em' }}>Apply filters</button>
+      {
+        this.state && this.state.data.length !== this.props.data.places.length
+          ? <p>Showing { this.state.data.length } of { this.props.data.places.length } premises</p>
+          : <p>All results { this.props.data.places.length } premises</p>
+      }
       <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
     </React.Fragment>
   }

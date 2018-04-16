@@ -24,8 +24,10 @@ class Details extends Page {
     return <React.Fragment>
       <div className="grid-row">
         <div className="column-two-thirds">
-          <h1>{ establishment.name }</h1>
-          <h2>Establishment details</h2>
+          <header>
+            <h2>{ establishment.name }</h2>
+            <h1>Establishment details</h1>
+          </header>
 
           <dl>
             <dt>Establishment licence number</dt>
