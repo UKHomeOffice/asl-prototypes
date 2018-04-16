@@ -30,7 +30,7 @@ class Details extends Page {
           </header>
 
           <dl>
-            <dt>Establishment licence number</dt>
+            <dt>Licence number</dt>
             <dd>{ establishment.licenceNumber }</dd>
 
             <dt>Last update</dt>
