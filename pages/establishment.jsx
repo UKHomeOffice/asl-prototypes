@@ -25,13 +25,13 @@ class Establishment extends Page {
           <ul>
             <li><a href={`/details?id=${establishment.id}`}>Establishment details</a></li>
             <li><a href={`/named-people?id=${establishment.id}`}>Named people and licence holders</a></li>
-            <li><a href={`/places?id=${establishment.id}`}>Schedule of premises</a></li>
+            <li><a href={`/places?id=${establishment.id}`}>Schedule of Premises</a></li>
           </ul>
         </div>
         <div className="column-one-third">
           <aside>
             <dl>
-              <dt>Establishment licence number</dt>
+              <dt>Licence number</dt>
               <dd>{ establishment.licenceNumber }</dd>
 
               <dt>Licence holder</dt>
