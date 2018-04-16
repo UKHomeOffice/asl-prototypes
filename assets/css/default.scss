@@ -27,3 +27,14 @@ ul {
   @extend .list;
   @extend .list-bullet;
 }
+
+header {
+  h1, h2 {
+    margin: 0
+  }
+
+  h2 {
+    margin-bottom: 0.25em;
+    font-weight: normal;
+  }
+}
