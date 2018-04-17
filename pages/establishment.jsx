@@ -27,7 +27,7 @@ class Establishment extends Page {
 
       <div className="grid-row">
         <div className="column-two-thirds">
-          <ul>
+          <ul className="dashboard">
             <li><a href={`/details?id=${establishment.id}`}>Establishment details</a></li>
             <li><a href={`/named-people?id=${establishment.id}`}>Named people and licence holders</a></li>
             <li><a href={`/places?id=${establishment.id}`}>Schedule of Premises</a></li>

@@ -1,14 +1,7 @@
 import React from 'react';
 import { Page } from 'prototype-kit';
 
-class Establishment extends Page {
-
-  breadcrumb() {
-    return [
-      { label: 'Home', href: '/home' },
-      this.establishment().name
-    ];
-  }
+class Dashboard extends Page {
 
   content() {
 
@@ -20,7 +13,7 @@ class Establishment extends Page {
 
       <div className="grid-row">
         <div className="column-two-thirds">
-          <ul>
+          <ul className="dashboard">
             <li><a href={`/establishment-licences`}>Establishments</a></li>
             <li><a href={`/personal-licences`}>Personal licences</a></li>
             <li><a href={`/project-licences`}>Project licences</a></li>
@@ -32,4 +25,4 @@ class Establishment extends Page {
 
 }
 
-export default Establishment;
+export default Dashboard;
