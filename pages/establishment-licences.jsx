@@ -1,5 +1,6 @@
 import React from 'react';
-import { Page, Form, Table } from 'prototype-kit';
+import Page from './components/page';
+import { Form, Table } from 'prototype-kit';
 import { some } from 'lodash';
 
 import SearchBox from './components/search';
@@ -48,7 +49,7 @@ class Home extends Page {
             />
         </div>
       </div>
-      <h2>{ filtered.length === all.length ? 'All establishments' : `${filtered.length} of ${all.length} establishments` }</h2>
+      <h2>{ filtered.length === all.length ? `All ${all.length} establishments` : `${filtered.length} of ${all.length} establishments` }</h2>
       <Table
         dataset={ filtered }
         columns={ { name: 'Name', licenceNumber: 'Licence number' } }

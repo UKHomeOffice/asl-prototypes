@@ -5,6 +5,22 @@
 @import "./filters";
 @import './people';
 
+#proposition-menu {
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: white;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 aside {
   border-top: 2px solid $govuk-blue;
   padding-top: $gutter-half;

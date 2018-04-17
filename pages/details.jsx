@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page } from 'prototype-kit';
+import Page from './components/page';
 
 import Accordion from './components/accordion';
 import ExpandingPanel from './components/expanding-panel';

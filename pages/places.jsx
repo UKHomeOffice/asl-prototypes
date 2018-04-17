@@ -1,5 +1,6 @@
 import React from 'react';
-import { Page, Table } from 'prototype-kit';
+import Page from './components/page';
+import { Table } from 'prototype-kit';
 import OptionSelect, { CheckedOption } from 'govuk-react-components/components/option-select';
 import { some, every, isEmpty } from 'lodash'
 
@@ -60,7 +61,7 @@ class Places extends Page {
   breadcrumb() {
     return [
       { label: 'Home', href: '/dashboard' },
-      { label: 'Establishment', href: '/establishment-licences' },
+      { label: 'Establishments', href: '/establishment-licences' },
       { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
       'Schedule of Premises'
     ];
