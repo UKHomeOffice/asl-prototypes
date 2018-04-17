@@ -10,7 +10,7 @@ class Establishment extends Page {
   breadcrumb() {
     return [
       { label: 'Home', href: '/dashboard' },
-      { label: 'Establishment', href: '/establishment-licences' },
+      { label: 'Establishments', href: '/establishment-licences' },
       this.establishment().name
     ];
   }
