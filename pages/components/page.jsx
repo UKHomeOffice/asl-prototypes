@@ -16,8 +16,9 @@ class BasePage extends Page {
   title() {
     return <React.Fragment>
       <a href="/" id="proposition-name">{this.props.title}</a>
-      <a href="/profile" id="profile"></a>
-      <a href="/">Sign out</a>
+      <span>
+        <span id="profile" /> - <a href="/">Sign out</a>
+      </span>
     </React.Fragment>;
   }
 

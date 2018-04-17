@@ -8,11 +8,14 @@
 #proposition-menu {
   display: flex;
   justify-content: space-between;
-  a {
+  span {
     color: white;
     font-size: 24px;
     line-height: 1.25;
     font-weight: bold;
+  }
+  a {
+    color: white;
     text-decoration: none;
 
     &:hover {
