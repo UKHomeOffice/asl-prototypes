@@ -4,7 +4,7 @@ import { Form } from 'prototype-kit';
 class Login extends Form {
 
   onSubmit(values) {
-    this.redirect('/home');
+    this.redirect('/dashboard');
   }
 
   pageTitle() {
