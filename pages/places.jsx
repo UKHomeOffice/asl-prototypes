@@ -40,7 +40,7 @@ const matchesHelper = (row, values) => {
 class Places extends Page {
 
   componentDidMount() {
-
+    super.componentDidMount();
     this.setState({
       filters: {
         site: [],

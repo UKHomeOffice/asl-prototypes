@@ -125,6 +125,7 @@ const Person = ({
 
 class NamedPeople extends Page {
   componentDidMount() {
+    super.componentDidMount();
     this.setState({
       person: this.props.query.person,
       role: this.props.query.role,
