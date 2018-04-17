@@ -5,13 +5,15 @@ class Login extends Form {
 
   onSubmit(values) {
     if (!values.username) {
-      return this.setState({ usernameerror: 'Please enter a username' });
+      this.setState({ usernameerror: 'Please enter a username' });
     }
     if (!values.password) {
-      return this.setState({ passworderror: 'Please enter a password' });
+      this.setState({ passworderror: 'Please enter a password' });
     }
-    localStorage.setItem('name', values.username);
-    this.redirect('/dashboard');
+    if (values.username && values.password) {
+      localStorage.setItem('name', values.username);
+      this.redirect('/dashboard');
+    }
   }
 
   pageTitle() {
