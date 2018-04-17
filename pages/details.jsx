@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page } from 'prototype-kit';
+import Page from './components/page';
 
 import Accordion from './components/accordion';
 import ExpandingPanel from './components/expanding-panel';
@@ -13,7 +13,7 @@ class Details extends Page {
   breadcrumb() {
     return [
       { label: 'Home', href: '/dashboard' },
-      { label: 'Establishment licences', href: '/establishment-licences' },
+      { label: 'Establishments', href: '/establishment-licences' },
       { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
       'Establishment details'
     ];

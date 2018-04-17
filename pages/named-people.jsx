@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import url from 'url';
 import qs from 'qs';
 import { some } from 'lodash';
-import { Page } from 'prototype-kit';
+import Page from './components/page';
 import { TabBar } from 'govuk-react-components/components/tabbar';
 import { TabItem } from 'govuk-react-components/components/tabbar/tabitem';
 
@@ -125,6 +125,7 @@ const Person = ({
 
 class NamedPeople extends Page {
   componentDidMount() {
+    super.componentDidMount();
     this.setState({
       person: this.props.query.person,
       role: this.props.query.role,
@@ -142,7 +143,7 @@ class NamedPeople extends Page {
   breadcrumb() {
     return [
       { label: 'Home', href: '/dashboard' },
-      { label: 'Establishment licences', href: '/establishment-licences' },
+      { label: 'Establishments', href: '/establishment-licences' },
       { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
       'Named people and personal licence holders'
     ]
@@ -158,7 +159,6 @@ class NamedPeople extends Page {
     if (shouldFilter !== false && filter) {
       people = people.filter(person => person.last_name[0].toLowerCase() === filter.toLowerCase());
     }
-    console.log(people.length)
     return people;
   }
 
