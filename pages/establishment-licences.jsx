@@ -43,8 +43,7 @@ class Home extends Page {
       <div className="grid-row">
         <div className="column-two-thirds">
           <SearchBox
-            label="Search establishments"
-            hint="By name or licence number"
+            label="Search by name or licence number"
             onChange={searchTerm => this.setState({ searchTerm })}
             />
         </div>
