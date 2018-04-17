@@ -4,6 +4,10 @@ import { Form } from 'prototype-kit';
 class Login extends Form {
 
   onSubmit(values) {
+    this.setState({
+      usernameerror: null,
+      passworderror: null
+    })
     if (!values.username) {
       this.setState({ usernameerror: 'Please enter a username' });
     }
