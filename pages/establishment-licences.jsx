@@ -2,7 +2,6 @@ import React from 'react';
 import { Page, Form, Table } from 'prototype-kit';
 import { some } from 'lodash';
 
-import BigNumber from './components/big-number';
 import SearchBox from './components/search';
 
 class Home extends Page {
@@ -10,7 +9,7 @@ class Home extends Page {
   breadcrumb() {
     return [
       { label: 'Home', href: '/dashboard' },
-      'Establishment licences'
+      'Establishments'
     ];
   }
 
@@ -37,24 +36,17 @@ class Home extends Page {
     const filtered = this.search();
     const all = this.props.data.establishments;
     return <React.Fragment>
+      <header>
+        <h2>&nbsp;</h2>
+        <h1>Establishments</h1>
+      </header>
       <div className="grid-row">
-        <div className="column-one-quarter">
-          <BigNumber number={ all.length } label="Establishments" />
-        </div>
-        <div className="column-one-quarter">
-          <BigNumber number="17231" label={<a href="/personal-licences">Personal licences</a>} />
-        </div>
-        <div className="column-one-quarter">
-          <BigNumber number="3209" label={<a href="/projects">Projects</a>} />
-        </div>
-        <div className="column-one-quarter">
-          <aside>
-            <SearchBox
-              label="Search establishments"
-              hint="By name or licence number"
-              onChange={searchTerm => this.setState({ searchTerm })}
-              />
-          </aside>
+        <div className="column-two-thirds">
+          <SearchBox
+            label="Search establishments"
+            hint="By name or licence number"
+            onChange={searchTerm => this.setState({ searchTerm })}
+            />
         </div>
       </div>
       <h2>{ filtered.length === all.length ? 'All establishments' : `${filtered.length} of ${all.length} establishments` }</h2>

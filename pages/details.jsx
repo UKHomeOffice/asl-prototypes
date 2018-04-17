@@ -23,12 +23,12 @@ class Details extends Page {
     const establishment = this.establishment();
 
     return <React.Fragment>
+      <header>
+        <h2>{ establishment.name }</h2>
+        <h1>Establishment details</h1>
+      </header>
       <div className="grid-row">
         <div className="column-two-thirds">
-          <header>
-            <h2>{ establishment.name }</h2>
-            <h1>Establishment details</h1>
-          </header>
 
           <dl>
             <dt>Licence number</dt>
