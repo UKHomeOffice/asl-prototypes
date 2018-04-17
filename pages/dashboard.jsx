@@ -3,12 +3,22 @@ import { Page } from 'prototype-kit';
 
 class Dashboard extends Page {
 
-  content() {
+  componentDidMount() {
+    this.setState({
+      name: localStorage.getItem('name')
+    });
+  }
 
+  ucfirst(str) {
+    return str.substr(0, 1).toUpperCase() + str.substr(1);
+  }
+
+  content() {
+    const name = this.state && this.state.name;
     return <React.Fragment>
       <header>
         <h2>&nbsp;</h2>
-        <h1>Good morning Ben</h1>
+        { name && <h1>Hello { this.ucfirst(name) }</h1> }
       </header>
 
       <div className="grid-row">
