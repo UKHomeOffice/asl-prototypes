@@ -5,8 +5,8 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 4,Karlen,Livingston,79-9470556,pil,121-678-0155,klivingston3@flavors.me,4 Eastlawn Pass,Livingstone,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 5,Duke,Gledstane,64-7402036,ppl,,dgledstane4@yelp.com,602 Springview Alley,Postupice,257 01,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 6,Margalit,Degue,82-7539177,nacwo,140-236-3042,mdegue5@opensource.org,70640 Tennyson Terrace,Bayt Ta‘mar,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
-7,Alva,Tumpane,35-3029617,pelh,215-783-1845,atumpane6@mail.ru,99 Porter Street,Årjäng,672 24,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
-8,Glynda,Trunchion,56-0869780,pelh,770-146-1715,gtrunchion7@sbwire.com,13754 Buell Park,Zombo,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
+7,Alva,Tumpane,35-3029617,pel,215-783-1845,atumpane6@mail.ru,99 Porter Street,Årjäng,672 24,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
+8,Glynda,Trunchion,56-0869780,pel,770-146-1715,gtrunchion7@sbwire.com,13754 Buell Park,Zombo,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
 9,Delmar,Lombard,06-1047497,nio,661-370-3757,dlombard8@wikispaces.com,643 Pleasure Parkway,Dobrošte,1225,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 10,Dawn,Edser,27-3332259,nvs,612-541-1641,dedser9@prnewswire.com,86 Buhler Parkway,Bual,9410,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 11,Magdalene,Rolston,04-3396379,nvs,864-226-0815,mrolstona@privacy.gov.au,8628 Dottie Road,Grebenskaya,366101,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
@@ -22,7 +22,7 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 21,Sallyanne,Wahner,36-2908935,holc,792-247-5696,swahnerk@marriott.com,24876 Crescent Oaks Hill,Darband,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 22,Sheppard,Timny,41-2586545,nvs,876-832-9935,stimnyl@sun.com,911 Columbus Drive,Dizangué,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
 23,Paddy,Wardel,83-8725648,ppl,509-169-5844,pwardelm@elegantthemes.com,6 Vera Alley,Baguio,2600,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
-24,Judas,Tingle,40-4482087,pelh,169-127-0113,jtinglen@skyrock.com,239 Riverside Alley,Ciguna,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
+24,Judas,Tingle,40-4482087,pel,169-127-0113,jtinglen@skyrock.com,239 Riverside Alley,Ciguna,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 25,Odella,Renackowna,88-6934638,pil,488-212-4943,orenackownao@last.fm,81 Hazelcrest Junction,Wenchang,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 26,Bryce,Rummery,48-2879641,holc,656-264-4933,brummeryp@noaa.gov,3747 Surrey Circle,Daja,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 27,Randene,Stichall,34-8161789,nprc,588-604-9839,rstichallq@narod.ru,584 Oakridge Avenue,Wendo,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
@@ -33,17 +33,17 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 32,Hedvig,Dillinger,36-3497583,holc,874-914-9759,hdillingerv@si.edu,535 Dixon Lane,Tangjin,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
 33,Rourke,Beesley,67-2477072,nio,191-900-5407,rbeesleyw@creativecommons.org,61 Schlimgen Drive,Hengshan,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 34,Cam,Chesterfield,53-3371727,nio,998-137-1582,cchesterfieldx@so-net.ne.jp,7 Onsgard Parkway,Jinhai,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
-35,Kin,BURWIN,80-3137944,pelh,294-544-5138,kburwiny@csmonitor.com,68674 Morning Crossing,Komyshany,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
+35,Kin,BURWIN,80-3137944,pel,294-544-5138,kburwiny@csmonitor.com,68674 Morning Crossing,Komyshany,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 36,Barret,Derks,16-3123633,ppl,106-441-1792,bderksz@spotify.com,52796 Dovetail Parkway,Huamachuco,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 37,Connie,Niese,81-1363732,nio,,cniese10@privacy.gov.au,74 Dorton Lane,Gesik,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
-38,Ichabod,Sibthorpe,79-3217716,pelh,719-286-8780,isibthorpe11@bbb.org,184 Pierstorff Road,Phu Kam Yao,23110,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
+38,Ichabod,Sibthorpe,79-3217716,pel,719-286-8780,isibthorpe11@bbb.org,184 Pierstorff Road,Phu Kam Yao,23110,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 39,Vinson,Curnick,01-3704969,pil,892-225-3679,vcurnick12@jalbum.net,68 Bonner Pass,Tignoan,8305,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 40,Kendrick,Waller,22-0638764,nio,166-330-4688,kwaller13@cnbc.com,04 Redwing Hill,Sukasari,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 41,Samaria,Yancey,99-3137561,ppl,953-148-2535,syancey14@fotki.com,13 5th Point,Hegarsari,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 42,Austin,McRobbie,33-2129387,ppl,631-214-1952,amcrobbie15@blogtalkradio.com,4 Fisk Junction,Montego Bay,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 43,Belita,Tidbold,30-0414107,nio,906-272-6906,btidbold16@google.com.br,4 Bay Lane,Kynopiástes,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 44,Van,Grunbaum,43-4938971,nvs,879-288-2658,vgrunbaum17@squarespace.com,64 Fallview Way,Derjan,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
-45,Ulick,Santi,83-0658420,pelh,211-634-1050,usanti18@auda.org.au,08 Dwight Alley,Lakki Marwat,28420,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
+45,Ulick,Santi,83-0658420,pel,211-634-1050,usanti18@auda.org.au,08 Dwight Alley,Lakki Marwat,28420,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 46,Anatol,Izkovicz,12-1002565,ppl,597-466-3949,aizkovicz19@ebay.com,12593 Rockefeller Place,Staryy Merchyk,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 47,Buddy,Arniz,64-4542404,nvs,951-641-0223,barniz1a@ucsd.edu,4 Grayhawk Junction,Corralillo,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 48,Mortie,Radnage,59-1490514,ppl,217-449-9174,mradnage1b@npr.org,6 Express Crossing,Karangasem,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
@@ -51,12 +51,12 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 50,Carey,Blazej,48-6604810,pil,,cblazej1d@weibo.com,3 Becker Lane,Descalvado,13690-000,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
 51,Sherwood,Roughley,89-1479588,nprc,762-399-7503,sroughley1e@godaddy.com,3 Cottonwood Crossing,Shengping,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 52,Alisa,Dossetter,61-1147801,ppl,362-478-3990,adossetter1f@chronoengine.com,1 Pond Point,Nong Bua Daeng,36210,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
-53,Lorri,Trime,26-7904285,pelh,622-989-9728,ltrime1g@ucoz.com,3 Chive Drive,Ollantaytambo,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
-54,Tomasina,Ghiroldi,41-8477427,pelh,849-964-3468,tghiroldi1h@vimeo.com,26771 Maywood Avenue,Lingbei,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
+53,Lorri,Trime,26-7904285,pel,622-989-9728,ltrime1g@ucoz.com,3 Chive Drive,Ollantaytambo,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
+54,Tomasina,Ghiroldi,41-8477427,pel,849-964-3468,tghiroldi1h@vimeo.com,26771 Maywood Avenue,Lingbei,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 55,Millicent,Bavin,90-3097572,nvs,864-180-9118,mbavin1i@earthlink.net,02 Fulton Plaza,Cuispes,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
 56,Jessalyn,Hassard,81-5096547,ppl,726-333-1124,jhassard1j@live.com,846 Melody Alley,Masoli,6525,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 57,Fredric,Breakspear,14-0773297,holc,467-366-0086,fbreakspear1k@eventbrite.com,520 Chinook Parkway,Cijengkol,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
-58,Amii,Mudie,05-1241988,pelh,874-632-6717,amudie1l@google.co.jp,57 Pine View Trail,Lijia,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
+58,Amii,Mudie,05-1241988,pel,874-632-6717,amudie1l@google.co.jp,57 Pine View Trail,Lijia,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
 59,Ginni,Worge,54-0388108,pil,590-677-5908,gworge1m@mashable.com,57 Sundown Terrace,Uppsala,752 26,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 60,Gearard,Oki,56-6300483,nvs,366-451-5980,goki1n@cbsnews.com,4 Mcguire Center,Lebedyn,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 61,Bram,Lodwick,15-0904418,holc,512-913-2907,blodwick1o@wsj.com,168 Petterle Court,Ko Chan,20240,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
@@ -64,14 +64,14 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 63,Leonerd,Goldson,89-7222063,pil,818-565-9476,lgoldson1q@wikia.com,5 Macpherson Street,Xiaolan,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 64,Dane,Lorain,37-9079327,nvs,283-845-6543,dlorain1r@imageshack.us,56752 Pierstorff Avenue,La Loma,61663,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 65,Dollie,Tewkesberry,80-2116799,nacwo,664-482-6489,dtewkesberry1s@oaic.gov.au,752 Hansons Center,Damāvand,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
-66,Gusta,Breitler,96-1511525,pelh,404-422-0082,gbreitler1t@github.io,76 Pawling Center,Sara Kunda,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
+66,Gusta,Breitler,96-1511525,pel,404-422-0082,gbreitler1t@github.io,76 Pawling Center,Sara Kunda,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 67,Cyrill,Enriquez,85-4638139,holc,908-306-4005,cenriquez1u@vkontakte.ru,9955 Russell Point,Krenggan,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 68,Ashlan,Kilminster,06-4165080,holc,390-329-5246,akilminster1v@linkedin.com,34273 Nevada Pass,Zea,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility
 69,Mandi,Worham,63-6035457,nacwo,772-416-5837,mworham1w@i2i.jp,5 Fair Oaks Road,San Isidro,35156,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 70,Anabelle,Billett,51-6556699,holc,484-353-2737,abillett1x@washingtonpost.com,62 Crowley Trail,Shatian,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 71,Carri,Dupree,67-3091593,ppl,215-772-2798,cdupree1y@dagondesign.com,21 Fisk Trail,Pantian,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
 72,Mag,Bende,54-1087210,nprc,951-631-0658,mbende1z@examiner.com,57319 Glendale Road,Yuanguping,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
-73,Jacques,Pantecost,89-7246011,pelh,684-980-3522,jpantecost20@ning.com,50654 Jenifer Center,Basīrpur,45750,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
+73,Jacques,Pantecost,89-7246011,pel,684-980-3522,jpantecost20@ning.com,50654 Jenifer Center,Basīrpur,45750,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
 74,Kelila,Hunnicutt,67-6954637,holc,854-625-5610,khunnicutt21@springer.com,37337 Gateway Terrace,Moshkovo,633130,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
 75,Gerianna,Burgum,25-2790267,nprc,274-118-1970,gburgum22@twitpic.com,72 Bartelt Circle,Saxin,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 76,Laryssa,Lisciardelli,62-8724093,nacwo,268-918-6675,llisciardelli23@yellowpages.com,75 Holmberg Park,Bum Bum,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
@@ -84,7 +84,7 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 83,Mufinella,Wetheril,65-5428134,ppl,175-658-8533,mwetheril2a@ovh.net,505 Karstens Parkway,Welchman Hall,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 84,Karlan,McClenan,34-9302628,nacwo,605-156-0543,kmcclenan2b@google.fr,994 Valley Edge Alley,Göteborg,411 36,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 85,Henka,Schutze,93-3369365,ntco,789-416-8374,hschutze2c@instagram.com,5 Ryan Drive,Bang Kruai,11130,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
-86,Leo,Denington,30-5037138,pelh,505-754-5540,ldenington2d@java.com,447 Elmside Parkway,Piquillín,5172,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
+86,Leo,Denington,30-5037138,pel,505-754-5540,ldenington2d@java.com,447 Elmside Parkway,Piquillín,5172,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility
 87,Darcy,Leggatt,92-1378896,nacwo,951-773-2457,dleggatt2e@webmd.com,7386 Warrior Terrace,Rat Burana,10140,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility
 88,Alick,Fielden,45-1504167,nprc,210-966-8953,afielden2f@technorati.com,9331 Farmco Plaza,Kragan,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 89,Donal,Beagrie,65-7052078,nprc,818-303-3986,dbeagrie2g@va.gov,70474 Mockingbird Avenue,São Paulo,01000-000,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
@@ -94,7 +94,7 @@ id,first_name,last_name,licence_number,role,phone_number,email,address,town,post
 93,Rainer,Grimsley,36-8291190,nacwo,785-482-4065,rgrimsley2k@theglobeandmail.com,2076 Bobwhite Center,Masantol,2017,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility
 94,Meryl,Hurdle,69-9324657,nio,438-626-0106,mhurdle2l@jigsy.com,271 Oak Hill,Hougaoshizhuang,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 95,Esme,McClory,48-1214648,pil,,emcclory2m@livejournal.com,47 Crescent Oaks Trail,Troitskoye,363704,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
-96,Johnath,Agg,73-5915632,pelh,851-402-6730,jagg2n@tinypic.com,2 Bartelt Lane,Hidalgo,26060,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
+96,Johnath,Agg,73-5915632,pel,851-402-6730,jagg2n@tinypic.com,2 Bartelt Lane,Hidalgo,26060,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility
 97,Alexei,Merryweather,76-9538227,ntco,610-604-4338,amerryweather2o@liveinternet.ru,723 Florence Point,Machakos,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility
 98,Kassi,Falshaw,99-1690867,nacwo,270-153-5580,kfalshaw2p@rakuten.co.jp,4038 Algoma Street,Bendungan,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility
 99,Terese,Jobling,36-5353648,ppl,750-948-4916,tjobling2q@pagesperso-orange.fr,8 Heffernan Pass,Ferkessédougou,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility
