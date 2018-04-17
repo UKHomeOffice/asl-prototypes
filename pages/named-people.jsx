@@ -114,9 +114,6 @@ const Person = ({
           <dt>Training completed</dt>
           <dd>{training_completed}</dd>
 
-          <dt>Qualifications</dt>
-          <dd>{qualifications}</dd>
-
           <dt>Facilities (units or rooms) of establishment licence (or species) for which responsible</dt>
           <dd>{facilities}</dd>
 
