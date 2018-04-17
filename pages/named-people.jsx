@@ -93,7 +93,7 @@ const Person = ({
           </p>
         </div>
       </div>
-      <a href="#">Personal licence number {licence_number}</a>
+      <a href="#">Personal licence number: {licence_number}</a>
       <article>
         <dl>
           <dt>Professional Address</dt>
