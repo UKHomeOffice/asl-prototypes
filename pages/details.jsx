@@ -12,7 +12,8 @@ class Details extends Page {
 
   breadcrumb() {
     return [
-      { label: 'Home', href: '/home' },
+      { label: 'Home', href: '/dashboard' },
+      { label: 'Establishment licences', href: '/establishment-licences' },
       { label: this.establishment().name, href: `/establishment?id=${this.props.query.id}` },
       'Establishment details'
     ];

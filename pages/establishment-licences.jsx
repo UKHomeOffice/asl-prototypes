@@ -7,6 +7,13 @@ import SearchBox from './components/search';
 
 class Home extends Page {
 
+  breadcrumb() {
+    return [
+      { label: 'Home', href: '/dashboard' },
+      'Establishment licences'
+    ];
+  }
+
   cell(key, value, row) {
     switch (key) {
       case 'name':

@@ -21,7 +21,7 @@ class Establishment extends Page {
       <div className="grid-row">
         <div className="column-two-thirds">
           <ul>
-            <li><a href={`/home`}>Establishments</a></li>
+            <li><a href={`/establishment-licences`}>Establishments</a></li>
             <li><a href={`/personal-licences`}>Personal licences</a></li>
             <li><a href={`/project-licences`}>Project licences</a></li>
           </ul>
