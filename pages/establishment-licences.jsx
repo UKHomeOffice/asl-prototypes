@@ -49,7 +49,7 @@ class Home extends Page {
             />
         </div>
       </div>
-      <h2>{ filtered.length === all.length ? `All ${all.length} establishments` : `${filtered.length} of ${all.length} establishments` }</h2>
+      <h2>{ filtered.length === all.length ? `All ${all.length} establishments` : `Showing ${filtered.length} of ${all.length} establishments` }</h2>
       <Table
         dataset={ filtered }
         columns={ { name: 'Name', licenceNumber: 'Licence number' } }
