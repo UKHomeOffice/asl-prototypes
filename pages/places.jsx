@@ -161,8 +161,8 @@ class Places extends Page {
       <button className="button" onClick={() => this.emitChange()} style={{ marginBottom: '1em' }}>Apply filters</button>
       {
         this.state && this.state.data.length !== this.props.data.places.length
-          ? <p>Showing { this.state.data.length } of { this.props.data.places.length } premises</p>
-          : <p>All { this.props.data.places.length } premises</p>
+          ? <p>Showing { this.state.data.length } of { this.props.data.places.length } results</p>
+          : <p>All { this.props.data.places.length } results</p>
       }
       <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
     </React.Fragment>
