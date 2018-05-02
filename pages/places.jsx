@@ -123,7 +123,7 @@ class Places extends Page {
     return <React.Fragment>
       <header>
         <h2>{ establishment.name }</h2>
-        <h1>Schedule of Premises</h1>
+        <h1>Licensed premises</h1>
       </header>
 
       <h3>Filter by</h3>
