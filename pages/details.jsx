@@ -43,7 +43,7 @@ class Details extends Page {
             <dt>Licence holder</dt>
             <dd><a href="/profile">{ establishment.elh }</a></dd>
 
-            <dt>Home Office liaison contact (HOLC)</dt>
+            <dt>Home Office Liaison Contact (HOLC)</dt>
             <dd><a href="/profile">{ establishment.holc }</a></dd>
 
             <dt>Licensed to carry out</dt>
