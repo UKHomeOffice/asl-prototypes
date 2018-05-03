@@ -31,6 +31,7 @@ class Establishment extends Page {
             <li><a href={`/details?id=${establishment.id}`}>Establishment details</a></li>
             <li><a href={`/named-people?id=${establishment.id}`}>Named people and licence holders</a></li>
             <li><a href={`/places?id=${establishment.id}`}>Licensed premises</a></li>
+            <li><a href={`/projects?id=${establishment.id}`}>Project Licences</a></li>
           </ul>
         </div>
         <div className="column-one-third">
