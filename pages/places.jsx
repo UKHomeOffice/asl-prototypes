@@ -52,6 +52,7 @@ class Places extends Page {
     this.onSelectChange = this.onSelectChange.bind(this);
     this.filterData = this.filterData.bind(this);
     this.emitChange = this.emitChange.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
   }
 
   establishment() {
@@ -100,6 +101,18 @@ class Places extends Page {
       Object.keys(this.state.filters).reduce((matches, filter) =>
         matches && matchesHelper(row[filter], this.state.filters[filter]), true)
     );
+  }
+
+  clearFilters(e) {
+    e.preventDefault();
+    this.setState({
+      data: this.props.data.places,
+      filters: {
+        site: [],
+        suitability: [],
+        holding: []
+      }
+    });
   }
 
   emitChange() {
@@ -158,7 +171,10 @@ class Places extends Page {
           </OptionSelect>
         </div>
       </div>
-      <button className="button" onClick={() => this.emitChange()} style={{ marginBottom: '1em' }}>Apply filters</button>
+      <p className="control-bar">
+        <button className="button" onClick={() => this.emitChange()}>Apply filters</button>
+        <a href="#" onClick={this.clearFilters}>Clear filters</a>
+      </p>
       {
         this.state && this.state.data.length !== this.props.data.places.length
           ? <p>Showing { this.state.data.length } of { this.props.data.places.length } results</p>
