@@ -16,17 +16,44 @@ const columns = {
     'Vulcan House',
   ],
   suitability: [
-    'SA',
-    'LA',
-    'AQ',
-    'AV'
+    {
+      label: 'Small animals',
+      value: 'SA'
+    },
+    {
+      label: 'Large Animals',
+      value: 'LA'
+    },
+    {
+      label: 'Aquatic species',
+      value: 'AQ'
+    },
+    {
+      label: 'Birds',
+      value: 'AV'
+    }
   ],
   holding: [
-    'STH',
-    'NOH',
-    'SEP',
-    'NSEP',
-    'LTH'
+    {
+      label: 'Short term holding',
+      value: 'STH'
+    },
+    {
+      label: 'Not for overnight holding',
+      value: 'NOH'
+    },
+    {
+      label: 'Sterile experimental procedures',
+      value: 'SEP'
+    },
+    {
+      label: 'Non-sterile experimental procedures',
+      value: 'NSEP'
+    },
+    {
+      label: 'Long-term holding',
+      value: 'LTH'
+    }
   ]
 };
 
@@ -53,6 +80,7 @@ class Places extends Page {
     this.filterData = this.filterData.bind(this);
     this.emitChange = this.emitChange.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
+    this.isChecked = this.isChecked.bind(this);
   }
 
   establishment() {
@@ -80,13 +108,12 @@ class Places extends Page {
   onSelectChange(e) {
     const filters = this.state.filters;
     const col = filters[e.target.name].slice();
-    const colIndex = parseInt(e.target.value, 10) - 1;
-    const value = columns[e.target.name][colIndex]
-    const index = col.indexOf(value);
-    if (index > -1) {
-      col.splice(index, 1);
-    } else {
+    const value = e.target.value;
+    if (e.target.checked) {
       col.push(value)
+    } else {
+      const index = col.indexOf(value);
+      col.splice(index, 1);
     }
     filters[e.target.name] = col;
     this.setState({ filters });
@@ -121,9 +148,18 @@ class Places extends Page {
     });
   }
 
+  isChecked(key, value) {
+    if (!this.state) {
+      return false;
+    }
+    value = value.value || value;
+    const { filters } = this.state;
+    return filters[key].includes(value);
+  }
+
   content() {
     // set the column headings
-    const columns = {
+    const headers = {
       site: 'Site',
       area: 'Area',
       suitability: 'Suitability',
@@ -141,35 +177,29 @@ class Places extends Page {
 
       <h3>Filter by</h3>
       <div className="filters grid-row">
-        <div className="column-one-third">
-          <OptionSelect title="Site" >
-            <CheckedOption name="site" id="box-1" onChange={this.onSelectChange} value="1">2 Marsham Street</CheckedOption>
-            <CheckedOption name="site" id="box-2" onChange={this.onSelectChange} value="2">Apollo House</CheckedOption>
-            <CheckedOption name="site" id="box-3" onChange={this.onSelectChange} value="3">Croydon General Hospital, Research Centre</CheckedOption>
-            <CheckedOption name="site" id="box-4" onChange={this.onSelectChange} value="4">Lunar House</CheckedOption>
-            <CheckedOption name="site" id="box-5" onChange={this.onSelectChange} value="5">Metro Point</CheckedOption>
-            <CheckedOption name="site" id="box-6" onChange={this.onSelectChange} value="6">Regus Building</CheckedOption>
-            <CheckedOption name="site" id="box-7" onChange={this.onSelectChange} value="7">The Granby Research Centre</CheckedOption>
-            <CheckedOption name="site" id="box-8" onChange={this.onSelectChange} value="8">Vulcan House</CheckedOption>
-          </OptionSelect>
-        </div>
-        <div className="column-one-third">
-          <OptionSelect title="Suitability" onChange={this.onSelectChange}>
-            <CheckedOption name="suitability" id="SA" onChange={this.onSelectChange} value="1">Small animals (SA)</CheckedOption>
-            <CheckedOption name="suitability" id="LA" onChange={this.onSelectChange} value="2">Large animals (LA)</CheckedOption>
-            <CheckedOption name="suitability" id="AQ" onChange={this.onSelectChange} value="3">Aquatic species (AQ)</CheckedOption>
-            <CheckedOption name="suitability" id="AV" onChange={this.onSelectChange} value="4">Birds (AV)</CheckedOption>
-          </OptionSelect>
-        </div>
-        <div className="column-one-third">
-          <OptionSelect title="Holding" onChange={this.onSelectChange}>
-            <CheckedOption name="holding" id="STH" onChange={this.onSelectChange} value="1">Short term holding (STH)</CheckedOption>
-            <CheckedOption name="holding" id="NOH" onChange={this.onSelectChange} value="2">Not for overnight holding (NOH)</CheckedOption>
-            <CheckedOption name="holding" id="SEP" onChange={this.onSelectChange} value="3">Sterile experimental procedures (SEP)</CheckedOption>
-            <CheckedOption name="holding" id="NSEP" onChange={this.onSelectChange} value="4">Non-sterile experimental procedures (NSEP)</CheckedOption>
-            <CheckedOption name="holding" id="LTH" onChange={this.onSelectChange} value="5">Long-term holding (LTH)</CheckedOption>
-          </OptionSelect>
-        </div>
+        {
+          Object.keys(columns).map(key => (
+            <div className="column-one-third" key={key}>
+              <OptionSelect title={`${key.charAt(0).toUpperCase()}${key.substr(1)}`}>
+                {
+                  columns[key].map((item, index) =>
+                    <CheckedOption
+                      name={key}
+                      id={`${key}-${index}`}
+                      onChange={this.onSelectChange}
+                      value={item.value ? item.value : item}
+                      checked={this.isChecked(key, item)}
+                      >
+                      {
+                        item.label ? `${item.label}(${item.value})` : item
+                      }
+                    </CheckedOption>
+                  )
+                }
+              </OptionSelect>
+            </div>
+          ))
+        }
       </div>
       <p className="control-bar">
         <button className="button" onClick={() => this.emitChange()}>Apply filters</button>
@@ -180,7 +210,7 @@ class Places extends Page {
           ? <p>Showing { this.state.data.length } of { this.props.data.places.length } results</p>
           : <p>All { this.props.data.places.length } results</p>
       }
-      <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ columns } formatter={ (key, value) => this.cell(key, value) } />
+      <Table dataset={ this.state ? this.state.data : this.props.data.places } columns={ headers } formatter={ (key, value) => this.cell(key, value) } />
     </React.Fragment>
   }
 
