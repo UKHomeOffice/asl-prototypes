@@ -29,7 +29,7 @@ class Establishment extends Page {
         <div className="column-two-thirds">
           <ul className="dashboard">
             <li><a href={`/details?id=${establishment.id}`}>Establishment details</a></li>
-            <li><a href={`/named-people?id=${establishment.id}`}>Named people and licence holders</a></li>
+            <li><a href={`/people?id=${establishment.id}`}>Named people and licence holders</a></li>
             <li><a href={`/places?id=${establishment.id}`}>Licensed premises</a></li>
           </ul>
         </div>
