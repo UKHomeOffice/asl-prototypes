@@ -70,8 +70,7 @@ class Home extends Page {
       <div className="grid-row">
         <div className="column-two-thirds">
           <SearchBox
-            label="Search"
-            hint="For example licence number, first name, last name"
+            label="Search by name or licence number"
             onChange={searchTerm => this.setState({ searchTerm })}
             />
         </div>
@@ -96,7 +95,7 @@ class Home extends Page {
       <p style={{marginTop: '2em'}}>{ filtered.length === all.length ? `All ${all.length} people` : `Showing ${filtered.length} of ${all.length} people` }</p>
       <Table
         dataset={ filtered }
-        columns={ { name: 'Name', role: 'Role', licence_type: 'Licence Type', licence_number: 'Licence number' } }
+        columns={ { name: 'Name', role: 'Role', licence_type: 'Licence type', licence_number: 'Licence number' } }
         formatter={ (key, value, row) => this.cell(key, value, row) }
         sort="name"
         />
