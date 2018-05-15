@@ -28,7 +28,7 @@ class Home extends Page {
   }
 
   filters() {
-    return uniq(this.props.data.people.map(row => row.role))
+    return uniq(this.props.data.people.map(row => row.role)).sort().concat(['PIL', 'PPL']);
   }
 
   search() {
@@ -39,7 +39,7 @@ class Home extends Page {
     const filter = this.state.filter;
 
     const result = this.props.data.people.filter(row => {
-      return !filter || row.role === filter
+      return !filter || row.role === filter || row.licence_type === filter;
     });
 
     return result.filter(row => {
