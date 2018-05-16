@@ -84,3 +84,24 @@ ul.dashboard {
   vertical-align: middle;
   margin-right: 1em;
 }
+
+.filters {
+  .filter-by {
+    color: #6f777b;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 1em;
+    padding: 0;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+  }
+}
