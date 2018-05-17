@@ -19,7 +19,7 @@ class Home extends Page {
   cell(key, value, row) {
     switch (key) {
       case 'name':
-        return <a href={`/profile?id=${row.id}`}>{`${row.first_name} ${row.last_name}`}</a>;
+        return <a href={`/profile?id=${row.id}`}>{`${row.name}`}</a>;
       case 'role':
         return value.toUpperCase();
       default:
@@ -43,7 +43,7 @@ class Home extends Page {
     });
 
     return result.filter(row => {
-      return some(['first_name', 'last_name', 'licence_number', 'licence_type'], key => {
+      return some(['name', 'licence_number', 'licence_type'], key => {
         return row[key].toLowerCase().includes(term.toLowerCase())
       });
     });
