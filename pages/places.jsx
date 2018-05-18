@@ -191,7 +191,7 @@ class Places extends Page {
                       checked={this.isChecked(key, item)}
                       >
                       {
-                        item.label ? `${item.label}(${item.value})` : item
+                        item.label ? `${item.label} (${item.value})` : item
                       }
                     </CheckedOption>
                   )
