@@ -19,16 +19,16 @@ class Home extends Page {
   cell(key, value, row) {
     switch (key) {
       case 'name':
-        return <a href={`/profile?id=${row.id}`}>{`${row.name}`}</a>;
+        return <a href={`/profile?id=${row.id}`}>{`${row.name}`}</a> || '-';
       case 'role':
-        return value.toUpperCase();
+        return value.toUpperCase() || '-';
       default:
-        return value;
+        return value || '-';
     }
   }
 
   filters() {
-    return uniq(this.props.data.people.map(row => row.role)).sort().concat(['PIL', 'PPL']);
+    return uniq(this.props.data.people.map(row => row.role)).sort();
   }
 
   search() {
@@ -39,7 +39,7 @@ class Home extends Page {
     const filter = this.state.filter;
 
     const result = this.props.data.people.filter(row => {
-      return !filter || row.role === filter || row.licence_type === filter;
+      return !filter || row.role === filter;
     });
 
     return result.filter(row => {

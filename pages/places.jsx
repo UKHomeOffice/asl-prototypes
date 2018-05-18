@@ -31,6 +31,10 @@ const columns = {
     {
       label: 'Birds',
       value: 'AV'
+    },
+    {
+      label: 'Non-human primates',
+      value: 'NHP'
     }
   ],
   holding: [
@@ -99,9 +103,9 @@ class Places extends Page {
   cell(key, value) {
     switch (key) {
       case 'nacwo':
-        return <a href="/profile">{ value }</a>;
+        return <a href="/profile">{ value }</a> || '-';
       default:
-        return value;
+        return value || '-';
     }
   }
 

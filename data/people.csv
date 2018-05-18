@@ -6,10 +6,10 @@ id,name,licence_number,role,phone_number,email,address,town,postcode,qualificati
 5,Lorry Smalles,97-7088549,NPRC,404-717-8777,lsmalles4@mozilla.com,28 Banding Plaza,Atlanta,31165,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 6,Mozes Leahey,95-3489355,PELH,850-290-7591,mleahey5@howstuffworks.com,94 American Parkway,Qarshi,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PEL
 7,Lucy Priditt,47-1200656,NVS,862-430-3840,lpriditt6@amazon.com,65 Sutteridge Hill,Belos Ares,4650-304,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
-8,Sonny Tonepohl,91-3353089,HOLC,,stonepohl7@wunderground.com,9 Carberry Drive,Jaffna,40000,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
+8,Sonny Tonepohl,91-3353089,PILH,,stonepohl7@wunderground.com,9 Carberry Drive,Jaffna,40000,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
 9,Berget Serotsky,71-9117190,HOLC,813-328-3984,bserotsky8@spotify.com,012 Darwin Way,Shibi,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
-10,Malissa Scarre,33-1189255,NPRC,497-897-6971,mscarre9@dailymotion.com,6903 Bobwhite Alley,Kabankalan,6109,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
-11,Dotti Vallery,46-6718435,NPRC,601-816-4355,dvallerya@biglobe.ne.jp,196 Schurz Lane,Cavaillon,84309 CEDEX,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
+10,Malissa Scarre,33-1189255,PPLH,497-897-6971,mscarre9@dailymotion.com,6903 Bobwhite Alley,Kabankalan,6109,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
+11,Dotti Vallery,46-6718435,PPLH,601-816-4355,dvallerya@biglobe.ne.jp,196 Schurz Lane,Cavaillon,84309 CEDEX,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
 12,Arabela Litherland,66-3028588,NPRC,222-488-3652,alitherlandb@cocolog-nifty.com,246 Monterey Court,Zhongshan,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility,PIL
 13,Shoshanna Kidd,84-0625775,NIO,,skiddc@deliciousdays.com,81870 Morrow Street,Babakantugu,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 14,Ninon Locarno,71-0321646,NVS,921-682-6844,nlocarnod@craigslist.org,35680 Thompson Center,Tsukuba,369-0114,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility,PPL
@@ -18,9 +18,9 @@ id,name,licence_number,role,phone_number,email,address,town,postcode,qualificati
 17,Ralina Tabert,67-1004712,NPRC,528-782-4691,rtabertg@cnbc.com,7380 Fair Oaks Junction,Arbaoua,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 18,Barnard Parlatt,91-9617319,HOLC,986-977-9528,bparlatth@blog.com,111 Twin Pines Park,Piteå,941 22,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility,PIL
 19,Darya Giacovelli,76-5890432,NIO,384-651-3293,dgiacovellii@4shared.com,5 Maryland Place,Dubravica,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
-20,Ruperto Rosenvasser,54-8467643,HOLC,,rrosenvasserj@geocities.com,60 Oakridge Hill,Kobylí,691 10,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
+20,Ruperto Rosenvasser,54-8467643,PILH,,rrosenvasserj@geocities.com,60 Oakridge Hill,Kobylí,691 10,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
 21,Myrilla Pryor,09-7236200,NVS,332-400-1690,mpryork@51.la,177 Bobwhite Road,Borlänge,781 29,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PPL
-22,Torry Sprowle,92-2860675,HOLC,918-164-2110,tsprowlel@census.gov,9632 Redwing Trail,Pervoural’sk,623109,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
+22,Torry Sprowle,92-2860675,PILH,918-164-2110,tsprowlel@census.gov,9632 Redwing Trail,Pervoural’sk,623109,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
 23,Thorn Blakiston,40-0413553,NVS,590-513-5617,tblakistonm@fastcompany.com,882 Manley Court,Sumberejo,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Large animal facility,PIL
 24,Wyatt Loghan,58-9881159,NVS,,wloghann@cloudflare.com,21470 Nevada Parkway,Storozhynets’,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 25,Dorothee Aujean,53-9141800,HOLC,385-822-1403,daujeano@theatlantic.com,6184 Grayhawk Drive,Taphan Hin,66110,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility,PIL
@@ -37,10 +37,10 @@ id,name,licence_number,role,phone_number,email,address,town,postcode,qualificati
 36,Jade Rous,25-3962687,NTCO,588-130-1881,jrousz@ustream.tv,7363 Summit Court,Ipubi,56260-000,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
 37,Delila Gildea,66-7691989,NACWO,212-927-7958,dgildea10@smugmug.com,81 Marquette Plaza,New York City,10131,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PPL
 38,Ring Cecely,99-2783529,NPRC,607-566-0444,rcecely11@tinyurl.com,602 Lake View Hill,Dulce Nombre,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
-39,Camila Meaking,77-4808238,NACWO,207-579-0584,cmeaking12@dyndns.org,261 Village Parkway,Kuala Lumpur,50515,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility,PIL
+39,Camila Meaking,77-4808238,PPLH,207-579-0584,cmeaking12@dyndns.org,261 Village Parkway,Kuala Lumpur,50515,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility,PIL
 40,Aurore O' Clovan,11-3842773,NTCO,175-252-2562,aoclovan13@newsvine.com,1 3rd Trail,Yasynuvata,,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
 41,Jorie Simoni,42-7253292,NTCO,238-880-7025,jsimoni14@tumblr.com,6 Old Shore Way,Mirsk,59-630,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility,PIL
-42,Jorge Miguet,56-9634615,NACWO,182-305-7131,jmiguet15@vinaora.com,3322 Jana Hill,Ouro Sogui,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
+42,Jorge Miguet,56-9634615,PPLH,182-305-7131,jmiguet15@vinaora.com,3322 Jana Hill,Ouro Sogui,,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
 43,Jaynell Kirkbride,84-5444820,NTCO,338-269-1904,jkirkbride16@edublogs.org,8 Pine View Way,Valinhos,13270-000,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
 44,Del Fulle,77-5240111,NIO,176-263-7674,dfulle17@goo.ne.jp,9095 Mariners Cove Circle,Berkovitsa,3500,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
 45,Bernice Gaither,82-6690846,NIO,673-528-3984,bgaither18@miitbeian.gov.cn,0480 Jay Trail,Las Piñas,1752,MSc Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
@@ -49,10 +49,10 @@ id,name,licence_number,role,phone_number,email,address,town,postcode,qualificati
 48,Ely Standley,31-3254164,HOLC,705-384-2595,estandley1b@pen.io,5 Pearson Place,Karanggeneng,,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Small animal facility,PIL
 49,Sargent Franzoli,28-9372554,NVS,848-844-7314,sfranzoli1c@java.com,2 Toban Avenue,Norrtälje,761 31,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PIL
 50,Rudd Montes,56-3694274,NPRC,234-499-7488,rmontes1d@cbc.ca,9597 Twin Pines Trail,Baćkowice,27-552,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Small animal facility,PPL
-51,Clement Vian,82-2583279,NACWO,366-353-8229,cvian1e@ocn.ne.jp,2 Lillian Drive,Jardim,79240-000,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
+51,Clement Vian,82-2583279,PPLH,366-353-8229,cvian1e@ocn.ne.jp,2 Lillian Drive,Jardim,79240-000,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 52,Wandis Rabson,66-1735723,NVS,,wrabson1f@cnbc.com,7651 Mitchell Hill,Perniö,25501,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Large animal facility,PIL
 53,Dorothea Seggie,99-5457748,HOLC,261-451-1958,dseggie1g@omniture.com,00866 Armistice Way,Huzhen,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Bird facility,PPL
-54,Janella Paviour,93-9187935,NACWO,731-819-5827,jpaviour1h@spotify.com,89030 Loeprich Plaza,Baras,4803,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
+54,Janella Paviour,93-9187935,PPLH,731-819-5827,jpaviour1h@spotify.com,89030 Loeprich Plaza,Baras,4803,BSc (Hons) Aquaculture and Fisheries Management,Charles River 04/08/2016,Fish facility,PIL
 55,Saunderson Hagger,92-5553811,NPRC,511-737-6783,shagger1i@earthlink.net,5837 Montana Lane,Dante Delgado,96710,MSc Aquaculture and Fisheries Management,Charles River 04/08/2016,Bird facility,PIL
 56,Minor Coulthard,20-1878286,NIO,896-262-8800,mcoulthard1j@cornell.edu,20 Banding Junction,Jiangpu,,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
 57,Christan McChruiter,24-0209247,NACWO,229-478-2626,cmcchruiter1k@clickbank.net,8 Ryan Point,Stockholm,117 97,BSc (Hons) Aquaculture and Fisheries Management,University of Croydon 05/10/2012,Fish facility,PIL
