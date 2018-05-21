@@ -21,7 +21,7 @@ const columns = {
       value: 'SA'
     },
     {
-      label: 'Large Animals',
+      label: 'Large animals',
       value: 'LA'
     },
     {
