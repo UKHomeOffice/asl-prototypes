@@ -4,7 +4,7 @@ import { Page } from 'prototype-kit';
 class BasePage extends Page {
 
   componentDidMount() {
-    const name = this.ucfirst(localStorage.getItem('name'));
+    const name = this.ucfirst(localStorage.getItem('name') || 'Test');
     this.setState({ name })
     document.getElementById('profile').innerHTML = name;
   }
