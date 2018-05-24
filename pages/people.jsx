@@ -72,17 +72,17 @@ class Home extends Page {
           <SearchBox
             label="Search by name or licence number"
             onChange={searchTerm => this.setState({ searchTerm })}
-            />
+          />
         </div>
       </div>
       <div className="filters">
-        <span className="filter-by">Filter by:</span>
+        <span className="filter-by">Filter by role:</span>
         <ul>
-            {
+          {
               this.state && this.state.filter
                 ? <li><a href="#" onClick={e => this.doFilter(e, '')}>All</a></li>
                 : <li>All</li>
-            }
+          }
           {
             this.filters().map(filter =>
               this.state && this.state.filter === filter
@@ -95,7 +95,7 @@ class Home extends Page {
       <p style={{marginTop: '2em'}}>{ filtered.length === all.length ? `All ${all.length} people` : `Showing ${filtered.length} of ${all.length} people` }</p>
       <Table
         dataset={ filtered }
-        columns={ { name: 'Name', role: 'Role', licence_type: 'Licence type', licence_number: 'Licence number' } }
+        columns={ { name: 'Name', role: 'Roles', licence_number: 'PIL number' } }
         formatter={ (key, value, row) => this.cell(key, value, row) }
         sort="name"
         />
