@@ -166,10 +166,10 @@ class Places extends Page {
     const headers = {
       site: 'Site',
       area: 'Area',
+      name: 'Name',
       suitability: 'Suitability',
       holding: 'Holding',
-      nacwo: 'NACWO',
-      restrictions: 'Restrictions'
+      nacwo: 'NACWO'
     };
     const establishment = this.establishment();
 
