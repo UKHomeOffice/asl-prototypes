@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This licence is not active. The establishment is not authorised to apply regulated procedures to protected animals, or to breed, supply, or keep protected animals in any approved area.</p>
+      </div>
+      <div class="govuk-inset-text" style="margin-bottom:10px; padding: 3px; border-left: 5px solid lightgrey; margin-top: 0px;">
+        <h3 class="govuk-heading-s" style="padding-left: 10px;">The Royal Institute of Monkeys</h3>
+      </div>
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">Establishment licence</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download licence</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="govuk-list">
+        <li><strong>Establishment licence number</strong></li>
+        <li>–</li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Address</strong></li>
+        <li>–</li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Establishment licence holder</strong></li>
+        <li>–</li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Licenced to carry out</strong></li>
+        <li>
+          –
+        </li>
+      </ul>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell protocol-section-title">
+              <a class="heading-link" href="#">Conditions</a></td>
+            <td class="govuk-table__cell accordian-toggle">+</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell protocol-section-title">
+              <a class="heading-link" href="#">Authorisations</a></td>
+            <td class="govuk-table__cell accordian-toggle">+</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <a class="govuk-button">Amend</a>
+      </p>
+    </div> 
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

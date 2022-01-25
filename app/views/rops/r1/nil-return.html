@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Submit nil return</h1>
+      {% if data['setup-any'] == 'No' %}
+        <p>
+          <strong>Reason for nil return:</strong> No completed procedures in 2021
+        </p>
+      {% else %}
+        <p>
+          <strong>Reason for nil return:</strong> Only protected embryonic forms used in 2021
+        </p>
+      {% endif %}
+      
+      <h3 class="govuk-heading-m">Check your return</h3>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Project licence holder</td>
+            <td class="govuk-table__cell">Bruce Banner</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Project licence number</td>
+            <td class="govuk-table__cell">P78847475</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Establishment</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Establishment licence number</td>
+            <td class="govuk-table__cell">PE8847455</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Procedures carried out</td>
+            {% if data['setup-any'] == 'No' %}
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><a href="#">Change</a></td>
+            </tr>
+            {% else %}
+              <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header">Only 'protected' embryonic forms used?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+      <a href="rops-empty" class="govuk-button">Submit nil return</a>
+    </div>
+  </div>
+
+  <style>
+    dt {
+      width: 60%;
+    }
+    dd {
+      width: 35%;;
+    }
+  </style>
+{% endblock %}

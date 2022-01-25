@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-pel.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="govuk-list">
+        <li><strong>Establishment licence number</strong></li>
+        <li>dnakvdsnk</li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Address</strong></li>
+        <li>University of Croydon, Lunar House, CR0 1AB</li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Establishment licence holder</strong></li>
+        <li><a href="#">Bruce Banner</a></li>
+      </ul>
+      <ul class="govuk-list">
+        <li><strong>Licenced to carry out</strong></li>
+        <li>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Regulated procedures on protected animals</li>
+            <li>Breeding of relevant protected animals</li>
+          </ul>
+        </li>
+      </ul>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell protocol-section-title">
+              <a class="heading-link" href="#">Conditions</a></td>
+            <td class="govuk-table__cell accordian-toggle">+</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell protocol-section-title">
+              <a class="heading-link" href="#">Authorisations</a></td>
+            <td class="govuk-table__cell accordian-toggle">+</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <a class="govuk-button">Amend</a>
+      </p>
+    </div> 
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

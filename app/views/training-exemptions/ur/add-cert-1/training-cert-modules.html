@@ -1,0 +1,102 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Which modules are covered by the certificate?
+      </h1>
+  
+      <form action="training-cert-animals" method="post">
+       
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="option-hint">
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <span class="govuk-hint">Select all that apply</span>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-1" name="cert-module" type="checkbox" value="L" data-aria-controls="conditional-cert-module-1" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-1">
+                  L
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-2" name="cert-module" type="checkbox" value="E1" data-aria-controls="conditional-cert-module-2" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-2">
+                  E1
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-3" name="cert-module" type="checkbox" value="PILAtheory" data-aria-controls="conditional-cert-module-3" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-3">
+                  PILA (theory)
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-4" name="cert-module" type="checkbox" value="PILBskills" data-aria-controls="conditional-cert-module-4" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-4">
+                    PILA (skills)
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-5" name="cert-module" type="checkbox" value="PILB" data-aria-controls="conditional-cert-module-5" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-5">
+                  PILB
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-6" name="cert-module" type="checkbox" value="PILC" data-aria-controls="conditional-cert-module-6" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-6">
+                  PILC
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-7" name="cert-module" type="checkbox" value="Ktheory" data-aria-controls="conditional-cert-module-7" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-7">
+                  K (theory)
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-8" name="cert-module" type="checkbox" value="Kskills" data-aria-controls="conditional-cert-module-8" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-8">
+                  K (skills)
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-9" name="cert-module" type="checkbox" value="E2" data-aria-controls="conditional-cert-module-9" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-9">
+                  E2
+                </label> 
+              </div>
+                
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cert-module-10" name="cert-module" type="checkbox" value="PPL" data-aria-controls="conditional-cert-module-10" >
+                <label class="govuk-label govuk-checkboxes__label" for="cert-module-10">
+                  PPL
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">Cancel</a>
+      </form> 
+
+    </div>
+  </div>
+
+{% endblock %}

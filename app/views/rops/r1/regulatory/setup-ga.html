@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Detection of Genotoxic Substances
+      </span>
+      <h1 class="govuk-heading-l">Return details: animals</h1>
+      <h1 class="govuk-heading-s">This project's licence:</h1>
+       <p>
+        Does include the use of genetically altered animals
+       </p>
+      <form action="setup-purpose" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Were any genetically altered animals used in procedures in 2021? 
+              </h1>
+            </legend>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Guidance on genetically altered animals (GAA)
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Genetically altered animals include all genetically modified animals (transgenic, knock-out and other forms) and mutations. These can be naturally occurring or induced.</p>
+                <p>These animals are not genetically altered:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    all wild-type animals, including inbred strains
+                  </li>
+                  <li>
+                    genetically normal parents of genetically altered offspring and genetically normal offspring
+                  </li>
+                  <li>
+                    triploid fish unless induction of triploidy is for a scientific purpose  - also salmonids or similar if part of normal husbandry for the species
+                  </li>
+                  <li>
+                    animals with somatic genetic modification, such as by injection of viral vectors into tissues
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-any" name="setup-any" type="radio" value="Yes" data-aria-controls="conditional-option-3">
+                <label class="govuk-label govuk-radios__label" for="setup-any">
+                  Yes, genetically altered animals were used
+                </label>
+              </div>
+              <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-3">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    What genetic states were used?
+                  </label>
+                  <span class="govuk-hint">Select all that apply</span>
+                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="q4-yes" name="q4" type="checkbox" value="1" data-aria-controls="conditional-option-1">
+                      <label for="q4" class="govuk-label govuk-checkboxes__label">Not genetically altered</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="q4-no" name="q4" type="checkbox" value="2" data-aria-controls="conditional-option-2">
+                      <label for="q4" class="govuk-label govuk-checkboxes__label">Genetically altered without a harmful phenotype</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="q4-no" name="q4" type="checkbox" value="3" data-aria-controls="conditional-option-3">
+                      <label for="q4" class="govuk-label govuk-checkboxes__label">Genetically altered with a harmful phenotype</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div> -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-any-2" name="setup-any" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="setup-any-2">
+                  No, genetically altered animals were not used
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

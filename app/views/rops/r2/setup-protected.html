@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+ 
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details</h1>
+      <form action="setup-endangered" method="POST">
+        <div class="govuk-form-group" id="procedures" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">Were postnatal or free feeding animals used in 2021?</label>
+            <span class="govuk-hint">This includes all mammals already born, birds and reptiles already hatched, and fish, cephalopod and amphibian larvae capable of free feeding.</span>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  When to count larvae as free feeding
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>
+                  Zebra fish kept under conventional conditions should be counted as free feeding from five days post-fertilisation. 
+                </p>
+
+                <p>
+                  Medaka should be counted from when they hatch.
+                </p>
+
+                <p>
+                  Octopus and squid should be counted as free feeding from when they hatch, and cuttlefish from around seven days post-hatching. 
+                </p>
+              </div>
+            </details>
+        
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-protected-2" name="setup-protected" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="setup-protected-2">
+                  Yes, postnatal or free feeding animals were used
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-protected" name="setup-protected" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="setup-protected">
+                  No, only animals at an earlier stage of development were used
+                </label>
+              </div>
+            </div>
+            <br>
+            
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

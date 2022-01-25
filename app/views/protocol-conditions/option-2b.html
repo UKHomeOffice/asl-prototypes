@@ -1,0 +1,91 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('[data-toggle="toggle"]').change(function(){
+        $(this).prev().toggleClass("selected");
+        $(this).parents().next('.hide').toggle();
+        $(this).parents().toggleClass('no-underline');
+        $(this).parents().siblings('td').toggleClass('no-underline');
+      });
+    });
+  </script>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      <h3 class="govuk-heading-s">University of Croydon</h3>
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">Test project name</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download licence</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="inpage-nav govuk-body" style="">
+        <li><a href="#">Project summary</a></li>
+        <li><a href="#">Conditions</a></li>
+        <li><a href="#">Authorisations</a></li>
+        <li><a href="#">Action plan</a></li>
+        <li ><a href="option-2a">Protocols</a></li>
+        <li class="selected">Anaesthesia, surgery and substance administration</li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Anaesthesia, surgery and substance administration</h1>
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-s">Anaesthesia</h2>
+    
+        <p>Induction and maintenance of general or local anaesthesia, sedation or analgesia to mitigate the pain, suffering or distress associated with the performance of other regulated procedures is indicated using the following codes in protocols:**</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>AA no anaesthesia</li>
+          <li>AB general anaesthesia with recovery</li>
+          <li>AC non-recovery general anaesthesia</li>
+          <li>AD under neuromuscular blockade</li>
+        </ul>
+      </div>
+
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">General anaesthesia</h3>
+        <p>If authorised in this licence and unless otherwise specified, all animals are expected to make a rapid and unremarkable recovery from the anaesthetic within two hours. Uncommonly animals that fail to do so or exhibit signs of pain, distress or of significant ill health should be humanely killed unless a programme of enhanced monitoring and care is instituted until the animal fully recovers.</p>
+      </div>
+
+      <div class="govuk-inset-text">
+      <h2 class="govuk-heading-s">Surgery</h2>
+
+        <p>If authorised in this licence and unless otherwise specified:**</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Surgical procedures should be carried out aseptically, to at least the published Home Office minimum;</li>
+          <li>In the uncommon event of post-operative complications, animals will be humanely killed unless, in the opinion of a veterinary surgeon, such complications can be remedied promptly and successfully using no more than minor interventions. Minimally inflamed wounds without obvious infection may be re-closed on one occasion within 48 hours of the initial surgery. In the event of recurrence, NVS advice will be followed;</li>
+          <li>Peri and post-operative analgesia will be provided; agents will be administered as agreed in advance with the NVS;</li>
+          <li>All animals are expected to make a rapid and unremarkable recovery from the anaesthetic within two hours. Uncommonly animals that fail to do so or exhibit signs of pain, distress or of significant ill health will be humanely killed by a Schedule 1 method unless a programme of enhanced monitoring and care is instituted until the animal fully recovers;</li>
+          <li>Any animal not fully recovered from the surgical procedure within 24 hrs (eating, drinking and return to normal behaviour) should be humanely killed.</li>
+        </ul>
+      </div>
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-s">Administration of substances and withdrawal of fluids</h2>
+
+        <p>If authorised in this licence and unless otherwise specified, administration of substances and withdrawal of body fluids will be undertaken using a combination of volumes, routes, and frequencies that of themselves will result in no more than transient discomfort and no lasting harm using published guidelines on minimal severity.</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

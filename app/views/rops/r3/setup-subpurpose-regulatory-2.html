@@ -1,0 +1,132 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+ 
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Set up return: purposes</h1>
+      <h1 class="govuk-heading-s">For the sub-purposes</h1>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>XXX</li>
+        <li>XXX</li>
+        <li>XXX</li>
+      </ul>
+      <form action="setup-complete" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                What type of legislation applies to regulatory research carried out?
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select all that apply</span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-yes" name="reg-leg-type" type="checkbox" value="Oncology" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Legislation on medicinal products for human use
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Cardiovascular blood and lymphatic system" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Legislation on medicinal products for veterinary use and their residues
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Nervous system" data-aria-controls="conditional-option-rp">
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Medical devices legislation</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Respiratory system" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Industrial chemicals legislation</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Gastrointestinal system including liver" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Plant protection product legislation</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Musculoskeletal system" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Biocides legislation</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Dentistry" data-aria-controls="conditional-option-qc">
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Food legislation including food contact material</label>
+              </div>             
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Immune system" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Feed legislation including legislation for the safety of target animals, workers and environment
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Urogenital/reproductive system" >
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Cosmetics legislation</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-leg-type-no" name="reg-leg-type" type="checkbox" value="Sensory organs (skin, eyes and ears)" data-aria-controls="conditional-option-tc">
+                <label for="reg-leg-type" class="govuk-label govuk-checkboxes__label">Other</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-tc">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Specify other
+                  </label>
+                  <input class="govuk-input" id="other-tc" name="other-tc" type="text">
+                </fieldset>
+              </div>  
+              
+            </div>
+        
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                What’s the origin of the legislation?
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select all that apply</span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-where-leg-yes" name="reg-where-leg" type="checkbox" value="Oncology" >
+                <label for="reg-where-leg" class="govuk-label govuk-checkboxes__label">Legislation satisfying UK requirements only</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-where-leg-no" name="reg-where-leg" type="checkbox" value="Cardiovascular blood and lymphatic system" >
+                <label for="reg-where-leg" class="govuk-label govuk-checkboxes__label">Legislation satisfying EU requirements</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="reg-where-leg-no" name="reg-where-leg" type="checkbox" value="Nervous system" data-aria-controls="conditional-option-rp">
+                <label for="reg-where-leg" class="govuk-label govuk-checkboxes__label">Legislation satisfying Non-EU requirements</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+    <div class="govuk-column-third">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-s">Related guidance</h3>
+      <span class="govuk-hint">Links open in a new tab</span>
+      <ul class="govuk-list">
+        <li><a href="#">General return of procedure guidance</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

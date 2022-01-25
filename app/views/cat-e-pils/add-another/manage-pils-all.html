@@ -1,0 +1,121 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{{ data['course-name'] }}</span>
+    <h1 class="govuk-heading-xl">
+      Manage course
+    </h1>
+    <!-- <h2 class="govuk-heading-m">Course details</h2> -->
+    <p>
+      <dl class="govuk-body">
+        <!-- <dt>Course name</dt>
+        <dd>{{ data['course-name'] }}</dd> -->
+        <dt>Training Project licence title</dt>
+        <dd>Training in microvascular surgery</dd>
+        <dt>Training project licence number</dt>
+        <dd>{{ data['ppl-number'] }}</dd>
+        <dt>Course start date</dt>
+        <dd>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</dd>
+         
+        
+
+        <dt>Animals to be used</dt>
+        <dd>{{ data['animal-types'] }}</dd>
+      </dd>
+      </dl>
+    </p>
+  </div>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">   
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Course participants</h2>
+      
+      <p><a class="govuk-button govuk-button--secondary" href="add-participant-2.html">Apply for a licence</a></p>
+      
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Task status</th>
+            <th scope="col" class="govuk-table__header">Details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% if (data['first-name-2'].length > 1) %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">{{ data['first-name-2'] }} {{ data['surname-2'] }}</a></td>
+            <!-- <td class="govuk-table__cell">{{ data['email-2'] }}</td> -->
+            <td class="govuk-table__cell"><span class="badge">Awaiting endorsement</span></td>
+            <td class="govuk-table__cell"><a href="pil-task-review-admin">View task</a></td>
+          </tr>
+          {% endif %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">{{ data['first-name'] }} {{ data['surname'] }}</a></td>
+            <td class="govuk-table__cell">{{ data['email'] }}</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-granted">View licence</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell">John Smith</td>
+            <td class="govuk-table__cell">j.smith@critera.com</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-granted">View licence</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rachel Andrews</td>
+            <td class="govuk-table__cell">rachel.andrews@udc.edu.uk</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-granted">View licence</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Julia Stephens</td>
+            <td class="govuk-table__cell">julia-stephens@university-of-slough.com</td>
+            <td class="govuk-table__cell"><span class="badge">Returned</span></td>
+            <td class="govuk-table__cell"><a href="pil-task-review-admin">View task</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Andrea Bernal</td>
+            <td class="govuk-table__cell">a.bernal@chester.edu.uk</td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting recommendation</span></td>
+            <td class="govuk-table__cell"><a href="pil-task-review-admin">View task</a></td>
+          </tr> -->
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+
+  <style>
+    dt {
+      font-weight: bold;
+    }
+  </style>
+{% endblock %}

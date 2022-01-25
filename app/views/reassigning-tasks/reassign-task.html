@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">PIL application</span> -->
+      <h1 class="govuk-heading-xl">
+        Assign this task to a specific inspector
+      </h1>
+
+      <p>This will make the task only appear in the My Tasks list of the assigned inspector. All tasks will still be accessible to all users in the Outstanding task list view.</p>
+
+      <form action="inspector-landing-page" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-radios" data-module="radios">
+
+              <h2 class="govuk-heading-m">Who do you want to assign the task to?</h2>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="assignee-conditional-2" name="assignee" type="radio" value="Bruce Banner" data-aria-controls="conditional-assignee-conditional-2">
+                <label class="govuk-label--s govuk-radios__label" for="assignee-conditional-2">
+                  Assign to me
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="assignee-conditional-1" name="assignee" type="radio" data-aria-controls="conditional-assignee-conditional-1" value="Emilio Roundy" >
+                <label class="govuk-label--s govuk-radios__label" for="assignee-conditional-1">
+                  Assign to another inspector
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-assignee-conditional-1">
+                <div class="govuk-form-group">
+                  <p>Select Inspector</p>
+                  <select class="govuk-select" id="sort"  name="">
+                    <option value="Emilio Roundy">Emilio Roundy</option>
+                    <option value="Cherryl Garmon">Cherryl Garmon</option>
+                    <option value="Adam Backer">Adam Backer</option>
+                    <option value="Marquerite Brockman">Marquerite Brockman</option>
+                    <option value="Huong Smit">Huong Smit</option>
+                    <option value="Emilia Hittle">Emilia Hittle</option>
+                    <option value="Mike Simonds">Mike Simonds</option>
+                    <option value="Alycia Douglas">Alycia Douglas</option>
+                    <option value="Crystle Torrez">Crystle Torrez</option>
+                  </select>
+                </div>
+              </div>
+
+              {% if data['assignee'].length > 1 %}
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="assignee-conditional-3" name="assignee" type="radio" value="" data-aria-controls="conditional-assignee-conditional-3">
+                  <label class="govuk-label--s govuk-radios__label" for="assignee-conditional-3">
+                    Assign to all University of Croydon inspectors
+                  </label> 
+                </div>
+
+              {% endif %}
+              
+            </div>
+          </fieldset>
+        </div>
+       <!--  <h3 class="govuk-heading-s">Why do you want to reassign this task?</h3>
+          <textarea class="govuk-textarea" id="more-detail-reassign" name="more-detail-reassign" rows="5" aria-describedby="more-detail-reassign-hint"></textarea> -->
+
+        <button class="govuk-button">Continue</button> <a href="#" class="secondary-link">Cancel</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

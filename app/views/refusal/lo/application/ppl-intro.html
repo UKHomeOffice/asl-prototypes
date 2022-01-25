@@ -1,0 +1,106 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = 'introduction' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-amendment.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>
+ 
+  <div class="govuk-grid-row">    
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- {% include "includes/nts-warning-small.html" %} -->
+      <h1 class="govuk-heading-l">Introductory details</h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the title of this project?
+        </label>
+        <span class="govuk-hint">Focus on your broad aims and use simple language. For example 'Genes and lifestyle influences on brain ageing'.</span>
+        <p>Development of new biological anticancer agents</p>
+        {% include "includes/add-comment.html" %}
+        
+        
+
+      <!-- <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Why is it important to undertake this work?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>
+          In the UK, around 600,000 people – almost 1% of the population – have epilepsy. Of these people with epilepsy approximately 600 die every year from SUDEP. Many more people have to live daily with the risk of SUDEP hanging over them. Whilst it is known that seizure-induced cardiorespiratory autonomic dysfunction is a potential cause of SUDEP, identification of effective therapies to prevent SUDEP is hampered by poor understanding of the underlying neural mechanisms that lead to seizure-induced cessation of breathing and/or circulation. Improved knowledge of microglial activation or inhibition in regulating cardiorespiratory function and seizure threshold/frequency will help to inform the future development of therapeutic interventions. Developments in therapeutic care will ultimately benefit the patients, clinicians and the health care system. It will reduce the duration of hospitalization and disabilities due to uncontrolled seizures in patients with epilepsy and reduce suffering of their family members, and improve the quality of life in lessening concerns over seizures and SUDEP. We hope that in the longer term, the UK health care system will benefit by saving money and resources spent on epilepsy patients.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div> -->
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            Is this project for higher education and training purposes?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+            <p>
+              No
+            </p>
+        </fieldset>
+        {% include "includes/add-comment.html" %}
+      </div>
+
+            
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Which permissible purposes apply to this project?
+          </legend>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              (a) Basic research
+            </li>
+            <li>
+              (b) Translational or applied research with one of the following aims:
+            </li>
+            <li>
+              (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or their effects, in man, animals or plants
+            </li>
+          </ul>
+        </fieldset>
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+       
+
+      <div class="govuk-form-group duration">
+        <label class="govuk-label--s" for="duration">What will be the duration of this project?</label>
+        <p>5 years 0 months</p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="">Which types of animals will be used in this project?</label>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Mice
+          </li>
+        </ul>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

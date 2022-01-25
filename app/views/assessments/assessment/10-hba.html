@@ -1,0 +1,246 @@
+  
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary: general</a></li>
+        <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li class="selected"><a href="10-hba">Harm-benefit analysis</a></li>
+         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Harm-benefit analysis</h1>
+      <form action="assessment-overview" method="post">
+            
+
+        <h3 class="govuk-heading-m">Analyse the likelihood of success</h3>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Factors to consider
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>Consider:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                the proposed species, models, methods and experimental design
+              </li>
+              <li>
+                how realistic the objectives are and whether the outcomes can be delivered in the timeframe and to what quality (for example, GLP)
+              </li>
+              <li>
+                funding plans
+              </li>
+              <li>
+                availability of facilities, equipment, skills and services
+              </li>
+              <li>
+                validation of new or novel methodology and associated technical competence
+              </li>
+              <li>
+                the experience and track record of the applicant and group in the field
+              </li>
+              <li>
+                how scientifically sound the work is and how robust the plan is to disseminate the benefits (for example, by publication)
+              </li>
+
+            </ul>
+          </div>
+        </details>
+
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="comments-10">
+            Analysis of likelihood of success
+          </label>
+          <span id="comments-10-hint" class="govuk-hint"></span>
+          <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
+        </div>
+
+        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+
+        <h3 class="govuk-heading-m">Analyse the expected benefits</h3>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Benefits to consider 
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>Consider:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                direct or project-related benefits
+              </li>
+              <li>
+                indirect benefits including
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    field-related benefits
+                  </li>
+                  <li>
+                    cross-field benefits
+                  </li>
+                  <li>
+                    3Rs benefits
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+        </details>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="comments-10">
+            Analysis of expected benefits
+            </label>
+            <span id="comments-10-hint" class="govuk-hint"></span> 
+            <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
+          </div>
+        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+
+        <h3 class="govuk-heading-m">Analyse the nature of the harms
+        </h3>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Harms to consider
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>Consider:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                contingent harms, such as environmental harms
+              </li>
+              <li>
+                project-related harms, including: 
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    the severity, frequency and duration of procedures
+                  </li>
+                  <li>
+                    the nature, severity and likelihood of each major adverse effect and the proportion of animals predicted to be affected
+                  </li>
+                  <li>
+                    the number, origin, species, strain and age/stage of development of animals being used
+                  </li>
+                  <li>
+                    the fate of animals, such as humane killing or re-use
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                cumulative effects
+              </li>
+              <li>
+                mitigation or amelioration of harms
+              </li>
+              <li>
+                potential alternatives or refinements, including specific advice from referrals
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="comments-10">
+            Analysis of expected harms
+           </label>
+           <span id="comments-10-hint" class="govuk-hint"></span> 
+           <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
+         </div>
+
+         <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+        <h3 class="govuk-heading-m">Outcome of harm-benefit analysis</h3>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Do the potential benefits justify the harms?
+            </label>
+            <span class="govuk-hint"></span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="hba-yes" name="hba" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
+                <label for="hba" class="govuk-label govuk-radios__label">Yes</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="hba-notes">
+                    Explain how the potential benefits justify the harms
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea class="govuk-textarea" id="hba-notes" name="hba-notes" rows="8" aria-describedby="hba-notes-hint">{{reason}}</textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="hba-no" name="hba" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
+                <label for="hba" class="govuk-label govuk-radios__label">No</label>
+                
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="hba-reason">
+                    Explain why the potential benefits don’t justify the harms
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea class="govuk-textarea" id="hba-reason" name="hba-reason" rows="8" aria-describedby="hba-reason-hint">{{reason}}</textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <form action="assessment-overview" method="post">
+        
+        {% set assessSection = 'hba' %}
+
+        {% include "includes/assessment-complete.html" %}
+
+        </form>
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

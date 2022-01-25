@@ -1,0 +1,92 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Manage your course</span>
+      <h1 class="govuk-heading-xl">
+        Apply for a licence
+      </h1>
+      <form action="manage-pils-progression" method="POST">
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="first-name-2">
+            First name
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="first-name-2" name="first-name-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="surname-2">
+            Surname
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="surname-2" name="surname-2" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="email-2">
+            Email address
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="email-2" name="email-2" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="users-dob-2-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label class="govuk-label--s">
+                Date of birth
+              </label>
+            </legend>
+            <span id="users-dob-2-hint" class="govuk-hint">
+              For example, 12 11 1980
+            </span>
+            <div class="govuk-date-input" id="users-dob-2 ">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-2-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-date -day" name="users-dob-2-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-2-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="users-dob-2 -month" name="users-dob-2-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-2-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="users-dob-2 -year" name="users-dob-2-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </fieldset>
+          </div> 
+          <div class="govuk-form-group">
+            <label class="govuk-label--s" for="personal-statement">
+              Personal statement
+            </label>
+            <span id="personal-statement-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="personal-statement" name="personal-statement" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>       
+          <button class="govuk-button">Continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

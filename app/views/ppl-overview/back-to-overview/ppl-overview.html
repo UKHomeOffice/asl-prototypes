@@ -1,0 +1,129 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-banner">    
+        <p style="margin-bottom:0px;">
+          <i class="material-icons restriction-icon">error</i>
+          <strong>This project licence is due a retrospective assessment by 1 January 2021</strong>&emsp;<a href="ra-ppl-legacy/ra-index-start">Start assessment</a>
+          </span>
+        </p>
+      </div> 
+  
+      {% include "includes/status-banner-expired.html" %}
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Autophagy in the hematopoietic system
+      </h1>
+      
+      <dl class="govuk-body">
+        <dt>PPL holder</dt>
+        <dd>Bruce Banner
+            <br>
+            <a href="#">View profile</a> | <a href="#">Change</a>
+        </dd>
+        <dt>PPL number</dt>
+        <dd>78847475</dd>
+        <dt>Project duration</dt>
+        <dd>5 years 0 months</dd>
+        <dt>Date granted</dt>
+        <dd>02 July 2015</dd>
+        <dt>Last amended</dt>
+        <dd>06 January 2017</dd>
+        <dt>Expiry date</dt>
+        <dd>01 July 2020</dd>
+        <!-- <dt>Retrospective assessment due</dt>
+        <dd>02 November 2024</dd> -->
+      </dl>    
+      <a href="ppl-app/ppl-granted-summary.html" class="govuk-button">View granted licence</a>
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Retrospective assessment</h2>
+      <p>Submit learnings from this project so they can be published.</p>
+      <h3 class="govuk-heading-s">Assessment due: 2 January 2021</h3>
+
+      <a href="ra-ppl-legacy/ra-index-start" class="govuk-button govuk-button--secondary">Start assessment</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Amend granted licence</h2>
+      <p>You can amend this project licence if you want to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Change any of the licence details</li>
+        <li>Transfer to another establishment</li>
+      </ul>
+
+      <a href="ppl-index" class="govuk-button govuk-button--secondary">Amend licence</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Previous versions of this licence</h2>
+      <p>View previous versions of this licence.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">View the licence granted on 07 July 2029.</a></li>
+      </ul>
+      
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Revoke licence</h2>
+      <p>Cancel this licence if it is no longer needed.</p>
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--warning">Revoke licence</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Guest access</h2>
+      <p>Allow colleagues to view this project. Administrators will have access by default.</p>
+      <a href="#">Grant access</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Related tasks</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Received</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Licence </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PPL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PPL Amendment</a><br>
+              Mary Jones
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dt {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dd {
+      width: 60%;
+      padding-bottom: 30px;
+      
+    }
+  </style>
+
+{% endblock %}

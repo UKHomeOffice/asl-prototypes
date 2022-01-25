@@ -1,0 +1,227 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL amendment</span>
+      <h1 class="govuk-heading-xl">
+        Review amendment
+      </h1>
+      <h3 class="govuk-heading-s">How to cure heartache</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#procedures" class="">Establishment transfer requested</a>
+        <a href="#procedures" class="">Latest submission</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+   
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">Awaiting Endorsement</span>
+          <span class="date">20 July 2019</span>
+        </p>
+      <p><strong>Submitted by:</strong> Jane Smith</p>
+      <p>{{data["comment-pelha"]}}</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activityyy
+          </span>
+        </summary>
+        <div class="">
+          <br>
+          <p>
+            <span class="badge">Endorsed</span>
+            <span class="date">19 July 2019</span>
+          </p>
+          <p><strong>Endorsed for University of Croydon by:</strong> Jane Smith</p>
+          <br>
+          <p>
+            <span class="badge">Awaiting Endorsement</span>
+            <span class="date">17 July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> <a href="#">Michael Thomas</a></p>
+        </div>
+      </details>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+     
+      <h2 class="govuk-heading-m">PPL holder</h2>
+      <p><a href="#">Michael Thomas</a></p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Establishment transfer requested</h3>
+      <p>This amendment includes a change of primary establishment which will need to be endorsed by an administrator acting on behalf of the PEL holder before it can be passed onto the Home Office for approval.</p>
+
+
+
+
+
+       <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col"></th>
+            <th class="govuk-table__header" scope="col">Current</th>
+            <th class="govuk-table__header" scope="col">Proposed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Primary establishment</th>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell"><span class=" highlight">Marvell Pharmaceuticals</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Additional establishment 1</th>
+            <td class="govuk-table__cell">Marvell Pharmaceuticals</td>
+            <td class="govuk-table__cell"><span class=" highlight">University of Croydon</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <hr class=" govuk-section-break--xl govuk-section-break--visible"> -->
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+      <p>This is the amendment that has been submitted for approval.</p>
+      <p><a href="review-ppl-index" class="govuk-button govuk-button--secondary">View latest submission</a></p>
+      
+      <h3 class="govuk-heading-s">AWERB review date</h3>
+      <p>{{data["awerb-declaration"]}}</p>
+      
+      <h3 class="govuk-heading-s">Reason for amendment</h3>
+      <p>{{data["amendment-reason"]}}</p>
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live-3" class="govuk-label govuk-radios__label">Endorse amendment</label>
+                <span class="govuk-hint">You confirm that your establishment is willing to endorse this amendment.</span> 
+              </div>
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live-2" class="govuk-label govuk-radios__label">Reject transfer</label>
+                <span class="govuk-hint">The applicant will be notified the transfer has been rejected.</span> 
+              </div> -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live-1" class="govuk-label govuk-radios__label">Return to applicant</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="pelhb-add-comment" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

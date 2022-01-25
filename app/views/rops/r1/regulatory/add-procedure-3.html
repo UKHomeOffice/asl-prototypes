@@ -1,0 +1,246 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '3' %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Detection of Genotoxic Substances
+      </span>
+      
+      <h1 class="govuk-heading-l">Add procedure details: {{row}}</h1>
+    </div>
+ </div>
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <form action="rops-added-{{row}}" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              Animal species 
+            </label>
+            <span class="govuk-hint">Select animal species used</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="species-mice" name="row-{{row}}[species]" type="radio" value="Mice" data-aria-controls="conditional-option-1">
+                <label for="species-mice" class="govuk-label govuk-radios__label">Mice</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="species-rats" name="row-{{row}}[species]" type="radio" value="Rats" data-aria-controls="conditional-option-2">
+                <label for="species-rats" class="govuk-label govuk-radios__label">Rats</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s">
+            Re-use
+          </label>
+          <p class="govuk-body">No</span>
+          <input type="hidden" name="row-{{row}}[reuse]" value="No">
+        </div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s">
+            Animals place of birth
+          </label>
+          <p class="govuk-body">UK, licensed establishment</span>
+          <input type="hidden" name="row-{{row}}[birthplace]" value="UK, licensed establishment">
+        </div>
+
+ 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              Genetically altered animals
+            </label>
+            <span class="govuk-hint">Select whether genetically altered animals (GAA) were used in this procedure: </span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-no" name="row-{{row}}[gaa]" type="radio" value="GAA were not used" data-aria-controls="conditional-option-1">
+                <label for="gaa" class="govuk-label govuk-radios__label">GAA were not used</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-unharm" name="row-{{row}}[gaa]" type="radio" value="GAA without a harmful phenotype were used" data-aria-controls="conditional-option-2">
+                <label for="gaa" class="govuk-label govuk-radios__label">GAA without a harmful phenotype were used</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-harm" name="row-{{row}}[gaa]" type="radio" value="GAA with a harmful phenotype were used" data-aria-controls="conditional-option-3">
+                <label for="gaa" class="govuk-label govuk-radios__label">GAA with a harmful phenotype were used</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s">
+            Purpose
+          </label>
+          <p class="govuk-body">Regulatory research</span>
+          <input type="hidden" name="row-{{row}}[purpose]" value="Regulatory research">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Sub-purpose
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select the sub-purpose that applies to this procedure</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="subpurpose-yes" name="row-{{row}}[subpurpose]" type="radio" value="Toxicity and genotoxicity
+                " >
+                <label for="subpurpose" class="govuk-label govuk-radios__label">Toxicity and genotoxicity
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="subpurpose-no" name="row-{{row}}[subpurpose]" type="radio" value="Toxicity and neurotoxicity" >
+                <label for="subpurpose" class="govuk-label govuk-radios__label">Toxicity and neurotoxicity</label>
+              </div>            
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Type of legislation
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select the type of legislation that applies to this procedure</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="typeleg-yes" name="row-{{row}}[typeleg]" type="radio" value="Legislation on medicinal products for human use
+                " >
+                <label for="typeleg" class="govuk-label govuk-radios__label">Legislation on medicinal products for human use
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="typeleg-no" name="row-{{row}}[typeleg]" type="radio" value="Industrial chemicals legislation" >
+                <label for="typeleg" class="govuk-label govuk-radios__label">Industrial chemicals legislation</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="typeleg-no" name="row-{{row}}[typeleg]" type="radio" value="Plant protection product legislation" >
+                <label for="typeleg" class="govuk-label govuk-radios__label">Plant protection product legislation</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="typeleg-no" name="row-{{row}}[typeleg]" type="radio" value="Food legislation including food contact material" data-aria-controls="conditional-option-qc">
+                <label for="typeleg" class="govuk-label govuk-radios__label">Food legislation including food contact material</label>
+              </div>              
+            </div>
+        
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s">
+            Origin of the legislation
+          </label>
+          <p class="govuk-body">Legislation satisfying EU requirements</span>
+          <input type="hidden" name="row-{{row}}[originleg]" value="Legislation satisfying EU requirements">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Severity
+            </label>
+            <span class="govuk-hint">Select actual severity of procedure</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="severity-sub" name="row-{{row}}[severity]" type="radio" value="Sub-threshold" data-aria-controls="conditional-option-1">
+                <label for="severity" class="govuk-label govuk-radios__label">Sub-threshold</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="severity-non" name="row-{{row}}[severity]" type="radio" value="Non-recovery" data-aria-controls="conditional-option-2">
+                <label for="severity" class="govuk-label govuk-radios__label">Non-recovery</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="severity-mild" name="row-{{row}}[severity]" type="radio" value="Mild" data-aria-controls="conditional-option-3">
+                <label for="severity" class="govuk-label govuk-radios__label">Mild</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="severity-moderate" name="row-{{row}}[severity]" type="radio" value="Moderate" data-aria-controls="conditional-option-4">
+                <label for="severity" class="govuk-label govuk-radios__label">Moderate</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="severity-severe" name="row-{{row}}[severity]" type="radio" value="Severe" data-aria-controls="conditional-option-5">
+                <label for="severity" class="govuk-label govuk-radios__label">Severe</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">
+            Number of procedures
+            </label>
+            <span class="govuk-hint">Enter number of  procedures</span>
+            <span class="govuk-hint">Projects using very small animals, for example X, can provide an estimate of the total numbers.</span>
+          </h1>
+          <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+        </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Add optional remarks or personal notes with this procedure
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                Note to Home Office (optional)
+                </label>
+                <span class="govuk-hint"></span>
+              </h1>
+              <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                Note for personal use (optional)
+                </label>
+                <span class="govuk-hint"></span>
+              </h1>
+              <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+          </div>
+        </details>
+        <div class="govuk-form-group">
+          <input type="hidden" name="row" value="1">
+          <button class="govuk-button">Add now</button>
+        </div>
+      </form>
+    </div>
+    <div class="govuk-column-third">
+      <h3 class="govuk-heading-s">Related guidance</h3>
+      <span class="govuk-hint">Links open in a new tab</span>
+      <ul class="govuk-list">
+        <li><a href="#">Actual severity reporting</a></li>
+        <li><a href="#">Severity classification of genetically altered animals</a></li>
+      </ul>
+    </div>
+  </div>
+<style>
+  dt {
+      width: 50%;
+      font-weight: normal;
+    }
+    dd {
+      width: 40%;
+      /* width: 65%;
+      margin-inline-start: 0px;
+      padding-bottom: 30px; */
+    }
+</style>
+{% endblock %}

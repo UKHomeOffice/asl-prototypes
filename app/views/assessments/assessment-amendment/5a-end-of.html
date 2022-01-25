@@ -1,0 +1,255 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="0-summary">Summary of amendment</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts"> Non-technical summary: general</a></li>
+       <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li class="selected"><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Other considerations</h1>
+
+      <form action="assessment-overview" method="post">
+        
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for other considerations
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+         [Each is dynamic depending on what the project includes]
+          <h3 class="govuk-heading-s">Animals containing human materials</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              It’s clear why ACHM classified as Category 2 or 3 by the Academy of Medical Sciences is necessary.
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Neuromuscular blocking agents</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              NMBAs are necessary for the project.
+            </li>
+            <li>
+              The proposed anaesthetic and monitoring regime is appropriate.
+            </li>
+            <li>
+              There are enough competent people to administer NMBAs and monitor the correct level of anaesthesia, including over a long period of time, if necessary. 
+            </li>
+            <li>
+              The emergency routine to cater for hazardous events is adequate to safeguard animal welfare.
+            </li>
+            <li>
+              Planned use of anaesthesia, analgesia and other pain-relieving methods is justified and relevant.
+              <br>
+                <span class="govu-hint">Check also responses in the NMBA section of other considerations for relevant information</span>
+            </li>
+          </ul>
+          
+          <h3 class="govuk-heading-s">Re-homing animals</h3>
+          
+          <p>
+            Where animals are to be re-homed:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              their state of health will allow them to be re-homed
+            </li>
+            <li>
+              re-homing poses no danger to public health, animal health or the environment
+            </li>
+            <li>
+              there is an adequate scheme for ensuring socialisation on being re-homed
+            </li>
+            <li>
+              any other necessary measures to safeguard wellbeing on being re-homed have been specified
+            </li>
+          </ul>
+          
+          <h3 class="govuk-heading-s">Setting animals free</h3>
+          
+          <p>
+            Where animals are to be set free:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              their state of health will allow them to be set free
+            </li>
+            <li>
+              setting them free poses no danger to public health, animal health or the environment
+            </li>
+            <li>
+              there is an adequate scheme for ensuring their socialisation 
+            </li>
+            <li>
+              any other necessary measures to safeguard their wellbeing on being set free have been specified
+            </li>
+            <li>
+              there is adequate competence to undertake decision-making relating to their health and welfare
+            </li>
+            <li>
+              if they’ve been taken from the wild, there’s either an appropriate programme of rehabilitation or rehabilitation would be inappropriate
+            </li>
+          </ul>
+          
+          <h3 class="govuk-heading-s">Sending farm animals to commercial slaughterhouses</h3>
+          
+          <p>
+            Where farm animals are to be sent to a commercial slaughterhouse:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              the animal will be appropriately identified and transported in accordance with the relevant legislation
+            </li>
+            <li>
+              the animal’s state of health meets commercial requirements for health and hygiene, including substance withdrawal times
+            </li>
+            <li>
+              commercial slaughter will pose no danger to public health, animal health or the environment
+            </li>
+            <li>
+              pending transport to the slaughterhouse, the animal will be kept in an appropriate social group under the supervision of the NVS
+            </li>
+            <li>
+              any other necessary measures to safeguard wellbeing are specified
+            </li>
+            <li>
+              there is adequate competence to undertake decision-making relating to their health and welfare
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Re-using animals</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The approach to re-use, taking account of accumulative effects, strikes an appropriate balance between reduction and refinement.
+            </li>
+            <li>
+              Re-use will not significantly affect the scientific outcomes.
+              <br>
+              <span class="govuk-hint">Check also responses in protocols for relevant information</span>
+            </li>
+            <li>
+              There are adequate reassurances that the requirements of ASPA S14 are met.
+            </li>
+          </ul>
+
+        </div>
+      </details>
+
+      {% set amendment = 'true' %}
+      {% set sectionComplete = 'yes' %}
+      {% set assessOutcome = 'met' %}
+      {% set assessSection = 'considerations' %}
+      {% set assessSectionTitle = 'other considerations' %}
+      {% include "includes/assessment-met.html" %}
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+<!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+     <p><span class="govuk-hint"><em>None automatically selected based on applicant’s responses</em></span></p>
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Rehoming
+                <p>C[Type of animal] may be set free at the end of the series of regulated procedures conducted under the authority of protocol [number]* provided that the following actions have been taken: ...</p>
+                <p><a href="#">Edit</a> | <a href="#">Add another</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Setting free
+                <p>C[Type of animal] may be set free at the end of the series of regulated procedures conducted under the authority of protocol [number]* provided that the following actions have been taken: ...</p>
+                <p><a href="#">Edit</a> | <a href="#">Add another</a></p>
+              </label>
+            </div>
+          </div>
+    
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item ">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                  Commercial slaughter
+                  <p>[Type of animal] may be sent directly to slaughter at a registered slaughterhouse at the end of their use provided that:
+                    The animal is healthy and meets the commercial requirements for meat ...</p>
+                  <p><a href="#">Edit</a> | <a href="#">Add another</a></p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                 Write new isation
+              </label>
+            </div>
+          </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+
+      {% include "includes/assessment-complete.html" %}
+
+  
+    </form>
+      
+      
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+</style>
+{% endblock %}

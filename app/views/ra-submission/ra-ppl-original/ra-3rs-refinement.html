@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Refinement
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="option-1-additional-1">
+          With the knowledge you now have, could the choice of animals or models used have been improved at all? During the project, how did you minimise harm to animals?
+        </label>
+        <span class="govuk-hint">High quality facilities and good processes for managing the animals’ care and wellbeing can reduce harms, for example. </span>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show the project’s planned refinement measures
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <h2 class="govuk-heading-s">
+              Explain the choice of species and why the animal model(s) you will use are the most refined, having regard to the objectives. Explain the general measures you will take to minimise welfare costs (harms) to the animals.
+            </h2>
+            <p>
+              In all studies we choose the animals with the least awareness and the physiology to provide a meaningful comparison to man. So for most pharmaceuticals and industrial chemicals, rats and mice are chosen. Sometimes, the physiology doesn't allow us to use mice and rats so other species like hamsters (rarely) guinea pigs (rarely) and pigs and dogs have to be used. Otherwise we would not be able to provide the data to assess the safety we are trying to establish. When animals like pigs and dogs are used it is usually mandated by regulators who won't accept the rat or mice for these types of studies (e.g. measuring the rhythms of the heart to see if new drugs affect them).
+            </p>
+            <p>
+              In all cases pigs are chosen in preference to dogs for use on study if the results can be achieved by using the pig as an alternative animal choice.
+            </p>
+            <p>
+              As a rule, all of our animals are group housed rather than singly housed, at all times, unless there is a good scientific reason not to. This would need to be approved by a vet to occur.
+            </p>
+            <p>
+              Animals may be implanted with devices (telemeters) to allow continuous recording of cardiovascular parameters such as blood pressure,heart rate etc. This is considered to be a refinement as ,despite the initial surgery required to implant such devices, the data obtained is obtained from animals that are going about their daily routines in home pen rather than the animal being taken out of its usual environment for recordings to be taken, which in itself may be stressful and influence readings.
+            </p>
+            <p>
+              These surgeries will be performed under general anaesthesia by trained people (including veterinary surgeons) utilising 'sterile' techniques, with appropriate antibiotics and pain relief as standard, and an appropriate recovery timeprior to use on study. Animals which have had telemetry surgery may be used on a number of occasions so called 're-use' to provide data on a number of different drugs, rather than a new animal being used each time. However such reuse is subject to that use not confounding the results of the next study as the animal has been used before and is subject to veterinary examination to ensure that the animal is suitable for use and that it will not be detrimentally impacted in terms of its welfare due that reuse. Animals on these study types will be dosed with test materials and carefully monitored for adverse effects such as weight loss and ill health due to dosing during testing. If adverse effects occur then we provide supportive treatment and care under veterinary supervision (including additional wet food and heating) We also use external and less invasive jackets to measure heartrhythms, and smaller transmitters with less invasive surgery in our studies to measure blood pressure when appropriate, if the study design allows it. However the gold standard to give cardiovascular safety data remains the abdominal implant described earlier.
+            </p>
+            <p>
+              Animals on this programme of work that are not implanted surgically will generally undergo acute (single dose shorter testing regime) , mainly involving a single dose of test material, and will be similarly monitored closely for potential adverse effects.
+            </p>
+            <p>
+              Animals are sometimes implanted with substance delivery systems/equipment that enable infusion of a test substance (rather than repeat dosing) by direct injection into blood stream and this is, despite initial surgery, often a more refined way of dosing animals over a longer period of time than by daily repeat injections.
+            </p>
+            <p>
+              All animals are monitored closely and any animals showing adverse effects to test materials will be monitored more closely than normal and appropriate interventions taken depending on effects seen, eg reduce dose, stop dosing, humanely kill. Veterinary advice will be taken regarding any treatment actions needed to stop/minimise any adverse effects occurring.
+            </p>
+          </div>
+        </details>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10"></textarea>
+      </div>
+
+
+      <p>
+        <a href="ra-3rs-refinement-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+    
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

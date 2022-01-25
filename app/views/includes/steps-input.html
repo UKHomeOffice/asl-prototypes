@@ -1,0 +1,40 @@
+
+
+<section class="step completed">
+  <h3 class="govuk-heading-s">
+    Step {{item}}: {{stepsReference}}
+    <span class="light smaller"> 
+    </span>
+  </h3>
+  <div class="review">
+    <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+    <p class="govuk-hint"></p>
+    <p>{{stepsDetail}}</p>
+</div>
+  <div class="review">
+    <h3 class="govuk-heading-s">Is this step optional?</h3>
+    <p>{{stepsOptional}}</p>
+  </div>
+  {% if stepsExpected === "Yes" %}
+  <div class="review">
+    <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+    <p class="govuk-hint"></p>
+    <p>{{stepsExpected}}</p>
+  </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{stepsLimits}}</p>
+    </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{likelyStepsEffects}}</p>
+    </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{stepsEndpoints}}</p>
+    </div>
+  {% endif %}
+</section>

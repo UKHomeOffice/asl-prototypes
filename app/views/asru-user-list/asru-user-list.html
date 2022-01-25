@@ -1,0 +1,202 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Animals in Science Regulation Unit</span>
+      <h1 class="govuk-heading-xl">
+        Staff directory
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+          <h2 class="govuk-heading-m"></h2>
+          <div class="govuk-tabs" data-module="tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+    
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#xxx">
+                  Current staff
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#yyy">
+                  Former staff
+                </a>
+              </li>
+            </ul>
+  
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="xxx" style="border:none;">
+           
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by name, email or role</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <p>Showing 46 users</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Name</th>
+                <th class="govuk-table__header" scope="col">Email</th>
+                <th class="govuk-table__header" scope="col">Phone</th>
+                <th class="govuk-table__header" scope="col">Assigned roles</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Dagny Alexander  </a></td>
+                <td class="govuk-table__cell" scope="col">dagny.alexander@homeoffice.gov.uk  </td>
+                <td class="govuk-table__cell" scope="col">07545816107</td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Bruce Barnes</a></td>
+                <td class="govuk-table__cell" scope="col">bruce.barnes@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07889952302</td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Susan Greene</a></td>
+                <td class="govuk-table__cell" scope="col">susan.greene@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07209959449</td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Janet Jones</a></td>
+                <td class="govuk-table__cell" scope="col">janet.jones@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07055186411</td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list">
+                    <li>
+                      Inspector
+                    </li>
+                    <li>
+                      Licensing Officer
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Kurtis Jackson </a></td>
+                <td class="govuk-table__cell" scope="col">kurtis.jackson@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07946198075</td>
+                <td class="govuk-table__cell" scope="col">Licensing Officer</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Inspector Morse</a></td>
+                <td class="govuk-table__cell" scope="col">inspector.morse@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07709204156</td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Megan Tilford </a></td>
+                <td class="govuk-table__cell" scope="col">megan.tilford@homeoffice.gov.uk </td>
+                <td class="govuk-table__cell" scope="col">07109287818</td>
+                <td class="govuk-table__cell" scope="col">Licensing Officer</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">John Smith</a></td>
+                <td class="govuk-table__cell" scope="col">john.smith@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07795404104</td>
+                <td class="govuk-table__cell" scope="col">Admin</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Paul Williamson</a></td>
+                <td class="govuk-table__cell" scope="col">paul.williamson@homeoffice.gov.uk</td>
+                <td class="govuk-table__cell" scope="col">07646092767</td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {% include "includes/pagination.html" %}
+        </section>      
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="yyy" style="border:none;">
+         
+           
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by name or role</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <p>Showing 18 users</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Name</th>
+                <th class="govuk-table__header" scope="col">Roles held</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">James Alexander  </a></td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Dean Barnes</a></td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Esther Greene</a></td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Susan Jones</a></td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list">
+                    <li>
+                      Inspector
+                    </li>
+                    <li>
+                      Licensing Officer
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Kate Jackson </a></td>
+                <td class="govuk-table__cell" scope="col">Licensing Officer</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Jim Morse</a></td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Michelle Tilford </a></td>
+                <td class="govuk-table__cell" scope="col">Licensing Officer</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Jackson Smith</a></td>
+                <td class="govuk-table__cell" scope="col">Admin</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">Phil Williamson</a></td>
+                <td class="govuk-table__cell" scope="col">Inspector</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {% include "includes/pagination.html" %}
+        
+        </section>
+      </div>
+      </div>
+
+
+
+    </div>
+   
+{% endblock %}

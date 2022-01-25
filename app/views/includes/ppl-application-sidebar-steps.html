@@ -1,0 +1,75 @@
+<style>
+.selected .float-right{
+  visibility: hidden;
+  }    
+.selected .float-right:after{
+  content:'▼';
+  visibility: visible;
+  }    
+</style>
+
+<div class="govuk-grid-column-one-third">
+  <ul class="protocol-nav">
+    <a href="ppl-index" class="back-to-sections"><li>&#x25C0; &ensp; List of sections</li></a>
+    
+    <a href="ppl-intro"><li{% if assessSection == "introduction" %}
+      class='selected'{% endif %}>Introductory details <span class="float-right">&#x25B6;</span></li></a>
+    {% if assessSection == "introduction" %}
+    <a href="ppl-intro"><li class="selected-child">Introductory details</li></a>
+    {% endif %}
+
+    <a href="ppl-aims"><li{% if (assessSection == "aims") or (assessSection == "benefits") or (assessSection == "harms") or (assessSection == "fate") or (assessSection == "replacement") or (assessSection == "reduction") or (assessSection == "refinement") %}
+      class='selected'{% endif %}>Non-technical summary <span class="float-right">&#x25B6;</span></li></a>
+    {% if (assessSection == "aims") or (assessSection == "benefits") or (assessSection == "harms") or (assessSection == "fate") or (assessSection == "replacement") or (assessSection == "reduction") or (assessSection == "refinement") %}
+    <a href="ppl-aims"><li class="selected-child">Aims</li></a>
+    <a href="ppl-benefits"><li class="selected-child">Benefits</li></a>
+    <a href="ppl-harms"><li class="selected-child">Project harms</li></a>
+    <a href="ppl-fate"><li class="selected-child">Fate of animals</li></a>
+    <a href="ppl-replacement"><li class="selected-child">Replacement</li></a>
+    <a href="ppl-reduction"><li class="selected-child">Reduction</li></a>
+    <a href="ppl-refinement"><li class="selected-child">Refinement</li></a>
+    {% endif %}
+
+    <a href="#"><li>Applicant information <span class="float-right">&#x25B6;</span></li></a>
+    {% if assessSection == "XXX" %}
+    <a href="#"><li class="selected-child">Experience</li></a>
+    <a href="#"><li class="selected-child">Funding</li></a>
+    {% endif %}
+
+    <a href="#"><li>Project location <span class="float-right">&#x25B6;</span></li></a>
+    {% if assessSection == "XXX" %}
+    <a href="#"><li class="selected-child">Establishments</li></a>
+    <a href="#"><li class="selected-child">Places other than a licensed establishment (POLEs)</li></a>
+    {% endif %}
+
+    <a href="ppl-background"><li{% if (assessSection == "background") or (assessSection == "plan") or (assessSection == "principles")%}
+      class='selected'{% endif %}>Project plan <span class="float-right">&#x25B6;</span></li></a>
+    {% if (assessSection == "background") or (assessSection == "plan") or (assessSection == "principles") %}
+    <a href="ppl-background"><li class="selected-child">Scientific background</li></a>
+    <a href="ppl-plan"><li class="selected-child">Action plan</li></a>
+    <a href="ppl-principles"><li class="selected-child">General principles</li></a>
+    {% endif %}
+
+    <a href="ppl-protocols"><li{% if assessSection == "protocols" %}
+      class='selected'{% endif %}>Protocols <span class="float-right">&#x25B6;</span></li></a>
+    <a href="ppl-steps"><li class="selected-child">Steps</li></a>
+    {% if assessSection == "protocols" %}
+    <a href="ppl-protocols"><li class="selected-child">Protocols</li></a>
+    {% endif %}
+
+    <a href="#"><li>Use of animals <span class="float-right">&#x25B6;</span></li></a>
+    {% if assessSection == "XXX" %}
+    <a href="#"><li class="selected-child">Purpose bred animals</li></a>
+    <a href="#"><li class="selected-child">Endangered animals</li></a>
+    <a href="#"><li class="selected-child">Animals taken from the wild</li></a>
+    <a href="#"><li class="selected-child">Feral animals</li></a>
+    {% endif %}
+    
+    <a href="#"><li>Other considerations <span class="float-right">&#x25B6;</span></li></a>
+    {% if assessSection == "XXX" %}
+    <a href="#"><li class="selected-child">Commercial slaughter</li></a>
+    <a href="#"><li class="selected-child">Animals containing human materrial</li></a>
+    {% endif %}
+    
+  </ul>
+</div>

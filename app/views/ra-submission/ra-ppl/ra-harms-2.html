@@ -1,0 +1,235 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Harms
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Number of mice that experienced each type of severity</h2>
+      <!-- <p><a target="_blank" href="https://internal-ui.preprod.asl.homeoffice.gov.uk/establishments/8202/projects/b109d3c9-bc9c-43fa-b174-3bb275a8ba46/versions/fb2cc835-6551-4055-80d8-2a1a6d8326db/protocol-summary">View protocol summary table</a></p> -->
+      
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Enter the number of mice experiencing each severity</caption> -->
+        <thead class="govuk-table__head">
+          <!-- <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" colspan="4" class="govuk-table__header">Numbers per severity</th>
+          </tr> -->
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" class="govuk-table__header">Sub-threshold</th>
+            <th scope="col" class="govuk-table__header">Non-recovery</th>
+            <th scope="col" class="govuk-table__header">Mild</th>
+            <th scope="col" class="govuk-table__header">Moderate</th>
+            <th scope="col" class="govuk-table__header">Severe</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Predicted number of mice</td>
+            <td class="govuk-table__cell">
+                –
+            </td>
+            <td class="govuk-table__cell">
+                0
+            </td>
+            <td class="govuk-table__cell">
+                0
+            </td>
+            <td class="govuk-table__cell">
+                4000
+            </td>
+            <td class="govuk-table__cell">
+                1000
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Actual number of mice used</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How do these compare with those estimated prospectively?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Where the severities differ, please provide an explanation
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+      <h2 class="govuk-heading-m">Number of rats that experienced each type of severity</h2>
+      <!-- <p><a target="_blank" href="https://internal-ui.preprod.asl.homeoffice.gov.uk/establishments/8202/projects/b109d3c9-bc9c-43fa-b174-3bb275a8ba46/versions/fb2cc835-6551-4055-80d8-2a1a6d8326db/protocol-summary">View protocol summary table</a></p> -->
+      
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Enter the number of rats experiencing each severity</caption> -->
+        <thead class="govuk-table__head">
+          <!-- <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" colspan="4" class="govuk-table__header">Numbers per severity</th>
+          </tr> -->
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" class="govuk-table__header">Non-recovery</th>
+            <th scope="col" class="govuk-table__header">Mild</th>
+            <th scope="col" class="govuk-table__header">Moderate</th>
+            <th scope="col" class="govuk-table__header">Severe</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Predicted number of rats</td>
+            <td class="govuk-table__cell">
+                0
+            </td>
+            <td class="govuk-table__cell">
+                500
+            </td>
+            <td class="govuk-table__cell">
+                3000
+            </td>
+            <td class="govuk-table__cell">
+                500
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Actual number of rats used</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How do these compare with those estimated prospectively?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Where the severities differ, please provide an explanation
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+
+      <h2 class="govuk-heading-m">Number of rabbits that experienced each type of severity</h2>
+      <!-- <p><a target="_blank" href="https://internal-ui.preprod.asl.homeoffice.gov.uk/establishments/8202/projects/b109d3c9-bc9c-43fa-b174-3bb275a8ba46/versions/fb2cc835-6551-4055-80d8-2a1a6d8326db/protocol-summary">View protocol summary table</a></p> -->
+      
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Enter the number of rabbits experiencing each severity</caption> -->
+        <thead class="govuk-table__head">
+          <!-- <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" colspan="4" class="govuk-table__header">Numbers per severity</th>
+          </tr> -->
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" class="govuk-table__header">Non-recovery</th>
+            <th scope="col" class="govuk-table__header">Mild</th>
+            <th scope="col" class="govuk-table__header">Moderate</th>
+            <th scope="col" class="govuk-table__header">Severe</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Predicted number of rabbits</td>
+            <td class="govuk-table__cell">
+                0
+            </td>
+            <td class="govuk-table__cell">
+                0
+            </td>
+            <td class="govuk-table__cell">
+                500
+            </td>
+            <td class="govuk-table__cell">
+                1000
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Actual number of rabbits used</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How do these compare with those estimated prospectively?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Where the severities differ, please provide an explanation
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <p>
+        <a href="ra-harms-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

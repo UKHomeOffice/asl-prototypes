@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Replacement, reduction and refinement
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-m">Refinements</h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="option-1-additional-1">
+          With the knowledge you now have, could the choice of animals or models used have been improved at all? During the project, how did you minimise harm to animals?
+        </label>
+        <span class="govuk-hint">High quality facilities and good processes for managing the animals’ care and wellbeing can reduce harms, for example. </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10"></textarea>
+      </div>
+
+
+      <p>
+        <a href="ra-3rs-refinement-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+    
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,227 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-sticky.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  <style>
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 1200px;
+    display: inline-block;
+  }
+  .save-indicator {
+    color: #505a5f;
+  }
+  
+  </style>
+
+
+ 
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Introductory details</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the title of this project?
+        </label>
+        <span class="govuk-hint">Focus on your broad aims and use simple language. For example 'Genes and lifestyle influences on brain ageing'.</span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the aim of this project?
+        </label>
+        <span class="govuk-hint">Keep this to a short one or two sentence summary.</span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Why is it important to undertake this work?
+        </label>
+        <span class="govuk-hint"></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            During the project, were any changes made or considered to reduce the use of animals?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="event-name">
+                  Why is this higher education and training licence needed?
+                </label>
+                <span class="govuk-hint"></span>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="event-name">
+                  What course or scientific or medical discipline does this application relate to?
+                </label>
+                <span class="govuk-hint"></span>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    Which permissible purposes apply to this project?
+                  </legend>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        (a) Basic research
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        (b) Translational or applied research with one of the following aims:
+                      </label>
+                    </div>
+                    <div class="govuk-inset-text">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                          (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or their effects, in man, animals or plants
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                          (ii) Assessment, detection, regulation or modification of physiological conditions in man, animals or plants
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                          (iii) Improvement of the welfare of animals or of the production conditions for animals reared for agricultural purposes
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        (c) Development, manufacture or testing of the quality, effectiveness and safety of drugs, foodstuffs and feedstuffs or any other substances or products, with one of the following aims mentioned in paragraph (b)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        (d) Protection of the natural environment in the interests of the health or welfare of man or animals
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        (e) Research aimed at preserving the species of animal subjected to regulated procedures as part of the programme of work
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        (g) Forensic enquiries
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="width-20">
+          Key words that describe this project
+        </label>
+        <span class="govuk-hint">Choose up to 5. For example: cancer, stem cells, therapy.</span>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"><br><br>
+      </div>
+
+      <div class="govuk-form-group duration">
+        <label class="govuk-label--s" for="duration">What will be the duration of this project?</label>
+        <fieldset  class="govuk-fieldset">
+          <div class="govuk-form-group" style="display: inline-block;">
+            <label class="govuk-label" for="years">Years</label>
+            <select class="govuk-select" id="years" name="years">
+              <option value="">Select...</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="govuk-form-group" style="display: inline-block;">
+            <label class="govuk-label" for="months">Months</label>
+            <select class="govuk-select" id="months" name="months">
+              <option value="">Select...</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="">Which types of animals will be used in this project?</label>
+        {% include "includes/animal-types-picker.html" %}
+      </div>
+      <button class="govuk-button">Continue</button><a href="#" class="secondary-link">List of sections</a>
+    </div>
+  </div>
+
+{% endblock %}

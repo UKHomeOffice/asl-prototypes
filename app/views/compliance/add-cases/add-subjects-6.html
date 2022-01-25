@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Add case subjects
+    </h1>
+
+    <h2 class="govuk-heading-m">Case details</h2>
+    <ul class="govuk-list">
+      <li><strong>Establishment</strong> University of Croydon</li>
+      <li><strong>Case number</strong> 21102</li>
+      <li><a href="#">Edit</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Enforcement subjects</h2>
+    
+    <div class="declaration-panel-grey">
+      <form action="add-subjects-2" method="post">
+        <h2 class="govuk-heading-m">Enforcement subject 1</h2>
+        <p>Jane McGregor</p>
+        
+        <h3 class="govuk-heading-s">Enforcement flag status</h2>
+          
+          <div class="notification-banner notification-banner--closed" style="padding: 0px 10px">
+
+            <div class="govuk-warning-text" style="margin-bottom: 0px;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                <strong>This subject is related to closed enforcement case 21102</strong>
+              </span>
+            </div>
+    
+          </div>
+          
+        <h3 class="govuk-heading-s">Flag applied to</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Tasks related to Jane McGregor's profile
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>Tasks related to personal licence 932131</li>
+          <li>Tasks related to project licence 372383</li>
+        </ul>
+
+        <p><a href="#">Edit enforcement flags</a></p>
+
+      </form>
+    </div>
+    <br>
+    <div class="declaration-panel-grey">
+      <form action="add-subjects-2" method="post">
+        <h2 class="govuk-heading-m" id="subject-2">Enforcement subject 2</h2>
+        <p>Patel Williams</p>
+        
+        <h3 class="govuk-heading-s">Enforcement flag status</h2>
+          
+          <div class="notification-banner notification-banner--closed" style="padding: 0px 10px">
+
+            <div class="govuk-warning-text" style="margin-bottom: 0px;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                <strong>This subject is related to closed enforcement case 21102</strong>
+              </span>
+            </div>
+    
+          </div>
+          
+        <h3 class="govuk-heading-s">Flag applied to</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Tasks related to Patel Williams's profile
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>Tasks related to personal licence 2838474</li>
+        </ul>
+
+        <p><a href="#">Edit enforcement flags</a></p>
+
+      </form>
+    </div>
+
+    <br>
+    <p><a href="add-subjects-4#subject-2">Add another subject</a></p>
+    <a href="all-cases-2" class="govuk-button">Save case</a>
+  </div>
+</div>
+
+
+{% endblock %}

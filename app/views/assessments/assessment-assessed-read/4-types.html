@@ -1,0 +1,116 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li class="selected"><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+        
+
+         <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Use of animals</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for use of animals
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+            	The animals’ origins are justified and relevant to the project.
+            </li>
+            <li>
+              Schedule 2 species are purpose bred, or there is a scientific justification for using Schedule 2 species that aren't purpose bred. 
+            </li>
+            <li>
+              Non-Schedule 2 species are from a source that can supply animals of a sufficient quality to produce satisfactory outputs. 
+            </li>
+            <li>
+              Stray animals will not be used. 
+            </li>
+            <li>
+              There is adequate competence to undertake decision-making about the health and welfare of animals kept alive
+            </li>
+          </ul>
+          [Lots more dynamic content depending on animal type]
+          
+        </div>
+    </details>
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+        
+        <h2 class="govuk-heading-m">Additional conditions</h2>
+        
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">
+            Animals taken from the wild
+          </h3>
+          <p>Standard condition 13(b) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+        </div>
+
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+        <p>Yes</p>
+
+        <h3 class="govuk-heading-s">Notes (optional)</h3>
+        <p><em>No answer provided</em></p>
+        
+        {% include "includes/assessment-footer-nav.html" %}
+
+
+      </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+</style>
+{% endblock %}

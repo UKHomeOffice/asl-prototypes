@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Testing flags
+    </h1>
+    
+    <p>{{data['subject-1-status']}}</p>
+    <p>{{data['subject-1-entity']}}</p>
+    <p>{{data['subject-1-est']}}</p>
+
+
+    <p><a href="pil-jane">Jane - PIL</a></p>
+    <p><a href="ppl-jane">Jane - PPL</a></p>
+    <p><a href="pel-overview">Jane - PEL overview</a></p>
+    <p><a href="pel-people">Jane - PEL overview</a></p>
+    <p><a href="pel-areas">Jane - PEL overview</a></p>
+
+  </div>
+</div>
+
+
+{% endblock %}

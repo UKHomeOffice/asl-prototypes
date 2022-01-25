@@ -1,0 +1,130 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-panel green-bg">
+    <div class="govuk-panel__body-s">Please review your answers for:</div>
+    <h1 class="govuk-panel__title">Transfer and movement of animals</h1>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+    {% if data['moved'].length > 1 %}
+      <h2 class="govuk-heading-s">Will any animals be moved between licensed establishments during this project?</h2>
+      {% if data['moved'] != 'No' %}
+        <p><span class="badge changed govuk-body">Changed</span></p>
+      {% endif %}
+      <p>{{data["moved"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-3'].length > 1 %}
+      <h2 class="govuk-heading-s">Why do you need to move animals between licensed establishments?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-3"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-4'].length > 1 %}
+      <h2 class="govuk-heading-s">How might the movement of animals between licensed establishments affect scientific delivery of the work?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-4"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-5'].length > 1 %}
+      <h2 class="govuk-heading-s">What measures will you use to minimise any adverse effects for animals that may arise when moving them between licensed establishments?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-5"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-6'].length > 1 %}
+      <h2 class="govuk-heading-s">Will surgically prepared animals be given a minimum of 7 days to recover before being transferred?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-6"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-7'].length > 1 %}
+      <h2 class="govuk-heading-s">Why won't animals be given 7 days to recover before being transferred?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-7"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+   
+    {% if data['moved-8'].length > 1 %}
+      <h2 class="govuk-heading-s">Will animals be given a minimum of 7 days to acclimatise to their new surroundings prior to any regulated procedures being undertaken?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["moved-8"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+  
+
+
+
+
+    <div class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+        <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+        <form action='ppl-index' method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="transfer-complete" name="transfer-complete" type="checkbox" value="true">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="transfer-complete">
+                    This section is complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+
+          <button class="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

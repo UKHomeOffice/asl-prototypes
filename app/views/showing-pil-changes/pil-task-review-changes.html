@@ -1,0 +1,358 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+      <h3 class="govuk-heading-s">How to cure heartache</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Establishment details</a>
+        <a href="#applicant.application" class="">Course details</a>
+        <a href="#procedures" class="">Applicant</a>
+        <a href="#procedures" class="">Procedures</a>
+        <a href="#procedures" class="">Animal types</a>
+        <a href="#procedures" class="">Training</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">Awaiting Endorsement</span>
+          <span class="date">20 April 2020</span>
+        </p>
+      <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activity
+          </span>
+        </summary>
+        <div class="">
+          <br>
+          <p>
+            <span class="badge">Endorsed</span>
+            <span class="date">20 July 2019</span>
+          </p>
+          <p><strong>Endorsed for Marvell Pharmaceuticals by:</strong> <a href="#">John Brown</a></p>
+          <br>
+          <p>
+            <span class="badge">Endorsed</span>
+            <span class="date">19 July 2019</span>
+          </p>
+          <p><strong>Endorsed for University of Croydon by:</strong> <a href="#">Jane Smith</a></p>
+          <br>
+          <p>
+            <span class="badge">Awaiting Endorsement</span>
+            <span class="date">17 July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> <a href="#">Michael Thomas</a></p>
+          
+        </div>
+      </details>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Establishment details</h2>
+      <table class="govuk-table" style="table-layout: fixed;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Current</th>
+            <th scope="col" class="govuk-table__header">Proposed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+             University of Croydon
+            </td>
+            <td class="govuk-table__cell">
+              <span class="highlight">Slough University</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Applicant</h2>
+      <p><a href="#">Bruce Banner</a></p>
+
+      <h3 class="govuk-heading-s">Applicant over 18?</h3>
+      <p>Yes</p>
+            
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Procedures</h2>
+      
+      <h3 class="govuk-heading-s">Categories</h3>
+
+      <table class="govuk-table" style="table-layout: fixed;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Current</th>
+            <th scope="col" class="govuk-table__header">Proposed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p>
+                A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.
+              </p>
+              <p>
+                C. Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or prolonged general anaesthesia.
+              </p>        
+            </td>
+            <td class="govuk-table__cell">
+              <p>
+                A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.
+              </p>
+              <p class="highlight">
+                B. Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical procedures conducted under brief non-recovery general anaesthesia
+              </p>
+              <p>
+                C. Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or prolonged general anaesthesia.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+     
+
+      <h2 class="govuk-heading-m">Animal types</h2>
+
+      <table class="govuk-table" style="table-layout: fixed;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Current</th>
+            <th scope="col" class="govuk-table__header">Proposed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Hamsters (Chinese)
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+                <li><span class="highlight">Fish</span></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2 class="govuk-heading-m">Training</h2>
+        
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number:<br> 87478489</li>
+                <li>Awarded by: <br>Universities Group</li>
+                <li>Awarded on: <br>3 January 2018</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number:<br> 18287464</li>
+                <li>Awarded by: <br>Royal Society of Biology</li>
+                <li>Awarded on: <br>16 November 2017</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for approval</label>
+                <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for rejection</label>
+                <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return to applicant</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="lo-approve-comment" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

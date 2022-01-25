@@ -1,0 +1,575 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Bruce
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="search-panel">
+        <h2 class="govuk-heading-m">Search</h2>
+        <p>
+          <a href="search/establishments" class="active">Establishments</a>
+           | 
+          <a href="search/people" class="">People</a>
+           | 
+          <a href="search/projects" class="">Projects</a>
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            
+            <div class="govuk-form-group search-box">
+              <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+              <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>ss="hod-search side-space icon-small" style="color: white;"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="view-all-link">
+              <span class="secondary-link"><a href="/search/establishments">View all establishments</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="govuk-heading-s">Tasks</h3>
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#outstanding">
+              Outstanding
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#in-progress">
+              In progress
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#completed">
+              Completed
+            </a>
+          </li>
+        </ul>
+
+
+      <details class="govuk-details" style="margin-bottom: 0px; margin-top: 30px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text" style="font-size: 24px; font-weight: bold; ">
+            Filter tasks
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="padding: 15px 0px 0px 0px; border-left: none;">
+        
+          <div class="filters govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+              <div class="app-c-option-select js-collapsible">
+                <button class="js-container-head" type="button" aria-expanded="true" aria-controls="site-options">
+                  <div class="option-select-label" id="site-label">Establishment</div>
+                  <div class="js-selected-counter"></div>
+                </button>
+                <div role="group" aria-labelledby="site-label" class="options-container options-container--hod" id="site-options">
+                <div class="js-auto-height-inner">
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                      <input type="checkbox" name="filter-site" value="Apollo House" id="site-Apollo House" class="govuk-checkboxes__input">
+                      <label for="site-Apollo House" class="govuk-label govuk-checkboxes__label">Marvell Pharma</label>
+                    </div>
+                      <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-site" value="Vulcan House" id="site-Vulcan House" class="govuk-checkboxes__input">
+                    <label for="site-Vulcan House" class="govuk-label govuk-checkboxes__label">University of Croydon</label>
+                  </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                  </div>
+                    <div class="govuk-checkboxes__item">
+                  <input type="checkbox" name="filter-site" value="Lunar House 2nd floor" id="site-Lunar House 2nd floor" class="govuk-checkboxes__input">
+                    <label for="site-Lunar House 2nd floor" class="govuk-label govuk-checkboxes__label">Royal College of Doctors</label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-site" value="Metro Point" id="site-Metro Point" class="govuk-checkboxes__input">
+                    <label for="site-Metro Point" class="govuk-label govuk-checkboxes__label">University of Lambeth</label>
+                </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                  <div class="govuk-checkboxes__item">
+                  <input type="checkbox" name="filter-site" value="Lunar House 4th floor" id="site-Lunar House 4th floor" class="govuk-checkboxes__input">
+                    <label for="site-Lunar House 4th floor" class="govuk-label govuk-checkboxes__label">Kings Cross College</label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-site" value="2 Marsham Street" id="site-2 Marsham Street" class="govuk-checkboxes__input">
+                    <label for="site-2 Marsham Street" class="govuk-label govuk-checkboxes__label">2 Marsham Street</label>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <div class="app-c-option-select js-collapsible">
+          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="suitability-options">
+              <div class="option-select-label" id="suitability-label">Licence</div>
+              <div class="js-selected-counter"></div>
+          </button>
+          <div role="group" aria-labelledby="suitability-label" class="options-container options-container--hod" id="suitability-options">
+            <div class="js-auto-height-inner">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-suitability" value="AV" id="suitability-AV" class="govuk-checkboxes__input">
+                    <label for="suitability-AV" class="govuk-label govuk-checkboxes__label"><abbr title="Birds">PIL</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-suitability" value="NHP" id="suitability-NHP" class="govuk-checkboxes__input">
+                    <label for="suitability-NHP" class="govuk-label govuk-checkboxes__label"><abbr title="Non-human primates">PPL</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-suitability" value="LA" id="suitability-LA" class="govuk-checkboxes__input">
+                    <label for="suitability-LA" class="govuk-label govuk-checkboxes__label"><abbr title="Large animals">PEL</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-suitability" value="EQU" id="suitability-EQU" class="govuk-checkboxes__input">
+                    <label for="suitability-EQU" class="govuk-label govuk-checkboxes__label"><abbr title="Equidae">Not specified</abbr>
+                    </label>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+      <div class="app-c-option-select js-collapsible">
+          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
+              <div class="option-select-label" id="holding-label">Type</div>
+              <div class="js-selected-counter"></div>
+          </button>
+          <div role="group" aria-labelledby="holding-label" class="options-container options-container--hod" id="holding-options">
+              <div class="js-auto-height-inner">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">PIL application</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="NSEP" id="holding-NSEP" class="govuk-checkboxes__input">
+                    <label for="holding-NSEP" class="govuk-label govuk-checkboxes__label"><abbr title="Non-sterile experimental procedures">PIL amendment</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="STH" id="holding-STH" class="govuk-checkboxes__input">
+                    <label for="holding-STH" class="govuk-label govuk-checkboxes__label"><abbr title="Short term holding">PPL application</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="LTH" id="holding-LTH" class="govuk-checkboxes__input">
+                    <label for="holding-LTH" class="govuk-label govuk-checkboxes__label"><abbr title="Long term holding">PPL amendment</abbr>
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="NOH" id="holding-NOH" class="govuk-checkboxes__input">
+                    <label for="holding-NOH" class="govuk-label govuk-checkboxes__label"><abbr title="Not for overnight holding">PPL transfer</abbr>
+                    </label>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+  <div class="govuk-grid-column-one-quarter">
+      <div class="app-c-option-select js-collapsible">
+          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
+              <div class="option-select-label" id="holding-label">Status</div>
+              <div class="js-selected-counter"></div>
+          </button>
+          <div role="group" aria-labelledby="holding-label" class="options-container options-container--hod" id="holding-options">
+              <div class="js-auto-height-inner">
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Approved
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Awaiting review
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Awaiting recommendation
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Awaiting recommendation
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Returned
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Withdrawn
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Awaiting endorsement
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Awaiting review
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Incomplete
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Recommendation made
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Recommendation made
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Submitted
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Rejected
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input type="checkbox" name="filter-holding" value="SEP" id="holding-SEP" class="govuk-checkboxes__input">
+                    <label for="holding-SEP" class="govuk-label govuk-checkboxes__label"><abbr title="Sterile experimental procedures">Deadline extended
+                    </abbr>
+                  </label>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+                  <a class="govuk-button">Apply filters</a> <a href="#" class="secondary-link">Clear filters</a>
+
+      </details>
+
+        <section class="govuk-tabs__panel" id="outstanding" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">22 July 2019  </td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PEL</td>
+                <td class="govuk-table__cell">
+                  <a href="#">Area amendment</a><br>
+                  Identifyer
+                </td>
+                <td class="govuk-table__cell"><span class="badge">RETURNED</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 1 of 1 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        </section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">17 May 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PIL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PIL amendment </a> <br>Dagny Aberkirder  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">06 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PPL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PPL application </a> <br>Kurtis Savage </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Add named person </a> <br>Megan Alberts </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Remove named person </a> <br>Aspasia Dellaporta</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area removal </a> <br>Bruce Banner</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area amendment </a> <br>Bruce Banner  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">-</td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">- </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area amendment  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 10 of 31 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>          
+        </section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">17 May 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PIL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PIL amendment </a> <br>Dagny Aberkirder  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">06 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PPL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PPL application </a> <br>Kurtis Savage </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Add named person </a> <br>Megan Alberts </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Remove named person </a> <br>Aspasia Dellaporta</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area removal </a> <br>Bruce Banner</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area amendment </a> <br>Bruce Banner  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">-</td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">- </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area amendment  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+            </tbody>
+          </table>
+           <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 10 of 113 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>  
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

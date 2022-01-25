@@ -1,0 +1,150 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+      <!-- {% include "includes/list-of-sections.html" %} -->
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+  
+      <h2 class="govuk-heading-m">Introductory details</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-intro">Introductory details</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Non-technical summary</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-aims.html">Aims</a>
+          <div class="float-right">
+            <!-- <span class="badge changed">Chagned</span> -->
+            <!-- <span class="badge comment">1 comment</span> -->
+            <!-- <span class="badge badge-blue">complete</span> -->
+          </div>
+        </li>
+        <li>
+          <a href="ppl-benefits.html">Benefits</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-harms.html">Project harms</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-fate">Fate of animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-replacement">Replacement</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-reduction">Reduction</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-refinement">Refinement</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Technical details</h2>
+      <h3 class="govuk-heading-s">Applicant information</h3>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="experience">Experience</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Funding</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">Project location</h3>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Establishments</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Places other than a licensed establishment (POLEs)</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">Project plan</h3>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-background">Scientific background</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-plan">Action plan</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="ppl-principles.html">General principles</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">Protocols</h3>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-protocols.html">Protocols</a>
+          <!-- <span class="badge badge-blue float-right">complete</span>  -->
+          {% if data["protocols"] == "changed" %}
+            <span class="badge changed float-right" style="margin-right: 0.5em;">Changed</span>
+          {% endif %}
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">Use of animals</h3>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Purpose bred animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Endangered animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Animals taken from the wild</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Feral animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h2 class="govuk-heading-s">Other considerations</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Commercial slaughter</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Animals containing human material</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+
+      <!-- <p>All sections must be marked as complete before you can continue and send your application to the Home Office.</p> -->
+
+      <a href="/assessments/task-review" class="govuk-button">Next steps</a><span class="secondary-link">or <a href="#">go to project overview</a></span>
+
+    </div>
+  </div>
+
+{% endblock %}

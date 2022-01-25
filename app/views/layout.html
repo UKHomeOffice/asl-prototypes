@@ -34,24 +34,107 @@
 
 {% block header %}
   {% include "includes/cookie-banner.html" %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+
   <header>
     <div class="wrapper-header">
       <div class="header-logo">
         {% include "includes/home-office-logo.html" %}
       </div>
       <div class="header-title">
-        <a href="/" class="header-name">Service name</a>
+        <a href="/" class="header-name">Research and testing using animals</a>
       </div>
+    <div class="sign-in-options"><a href="/training-exemptions/ur/profile/user-profile">Bruce Banner</a> | Sign out</div>
     </div>
   </header>
+
+  <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+         This is a prototype of a new service. It is work in progress and some parts do not work yet.
+        </span>
+      </p>
+    </div>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item"><a href="/">Home</a></li>
+      <li class="govuk-breadcrumbs__list-item">Lorem ipsum</li>
+    </ol>
+  </div>
+  </div>
+
+<style type="text/css">
+
+</style>
+
 {% endblock %}
 
 {% if useAutoStoreData %}
   {% block footer %}
-    <footer>
+    
+  <style>
+
+  </style>
+  <footer>
       <div class="wrapper-footer">
+        <div class="footer-section">
+          <h3 class="govuk-heading-s">ASRU</h3>
+          <ul class="govuk-list">
+            <li>
+              <a href="#">Staff directory</a>
+            </li>
+            <li>
+              <a href="#">Data and performance</a>
+            </li>
+            <li>
+              <a href="#">Downloads</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="footer-section">
+          <h3 class="govuk-heading-s">Licence holders</h3>
+          <ul class="govuk-list">
+            <li>
+              <a href="#">Licence fees</a>
+            </li>
+            <li>
+              <a href="#">Compliance data</a>
+            </li>
+            <li>
+              <a href="all-cases">Enforcement cases</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <ul class="default-links">
+            <li>
+              <a href="#">© Crown copyright</a>
+            </li>
+            <li>
+              <a href="#">Privacy notice</a>
+            </li>
+            <li>
+              <a href="#">Accessibility statement</a>
+            </li>
+            
+          </ul>
+          <br>
+          <form action="/prototype-admin/clear-data" method="post">
+            <button class="link-secondary">Clear data</button>
+          </form>
+        </div>
+        <!-- 
         <div class="footer-message">
+          
           <p>A Home Office Digital, Data and Technology service</p>
+          <form action="/prototype-admin/clear-data" method="post">
+            <button class="link-secondary">Clear data</button>
+          </form>
         </div>
         <div class="footer-menu">
           <ul>
@@ -59,7 +142,7 @@
             <li><a href="#0">Help</a></li>
             <li><a href="#0">GOV.UK home</a></li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </footer>
   {% endblock %}

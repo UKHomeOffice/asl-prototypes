@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Harms
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What harms were caused to the animals, how severe were those harms and how many animals were affected?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          <p class="govuk-hint">
+            Don’t just list procedures but reflect on the animals’ experience. For example, ‘animals experienced mild discomfort as tumours 10mm wide were allowed to grow under the skin’.
+          </p>
+          <p class="govuk-hint">
+            If animals went through procedures more than once, make sure this is reflected in the numbers and in your assessment of their overall suffering.
+          </p>
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <p>
+        <a href="ra-harms-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

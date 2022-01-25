@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Benefits</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What outputs do you think you will see at the end of this project?
+        </label>
+        <span class="govuk-hint"></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">We will test potential mitigators of radiation-induced cardiovascular disease. Longer-term, this has the potential to pave the way for clinical trials and/or re-purposing drugs that are already used in practice to reduce the number of people that develop cardiovascular disease and potentially other radiation-induced and senescence-mediated diseases. Mechanistically, this work will also provide valuable insight into the role of senescent cells in vivo and lead to better understanding of atherosclerosis.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Who or what will benefit from these outputs, and how?
+        </label>
+        <span class="govuk-hint"></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">The primary benefit expected to be achieved from this project is to ascertain the effect of age-at-exposure to ionising radiation on development of cardiovascular disease, namely atherosclerotic plaque formation. This will support or challenge epidemiological data and our preliminary in vitro results suggesting that older people may be less sensitive to detrimental effects of radiation (with regards to atherosclerosis) than younger individuals.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Will this work be offered as a service to others?
+        </label>
+        <span class="govuk-hint"></span>
+        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+            <label class="govuk-label govuk-radios__label" for="option-1">
+              Yes
+            </label> 
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2" checked>
+            <label class="govuk-label govuk-radios__label" for="option-2">
+              No
+            </label> 
+          </div>
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          How will you maximise the outputs of your work?
+        </label>
+        <span class="govuk-hint"></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Results emanating from the work will be presented at relevant conferences and to expert committees and published in open access peer reviewed journals where they will be easily available to other researchers, clinicians, pharmaceutical industry and members of the public. Finding of the project and any publications will be also announced on websites of Radiation Effects Department (PHE) and the Department of Biochemistry, University of Oxford, as well as through other media channels as appropriate.</textarea>
+      </div>
+      <form action="ppl-benefits-review">
+        <button class="govuk-button">Continue</button><a href="ppl-index.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li>Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-fate.html"><li>Fate of animals</li></a>
+        <a href="nts-replacement.html"><li class="selected">Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Replacement
+      </h1>
+      <!-- <h2 class="govuk-heading-m">
+        State what non-animal alternatives are available in this field, which alternatives you have considered and why they cannot be used for this purpose.
+      </h2> -->
+      <h2 class="govuk-heading-s">
+        Why do you need to use animals to achieve the aim of your project?
+      </h2>
+      <p>
+        As a service provider we do not own the test materials under evaluation, therefore, in silico screening tools for candidate selection are not appropriate, however, available literature is searched prior to commencing any in vivo procedures. Prior to conducting in vivo studies, sponsors are requested to provide information relating to their test material candidate, together with details of other work performed, relevant regulatory requirements and a justification for conducting in vivo investigations.
+      </p>
+      <p>
+        Due to the studies within this project requiring the assessment of behavioural and learned responses, the use of animals is essential.
+      </p>
+      <h2 class="govuk-heading-s">
+        What was your strategy for searching for non-animal alternatives?
+      </h2>
+      <p>
+        Although there are presently no non-animal models for behavioural responses, in vitro information e.g receptor binding/functional assays and chemical structural analysis will typically form part of the over profiling of candidate drugs.
+      </p>
+      <h2 class="govuk-heading-s">
+        Why were they not suitable?
+      </h2>
+      <p>
+        Non-animal studies are not sufficient to fully evaluate behavioural responses and learned behaviours.
+      </p>
+      <p>
+        To fully assess the pharmacodynamic effects (effects of a drug on the body) of a new drug testing in animals is necessary. Only in a fully operational circulating system can the drug’s distribution, metabolism, excretion which may alter or intensify the efficacy or adverse effects of the new medicine be fully understood.
+      </p>
+      <p>
+        For these reasons animal models remain essential in the development and safety assessment of new medicines.
+      </p>
+      <div class="grey-panel">
+        <h3 class="govuk-heading-s">A retrospective assessment of replacement will be due by 02 January 2021</h3>
+        <p>The licence holder will be required to disclose what, if any, non-animal alternatives were explored, and share any relevant learnings.</p>
+      </div>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="nts-harms" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Predicted harms</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-reduction" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Reduction</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

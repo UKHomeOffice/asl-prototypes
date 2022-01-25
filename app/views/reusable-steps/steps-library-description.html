@@ -1,0 +1,467 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.hide').toggle();
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+
+    $("#protocol-continue").click(function(){
+      $("#protocol-amend-content").toggle(1);
+      $("#animal-numbers").html("200");
+      $("#change-label").toggleClass('hide');
+      $('#protocol-2-label').toggleClass("selected");
+    });
+  });
+
+
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Steps</h1>
+      33 Unique steps – if you group 'similar' steps
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Step 1</h2><span class="govuk-hint float-right">Repeated x1</span>
+              
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Administration of agents to induce superovulation, e.g., gonadotrophin, hormones or other agents administered by intra-peritoneal or subcutaneous injections typically twice but rarely up to four times (AA).</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 2</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>If embryos are needed these animals will also be mated.</p>
+        
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 3</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Animals will be killed by a Schedule 1 method and oocytes/embryos harvested post mortem.</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 4</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Generation of genetically altered embryos by in vitro manipulation and/or fertilisation.</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 5</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Female mice will be rendered pseudo-pregnant by mating with a sterile male.</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 6</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Embryos including those manipulated under Protocol 2 will be implanted surgically (AB) or non-surgically (AA/AB) into the reproductive tract of the pseudo-pregnant mice.</p>
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 7</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>After weaning of offspring, dams will be killed by a Schedule 1 method.</p>
+    
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 8</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Breeding and maintenance of genetically altered mice by conventional breeding methods.</p>
+    
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 9</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Tissue biopsy to determine genetic status by one of the following methods: ear punch, blood sampling, hair sampling (AA).</p>
+        <p></p>
+        <p>If removal of tip of tail (AB) is scientifically necessary, no more than 0.3 cm will be removed.</p>
+        <p></p>
+        <p>Rarely, due to technical problems during analysis, a second sample may be taken using the least invasive method."</p>
+    
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 10</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Maintenance of animals by methods appropriate to their genetic alteration until they reach a maximum of 12 months of age.</p>
+    
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 11</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Animals not used on other protocols will be killed by:  </p>
+        <p></p>
+        <p>1.	a Schedule 1 method, or   </p>
+        <p>2.	exsanguination under terminal anaesthesia (AC), completed by a Schedule 1 method,  or</p>
+        <p>3.	perfusion fixation under terminal anaesthesia (AC)"</p>
+      
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 12</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Induction of liver tumour growth by introduction of tumour cells by one of the following methods:</p>
+        <p></p>
+        <p>a.        Ultrasound-guided transdermal intrasplenic injection (AB);</p>
+        <p></p>
+        <p>b.        Ultrasound-guided, portal vein injection (AB);</p>
+        <p></p>
+        <p>c.        Ultrasound-guided intrahepatic injection (AB).</p>
+        <p></p>
+        <p>In some animals, hair will be removed at the site of injection beforehand using clippers (AB) or depilatory creams (AB).</p>
+        <p></p>
+        <p>"</p>
+        
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 13</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Transgene inducing or deleting agents (e.g., tamoxifen, doxycycline), or control substances will be administered alone or in combination, continuously or intermittently by one or more of the following routes:(Optional at any stage) Transgene inducing or deleting agents (e.g., tamoxifen, doxycycline), or control substances will be administered alone or in combination, continuously or intermittently by one or more of the following routes:</p>
+        <p></p>
+        <p>a. In diet or drinking water (AA);</p>
+        <p></p>
+        <p>b. Oral gavage (AA);</p>
+        <p></p>
+        <p>c. Subcutaneous (AA), intraperitoneal (AA) or intravenous injection (AA/AB)."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 14</h2><span class="govuk-hint float-right">Similar x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Administration of labelling agents, such as, but not limited to, Texas red conjugated dextran, or control substances alone or in combination, continuously or intermittently by one or more of the following routes:</p>
+        <p></p>
+        <p>a.        Continuous or intermittent addition to diet or drinking water (AA);  </p>
+        <p></p>
+        <p>b.        Oral gavage (AA);  </p>
+        <p></p>
+        <p>c.        Topical application to skin, often preceded by shaving (AA/AB);  </p>
+        <p></p>
+        <p>d.        Subcutaneous (AA), intraperitoneal (AA), intratumoural (by ultrasound guided injection) (AB), or intravenous injection (AA/AB);  </p>
+        <p></p>
+        <p>e.        Intradermal injection (AB);  </p>
+        <p></p>
+        <p>f.        Injection into peripheral nervous system ganglia following a surgical procedure on one occasion  (AB). For the ganglia located within soft tissues (e.g., nodose/jugular ganglion, coeliac ganglion), the injections will be performed after surgical exposure of the ganglia. Injections into dorsal root ganglia will be performed with a pulled thin glass pipette after a minimal foraminotomy.</p>
+        <p></p>
+        <p>g.         Retrograde intraductal delivery via an open abdominal surgery (AB) for localised labelling of the liver following exposure of the biliary-pancreatic duct and its junction with the duodenum (the sphincter of Oddi). Localised labelling of the liver will be achieved by the placement of two microclamps: one near the sphincter of Oddi and another - on the pancreatic duct."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 15</h2><span class="govuk-hint float-right">Similar x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Administration of cells or cell-modulating agents, such as, but not limited to, mesenchymal stem cells, bone-marrow derived monocytes, or transgene carrying viruses, hormones, or control substances alone or in combination, continuously or intermittently by one or more of the following routes:</p>
+        <p></p>
+        <p>a.        Continuous or intermittent addition to diet or drinking water (AA);  </p>
+        <p></p>
+        <p>b.        Oral gavage (AA);  </p>
+        <p></p>
+        <p>c.        Topical application to skin, often preceded by shaving (AA/AB);  </p>
+        <p></p>
+        <p>d.        Subcutaneous (AA), intraperitoneal (AA), intratumoural (by ultrasound guided injection) (AB), or intravenous injection (AA/AB);  </p>
+        <p></p>
+        <p>e.        Intradermal injection (AB); </p>
+        <p></p>
+        <p>f.        Injection into peripheral nervous system ganglia following a surgical procedure on one occasion  (AB). For the ganglia located within soft tissues (e.g., nodose/jugular ganglion, coeliac ganglion), the injections will be performed after surgical exposure of the ganglia. Injections into dorsal root ganglia will be performed with a pulled thin glass pipette after a minimal foraminotomy.</p>
+        <p></p>
+        <p>g.         Retrograde intraductal delivery via an open abdominal surgery (AB) for localised delivery to the liver following exposure of the biliary-pancreatic duct and its junction with the duodenum (the sphincter of Oddi). Localised delivery to the liver will be achieved by the placement of two microclamps: one near the sphincter of Oddi and another - on the pancreatic duct."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 16</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>Bone marrow transplantation prior to tumour induction: Animals may be irradiated (typically once but occasionally with two sub lethal doses) (AA) or may receive a haematopoietic stem cell depleting reagent, e.g. busulfan, intraperitoneally (AA). Subsequently they will be reconstituted with haematopoietic cells (e.g., from bone marrow or foetal liver) via the intravenous or intraperitoneal routes (AA). These cells may have been previously infected in vivo with viral vectors to express genes of interest.</p>
+       
+        <p></p>
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 17</h2><span class="govuk-hint float-right">Similar x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>(Optional at any stage) Diet variation (AA). Animals may be subjected to to changes in the nutrient composition of the diet for the duration of the experiment.</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 18</h2><span class="govuk-hint float-right">Similar x2</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Non-invasive in vivo imaging under general anaesthesia (AB) to include any of the following modalities: MRI, µCT, SPECT/CT, PET/MR, ultrasound, optical (bioluminescence and fluorescence), PAT, intravital imaging via a pre-implanted abdominal imaging window. The following steps may be performed on more than one occasion:  </p>
+        <p></p>
+        <p>a.     Animals may be fasted up to 12 h prior to an experiment (AA) with access to water ad libitum;  </p>
+        <p></p>
+        <p>b.     Animals may be placed on an alternative diet (e.g., alfalfa-free, manganese-free) (AA);    </p>
+        <p></p>
+        <p>c.     Hair removal using clippers (AA/AB) and/or depilatory cream (AA/AB);</p>
+        <p></p>
+        <p>d.     Administration of substances to aid image data acquisition (e.g., contrast agents, radiotracers, substrates, anti-peristaltic drugs, etc.). Routes of administration to include oral gavage (AA) as well as subcutaneous (AA/AB), intraperitoneal (AA), intravenous [including via cannula] (AA/AB), or intradermal (AB) injections;</p>
+        <p></p>
+        <p>e.     Physical restraint within an imaging system, including application of physiological monitoring devices, and administration of anaesthesia (AB)."</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 19</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>(Optional at any stage) Sampling of blood from a superficial blood vessel (AA/AB). A single sample will not exceed 10% of the total blood volume or 15% of the total blood volume in any 28-day period.</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 20</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Administration of therapeutic agents or control substances, alone or in combination, continuously or intermittently by one or more of the following routes:   </p>
+        <p></p>
+        <p>a.	In diet or drinking water (AA);  </p>
+        <p></p>
+        <p>b.	Oral gavage (AA);  </p>
+        <p></p>
+        <p>c.	Topical application to skin, often preceded by shaving (AA/AB);  </p>
+        <p></p>
+        <p>d.	Subcutaneous (AA), intraperitoneal (AA), intratumoural (AB) or intravenous injection (AA/AB);  </p>
+        <p></p>
+        <p>e.	Intradermal injection (AB);  </p>
+        <p></p>
+        <p>f. 	Surgical subcutaneous implantation of a drug delivery device, such as a slow release device or a minipump (AB)."</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 21</h2><span class="govuk-hint float-right">Repeated x2</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Implantation of an imaging window on one occasion:  </p>
+        <p></p>
+        <p>a.	Animals may be fasted up to 24 h prior to an experiment (AA), with access to water ad libitum;  </p>
+        <p></p>
+        <p>b.	Hair removal using clippers (AA/AB) and/or depilatory cream (AA/AB);  </p>
+        <p></p>
+        <p>c.	Implantation of imaging window in the abdomen (AB)."</p>
+        
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 22</h2><span class="govuk-hint float-right">Similar x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Optogenetic studies involving the following regulated procedures:   </p>
+        <p></p>
+        <p>a.	Implantation of optoelectronic devices into the brain or the spine after surgical exposure of tissues on one occasion (AB); </p>
+        <p></p>
+        <p>b.	Animals may be housed individually prior to an experiment (AA), with access to food and water ad libitum;  </p>
+        <p></p>
+        <p>c.	Application of stimulations via laser or LED light sources (AA/AC) for a specific length of time at specific frequencies. When this is done as an AA procedure, the animals will be allowed to move freely with normal access to food and water in the cages. "</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 23</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Terminal imaging, involving the following regulated procedures:   </p>
+        <p></p>
+        <p>a.	Intravital microscopy following surgical exposure of tissues on one occasion (AC);</p>
+        <p></p>
+        <p>b.	Animals may be fasted up to 24 h prior to an experiment (AA), with access to water ad libitum;  </p>
+        <p></p>
+        <p>c.	Animals may be placed on an alternative diet (e.g., alfalfa-free, manganese-free) (AA);  </p>
+        <p></p>
+        <p>d.	Hair removal using clippers (AC) and/or depilatory cream (AC);</p>
+        <p></p>
+        <p>e.	Administration of substances to aid image acquisition (e.g., contrast agents, radiotracers, substrates, anti-peristaltic drugs, etc). Routes of administration to include oral gavage (AA), subcutaneous (AC), intraperitoneal (AA), intravenous [including via cannula] (AC), and intradermal (AC);  </p>
+        <p></p>
+        <p>f.	Physical restraint within an imaging system, including application of physiological monitoring devices, and administration of anaesthesia (AC);</p>
+        <p></p>
+        <p>g.  Recording devices, e.g., microscopes may be used to monitor activity (AC)."</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 24</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Terminal electrophysiological recording of tissues, involving the following regulated procedures:   </p>
+        <p></p>
+        <p>a.	Electrophysiological recording following surgical exposure of tissues on one occasion (AC);</p>
+        <p></p>
+        <p>b.	Animals may be fasted up to 24 hr prior to an experiment (AA), with access to water ad libitum;</p>
+        <p></p>
+        <p>c.	Animals may be placed on an alternative diet (e.g., alfalfa-free, manganese-free) (AA);  </p>
+        <p></p>
+        <p>d.	Hair removal using clippers (AC) and/or depilatory cream (AC);</p>
+        <p></p>
+        <p>e.	Administration of substances to aid image acquisition (e.g. contrast agents, radiotracers, substrates, anti-peristaltic drugs, etc). Routes of administration to include oral gavage (AA), subcutaneous (AC), intraperitoneal (AC), intravenous [including via cannula] (AC), and intradermal (AC);</p>
+        <p></p>
+        <p>f.	Physical restraint within an imaging system, laser system and/or electrophysiologic recording platform, including application of physiological monitoring devices, and administration of anaesthesia (AC);</p>
+        <p></p>
+        <p>g.  Recording devices, e.g. microscopes may be used to monitor activity (AC);</p>
+        <p></p>
+        <p>h.  Recording electrodes may be inserted into the tissues (AC);</p>
+        <p></p>
+        <p>i.   Light, micro-electric stimulation, or cooling/heating of animal tissue to manipulate activity might be applied using pre-implanted devices or to the tissue/tumour surface or through an imaging window (AC)."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 25</h2><span class="govuk-hint float-right">Repeated x8</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Animals will be killed by:</p>
+        <p></p>
+        <p>a) A Schedule 1 method or</p>
+        <p></p>
+        <p>b) Perfusion fixation under terminal anaesthesia (AC) or</p>
+        <p></p>
+        <p>c) Decapitation under anaesthesia (AC) or</p>
+        <p></p>
+        <p>d) Exsanguination under terminal anaesthesia followed by confirmation of death (AC)."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 26</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Induction of tumour:</p>
+        <p></p>
+        <p>1.	Via genetic manipulation </p>
+        <p></p>
+        <p>Mice with predisposition to spontaneous breast cancer will be transferred from breeding protocol 4.</p>
+        <p></p>
+        <p>OR</p>
+        <p></p>
+        <p>2.	Via orthotopic transplantation</p>
+        <p></p>
+        <p>Tumours will be induced by injection, where mice will receive one or two injections of cells subcutaneously (this may sometimes be done under the nipple) (AA/AB). In some cases, mice will receive an injection on each flank/side. Substances such as Matrigel may be used to assist tumour growth. </p>
+        <p></p>
+        <p>Control animals and mice for pilot experiments, which may be GA or WT, will not develop tumours but may receive injections of control cells or Matrigel only."</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 27</h2><span class="govuk-hint float-right">Repeated x5</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>(Optional at any stage) Transgene inducing or deleting agents (e.g., tamoxifen, doxycycline), or control substances will be administered alone or in combination, continuously or intermittently by one or more of the following routes: a. In diet or drinking water (AA); b. Oral gavage (AA); c. Subcutaneous (AA), intraperitoneal (AA) or intravenous injection (AA/AB).</p>
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 28</h2><span class="govuk-hint float-right">Repeated x4</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Administration of labelling agents, such as, but not limited to, Texas red conjugated dextran, or control substances alone or in combination, continuously or intermittently by one or more of the following routes: </p>
+        <p></p>
+        <p>a. Continuous or intermittent addition to diet or drinking water (AA); </p>
+        <p>b. Oral gavage (AA); </p>
+        <p>c. Topical application to skin, often preceded by shaving (AA/AB); </p>
+        <p>d. Subcutaneous (AA), intraperitoneal (AA), intratumoural (by ultrasound guided injection) (AB), or intravenous injection (AA/AB); </p>
+        <p>e. Intradermal injection (AB); </p>
+        <p>f. Injection into peripheral nervous system ganglia following a surgical procedure on one occasion (AB). For the ganglia located within soft tissues (e.g., nodose/jugular ganglion, coeliac ganglion), the injections will be performed after surgical exposure of the ganglia. Injections into dorsal root ganglia will be performed with a pulled thin glass pipette after a minimal foraminotomy."</p>
+       
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 29</h2><span class="govuk-hint float-right">Similar x4</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Administration of cells or cell-modulating agents, such as, but not limited to, mesenchymal stem cells, bone-marrow derived monocytes, or transgene carrying viruses, hormones, or control substances alone or in combination, continuously or intermittently by one or more of the following routes: </p>
+        <p></p>
+        <p>a. Continuous or intermittent addition to diet or drinking water (AA); </p>
+        <p>b. Oral gavage (AA); </p>
+        <p>c. Topical application to skin, often preceded by shaving (AA/AB); </p>
+        <p>d. Subcutaneous (AA), intraperitoneal (AA), intratumoural (by ultrasound guided injection) (AB), or intravenous injection (AA/AB); </p>
+        <p>e. Intradermal injection (AB); </p>
+        <p>f. Injection into peripheral nervous system ganglia following a surgical procedure on one occasion (AB). For the ganglia located within soft tissues (e.g., nodose/jugular ganglion, coeliac ganglion), the injections will be performed after surgical exposure of the ganglia. Injections into dorsal root ganglia will be performed with a pulled thin glass pipette after a minimal foraminotomy."</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 30</h2><span class="govuk-hint float-right">Repeated x1 (?)</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"(Optional at any stage) Implantation of a cutaneous imaging window (e.g., dorsal skinfold chamber) on one occasion:    </p>
+        <p></p>
+        <p>a.	Animals may be fasted up to 24 h prior to an experiment (AA), with access to water ad libitum; </p>
+        <p></p>
+        <p>b.	Hair removal using clippers (AA/AB) and/or depilatory cream (AA/AB);</p>
+        <p></p>
+        <p>c.	Implantation of a dorsal skinfold chamber (AB).</p>
+        <p></p>
+        <p>"</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 31</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"Induction of pancreatic tumour:</p>
+        <p></p>
+        <p>1.        Via genetic manipulation </p>
+        <p></p>
+        <p>Mice with predisposition to pancreatic cancer (spontaneous or inducible) will be transferred from breeding protocol 4.</p>
+        <p></p>
+        <p>2.        Via orthotopic transplantation</p>
+        <p></p>
+        <p>The animals will receive an ultrasound-guided pancreatic injection of up to 0.1 mL of tumour cell suspension (AB). Substances such as Matrigel may be used to assist tumour growth. </p>
+        <p></p>
+        <p>Control animals and mice for pilot experiments, which may be GA or WT, will not develop tumours but may receive injections of control cells or Matrigel only.</p>
+        <p>"</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 32</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>"In this protocol, we will induce tumours in the lung by the following three ways:</p>
+        <p></p>
+        <p>1.	Via genetic manipulation</p>
+        <p></p>
+        <p>Mice with predisposition to developing lung cancer will be transferred from breeding protocol 4. The tumours will be induced by intratracheal delivery of viruses carrying Cre-recombinase or Flp-recombinase (AB). </p>
+        <p></p>
+        <p>OR</p>
+        <p></p>
+        <p>2.	Via orthotopic transplantation</p>
+        <p></p>
+        <p>The animal will receive an orthotopic transplantation of up to 0.1 mL of tumour cell suspension via intratracheal delivery or or intrapulmonary injection (AB). Substances such as Matrigel may be used to assist tumour growth. </p>
+        <p></p>
+        <p>OR</p>
+        <p></p>
+        <p>3. 	Intravenous injection of cells (AA). </p>
+        <p></p>
+        <p>Control animals and mice for pilot experiments, which may be GA or WT, will not develop tumours but may receive intratracheal delivery of viruses, injections of control cells or Matrigel only."</p>
+        
+        <p></p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Step 33</h2><span class="govuk-hint float-right">Repeated x1</span>
+        <h3 class="govuk-heading-s">Step description</h3>
+        <p>A single intracardiac injection of cells, guided by ultrasound (AB). Control animals will either receive control cells or not be subjected to this step.</p>
+        <p></p>
+
+              
+        <form action="ppl-protocols-review" method="post">
+          <button class="govuk-button">Continue</button>
+          <span class="secondary-link"><a href="#">List of sections</a></span>
+        </form>
+      </p>
+
+    </div>
+  </div>
+
+
+
+<style type="text/css">
+.section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+</style>
+{% endblock %}

@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Development of new biological anticancer agents</span>
+      <h1 class="govuk-heading-xl">
+        Submit return
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Response to Home Office</strong>
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">Your response will be recorded and visible to relevant establishment staff as well as the Home Office
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="rops-submit-confirmation" class="govuk-button">Submit now</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Cancel</a>
+      
+           
+  </div>  
+</div>
+
+<style>
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#858585;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.customized-scrollbar ::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+</style>
+
+{% endblock %}

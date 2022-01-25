@@ -1,0 +1,240 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Create new course
+      </h1>
+        
+        <form action="confirm-course-details" autocomplete="off">        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="course-name">
+            Course title
+          </label>
+          <span class="govuk-hint">This is for your records</span>
+          <input class="govuk-input" id="course-name" name="course-name" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="ppl-number">
+            Project licence number
+          </label>
+          <span class="govuk-hint">This should be a licensed training and education project</span>
+          {% include "includes/typeahead-ppls.html" %}
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="course-start-date-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label class="govuk-label--s">
+                Course start date
+              </label>
+              <span id="course-start-date-hint" class="govuk-hint">
+                Licences will become valid on this date
+              </span>
+            </legend>
+            <span id="course-start-date-hint" class="govuk-hint">
+              For example, 12 11 2020
+            </span>
+            <div class="govuk-date-input" id="course-start-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-start-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-start-date-day" name="course-start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-start-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-start-date-month" name="course-start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-start-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-start-date-year" name="course-start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="course-end-date-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label class="govuk-label--s">
+                Date licences should expire
+              </label>
+              <span id="course-start-date-hint" class="govuk-hint">
+                Licences will expire the day after the course ends.
+              </span>
+            </legend>
+            <span id="course-end-date-hint" class="govuk-hint">
+              For example, 12 11 2007
+            </span>
+            <div class="govuk-date-input" id="course-end-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-end-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-end-date-day" name="course-end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-end-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="course-end-date-month" name="course-end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="course-end-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="course-end-date-year" name="course-end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-form-group animals-selector">
+            <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="animal-types">
+              Animals to be used
+            </label>
+            <span class="govuk-hint"></span>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Small animals
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types" name="animal-types" type="checkbox" value="mice">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types">
+                      Mice
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-2" name="animal-types" type="checkbox" value="gerbils">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-2">
+                      Gerbils
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-3" name="animal-types" type="checkbox" value="ferrets">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-3">
+                      Ferrets
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-4" name="animal-types" type="checkbox" value="guinea-pigs">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-4">
+                      Guinea Pigs
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-5" name="animal-types" type="checkbox" value="hamsters-chinese">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-5">
+                      Hamsters (Chinese)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-6" name="animal-types" type="checkbox" value="hamsters-syrian">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-6">
+                      Hamsters (Syrian)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-7" name="animal-types" type="checkbox" value="rabbits">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-7">
+                      Rabbits
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="animal-types-8" name="animal-types" type="checkbox" value="rats">
+                    <label class="govuk-label govuk-checkboxes__label" for="animal-types-8">
+                      Rats
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              </div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Large animals
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Fish, reptiles and aquatic species
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Birds
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Cats, dogs and equidae
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Non-human primates
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Other
+                </span>
+              </summary>
+              <div class="govuk-details__text"></div>
+            </details>
+
+          </div>
+          </fieldset>
+          <button class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ 
+
+{% endblock %}

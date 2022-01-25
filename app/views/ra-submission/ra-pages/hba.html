@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span>
+      <h1 class="govuk-heading-xl">Retrospective assessment</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li><a href="programme">Extent of the programme of work</a></li>
+          <li><a href="objectives">Achievement of the objectives</a></li>
+          <li class="selected"><a href="hba">Actual harms caused</a></li>
+          <li><a href="3rs">Lessons learnt contributing to the 3Rs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Actual harms caused</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Useful stuff related to this question
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          XXX
+        </div>
+      </details>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          What harms were caused to the animals, how severe were those harms and how many animals were affected?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint"><p class="govuk-hint">
+            Don’t just list procedures but reflect on the animals’ experience. For example, ‘animals experienced mild discomfort as tumours 10mm wide were allowed to grow under the skin’.
+          </p>
+          <p class="govuk-hint">
+            If animals went through procedures more than once, make sure this is reflected in the numbers and in your assessment of their overall suffering.
+          </p></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+
+      <p>
+        <button class="govuk-button">Continue</button>
+        <a class="secondary-link" href="#">Cancel</a>
+      </p>
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

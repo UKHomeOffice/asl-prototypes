@@ -1,0 +1,164 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-panel green-bg">
+    <div class="govuk-panel__body-s">Please review your answers for:</div>
+    <h1 class="govuk-panel__title">Establishments</h1>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+    {% if data['add-establishments'].length > 1 %}
+      <h2 class="govuk-heading-s">What is the primary establishment for this licence?</h2>
+      {% if data['est-primary'] == 'Marvell Pharmaceuticals' %}
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      {% endif %}
+      <p>{{data["est-primary"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+
+    {% if data['add-establishments'].length > 1 %}
+      <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+      {% if data['add-establishments'] != 'Yes' %}
+        <p><span class="badge changed govuk-body">Changed</span></p>
+      {% endif %}
+      <p>{{data["add-establishments"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+
+    {% if data['est1-name'].length > 1 %}
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Additional establishment 1</h2>
+          <h2 class="govuk-heading-s">Establishment name</h2>
+          {% if data['est1-name'] != 'University of Croydon' %}
+            <p><span class="badge changed govuk-body">Changed</span></p>
+          {% endif %}
+          <p>{{data["est1-name"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+          <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+          {% if data['est1-reason'] != "Marvell Pharma doesn't have the MRI machine that we require for this work" %}
+            <p><span class="badge changed govuk-body">Changed</span></p>
+          {% endif %}
+          <p>{{data["est1-reason"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+          {% if data['est1-who'] != 'Michael Thomas – 0771234556789' %}
+            <p><span class="badge changed govuk-body">Changed</span></p>
+          {% endif %}
+          <p>{{data["est1-who"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
+      </div>
+    {% endif %}
+
+    {% if data['est2-name'].length > 1 %}
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Additional establishment 1</h2>
+          <h2 class="govuk-heading-s">Establishment name</h2>
+          <p><span class="badge changed govuk-body">Changed</span></p>
+          <p>{{data["est2-name"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+          <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+          <p><span class="badge changed govuk-body">Changed</span></p>
+          <p>{{data["est2-reason"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+          <p><span class="badge changed govuk-body">Changed</span></p>
+          <p>{{data["est2-who"]}}</p>
+          <p><a href="#">Edit</a></p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
+      </div>
+    {% endif %}
+
+    {% if data['est-care'].length > 1 %}
+      <h2 class="govuk-heading-s">Do the housing, husbandry, and care conditions at each establishment meet the requirements laid out in the Code of Practice for each type of animal you will be using?</h2>
+      {% if data['est-care'] != 'Yes' %}
+        <p><span class="badge changed govuk-body">Changed</span></p>
+      {% endif %}
+      <p>Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.</p>
+      <p>{{data["est-care"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+
+    {% if data['est-care-2'].length > 1 %}
+      <h2 class="govuk-heading-s">If any establishment does not meet these requirements, or if any type of animal you're using is not listed in the Code of Practice, explain how you will ensure that housing, husbandry, and care conditions are appropriate for your project.</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["est-care-2"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+
+    <div class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+        <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+        <form action='ppl-index' method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="est-complete" name="est-complete" type="checkbox" value="true">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="est-complete">
+                    This section is complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+
+          <button class="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,304 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Projects
+      </h1>
+      <p>
+        <a href="#" class="govuk-button">Apply for a project licence</a>
+        <a href="#" class="govuk-button govuk-button--secondary">Upload draft application</a>
+      </p>
+     
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+       <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#active">
+              Active
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#expired" style="border-bottom: none;">
+              Inactive
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#drafts">
+              Drafts
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="active" style="border:none;">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group search-box">
+                <h3 class="govuk-heading-s">Search by PIL holder or PIL number</h3>
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+                </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <ul class='tasks-nav'>
+                <li class="">
+                  Filter by:
+                </li>
+                <li >
+                  <a href="#">Show all</a>
+                </li>
+                <li>
+                  <a href="#">RA not required</a> 
+                </li>
+                <!-- <li>
+                  <a href="#">Requires an RA</a> 
+                </li> -->
+                <li class="tasks-nav-selected">
+                  RA due <br>
+                </li>
+                <li>
+                  <a href="#">RA completed</a>
+                </li>
+              </ul>
+              <h3 class="govuk-heading-M">
+                Showing 6 results
+              </h3>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Project title</th>
+                    <th class="govuk-table__header" scope="col">PPL holder</th>
+                    <th class="govuk-table__header" scope="col">PPL number</th>
+                    <th class="govuk-table__header" scope="col">Status</th>
+                    <th class="govuk-table__header" scope="col">Retrospective assessment (RA)</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">AAV gene therapy vector characterisation</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kamal Woodward</a></td>
+                    <td class="govuk-table__cell" scope="col">PI089103</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ACID HANDLING AND SIGNALLING IN CANCER AND DISEASES OF THE HEART</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Vinnie Beech</a></td>
+                    <td class="govuk-table__cell" scope="col">PI181451</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Acute Inhalation Toxicology</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Winston Lam</a></td>
+                    <td class="govuk-table__cell" scope="col">PI721145</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptability of the auditory system in health and disease</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Fathima Nichols</a></td>
+                    <td class="govuk-table__cell" scope="col">PI933544</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptation in the musculoskeletal system</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Maciej Mcgrath</a></td>
+                    <td class="govuk-table__cell" scope="col">PI447606</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptive mechanisms of the ischaemic myocardium</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Halle Rowe</a></td>
+                    <td class="govuk-table__cell" scope="col">PI202023</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <!-- <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adiponectin-PEPITEM pathway as a novel regulator of bone formation and remodelling</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kenan Neale</a></td>
+                    <td class="govuk-table__cell" scope="col">PI761149</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                    <td class="govuk-table__cell">–</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME (Adsorption, distribution, metabolism and excretion) and Tissue Residue <br>10 Aug 2020 Studies</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Ralphy Archer</a></td>
+                    <td class="govuk-table__cell" scope="col">PI369663</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Due <br>10 Aug 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME and Pharmacokinetic Studies</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Jardel Frazier</a></td>
+                    <td class="govuk-table__cell" scope="col">PI565106</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                    <td class="govuk-table__cell">–</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME and PK/PD of new substances for Drug Discovery and Development</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Rachel Dunlap</a></td>
+                    <td class="govuk-table__cell" scope="col">PI974199</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span>
+                    </td>
+                    <td class="govuk-table__cell">Complete</td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <nav role="navigation" aria-label="Pagination">
+                <div class="pagination__summary">Showing 1 &ndash; 10 of 31 results</div>
+                <ul class="pagination">
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+                </ul>
+              </nav>          
+            
+            </section>
+            
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="expired" style="border:none;"> </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="revoked" style="border:none;"> </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="drafts" style="border:none;"> </section>
+            
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="secondary" style="border:none;">
+              
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group search-box">
+                <h3 class="govuk-heading-s">Search by PIL holder or PIL number</h3>
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+                </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+          
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Project title</th>
+                    <th class="govuk-table__header" scope="col">PPL holder</th>
+                    <th class="govuk-table__header" scope="col">PIL number</th>
+                    <th class="govuk-table__header" scope="col">Expiry date</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adoptive cell transfer for cancer immunotherapy</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kamal Woodward</a></td>
+                    <td class="govuk-table__cell" scope="col">PI089103</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adoptive cell transfer for cancer immunotherapy</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Vinnie Beech</a></td>
+                    <td class="govuk-table__cell" scope="col">PI181451</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adoptive T Cell Therapy for cancer</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Winston Lam</a></td>
+                    <td class="govuk-table__cell" scope="col">PI721145</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Advanced Education in Pharmacology</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Fathima Nichols</a></td>
+                    <td class="govuk-table__cell" scope="col">PI933544</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Advances in Tropical Fish Aquaculture</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Maciej Mcgrath</a></td>
+                    <td class="govuk-table__cell" scope="col">PI447606</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Advancing understanding of Paget’s disease of Bone</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Halle Rowe</a></td>
+                    <td class="govuk-table__cell" scope="col">PI202023</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Affect and cognition in rodents</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kenan Neale</a></td>
+                    <td class="govuk-table__cell" scope="col">PI761149</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Age and agents to minimise radiation-induced<br> cardiovascular disease</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Ralphy Archer</a></td>
+                    <td class="govuk-table__cell" scope="col">PI369663</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Amphibian egg extracts as tools for biomedical research</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Jardel Frazier</a></td>
+                    <td class="govuk-table__cell" scope="col">PI565106</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">A murine model of Oculocutaneous Albinism<br> to study the efficacy of drug PTC124 in treating albinism derived visual defects</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Rachel Dunlap</a></td>
+                    <td class="govuk-table__cell" scope="col">PI974199</td>
+                    <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td>
+                  </tr>
+                </tbody>
+              
+              </table>
+              <nav role="navigation" aria-label="Pagination">
+                <div class="pagination__summary">Showing 1 &ndash; 10 of 31 results</div>
+                <ul class="pagination">
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+                  <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+                </ul>
+              </nav>          
+            
+            
+            </section>
+          </div>
+
+
+
+  
+    </div>
+  </div>
+
+{% endblock %}

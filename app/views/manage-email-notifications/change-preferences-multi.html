@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Change your email notification preferences 
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-form-group">
+            <label class="govuk-label--m" for="event-name">
+              What do you want to be notified about?
+              <span id="checkbox-hint" class="govuk-hint">You’ll be notified when the licence request is submitted and completed.</span>
+            </label>
+            <h3 class="govuk-heading-s">University of Croydon</h3>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                  Personal licences held at University of Croydon
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                  Project licences held at University of Croydon
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                  Changes to University of Croydons’s licence
+                </label>
+              </div>
+            </div>
+            <br>
+            <h3 class="govuk-heading-s">Slough University</h3>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                  Personal licences held at Slough University
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                  Project licences held at Slough University
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                  Changes to Slough University’s licence
+                </label>
+              </div>
+            </div>
+            <br>
+            <h3 class="govuk-heading-s">University of Croydon</h3>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                  Personal licences held at University of Croydon
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                  Project licences held at University of Croydon
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                  Changes to University of Croydons’s licence
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <a href="email-preferences" class="govuk-button">Update preferences</a> 
+      <a href="#" class="secondary-link">Cancel</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}
+
+

@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL review</span>
+      <h1 class="govuk-heading-xl">
+        Mark licence as reviewed
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Comments</strong>
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Comments can be seen by establishment users, as well as inspectors and Home Office team members. They will be added to the 'Latest activity' log of this task.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <h3 class="govuk-heading-m">Declaration</h3>
+      <p>By marking this licence as reviewed, I confirm that the procedures and animal types on this licence are still relevant to the type of work being undertaken by the licence holder; and that their training is up-to-date.</p>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="mark-reviewed-confirmation" class="govuk-button">Mark licence as reviewed</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Cancel</a>
+      
+    </div>
+  </div>
+
+  </style>
+
+{% endblock %}

@@ -1,0 +1,256 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Review amendment
+      </h1>
+      <h3 class="govuk-heading-s">Development of new biological anticancer agents</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#procedures" class="">Establishment transfer requested</a>
+        <a href="#procedures" class="">Latest submission</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">Awaiting Recommendation</span>
+          <span class="date">20 July 2019</span>
+        </p>
+      <p><strong>Endorsed on behalf of the PEL holder by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+     
+      <h2 class="govuk-heading-m">PPL holder</h2>
+      <p><a href="#">Michael Thomas</a></p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+      <p>This is the amendment that has been submitted for approval.</p>
+      <p><a href="application/ppl-overview" class="govuk-button govuk-button--secondary">Open submission</a></p>
+
+      <h3 class="govuk-heading-s">Does this application have the endorsement of your primary establishment's PEL holder?</h3>
+
+      <p>Yes</p>
+
+      <p>PEL Holder: No answer provided</p>
+
+      <p>Endorsement date: No answer provided</p>
+
+      <h3 class="govuk-heading-s">Has the application been reviewed by the AWERB of each relevant establishment?</h3>
+
+      <p>Yes</p>
+
+      <p>AWERB review date: 31st January 2020</p>
+
+      <h3 class="govuk-heading-s">Has an inspector advised that this version of the draft application is ready for assessment?</h3>
+
+      <p>Yes</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Assessment</h2>
+      
+      <!-- <h3 class="govuk-heading-s">Assigned inspector</h3>
+      <p>This task currently appears in all inspectors task lists. If you want to start this assessment you can assign yourself which will remove it from other inspectors task lists.</p>
+      <p><a href="#">Assign this assessment you</a></p>
+      <br>
+
+      <h3 class="govuk-heading-s">Referrals</h3>
+      <p>If you have made any referrals during the assessment, you can add them below.</p>
+      <div class="content" id="wrapper"> 
+      </div>
+      <div id="referral-container" class="hide">
+        <div id="referral-input">
+          <label for="referral" class="govuk-label">Who was the assessment referred to and what about?</label>
+          <textarea class="govuk-textarea" id="referral" name="referral" rows="5" aria-describedby="referral-hint"></textarea>
+          <input type="button" class="govuk-button" onclick="save_field();" value="Save">
+          <a href="#" class="secondary-link">Cancel</a>
+        </div>
+      </div>
+      <div id="added-container">
+      </div>
+      <p>
+        <input type="button" class="link-button" id="more_fields" onclick="add_fields();" value="Add referral" />
+      </p>
+      <script>
+        var container = document.getElementById('referral-input')
+        function add_fields() {
+          newContainer = container.cloneNode(true);
+          newContainer.classList.remove('hide');
+          document.getElementById('added-container').appendChild(newContainer)
+          console.log(newContainer)  
+        }
+        function save_field() {
+
+            console.log(document.getElementById('referral-2'))
+        }
+      </script>
+
+      <style>
+
+        .link-button {
+          background: none!important;
+          border: none;
+          padding: 0!important;
+          color: #005ea5;
+          font-size: 19px;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      </style> -->
+      <!-- <br> -->
+
+      <!--
+      <h3 class="govuk-heading-s">Assessment assignee</h3>
+      <p>This task is currently assigned to Janet Andrews</p>
+      <br> -->
+
+      <!-- <h3 class="govuk-heading-s">Assessment assignee</h3>
+      <p>This task is currently assigned to you</p>
+      <p><a href="#">Unassign yourself from this task</a></p>
+      <br> -->
+
+      <p> Open the assessment for this application. </p>
+      <!-- <p><a href="assessment/assessment-overview" class="govuk-button--secondary govuk-button">Assessment sheet</a></p> -->
+      <p><a href="#" onclick="window.open('assessment/assessment-overview','name','width=1200,height=800')" class="govuk-button govuk-button--secondary">Open assessment</a></p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+      <div class="govuk-form-group govuk-form-group--error">
+        <span id="national-insurance-number-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden"></span>You must complete your assessment sheet before you can recommend for approval
+        </span>
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="1" checked>
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for approval</label>
+              <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="2">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for rejection</label>
+              <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="3">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return to applicant</label>
+              <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <a href="recommend-approval" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

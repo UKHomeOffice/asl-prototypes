@@ -1,0 +1,171 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Check return details</h1>
+      {% set row = '0' %}
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-m">General details <span class="govuk-body float-right"><a href="setup-any">Edit general details</a></span></h3>
+      <dl>
+        <dt>
+          Procedures completed in 2021
+        </dt>
+        <dd>
+          Yes
+        </dd>
+        <dt>
+          Only protected embryonic forms used
+        </dt>
+        <dd>
+          No
+        </dd>
+        <dt>
+          Endangered animals used
+        </dt>
+        <dd>
+          No
+        </dd>
+        <dt>
+          NMBAs used
+        </dt>
+        <dd>
+          No
+        </dd>
+        <dt>
+          Rodenticide trials carried out
+        </dt>
+        <dd>
+          No
+        </dd>
+        <dt>
+          Techniques of special interest used
+        </dt>
+        <dd>
+          No
+        </dd>
+      </dl>
+
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-m">Animals  <span class="govuk-body float-right"><a href="setup-animals">Edit animals</a></span></h3>
+      <dl>
+        <dt>
+          Animal species
+        </dt>
+        <dd>
+          <ul class="govu-list govuk-list--bullet" style="margin-block-start: 0em;">
+            <li>Mice</li>
+            <li>Rats</li>
+            <!-- <li>Hamsters (Syrian)</li> -->
+          </ul>
+        </dd>
+        <dt>
+          Re-use
+        </dt>
+        <dd>
+          No
+        </dd>
+        <dt>
+          Place of birth for animals not reused
+        </dt>
+        <dd>
+          <ul class="govuk-list govuk-list--bullet" style="margin-block-start: 0em;">
+          <li>
+            UK, licensed establishment
+          </li>
+          </ul>
+        </dd>
+        <dt>
+          Genetically altered animals used
+        </dt>
+        <dd>
+          Yes
+        </dd>
+      </dl>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-m">Purposes <span class="govuk-body float-right"><a href="setup-complete-2">Edit purposes</a></span></h3>
+      <dl>
+        <dt>
+          Purpose 1
+        </dt>
+        <dd>
+          Basic research 
+        </dd>
+        <dt>
+          Sub-purpose 1
+        </dt>
+        <dd>
+         <li>Oncology</li>
+        </dd>
+        <dt>
+          Purpose 2
+        </dt>
+        <dd>
+          Regulatory research
+        </dd>
+        <dt>
+          Sub-purpose 2
+        </dt>
+        <dd>
+          <li>Toxicity and neurotoxicity</li>
+        </dd>
+        <dt>
+          Type of legislation
+        </dt>
+        <dd>
+          <li>Industrial chemicals legislation</li>
+          <li>Plant protection product legislation</li>
+          <li>Biocides legislation</li>
+        </dd>
+        <dt>
+          Origin of legislation
+        </dt>
+        <dd>
+          Legislation satisfying UK requirements only
+        </dd>
+        <dt>
+          Creation of new genetic line
+        </dt>
+        <dd>
+          No
+        </dd>
+      </dl>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <p>
+        You will be able to edit these details later. 
+      </p>
+      <form action="rops-1" method="post">
+      <input type="hidden" name="rowCount" value="0">
+      <button class="govuk-button">Continue to procedures</button>
+    </form>
+    </div>
+  </div>
+
+  <style>
+    dt {
+      width: 50%;
+      font-weight: normal;
+    }
+    dd {
+      width: 40%;
+      /* width: 65%;
+      margin-inline-start: 0px;
+      padding-bottom: 30px; */
+    }
+  </style>
+{% endblock %}

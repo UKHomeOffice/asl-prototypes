@@ -1,0 +1,182 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% set entityType = "person" %}
+      {% include "includes/compliance/flag-open.html" %}
+    
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Jane McGregor
+      </h1>
+      
+      <p>
+        <strong>Email:</strong></br>
+        jane-mcgregor@university-of-croydon.edu.uk
+      </p>
+      <p>
+        <strong>Telephone:</strong></br>
+        01840 345 6702
+      </p>
+      <p>
+        <strong>Date of birth:</strong></br>
+        23 April 1970
+      </p>
+      <p>
+        <strong>Latest activity:</strong></br>
+        17 December 2021
+      </p>
+
+      <h3 class="govuk-heading-m">Projects</h3>
+      <div class="govuk-tabs" data-module="tabs">
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#tasks">
+              Active
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Drafts
+            </a>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#people">
+              Inactive
+            </a>
+          </li>
+        </ul>
+  
+        <section class="govuk-tabs__panel" id="tasks" style="border:none;">
+          <p><a href="ppl-jane">Development of new biological anticancer agents</a></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Expires on 10 December 2022</li>
+            <li>Additional availability at University of Croydon (East Croydon campus)</li>
+          </ul>
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
+      </div>
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Roles at this establishment</h3>
+      <p>None</p>
+      <button class="govuk-button govuk-button--secondary">Add role</button>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Personal licence</h3>
+      <p><a href="pil-jane">932131</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Permission level</h3>
+      <p>Personal (Basic access)</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>manage own licences</li>
+        <li>view named people and Home Office liaison contacts (HOLCs)</li>
+      </ul>
+      <button class="govuk-button">Change / remove</button>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Training record</h3>
+      <p>No training record</p>
+      <p><a href="#">Manage training</a></p>
+
+      {% include "includes/compliance/enforcement-module.html" %}
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">Related tasks</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Received</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Licence </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">Assignee</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">17 December 2021</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PPL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PPL amendment</a><br>
+              Jane McGregor
+            </td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">06 January 2020</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PPL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PPL amendment</a><br>
+              Jane McGregor
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">10 December 2017</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PPL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PPL Application</a><br>
+              Jane McGregor
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19 November 2017</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PIL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PIL Application</a><br>
+              Jane McGregor
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      
+  </div>
+</div>
+
+<style>
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+</style>
+
+{% endblock %}

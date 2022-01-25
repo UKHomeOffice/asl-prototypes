@@ -1,0 +1,237 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+      <h3 class="govuk-heading-s">How to cure heartache</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Establishment details</a>
+        <a href="#applicant.application" class="">Course details</a>
+        <a href="#procedures" class="">Applicant</a>
+        <a href="#procedures" class="">Procedures</a>
+        <a href="#procedures" class="">Animal types</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">Awaiting Endorsement</span>
+          <span class="date">20 April 2020</span>
+        </p>
+      <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activity
+          </span>
+        </summary>
+        <div class="">
+          <br>
+          <p>
+            <span class="badge">Endorsed</span>
+            <span class="date">20 July 2019</span>
+          </p>
+          <p><strong>Endorsed for Marvell Pharmaceuticals by:</strong> <a href="#">John Brown</a></p>
+          <br>
+          <p>
+            <span class="badge">Endorsed</span>
+            <span class="date">19 July 2019</span>
+          </p>
+          <p><strong>Endorsed for University of Croydon by:</strong> <a href="#">Jane Smith</a></p>
+          <br>
+          <p>
+            <span class="badge">Awaiting Endorsement</span>
+            <span class="date">17 July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> <a href="#">Michael Thomas</a></p>
+          
+        </div>
+      </details>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Establishment details</h2>
+      <p>University of Croydon</p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Applicant</h2>
+      <p>{{ data['first-name']}} {{ data['surname']}}</p>
+      
+      <h3 class="govuk-heading-s">Applicant over 18?</h3>
+      <p>Yes</p>
+      
+     <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Animal types</h2>
+      
+      <ul class="govuk-list govuk-list--bullet">
+        <li>{{ data['animal-types'] }}</li>
+      </ul>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Procedures</h2>
+      
+      <h3 class="govuk-heading-s">Categories</h3>
+      
+      <p>E. Training and education</p>
+
+       <h3 class="govuk-heading-s">Course start date</h3>
+      <p>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</p>
+      
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training and education project licence details</h2>
+      <h3 class="govuk-heading-s">Training Project licence title</h3>
+      <p>Training in microvascular surgery
+      
+      <h3 class="govuk-heading-s">Training project licence number</h3>
+      <p>{{ data['ppl-number'] }}</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training need</h2>
+      
+      <p>{{ data['personal-statement'] }}</p>
+
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for approval</label>
+                <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for rejection</label>
+                <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return to applicant</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="lo-approve-comment" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your profile
+      </h1>
+      
+      <div class="establishment-container">
+          <span class="govuk-body"><a href="#">Edit your details</a></span>
+      </div>
+      <div class="establishment-container">
+          <span class="govuk-body"><a href="#">Change your email address</a></span>
+      </div>
+      <div class="establishment-container">
+          <span class="govuk-body"><a href="profile-empty.html">Manage your training modules</a></span>
+      </div>
+
+<style>
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: purposes</h1>
+      <h1 class="govuk-heading-s">For the purpose</h1>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Translational/Applied research</li>
+      </ul>
+      <form action="setup-line" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Which of the following sub-purposes apply?
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select all that apply</span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-yes" name="sub-p-2" type="checkbox" value="Human cancer" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human cancer</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human infectious disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human infectious disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human cardiovascular disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human cardiovascular disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human nervous and mental disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human nervous and mental disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human respiratory disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human respiratory disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human gastrointestinal disorders including liver" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human gastrointestinal disorders including liver</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human musculoskeletal disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human musculoskeletal disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human dentistry" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human dentistry</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human immune disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human immune disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human urogenital/reproductive disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human urogenital/reproductive disorders</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human sensory organ disorders (skin, eyes, ears)" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human sensory organ disorders (skin, eyes, ears)</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="Human endorine/metablolism disorders" >
+                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human endorine/metablolism disorders</label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

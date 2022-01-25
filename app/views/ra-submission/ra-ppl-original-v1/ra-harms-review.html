@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Check your answers for harms
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What harms were caused to the animals, how severe were those harms and how many animals were affected?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          <p class="govuk-hint">
+            Don’t just list procedures but reflect on the animals’ experience. For example, ‘animals experienced mild discomfort as tumours 10mm wide were allowed to grow under the skin’.
+          </p>
+          <p class="govuk-hint">
+            If animals went through procedures more than once, make sure this is reflected in the numbers and in your assessment of their overall suffering.
+          </p>
+        </span>
+        <p>
+          The principal harms arose due to surgery to induce a heart attack. This was performed under general anaesthesia with post-operative analgesia to minimise the pain. However, animals will have suffered some distress due to the anaesthetic and some pain, despite pain killers being given, in the days following surgery. Mild and transient pain was caused by taking blood samples or injecting a medicines to help improve the function of the heart. All animals were humanely killed at the end of the experiment under deep anaesthesia following removal of the heart for further examination in the laboratory. A smaller proportion of animals underwent an aortic banding procedure to induce a different kind of heart failure. The surgery was performed under anaesthesia with post-operative pain relief. The animals will have experience some pain and discomfort in the days following surgery. Again mild and transient pain will have been experienced when blood samples were taken or medicines administered. One animal suffered abnormal breathing for about 14 hours. Other animals did not appear to have breathing difficulties as a consequence of the heart failure. In both protocols 10% of animals showed signs of prolonged sedentary behaviour and ruffled fur in excess of that expected within the 24 hours and so were humanely killed. One animal was found dead due to cardiac rupture. When cardiac rupture occurs, we believe that unconsciousness occurs very quickly due to sudden loss of blood pressure and so harms are thought to be of very limited duration
+        </p>
+        <a href="#" class="">Edit</a>
+      </div>
+
+        
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <form action="ra-index" method="POST">
+        <div class="declaration-panel-grey">
+          <h3 class="govuk-heading-m">Mark this section as complete</h3>
+          <p>You can still edit this section later, but you will be unable submit this assessment until all sections are marked as complete.</p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="complete-harms-hint">
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complete-harms" name="complete-harms" type="checkbox" value="yes">
+                  <label class="govuk-label govuk-checkboxes__label" for="complete-harms">
+                    Mark this section as complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>  
+        </div>
+        <br>
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a href="ppl-overview" class="secondary-link">List of sections</a>
+        </p>
+      </div>
+    </form>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

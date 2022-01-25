@@ -1,0 +1,174 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        <li class="selected"><a href="8-retrospective">Retrospective assessment</a></li>
+        
+
+         <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Retrospective assessment</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View retrospective assessment standards
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        <h3 class="govuk-heading-s">Retrospective assessment</h3>
+        
+        <p>
+          A RA is required for any project in the following categories:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            All projects using non-human primates (NHPs)
+          </li>
+          <li>
+            All projects involving procedures prospectively classified as severe
+          </li>
+          <li>
+            All projects using cats, dogs or equidae
+          </li>
+          <li>
+            All projects using endangered animals
+          </li>
+          <li>
+            Teaching licences
+          </li>
+          <li>
+            Any project raising important animal welfare or ethical concerns, novel or contentious issues or societal concerns
+          </li>
+        </ul>
+        <p>
+          The RA date will be on expiry or revocation of the project licence unless there is a specific reason for undertaking retrospective assessment during the course of the project, or to undertake more than one RA
+        </p>
+      </div>
+    </details>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Additional conditions</h2>
+      
+      <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">
+          	Retrospective assessment required condition
+          </h3>
+          <p>The Secretary of State has determined that a retrospective review of this licence is required, and should be submitted within 6 months of the licence’s revocation date.</p>
+      </div>
+
+
+    <div id="conditions-options" style="display: none;">
+      <div class="govuk-form-group">
+        <div class="govuk-form-group">
+          <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Retrospective assessment required condition
+                <p>The Secretary of State has determined that a retrospective review of this licence is required, and should be submitted within 6 months of the licence’s revocation date.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div> -->
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Retrospective assessment date condition
+                <p>A retrospective assessment is required on [DATE(s)]
+  
+                  Rationale for alternative date(s):</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Retrospective assessment required condition
+                <p>The Secretary of State has determined that a retrospective review of this licence is required, and should be submitted within 6 months of the licence’s revocation date.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                 Write new 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add more additional conditions</a>
+      
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--m" for="comments-8">
+          Reasoning or clarification (optional)
+        </label>
+        <span id="comments-8-hint" class="govuk-hint">
+          These will only be visible to ASRU users.
+        </span>
+        <textarea class="govuk-textarea" id="comments-8" name="comments-8" rows="5" aria-describedby="comments-8-hint"></textarea>
+      </div>
+
+      {% set sectionComplete = 'yes' %}
+      {% include "includes/assessment-complete.html" %}
+      
+      
+      </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

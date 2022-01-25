@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: animals</h1>
+      <h1 class="govuk-heading-s">This project stated:</h1>
+       <p>
+        Includes the following animal types:
+       </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Mice</li>
+        <li>Hamsters</li>
+      </ul>
+      <form action="setup-reuse" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                What species of hamsters?
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="setup-rodent-no" name="setup-rodent" type="checkbox" value="false" data-aria-controls="conditional-option-2">
+                <label for="setup-rodent-no" class="govuk-label govuk-checkboxes__label">Hamsters (Syrian) (Mesocricetus auratus)</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="setup-rodent-yes" name="setup-rodent" type="checkbox" value="true" data-aria-controls="conditional-option-1">
+                <label for="setup-rodent-yes" class="govuk-label govuk-checkboxes__label">Hamsters (Chinese) (Cricetulus griseus)</label>
+              </div>
+              
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

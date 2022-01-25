@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Finding the cure for heartache
+      </h1>
+      
+      <dl class="govuk-body">
+        <dd><strong>PPL holder</strong></dd>
+        <dt>Bruce Banner
+            <br>
+            <a href="#">View profile</a> | <a href="#">Change</a>
+        </dt>
+        <dd><strong>PPL number</strong></dd>
+        <dt>78847475</dt>
+        <dd><strong>Project duration</strong></dd>
+        <dt>5 years 0 months</dt>
+        <dd><strong>Date granted</strong></dd>
+        <dt>02 August 2019</dt>
+        <dd><strong>Expiry date</strong></dd>
+        <dt>02 August 2024</dt>
+      </dl>    
+      <a href="review-pil-app-public-edit" class="govuk-button">View granted licence</a>
+      
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Amend granted licence</h2>
+      <p>Start an amendment for this project licence.</p>
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--secondary">View granted licence</a>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Request to transfer licence to another establishment</h2>
+      <p>Move this licence to another establishement.</p>
+      <a href="select-transfer-establishment" class="govuk-button govuk-button--secondary">Transfer licence</a>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Revoke licence</h2>
+      <p>Cancel this licence if it is no longer needed.</p>
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--warning">Revoke licence</a>
+
+
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li class="selected">Aims</li></a>
+        <a href="nts-benefits"><li>Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-fate.html"><li>Fate of animals</li></a>
+        <a href="nts-replacement.html"><li>Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Aims
+      </h1>
+      <!-- <h2 class="govuk-heading-m">
+        Description of the project’s objectives, for example the scientific unknowns or clinical or scientific needs it’s addressing.
+      </h2> -->
+      <h2 class="govuk-heading-s">
+        What is the aim of this project?
+      </h2>
+      <p>
+        The aim of this project is to support the assessment of a test agents for potential adverse effects on behaviour or their ability to modify impaired mood, sensation, thinking and behaviour.
+      </p>
+<!-- <h2 class="govuk-heading-m">
+          Potential benefits likely to derive from the project, for example how science might be advanced or how humans, animals or the environment might benefit - these could be short-term benefits within the duration of the project or long-term benefits that accrue after the project has finished.
+      </h2> -->
+      <h2 class="govuk-heading-s">
+        Why is it important to undertake this work?
+      </h2>
+      <p>
+        Mental illness is a growing problem, with 1 in 4 people experiencing mental health issues each year, with an associated economic and social burden.
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Depression is a leading cause of disability worldwide, often occurring in conjunction with other mental health issues and associated with suicide and heart disease.
+        </li>
+        <li>
+          Anxiety affects a significant number of people, and over recent years has been seen to be increasing among young people.
+        </li>
+        <li>
+          Psychosis and schizophrenia are also on the increase, with the latter being increasingly connected to cannabis consumption at an early age.
+        </li>
+        <li>
+          Autism Spectrum Disorders (ASD) is increasing. ASD is complex and is associated with varying levels of disability, including those related to social interaction, repetitive behaviours, frustration, aggression, anxiety, sensory sensitivity and motor coordination. In addition, ASD commonly co-occurs with other diagnoses including developmental, psychiatric and neurologic conditions.
+        </li>
+      </ul>
+      
+      <p>
+        Such conditions can be hugely debilitating for the individuals and challenging for care givers and family. Although a number of treatments are available for such conditions they are often associated with varying degrees of side-effects. For example, anti-psychotics may cause weight gain, suicidal feelings/behaviour, seizures, sedation, neuromuscular effects, emotional effects and heart problems. As such, new medications are required which have improved or equal efficacy with lower associated side-effects.
+      </p>
+      <p>
+        For the treatment of Schizophrenia, medications have primarily targeted the positive symptoms (e.g. hallucination, delusions, disorganization speech and behaviour), however, more recently, there has been an increase in drugs being developed to treat the negative symptoms of this condition (e.g. lack of emotion/hedonia, low energy, low motivation and impairment of social interactions).
+      </p>
+      <p>
+        Data from this project will be used to improve human health by 1) supporting the development of new medicines for these and other related disorders, 2) assessing novel drugs for their potential to produce unwanted behavioural/CNS side-effects and 3) support the requirements of regulatory submissions.
+      </p>
+      <div class="grey-panel">
+        <h3 class="govuk-heading-s">A retrospective assessment of these aims will be due by 02 January 2021</h3>
+        <p>The licence holder will be required to disclose:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>if there’s a plan to continue to the work</li>
+          <li>whether the project’s aims were achieved</li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="nts-overview" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Overview</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-benefits.html" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Predicted benefits</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

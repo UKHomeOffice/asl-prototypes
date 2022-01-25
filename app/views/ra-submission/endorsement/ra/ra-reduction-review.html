@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="ra-index" ><li class="back-to-sections">&#9666; &ensp; List of sections</li></a>
+        <a href="ra-objectives-review"><li>Objectives</li></a>
+        <a href="ra-harms-review"><li>Harms</li></a>
+        <a href="ra-replacement-review.html"><li>Replacement</li></a>
+        <a href="ra-reduction-review.html"><li class="selected">Reduction</li></a>
+        <a href="ra-refinement-review.html"><li>Refinement</li></a>
+      </ul>
+      <hr class="govuk-section-break govuk-section-break--m ">
+
+      <h3 class="govuk-heading-s">Project links</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download Non-technical summary</a></li>
+        <li><a href="/ra-submission/ppl-app/ppl-granted-summary.html" target="_blank">View licence</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        
+      <h1 class="govuk-heading-xl">
+        Reduction
+      </h1>    
+
+      <label class="govuk-label--s" for="option-1-additional-1">
+        How did you minimise the numbers of animals used on your project and is there anything others can learn from your experience?
+      </label>
+      <span class="govuk-hint"></span>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show the project’s planned reduction measures
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h2 class="govuk-heading-s">
+            Explain how you will assure the use of minimum numbers of animals.
+          </h2>
+          <p>
+            The experiments we perform are only permitted on the condition we use the least number of animals possible to get a meaningful result to assess safety or whether a drug has the desired effect. These numbers are sometimes based on a number set by a regulator, or based on our own experience. We regularly consult with statisticians when new study types are performed. They do a special calculation (power calculation) which takes into account the size of likely effect we will see to help determine the number of animals we use. Although we do use the least number of animals possible, its important to use enough animals to get a meaningful result, otherwise we would end up using more animals overall than we needed to.
+          </p>
+          <p>
+            Where we can we only use one control group per study (effectively dosed with the drug formulation without the drug in it) which acts as a baseline to compare any effect of the drug itself. We also try not to use extra animals to compare an existing drug (which we know provides an effect in the experimental model) where possible. We also re-use animals where this does not adversely impact on the welfare of the animal concerned (see the sections above) and this reduces the overall numbers of animals we use too.
+          </p>
+          <p>
+            Studies are also carefully designed to combine the different aspects needed to evaluate the safety or whether a drug has its effect combined, and again this reduces the overall numbers of animals used.
+          </p>
+        </div>
+      </details>
+      <p>
+        Using the latest imaging technologies, e.g. cine-magnetic resonance (MRI) – including late gadolinium enhancement (LGE) imaging- we strive to maximize the information obtained from each animal during the same imaging study. Detection of subtle cardiac changes in mice treated with new compounds which would potentially be missed by conventional imaging and by accurately detecting changes in infarct size and cardiac haemodynamics and reducing the ‘noise’ in the dataset, this allows us to use fewer animals than before to identify differences between the treated group and the control group.
+      </p>
+      <p>
+        Refined use of primary cell cultures, the number of mice being required to be humanely killed to generate clones has been reduced from 30 to 10 by incubating cells in ‘hypoxic conditions’ to improve cloning efficiency. The number of cells needed for our analytical procedure has been reduced by the establishment of robust methods for single-cell measurements of gene expression.
+      </p>
+      <a href="#" class="govuk-button govuk-button--secondary">Add comment</a>
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="ra-replacement-review" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Replacement</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="ra-refinement-review" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Refinement</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View all sections</a> or <a href="/ra-submission/endorsement/ra-task">Back to task</a></span>
+          </li>
+        </ul>
+      </nav>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,294 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li class="selected"><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ reporting condition</a></li>
+ reporting condition</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+          <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Project location</h1>
+
+      <form action="assessment-overview" method="post">
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show standards for project location
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                All named establishments are licensed user establishments
+              </li>
+              <li>
+                Each establishment has:
+              </li>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  adequate housing, husbandry and care conditions, or an exemption or a lower standard is justified for scientific reasons
+                </li>
+                <li>
+                  someone overseeing the work who has appropriate expertise and training
+                </li>
+                <li>
+                  appropriate access to veterinary practice in laboratory animal science and/or expertise in wildlife veterinary practice
+                </li>
+              </ul>
+              <li>
+                Any movement of animals between establishments, or significant movement within an establishment, is justified and clearly described to minimise adverse impacts on animal welfare and scientific outcomes. 
+              </li>
+              <li>
+                [Dynamic if user answers ‘Yes’ to “Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?”] The location of every POLE is adequately specified.
+              </li>
+              <li>
+                [Dynamic if user answers ‘Yes’ to “Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?”] The conduct of work at each POLE has a scientific justification.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+
+
+        <!-- <h2 class="govuk-heading-m">Specify additional conditions</h2>
+        <p class="govuk-hint">Additional conditions have been added automatically according to the selections made by the applicant.</p>
+
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">Places Other than a Licensed Establishment (POLEs)</h3>
+          <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are due to start.</p>
+          <p><a href="#">Remove</a> | <a href="#">Edit</a></p>
+        </div>
+
+       <a href='#' class="govuk-button govuk-button--secondary">Add more additional conditions</a> -->
+       
+        <!-- <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-2" name="condition-2" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-2">
+                Places Other than a Licensed Establishment (POLEs) condition
+                <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence... </p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                 Create custom condition
+              </label>
+            </div>
+          </div>
+        </div> -->
+        
+
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+<h2 class="govuk-heading-m">Section assessment</h2>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Previous assesment outcome
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <h3 class="govuk-heading-s">Does this application meet the standards for this section?</h3>
+    <p>Yes</p>
+    <h3 class="govuk-heading-s">Notes (optional)</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus earum saepe maxime dolorem sequi, quibusdam consequatur deleniti corrupti suscipit corporis quidem ullam ex dolorum a modi eos sed ducimus.</p>
+  </div>
+</details>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <label class="govuk-label--s" for="">
+      Have there been any changes to this section that requires assessment? 
+    </label>
+    <span class="govuk-hint"></span>
+    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-no" name="changed" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
+        <label for="changed" class="govuk-label govuk-radios__label">No</label>
+        
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-yes" name="changed" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
+        <label for="changed" class="govuk-label govuk-radios__label">Yes</label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Does this amendment meet the standards for project location?
+            </label>
+            <span class="govuk-hint"></span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reassessment-yes" name="reassessment" type="radio" value="yes" data-aria-controls="conditional-option-3" {% if assessOutcome == 'met' %}Checked{% endif %}>
+                <label for="reassessment" class="govuk-label govuk-radios__label">Yes</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="reassessment-notes">
+                    Notes (optional)
+                  </label>
+                  <span class="govuk-hint">Visible to ASRU colleagues only</span>
+                  <textarea class="govuk-textarea" id="reassessment-notes" name="reassessment-notes" rows="8" aria-describedby="reassessment-notes-hint">{{reason}}</textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reassessment-no" name="reassessment" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
+                <label for="reassessment" class="govuk-label govuk-radios__label">No<span class="govuk-hint">Includes only partially</span></label>
+                
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="reassessment-reason">
+                    Reason
+                  </label>
+                  <span class="govuk-hint">Visible to ASRU colleagues only</span>
+                  <textarea class="govuk-textarea" id="reassessment-reason" name="reassessment-reason" rows="8" aria-describedby="reassessment-reason-hint">{{reason}}</textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+      </div>
+    </div>
+  </fieldset>
+</div>
+       
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+<!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">POLES<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
+          
+          <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are started.</p>
+          </div>
+        <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        <br>
+        <br>
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Export of animals (transfer)
+                <p>Genetically altered rodents, genetically altered zebra fish and genetically altered Xenopus sp. bred and/or maintained under the authority of this project may be transferred to scientific establishments outside the United Kingdom only if:</p>
+                <ul class="govuk-list govuk-list--number">
+                  <li>
+                    The transfer will be made to a recognised scientific research establishment with a scientific requirement for genetically altered animals (or their controls) of that type; and where appropriate veterinary care can be provided as necessary; and
+                  </li>
+                  <li>
+                    Sending tissue, gametes or embryos is not practicable or carries a higher potential welfare cost than moving live animals; and
+                  </li>
+                  <li>
+                    Animals will be transported in accordance with all relevant regulations regarding welfare of animals in transit or the import or export of animals; and
+                  </li>
+                  <li>
+                    Animals will be inspected by a competent person before transfer; and
+                  </li>
+                  <li>
+                    A veterinary surgeon will confirm that he/she is not aware of any reason why these animals might suffer by virtue of the fact of being moved to another recognised scientific establishment.
+                  </li>
+                  <li>
+                    Any transport related problems with the welfare of the animals will be notified to the Home Office promptly.</p>
+                  </li>
+                </ul>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Export of animals (transfer)
+                <p><<<TYPE OF ANIMAL(s)>>> may be moved from <<<NAME OF ESTABLISHMENT>>> TO <<<NAME OF ESTABLISHMENT>>> provided that:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <<<Measures to minimise adverse effects>>>
+                  </li>
+                  <li>
+                    Animals are given a minimum of <<<7>>> days to acclimatise to their new surroundings before any further regulated procedures are undertaken
+                  </li>
+                  <li>
+                    Animals are transported in accordance with the relevant legislation
+                  </li>
+                  <li>
+                    Animals are inspected by a competent person after transfer
+                  </li>
+                  <li>
+                    Any transport related problems with the welfare of the animals are notified to the Home Office promptly
+                  </li>
+                </ul>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Establishment licences not meeting Code of Practice
+                <p>If an establishment does not meet the requirements laid out in the Code of Practice for the housing and care of animals bred, supplied, or used for scentific purposes, the following conditions apply:<br>
+                  • <<<INSERT conditions HERE>>></p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Write new ion
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+
+        {% include "includes/assessment-complete.html" %}
+
+      
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

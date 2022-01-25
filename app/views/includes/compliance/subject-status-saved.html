@@ -1,0 +1,50 @@
+<div class="declaration-panel-grey">
+    <h2 id="subject-{{user}}" class="govuk-heading-m">Enforcement subject {{user}}</h2>
+    <p>
+      {% if user === '3' %}  
+        {{data['subject-3-name']}}
+      {% elif user === '2' %}
+        {{data['subject-2-name']}}
+      {% else %}
+        {{data['subject-1-name']}}
+      {% endif %}
+    </p>
+    <h3 class="govuk-heading-s">Enforcement flag status</h2>
+      
+      <div class="notification-banner notification-banner--{% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}
+      
+      {{data['subject-1-status']}}" style="padding: 0px 10px">
+
+        <div class="govuk-warning-text" style="margin-bottom: 0px;">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <span class="govuk-warning-text__text">
+            <strong>This subject is related to 
+              
+            {% if user === '3' %}  
+              {{data['subject-3-status']}}
+            {% elif user === '2' %}
+              {{data['subject-2-status']}}
+            {% else %}
+              {{data['subject-1-status']}}
+            {% endif %}
+
+              enforcement case 21102</strong>
+          </span>
+        </div>
+
+      </div>
+      
+    <h3 class="govuk-heading-s">Flag applied to</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        Tasks related to Jane McGregor's profile
+        <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+      </li>
+      <li>Tasks related to personal licence 932131</li>
+      <li>Tasks related to project licence 372383</li>
+    </ul>
+
+    <p><a href="add-subject-1-details?user-{{user}}-status=edit#subject-{{user}}">Edit enforcement flags</a></p>
+
+</div>

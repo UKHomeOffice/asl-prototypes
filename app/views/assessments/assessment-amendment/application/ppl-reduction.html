@@ -1,0 +1,105 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'reduction' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Reduction</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h2 class="govuk-heading-s">Enter the estimated number of animals of each type used in this project.</h2>
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="account-number">
+          Mice
+          </label>
+        </h1>
+          {% set current = "300" %}
+          {% set proposed = "400" %}
+          {% include "includes/change-comparison-amendment.html" %}
+        <p>400</p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How have you estimated the numbers of animals you will use?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          Do not mention POWER calculations here. If relevant, there will be an opportunity to provide these details elsewhere.
+        </div>
+        <p>
+          We have performed power calculations based on expected effect sizes and consulted statisticians to optimize our experimental program.
+        </p>
+        <p>
+          Power calculations from our previous experiments suggest that we will require around 100 mice to achieve our aims. However, if we find that particular subsets of neurons are affected by seizures we may need to perform further analysis with genetic targeting of these neurons. To allow for this we have anticipated that this may be the case for 2 additional populations and adjusted total numbers accordingly.
+        </p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What steps did you take during the experimental design phase to reduce the number of animals being used in this project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          You may want to reference online tools (such as the NC3R's Experimental Design Assistant) or any relevant regulatory requirements.
+        </div>
+        <p>
+          We took statistical advice on the design of the experiments. We examined the NC3Rs Experimental Design Assistant, but concluded that we did not need to use it for our studies at this stage. We have attended NC3Rs 2019 Symposium to keep abreast of new thinking in the field. We used the best estimate of effect size based on pilot data or published literature to inform our power calculations. 
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What measures, apart from good experimental design, will you use to optimise the number of animals you plan to use in your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          This may include efficient breeding, pilot studies, computer modelling, or sharing of tissue.
+        </div>
+       
+        <p>
+          Planning and execution of our experiments will be according to best practice as exemplified by the  PREPARE guidelines (Lab Anim. 2018 52:135-141. doi: 10.1177/0023677217724823). https://norecopa.no/PREPARE
+        </p>
+
+        <p>
+          Pilot studies will be performed to get good estimates of effect size. Should our program demonstrate that our estimates of effect size are wrong (either too big or too small) we shall reperform the power calculations to ensure we arrive at a rigorous outcome. If it appears that the effect size is much smaller than anticipated for a particular experiment, we shall consider abandoning that part of the program. We shall routinely harvest tissue to enable biochemical, genetic, cellular and morphological analyses and share this tissue with our collaborators.
+        </p>
+
+        <p>
+          The in vivo microscopy permits repeated imaging sessions from the same animal and this reduces the number of animals required in the study as the repeated measurements will give greater statistical certainty and will allow study of the acute and chronic stages of epilepsy in the same animal.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      {% set previousPage = 'ppl-replacement' %}
+      {% set previousPageTitle = 'Replacement' %}
+      {% set nextPage = 'ppl-refinement' %}
+      {% set nextPageTitle = 'Refinement' %}
+      {% include "includes/application-footer-nav.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

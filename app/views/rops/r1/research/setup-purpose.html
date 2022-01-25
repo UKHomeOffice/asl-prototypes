@@ -1,0 +1,342 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: purposes</h1>
+      <!-- <h1 class="govuk-heading-s">This project's licence:</h1>
+       <p>
+        Includes the following purposes:
+       </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>(a) Basic Research</li>
+        <li>((b) Translational or applied research with the following aims:
+          <br>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or	their effects, in man, animals or plants
+            </li>
+          </ul>
+        </li>
+      </ul> -->
+      <form action="setup-subpurpose" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Which purposes apply to procedures completed in 2021?
+              </h1>
+            </legend>
+            <!-- <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Show list of purposes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <ul class="govuk-list">
+                  <li>
+                    (a) Basic research
+                  </li>
+                  <li>
+                    (b) Translational or applied research with one of the following aims:
+                    <br>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or	their effects, in man, animals or plants
+                      </li>
+                      
+                      <li>
+                        (ii) Assessment, detection, regulation or modification of physiological conditions in man, animals or plants
+                      </li>
+                      
+                      <li>
+                        (iii) Improvement of the welfare of animals or of the production conditions for animals reared for agricultural purposes
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    (c) Development, manufacture or testing of the quality, effectiveness and safety of drugs, foodstuffs and feedstuffs or any other substances or products, with one of the following aims mentioned in paragraph (b)
+                  </li>
+                  <li>
+                    (d) Protection of the natural environment in the interests of the health or welfare of man or animals
+                  </li>
+                  <li>
+                    (e) Research aimed at preserving the species of animal subjected to regulated procedures as part of the programme of work
+                  </li>
+                  <li>
+                    (f) ?????????
+                  </li>
+                  <li>
+                    (g) Forensic enquiries
+                  </li>
+                </ul>
+              </div>
+            </details> -->
+           
+            <!-- <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-rodent-no" name="setup-rodent" type="radio" value="false" data-aria-controls="conditional-option-9">
+                <label for="setup-rodent-no" class="govuk-label govuk-radios__label">No, procedures weren’t carried out for any other purposes</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-rodent-yes" name="setup-rodent" type="radio" value="true" data-aria-controls="conditional-option-1">
+                <label for="setup-rodent-yes" class="govuk-label govuk-radios__label">Yes, procedures were carried out for other purposes</label>
+              </div> 
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1"> -->
+                <fieldset class="govuk-fieldset">
+                  <span class="govuk-hint">Select all that apply
+                  </span>
+                    <span class="govuk-hint"></span>
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="1" data-aria-controls="conditional-option-3" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Basic research</label>
+                      </div> 
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="2" data-aria-controls="conditional-option-4">
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Translational/Applied research</label>
+                      </div>
+                      <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-4">
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                            <label class="govuk-label--s" for="">
+                              What was the sub-purpose of the translational/applied research
+                            </label>
+                            <span class="govuk-hint"></span>
+                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-yes" name="sub-p-2" type="checkbox" value="1" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human cancer</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="2" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human infection disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="3" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human cardiovascular disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="4" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human nervous and mental disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="5" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human respiratory disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="6" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human gastrointestinal disorders including liver</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="7" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label"> Human musculoskeletal disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="8" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label"> Human dentistry</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="9" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human immune disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="10" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human urogenital/reproductive disorders</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="11" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human sensory organ disorders (skin, eyes, ears)</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-2-no" name="sub-p-2" type="checkbox" value="12" >
+                                <label for="sub-p-2" class="govuk-label govuk-checkboxes__label">Human endorine/metablolism disorders</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div> -->
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="3" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Protection of the natural environment in the interests of the health or welfare of human beings or animals</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="4" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Preservation of species</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="5" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Higher education or training for the acquisition, maintenance or improvement of vocational skills</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="6" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Forensic enquiries</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="7" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Breeding/maintainence of colonies fo established genetically altered animals, not used in other procedures</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="8" data-aria-controls="conditional-option-5">
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Regulatory research</label>
+                      </div>
+                      <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-5">
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                            <label class="govuk-label--s" for="">
+                              What was the sub-purpose of the regulatory research
+                            </label>
+                            <span class="govuk-hint"></span>
+                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-yes" name="sub-p-3" type="checkbox" value="1" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production blood based products</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="2" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production Monoclonal antibodies</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="3" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production Other</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="4" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control Batch safety testing</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="5" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control Pyrogenicity testing</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="6" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control Batch potency testing</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="7" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control Other quality controls</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="8" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Other efficacy and tolerance testing</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="9" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute LD50, LC50</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="10" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute Other lethal methods</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="11" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute Non lethal methods</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="12" >
+                                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and skin irritation/corrosion</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                        
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                            <label class="govuk-label--s" for="">
+                              Testing by legislation
+                            </label>
+                            <span class="govuk-hint"></span>
+                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-yes" name="test-leg" type="checkbox" value="1" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Legislation on medicinal products for human use</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="2" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Legislation on medicinal products for veterinary use and their residues</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="3" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Medical devices legislation</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="4" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Industrial chemicals legislation</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="5" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Plant protection product legislation</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="6" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Biocides legislation</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="7" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Food legislation including food contact material</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="8" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Feed legislation including legislation fo rthe safety of target animals, workers and environment</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="9" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Cosmetics legislation</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="test-leg-no" name="test-leg" type="checkbox" value="10" >
+                                <label for="test-leg" class="govuk-label govuk-checkboxes__label">Other</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+    
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                            <label class="govuk-label--s" for="">
+                              Legislative Requirements (origin of the legislation)
+                            </label>
+                            <span class="govuk-hint"></span>
+                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="leg-req-yes" name="leg-req" type="checkbox" value="1" >
+                                <label for="leg-req" class="govuk-label govuk-checkboxes__label">Legislation satisfying EU requirements</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="leg-req-no" name="leg-req" type="checkbox" value="2" >
+                                <label for="leg-req" class="govuk-label govuk-checkboxes__label">Legislation satisfying UK requirements only</label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="leg-req-no" name="leg-req" type="checkbox" value="3" >
+                                <label for="leg-req" class="govuk-label govuk-checkboxes__label">Legislation satisfying Non-EU requirements only</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div> -->
+                    </div>
+                  </fieldset>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

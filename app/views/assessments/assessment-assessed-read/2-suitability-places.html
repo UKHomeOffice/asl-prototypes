@@ -1,0 +1,120 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment-complete.html" %}
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li class="selected"><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+         <li><a href="9-additional-conditions">Further additional conditions</a>
+          <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Project location</h1>
+
+      <form action="assessment-overview" method="post">
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show standards for project location
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                All named establishments are licensed user establishments
+              </li>
+              <li>
+                Each establishment has:
+              </li>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  adequate housing, husbandry and care conditions, or an exemption or a lower standard is justified for scientific reasons
+                </li>
+                <li>
+                  someone overseeing the work who has appropriate expertise and training
+                </li>
+                <li>
+                  appropriate access to veterinary practice in laboratory animal science and/or expertise in wildlife veterinary practice
+                </li>
+              </ul>
+              <li>
+                Any movement of animals between establishments, or significant movement within an establishment, is justified and clearly described to minimise adverse impacts on animal welfare and scientific outcomes. 
+              </li>
+              <li>
+                [Dynamic if user answers ‘Yes’ to “Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?”] The location of every POLE is adequately specified.
+              </li>
+              <li>
+                [Dynamic if user answers ‘Yes’ to “Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?”] The conduct of work at each POLE has a scientific justification.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+        
+        <h2 class="govuk-heading-m">Additional conditions</h2>
+        
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">
+            POLEs
+          </h3>
+                  <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are started.</p>
+        </div>
+
+        
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+        
+        <h2 class="govuk-heading-m">Authorisations</h2>
+        <p class="govuk-hint">No authroisations have been added.</p>
+
+        
+        
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+        <p>Yes</p>
+
+        <h3 class="govuk-heading-s">Notes (optional)</h3>
+        <p>This is met based on the condition added.</p>
+        
+        {% include "includes/assessment-footer-nav.html" %}
+
+      
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

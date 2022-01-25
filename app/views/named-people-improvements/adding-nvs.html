@@ -1,0 +1,298 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Approved areas
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/approved-areas-filter.html" %}
+      <h3 class="govuk-heading-m">Showing 102 of 102 results <span style="float: right; font-size: 18px; font-weight:normal;"><a href="#">Create new area</a></h3>
+
+      
+
+<table class="govuk-table govuk-react-datatable">
+    <thead>
+        <tr>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=site&amp;sort%5Bascending%5D=true&amp;page=1" class="">Site</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=area&amp;sort%5Bascending%5D=true&amp;page=1" class="">Area</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=name&amp;sort%5Bascending%5D=true&amp;page=1" class="">Name</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=suitability&amp;sort%5Bascending%5D=true&amp;page=1" class="">Suitability</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=holding&amp;sort%5Bascending%5D=true&amp;page=1" class="">Holding</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=nacwo&amp;sort%5Bascending%5D=true&amp;page=1" class="">NACWO</a></th>
+            <th aria-sort="none"><a href="?sort%5Bcolumn%5D=nacwo&amp;sort%5Bascending%5D=true&amp;page=1" class="">NVS or SQP</a></th>
+        </tr>
+        <tr id="filter-header"></tr>
+    </thead>
+    <tbody>
+        <tr class="expandable">
+            <td class="site">2 Marsham Street</td>
+            <td class="area">2.27</td>
+            <td class="name">377<i class="icon icon-information"></i>
+            </td>
+            <td class="suitability"><abbr title="Cats">CAT</abbr>, <abbr title="Dogs">DOG</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Brian Proudfoot</a>
+            <td class="nvs"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Umaima Alfaro</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">2 Marsham Street</td>
+            <td class="area">8.17</td>
+            <td class="name">1603</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>, <abbr title="Cats">CAT</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Not for overnight holding">NOH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Gareth Tindall</a>
+            <td class="nvs"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Kwame Sullivan</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">2 Marsham Street</td>
+            <td class="area">9.25</td>
+            <td class="name">61715</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>
+            </td>
+            <td class="holding"><abbr title="Not for overnight holding">NOH</abbr>, <abbr title="Non-sterile experimental procedures">NSEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Benjamin Patton</a>
+            <td class="nvs"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Zakary Peterson</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">2 Marsham Street</td>
+            <td class="area">New</td>
+            <td class="name">919</td>
+            <td class="suitability"><abbr title="Equidae">EQU</abbr>, <abbr title="Large animals">LA</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Non-sterile experimental procedures">NSEP</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/d24d5123-6887-42a6-ac6a-fec3a20ee249">John Sharp</a>
+            <td class="nvs"><a href="/establishments/8201/people/d24d5123-6887-42a6-ac6a-fec3a20ee249">Dominykas Cochran</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">2 Marsham Street</td>
+            <td class="area"></td>
+            <td class="name">58816</td>
+            <td class="suitability"><abbr title="Cats">CAT</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Sterile experimental procedures">SEP</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Megan Alberts</a>
+            <td class="nvs"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Pamela O'Sullivan</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">1.62</td>
+            <td class="name">07</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/5899f8ac-aa76-44e7-9c8e-36f486ffe61f">Ian Ayers</a>
+            <td class="nvs"><a href="/establishments/8201/people/5899f8ac-aa76-44e7-9c8e-36f486ffe61f">Denzel Major</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">4.1</td>
+            <td class="name">040</td>
+            <td class="suitability"><abbr title="Cats">CAT</abbr>, <abbr title="Dogs">DOG</abbr>
+            </td>
+            <td class="holding"><abbr title="Sterile experimental procedures">SEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Benjamin Patton</a>
+            <td class="nvs"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Rayhan Smart</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">4.48</td>
+            <td class="name">87</td>
+            <td class="suitability"><abbr title="Birds">AV</abbr>, <abbr title="Non-human primates">NHP</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Not for overnight holding">NOH</abbr>, <abbr title="Non-sterile experimental procedures">NSEP</abbr>, <abbr title="Sterile experimental procedures">SEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/d24d5123-6887-42a6-ac6a-fec3a20ee249">John Sharp</a>
+            <td class="nvs"><a href="/establishments/8201/people/d24d5123-6887-42a6-ac6a-fec3a20ee249">Ferne Rhodes</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">7.13</td>
+            <td class="name">9706</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>, <abbr title="Equidae">EQU</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Not for overnight holding">NOH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/5899f8ac-aa76-44e7-9c8e-36f486ffe61f">Ian Ayers</a>
+            <td class="nvs"><a href="/establishments/8201/people/5899f8ac-aa76-44e7-9c8e-36f486ffe61f">Kylo Robins</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">8.3</td>
+            <td class="name">049</td>
+            <td class="suitability"><abbr title="Cats">CAT</abbr>, <abbr title="Dogs">DOG</abbr>, <abbr title="Large animals">LA</abbr>
+            </td>
+            <td class="holding"><abbr title="Not for overnight holding">NOH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Brian Proudfoot</a>
+            <td class="nvs"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Rochelle Trejo</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">8.82</td>
+            <td class="name">05411</td>
+            <td class="suitability"><abbr title="Birds">AV</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Sterile experimental procedures">SEP</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Brian Proudfoot</a>
+            <td class="nvs"><a href="/establishments/8201/people/6108c582-8942-4301-a1b5-f7a6920fce6e">Jordana Parsons</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area">Area 5</td>
+            <td class="name">523.6</td>
+            <td class="suitability"><abbr title="Small animals">SA</abbr>
+            </td>
+            <td class="holding"><abbr title="Sterile experimental procedures">SEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Megan Alberts</a>
+            <td class="nvs"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Jaxon Finch</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area"></td>
+            <td class="name">0661</td>
+            <td class="suitability"><abbr title="Cats">CAT</abbr>
+            </td>
+            <td class="holding"><abbr title="Non-sterile experimental procedures">NSEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Gareth Tindall</a>
+            <td class="nvs"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Jorgie Chavez</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Apollo House</td>
+            <td class="area"></td>
+            <td class="name">9541</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>, <abbr title="Cats">CAT</abbr>
+            </td>
+            <td class="holding"><abbr title="Non-sterile experimental procedures">NSEP</abbr>, <abbr title="Short term holding">STH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Benjamin Patton</a>
+            <td class="nvs"><a href="/establishments/8201/people/38224226-505c-418b-834e-dece1777563f">Tallulah Mcgee</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Lunar House 1st floor</td>
+            <td class="area">1.01</td>
+            <td class="name">49</td>
+            <td class="suitability"><abbr title="Birds">AV</abbr>, <abbr title="Cats">CAT</abbr>, <abbr title="Dogs">DOG</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>, <abbr title="Not for overnight holding">NOH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Gareth Tindall</a>
+            <td class="nvs"><a href="/establishments/8201/people/666624d2-a42c-46b2-9272-dac1143097ce">Umayr Kline</a>
+            </td>
+        </tr>
+        <tr class="expandable">
+            <td class="site">Lunar House 1st floor</td>
+            <td class="area">2.63</td>
+            <td class="name">807</td>
+            <td class="suitability"><abbr title="Aquatic species">AQ</abbr>, <abbr title="Cats">CAT</abbr>, <abbr title="Large animals">LA</abbr>
+            </td>
+            <td class="holding"><abbr title="Long term holding">LTH</abbr>
+            </td>
+            <td class="nacwo"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Megan Alberts</a>
+            <td class="nvs"><a href="/establishments/8201/people/ee295338-bcc7-4791-89b9-fff06b6f612a">Finn Almond</a>
+            </td>
+        </tr>
+        
+          </tbody>
+      </table>
+      
+      {% include "includes/pagination.html" %}
+      
+    </div>
+  </div>
+
+
+<style type="text/css">
+  .govuk-table__cell, .govuk-table td {
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+    text-align: left;
+  }
+
+ .govuk-table__header, .govuk-table th {
+    font-weight: 700;
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+    text-align: left;
+}
+
+  govuk-react-datatable tr.expandable td:first-child:before {
+      text-decoration: none;
+      font-size: 0.75em;
+      margin-right: 1em;
+      content: "\25ba";
+  }
+
+  .site:before {
+    content: "\25ba";
+    padding-right: 10px;
+    font-size: 14px;
+  }
+
+  th a {
+    display: block; 
+    position: relative;
+    padding-right: 1em;
+  }
+
+  th a:after {
+    color: #bfc1c3;
+    content: "\25bc";
+    bottom: -0.2em;
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: 0.75em;
+  }
+
+  th a:before {
+    color: #bfc1c3;
+    content: "\25b2";
+    top: -0.2em;
+    float: right;
+    position: absolute;
+    right: 0;
+    font-size: 0.75em;
+  }
+
+  </style>
+{% endblock %}

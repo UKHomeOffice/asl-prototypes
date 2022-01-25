@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">{{ data['course-name'] }}</span>
+      <h1 class="govuk-heading-xl">
+        Check licence details
+      </h1>
+
+      <!-- <h2 class="govuk-heading-m">Participant details</h2> -->
+
+      <p>
+        <dl class="govuk-body">
+          <!-- <dt>Course name</dt>
+          <dd>{{ data['course-name'] }}</dd> -->
+          <dt>First name</dt>
+          <dd>{{ data['first-name'] }}</dd>
+          
+          <dt>Last name</dt>
+          <dd>{{ data['surname'] }}</dd>
+  
+          <dt>Email</dt>
+          <dd>{{ data['email'] }}</dd>
+          
+          <dt>Date of birth</dt>
+          <dd>{{ data['users-dob-day'] }} / {{ data['users-dob-month'] }} / {{ data['users-dob-year'] }}</dd>
+          
+          <dt>Training need</dt>
+          <dd>{{ data['personal-statement'] }}</dd>
+        </dl>
+      </p>
+      <!-- <h2 class="govuk-heading-m">Course details</h2> -->
+      <p>
+        <dl class="govuk-body">
+
+          <dt>Course title</dt>
+          <dd>{{ data['course-name'] }}</dd>
+          <dt>Course start date</dt>
+          <dd>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</dd>
+        </dl>
+      </p>
+          
+      <p>
+        <dl class="govuk-body">
+          <dt>Project licence title</dt>
+          <dd>Training in microvascular surgery</dd>
+          
+          <dt>Project licence number</dt>
+          <dd>{{ data['ppl-number'] }}</dd>
+          
+          <dt>Animals to be used</dt>
+          <dd>{{ data['animal-types'] }}</dd>
+        </dl>
+        
+      </p>
+      <p><a class="govuk-button" href="submission-confirmation">Send for endorsement</a></p>
+    </div>
+  </div>
+
+{% endblock %}

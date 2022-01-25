@@ -1,0 +1,67 @@
+
+
+<hr class=" govuk-section-break--l govuk-section-break--visible">
+<h2 class="govuk-heading-m">Section assessment</h2>
+{% if amendment == 'true' %}
+  <p class="govuk-hint">Responses copied from <a href="#">previous assessment on 1 January 2020</a></p>
+{% endif %}
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <label class="govuk-label--s" for="">
+      Does this application meet the standards for {{ assessSectionTitle }}? 
+    </label>
+    <span class="govuk-hint"></span>
+    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="{{ assessSection }}-yes" name="{{ assessSection }}" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
+        <label for="{{ assessSection }}" class="govuk-label govuk-radios__label">Yes</label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="{{ assessSection }}-notes">
+            Notes (optional)
+          </label>
+          <span class="govuk-hint">Not visible to establishments</span>
+          <textarea class="govuk-textarea" id="{{ assessSection }}-notes" name="{{ assessSection }}-notes" rows="8" aria-describedby="{{ assessSection }}-notes-hint">{{reason}}</textarea>
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="{{ assessSection }}-no" name="{{ assessSection }}" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
+        <label for="{{ assessSection }}" class="govuk-label govuk-radios__label">No or only partially </label>
+        
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="{{ assessSection }}-reason">
+            Reason standards not met
+          </label>
+          <span class="govuk-hint">Not visible to establishments</span>
+          <textarea class="govuk-textarea" id="{{ assessSection }}-reason" name="{{ assessSection }}-reason" rows="8" aria-describedby="{{ assessSection }}-reason-hint">{{reason}}</textarea>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<style>
+	#banner {
+		overflow: hidden;
+		background-color: #0a6337;
+		position: fixed; /* Set the navbar to fixed position */
+		top: 0; /* Position the navbar at the top of the page */
+		left: 0; /* Position the navbar at the top of the page */
+		width: 100%; /* Full width */
+		text-align: center;
+		padding: 15px;
+		transition: all 0.5s linear;
+	}
+	#banner .govuk-body {  
+		font-size: 19px;
+		font-weight: bold;
+		color: white;
+	}
+	.hide {  
+		display: none;
+		opacity: 0;
+	}
+</style>

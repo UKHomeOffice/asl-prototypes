@@ -1,0 +1,1158 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+
+  function toggleStep(button) {
+      var toggleStep = $(button).parent()
+      var stepContainer = $(button).parent().parent().siblings('.stepContainer')
+
+      $(button).text($(button).text() == 'Close' ? 'Open' : 'Close');
+      $(stepContainer).toggleClass("hide")
+      console.log("hello")
+    }; 
+
+    function toggleAllSteps() {
+      $( ".stepContainer").toggleClass("hide")
+      $( ".stepToggleButton").text($( ".stepToggleButton").text() == 'Close' ? 'Open' : 'Close');
+    };
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ppl-application.html" %}                
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+      {% include "includes/ppl-application-sidebar-steps.html" %}                
+      
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+
+
+      <p>
+        <a href="#">View summary table</a>
+      </p>
+        
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        XXXX
+
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+    
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: Viral transduction, imaging, seizure induction and physiological monitoring</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            Briefly describe the purposes of this protocol
+          </h3>
+          <p class="govuk-hint">
+            Ensure that you state any relevant regulatory 
+          </p>guidelines.
+          
+          <p>
+            To optionally induce seizures and then to optionally use imaging, physiological recordings and behavioural testing of transduced, GA, wild type and control rodents to study the effects of the seizures on different types of neural cell in vivo.
+          </p>
+          
+          
+          <h3 class="govuk-heading-s">
+            Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
+          </h3>
+          <p>
+            Severe
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            What proportion of animals will experience this severity?
+          </h3>
+          <p>
+            75% of animals will have status epilepticus induced as well as cranial surgery this combination of procedures would be classed as severe. The remaining 25% of animals will be in control groups, which would be classed as moderate.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Why are you proposing this severity category?
+          </h3>
+          <p>
+            The recovery surgery for in vivo imaging itself is classified as moderate in our current project licence. However we propose to combine this with induction of status epilepticus. Given the additional burden on the animal we now classify this protocol as severe.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Locations where this protocol can be carried out
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <p>
+            University of Croydon
+          </p>
+          <h3 class="govuk-heading-s">
+            Which of your objectives will this protocol address?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <p>
+            Identifying the brainstem circuits affected by acute and chronic seizures
+          </p>
+          <p>
+            The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures          
+          </p>
+
+        </div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Mice
+          </h3>
+          <h3 class="govuk-heading-s">
+            Which life stages will be used during this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Adult
+            </li>
+            <li>
+              Juvenile
+            </li>
+          </ul>
+          <h3 class="govuk-heading-s">
+            Will any animals coming on to this protocol be classed as ‘continued use’?
+          </h3>
+          <p class="govuk-hint">
+            ‘Continued use’ describes animals that are specifically genetically altered and bred for scientific use or animals that have had procedures applied to them in order to be prepared for use in this protocol.
+          </p>
+
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How did these animals start their use?
+          </h3>
+          <p class="govuk-hint">
+            Describe the procedures that have been applied to animals that will continue their use on to this protocol.
+          </p>
+
+          <p>
+            Protocol 2 or from other projects that have authority to breed and supply animals
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be re-using animals on to this protocol?
+          </h3>
+          <p class="govuk-hint">
+            ‘Re-use’ describes using animals again for a new experiment when you could equally use a naïve animal to get the same results.
+          </p>
+
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of animals that will be used on this protocol?
+          </h3>
+          
+          <p>
+            300
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of uses of this protocol per animal?
+          </h3>
+          <p class="govuk-hint">
+            For example, if some animals will go through this protocol three more times after their first use, the number of uses will be four. If no animals will go through this protocol more than once, enter '1'.
+          </p>
+          <p>
+            1
+          </p>
+        </div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Will this protocol use any genetically altered animals?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Which general types or strains will you be using and why?
+          </h3>
+          <p>
+            GA Mice with:
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
+            </li>
+            
+            <li>
+              Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
+            </li>
+            
+            <li>
+              Particular genes deleted or knocked in to analyze their function
+            </li>
+            
+            <li>
+              Floxed alleles of interest for subsequent conditional deletion for analysis of function
+            </li>
+            
+            <li>
+              Other modifications that enable specific and conditional targeting/expression of genes and constructs
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Do you expect any of these GAAs to show a harmful phenotype with welfare consequences?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <section class="step completed">
+            <div class="stepToggle">
+              <h2 class="govuk-heading-s">
+                Step: <span class="quick-ref">Creation of genetically altered embryos</span>
+                <button class="stepToggleButton float-right" onClick='toggleStep(this)'>Open</button>
+              </h2>
+              
+            </div>
+            <div class="stepContainer hide">
+              <div class="review step-descritpion">
+                <h3 class="govuk-heading-s">Step description</h3>
+                <span class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.  When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</span>
+                <p>Creation of genetically altered embryos by conventional breeding methods (AA)</p>
+              </div>
+              <div class="review optional">
+                <h3 class="govuk-heading-s">Is this step optional?</h3>
+                <p>No</p>
+              </div>
+              <div class="review expect-effects">
+                <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+                <span class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</span>
+                <p>No</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+          	What will happen to animals at the end of this protocol?​
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <p>
+          	Killed
+          </p>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Will you be using non-schedule 1 killing methods on a conscious animal?
+            </h3>
+            <p>
+              No
+            </p>
+          </div>
+        </div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel">
+                    
+          <h3 class="govuk-heading-s">
+            Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
+          </h3>
+          <p class="govuk-hint">
+            Consider the cumulative effect of any combinations of procedures that you may carry out.
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Viral transduction
+            </li>
+
+            <li>
+              2-4 weeks later implantation of the GRIN lens, cannulae, EEG and ECG electrodes
+            </li>
+
+            <li>
+              1-2 weeks later, installation of the baseplate
+            </li>
+
+            <li>
+              1-2 weeks after baseplate installation, Induction of status epilepticus with KA injection into brain region to produce chronic seizures followed by anticonvulsant treatment to terminate seizures after 60 minutes.
+            </li>
+
+            <li>
+              Modification of microglial activity, for example, with minocycline or LPS treatment
+            </li>
+
+            <li>
+              For up to 4 months, imaging of neural activity, EEG and ECG recordings, and analysis of breathing via WBP in baseline condition and following induction of an mild electrographic seizure.
+            </li>
+
+            <li>
+              Terminal procedures, perfusion fixation of brains to verify viral transduction and lens placement
+            </li>
+          </ul>
+
+          <p>
+            The animal will be within the protocol for a maximum of 5 months, typically we would expect to finish our study within 4 months of viral transduction.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Describe the general humane endpoints that you will apply during the protocol.
+          </h3>
+          <p class="govuk-hint">
+            These will be in addition to the endpoints stated for each step.
+          </p>
+
+          <p>
+            On recovery from surgery, should an animal exhibit neurological signs such as paralysis, impaired locomotion they will be euthanized.
+          </p>
+
+          <p>
+            Any animal that shows any other deviation from normal health will be monitored more frequently and supportive treatment provided such as warming and wet mash and a decision, if these symptoms are persistent or there are multiple such symptoms, taken as to whether to humanely kill the animal via a Schdeule 1 method. Such signs are covered by a Pain Scale assessment SOP:
+          </p>
+
+          <p>
+            In addition, any animal that loses 20% of its body weight compared to age matched controls will be killed.
+          </p>
+
+
+        </div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            What outputs are expected to arise from this protocol?
+          </h3>
+          <p class="govuk-hint">
+            For example, test results, phenotypic information, or products.
+          </p>
+
+          <p>
+            Fundamental scientific information on the mechanisms underlying seizures and their effects on cardiorespiratory nuclei in the brain stem. These will include:
+          </p>
+
+          <p>
+            1) effects of acute and chronic seizures on the operation of key brainstem cardiorespiratory nuclei, and changes in breathing and cardiac activity;
+          </p>
+
+          <p>
+            2) histological data which will indicate changes in microglial state in the acute and chronic phases of epilepsy;
+          </p>
+
+          <p>
+            3) whether manipulation of microglial activity has any effect on seizure frequency;
+          </p>
+
+          <p>
+            4) whether the effect of microglial activation/inhibition on the activity of neurons in the brainstem nuclei during seizures changes from the acute to the chronic state.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will this protocol generate quantitative data?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will your experimental design be determined by a regulatory guideline?
+          </h3>
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Where relevant, explain how and when pilot studies will be used.
+          </h3>
+          <p>
+            The KA induced SE model (via hippocampal cannula) is well studied and used in many labs. Dr Smith has used this model and there is no need for further pilot work to validate this model. We shall however perform pilot work to ensure that combination of this method with the in vivo imaging method does not cause unnecessary suffering. 
+          </p>
+
+          <p>
+            Specifically, we have a well-established surgical protocol to image brainstem neurons using lenses and miniscope. In this modified protocol, which involves additional implantation of a hippocampal cannula and EEG-ECG electrodes, we will perform a pilot study to establish the animal well-being and recoveries after each surgery. We shall then ensure that animals recover well after induction (and termination) of status epilepticus. We will start with three animals and closely observe their recoveries, well-being, and health and monitor them a minimum of twice daily for 2 weeks after each step of the protocol. Findings of the pilot data will be used to ensure that further studies proceed with appropriate care and measures in place.
+          </p>
+
+          <p>
+            To validate and establish the intraperitoneal LPS dose, we will perform a pilot study and inject 0.1 – 1.0 mg/kg of LPS for 4 days in naïve mice. We will monitor these mice for three weeks (body weight, behaviour, eating pattern etc.) and document any effects that the given dose of LPS has on its own. Brain histology of these mice will be performed to assess the efficacy of LPS-induced microglial activation by means of specific antibodies.
+          </p>
+
+          <p>
+            We already know that at the doses proposed minocycline inhibits microglial activation, so no pilot experiments are necessary. (Smith et al 2017. Inhibition of microglial activation with minocycline at the intrathecal level attenuates sympathoexcitatory and proarrhythmogenic changes in rats with chronic temporal lobe epilepsy. Neuroscience,350, 23-38).
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you choose different experimental groups?
+          </h3>
+          <p class="govuk-hint">
+            For example, controls, dose levels, satellites etc.
+          </p>
+
+          <p>
+            In Aim 1 we will group mice into experimental group, to image the effect of both acute and chronic seizures on cardiorespiratory brainstem neurons, and saline control to image the same cardiorespiratory neurons in mice treated with saline instead of KA.
+          </p>
+
+          <p>
+            In Aim 2, we will evaluate the effect of microglial activation or inhibition either before acute or chronic seizures on the function of one cardiovascular and one respiratory brainstem nuclei during the aetiology of epilepsy. We will have experimental mice groups where activity of cardiorespiratory neurons will be imaged during acute and chronic seizures with microglial activation or inhibition either before acute or chronic seizures. Both experimental and saline control groups of animals from first study will act as a positive control and sham operated group for this study.
+          </p>
+
+
+          <h3 class="govuk-heading-s">
+            How will you choose control groups?
+          </h3>
+          <p class="govuk-hint">
+            Provide a robust scientific justification for controls with significant suffering such as sham surgery controls or untreated infected controls.
+          </p>
+
+          <p>
+            Aim 1 the mice will act as their own control -activity recorded before kainic acid injection. This will give the baseline activity in the relevant brainstem nuclei prior to the induction of seizures. Moreover, we will have a saline control to image the same cardiorespiratory neurons in mice treated with saline instead of KA. This is required because we need to test whether the surgical procedures (specifically implantation of the cannula in the hippocampus, and injection of saline) themselves alter the activity of cardiorespiratory neurons in the brainstem. Without this essential control it will be very difficult to publish this work.
+          </p>
+
+          <p>
+            There will be no further control groups for Aim 2, as the controls from Aim 1 will pertain to Aim 2 and enable us to rule out confounding explanations of our data.
+          </p>
+
+
+          <h3 class="govuk-heading-s">
+            How will experiments and data analysis be randomised and blinded?
+          </h3>
+          <p class="govuk-hint">
+            Animals will be randomised to different groups by standard means. 
+          </p>
+
+          <p>
+            Blinding will not be possible in Aim 1 as this will record neuronal activity from different nuclei and it will be obvious what these nuclei are from inspection of the images. 
+          </p>
+
+          <p>
+            Blinding will be used during data collection in Aim 2 (effects of activating and inhibiting microglia).
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you minimise variables to ensure reproducibility?
+          </h3>
+          <p>
+            Throughout this study, equal husbandry and care will be provided to all the animals. To avoid any possible variability due to female oestrous cycle, we will initially use male mice to establish robust physiological data against which to eventually compare any sex differences. All mice used for the experiments will be age-matched to within 2 months. The quantity of injected virus, speed of injection and size of the injection capillary will be kept consistent to avoid variability in neuronal transfection. Post hoc histology will be performed to confirm virus transfection, lens and cannula placement and to identify the differences in brain pathology within and between different groups. Imaging will be performed in saline treated group of mice to identify the effect of experimental procedures on the function of brainstem neurons and compare them with the experimental groups.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you determine group sizes?
+          </h3>
+          <p class="govuk-hint">
+            You should reference POWER calculations you have made, if relevant.
+          </p>
+
+          <p>
+            Power calculations based on effect size. This will be taken from pilot experiments or from the scientific literature where sufficiently useful data exists. We shall use GPower software to perform power calculations. If necessary form more complex experimental designs we shall use the NC3Rs experimental design assistant.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you maximise the data output from the animals you use on this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Quantitative data required to establish Aim 1:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Ca2+ imaging from cardiorespiratory neurons, which will indicate their temporal pattern of activation and the intensity of their activity during acute and chronic seizures.
+          </li>
+
+          <li>
+            EEG recordings -this will indicate the amplitude and frequency of spontaneous and induced seizures.
+          </li>
+
+          <li>
+            ECG recordings -will document the effect of seizures on the cardiovascular system.
+          </li>
+
+          <li>
+            Whole body plethysmography (WBP) -will document the effect of seizures on breathing (tidal volume, breathing frequency and pattern) and enable us to develop the CO2 biomarker test.
+          </li>
+
+          <li>
+            Post-hoc immunohistological analysis of the morphology will enable us to characterise the proportion of microglia in the surveilling and activated states in the relevant brain locations (hippocampus and brainstem nuclei).
+          </li>
+          </ul>
+
+          <p>
+            Quantitative data required to establish Aim 2:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The data delineated above for Aim 1 will be acquired and analysed to substantiate this aim.
+          </li>
+
+          <li>
+            Additionally, we shall examine the effects of microglial activation and inhibition on all of these parameters.
+          </li>
+          </ul>
+
+
+        </div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Why is each type of animal, experimental model, and/or method selected for this protocol:
+          </h3>
+          <h3 class="govuk-heading-s">
+            a) the most appropriate scientific approach?​
+          </h3>
+          <p>
+            We have determined a detailed methodology for in vivo imaging of brainstem nuclei that enables us to image activity in mice in the awake non-anesthetized state. As anaesthesia alters neural activity and will change the way that seizures may affect the brainstem nuclei, and indeed alter the operation of those nuclei themselves we need to perform this on mice in the awake state. 
+          </p>
+
+          <p>
+            Intra cranial injection of kainic acid is a well recognised procedure for the induction of acute seizures and chronic epilepsy where the mice develop spontaneous recurrent seizures. The kainic acid model is the basis for studies on the effects of seizures on the brain and the effects of manipulations such as drugs on these seizures. This model has the advantage that the kainic acid can be targeted to the hippocampus to give an excellent model of temporal lobe epilepsy (TLE) -this type of epilepsy has the greatest incidence of SUDEP (more than 50% of SUDEP patients have TLE). This model involves an initial injection of kainic acid to induce status epilepticus. The animals' fits are terminated after 40-60 mins by the injection of anti-convulsant drugs. The animals then develop chronic epilepsy. A further much lower dose of kainic acid is given in 7-10 days after establishment of chronic seizures. The purpose of this second low dose of kainic acid is to induce an mild seizure at a predicted time to enable recording of how that seizure affects the brainstem neural circuits. In a case where a successful recording has not been obtained following this procedure, we will reinject this low dose of kainic acid one week later. Only two injections of the low dose of kainic acid will be performed per mouse.
+          </p>
+
+          <p>
+            We have considered the Pilocarpine model. This has the following disadvantages: 1) mortality rate is high to the detriment of animal welfare; and 2) pilocarpine must be injected peripherally and therefore there is no specificity in the brain structures affected, therefore there will be greater variability in the study and underlying mechanisms. Which in turn will mean a greater use of animals. 
+          </p>
+
+          <p>
+            We have also considered the electroconvulsive seizure model (via implanted electrodes) -quite apart from the welfare issues, this model is incompatible with our recording methods. 
+          </p>
+
+          <p>
+            Other models include pentylene tetrazole (PTZ) model and similar models only induce acute seizures and not chronic seizures and therefore will not allow us to tackle the key scientific questions as to why chronic seizures recruit additional mechanisms compared to acute seizures. 
+          </p>
+
+          <p>
+            We are considering the underlying neural circuit mechanisms that may lead to SUDEP. There is some evidence in humans that SUDEP arises from sudden failure of key neural networks in the brainstem that control breathing and cardiovascular systems. So we believe that by studying how seizures in the acute and chronic phases affect the brainstem cardiorespiratory networks, we will gain key insight into how certain mechanistic pathways may be involved in the aetiology of SUDEP in man. Current evidence suggests that rodent brainstem networks are very similar to those in humans, so the results of our work should have relevance in man.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            b) the most refined for the purpose?
+          </h3>
+          <p>
+            We have considerably refined our surgical methods for performing the in vivo imaging. The incidence of unexpected adverse effects is now very low. 
+          </p>
+
+          <p>
+            Motor nerve recordings would be less invasive but would only indicate altered motor outputs and would not tell us the mechanistic events that underlie and cause the altered outputs from the cardiorespiratory networks. For this, we have to observe directly the activity of the premotor networks, and this necessitates the in vivo imaging approach proposed.
+          </p>
+
+          <p>
+            Animals with a lower capacity to experience pain, suffering, distress or lasting harm such as fish cannot be used because their brain anatomy and cardiorespiratory control systems are sufficiently different from mammals and humans that they would not give sufficient insight into the mechanisms by which seizures alter cardiorespiratory control leading to SUDEP.
+          </p>
+
+          <p>
+            The injection of kainic acid into the hippocampus is the most refined approach. The alternatives -injection peripherally or into the amygdala are associated with greater mortality and peripheral injection gives no specificity for the affected structure and type of resulting epilepsy.
+          </p>
+
+          <p>
+            We distinguish status epilepticus from electrographic seizures and behavioural seizures. 
+          </p>
+
+          <p>
+            Status epilepticus: this is defined as a continuous convulsive siezure that lasts longer than 5 minutes.
+          </p>
+
+          <p>
+            Electrographic seizures: these are defined as being detectable via electrode recordings, but with no outward behavioural signs.
+          </p>
+
+          <p>
+            Behavioural seizures: these are defined as convulsive behaviour. These occur mainly during status epilepticus or in the chronic phase of epilepsy.
+          </p>
+
+          <p>
+            The chronic phase of epilepsy is defined by the animal undergoing spontaneous seizures. These are low in frequency and typically no more than 5/day. The chronic phase occurs some 5-30 days after induction of status epilepticus.
+          </p>
+
+          <p>
+            Our method for inducing status epilepticus is refined to minimize suffering as we will terminate this state (which untreated would normally last around 3 hours) with anticonvulsant injection after 40-60 minutes. We, and others, have established that this is the minimum duration of SE required to induce chronic epilepsy.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            For each model and/or method, what is the scientific need for the expected clinical signs?
+          </h3>
+          <p>
+            The main clinical sign of disease we expect to see is acute seizures (status epilepticus) following the initial injection of kainic acid. We need the animals to stay in status epilepticus for 40 mins to 1 hour to induce chronic epilepsy. Previous research has shown they need to exhibit status for this long to reliably induce chronic seizures.
+          </p>
+
+          <p>
+            The second injection of kainic acid is much lower. We are expecting that this will induce only an electrographic seizure, but on rare occasions the mouse may show a behavioural seizure. If this happens seizures will be terminated with appropriate drug regimen. It is necessary to give this second injection to induce a mild electrogrphic seizure so that we can examine its effects on the activity of brainstem neurons in the cardiorespiratory control networks during chronic epilepsy.
+          </p>
+
+          <p>
+            The surgical interventions will give rise to pain which will be controlled by the appropriate use of analgesia. The other steps on the protocol are not expected to generate significant clinical signs.
+          </p>
+
+          <p>
+            Without inducing seizures, the consequent changes in brain neurochemistry, cellular biology and structure will not occur. As we wish to study the consequences for brain function of these seizures we have no option but to induce them. Because the neural mechanisms that affect network connectivity gradually change from the acute to the chronic epileptic state, and continually develop in the chronic state, it is essential for our work that we induce this chronic state of epilepsy. To enter a chronic epileptic state, we have to induce status epilepticus (a continuous convulsive seizure lasting more than 5 minutes). However we shall minimize suffering by ensuring that this state lasts no longer than 60 minutes untreated and if an animal is unresponsive to treatment it will be humanely killed.
+          </p>
+
+          <p>
+            As we wish to understand the neuronal mechanisms underlying the altered cardiorespiratory control, we need to virally transduce the relevant neurons and then implant the imaging lens. Merely looking at the motor outputs from the system is insufficient to give a mechanism by which that altered motor output arises.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why scientifically do the animals need to suffer to this degree?
+          </h3>
+          <p>
+            Our experience is that the surgical procedures themselves cause minimal suffering following recovery from them. 
+          </p>
+
+          <p>
+            As we wish to study how seizure activity alters the functioning of brainstem cardiorespiratory nuclei, we have no option but to induce seizure activity. 
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why can't you achieve your scientific outputs with an earlier humane endpoint, or without animals showing any clinical signs?
+          </h3>
+          <p>
+            There is good evidence that the acute and chronic states of epilepsy affect the brainstem nuclei differently. Furthermore there may be progressive and maladaptive cellular mechanisms that occur in the chronic state. To understand why this arises we have to study both the acute and chronic states. This means that we cannot use an endpoint prior to the establishment of status epilepticus. To enter a chronic epileptic state, we have to induce status epilepticus (a continuous convulsive seizure lasting  more than 5 minutes). However we shall minimize suffering by ensuring that this state lasts no longer than 60 minutes untreated and if an animal is unresponsive to treatment it will be humanely killed. The consensus in the field is that SE needs to last at least an hour to induce the chronic epileptic state. (Lidster et al, 2016. "Opportunities for improving animal welfare in rodent models of epilepsy and seizures." Journal of Neuroscience Methods 260: 2-25.)
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be administering substances for experimental purposes?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you assess the suitability of these substances, and minimise the unnecessary harms arising from their administration given the particular strain or type of animal you will be using?
+          </h3>
+          <p>
+            When assessing suitability, state how you will consider toxicity, efficacy, and sterility.
+          </p>
+
+          <p>
+            Mice will be treated with minocycline to inhibit microglial activation and LPS to activate microglia and kainic acid (KA, low level) to induce acute seizures. At the doses given we do not expect any toxic effects, and we shall perform pilot work to ensure that this dosing regimen does not induce any unexpected adverse effects.
+          </p>
+
+          <p>
+            Mice will be treated with anticonvulsive agents to bring them out of SE (e.g. ketamine, lorazepam). These are commonly used for this purpose and will be of medicinal grade and therefore sterile and highly pure.
+          </p>
+
+          <p>
+            Minocycline is a commonly prescribed tetracycline derived antibiotic which is essentially well-tolerated and safe compound. Minocycline has anti-inflammatory properties in the CNS that are separate from its antimicrobial action. It is the best choice of drug to inhibit microglial activation and is more relevant for future clinical applications. Minocycline readily crosses the blood brain barrier and attenuates inflammation associated with microglial activation. The mechanism of action is unclear, but recent studies indicate that minocycline abrogates MAPkinase and NFκB dependent signalling pathways in microglia.
+          </p>
+
+          <p>
+            Lipopolysaccharide (LPS), the major component of Gram-negative bacterial walls, is a stimulator of macrophage and microglia leading to release of proinflammatory and/or cytotoxic factors such as TNF-α, IL-1β, nitric oxide, and prostaglandin E2. LPS modulates the immune system through activation of Toll like receptor (TLR) 4. LPS preconditioning is a phenomenon in which pre-treatment of the experimental animals with low-dose LPS blunts harmful response to subsequent destructive damage and is a commonly used as model for brain inflammation. Mice treated with LPS will be weighed daily. Moreover, the dose of LPS in our mice is at least 10 times lower than the dose required to cause neurodegeneration (Qin, L., et al., 2007).
+          </p>
+
+          <p>
+            To ensure purity and sterility we shall use the highest grade of minocycline, LPS and KA. For minocycline this will be medicinal grade. We shall prepare all solutions of these drugs in sterile ultrapure water (e.g. autoclaved, 18 MOhm grade) using sterile techniques.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you determine an appropriate dosing regimen?​
+          </h3>
+          <p class="govuk-hint">
+            Include routes, dosage volumes, frequencies, and durations.
+          </p>
+
+          <p>
+            Minocycline will be administrated via drinking water, oral gavage or IP at a dose of 30-50mg/kg/day. This dose regimen has been previously found to be effective in counteracting chronic stress-induced microglial alterations and behavioural changes (Henry, C.J., et al., 2008; Kreisel, T., et al., 2014; Wang, N., et al., 2015).
+          </p>
+
+          <p>
+            Based on the previous literature, microglia will be pharmacologically preconditioned in mice with a low dose (0.5-1.0 mg/kg i.p.) of LPS (E. coli) for 4 days before or after induction of status epilepticus (Burguillos, M.A., et al., 2011; Chen, Z., et al., 2012; Dmowska, M., et al., 2010; Eslami, M., et al., 2015). 
+          </p>
+
+          <p>
+            Status epilepticus (SE) will be induced in mice with 0.2-0.4 μg; 50nl of kainic acid (KA) injection into the brain (Bouilleret, V., et al., 1999; Mouri, G., et al., 2008; Kasugai, M., et al., 2007). 40-60 minutes following injection of KA, mice will receive 6-12mg/kg intraperitoneal lorazepam to terminate the SE (as established by Martin & Kapur, 2017). During chronic seizure period (spontaneous seizures), low dose (0.02-0.04 μg; 50nl) of KA will be injected into the brain to trigger electrographic (mild) seizures without behavioural changes.
+          </p>
+
+          <p>
+            We shall use the highest grade of KA and prepare all solutions in sterile ultrapure water (e.g. autoclaved, 18 MOhm grade) using sterile techniques.
+          </p>
+
+          <p>
+            Drug combinations: The combination of KA and anticonvulsants is a well-established procedure and increases the wefare of the animal. All other drugs will be applied well before or after induction of SE, and no drugs will be applied simultaneously.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option2" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">2: Breeding and maintenance of GA mice</span>
+          </label>
+          <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            Briefly describe the purposes of this protocol
+          </h3>
+          <p class="govuk-hint">
+            Ensure that you state any relevant regulatory 
+            guidelines.</p>
+          
+          <p>To produce, maintain and provide genetically altered mice.</p>
+          
+          
+          <h3 class="govuk-heading-s">
+            Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
+          </h3>
+          <p>
+            Mild
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            What proportion of animals will experience this severity?
+          </h3>
+          <p>
+            All animals – we expect the phenotype to be sub-threshold
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Why are you proposing this severity category?
+          </h3>
+          <p>
+            Animals are not expected to show harmful phenotypes that are more than minor or transient.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Locations where this protocol can be carried out
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          <p>
+            University of Croydon
+          </p>
+          <h3 class="govuk-heading-s">
+            Which of your objectives will this protocol address?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              ATP release during hypoxic-ischaemic neonatal brain injury
+            </li>
+            <li>
+              Expression and function of P2X7 in the brain following neonatal Hypoxia/Ischemia
+            </li>
+            <li>
+              Novel diagnostics and prognostics of neonatal encephalopathy in humans
+            </li>
+            <li>
+              Identifying the brainstem circuits affected by acute and chronic seizures
+            </li>
+            <li>
+              The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures
+            </li>
+          </ul>
+
+        </div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Mice
+          </h3>
+          <h3 class="govuk-heading-s">
+            Which life stages will be used during this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Juvenile
+            </li>
+            <li>
+              Adult
+            </li>
+            <li>
+              Pregnant adult
+            </li>
+          </ul>
+          <h3 class="govuk-heading-s">
+            Will any animals coming on to this protocol be classed as ‘continued use’?
+          </h3>
+          <p class="govuk-hint">
+            ‘Continued use’ describes animals that are specifically genetically altered and bred for scientific use or animals that have had procedures applied to them in order to be prepared for use in this protocol.
+          </p>
+
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How did these animals start their use?
+          </h3>
+          <p class="govuk-hint">
+            Describe the procedures that have been applied to animals that will continue their use on to this protocol.
+          </p>
+
+          <p>
+            Genetically altered animals (and associated wild type controls) for use in this protocol may be obtained from other projects with authority to breed and maintain genetically altered animals of a type authorised in this project, and to provide them for use on other projects.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be re-using animals on to this protocol?
+          </h3>
+          <p class="govuk-hint">
+            ‘Re-use’ describes using animals again for a new experiment when you could equally use a naïve animal to get the same results.
+          </p>
+
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of animals that will be used on this protocol?
+          </h3>
+          <p>
+            1000
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of uses of this protocol per animal?
+          </h3>
+          <p class="govuk-hint">
+            For example, if some animals will go through this protocol three more times after their first use, the number of uses will be four. If no animals will go through this protocol more than once, enter '1'.
+          </p>
+          <p>
+            1
+          </p>
+        </div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Will this protocol use any genetically altered animals?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Which general types or strains will you be using and why?
+          </h3>
+          <p>
+            GA Mice with:
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
+            </li>
+            
+            <li>
+              Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
+            </li>
+            
+            <li>
+              Particular genes deleted or knocked in to analyze their function
+            </li>
+            
+            <li>
+              Floxed alleles of interest for subsequent conditional deletion for analysis of function
+            </li>
+            
+            <li>
+              Other modifications that enable specific and conditional targeting/expression of genes and constructs
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Do you expect any of these GAAs to show a harmful phenotype with welfare consequences?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>Step 1: <a href="#">Generation of genetically altered embryos</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+          	What will happen to animals at the end of this protocol?​
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <p>
+          	Continued use on another protocol in this project
+          </p>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Please state the relevant protocol
+            </h3>
+            <p>
+              Protocol 1
+            </p>
+          </div>
+          <p>
+          	Killed
+          </p>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Will you be using non-schedule 1 killing methods on a conscious animal?
+            </h3>
+            <p>
+              No
+            </p>
+          </div>
+          <p>
+          	Continued use on other projects
+          </p>
+        </div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel">
+                    
+          <h3 class="govuk-heading-s">
+            Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
+          </h3>
+          <p class="govuk-hint">
+            Consider the cumulative effect of any combinations of procedures that you may carry out.
+          </p>
+          <p>
+            Standard methods of breeding and maintenance with tissue samples taken for genotyping as part of standard husbandry. Animals produced under this protocol are not expected to exhibit any harmful phenotype.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Describe the general humane endpoints that you will apply during the protocol.
+          </h3>
+          <p class="govuk-hint">
+            These will be in addition to the endpoints stated for each step.
+          </p>
+
+          <p>
+            Any animal will be immediately killed by Schedule 1 method if it shows signs of suffering that is greater than minor and transient or in any way compromises normal behaviour. Animals exhibiting any unexpected harmful phenotypes will be killed (Schedule 1), or in the case of individual animals of particular scientific interest, advice will be sought promptly from the local Home Office Inspector.
+          </p>
+        </div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            What outputs are expected to arise from this protocol?
+          </h3>
+          <p class="govuk-hint">
+            For example, test results, phenotypic information, or products.
+          </p>
+
+          <p>
+            GA mice for use in other protocols of this project or continued use in other projects
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will this protocol generate quantitative data?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Why is each type of animal, experimental model, and/or method selected for this protocol:
+          </h3>
+          <h3 class="govuk-heading-s">
+            a) the most appropriate scientific approach?​
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            b) the most refined for the purpose?
+          </h3>
+          <p>
+            Tail biopsy will only be taken if more refined genotyping methods are not suitable scientifically.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            For each model and/or method, what is the scientific need for the expected clinical signs?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why scientifically do the animals need to suffer to this degree?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why can't you achieve your scientific outputs with an earlier humane endpoint, or without animals showing any clinical signs?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be administering substances for experimental purposes?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+        
+      </div>
+      {% set previousPage = '#' %}
+      {% set previousPageTitle = 'POLEs' %}
+      {% set nextPage = '#' %}
+      {% set nextPageTitle = 'Purpose bred animals' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+
+    
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

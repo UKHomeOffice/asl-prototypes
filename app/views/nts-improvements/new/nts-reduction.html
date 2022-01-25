@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li>Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-fate.html"><li>Fate of animals</li></a>
+        <a href="nts-replacement.html"><li >Replacement</li></a>
+        <a href="nts-reduction.html"><li class="selected">Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Reduction
+      </h1>
+      <!-- <h2 class="govuk-heading-m">
+          Explain how the numbers of animals for this project were determined. Describe steps that have been taken to reduce animal numbers, and principles used to design studies. Describe practices that are used throughout the project to minimise numbers consistent with scientific objectives, if any. These may include e.g. pilot studies, computer modelling, sharing of tissue and reuse.
+      </h2> -->
+      <h2 class="govuk-heading-s">
+        Enter the estimated number of animals of each type used in this project.
+      </h2>
+      <ul class="govuk-list">
+        <li><strong>Mice:</strong> 1000</li>
+        <li><strong>Rats:</strong> 1000</li>
+      </ul>
+      <h2 class="govuk-heading-s">
+        How have you estimated the numbers of animals you will use?
+        <span class="govuk-hint">Do not mention POWER calculations here. If relevant, there will be an opportunity to provide these details elsewhere.</span>
+      </h2>
+      <p>
+        The total estimated numbers of animals to be used have been determined based on previous projects over the past 10 years, anticipated future requirement, and in review of future services being developed and offered globally for regulatory non-clinical studies.
+      </p>
+      <h2 class="govuk-heading-s">
+        What steps will you take to reduce animal numbers? Where applicable, what principles will you use to design experiments?
+      </h2>
+      <p>
+        Studies will be designed under this licence such that the minimum number of animals will be used in order to obtain the maximum information, whilst the scientific objectives of each study are met, in accordance with regulatory requirements and agreed standard practices.
+      </p>
+      <p>
+        Data generated from pivotal studies will be statistically analysed, with comparisons drawn between control and treated groups, and reported in a format consistent with the ARRIVE guidelines published by the NC3Rs.
+      </p>
+      <p>
+        Where possible, studies will be designed in such a way that individual animals will be assessed for behaviour in a battery of tests as opposed to separate groups of animals for each test.
+      </p>
+      <p>
+        For studies within this project which are primarily designed for efficacy or investigative purposes, side- effects may be detected which if considered unacceptable for the therapeutic area for which the drug is intended may lead to the cessation of its development early on. Having the opportunity to terminate the development of a drug as early as possible in the development process reduces the unnecessary use of animals.
+      </p>
+      <p>
+        Where possible, multiple behavioural assessments will be conducted in order to minimise the number of animals used and the need for separate standalone studies.
+      </p>
+      <h2 class="govuk-heading-s">
+        What measures, apart from good experimental design, will you use to optimise the number of animals you plan to use in your project?
+      </h2>
+      <p>
+        Our organisation has a wealth of experience and knowledge regarding regulatory requirements and the industry standards used, hence we are in an ideal situation to influence study designs when discussing requirements with our Sponsors and will always consider ways of reducing animal requirements. We also have available professionally trained statisticians to help design studies.
+      </p>
+      <p>
+        Study protocols are reviewed by the AWERB against known guidelines and the Company’s ethical compliance policies. For regulatory studies, guidelines require the appropriate number of groups to clearly demonstrate the presence or absence of effects of the substance; core study designs are based on international guidelines where these exist. If not, use is made of literature and scientific principles of experimental design. Where appropriate, use is made of removing or limiting control groups and challenging the need for the use of both sexes. Additional justification will be requested from the study sponsor and reviewed by the PLH/AWERB for studies requiring a greater number of animals in order to better characterise the variability of a scientific endpoint.
+      </p>
+      <p>
+        Statistical input is sought, where appropriate, to strengthen the overall scientific quality and relevance of studies, with power-sample size calculations performed for specific studies if necessary to determine group size. Where group sizes allow, data are analysed statistically. However, due to the behavioural nature of studies within this project licence test agent effects are made by examination of data from each animal, rather than or in addition to simply assessing group mean values and statistical parameters.
+      </p>
+      <div class="grey-panel">
+        <h3 class="govuk-heading-s">A retrospective assessment of reduction will be due by 02 January 2021</h3>
+        <p>The licence holder will be required to disclose how they minimised the numbers of animals used, and share any relevant learnings.</p>
+      </div>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="nts-replacement.html" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Replacement</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-refinement" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Refinement</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,117 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% set entityType = "person" %}
+      {% include "includes/compliance/flag-open.html" %}
+
+      <div class="govuk-grid-row" id="pageHeader">
+        <div class="govuk-grid-column-full">
+          <div class="download-header">
+            <span class="govuk-body licence-identifier" class="">Personal licence</span>
+            <span class="govuk-body licence-type" class="">Patel Williams&emsp;<a href="#">View downloads</a></span>
+          </div>
+        </div>
+      </div>
+
+            
+      <dl class="govuk-body">
+        <dt>Licence number</dt>
+        <dd>2838474</dd>
+        <dt>Establishment</dt>
+        <dd>University of Croydon</dd>
+        <dt>Issue date</dt>
+        <dd>18 June 2019</dd>
+        <dt>Last amended</dt>
+        <dd>–</dd>
+        <dt>Animal types</dt>
+        <dd>
+          <ul class="govuk-list">
+            <li>Mice</li>
+            <li>Rats</li>
+          </ul>
+        </dd>
+        <dt>Procedures</dt>
+        <dd>
+          <p><strong>A</strong>: Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+          <p><strong>B</strong>: Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical
+          procedures conducted under brief non-recovery general anaesthesia</p>
+
+          <p><strong>C</strong>: Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or
+          prolonged general anaesthesia.</p>
+        </dd>
+        <dt>Conditions</dt>
+        <dd>
+          <p><a href="#">The standard conditions apply</a></p>
+          <p><a href="#">Add conditions</a></p>
+        </dd>
+      </dl>
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Amend or transfer licence</h3>
+      <p>You can ask for this licence to be amended but only the licence holder can transfer it.</p>
+      <button class="govuk-button govuk-button--secondary">Amend licence</button>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-m">Revoke licence</h3>
+      <p>Cancel this licence if it is no longer needed. If the licence includes category E, this can be removed by viewing the relevant training course.</p>
+      <button class="govuk-button govuk-button--warning">Revoke licence</button>
+      
+      {% include "includes/compliance/enforcement-module.html" %}
+ 
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Related tasks</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Received</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Licence </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">Assignee</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">18 June 2019</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PIL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PIL Application</a><br>
+              Patel Williams
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      
+  
+    </div>
+  </div>
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+</style>
+
+    
+
+{% endblock %}

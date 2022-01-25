@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#xxx">
+              XXX
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#yyy">
+              YYY
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#zzz">
+              ZZZ
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="xxx" style="border:none;">
+         XXX
+        </section>      
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="yyy" style="border:none;">
+         YYY
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="zzz" style="border:none;">
+          ZZZ
+        </section>
+      </div>
+      
+
+    </div>
+  </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel green-bg">
+        <h1 class="govuk-panel__title">Application submitted</h1><div class="govuk-panel__body"><h2></h2></div></div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Comments</strong>
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Comments can be seen by establishment users, as well as inspectors and Home Office team members. They will be added to the 'Latest activity' log of this task.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="review-pil-app-public-edit" class="govuk-button">Submit comments</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Change</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+    .govuk-panel.green-bg {
+    background-color: #0a6337;
+    color: #fff;
+}
+  </style>
+
+{% endblock %}

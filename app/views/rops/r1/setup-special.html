@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details</h1>
+      <form action="setup-animals" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Were any techniques of special interest used in procedures in 2021?
+              </h1>
+            </legend>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Show list of techniques of special interest
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <h3 class="govuk-heading-s">
+                  Household product testing
+                </h3>
+                <p>
+                  For work that involves safety testing substances used in the household.
+                </p>
+              
+                <h3 class="govuk-heading-s">
+                  Use of ascites models for monoclonal antibody production
+                </h3>
+                <p>
+                  This does not apply to animals which are immunised to provide tissues to generate monoclonal antibodies in vitro.
+                </p>
+                <h3 class="govuk-heading-s">
+                  Tobacco
+                </h3>
+                <p>
+                  For work that involves safety testing products containing tobacco. It does not apply to safety testing the use of nicotine or other compounds found in tobacco, or the use of tobacco in disease models. 
+                </p>
+                <h3 class="govuk-heading-s">
+                  Alcohol
+                </h3>
+                <p>
+                  For work that involves safety testing products containing alcohol.
+                </p>
+              </div>
+            </details>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-special-no" name="setup-special" type="radio" value="No" data-aria-controls="conditional-option-2">
+                <label for="setup-special" class="govuk-label govuk-radios__label">No, techniques of special interest were not used</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-special-yes" name="setup-special" type="radio" value="Yes" data-aria-controls="conditional-option-1">
+                <label for="setup-special" class="govuk-label govuk-radios__label">Yes, techniques of special interest were used
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Select techniques of special interest used
+                  </label>
+                  <span class="govuk-hint">Select all that apply</span>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="setup-special-type-1" name="setup-special-type" type="checkbox" value="household">
+                    <label class="govuk-label govuk-checkboxes__label" for="setup-special-type-1">
+                      Household product testing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="setup-special-type-2" name="setup-special-type" type="checkbox" value="ascites">
+                    <label class="govuk-label govuk-checkboxes__label" for="setup-special-type-2">
+                      Use of ascites models for monoclonal antibody production
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="setup-special-type-3" name="setup-special-type" type="checkbox" value="tobacco">
+                    <label class="govuk-label govuk-checkboxes__label" for="setup-special-type-3">
+                      Tobacco
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="setup-special-type-4" name="setup-special-type" type="checkbox" value="alcohol">
+                    <label class="govuk-label govuk-checkboxes__label" for="setup-special-4">
+                      Alcohol
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

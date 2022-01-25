@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Non-technical summaries</span>
+      <h1 class="govuk-heading-xl">
+        Download non-technical summaries by year
+      </h1>
+
+      <p>These will download as a .zip folder containing PDFs of the non-technical summaries.</p>
+
+      <ul class="govuk-list">
+        <li><a href="#">Non-technical summaries published in 2019 (.zip)</a></li>
+        <li><a href="#">Non-technical summaries published in 2018 (.zip)</a></li>
+        <li><a href="#">Non-technical summaries published in 2017 (.zip)</a></li>
+      </ul>
+      <br>
+      <p><a href="#">Home</a></p>
+    </div>
+  </div>
+
+{% endblock %}

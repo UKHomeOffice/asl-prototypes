@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL transfer</span>
+      <h1 class="govuk-heading-xl">
+        Review your PPL transfer
+      </h1>
+      
+      <h3 class="govuk-heading-s">Current establishment</h3>
+      <p>Establishment A</p>
+
+      <h3 class="govuk-heading-s">New establishment</h3>
+      <p>Est B</p>
+
+      <h3 class="govuk-heading-s">Reason for transfer</h3>
+      <p>I'm moving to Establishment B and I want to take my project with me</p>
+
+      <p><a href="#">Edit</a></p>
+
+      <br>
+
+      
+      <a href="transfer-request-submitted" class="govuk-button govuk-button">Submit</a> <a href='#' class="secondary-link">Cancel</a>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

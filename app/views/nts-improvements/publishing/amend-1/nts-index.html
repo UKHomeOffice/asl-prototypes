@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-nts.html" %}
+      <!-- {% include "includes/list-of-sections.html" %} -->
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      <h2 class="govuk-heading-m">Non-technical summary</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="nts-intro">Summary introductory details</a>
+          <div class="float-right">
+            {% if data['complete'] == 'true'%}
+            <span class="badge changed">Changed</span>
+            {% endif %}
+            <span class="badge comment">1 comment</span>
+             
+            <span class="badge badge-blue">complete</span>
+          </div>
+           
+        </li>
+        <li>
+          <a href="#">Benefits</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Project harms</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Fate of animals</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Replacement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Reduction</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Refinement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Make changes to this licence
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            To make changes to the rest of the licence you'll need to make a full licence amendment. This will need to go be reviewed by an inspector before it can be completed.
+          </p>
+          <p><a href="nts-index-full">Amend this licence</a></p>
+        </div>
+      </details>
+      
+
+      <p>All sections must be marked as complete before you can continue and send your summary to the Home Office.</p>
+
+      <a class="govuk-button" href="nts-comment">Continue</a><span class="secondary-link"> or <a href="#">back to project overview</a></span>
+
+    </div>
+  </div>
+
+{% endblock %}

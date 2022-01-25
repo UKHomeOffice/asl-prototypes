@@ -1,0 +1,208 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% include "includes/licence-header-ra.html" %}
+
+      <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span>
+      <h1 class="govuk-heading-xl">
+        Retrospective assessment
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <dl class="govuk-body">
+        <dt>PPL title</dt>
+        <dd>Autophagy in the hematopoietic system</dd>
+        <dt>PPL number</dt>
+        <dd>78847475dd>
+        <dt>PPL holder</dt>
+        <dd>Bruce Banner</dd>
+        <dt>Expiry date</dt>
+        <dd>01 May 2020</dd>
+        <dt>Retrospective assessment due</dt>
+        <dd>02 November 2024</dd>
+        <dt>Reason for retrospective assessment</dt>
+         <dd>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Contains severe procedures</li>
+              <li>Uses cats</li>
+              <li>Uses dogs</li>
+            </ul>
+          </dd>
+      </dl>    
+      <div class="govuk-form-group">
+        <h2 class="govuk-heading-m">Objectives</h2>
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+          Explain, briefly, whether, and to what extent, the objectives set out in the authorised project have been achieved
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Provide reasons if objectives have not been attained.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+          Have there been any other significant findings?
+          </label>
+        </h3>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+          What benefits have been accrued from the work to date, and are further benefits expected?
+          </label>
+        </h3>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+
+      <h2 class="govuk-heading-m">Harms</h2>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Enter the actual number of each animal type experiencing each severity</caption>
+        <thead class="govuk-table__head">
+          <!-- <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" colspan="4" class="govuk-table__header">Numbers per severity</th>
+          </tr> -->
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal type</th>
+            <th scope="col" class="govuk-table__header">Non-recovery</th>
+            <th scope="col" class="govuk-table__header">Mild</th>
+            <th scope="col" class="govuk-table__header">Moderate</th>
+            <th scope="col" class="govuk-table__header">Severe</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rabbits</td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+            <td class="govuk-table__cell">
+                <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How do these compare with those estimated prospectively?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Where the severities differ, please provide an explanation
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      
+      <h3 class="govuk-heading-m">Replacement, reduction and refinement</h3>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+          Replacement
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Have there been any developments in the scientific field (including the development/validation of new in vitro or in silico techniques) which would replace some or all of the use of animals?
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Reduction
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          With the knowledge obtained from this project, could the experimental design be improved to enable any further reduction of animals, and if so, how? Provide an explanation where numbers of animals used varies from the original proposed number? Could different approaches reduce further animal use?
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Refinement
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Were the models used still the most appropriate? List any new/novel refinements introduced during the project to reduce harm to the animals. What are the potential opportunities for further refinement in the future, e.g., emerging technologies, techniques, improved welfare assessment methods, earlier endpoints, housing/husbandry measures.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      <p>
+        <a href="ra-complete.html" class="govuk-button">Submit to ASRU</a>
+        <a href="ppl-overview" class="secondary-link">Save and return</a>
+      </p>
+    </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">Reference material</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download the Non-technical summary</a></li>
+        <li><a href="ppl-app/ppl-granted-summary.html">View the granted licence</a></li>
+      </ul>
+      <h3 class="govuk-heading-s">Downloads</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download retrospective assessment (.pdf)</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

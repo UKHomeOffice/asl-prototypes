@@ -1,0 +1,192 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">Named people</h1>
+      
+    </div>
+  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+    
+          <div class="govuk-tabs" data-module="tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+    
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#my-tasks">
+                  Current named role holders
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#invited">
+                  Previous named role holders
+                </a>
+              </li>
+            </ul>
+    
+            <section class="govuk-tabs__panel" id="my-tasks" style="border:none;">
+              <dl>
+                <dt>Establishment Licence Holder</dt>
+                <dd>
+                  <a href="#">John Smith</a>
+                </dd>
+                <dt>Named Animal Care and Welfare Officer (NACWO)</dt>
+                <dd>
+                  <a href="#">Masuma Benitez</a><br>
+                  <a href="#">Kyra Hull</a><br>
+                  <a href="#">Shea Kavanagh</a><br>
+                  <a href="#">Nour Mccormack</a><br>
+                  <a href="#">Asha Morse</a><br>
+                  <a href="#">Aariz Pitts</a>
+                </dd>
+                <dt>Named Information Officer (NIO)</dt>
+                <dd>
+                  <a href="#">-</a>
+                </dd>
+                <dt>Named Veterinary Surgeon (NVS)</dt>
+                <dd>
+                  <a href="#">Shaun Andrews</a><br>
+                  <a href="#">Hillary Davis</a>
+                </dd>
+                <dt>Named Training and Competency Officer (NTCO)</dt>
+                <dd>
+                  <a href="#">Elmer Park</a><br>
+                  <a href="#">Fahim Whitfield</a>
+                </dd>
+                <dt>Named Person Responsible for Compliance (NPRC)</dt>
+                <dd>
+                  <a href="#">Shawn White</a>
+                </dd>
+                <dt></dt>
+              </dl>    
+            </section>
+            
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="invited" style="border:none;">
+              <ul class='tasks-nav'>
+                <li class="">
+                  Filter by:
+                </li>
+                <li>
+                  <strong>All roles</strong>
+                </li>
+                <li>
+                  <a href="#">NTCO</a> 
+                </li>
+                <li>
+                  <a href="#">NACWO</a> 
+                </li>
+                <li>
+                  <a href="#">PELH</a> 
+                </li>
+                <li>
+                  <a href="#">NVS</a> 
+                </li>
+                <li>
+                  <a href="#">HOLC</a> 
+                </li>
+                <li>
+                  <a href="#">NIO</a> 
+                </li>
+              </ul>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                 <tr class="govuk-table__row">
+                   <th class="govuk-table__header" scope="col"><a href='#'>Name</a></th>
+                   <th class="govuk-table__header" scope="col"><a href='#'>Role</a></th>
+                   <th class="govuk-table__header" scope="col"><a href='#'>Held role from</a></th>
+                   <th class="govuk-table__header" scope="col"><a href='#'>Held role until</a></th>
+                 </tr>
+               </thead>
+               <tbody class="govuk-table__body">
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Evvy Addams</a></td>
+                   <td class="govuk-table__cell">NVS</td>
+                   <td class="govuk-table__cell">1 January 2016</td>
+                   <td class="govuk-table__cell">27 July 2020</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Evvy Addams</a></td>
+                   <td class="govuk-table__cell">NACWO</td>
+                   <td class="govuk-table__cell">1 January 2016</td>
+                   <td class="govuk-table__cell">27 July 2020</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Megan Alberts</a></td>
+                   <td class="govuk-table__cell">NACWO</td>
+                   <td class="govuk-table__cell">23 May</td>
+                   <td class="govuk-table__cell">2 March 2020</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Jason Alden</a></td>
+                   <td class="govuk-table__cell">NTCO</td>
+                   <td class="govuk-table__cell">1 January 2017</td>
+                   <td class="govuk-table__cell">5 January 2020</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Ignace Alsford</a></td>
+                   <td class="govuk-table__cell">NACWO</td>
+                   <td class="govuk-table__cell">18 March 2017</td>
+                   <td class="govuk-table__cell">3 December 2019</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Maricela Armstrong</a></td>
+                   <td class="govuk-table__cell">NACWO</td>
+                   <td class="govuk-table__cell">5 May 2015</td>
+                   <td class="govuk-table__cell">1 November 2019</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Juliet Cross</a></td>
+                   <td class="govuk-table__cell">NTCO</td>
+                   <td class="govuk-table__cell">2 November 2015</td>
+                   <td class="govuk-table__cell">3 June 2019</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Bruce Danford</a></td>
+                   <td class="govuk-table__cell">HOLC</td>
+                   <td class="govuk-table__cell">1 March 2017</td>
+                   <td class="govuk-table__cell">1 June 2019</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Armstrong Miller</a></td>
+                   <td class="govuk-table__cell">NVS</td>
+                   <td class="govuk-table__cell">18 August 2015</td>
+                   <td class="govuk-table__cell">5 November 2018</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                   <td class="govuk-table__cell"><a href='profile-global'>Brucie Attfield</a></td>
+                   <td class="govuk-table__cell">NVS</td>
+                   <td class="govuk-table__cell">22 May 2017</td>
+                   <td class="govuk-table__cell">1 April 2018</td>
+                 </tr>
+    
+               </tbody>
+             </table>    
+    
+                    
+            </section>
+    
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+    </div>
+  </div>
+
+{% endblock %}

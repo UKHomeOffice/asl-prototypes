@@ -1,0 +1,133 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'background' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Scientific background</h1>
+      
+      <h3 class="govuk-heading-s">
+        Will this work support basic or translational research, or non-regulatory drug or device development?
+      </h3>
+      <p>
+        Yes
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Briefly summarise the current state of scientific knowledge in this area of work to show how you arrived at the starting point of this project.
+      </h3>
+      <p class="govuk-hint">
+        Be specific and relevant to your project aim - there's no need for a detailed overview of the entire field. Include any relevant non-animal research if it has contributed to the starting point of your project.
+      </p>
+      
+      <p>
+        1.1 Epilepsy in adults and incidence of SUDEP: 
+      </p>
+      
+      <p>Epilepsy is a chronic paroxysmal neurological disorder characterized by seizures. Worldwide around 50 million people are living with epilepsy. Sudden unexpected death in epilepsy (SUDEP) accounts for 5-17% of deaths in people with epilepsy, and 50% of deaths in refractory (drug-resistant) epilepsy. Mounting evidence suggests that seizure-induced central autonomic and cardiorespiratory dysfunctions are the leading cause of SUDEP. Because of this it is thought that seizure-induced spreading depolarisation, a self-propagating depolarizing wave, alters the function of neurons and microglia in cardiorespiratory autonomic nuclei and silences the neuronal networks responsible for cardiorespiratory control. While we and others have made major contributions to our understanding of the control of breathing and cardiovascular regulation, the cellular mechanisms that lead to seizure-induced cessation of breathing and/or circulation remains to be established. Until cellular mechanisms for SUDEP are elucidated, an effective targeted intervention to prevent SUDEP will be extremely hard to devise.
+      </p>
+      
+      <p>Cardiorespiratory autonomic function is disturbed in SUDEP. These cardiorespiratory neurons are surrounded by microglia, the resident immune cells of the CNS. Microglia are highly motile glial cells that can respond to injury and a variety of stimuli to mount defence responses. Microglia are associated with the tripartite synapse, and provide trophic support for neurons, promote formation and function of synapses, prune synapses by phagocytosis, and fulfil a range of homeostatic maintenance functions. Recently, we have shown that microglial activation is beneficial in preventing excitation of sympathetic (cardiovascular autonomic) activity during acute seizures though production of anti-inflammatory cytokines. However, in thelonger-term during chronic epilepsy, they can initiate and propagate seizure-induced inflammatory responses. Therefore, postictal microglia-induced neuroinflammation might play a crucial role in the mechanism of SUDEP through progressive compromise of cardiorespiratory networks. Our hypothesis is therefore that  microglia can remodel cardiorespiratory neuronal circuits that ultimately increase the risk of SUDEP. According to our hypothesis microglia emerge as a potential therapeutic target for the prevention of SUDEP.
+      </p>
+      
+      <p>
+        1.2 New analytical approaches for SUDEP:
+      </p>
+      
+      <p>Recently a transformative technology has become available that allows the direct visualization of dynamic cellular activity of deep brain neurons and glia in conscious animals using a combination of genetically-encoded Ca2+ indicators and gradient refractive index (GRIN) optic fibres. Using GRIN optics in vivo microendoscopy (GIVM) in mice in our laboratory at the University of Croydon, we have made the first ever optical recordings of brainstem respiratory neurons and astrocytes from the network level down to subcellular resolution (bioRxiv preprint doi:10.1101/492041). In these mice (under anaesthesia to enable pilot work under the current Home Office licence), we have confirmed that kainic acid (KA)-induced seizures change the activity of respiratory neurons. This gives us an unprecedented opportunity to study – in real time – the changes in the activity of cardiorespiratory autonomic neurons during acute and chronic seizures in conscious awake animals. As anaesthesia depresses neural activity, our novel GIVM approach is highly advantageous compared to studying these parameters in anaesthetised animals or in vitro. Our initial approach will therefore be to document the activity of key cardiorespiratory nuclei in acute and chronic epilepsy models and how these circuits may be remodelled. Following this we shall study how interventions aimed at altering microglial activity change the remodelling of these key neural circuits.
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        What new knowledge do you hope to discover that will address a gap in fundamental scientific knowledge or meet a clinical need?
+      </h3>
+      <p class="govuk-hint">
+        Refer to the basis for any scientific hypotheses you plan to test during this project.
+      </p>
+      
+      <p>
+        Other than knowing that the heart stops beating or the person stops breathing, we have little fundamental understanding of the immediate mechanistic events within the brain that precipitate SUDEP. We propose a new analytical approach to directly observe the invasion of seizures into the brainstem nuclei thus identifying the immediate mechanistic causal events for SUDEP. It is likely that during chronic epilepsy progressive changes in the brainstem circuits increase the risk of SUDEP. Current literature suggests that these changes primarily occur as a result of inflammation. Microglia are the key inflammatory mediators in the brain and therefore we hope to - 
+      </p>
+      
+      <p>•	Identify brainstem neural circuits that are altered during acute and chronic seizures in freely-behaving animals. This will show how
+        activity in these key circuits is altered, why if might lead to cardiorespiratory arrest and give mechanistic insight as to why SUDEP can occur.
+      </p>
+      
+      <p>
+        •	Test whether microglia, the brain’s immune cells, play a role in altering the operation of the key cardiorespiratory neurons affected by acute and chronic seizures. We shall test the hypothesis that maladaptive responses by microglia in the chronic state may increase the risk of SUDEP. Our work may allow repurposing of the commonly used drug, minocycline, as a way of reducing the risk of SUDEP.
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Does your project mainly involve translational or veterinary clinical applications?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Will you be producing data primarily for regulatory authorities that use standardised protocol frameworks?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Will you be undertaking non-regulatory testing or screening as a service to others?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Will you be producing genetically altered or surgically prepared animals/animal products using standardised protocol frameworks as a service to others?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Will you be manufacturing vaccines and medicines for medical or veterinary use?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      <h3 class="govuk-heading-s">
+        Do you need to transfer animals from a project that’s due to expire?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+      
+      {% set previousPage = 'ppl-poles' %}
+      {% set previousPageTitle = 'Places other than a licensed establishment (POLEs)' %}
+      {% set nextPage = 'ppl-plan' %}
+      {% set nextPageTitle = 'Action plan' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

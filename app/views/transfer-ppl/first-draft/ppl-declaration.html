@@ -1,0 +1,102 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Send amendment
+      </h1>
+      
+      <form action="transfer-request-submitted" method="post">
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Does this amendment have the endorsement of your primary establishment's PEL holder?
+            </label>
+            <span id="holding-hint" class="govuk-hint">The Home Office may be in touch with your establishment to collect evidence of this endorsement.</span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pelh-1" name="pelh" type="radio" value="yes" data-aria-controls="conditional-pelh-1">
+                <label class="govuk-label govuk-radios__label" for="pelh-1">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-pelh-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="pelh-1-additional-1">
+                   Please state the name of your primary establishment’s PEL holder
+                  </label>
+                    <input class="govuk-input" id="pelh-name" name="pelh-name" rows="5">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="pelh-1-additional-1">
+                   Please state the date of their endorsement
+                  </label>
+                    <input class="govuk-input"  id="pelh-date" name="pelh-date" rows="5">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pelh-2" name="pelh" type="radio" value="value2" data-aria-controls="conditional-pelh-2">
+                <label class="govuk-label govuk-radios__label" for="pelh-2">
+                  Not yet
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">Has this amendment been reviewed by the AWERB of each relevant establishment?</label>
+            <span id="holding-hint" class="govuk-hint"></span>                        
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="awerb-1" name="awerb" type="radio" value="Yes" data-aria-controls="conditional-awerb-1">
+                <label class="govuk-label govuk-radios__label" for="awerb-1">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-awerb-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="awerb-1-additional-1">Please state the date of the most recent AWERB review for each relevant establishment.</label>
+                  <textarea class="govuk-textarea" id="awerb-name" name="awerb-name" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="awerb-2" name="awerb" type="radio" value="No" data-aria-controls="conditional-awerb-2">
+                <label class="govuk-label govuk-radios__label" for="awerb-2">
+                  No
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-awerb-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="awerb-2-additional-2">Why has this amendment not been reviewed by the AWERB of each relevant establishment?</label>
+                  <textarea class="govuk-textarea" id="awerb-name" name="awerb-name" rows="5"></textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+        <button class="govuk-button">Submit PPL transfer request</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form> 
+
+
+    </div>
+  </div>
+
+{% endblock %}

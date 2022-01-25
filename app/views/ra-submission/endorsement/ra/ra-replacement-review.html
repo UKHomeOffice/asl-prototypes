@@ -1,0 +1,97 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="ra-index" ><li class="back-to-sections">&#9666; &ensp; List of sections</li></a>
+        <a href="ra-objectives-review"><li>Objectives</li></a>
+        <a href="ra-harms-review"><li>Harms</li></a>
+        <a href="ra-replacement-review.html"><li class="selected">Replacement</li></a>
+        <a href="ra-reduction-review.html"><li>Reduction</li></a>
+        <a href="ra-refinement-review.html"><li>Refinement</li></a>
+      </ul>
+      <hr class="govuk-section-break govuk-section-break--m ">
+
+      <h3 class="govuk-heading-s">Project links</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download Non-technical summary</a></li>
+        <li><a href="/ra-submission/ppl-app/ppl-granted-summary.html" target="_blank">View licence</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        
+      <h1 class="govuk-heading-xl">
+        Replacement
+      </h1>
+    
+      <label class="govuk-label--s" for="option-1-additional-1">
+        What, if any, non-animal alternatives were used or explored after the project started, how effective were they and are there any lessons worth sharing with others?
+      </label>
+      <span class="govuk-hint">These are non-animal alternatives that became available or viable after the project licence was granted. They could include genetically engineered tissue or computer modelling, for example.</span>
+      <p>
+        We are continuously doing some literature and web searches (Google, pubmed.com, nc3rs.org.uk) in an effort to find alternatives to any procedure that causes more than momentary pain or distress
+      </p>
+      <p>
+        Most work (e.g. myocardial infarction, stem cells injections, echocardiography, invasive hemodynamic measurements) requires an intact functional heart. However replacement has been possible in part of the work (e.g. cardiac cells protection/regeneration) with the cell culture approach.
+      </p>
+      <p>
+        Tissues/organs are frequently collected from animals killed by schedule 1 methods from most of our mouse lines. Samples of whole heart, lung, bone marrow, and occasionally liver, blood and skeletal muscle are used to maximise the information we can obtain from each mouse, particularly when it does not involve additional welfare cost to the animal. The tissues obtained are used in a broad range of downstream investigations, e.g. protein analysis, infarcts staining and histology, gene expression to aid our understanding of disease mechanisms taking place in our mice models of cardiac disease.
+      </p>
+      <p>
+        In cell graft experiments, only grafting to the intact heart itself is an adequate model to facilitate potential human trials of cell therapy for cardiac repair, and only grafting to the injured heart is an adequate model to ascertain the cells potential differentiation and functional impact in a clinically
+      </p>
+      <a href="#" class="govuk-button govuk-button--secondary">Add comment</a>
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="ra-harms-review" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Harms</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="ra-reduction-review" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Reduction</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View all sections</a> or <a href="/ra-submission/endorsement/ra-task">Back to task</a></span>
+          </li>
+        </ul>
+      </nav>
+  </div>
+
+{% endblock %}

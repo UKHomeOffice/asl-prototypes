@@ -1,0 +1,142 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li>
+         
+        <li><a href="7-nts">Non-technical summary</a></li>
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ reporting condition</a></li>
+ reporting condition</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+        
+
+         <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Replacement, reduction & refinement</h1>
+      
+      <form action="assessment-overview" method="post">
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for replacement, reduction & refinement
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The project’s objectives justify the use of protected animals and could not be achieved using non-animal alternatives.
+            </li>
+            <li>
+              Reasonable steps have been taken to find alternatives, for example NC3Rs or Norecopa.
+            </li>
+            <li>
+              There is a reasonable explanation for the numbers of animals to be used.
+              <br>
+              <span class="govuk-hint">Check also responses in project plan for relevant information</span>
+            </li>
+            <li>
+              Any known duplication of procedures is justified
+            </li>
+            <li>
+              The project will use the least sentient species and life stages to achieve its objectives.
+              <br>
+              <span class="govuk-hint">Check also responses in protocols for relevant information</span>
+            </li>
+            <li>
+              Methods to replace, reduce and refine are appropriate and adequate.
+              <br>
+              <span class="govuk-hint">Check also responses in project plan and protocols for relevant information</span>
+            </li>
+          </ul>
+        </div>
+      </details>
+      
+      <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+      <p>Yes</p>
+
+      <h3 class="govuk-heading-s">Notes (optional)</h3>
+      <p><em>No answer provided</em></p>
+      
+      {% include "includes/assessment-footer-nav.html" %}
+
+    
+      </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+</style>
+{% endblock %}

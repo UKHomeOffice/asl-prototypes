@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'refinement' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Refinement</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why are the animals, models and methods you will use the best to meet your objectives? Why will your approach cause the least pain, suffering, distress or lasting harm?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        
+        <p>
+          Rodents are a well-established model for studying the neural mechanisms underlying epilepsy. This gives a robust literature and wealth of potential data obviating the need to repeat past findings. Rodents in general are seen as a simplified and experimentally tractable model for far more complex mammals such as humans.
+        </p>
+
+        <p>
+          Wherever possible, physiological testing of phenotypes will be achieved by using non-invasive methods such as: whole body plethysmography for detection of breathing movements. More invasive procedures will be used only when there is good reason (from the non-invasive experiments) to expect mechanistic insight.
+        </p>
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why can’t you use a less sentient animal, (for example at an immature stage, a less sentient species or using terminally anaesthetised animals)?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        
+        <p>
+          Immature life stage:
+        </p>
+
+        <p>
+          Mouse pups cannot be used because the cardiorespiratory control circuitry is still developing and will not model the adult circuits. As SUDEP occurs in adulthood, we need to study the effects of seizures on the mature brain stem circuitry.
+        </p>
+
+        <p>
+          Sentience:
+        </p>
+
+        <p>
+          Lower vertebrate species such as fish, lamprey, frog, while being able to generate seizures are not a good model for epilepsy and its effect on cardiorespiratory control networks as their cardiorespiratory control networks do not correspond to those of mammals. By choosing mice, we have selected the least sentient model to study the relevant underlying mechanisms that could lead to SUDEP
+        </p>
+
+        <p>
+          Terminal anesthesia:
+        </p>
+
+        <p>
+          Terminal anaesthesia alters the operation of the brainstem networks by for example, disinhibiting certain networks and generally depressing respiratory drive. Thus, use of terminal anaesthesia will not allow us to uncover the relevant mechanism of altered neuronal signalling that may lead to SUDEP.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">How will you stay informed about advances in the 3Rs, and implement these advances effectively, during the project?</label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          We subscribe to the NC3Rs newsletter and we receive update Emails from this organisation. We make efforts to attend their symposia. We network with colleagues from other universities to ensure that we stay abreast of any developments. As an example of our openness to best practice, we have implemented improved mouse handling procedures designed to minimize stress as a result of coming from advice from NC3Rs.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How will you refine the procedures you're using to minimise the welfare costs (harms) for the animals?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">Potential refinements include increased monitoring, post-operative care, pain management, and training of animals.</div>
+        <p>
+          We have considerable experience with the in vivo imaging methods and have considerably refined them already over the past 2-3 years.  We have implemented standardised post-operative monitoring methods to ensure that  outcomes and adverse effects from our surgical procedures are carefully assessed. We use this information to optimise post-operative care and pain management.
+        </p>
+
+        <p>
+          We shall use rigorous aseptic techniques to protect against infection of the animals.
+        </p>
+
+        <p>
+          We train the animals with a dummy camera to acclimate them to the imaging procedure and to the imaging cage to minimize stress.
+        </p>
+
+        <p>
+          As imprecise targeting of viral injections can increase animal usage, we shall be very careful in this aspect of our procedure. We shall ensure we use calibrated stereotaxic frames, check the alignments thoroughly and regularly use the injection of fluorescent beads (in a non-recovery terminal procedure) to ensure that correct targeting is achieved prior to commencing the lengthy procedures required for the SUDEP part of the project.
+        </p>
+
+        <p>
+          We continually look to refine and improve our experimental models and procedures. This is a regular topic of discussion in weekly lab meetings.
+        </p>
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What published best practice guidance will you follow to ensure experiments are conducted in the most refined way?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          <p>
+            We shall take careful note of advice from collaborators and researchers highly experienced in these methodologies to ensure that we refine our experiments as much as possible. We shall follow the Laboratory Animal Science Association guidelines on performing aseptic surgery to ensure best practice for the recovery surgery involved in all surgical procedures. We shall follow the guidelines published in J Neurosci Methods. (2016) 260:2-25. doi: 10.1016/j.jneumeth.2015.09.007 which comprises a NC3Rs-sponsored metareview of models of epilepsy and has comprehensive advice on best choice of mode and refinements.
+          </p>
+
+          <p>
+            Planning and execution of our experiments will be according to best practice as exemplified by the  PREPARE guidelines (Lab Anim. 2018 52:135-141. doi: 10.1177/0023677217724823). https://norecopa.no/PREPARE
+          </p>
+
+          <p>
+            To ensure effective and rigorous reporting of our results, we shall write papers according to the ARRIVE guidelines which are recognised as providing excellent transparent standards for reporting of research using animals and were developed by the NC3Rs.
+          </p>    
+
+        {% include "includes/add-comment.html" %}
+
+
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Explain the choice of species and the related life stages
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          All animals will be provided with comfortable group housing and enrichment. We do not anticipate the animals to experience any pain, but analgesics and increased monitoring will be used if considered appropriate
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      {% set previousPage = 'ppl-reduction' %}
+      {% set previousPageTitle = 'Reduction' %}
+      {% set nextPage = '#' %}
+      {% set nextPageTitle = 'Experience' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+  </div>
+
+{% endblock %}

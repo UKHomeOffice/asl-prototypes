@@ -1,0 +1,179 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting">Additional conditions
+</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+        <li class="selected"><a href="9-additional-conditions">Further additional conditions</a></li>
+        <li><a href="12-referrals">Referrals</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Further additional conditions</h1>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View existing conditions
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+            
+          <h2 class="govuk-heading-m">Additional condition 1</h2>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              POLEs
+            </h3>
+            <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are due to start.</p>
+            <p><a href="#">Edit</a> | <a href="#">Remove</a></p>
+          </div>
+
+          <h2 class="govuk-heading-m">Additional condition 2</h2>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Regulatory toxicology
+            </h3>
+            <p>
+              Where studies are requested in order to meet regulatory requirements, they will be performed in compliance with relevant UK and EU legislative bodies including the European Medicines Agency (EMA), European Chemicals Agency (ECHA), the Medicines and Healthcare Products Regulatory Agency (MHRA), Health and Safety Executive (HSE) and the Veterinary Medicines Directorate (VMD) in the UK. The guidance given in the various guidelines of the International Conference of Harmonisation (ICH) and The Organisation for Economic Co-operation and Development (OECD) are followed in the design of safety evaluation programmes and studies.
+            </p>
+            <p>
+              For studies requested for other worldwide authorities, for example the US Food and Drugs Administration (FDA), a scientific justification will be sought if the study requirements exceed the requirements of the UK or EU regulatory authorities for similar studies; for example by their requiring a greater number of animals or a more severe test. Permission to perform such tests will be obtained prospectively from the Secretary of State and any valid scientific justification will be included within the records of the project licence.
+            </p>
+            <p><a href="#">Edit</a> | <a href="#">Remove</a></p>
+          </div>
+
+          <h2 class="govuk-heading-m">Additional condition 3</h2>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Reporting requirement
+            </h3>
+            <p>A report in writing to [aspa.london@homeoffice.gov.uk](aspa.london@homeoffice.gov.uk) or orally to <<<INSERT name of assigned inspector HERE>>> on the project shall be made by <<<INSERT date HERE>>> or after <<<INSERT number HERE>>> animals have been used, whichever is the sooner. The report shall contain <<<INSERT required content of report HERE>>>.</p>
+            <p><a href="#">Edit</a> | <a href="#">Remove</a></p>
+          </div>
+
+        
+        </div>
+      </details>
+
+      <form action="assessment-overview" method="post">
+
+
+      <p>Select any additional conditions you want to add to this licnece</p>
+      <!-- <div class="govuk-form-group">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+              Sending a report condition
+              <p>A report (in writing to ASRU, 14th Floor, Lunar House, Croydon, CR9 2BY / oral to [name/ assigned inspector] / by email to aspa.london@homeoffice.gov.uk*) on the project shall be made by [DATE] or after [NUMBER] animals have been used, whichever is the sooner. The report shall contain [information].</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+            </label>
+          </div>
+        </div>
+        <div class="govuk-form-group">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+              Notification before begining proceedures condition
+              <p>The licence holder shall ensure that the Assigned Inspector is notified before regulated procedures are applied at any place specified in this licence to enable the Inspector to be present if he/she wishes. The minimum period(s) of notice to be given, the information to be provided and the means of notification shall be agreed in writing with the Inspector at least 7 days before commencement of regulated procedures in this project.</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+            </label>
+          </div>
+        </div>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+               Write new 
+            </label>
+          </div>
+        </div>
+        </div> -->
+
+        <p><a href="#" class="govuk-button govuk-button--secondary">Add more additional conditions</a></p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--m" for="comments-9">
+          Reasoning or clarification (optional)
+        </label>
+        <span id="comments-9-hint" class="govuk-hint">
+          These will only be visible to ASRU users.
+        </span>
+        <textarea class="govuk-textarea" id="comments-9" name="comments-9" rows="5" aria-describedby="comments-9-hint"></textarea>
+      </div>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">    
+      <div class="declaration-panel-grey">
+        <h3 class="govuk-heading-m">Mark this section as complete</h3>
+        <p>You can still edit this section later, but you will be unable make a recommendation for this application until all sections are marked as complete.</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="complete-9-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="complete-9" name="complete-9" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="complete-9">
+                  Mark this section as complete
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>  
+      </div> 
+        <br>
+        {% set sectionComplete = 'yes' %}
+        {% include "includes/assessment-complete.html" %}
+      
+    </form>        
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+ 
+</style>
+{% endblock %}

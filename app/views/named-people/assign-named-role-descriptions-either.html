@@ -1,0 +1,122 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl"></span>
+      <h1 class="govuk-heading-xl">
+        Assign named role
+      </h1>
+      
+      <form action="#" method="post">
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Which named role do you want to assign?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Home Office Liaison Contact (HOLC)
+                </label> 
+                <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Information Officer (NIO)
+                </label> 
+                <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Veterinary Surgeon (NVS)
+                </label> 
+                <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Suitably qualified person (SQP)
+                </label> 
+                <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Training and Competency Officer (NTCO)
+                </label> 
+                <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+                <label class="govuk-label govuk-radios__label" for="option-1">
+                  Establishment Licence Holder or Named Person Responsible for Compliance (NPRC)
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+                <span class="govuk-hint">Establishments should have one or the other, select which below</span>
+                <div class="govuk-form-group">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="option-3" name="option" type="radio" value="value1" data-aria-controls="conditional-option-3">
+                    <label class="govuk-label govuk-radios__label" for="option-3">
+                      Establishment Licence Holder
+                      <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+                    </label> 
+                  </div>
+                  <!-- <div class="govuk-radios__divider">or</div> -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                    <label class="govuk-label govuk-radios__label" for="option-2">
+                      Named Person Responsible for Compliance (NPRC)            
+                    </label> 
+                    <span class="govuk-hint govuk-radios__hint">Description telling users what each roles is, and what the requirements are</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="more-detail">
+            Why is this person suitable for this named role?
+          </label>
+          <span id="more-detail-hint" class="govuk-hint">
+            Include any relevant training in your answer, or explain why this training is not necessary.
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">Cancel</a>
+      </form> 
+    </div>
+  </div>
+
+<style>
+  .govuk-radios__divider {
+    font-family: "Inter UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.35;
+    color: #0b0c0c;
+    width: 100px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 15px;
+}
+</style>
+
+{% endblock %}

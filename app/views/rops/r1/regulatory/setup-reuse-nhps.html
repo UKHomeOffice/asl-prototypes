@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Detection of Genotoxic Substances
+      </span>
+      <h1 class="govuk-heading-l">Return details: animals</h1>
+      <form action="setup-reuse-birthplace" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Select non-human Primate (NHP) Place of birth
+              </h1>
+            </legend>
+            <span class="govuk-hint"></span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="1" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in the UK at a licenced establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="2" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in UK at a licenced establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="3" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in EU (non UK) at a licenced establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="4" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in UK but NOT at a licenced establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="5" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in EU (non UK) but NOT at a licenced establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="6" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in rest of Europe</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="7" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in Asia</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="8" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in America</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="9" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born in Africa</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="1" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">Animals born elsewhere</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <br>
+        <div class="govu-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Non-human Primate (NHP) Source Colony Status
+            </label>
+            <span class="govuk-hint"></span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q4-yes" name="q4" type="radio" value="1" >
+                <label for="q4" class="govuk-label govuk-checkboxes__label">Self-sustaining colony</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q4-yes" name="q4" type="radio" value="2" >
+                <label for="q4" class="govuk-label govuk-checkboxes__label">Non self-sustaining colony</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <br>
+        <div class="govu-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Non-human Primate (NHP) Generation
+            </label>
+            <span class="govuk-hint"></span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q5-yes" name="q5" type="radio" value="1" >
+                <label for="q5" class="govuk-label govuk-checkboxes__label">F0</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q5-yes" name="q5" type="radio" value="2" >
+                <label for="q5" class="govuk-label govuk-checkboxes__label">F1</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q5-yes" name="q5" type="radio" value="3" >
+                <label for="q5" class="govuk-label govuk-checkboxes__label">F2 or greater</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <br>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

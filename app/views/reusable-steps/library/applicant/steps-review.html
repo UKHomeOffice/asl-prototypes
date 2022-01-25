@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Steps</h1>
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body">
+          <span style="font-size: 18px;font-weight:bold;">Please review your answers for:</span >
+        </div>
+        <h1 class="govuk-panel__title">Steps</h1>
+      </div>
+
+      {% if data["stepId"] > 1 %}
+        {% set stepsReference     = data['id1']['ref'] %}
+        {% set stepsDetail        = data['id1']['details'] %}
+        {% set stepsOptional      = data['id1']['optional'] %}
+        {% set stepsExpected      = data['id1']['any'] %}
+        {% set stepsLimits        = data['id1']['limits'] %}
+        {% set likelyStepsEffects = data['id1']['likely'] %}
+        {% set stepsEndpoints     = data['id1']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id1' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 2 %}
+        {% set stepsReference     = data['id2']['ref'] %}
+        {% set stepsDetail        = data['id2']['details'] %}
+        {% set stepsOptional      = data['id2']['optional'] %}
+        {% set stepsExpected      = data['id2']['any'] %}
+        {% set stepsLimits        = data['id2']['limits'] %}
+        {% set likelyStepsEffects = data['id2']['likely'] %}
+        {% set stepsEndpoints     = data['id2']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id2' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 3 %}
+        {% set stepsReference     = data['id3']['ref'] %}
+        {% set stepsDetail        = data['id3']['details'] %}
+        {% set stepsOptional      = data['id3']['optional'] %}
+        {% set stepsExpected      = data['id3']['any'] %}
+        {% set stepsLimits        = data['id3']['limits'] %}
+        {% set likelyStepsEffects = data['id3']['likely'] %}
+        {% set stepsEndpoints     = data['id3']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id3' %}    
+    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 4 %}
+        {% set stepsReference     = data['id4']['ref'] %}
+        {% set stepsDetail        = data['id4']['details'] %}
+        {% set stepsOptional      = data['id4']['optional'] %}
+        {% set stepsExpected      = data['id4']['any'] %}
+        {% set stepsLimits        = data['id4']['limits'] %}
+        {% set likelyStepsEffects = data['id4']['likely'] %}
+        {% set stepsEndpoints     = data['id4']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id4' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 5 %}
+        {% set stepsReference     = data['id5']['ref'] %}
+        {% set stepsDetail        = data['id5']['details'] %}
+        {% set stepsOptional      = data['id5']['optional'] %}
+        {% set stepsExpected      = data['id5']['any'] %}
+        {% set stepsLimits        = data['id5']['limits'] %}
+        {% set likelyStepsEffects = data['id5']['likely'] %}
+        {% set stepsEndpoints     = data['id5']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id5' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 6 %}
+        {% set stepsReference     = data['id6']['ref'] %}
+        {% set stepsDetail        = data['id6']['details'] %}
+        {% set stepsOptional      = data['id6']['optional'] %}
+        {% set stepsExpected      = data['id6']['any'] %}
+        {% set stepsLimits        = data['id6']['limits'] %}
+        {% set likelyStepsEffects = data['id6']['likely'] %}
+        {% set stepsEndpoints     = data['id6']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id6' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 7 %}
+        {% set stepsReference     = data['id7']['ref'] %}
+        {% set stepsDetail        = data['id7']['details'] %}
+        {% set stepsOptional      = data['id7']['optional'] %}
+        {% set stepsExpected      = data['id7']['any'] %}
+        {% set stepsLimits        = data['id7']['limits'] %}
+        {% set likelyStepsEffects = data['id7']['likely'] %}
+        {% set stepsEndpoints     = data['id7']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id7' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 8 %}
+        {% set stepsReference     = data['id8']['ref'] %}
+        {% set stepsDetail        = data['id8']['details'] %}
+        {% set stepsOptional      = data['id8']['optional'] %}
+        {% set stepsExpected      = data['id8']['any'] %}
+        {% set stepsLimits        = data['id8']['limits'] %}
+        {% set likelyStepsEffects = data['id8']['likely'] %}
+        {% set stepsEndpoints     = data['id8']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id8' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 9 %}
+        {% set stepsReference     = data['id9']['ref'] %}
+        {% set stepsDetail        = data['id9']['details'] %}
+        {% set stepsOptional      = data['id9']['optional'] %}
+        {% set stepsExpected      = data['id9']['any'] %}
+        {% set stepsLimits        = data['id9']['limits'] %}
+        {% set likelyStepsEffects = data['id9']['likely'] %}
+        {% set stepsEndpoints     = data['id9']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id9' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+      {% if data["stepId"] > 10 %}
+        {% set stepsReference     = data['id10']['ref'] %}
+        {% set stepsDetail        = data['id10']['details'] %}
+        {% set stepsOptional      = data['id10']['optional'] %}
+        {% set stepsExpected      = data['id10']['any'] %}
+        {% set stepsLimits        = data['id10']['limits'] %}
+        {% set likelyStepsEffects = data['id10']['likely'] %}
+        {% set stepsEndpoints     = data['id10']['endpoints'] %}    
+        {% set stepIdAnchor       = 'id10' %}    
+
+        {% include "includes/steps-library.html" %}                
+      {% endif %}
+        
+      {% include "includes/mark-section-complete.html" %}
+      <br>
+      <form action="ppl-index" method='POST'>
+        <input type="hidden" name="steps-complete" value="true">
+        <button class="govuk-button">Continue</button>
+      </form>
+      <span class=""><a href="#">List of sections</a></span>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: purposes</h1>
+      
+      <form action="edit-subpurpose" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Which purposes apply to procedures completed in 2021?
+              </h1>
+            </legend>
+            
+                <fieldset class="govuk-fieldset">
+                  <span class="govuk-hint">Select all that apply
+                  </span>
+                    <span class="govuk-hint"></span>
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="1" data-aria-controls="conditional-option-3" checked>
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Basic research</label>
+                      </div> 
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="2" data-aria-controls="conditional-option-4" checked>
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Translational/Applied research</label>
+                      </div>
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="3" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Protection of the natural environment in the interests of the health or welfare of human beings or animals</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="4" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Preservation of species</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="5" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Higher education or training for the acquisition, maintenance or improvement of vocational skills</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="6" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Forensic enquiries</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-no" name="q6" type="checkbox" value="7" >
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Breeding/maintainence of colonies fo established genetically altered animals, not used in other procedures</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="q6-yes" name="q6" type="checkbox" value="8" data-aria-controls="conditional-option-5">
+                        <label for="q6" class="govuk-label govuk-checkboxes__label">Regulatory research</label>
+                      </div>
+                      
+                    </div>
+                  </fieldset>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

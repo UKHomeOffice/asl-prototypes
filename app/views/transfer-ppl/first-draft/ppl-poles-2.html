@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Places other than a licensed establishment (POLEs)</h2>
+      <h3 class="govuk-heading-m">Specify the details of each POLE that you will be using.</h3>
+      <p class="govuk-hint">If you can’t specify a grid reference for a POLE, include details that allows it to be easily identified for inspection. This could be an address of a site or a postcode of a farm.</p>
+      <p class="govuk-hint">If you can only add generic information at this stage, provide a general description of the types of areas you are considering.</p>
+      
+      <form action="ppl-poles-3" method="post">
+        
+        <div class="protocol-container">
+          <div class="protocol-header-in-progress">
+
+            <h3 class="govuk-heading-m">POLE 1</h3>
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="pole1-name">
+                Name
+              </label>
+              <input class="govuk-input" id="pole1-name" name="pole1-name" type="text" value="">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="pole1-reason">
+                Details
+              </label>
+              <textarea class="govuk-textarea" id="pole1-reason" name="pole1-details" rows="7" aria-describedby="more-detail-hint" value=""></textarea>
+            </div>
+          </div> 
+        </div>
+        
+        <p><a class="govuk-button govuk-button--secondary">Add another POLE</a></p>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

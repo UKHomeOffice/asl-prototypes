@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Returns of procedures
+      </span>
+      
+      <h1 class="govuk-heading-l">Download returns</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>Download 28 returns in a .csv spreadsheet.</p>
+      <form action="stats-download-early-2#complete" method="POST">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="one-half">
+            Optional reference
+          </label>
+          <!-- <span class="govuk-hint">This should descibe the use of this download, e.g. 'Final cut of data'</span> -->
+          <input class="govuk-input govuk-!-width-two-thirds" id="download-reference" name="download-reference" type="text">
+        </div>
+        <button class="govuk-button">Download returns</button>
+        <input type="hidden" name="downloaded" value="true">
+      </form>
+    </div>  
+  </div>
+
+{% endblock %}

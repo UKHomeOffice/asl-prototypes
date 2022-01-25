@@ -1,0 +1,532 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">University of Croydon</span>
+
+      <h1 class="govuk-heading-xl">
+        Select which licences should be removed
+      </h1>
+      
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">PILs to remove</th>
+                <th class="govuk-table__header" scope="col">PIL number</th>
+                <th class="govuk-table__header" scope="col">PIL holder</th>
+                <th class="govuk-table__header" scope="col">Start date</th>
+                <th class="govuk-table__header" scope="col">End date</th>
+                <th class="govuk-table__header" scope="col">Current status</th>
+                <!-- <th class="govuk-table__header" scope="col">Include</th> -->
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-0" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-0"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-682317</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Evvy Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-1"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-762557</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Brett Hull</a></td>
+                <td class="govuk-table__cell" scope="col">11 November 2019</td>
+                <td class="govuk-table__cell" scope="col">12 November 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-030448</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Joan Simmonds</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" iid="waste-3" name="waste" type="checkbox" value="" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-003493</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Anna Sheldon</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">7 April 2019</td>
+                <td class=""><span class="badge">NON-BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-4"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-100939</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Chris James</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">19 June 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-5"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-110198</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Andrea Goss</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-6" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-6"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-449287</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Sean Heathcoat</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-7" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-7"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-838449</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Meg Thomas</a></td>
+                <td class="govuk-table__cell" scope="col">21 October 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-8" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-8"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-478398</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Lisa Smith</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-9" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-9"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-594304</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Emma Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              
+            
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-01" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-01"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-682317</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Evvy Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-11" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-11"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-762557</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Brett Hull</a></td>
+                <td class="govuk-table__cell" scope="col">11 November 2019</td>
+                <td class="govuk-table__cell" scope="col">12 November 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-21" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-21"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-030448</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Joan Simmonds</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" iid="waste-31" name="waste" type="checkbox" value="" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-31"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-003493</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Anna Sheldon</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">7 April 2019</td>
+                <td class=""><span class="badge">NON-BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-41" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-41"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-100939</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Chris James</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">19 June 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-51" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-51"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-110198</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Andrea Goss</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-61" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-61"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-449287</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Sean Heathcoat</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-71" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-71"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-838449</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Meg Thomas</a></td>
+                <td class="govuk-table__cell" scope="col">21 October 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-81" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-81"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-478398</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Lisa Smith</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-91" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-91"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-594304</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Emma Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              
+            
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-02" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-02"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-682317</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Evvy Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-12" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-12"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-762557</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Brett Hull</a></td>
+                <td class="govuk-table__cell" scope="col">11 November 2019</td>
+                <td class="govuk-table__cell" scope="col">12 November 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-22" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-22"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-030448</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Joan Simmonds</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" iid="waste-32" name="waste" type="checkbox" value="" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-32"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-003493</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Anna Sheldon</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">7 April 2019</td>
+                <td class=""><span class="badge">NON-BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-42" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-42"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-100939</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Chris James</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">19 June 2019</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-52" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-52"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-110198</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Andrea Goss</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-6" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-6"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-449287</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Sean Heathcoat</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-7" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-7"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-838449</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Meg Thomas</a></td>
+                <td class="govuk-table__cell" scope="col">21 October 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-8" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-8"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-478398</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Lisa Smith</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="select">
+                  <div class="govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-9" name="waste" type="checkbox" value="" >
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-9"></label> 
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell" scope="col">SN-594304</td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Emma Adams</a></td>
+                <td class="govuk-table__cell" scope="col">6 April 2019</td>
+                <td class="govuk-table__cell" scope="col">5 April 2020</td>
+                <td class=""><span class="badge blue">BILLABLE</span></td>
+              </tr>
+              
+            </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 30 of 134 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>  
+          <p><a href="lo-task-review" class="govuk-button">Continue</a></p>        
+        
+    </div>
+  </div>
+
+<style type="text/css">
+  .govuk-table__cell, .govuk-table td {
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+    text-align: left;
+  }
+
+ .govuk-table__header, .govuk-table th {
+    font-weight: 700;
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+    text-align: left;
+}
+.govuk-checkboxes__input {
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    top: 4px;
+    left: -2px;
+    width: 12px;
+    height: 38px;
+    margin: 0;
+    opacity: 0;
+}
+
+  </style>
+{% endblock %}

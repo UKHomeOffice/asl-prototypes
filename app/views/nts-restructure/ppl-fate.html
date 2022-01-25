@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Fate of animals</h1>
+      {% include "includes/nts-warning-small.html" %}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              What will happen to animals at the end of this project?
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc"checked>
+              <label class="govuk-label govuk-checkboxes__label" for="organisation" >
+                Killed
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                Kept alive
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                Set free
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                Rehomed
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-54" name="organisation" type="checkbox" value="other">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+                Used in other projects
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+     
+      <form action="ppl-fate-review">
+        <button class="govuk-button">Continue</button><a href="ppl-index.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

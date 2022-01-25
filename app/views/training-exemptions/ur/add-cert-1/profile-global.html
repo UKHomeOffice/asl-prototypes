@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your account
+      </h1>
+      <h2 class="govuk-heading-m">Personal details</h2>
+      <dl class="govuk-body">
+        <dt>Name</dt>
+        <dd>Bruce Banner <br><a href="#">Change</a></dd>
+        <dt>Date of Birth</dt>
+        <dd>9 September 1987 <br><a href="#">Change</a></dd>
+        <dt>Telephone</dt>
+        <dd>07123456789 <br><a href="#">Change</a></dd>
+        <dt>Email</dt>
+        <dd>bruce.banner@example.edu.uk <br><a href="#">Change</a></dd>
+      </dl>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training</h2>
+      <p><a href="#">Manage training</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Establishments</h2>
+
+      <div class="application-confirm">
+        <h3 class="govuk-heading-s">University of Croydon <span class="float-right">–</span></h3>
+        <p>View the details of this establishment, as well as lists of approved areas, people and active projects.</p>
+        <a href="submitted" class="govuk-button" style="margin-bottom: 0px;">View establishment information</a>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Active projects</h3>
+
+        <p><a href="#">How to cure heartache</a></p>
+        <p>Expiry date: 01 August 2022</p>
+
+
+        <h3 class="govuk-heading-s">Draft projects</h3>
+
+        <p><a href="#">Untitled draft project</a></p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Apply for project licence</a>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h3 class="govuk-heading-s">Named roles</h3>
+        <p>Establishent Licence Holder (PELH)</p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Assign named role</a>
+          <span class='secondary-link'><a href="#">Remove role</a></span>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Personal licence</h3>
+
+        <p><a href="#">AA-164902</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-s">Permission level</h3>
+        <p>Admin</p>
+
+      </div>
+<style>
+dt {
+  width: 20%;
+}
+dd {
+  width: 60%;
+  padding-bottom: 1em;
+}
+</style>
+
+{% endblock %}

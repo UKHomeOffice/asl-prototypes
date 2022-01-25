@@ -1,0 +1,243 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+     {% include "includes/licence-header-assessment-assessed.html" %}
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li class="selected"><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+         <li><a href="9-additional-conditions">Further additional conditions</a>
+          <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Project plan</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for project plan
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>The project:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              is justified from a scientific or educational point of view or is required by law
+              <br>
+              <span class="govuk-hint">Check also responses in introductory details for relevant information</span>
+            </li>
+            <li>
+              does not involve testing of offensive weapons or cosmetics, or the development or testing of alcohol or tobacco products
+            </li>
+            <li>
+              does not involve testing finished household products 
+            </li>
+            <li>
+              does not involve testing ingredients primarily intended or expected to be used in household products unless:
+            </li>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                the proposed testing has a regulatory requirement, for example under REACH (Registration, Evaluation, Authorisation and restriction of Chemicals); and
+              </li>
+              <li>
+                there is no other method or testing strategy recognised in EU legislation that doesn’t involve the use of live animals and will still obtain the required results 
+              </li>
+            </ul>
+          </ul>
+            
+            
+          <h3 class="govuk-heading-s">
+            Action plan and general principles
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The project’s aim suitably defines the area of work.
+            </li>
+            <li>
+              The project's objectives are clear, SMART (where possible) and potentially achievable within the specified timeframe.
+            </li>
+            <li>
+              Where data is needed to satisfy EU regulatory requirements, animals will not be used to duplicate data already available in a Member State, unless it is necessary to protect public health, safety or the environment.
+            </li>
+            <li>
+              The project’s objectives will be reviewed at least once a year to consider the latest alternatives for the 3Rs.
+            </li>
+          </ul>
+          
+          <h3 class="govuk-heading-s">
+            Applications to provide a service
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The nature of the service provision is clear.
+            </li>
+            <li>
+              The process for deciding whether to accept or reject work is clear.
+            </li>
+          </ul>
+          
+            
+          
+          [Dynamic if user ticks ‘Higher education or training for the acquisition, maintenance or improvement of vocational skills’ in answer to ‘Which permissible purposes apply to this project?’ ]
+            <h3 class="govuk-heading-s">
+              Higher education and training
+            </h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                The attendees have a current or future need to carry out scientific work using animals or to perform specialist surgical skills.
+              </li>
+              <li>
+                The learning outcomes cannot be achieved using non-animal alternatives or ex vivo material.
+              </li>
+              <li>
+                There is a satisfactory method of monitoring and evaluating the learning outcomes.
+              </li>
+            </ul>
+
+          <h3 class="govuk-heading-s">
+            Applications to provide a service
+          </h3>
+          <p>
+            The nature of the service provision is clear.
+          </p>
+          <p>
+            The process for deciding whether to accept or reject work is clear.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Action plan and general principles
+          </h3>
+          <ul class="govuk-list">
+            <p>
+            	The project’s aim suitably defines the area of work.
+            </p>
+            <p>
+            	The project's objectives are clear, SMART (where possible) and potentially achievable within the specified timeframe.
+            </p>
+            <p>
+            	Where data is needed to satisfy EU regulatory requirements, animals will not be used to duplicate data already available in a Member State, unless it is necessary to protect public health, safety or the environment.
+            </p>
+            <p>
+            	The project’s objectives will be reviewed at least once a year to consider the latest alternatives for the 3Rs.
+            </p>
+          </ul>
+          CONDITIONAL
+          <h3 class="govuk-heading-s">
+            Higher education and training
+          </h3>
+          <ul class="govuk-list">
+            <p>
+            	The attendees have a current or future need to carry out scientific work using animals or to perform specialist surgical skills.
+            </p>
+            <p>
+            	The learning outcomes cannot be achieved using non-animal alternatives or ex vivo material.
+            </p>
+            <p>
+            	There is a satisfactory method of monitoring and evaluating the learning outcomes.
+            </p>
+          </ul>
+        </div>
+    </details>
+    
+    <!-- <hr class=" govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Additional conditions</h2>
+    <p>Select any additional conditions you want to add to this licnece</p>
+    <p><em>BUNCH OF CONDITIONAL CONDITIONS</em></p> -->
+
+    <div class="govuk-form-group">
+      <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+            Regulatory work exemption
+            <p>Where studies are requested in order to meet regulatory requirements, they will be performed in compliance with relevant UK & EU legislative bodies including the European Medicines Agency (EMA), European Chemicals Agency (ECHA), the Medicines and Healthcare Products Regulatory Agency (MHRA), Health ...</p>
+            <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+          </label>
+        </div>
+      </div>
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+            Batch testing exemption
+            <p>For all batch quality control testing using live animals, the substance or product to be tested must be named in the licence providing scientific justification for such a test. You must notify the Home Office when an alternative non-animal test for a substance or product becomes validated and accepted in order that ...</p>
+            <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+          </label>
+        </div>
+      </div>
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+            Household Products exemption
+            <p>
+              The following conditions apply to the testing of finished Household Products or their ingredients: 
+            </p>
+            <p>
+              - The use of animals in testing finished Household Products under this licence is prohibited ... 
+              </p>
+            <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+          </label>
+        </div>
+      </div> -->
+      
+      <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="condition-3" name="condition-3" type="checkbox" value="hmrc">
+          <label class="govuk-label--s govuk-checkboxes__label" for="condition-3">
+             Write new 
+          </label>
+        </div>
+      </div>-->
+      </div> 
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+        <p>Yes</p>
+
+        <h3 class="govuk-heading-s">Notes (optional)</h3>
+        <p><em>No answer provided</em></p>
+        
+        {% include "includes/assessment-footer-nav.html" %}
+
+      
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

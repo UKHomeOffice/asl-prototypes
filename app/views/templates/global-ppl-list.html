@@ -1,0 +1,166 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Licensing Officer
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="search-panel">
+        <h2 class="govuk-heading-m">Search</h2>
+        <p>
+          <a href="search/establishments" class="">Establishments</a>
+           | 
+          <a href="search/people" class="">People</a>
+           | 
+          <a href="search/projects" class="">Projects</a>
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            
+              <div class="govuk-form-group search-box">
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="view-all-link">
+              <span class="secondary-link"><a href="/search/establishments">View all projects</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class='tasks-nav'>
+        <li class="">
+          Status:
+        </li>
+        <li class="tasks-nav-selected">
+          Active
+        </li>
+        <li>
+          <a href="#">Expired</a> 
+        </li>
+        <li>
+          <a href="#">Inactive</a> 
+        </li>
+        <li>
+          <a href="#">Revoked</a> 
+        </li>
+        <li>
+          <a href="#">Transferred out</a> 
+        </li>
+        <li>
+          <a href="#">Show all</a> 
+        </li>
+      </ul>
+    
+
+      <h3 class="govuk-heading-3">Showing 284 of 391 results</h3>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"><a href="#">Project title</a></th>
+              <th class="govuk-table__header" scope="col">PPL number</th>
+              <th class="govuk-table__header" scope="col"><a href="#">Primary establishment</a> </th>
+              <th class="govuk-table__header" scope="col"><a href="#">PPL holder</a> </th>
+              <th class="govuk-table__header" scope="col"><a href="#">Status</a></th>
+              <th class="govuk-table__header" scope="col"><a href="#">Expiry date</a></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">AAV gene therapy vector characterisation</a></td>
+              <td class="govuk-table__cell">PP&#8209;387775</td>
+              <td class="govuk-table__cell"><a href="#">University of Cambridge</a></td>
+              <td class="govuk-table__cell"><a href="#">Digby Larsen</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">22&nbsp;Nov&nbsp;2022</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">ACCELERATING FRACTURE & CUTANEOUS WOUND HEALING</a> - Partial record</td>
+              <td class="govuk-table__cell">PP&#8209;913277</td>
+              <td class="govuk-table__cell"><a href="#">University of Oxford</a></td>
+              <td class="govuk-table__cell"><a href="#">Serenity Healy</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">23&nbsp;Oct&nbsp;2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">ACID HANDLING AND SIGNALLING IN CANCER AND DISEASES OF THE HEART</a></td>
+              <td class="govuk-table__cell">PP&#8209;726085</td>
+              <td class="govuk-table__cell"><a href="#">University of St Andrews</a></td>
+              <td class="govuk-table__cell"><a href="#">Mateo Munro</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">25&nbsp;Apr&nbsp;2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">Acute Inhalation Toxicology</a></td>
+              <td class="govuk-table__cell">PP&#8209;872729</td>
+              <td class="govuk-table__cell"><a href="#">London School of Economics and Politics</a></td>
+              <td class="govuk-table__cell"><a href="#">Stephen Ochoa</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">19&nbsp;May&nbsp;2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">Acute Toxicology- Chemicals</a> - Partial record</td>
+              <td class="govuk-table__cell">PP&#8209;615712</td>
+              <td class="govuk-table__cell"><a href="#">Imperial College London</a></td>
+              <td class="govuk-table__cell"><a href="#">Terence Hagan</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">15&nbsp;Sep&nbsp;2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">Adaptability of the auditory system in health and disease</a></td>
+              <td class="govuk-table__cell">PP&#8209;902314</td>
+              <td class="govuk-table__cell"><a href="#">Loughborough University</a></td>
+              <td class="govuk-table__cell"><a href="#">Elsie Thomas</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">11&nbsp;Jun&nbsp;2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">Adaptation in the musculoskeletal system</a></td>
+              <td class="govuk-table__cell">PP&#8209;733993</td>
+              <td class="govuk-table__cell"><a href="#">Durham University</a></td>
+              <td class="govuk-table__cell"><a href="#">Hafsa Hamer</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">11&nbsp;Apr&nbsp;2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">Adaptations of the host and pathogen during infec</a> - Partial record</td>
+              <td class="govuk-table__cell">PP&#8209;985057</td>
+              <td class="govuk-table__cell"><a href="#">Lancaster University</a></td>
+              <td class="govuk-table__cell"><a href="#">Sorcha Schmidt</a></td>
+              <td class="govuk-table__cell">Active</td>
+              <td class="govuk-table__cell">8&nbsp;Dec&nbsp;2020</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav role="navigation" aria-label="Pagination">
+          <div class="pagination__summary">Showing 1 &ndash; 1 of 1 results</div>
+          <ul class="pagination">
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+          </ul>
+        </nav>
+       
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">{{ data['course-name'] }}</span>
+      <h1 class="govuk-heading-xl">
+        Manage course participants
+      </h1>
+      <!-- <h2 class="govuk-heading-m">Course details</h2> -->
+      <p>
+        <dl class="govuk-body">
+          <!-- <dt>Course name</dt>
+          <dd>{{ data['course-name'] }}</dd> -->
+          <dt>Training Project licence title</dt>
+          <dd>Training in microvascular surgery</dd>
+          <dt>Training project licence number</dt>
+          <dd>{{ data['ppl-number'] }}</dd>
+          <dt>Course start date</dt>
+          <dd>{{ data['course-date-day'] }} / {{ data['course-date-month'] }} / {{ data['course-date-year'] }}</dd>
+           
+          <dd>{{ data['course-date-day'] }} / {{ data['course-date-month'] }} / {{ data['course-date-year'] }}</dd>
+          <dt>Animals to be used</dt>
+          <dd>{{ data['animal-types'] }}</dd>
+        </dd>
+        </dl>
+      </p>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Apply for a licences</h2>
+
+      {% if (data['first-name'].length > 1) %}
+      
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Email</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Details</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">{{ data['first-name'] }} {{ data['surname'] }}</a></td>
+              <td class="govuk-table__cell">{{ data['email'] }}</td>
+              <td class="govuk-table__cell"><span class="badge">Unsubmitted</span></td>
+              <td class="govuk-table__cell"><a href="add-participant">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a class="govuk-button govuk-button--secondary" href="manage-pils-added.html">Apply for a licence</a> <a class="govuk-button" href="#">Submit applications</a></p>
+        
+      {% else %}
+      <p><em>No participant details added yet</em></p>
+      <p><a class="govuk-button govuk-button--secondary" href="add-participant">Apply for a licence</a></p>
+
+      {% endif %}
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Submitted applications</h2>
+      <p><em>No applications submitted yet</em></p>
+
+    </div>
+  </div>
+
+  <style>
+    dt {
+      font-weight: bold;
+    }
+  </style>
+{% endblock %}

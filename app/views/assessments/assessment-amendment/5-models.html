@@ -1,0 +1,361 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="0-summary">Summary of amendment</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts"> Non-technical summary: general</a></li>
+        <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li class="selected"><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+
+
+
+      <!-- <body></body>
+         <div class="input_fields_container_part">
+           <div><input type="text" name="tags">
+                <button class="btn btn-sm btn-primary add_more_button">Add More Fields</button>
+           </div>
+         </div> -->
+    
+     
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for protocols
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The procedures are appropriately specified, justified and relevant to the project.
+          </li>
+          <li>
+            The severity classification for each protocol is in line with ‘Appendix G’ of Guidance on the Operation of ASPA (1986)
+          </li>
+          <li>
+            The species and life stages are relevant and adequately justified.
+          </li>
+          <li>
+            Continued use of animals, either from or onto other protocols, is reasonable and appropriately specified.
+          </li>
+          <li>
+            Killing methods are either appropriate methods as defined by ASPA 15A, or are scientifically justified and are appropriately specified.
+          </li>
+          <li>
+            The use of humane endpoints is justified and relevant.
+          </li>
+          <li>
+            The experimental or observational strategy and statistical design to minimise numbers, harms and environmental impacts are appropriate and adequate. 
+            <br><span class="govuk-hint">Information relevant to this standard may also be found in project plan</span>
+          </li>
+          <li>
+            Any form of animal suffering, from birth to death, is justified and relevant. 
+            <br><span class="govuk-hint">Information relevant to this standard may also be found in project location, use of animals and other considerations</span>
+          </li>
+          <li>
+            The programme of work is designed to enable the procedures to be carried out in the most humane and environmentally sensitive manner possible.
+          </li>
+          <li>
+            Planned use of anaesthesia, analgesia and other pain-relieving methods is justified and relevant.
+            <br><span class="govuk-hint">Information relevant to this standard may also be found in the NMBA section of other      considerations</span>
+          </li>
+
+        </ul>
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+
+      {% set amendment = 'true' %}
+      {% set assessOutcome = 'met' %}
+      {% set reason = 'The protocols meet the criteria stated above' %}
+      {% set sectionComplete = 'yes' %}
+      {% set assessSection = 'protocols' %}
+      {% set assessSectionTitle = 'protocols' %}
+      {% include "includes/assessment-met.html" %}
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    
+    <h2 class="govuk-heading-m">Authorisations and conditions</h2>
+    
+    
+    <span class="badge badge-condition">1 Authorisation</span>
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: Viral transduction, imaging, seizure induction and physiological monitoring</span></label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        
+        <p><strong>Authorisations</strong></p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Continued use onto a protocol</li>
+        </ul>
+      </div>  
+      <div class="protocol-content hide">
+        
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+      <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+      <div class="cond-read-view">
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">
+            Continued use onto a protocol
+          </h3>
+          <p class="govuk-hint">Automatically selected based on applicant's responses.</p>
+          <div class="view-condition">
+            <div class="cond-content"><p>Mice used on this protocol may be obtained from protocol 1 of this project, or from other projects with authority to supply animals of a type authorised in this project.</p>
+            </div>
+          </div>
+          <div class="edit-condition hide">
+            <textarea class="cond-text-edit govuk-textarea " id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="edit-buttons">
+            <button  onclick="editCondition(this)" class="condEdit link-button">Edit</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Remove</a>
+          </div>
+          <div class="save-buttons hide">
+            <button onClick="saveCondition(this)" class="condSave govuk-button">Save</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <!-- Editable condition -->
+
+   <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
+          
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Training requirement
+                <p>This licence authority will expire <<<INSERT number HERE>>> months after the initial grant date unless evidence that <<INSERT name HERE>>> has successfully completed accredited training module(s) <<<INSERT module codes HERE>>> is provided to aspa.london@homeoffice.gov.uk.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div> -->
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Write new condition
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                 Write new authorisation
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+    
+      </div>
+    </div>
+    <span class="badge badge-condition">4 Authorisations</span>
+    <span class="badge changed">Changed</span>
+    <div id="secondProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option2" class="row-toggle protocol-title"><span class="row-toggle-copy">2: Breeding and maintenance of GA mice</span></label>
+          <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+        </h3>
+        <p><strong>Authorisations</strong></p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Rehoming</li>
+          <li>Continued use onto a protocol</li>
+          <li>Continued use off a protocol on to another protocol in this project</li>
+          <li>Continued use off protocol on to another project</li>
+        </ul>
+      </div>  
+
+      <div class="protocol-content hide">  
+        <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+        {% include "includes/change-comparison.html" %}
+
+        <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">Rehoming<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>    
+          <p>&#60;&#60;&#60;INSERT animal type(s) HERE&#62;&#62;&#62; may be rehomed at the end of a series of regulated procedures provided that the following actions have been taken:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+               &#60;&#60;&#60;INSERT actions to ensure the state of health allows the animal to be re-homed HERE&#62;&#62;&#62;;
+             </li>
+             <li>
+               &#60;&#60;&#60;INSERT actions to ensure that the rehoming of the animal poses no danger to public health, animal health, or the environment HERE&#62;&#62;&#62;;
+             </li>
+             <li>
+               &#60;&#60;&#60;INSERT actions to ensure socialisation of the animal on being re-homed HERE&#62;&#62;&#62;; and
+             </li>
+             <li>
+               &#60;&#60;&#60;INSERT any other measures to safeguard the animal's welfare on being re-homed HERE&#62;&#62;&#62;.</p>
+             </li>
+            </ul>
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                This text requires editing
+              </strong>
+            </div>
+            <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+
+        </div>
+
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">Continued use onto a protocol<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
+          <p>Mice used on this protocol may be obtained from protocol 1 of this project, or from other projects with authority to supply animals of a type authorised in this project.<br>
+            
+          <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        </div>
+
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">Continued use off a protocol on to another protocol in this project<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
+          <p>Mice may continue to be used on Protocol 1 of this project.<br>
+          <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        </div>
+
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">Continued use off protocol on to another project<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
+          <p>Mice may continue to be used on other projects authorised to use animals of this type.<br>
+          <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        </div>
+     <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
+            
+        <div id="conditions-options" style="display: none;">
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+                <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                  Training requirement
+                  <p>This licence authority will expire <<<INSERT number HERE>>> months after the initial grant date unless evidence that <<INSERT name HERE>>> has successfully completed accredited training module(s) <<<INSERT module codes HERE>>> is provided to aspa.london@homeoffice.gov.uk.</p>
+                  <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+                </label>
+              </div>
+            </div>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+                <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                   Write new condition
+                </label>
+              </div>
+            </div>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+                <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                   Write new authorisation
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+        <br>
+      
+        
+      </div>
+    </div>
+    
+
+    <form action="assessment-overview" method="POST">
+
+    
+      {% include "includes/assessment-complete.html" %}
+
+  
+    </form>
+      
+      
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

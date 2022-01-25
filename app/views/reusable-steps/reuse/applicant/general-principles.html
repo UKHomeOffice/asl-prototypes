@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">General principles</h1>
+      
+      <form action="general-principles-review">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="general-duplicate">
+            Unnecessary duplication of work must be avoided. Under what circumstances would you knowingly duplicate work?
+          </label>
+          <div id="general-duplicate-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="general-duplicate" name="general-duplicate" rows="8" aria-describedby="general-duplicate-hint"></textarea>
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-hint">        
+            <label class="govuk-label--s" for="">
+              Will all of your protocols or experiments use animals of both sexes?
+            </label>
+            <div id="more-detail-hint" class="govuk-hint"></div>
+        
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="general-both-conditional-3" name="general-both" type="radio" value="Yes" data-aria-controls="conditional-general-both-conditional-3">
+                <label class="govuk-label govuk-radios__label" for="general-both-conditional-3">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="general-both-conditional-4" name="general-both" type="radio" value="No" data-aria-controls="conditional-general-both-conditional-4">
+                <label class="govuk-label govuk-radios__label" for="general-both-conditional-4">
+                  No
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-general-both-conditional-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="general-why">
+                    Why will you use animals of a single sex in some protocols or experiments?
+                  </label>
+                  <div id="general-why-hint" class="govuk-hint"></div>
+                  <textarea class="govuk-textarea" id="general-why" name="general-why" rows="5" aria-describedby="general-why-hint"></textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button>
+        <span class="secondary-link"><a href="#">List of sections</a></span>
+      </form>
+    
+  </div>
+</div>
+
+
+{% endblock %}

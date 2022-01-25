@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Manage guest access
+      </h1>
+      <h2 class="govuk-heading-m">University of Croydon colleagues</h2>
+      <p>Allow colleagues to view this project. Administrators will have access by default.</p>
+      <p><a href="add-colleague">Add a colleague</a></p>
+
+
+      <h2 class="govuk-heading-m">Other establishments</h2>
+      <p>Allow colleagues at other establishments, those with
+        with secondary availability for instance, view this project.</p>
+      <p><a href="add-establishment">Add an establishment</a></p>
+        <br>
+      <a class="govuk-button">Back to project</a> <a href="#" class="secondary-link">Cancel</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    dt {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dd {
+      width: 60%;
+      padding-bottom: 30px;
+      
+    }
+  </style>
+
+{% endblock %}

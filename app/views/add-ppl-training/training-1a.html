@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+     <h2 class="govuk-heading-l">Training</h2>
+      <p>Enter the project licence holders' training details</p>
+
+      <div class="declaration-panel-grey">
+        <h2 class="govuk-heading-m">Certificate 1</h2>
+         <h2 class="govuk-heading-s">Certificate number</h2>
+         <p>09384759596756464</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Accrediting body>
+         <p>Universities Group</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Date awarded</h2>
+         <p>10 January 2019</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Modules completed</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>L</li>
+             <li>E1</li>
+             <li>PILA (theory)</li>
+             <li>PILA (skills)</li>
+             <li>K (theory)</li>
+             <li>E2</li>
+           </ul>
+         </p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Animal types</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>Rats</li>
+             <li>Mice</li>
+           </ul>
+         </p>
+         <p><a href="#">Edit</a>
+      </div>
+         <hr class="govuk-section-break govuk-section-break--m">
+
+
+      <form action="training-2" method="post">
+     
+
+        <hr class="govuk-section-break govuk-section-break--S ">
+        <a class="" href='training-1b'>Add another certificate</a>
+        <hr class="govuk-section-break govuk-section-break--l ">
+
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+.govuk-details {
+  margin-bottom: 0px;
+}
+</style>
+{% endblock %}

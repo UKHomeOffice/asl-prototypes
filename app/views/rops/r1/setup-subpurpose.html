@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: purposes</h1>
+      <h1 class="govuk-heading-s">For the purpose</h1>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Basic research</li>
+      </ul>
+      <form action="setup-subpurpose-2" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Which of the following sub-purposes apply?
+              </h1>
+            </legend>
+            <span class="govuk-hint">Select all that apply</span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-yes" name="sub-p-1" type="checkbox" value="Oncology" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Oncology</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Cardiovascular blood and lymphatic system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Cardiovascular blood and lymphatic system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Nervous system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Nervous system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Respiratory system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Respiratory system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Gastrointestinal system including liver" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Gastrointestinal system including liver</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Musculoskeletal system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Musculoskeletal system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Dentistry" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Dentistry</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Immune system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Immune system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Urogenital/reproductive system" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Urogenital/reproductive system</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Sensory organs (skin, eyes and ears)" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Sensory organs (skin, eyes and ears)</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Endocrine system/metabolism" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Endocrine system/metabolism</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-1-no" name="sub-p-1" type="checkbox" value="Multisystemic" >
+                <label for="sub-p-1" class="govuk-label govuk-checkboxes__label">Multisystemic</label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

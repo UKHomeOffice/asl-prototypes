@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Your email notification preferences 
+      </h1>
+      
+      <p>You currently receive: </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your personal licence notifications</li>
+        <li>your project licences notifications</li>
+        <li>your named role notifications</li>
+        <li>Other personal licence notifications</li>
+      </ul>
+      <p>You don't currently receive:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Other project licences notifications</li>
+        <li>Other establishment licence notifications</li>
+      </ul>
+      <br>
+      <a href="change-preferences-4" class="govuk-button">Change preferences</a><a href="#" class="secondary-link">Cancel</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}

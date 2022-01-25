@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Change your email notification preferences 
+      </h1>
+
+
+      <p>You will always receive: 
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your personal licence notifications</li>
+        <li>your project licences notifications</li>
+        <li>your named role notifications</li>
+      </ul>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="event-name">
+                    Which additional notifications do you want to receive?
+                    <span id="checkbox-hint" class="govuk-hint"></span>
+                  </label>
+
+                  <div class="govuk-checkboxes">
+                      <p>University of Croydon</p>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                        Other personal licence notifications at University of Croydon
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes your personal licence, project licences or establishment licence.</span> -->
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                        Other project licence notifications at University of Croydon
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any licences that you need to endorse such as other users personal or project licences.</span> -->
+                      </label>
+                   
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                        Other establishment licence notifications at University of Croydon
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any changes to licences held at your establishment.</span> -->
+
+                      </label>
+                    </div>
+                    <br>
+                    <p>Slough University</p>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                        Other personal licence notifications at Slough University
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes your personal licence, project licences or establishment licence.</span> -->
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                        Other project licence notifications at Slough University
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any licences that you need to endorse such as other users personal or project licences.</span> -->
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                        Other establishment licence notifications at Slough University
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any changes to licences held at your establishment.</span> -->
+
+                      </label>
+                    </div>
+                    <br>
+                    <p>Marvell Pharma</p>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                        Other personal licence notifications at Marvell Pharma
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes your personal licence, project licences or establishment licence.</span> -->
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                        Other project licence notifications at Marvell Pharma
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any licences that you need to endorse such as other users personal or project licences.</span> -->
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                        Other establishment licence notifications at Marvell Pharma
+                        <!-- <span id="checkbox-hint" class="govuk-hint">This includes any changes to licences held at your establishment.</span> -->
+
+                      </label>
+                    </div>
+                  </div>
+                </div>
+        </fieldset>
+        
+      </div>
+
+
+      <a href="email-preferences" class="govuk-button">Update preferences</a> 
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}
+
+

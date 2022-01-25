@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Retrospective assessment</span>
+      <h1 class="govuk-heading-xl">
+        Endorse assessment
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Comments</strong>
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Comments can be seen by establishment users, as well as inspectors and Home Office team members. They will be added to the 'Latest activity' log of this task.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <h2 class="govuk-heading-m">Declaration</h2>
+      <p>By endorsing this retrospective assessment I agree that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        it's been reviewed by the AWERB
+        it's written in simple language
+        It contains no information that could identity people, places or intellectual property. 
+      </ul>
+      <p>I have the establishment licence holder's authority for it to be made publicly available.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Date of most recent AWERB review
+           </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 12 2 2020
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="ra-submitted.html" class="govuk-button">Endorse application</a>
+      </div>
+      <a href="#" class="secondary-link">Change</a>
+      
+    </div>
+  </div>
+
+  </style>
+
+{% endblock %}

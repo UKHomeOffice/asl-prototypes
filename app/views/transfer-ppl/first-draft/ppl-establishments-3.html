@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Establishments</h2>
+      
+      <form action="ppl-establishments-review" method="post">
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">Do the housing, husbandry, and care conditions at each establishment meet the requirements laid out in the Code of Practice for each type of animal you will be using?</label>
+            <span id="holding-hint" class="govuk-hint">Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.</span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="est-care-1" name="est-care" type="radio" value="Yes" checked="">
+                <label class="govuk-label govuk-radios__label" for="est-care-1">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="est-care-2" name="est-care" type="radio" value="No" data-aria-controls="conditional-est-care-2">
+                <label class="govuk-label govuk-radios__label" for="est-care-2">
+                  No
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-est-care-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="est-care-2-additional-1">
+                    If any establishment does not meet these requirements, or if any type of animal you're using is not listed in the Code of Practice, explain how you will ensure that housing, husbandry, and care conditions are appropriate for your project.
+                  </label>
+                    <textarea class="govuk-textarea" id="est-care-2" name="est-care-2" rows="5"></textarea>
+                </div>
+              </div>
+            </div>
+            
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-establishments-review' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

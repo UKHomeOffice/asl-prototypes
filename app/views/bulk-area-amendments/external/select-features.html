@@ -1,0 +1,195 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Amend multiple areas
+      </h1>
+      <!-- <p>Choose the approved areas that you want to include in this amendment.</p> -->
+     
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h2 class="govuk-heading-m">
+              What do you want to amend?
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes" data-module="checkboxes">
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                Site
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  New site name
+                </label>
+                <input class="govuk-input" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                Area
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  New area name
+                </label>
+                <input class="govuk-input" id="contact-by-phone" name="contact-by-phone" type="tel">
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                Name
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  New name
+                </label>
+                <input class="govuk-input" id="contact-by-text" name="contact-by-text" type="tel">
+              </div>
+            </div>
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-4" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-4">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+                Suitability
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+              <div class="govuk-form-group">
+                <p class="govuk-hint">These will overwrite all existing suitabilities for the selected areas.</p>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-sa" name="suitability" value="SA">
+                      <label for="suitability-sa" class="govuk-label govuk-checkboxes__label">Small animals (SA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-la" name="suitability" value="LA">
+                      <label for="suitability-la" class="govuk-label govuk-checkboxes__label">Large animals (LA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-aq" name="suitability" value="AQ">
+                      <label for="suitability-aq" class="govuk-label govuk-checkboxes__label">Aquatic species (AQ)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-av" name="suitability" value="AV">
+                      <label for="suitability-av" class="govuk-label govuk-checkboxes__label">Birds (AV)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-dog" name="suitability" value="DOG">
+                      <label for="suitability-dog" class="govuk-label govuk-checkboxes__label">Dogs (DOG)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-cat" name="suitability" value="CAT">
+                      <label for="suitability-cat" class="govuk-label govuk-checkboxes__label">Cats (CAT)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-equ" name="suitability" value="EQU">
+                      <label for="suitability-equ" class="govuk-label govuk-checkboxes__label">Equidae (EQU)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="suitability-nhp" name="suitability" value="NHP">
+                      <label for="suitability-nhp" class="govuk-label govuk-checkboxes__label">Non-human primates (NHP)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-f" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-f">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-f">
+                Holding code
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-f">
+              <div class="govuk-form-group">
+               <div class="govuk-form-group">
+                <fieldset id="holding" class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend">
+                  </legend><span id="holding-hint" class="govuk-hint">These will overwrite all existing suitabilities for the selected areas.</span>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="holding-sth" name="holding" value="STH">
+                      <label for="holding-sth" class="govuk-label govuk-checkboxes__label">Short term holding (STH)</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="holding-lth" name="holding" value="LTH">
+                      <label for="holding-lth" class="govuk-label govuk-checkboxes__label">Long term holding (LTH)</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="holding-noh" name="holding" value="NOH">
+                      <label for="holding-noh" class="govuk-label govuk-checkboxes__label">Not for overnight holding (NOH)</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="holding-sep" name="holding" value="SEP">
+                      <label for="holding-sep" class="govuk-label govuk-checkboxes__label">Sterile experimental procedures (SEP)</label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input type="checkbox" class="govuk-checkboxes__input" id="holding-nsep" name="holding" value="NSEP">
+                      <label for="holding-nsep" class="govuk-label govuk-checkboxes__label">Non-sterile experimental procedures (NSEP)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-6" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-6">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-6">
+                NACWO
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-6">
+              <div class="govuk-form-group">
+                <div class="govuk-form-group">
+                  <select class="govuk-select" id="nacwo" name="nacwo">
+                    <option selected="" value="">Select...</option>
+                    <option value="d24d5123">John Sharp</option>
+                    <option value="ee295338">Megan Alberts</option>
+                    <option value="5899f8ac">Ian Ayers</option>
+                    <option value="6108c582">Brian Proudfoot</option>
+                    <option value="38224226">Benjamin Patton</option>
+                    <option value="77c6ec56">Ben Stevens</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="govuk-form-group">
+              <label class="govuk-heading-m" for="comments">Why are you amending this approved area?</label><span id="comments-hint" class="govuk-hint">Comments can be seen by establishment users, as well as inspectors and Home Office team members.</span>
+              <textarea class="govuk-textarea" id="comments" name="comments"
+                rows="4"></textarea>
+            </div>
+
+          </div>
+          <a href="confirm-changes-any-restrictions" class="govuk-button">Submit</a>
+        </fieldset>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+<style type="text/css">
+
+
+</style>
+
+{% endblock %}

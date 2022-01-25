@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Email notifications 
+      </h1>
+      
+      <p>You will always receive notifications when there’s an update to a licence held by you, or if relevant to a named role you hold. </p>
+
+      <h3 class="govuk-heading-m">University of Croydon</h3>
+      <h3 class="govuk-heading-s">You also get notifications for changes related to:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>personal licences held at University of Croydon</li>
+      </ul>
+      <h3 class="govuk-heading-s">You don’t get notifications for changes related to:</h3>      
+      <ul class="govuk-list govuk-list--bullet">
+        <li>project licences held at University of Croydon</li>
+        <li>University of Croydon’s licence</li>
+      </ul>
+      
+      <h3 class="govuk-heading-m">Slough University</h3>
+      <h3 class="govuk-heading-s">You also get notifications for changes related to:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>personal licences held at Slough University</li>
+        <li>project licences held at Slough University</li>
+      </ul>
+      <h3 class="govuk-heading-s">You don’t get notifications for changes related to:</h3>      
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Slough University’s licence</li>
+      </ul>
+      
+      <h3 class="govuk-heading-m">University of Woking</h3>
+      <h3 class="govuk-heading-s">You also get notifications for changes related to:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>personal licences held at University of Woking</li>
+        <li>project licences held at University of Woking</li>
+        <li>University of Woking’s licence</li>
+      </ul>
+      <br>
+      <a href="change-preferences-multi" class="govuk-button">Change preferences</a><a href="#" class="secondary-link">Back to account</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}

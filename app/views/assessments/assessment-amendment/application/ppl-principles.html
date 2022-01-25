@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'background' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">General principles</h1>
+      
+      <h3 class="govuk-heading-s">
+        Unnecessary duplication of work must be avoided. Under what circumstances would you knowingly duplicate work?
+      </h3>
+      <p>
+        If there were a need to:
+      </p>
+
+      <p>
+        1)	Address controversial findings in the field (e.g. failure of others to replicate part or all of previous findings).
+      </p>
+
+      <p>
+        2)	Build on inadequately powered prior studies to provide definitive testing of hypotheses.
+      </p>
+
+      <p>
+        3)	Demonstrate the establishment of a model system to replicate a disease condition prior to commencing a series of novel experimental studies.
+      </p>
+      {% include "includes/add-comment.html" %}
+
+
+      <h3 class="govuk-heading-s">
+        Will all of your protocols or experiments use animals of both sexes?
+      </h3>
+      <p>
+        No
+      </p>
+      {% include "includes/add-comment.html" %}
+
+
+      <h3 class="govuk-heading-s">
+        Why will you use animals of a single sex in some protocols or experiments?
+      </h3>
+      <p>
+        We will initially use just males to reduce potential oestrus cycle-dependent variability. This will allow robust observations which we will then extend to females to ensure generalisability of results.
+      </p>
+
+
+
+
+      {% include "includes/add-comment.html" %}
+      
+      {% set previousPage = 'ppl-plan' %}
+      {% set previousPageTitle = 'Action plan' %}
+      {% set nextPage = 'ppl-protocols' %}
+      {% set nextPageTitle = 'Protocols' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

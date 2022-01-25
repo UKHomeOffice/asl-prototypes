@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Bruce Banner
+      </h1>
+      <h2 class="govuk-heading-m">Personal details</h2><button class="govuk-button float-right">Merge profile</button>
+      <dl class="govuk-body">
+        <dt>Name</dt>
+        <dd>Bruce Banner</dd>
+        <dt>Date of Birth</dt>
+        <dd>9 September 1987</dd>
+        <dt>Telephone</dt>
+        <dd>07123456789</dd>
+        <dt>Email</dt>
+        <dd>bruce.banner@example.edu.uk</dd>
+      </dl>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training</h2>
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87478489</li>
+                <li>Awarded on: 3 January 2018</li>
+                <li>Awarded by: Universities Group</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Exemption
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Module K skills will be developed in-house as opportunities arise</p>
+            </td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>E2</li>
+                <li>PPL</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+             </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87595/33</li>
+                <li>Awarded on: 12 April 2020</li>
+                <li>Awarded by: Royal Veterinary College</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Establishments</h2>
+
+      <div class="application-confirm">
+        <h3 class="govuk-heading-s">University of Croydon <span class="float-right">–</span></h3>
+        <p>View the details of this establishment, as well as lists of approved areas, people and active projects.</p>
+        <a href="submitted" class="govuk-button" style="margin-bottom: 0px;">View establishment information</a>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Active projects</h3>
+
+        <p><a href="#">How to cure heartache</a></p>
+        <p>Expiry date: 01 August 2022</p>
+
+
+        <h3 class="govuk-heading-s">Draft projects</h3>
+
+        <p><a href="#">Untitled draft project</a></p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Apply for project licence</a>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h3 class="govuk-heading-s">Named roles</h3>
+        <p>Establishent Licence Holder (PELH)</p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Assign named role</a>
+          <span class='secondary-link'><a href="#">Remove role</a></span>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Personal licence</h3>
+
+        <p><a href="#">AA-164902</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-s">Permission level</h3>
+        <p>Admin</p>
+
+      </div>
+<style>
+dt {
+  width: 20%;
+}
+dd {
+  width: 60%;
+  padding-bottom: 1em;
+}
+</style>
+
+{% endblock %}

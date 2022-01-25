@@ -1,0 +1,329 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    <div class="notification-banner">
+
+      <svg style="vertical-align: top;" class="notification-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+      <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+      C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+
+      <div class="notification-banner__message"  style="display: inline-block; padding-left: 10px;">
+      <span class="govuk-body"><strong>Your personal licence is due a 5 year review.</strong> <br>You need to <a href="pil-upcoming">confirm your personal licence is still in use</a> or it may be revoked.</span>
+      </div>
+
+      </div> 
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Bruce
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h3 class="govuk-heading-s">Tasks</h3>
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#outstanding">
+              Outstanding
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#in-progress">
+              In progress
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#completed">
+              Completed
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="outstanding" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">22 July 2019  </td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PEL</td>
+                <td class="govuk-table__cell">
+                  <a href="#">Area amendment</a><br>
+                  Identifyer
+                </td>
+                <td class="govuk-table__cell"><span class="badge">RETURNED</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 1 of 1 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        </section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">17 May 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PIL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PIL amendment </a> <br>Dagny Aberkirder  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">06 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PPL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PPL application </a> <br>Kurtis Savage </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Add named person </a> <br>Megan Alberts </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Remove named person </a> <br>Aspasia Dellaporta</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area removal </a> <br>Bruce Banner</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area amendment </a> <br>Bruce Banner  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">-</td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">- </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">INCOMPLETE</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area amendment  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">AWAITING RECOMMENDATION</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 10 of 31 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>          
+        </section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" style="border:none;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">17 May 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PIL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PIL amendment </a> <br>Dagny Aberkirder  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">06 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PPL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">PPL application </a> <br>Kurtis Savage </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Add named person </a> <br>Megan Alberts </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Remove named person </a> <br>Aspasia Dellaporta</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area removal </a> <br>Bruce Banner</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col"><a href="#">Area amendment </a> <br>Bruce Banner  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">-</td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal</td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">- </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area removal  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">WITHDRAWN</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                <td class="govuk-table__cell" scope="col">PEL </td>
+                <td class="govuk-table__cell" scope="col">Area amendment  </td>
+                <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">APPROVED</span></td>
+              </tr>
+            </tbody>
+          </table>
+           <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 10 of 113 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>  
+        </section>
+
+
+
+      <div class="application-confirm">
+        <h3 class="govuk-heading-s">University of Croydon <span class="float-right">–</span></h3>
+        <p>View the details of this establishment, as well as lists of approved areas, people and active projects.</p>
+        <a href="submitted" class="govuk-button" style="margin-bottom: 0px;">View establishment information</a>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Active projects</h3>
+
+        <p><a href="#">How to cure heartache</a></p>
+        <p>Expiry date: 01 August 2022</p>
+
+
+        <h3 class="govuk-heading-s">Draft projects</h3>
+
+        <p><a href="#">Untitled draft project</a></p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Apply for project licence</a>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h3 class="govuk-heading-s">Named roles</h3>
+        <p>Establishent Licence Holder (PELH)</p>
+        <p>
+          <a class="govuk-button govuk-button--secondary">Assign named role</a>
+          <span class='secondary-link'><a href="#">Remove role</a></span>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h3 class="govuk-heading-s">Personal licence</h3>
+
+        <p><a href="#">AA-164902</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-s">Permission level</h3>
+        <p>Admin</p>
+
+      </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

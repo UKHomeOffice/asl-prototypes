@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'harms' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Project harms</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Explain why you are using these types of animals and your choice of life stages.
+          </label>
+        </h3>
+        <p>
+          We use mice throughout the project as they are an excellent genetic model. This gives the advantage of a rich suite of genetic strategies to target specific cell populations in the brain either to specifically record their activity, manipulate their activity, or alter their gene expression. These strategies are essential to allow rigorous analysis of underlying mechanism. 
+        </p>
+        <p>
+          To study the potential pathways that lead to sudden unexpected death in epilepsy (SUDEP) in man we will use adult mice. Mice have proven to be an excellent model for the acute and chronic states of epilepsy which permit rigorous investigation of underlying mechanisms and are used by many labs around the world.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Typically, what will be done to an animal used in your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          For example, injections and surgical procedures. Include any relevant information about the duration of experiments and the number of procedures.
+        </div>
+        <p>
+          A small hole will be made in the skull to enable precise injection of virus particles to give expression of a protein that will report the activity of the neuron that it is expressed in by its intensity of fluorescence. The mouse will be allowed to recover and 2 weeks later another hole made into the skull and a special lens implanted into the brain so that the fluorescence can be measured. At this time electrodes to allow the recording of brain waves and heart signalling, and a cannula to allow delivery of a substance to induce seizures, will also be implanted. The mouse will be allowed to recover and a further week later a special baseplate will be glued to the head in final minor surgical procedure. This baseplate allows mounting of a mini-microscope that will allow recording of neural activity as the mouse behaves normally. 
+        </p>
+
+        <p>
+          Following this preparative work we will record activity of neurons in these mice for up to 4 months. Seizures will then be induced by brief infusion of kainic acid through the cannula. This will cause acute seizures, followed by the establishment of a chronic epileptic state where the mouse will exhibit occasional spontaneous seizures. We will also study neuronal activity in this chronic state.
+        </p>
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What are the expected impacts and/or adverse effects for the animals during your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          Examples can include pain, weight loss, tumours, or abnormal behaviour. State the estimated duration of these effects on an animal.
+        </div>
+        <p>
+          The mice recover well from the surgical procedures and show minimal adverse signs either during or between recording sessions. Following kainic acid treatment, the mice will experience acute seizures for up to an hour. This will produce longer term changes in animal behaviour such as increased anxiety, memory/learning deficits and chronic epilepsy.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What are the expected severities and the proportion of animals in each category (per animal type)?
+          </label>
+        </h3>
+        <p>
+          For about 75% of animals the expected severity is severe. For the remaining animals on the protocol it will be moderate.
+        </p>
+       
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      {% set previousPage = 'ppl-benefits' %}
+      {% set previousPageTitle = 'Benefits' %}
+      {% set nextPage = 'ppl-fate' %}
+      {% set nextPageTitle = 'Fate of animals' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+  </div>
+
+{% endblock %}

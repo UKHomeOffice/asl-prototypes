@@ -1,0 +1,158 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Steps</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem asperiores et eligendi aspernatur dolor expedita aperiam dolores, voluptas impedit vero esse veritatis fugit similique molestiae adipisci? Vel quos ducimus unde.</p>
+
+      
+
+      <h2 class="govuk-heading-m">Add steps</h2>
+      <form action="steps" method="post">
+        {% if data['steps-reference'].length > 1 %}
+        <section class="step completed">
+          <h3 class="govuk-heading-s">
+            Step 1: {{data['steps-reference']}}
+            <span class="light smaller"> 
+              
+            </span>
+          </h3>
+          <div class="review">
+            <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+            <p class="govuk-hint"></p>
+            <p>{{data['steps-detail']}}</p>
+        </div>
+          <div class="review">
+            <h3 class="govuk-heading-s">Is this step optional?</h3>
+            <p>{{data['steps-optional']}}</p>
+          </div>
+          {% if data['steps-expected-effects'] === "Yes" %}
+          <div class="review">
+            <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+            <p class="govuk-hint"></p>
+            <p>{{data['steps-expected-effects']}}</p>
+          </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+              <p class="govuk-hint"></p>
+              <p>{{data['steps-limits']}}</p>
+            </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+              <p class="govuk-hint"></p>
+              <p>{{data['steps-likely-effects']}}</p>
+            </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+              <p class="govuk-hint"></p>
+              <p>{{data['steps-endpoints']}}</p>
+            </div>
+          {% endif %}
+        </section>
+      {% endif %}
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="steps-reference">
+            Step reference
+          </label>
+          <div id="steps-reference-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
+          <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="steps-reference" name="steps-reference" aria-describedby="steps-reference-hint"></input>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="steps-detail">
+            Describe the procedures that will be carried out during this step.
+          </label>
+          <div id="steps-detail-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="steps-detail" name="steps-detail" rows="5" aria-describedby="steps-detail-hint"></textarea>
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="steps-optional-hint">        
+            <label class="govuk-label--s" for="">
+              Is this step optional?<br><br>
+            </label>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steps-optional-conditional-3" name="steps-optional" type="radio" value="Yes" data-aria-controls="conditional-steps-optional-conditional-3">
+                <label class="govuk-label govuk-radios__label" for="steps-optional-conditional-3">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steps-optional-conditional-4" name="steps-optional" type="radio" value="No" data-aria-controls="conditional-steps-optional-conditional-4">
+                <label class="govuk-label govuk-radios__label" for="steps-optional-conditional-4">
+                  No
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-hint">        
+            <label class="govuk-label--s" for="">
+              Do you expect this step to have adverse effects for the animals that are more than mild and transient?
+            </label>
+            <div id="more-detail-hint" class="govuk-hint"></div>
+        
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steps-expected-effects-conditional-3" name="steps-expected-effects" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-effects-conditional-3">
+                <label class="govuk-label govuk-radios__label" for="steps-expected-effects-conditional-3">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-effects-conditional-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="steps-likely-effects">
+                    What are the likely adverse effects of this step?
+                  </label>
+                  <div id="steps-likely-effects-hint" class="govuk-hint"></div>
+                  <textarea class="govuk-textarea" id="steps-likely-effects" name="steps-likely-effects" rows="5" aria-describedby="steps-likely-effects-hint"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="steps-limits">
+                    How will you monitor for, control, and limit any of these adverse effects?
+                  </label>
+                  <div id="steps-limits-hint" class="govuk-hint"></div>
+                  <textarea class="govuk-textarea" id="steps-limits" name="steps-limits" rows="5" aria-describedby="steps-limits-hint"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="steps-endpoints">
+                    What are the humane endpoints for this step?
+                  </label>
+                  <div id="steps-endpoints-hint" class="govuk-hint"></div>
+                  <textarea class="govuk-textarea" id="steps-endpoints" name="steps-endpoints" rows="5" aria-describedby="steps-endpoints-hint"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="steps-expected-effects-conditional-4" name="steps-expected-effects" type="radio" value="No" data-aria-controls="conditional-steps-expected-effects-conditional-4">
+                <label class="govuk-label govuk-radios__label" for="steps-expected-effects-conditional-4">
+                  No
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Save step</button>
+      </form>
+    </p>
+    
+    <a href="#" class="govuk-button">Continue</a>
+    <span class="secondary-link"><a href="#">List of sections</a></span>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+	  <div class="download-header">
+	    <span class="govuk-body licence-identifier" class="">Development of new biological anticancer agents</span>
+	    <span class="float-right download-options">
+	      <span class="hod-download-button side-space icon-small"></span>
+	      <a onclick="toggleDetails()" href="javascript:void(0);" id="downloads-label">View download options</a>
+	    </span>
+      <span class="govuk-body licence-type" class="">Non-technical summary&ensp;<a  onclick="toggleDetails()" href="javascript:void(0);" id="details-label">View details</a></span>
+      <div id="details-panel" class="details-panel">
+        <span class="float-right download-options">
+          <ul class="govuk-list">
+            <li><a href="#">Non-technical summary (.pdf)</a></li>
+            <li><a href="/ra-submission/downloads">All downloads</a></li>
+          </ul>
+        </span>
+        <dl class="govuk-body" style="width: 75%;">
+          <dt>PPL title</dt>
+          <dd>Development of new biological anticancer agents</dd>
+          <dt>PPL number</dt>
+          <dd>78847475dd>
+          <dt>Expiry date</dt>
+          <dd>01 July 2020</dd>
+          <dt>Retrospective assessment due</dt>
+          <dd>02 January 2021</dd>
+          <dt>Reason for retrospective assessment</dt>
+          <dd>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Contains severe procedures</li>
+              <li>Uses cats, dogs or equidae</li>
+            </ul>
+          </dd>
+        </dl> 
+      </div>
+	  </div>
+	</div>
+</div> 
+
+<Script>
+  function toggleDetails() {
+  var x = document.getElementById("details-panel");
+  var detailsLabel = document.getElementById("details-label");
+  var downloadsLabel = document.getElementById("downloads-label");
+  console.log(x.style.display)
+  if (x.style.display === "none") {
+    console.log("click")
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    downloadsLabel.innerHTML = "Hide download options";
+  } else if (x.style.display === "block") {
+    x.style.display = "none";
+    detailsLabel.innerHTML = "View details";
+    downloadsLabel.innerHTML = "View download options";
+  } else {
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    downloadsLabel.innerHTML = "Hide download options";
+  }
+}
+</Script>
+  
+  <style>
+    .download-options {
+      width: 20%;
+    }
+    #details-panel{
+      display: none;
+      padding-top: 1rem;
+      }
+  </style>
+

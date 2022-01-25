@@ -1,0 +1,268 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Inspector
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#tasks">
+              Tasks
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Establishments
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#people">
+              People
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#projects">
+              Projects
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="tasks" style="border:none;"></section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="projects" style="border:none;">
+          <h2 class="govuk-heading-m">Advanced project search</h2>
+          <p>Search all current and past projects.</p>
+          <div class="govuk-form-group search-box">
+            <form action="search-content-link-content#projects">
+              <label for="" class="govuk-label">Enter a search term</label>
+              <span class="govuk-hint">For example, stem cells</span>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px" placeholder="impedit totam">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span>
+            </button>
+            &emsp;&emsp;&emsp;<a href="#">Clear search</a>
+          </div>
+          <p>
+            <a href="/improving-nav/search-content-link-meta#projects">Back to project directory</a>
+          </p>
+          <br>
+          <div class="govuk-gird-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span><strong>Filter projects</strong></span>
+            {% include "includes/search-filters.html" %}
+          </div>
+          <div class="govuk-grid-column-three-quarters">
+            <p>
+              <strong>14 results from 3 projects</strong>
+              <span class="float-right"><a href="#">Download details for 3 projects (.csv)</a></span>
+            </p>
+            <!-- <ul class="govuk-list">
+              <li>
+                Containing the search term 'impedit totam'
+              </li>
+              <li>
+                Filtered by 'Animal types: Mice', 'Animal types: Rats' and 'Project
+              </li>
+
+            </ul> -->
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+            <h2 class="govuk-heading-m">A study on treatment and penetrance of inherited cardiac conditions</h2>
+          </p> -->
+          <p>
+              <a class="search-project-heading" href="#">A study on treatment and penetrance of inherited cardiac conditions</a>
+            </p>
+          <div class="govuk-grid-row ppl-metadata">
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>PPL holder: Bruce Banner</li>
+                <!-- <li>PPL number: PB9375H87</li> -->
+                <li>Establishment: University of Croydon</li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>
+                  Licence status: Active
+                </li>
+                <li>
+                  Expiry date: 12 June 2020
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <p><a href="#">Go to project overview</a></p> -->
+          <p>4 results for ‘impedit totam’</p> 
+            <div class="govuk-details__text">
+              <h3 class="govuk-heading-s">Project summary <span class="unbold">in <a href="#">Licence</a></h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+            </div>
+            <br>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Show 3 more sections contatining 'impedit totam'
+                </span>
+              </summary>
+              <div class="">
+                <div class="govuk-details__text">
+                  <h3 class="govuk-heading-s">Aims <span class="unbold">in <a href="#">application</a></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+                <br>
+                <div class="govuk-details__text">
+                  <h3 class="govuk-heading-s">Protocol: 2 <span class="unbold"> in <a href="#">licence</a> and <strong>Protocol: 2  </strong> in <a href="#">application</a></span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+                <br>
+                <div class="govuk-details__text">
+                    <h3 class="govuk-heading-s">Scientific background <span class="unbold">in the <a href="#">application</a></span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+              </div>
+            </details>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">A study to identify new treatments for renal fibro</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">A study to identify new treatments for <span class="highlight">impedit totam</span></a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- <p><a href="#">Go to project overview</a></p> -->
+            
+            <p>4 results for ‘impedit totam’</p>
+            <div class="govuk-details__text">
+              <h3 class="govuk-heading-s">Introductory details <span class="unbold"> in <a href="#">application</a> </h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+            </div>
+            <br>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">A study of microvascular techniques for surgeons</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">A study of microvascular techniques for surgeons</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Dave Lee</li>
+                  <!-- <li>PPL number: P88375958</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active (Includes project continuation)
+                  </li>
+                  <li>
+                    Expiry date: 1 May 2025
+                  </li>
+                </ul>
+              </div>
+              
+              
+              
+            </div>
+            <!-- <p><a href="#">Go to project overview</a></p> -->
+            <p>Contains 'impedit totam' in the sections:</p>
+
+            <div class="govuk-details__text">
+              <h3 class="govuk-heading-s">Introductory details <span class="unbold">(View in the <a href="#">licence</a>, <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+            </div>
+            <br>
+              <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  See 6 more sections contatining 'impedit totam'
+                </span>
+              </summary>
+              <div class="">
+                <div class="govuk-details__text">
+                  <h3 class="govuk-heading-s">Aims and objectives <span class="unbold">(View in the <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+                <br>
+                <div class="govuk-details__text">
+                  <h3 class="govuk-heading-s">Protocols <span class="unbold">(View in the <a href="#">licence</a> and <a href="#">application</a>)</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+                <br>
+                <div class="govuk-details__text">
+                  <h3 class="govuk-heading-s">Scientific background <span class="unbold">(View in the <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                </div>
+                
+              </div>
+            </details>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          </div>
+        </div>
+
+        </section>
+
+      </div>
+
+      
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .unbold {
+      font-weight: normal;
+    }
+    .ppl-metadata ul {
+      font-size: 16px;
+    }
+  </style>
+
+{% endblock %}

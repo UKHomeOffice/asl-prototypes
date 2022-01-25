@@ -1,0 +1,30 @@
+   
+   <div class="autocomplete">
+      <input id="myInput" type="text" name="establishment" class="govuk-input" style="width: 600px;">
+    </div>
+    <!-- <input type="submit" class="govuk-button"> -->
+  
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/typeahead.js"></script>
+
+  <script>
+    /*An array containing all the country names in the world:*/
+    var inputValues = [
+    'Marvell Pharmaceutical',
+    'Royal Westhamptonshire University',
+    'Segundo',
+    'Slough University',
+    'Tertiary Tutorial College',
+    'The Centre of Equine Excellence',
+    'The Colloquy of Physiology at Limehouse',
+    'The Great College of Medicine at Leith Sunshine',
+    'The University of Training and Planing',
+    'University of Croydon',
+    'University of Muswell Hill',
+    'University of North Woolwich',
+    'University of West Woking',
+    'UXB Chemicals'
+    ];
+    
+    /*initiate the autocomplete function on the "myInput" element, and pass along the inputValues array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), inputValues);
+  </script>

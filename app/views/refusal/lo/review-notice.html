@@ -1,0 +1,141 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Check refusal notice
+      </h1>
+      
+      <p>This notice will be sent to the applicant and a copy will be forwarded to the establishment licence holder and admins. Check that the reason for refusal is clear and contains no formatting errors. </p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <p><span id='date-today'></DATE></p>
+      <p>Dear Bruce Banner,</p>
+      <p><strong>NOTICE OF INTENTION TO REFUSE A LICENCE UNDER THE ANIMALS (SCIENTIFIC PROCEDURES) ACT 1986</strong></p>
+      <p>Application title: [PROJECT TITLE]</p>
+      <p>On behalf of the Secretary of State, I am providing notice of intent to refuse your application as required by <a href="#">Section 12(1)</a> of the Act following evaluation under <a href="#">section 5B</a> of the Act by an inspector appointed under <a href="#">Section 18(1)</a> and in accordance with their duty under <a href="#">Section 18(2[a])</a> of the Act.</p>
+      <p>It is proposed to refuse your licence application for the following reasons below:</p>
+      <div class="govuk-inset-text">
+        <p>
+          <span id="insp-refusal-reason">
+          {% if data["refusal-summary"].length > 1 %}
+          {{data["refusal-summary"]}}
+          {% else %}
+          The use of NHPs is not justified and the applicant refuses to use an alternative
+          {% endif %}
+          {% include "includes/edit-field.html" %}
+        </span> 
+        </p>
+      </div>
+      <p>Under <a href="#">Section 12(3)</a> of the Act, you have the right to make representations in writing or in person against the Secretary of State’s proposal to refuse your application for a licence. Should you wish to make representations to a person appointed by the Secretary of State, you must respond to this notice by <span class="date-28-days"></span>. You may give notice of your intention to make representations by contacting your SPoC or emailing aspa.london@homeoffice.gov.uk.</p>
+      <p>Please refer to <a href="https://www.gov.uk/guidance/guidance-on-the-operation-of-the-animals-scientific-procedures-act-1986">Appendix E of the Guidance on the Operation of the Act</a> for details on the process of making representations.</p>
+      <p>Yours sincerely, </p>
+      <p>Stirling Archer</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <form action="recommend-comment">
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a class="secondary-link" href="#">Back</a>
+        </p>
+
+      </form>
+        
+
+
+    
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

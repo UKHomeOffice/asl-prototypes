@@ -1,0 +1,217 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li class="selected"><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+        
+
+         <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script>
+         $(document).ready(function() {
+         var max_fields_limit      = 8; //set limit for maximum input fields
+         var x = 1; //initialize counter for text box
+         $('.add_more_button').click(function(e){ //click event on add more fields button having class add_more_button
+             e.preventDefault();
+             if(x < max_fields_limit){ //check conditions
+                 x++; //counter increment
+                 $('.input_fields_container_part').append('<div><input type="text" name="tags"/><a href="#" class="remove_field" style="margin-left:10px;">Remove</a></div>'); //add input field
+             }
+         });  
+         $('.input_fields_container_part').on("click",".remove_field", function(e){ //user click on remove text links
+             e.preventDefault(); $(this).parent('div').remove(); x--;
+         })
+     });
+     </script>
+      
+      <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpbh'},{'server':'sg3plvcpnl342204'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
+     
+     
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for protocols
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The procedures are appropriately specified, justified and relevant to the project.
+          </li>
+          <li>
+            The severity classification for each protocol is in line with Guidance Appendix G.
+          </li>
+          <li>
+            The species and life stages are relevant and adequately justified.
+          </li>
+          <li>
+            Continued use of animals, either from or onto other protocols, is reasonable and appropriately specified.
+          </li>
+          <li>
+            Killing methods are either appropriate methods as defined by ASPA 15A, or are scientifically justified and are appropriately specified.
+          </li>
+          <li>
+            The use of humane endpoints is justified and relevant.
+          </li>
+          <li>
+            The experimental or observational strategy and statistical design to minimise numbers, harms and environmental impacts are appropriate and adequate. 
+            <br>
+            <span class="govuk-hint">Check also responses in project plan for relevant information</span>
+          </li>
+          <li>
+            Any form of animal suffering, from birth to death, is justified and relevant.
+            <br>
+            <span class="govuk-hint">Check also project location, use of animals and other considerations for relevant information</span>
+          </li>
+        </ul>
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    
+    <h2 class="govuk-heading-m">Authorisations and conditions</h2>
+    
+    <p>View the authorisations and conditions related to the specific protocols.</p>
+    <a href="#" class="float-right">Open all</a>
+    <button class="accordion">Protocol 1 
+
+        <span class=" badge badge-condition" style="font-size: 16px; ">1 condition</span> 
+        <span class=" badge badge-condition" style="font-size: 16px; ">1 authorisation</span>
+    </button>
+    <div class="panel">
+       
+        <h3 class="govuk-heading-m">Additional conditions</h3>
+        <div id="protoListCond"></div>
+        <div add-conditions>
+          <div id="contition-added" class="condition-added">
+            <div class="govuk-inset-text">
+              <h3 class="govuk-heading-s">Additional condition 1 </h3>
+              <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are started.</p>
+            </div>
+          </div>
+      
+          <h3 class="govuk-heading-m">Authorisations</h3>
+          <div id="protoAuths" class="">
+            <div id="authorisation-added" class="authorisation-added">
+              <div class="govuk-inset-text">
+                <h3 class="govuk-heading-s" id="authNumber">Continued use onto a protocol</h3>
+                <p id="authContentOutput">Continued use on to protocol [x]
+                  <<<INSERT animal type(s) HERE>>> used on this protocol may be obtained from protocol <<<INSERT number(s) HERE>>> of this project, or from other projects with authority to supply animals of a type authorised in this project.</p>
+                
+              </div>
+            </div>
+          </div> 
+    
+        </div>   
+          <br>
+        
+    </div>
+
+    <button class="accordion">Protocol 2</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Protocol 3</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Protocol 4 <span class=" badge badge-condition" style="font-size: 16px; ">1 condition</span></button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Protocol 5</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <br>
+    <br>
+
+    <form action="assessment-overview" method="POST">
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+      <p>Yes</p>
+
+      <h3 class="govuk-heading-s">Notes (optional)</h3>
+      <p>This is met based on the conditions and authorisation added above.</p>
+      
+      {% include "includes/assessment-footer-nav.html" %}
+    
+  
+    </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+</style>
+{% endblock %}

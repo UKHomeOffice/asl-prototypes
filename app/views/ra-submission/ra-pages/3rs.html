@@ -1,0 +1,83 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span>
+      <h1 class="govuk-heading-xl">Retrospective assessment</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li><a href="programme">Extent of the programme of work</a></li>
+          <li><a href="objectives">Achievement of the objectives</a></li>
+          <li><a href="hba">Actual harms caused</a></li>
+          <li class="selected"><a href="3rs">Lessons learnt contributing to the 3Rs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Lessons learnt contributing to the 3Rs</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Useful stuff related to this question
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          XXX
+        </div>
+      </details>
+      <h2 class="govuk-heading-m">Describe what lessons, if any, have been learned that contribute to the 3Rs.</h2>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Replacement
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">Please describe any 3Rs opportunities identified and implemented</span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Reduction
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">Please describe any 3Rs opportunities identified and implemented</span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Refinement
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">Please describe any 3Rs opportunities identified and implemented</span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+
+      <p>
+        <button class="govuk-button">Continue</button>
+        <a class="secondary-link" href="#">Cancel</a>
+      </p>
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,158 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Steps</h1>
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body">
+          <span style="font-size: 18px;font-weight:bold;">Please review your answers for:</span >
+        </div>
+        <h1 class="govuk-panel__title">Steps</h1>
+      </div>
+      
+      {% if previousStep > 0 %}
+      <section class="step completed">
+        <h3 class="govuk-heading-s">
+          Step 1: {{data['steps-reference-1']}}
+          <span class="light smaller"> 
+            
+          </span>
+        </h3>
+        <div class="review">
+          <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-detail-1']}}</p>
+      </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">Is this step optional?</h3>
+          <p>{{data['steps-optional-1']}}</p>
+        </div>
+        {% if data['steps-expected-1'] === "Yes" %}
+        <div class="review">
+          <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-expected-1']}}</p>
+        </div>
+          <div class="review">
+            <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+            <p class="govuk-hint"></p>
+            <p>{{data['steps-limits-1']}}</p>
+          </div>
+          <div class="review">
+            <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+            <p class="govuk-hint"></p>
+            <p>{{data['steps-likely-effects-1']}}</p>
+          </div>
+          <div class="review">
+            <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+            <p class="govuk-hint"></p>
+            <p>{{data['steps-endpoints-1']}}</p>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+    {% if previousStep > 1 %}
+    <section class="step completed">
+      <h3 class="govuk-heading-s">
+        Step 2: {{data['steps-reference-2']}}
+        <span class="light smaller"> 
+          
+        </span>
+      </h3>
+      <div class="review">
+        <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+        <p class="govuk-hint"></p>
+        <p>{{data['steps-detail-2']}}</p>
+    </div>
+      <div class="review">
+        <h3 class="govuk-heading-s">Is this step optional?</h3>
+        <p>{{data['steps-optional-2']}}</p>
+      </div>
+      {% if data['steps-expected-2'] === "Yes" %}
+      <div class="review">
+        <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+        <p class="govuk-hint"></p>
+        <p>{{data['steps-expected-2']}}</p>
+      </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-limits-2']}}</p>
+        </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-likely-effects-2']}}</p>
+        </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-endpoints-2']}}</p>
+        </div>
+      {% endif %}
+    </section>
+  {% endif %}
+  {% if previousStep > 2 %}
+    <section class="step completed">
+      <h3 class="govuk-heading-s">
+        Step 3: {{data['steps-reference-3']}}
+        <span class="light smaller"> 
+          
+        </span>
+      </h3>
+      <div class="review">
+        <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+        <p class="govuk-hint"></p>
+        <p>{{data['steps-detail-3']}}</p>
+    </div>
+      <div class="review">
+        <h3 class="govuk-heading-s">Is this step optional?</h3>
+        <p>{{data['steps-optional-3']}}</p>
+      </div>
+      {% if data['steps-expected-3'] === "Yes" %}
+      <div class="review">
+        <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+        <p class="govuk-hint"></p>
+        <p>{{data['steps-expected-3']}}</p>
+      </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-limits-3']}}</p>
+        </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-likely-effects-3']}}</p>
+        </div>
+        <div class="review">
+          <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+          <p class="govuk-hint"></p>
+          <p>{{data['steps-endpoints-3']}}</p>
+        </div>
+      {% endif %}
+    </section>
+  {% endif %}
+        
+      {% include "includes/mark-section-complete.html" %}
+      <br>
+      <form action="ppl-index" method='POST'>
+        <input type="hidden" name="steps-complete" value="true">
+        <button class="govuk-button">Continue</button>
+      </form>
+      <span class=""><a href="#">List of sections</a></span>
+  </div>
+</div>
+
+
+{% endblock %}

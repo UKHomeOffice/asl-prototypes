@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'fate' %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Fate of animals</h1>
+      {% include "includes/nts-warning-small.html" %}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              What will happen to animals at the end of this project?
+            </h1>
+          </legend>
+   
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Killed</li>
+          </ul>
+          {% include "includes/add-comment.html" %}
+
+        </fieldset>
+      </div>
+     
+      {% set previousPage = 'ppl-harms' %}
+      {% set previousPageTitle = 'Project harms' %}
+      {% set nextPage = 'ppl-replacement' %}
+      {% set nextPageTitle = 'Replacement' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+  </div>
+
+{% endblock %}

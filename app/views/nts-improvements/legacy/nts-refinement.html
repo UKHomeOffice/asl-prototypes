@@ -1,0 +1,106 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li>Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-replacement.html"><li >Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li class="selected">Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Refinement
+      </h1>
+      <h2 class="govuk-heading-s">
+        Explain the choice of species and why the animal model(s) you will use are the most refined, having regard to the objectives. Explain the general measures you will take to minimise welfare costs (harms) to the animals.
+      </h2>
+      <p>
+        In all studies we choose the animals with the least awareness and the physiology to provide a meaningful comparison to man. So for most pharmaceuticals and industrial chemicals, rats and mice are chosen. Sometimes, the physiology doesn't allow us to use mice and rats so other species like hamsters (rarely) guinea pigs (rarely) and pigs and dogs have to be used. Otherwise we would not be able to provide the data to assess the safety we are trying to establish. When animals like pigs and dogs are used it is usually mandated by regulators who won't accept the rat or mice for these types of studies (e.g. measuring the rhythms of the heart to see if new drugs affect them).
+      </p>
+      <p>
+        In all cases pigs are chosen in preference to dogs for use on study if the results can be achieved by using the pig as an alternative animal choice.
+      </p>
+      <p>
+        As a rule, all of our animals are group housed rather than singly housed, at all times, unless there is a good scientific reason not to. This would need to be approved by a vet to occur.
+      </p>
+      <p>
+        Animals may be implanted with devices (telemeters) to allow continuous recording of cardiovascular parameters such as blood pressure,heart rate etc. This is considered to be a refinement as ,despite the initial surgery required to implant such devices, the data obtained is obtained from animals that are going about their daily routines in home pen rather than the animal being taken out of its usual environment for recordings to be taken, which in itself may be stressful and influence readings.
+      </p>
+      <p>
+        These surgeries will be performed under general anaesthesia by trained people (including veterinary surgeons) utilising 'sterile' techniques, with appropriate antibiotics and pain relief as standard, and an appropriate recovery timeprior to use on study. Animals which have had telemetry surgery may be used on a number of occasions so called 're-use' to provide data on a number of different drugs, rather than a new animal being used each time. However such reuse is subject to that use not confounding the results of the next study as the animal has been used before and is subject to veterinary examination to ensure that the animal is suitable for use and that it will not be detrimentally impacted in terms of its welfare due that reuse. Animals on these study types will be dosed with test materials and carefully monitored for adverse effects such as weight loss and ill health due to dosing during testing. If adverse effects occur then we provide supportive treatment and care under veterinary supervision (including additional wet food and heating) We also use external and less invasive jackets to measure heartrhythms, and smaller transmitters with less invasive surgery in our studies to measure blood pressure when appropriate, if the study design allows it. However the gold standard to give cardiovascular safety data remains the abdominal implant described earlier.
+      </p>
+      <p>
+        Animals on this programme of work that are not implanted surgically will generally undergo acute (single dose shorter testing regime) , mainly involving a single dose of test material, and will be similarly monitored closely for potential adverse effects.
+      </p>
+      <p>
+        Animals are sometimes implanted with substance delivery systems/equipment that enable infusion of a test substance (rather than repeat dosing) by direct injection into blood stream and this is, despite initial surgery, often a more refined way of dosing animals over a longer period of time than by daily repeat injections.
+      </p>
+      <p>
+        All animals are monitored closely and any animals showing adverse effects to test materials will be monitored more closely than normal and appropriate interventions taken depending on effects seen, eg reduce dose, stop dosing, humanely kill. Veterinary advice will be taken regarding any treatment actions needed to stop/minimise any adverse effects occurring.
+      </p>
+      <div class="grey-panel">
+        <h3 class="govuk-heading-s">A retrospective assessment of refinement will be due by 02 January 2021</h3>
+        <p>The licence holder will be required to disclose if the project could have been refined, and how harms to animals were minimised.</p>
+      </div>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="nts-reduction.html" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Reduction</span>
+            </a>
+          </li>
+          <!-- <li class="gem-c-pagination__item">
+            <a href="nts-refinement" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Refinement</span>
+            </a>
+          </li> -->
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

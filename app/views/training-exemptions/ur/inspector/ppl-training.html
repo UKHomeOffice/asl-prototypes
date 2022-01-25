@@ -1,0 +1,223 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl.html" %}
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="#" class="back-to-sections"><li>List of sections</li></a>
+        <a href="#"><li>Project introduction</li></a>
+        <a href="#"><li class="selected">Applicant information</li></a>
+        <a href="#"><li class="selected-child">Experience</li></a>
+        <a href="#"><li class="selected-child">Training</li></a>
+        <a href="#"><li class="selected-child">Funding</li></a>
+        <a href="#"><li>Project location</li></a>
+        <a href="#"><li>Project plan</li></a>
+        <a href="#"><li>Protocols</li></a>
+        <a href="#"><li>Use of animals</li></a>
+        <a href="#"><li>Other considerations</li></a>
+        <a href="#"><li>The 3Rs</li></a>
+        <a href="#"><li>Non-technical summary</li></a>
+        <a href="#"><li>Additional conditions</li></a>
+        <a href="#"><li>Authorisations</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Training</h1>
+
+      <h3 class="govuk-heading-m">Evidence of training</h3>
+      
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87478489</li>
+                <li>Awarded on: 3 January 2018</li>
+                <li>Awarded by: Universities Group</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Exemption
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Module K skills will be developed in-house as opportunities arise</p>
+            </td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>E2</li>
+                <li>PPL</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+             </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87595/33</li>
+                <li>Awarded on: 12 April 2020</li>
+                <li>Awarded by: Royal Veterinary College</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+            
+      <!-- <h2 class="govuk-heading-m">Is this evidence complete and correct?</h2>
+      <p>Yes</p>
+      <p><a href="#">Edit</a></p> -->
+
+      <a class="govuk-button govuk-button--secondary">Add comment</a>
+
+      
+      <!-- <br>
+      
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--secondary">Continue</a>
+      <a class="secondary-link" href="#">Cancel</a> -->
+      
+      
+      
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+            <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+              <a href="ppl-experience" class="gem-c-pagination__link" >
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">
+                    Previous
+                  </span>
+                </span>
+                  <span class="gem-c-pagination__link-divider hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Experience</span>
+              </a>
+            </li>
+            <li class="gem-c-pagination__item">
+              <a href="ppl-funding" class="gem-c-pagination__link">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">
+                    Next
+                  </span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Funding</span>
+              </a>
+            </li>
+            <li class="XXX">
+                <span class="gem-c-pagination__link-title">
+                </span>
+                  <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ppl-index">View all sections</a> or <a href="ppl-task">close task</a></span>
+                </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+</style>
+{% endblock %}

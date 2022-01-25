@@ -1,0 +1,778 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Animals in Science Regulation Unit</span>
+      <h1 class="govuk-heading-l">Staff workload and performance</h1>
+      <span class="govuk-body-l">Check individual staff workloads and monitor the rate of completed tasks.</span>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <!-- &ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>1 January 2021 to 31 December 2021</option>
+          <option value="updated">1 January 2020 to 31 December 2020</option>
+        </select> -->
+      </p>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+  <!-- <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,627</span>
+        <span class="label">returns due in 2021</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">28</span>
+        <span class="label">returns submitted</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,599</span>
+        <span class="label">returns outstanding</span>
+      </div>  
+    </div>
+  </div> -->
+  <br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Outstanding and in progress tasks 
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Completed tasks
+            </a>
+          </li>
+        
+        </ul>
+
+        <!-- <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          <h3 class="govuk-heading-m">Returns due in 2021</h3>
+          <dl class='unbold'>
+            <dt>Total returns due in 2021</dt>
+            <dd>3,627</dd>
+          </dl>
+          <h2 class="govuk-heading-m">Returns submitted</h2>
+          <dl class='unbold'>
+            <dt>Total returns submitted</dt>
+            <dd>28</dd>
+            <dt>Returns updated </dt>
+            <dd>0</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Returns outstanding</h3>
+          <dl class='unbold'>
+            <dt>Total returns outstanding</dt>
+            <dd>3,599</dd>
+            <dt> Returns queried by Home Office </dt>
+            <dd>0</dd>
+            <dt>Returns overdue</dt>
+            <dd>0</dd>
+          </dl>
+         </section> -->
+
+
+         <section class="govuk-tabs__panel" id="incomplete" style="border:none; pa">
+         
+          <p>
+            Filter by status:&emsp;<strong>Tasks with ASRU</strong>&emsp;<a href="#">Tasks with establishments</a>&emsp;<a href="#">All tasks</a>
+          </p>
+          <p>
+            Filter by role:&emsp;<strong>Tasks with inspectors</strong>&emsp;<a href="#">Tasks with licensing Officers</a>&emsp;<a href="">All roles</a>
+            <span class="float-right"><a href="#">Download table (CSV)</a></span>
+          </p>
+          
+          <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Number of tasks</caption> -->
+            <thead class="govuk-table__head">
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                
+              </tr>
+                <th scope="col" class="govuk-table__header sortable">Staff member</th>
+              <!-- <th scope="col" class="govuk-table__header sortable">Roles</th> -->
+                <th scope="col" class="govuk-table__header sortable">Number of PPL applications</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PPL amendments</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PILs</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PELs</th>
+                <th scope="col" class="govuk-table__header sortable">Number of Profiles</th>
+                <th scope="col" class="govuk-table__header sortable">Total</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name">Unassigend tasks</td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">13</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">19</td>
+                <td class="govuk-table__cell">13</td>
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">64</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Alesha Hancock</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Avneet Reese</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">20</td>
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">38</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Ayush Glenn</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Bhavik Lott</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Cherry Lord</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Derrick Kavanagh</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Dulcie Foster</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector, Licensing officer</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Emilie Mendez</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Fahmida Potts</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">16</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Gladys Enriquez</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Hebe John</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Izaan Ewing</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">9</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Jeanne Pickett</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kaylem Serrano</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Keir Cullen</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Khushi Dean</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">10</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kristopher Beech</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kurt Heath</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Laurel Grant</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">14</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Lewis Shepherd</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Lucca Reyes</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Maksim Quintero</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">13</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Mert Rooney</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">21</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Phebe Mccallum</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">14</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Sofija Clayton</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">23</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Solomon Mcnamara</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Tate Mullen</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Teegan Walton</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">7</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Zakariyah Mccarthy</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        
+          {% include "includes/pagination.html" %}
+
+       <style>
+         .inline-label  {
+           display: inline-block;
+         }
+       </style>   
+          
+        </section>      
+        
+        
+         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none; padding-bottom:0; padding-left:0">
+          <span class="inline-label" style="display:inline">Showing tasks completed from:&ensp;
+            <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text" placeholder="1 October 2021" style="display:inline-block">
+            to 
+            <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text" placeholder="31 October 2021" style="display:inline-block">
+            <button class="govuk-button" style="display: inline-block;">Update</button> 
+          </div>
+          <p>
+            Filter by role:&emsp;<strong>Tasks with inspectors</strong>&emsp;<a href="#">Tasks with licensing Officers</a>&emsp;<a href="">All roles</a>
+            <span class="float-right"><a href="#">Download table (CSV)</a></span>
+          </p>
+                    
+          <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Number of completed tasks</caption> -->
+            <thead class="govuk-table__head">
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header sortable">Staff member</th>
+                <!-- <th scope="col" class="govuk-table__header sortable">Roles</th> -->
+                <th scope="col" class="govuk-table__header sortable">Number of PPL applications</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PPL amendments</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PILs</th>
+                <th scope="col" class="govuk-table__header sortable">Number of PELs</th>
+                <th scope="col" class="govuk-table__header sortable">Number of Profiles</th>
+                <th scope="col" class="govuk-table__header sortable">Total</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name">Unassigend tasks</td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">23</td>
+                <td class="govuk-table__cell">14</td>
+                <td class="govuk-table__cell">31</td>
+                <td class="govuk-table__cell">9</td>
+                <td class="govuk-table__cell">89</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Alesha Hancock</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Avneet Reese</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">20</td>
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">38</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Ayush Glenn</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Bhavik Lott</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Cherry Lord</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Derrick Kavanagh</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Dulcie Foster</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector, Licensing officer</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Emilie Mendez</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Fahmida Potts</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">16</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Gladys Enriquez</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Hebe John</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Izaan Ewing</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">9</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Jeanne Pickett</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kaylem Serrano</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Keir Cullen</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Khushi Dean</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">10</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kristopher Beech</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Kurt Heath</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Laurel Grant</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">14</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Lewis Shepherd</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Lucca Reyes</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Maksim Quintero</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">13</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Mert Rooney</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">21</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Phebe Mccallum</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">14</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Sofija Clayton</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Licensing Officer</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">23</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Solomon Mcnamara</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Tate Mullen</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Teegan Walton</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">7</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell inspector-name"><a href="#">Zakariyah Mccarthy</a></td>
+                <!-- <td class="govuk-table__cell inspector-name">Inspector</td> -->
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">8</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        
+          {% include "includes/pagination.html" %}
+
+          
+          
+        </section>
+        
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

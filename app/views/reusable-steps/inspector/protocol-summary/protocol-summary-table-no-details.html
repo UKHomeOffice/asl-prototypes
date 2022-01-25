@@ -1,0 +1,431 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+
+<style>
+  
+</style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ppl-application.html" %}                
+
+      <h1 class="govuk-heading-l">Summary table of steps</h1>
+
+
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+
+            <li>Licences for work that needs to satisfy regulatory guidelines</li>
+          <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>
+              The regulatory guidelines or frameworks to be met are clear.
+            </li>
+              <li>
+              There are no satisfactory non-animal alternatives.
+            </li>
+              <li>
+              Where non-animal alternatives are accepted by the regulator they are used.
+            </li>
+              <li>
+              There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+            </li>
+              <li>
+              Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+            </li>
+              <li>
+              For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+            </li>
+          </ul>
+        </div>
+      </details>   
+      <script type="text/javascript">
+        function toggleRow(button) {
+          var toggleRow = $(button).parent().parent()
+
+          var allRow = $(button).parent().parent()
+          var nextRow = $(button).parent().parent().next('tr')
+          console.log(nextRow)
+    
+          $(button).text($(button).text() == 'Close' ? 'Open' : 'Close');
+          $(nextRow).toggleClass("hide")
+          $(allRow).children().toggleClass("open-row")
+        }; 
+    
+    </script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.protocol-header-row').click(function(){
+      console.log(this)
+      $(this).next('.stepRowContent').toggleClass('hide');
+      $(this).children('.protocol-name').toggleClass('open');
+      $(this).children('td').toggleClass('no-underline');
+      $(this).toggleClass('no-underline');
+    });
+  });
+
+</script>
+
+    <style>
+      .open-row {
+        border-bottom: none;
+      }
+      .protocol-header-row:hover {
+        background-color: white;
+        cursor: pointer;
+      }
+      .stepRowContent {
+        margin-left: 5px;
+        border-left: 5px solid #b1b4b6	;
+      }
+      .stepRowContent td {
+        padding-left: 15px;
+      }
+      .protocol-name:before{
+        font-size: 14px;
+        padding-right: 0.3em;
+        content: "▶";
+      }
+      .protocol-name.open:before{
+        font-size: 14px;
+        padding-right: 0.3em;
+        content: "▼"
+      }
+    </style>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Protocol</th>
+            <th scope="row" class="govuk-table__header">Animal types</th>
+            <th scope="row" class="govuk-table__header">Max number of animals</th>
+            <th scope="row" class="govuk-table__header">Max uses per animal</th>
+            <th scope="row" class="govuk-table__header">Life stages</th>
+            <th scope="row" class="govuk-table__header">GA</th>
+            <th scope="row" class="govuk-table__header">Severity category</th>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              1: Breeding and maintenance of genetically altered mice
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">75000</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">embryo, neonate, juvenile, adult, pregnant</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Mild</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+                <li>Step 1: Creation of genetically altered embryos</li>
+              
+
+                <li>Step 2: Tissue sampling for genetic analysis</li>
+              
+                <li>Step 3: Animals will be killed - Schedule 1, decapitation, perfusion fixation and Exsanguination</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              2: In vivo characterisation of genetically altered mice
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">2500</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">neonate, juvenile, adult, pregnant</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+                <li>Step 1: Long term maintenance (AA)</li>
+              
+                <li>Step 2: Administration of substances to enhance transgenic effect</li>
+              
+                <li>Step 3: Blood sampling <span class="reuse-flag">Reused on protocols 3, 4, 5, 6, 7, 8, 9</span></li>
+
+                <li>Step 4: Behavioural testing</li>
+
+                <li>Step 5: Imaging using various modalities</li>
+              
+                <li>Step 6: Animals will be killed - Cardiac puncture, perfusion fixation and schedule 1</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              3: Lung Tumour Models
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">1000</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+              
+                <li>Step 1: Administration of virus or tumour cell </li>
+                <li>Step 2: Administration of known chemical agents to induce lung injury</li>
+                <li>Step 3: Administration of transgene inducing or deleting agents - weighed 2x weekly <span class="reuse-flag">Reused on protocols 3, 4, 5, 7, 8, 9</span></li>
+                <li>Step 4: Administration of agents that ameliorate tumour development v1</li>
+                <li>Step 5: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 6: Imaging of tissues <span class="reuse-flag">Reused on protocols 4, 5, 6, 7, 8, 9</span></li>
+                <li>Step 7: Repeated Imaging <span class="reuse-flag">Reused on protocols 4, 5, 6, 7, 8, 9</span></li>
+                <li>Step 8: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused on protocls, 7, 8, 9</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              4: Intestinal Tumour Models
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">1000</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+              
+                <li>Step 1: Animals with known intestinal tumour phenotypes will be used</li>
+                <li>Step 2: Administration of transgene inducing or deleting agents - weighed 3x weekly</li>
+                <li>Step 3: Administration of agents that ameliorate tumour development v2</li>
+                <li>Step 4: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 5: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 6: Repeated Imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 7: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused from protocol 3</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              5: Pancreatic Tumour Models
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">1500</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+              
+                <li>Step 1: Animals with known pancreatic tumour phenotypes will be used</li>
+                <li>Step 2: Intra-peritoneal injection of caerulein (AA) to induce pancreatitis</li>
+                <li>Step 3: Administration of transgene inducing or deleting agents)</li>
+                <li>Step 4: Administration of agents that ameliorate tumour development v3 </li>
+                <li>Step 5: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 6: Identify tumour heterogeneity</li>
+                <li>Step 7: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 8: Repeated imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 9: Animals will be killed - Cardiac puncture, perfusion fixation, schedule 1 and intravital microscopy</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              6: Pancreatic Injury Models
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">1500</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+
+              
+              
+                <li>Step 1: Pancreatic Duct Ligation</li>
+                <li>Administration of transgene inducing or deleting agents - weighed 2x weekly <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 3: Administration of agents that induce tissue damage</li>
+                <li>Step 4: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 5: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 6: Repeated Imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 7: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused from protocol 3</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              7: Mammary Tumour Models
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">1500</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+                <li>Step 1: Animals with known mammary tumour phenotypes will be used</li>
+                <li>Step 2: Administration of transgene inducing or deleting agents inc intraductal injection</li>
+                <li>Step 3: Administration of agents that ameliorate tumour development v4 - B</li>
+                <li>Step 4: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 5: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 6: Repeated Imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 7: Surgical resection of primary mammary tumour</li>
+                <li>Step 8: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused from protocol 3</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              8: Transfer of cells - subcutaneous
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">800</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+                <li>Step 1: Injection of tumour cells subcutaneously</li>
+                <li>Step 2: Administration of transgene inducing or deleting agents - weighed 2x <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 3: Administration of agents that ameliorate tumour development v5 - B</li>
+                <li>Step 4: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 5: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 6: Repeated Imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 7: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused from protocol 3</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              9: Transfer of cells - intravenous
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">400</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+                <li>Step 1: Administration of cells intravenously</li>
+                <li>Step 2: Administration of transgene inducing or deleting agents - weighed 2x weekly</li>
+                <li>Step 3: Administration of agents that ameliorate tumour development v6</li>
+                <li>Step 4: Blood sampling <span class="reuse-flag">Reused from protocol 2</span></li>
+                <li>Step 5: Imaging of tissues <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 6: Repeated Imaging <span class="reuse-flag">Reused from protocol 3</span></li>
+                <li>Step 7: Animals will be killed - Cardiac puncture, overdose of pentobarbital, schedule 1 and intravital microscopy)  <span class="reuse-flag">Reused from protocol 3</span></li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row protocol-header-row">
+            <td class="govuk-table__cell protocol-name">
+              10: Pilot studies to determine the Maximum Tolerated Dose
+            </td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">500</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">juvenile, adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Severe</td>
+          </tr>
+          <tr class="govuk-table__row stepRowContent hide">
+            <td class="govuk-table__cell" colspan="8">
+              <p><strong>Where this protocol can be carried out:</strong> University of Croydon</p>
+              <ul class="govuk-list">
+                <li>Step 1: Test agents alone or in combination</li>
+                <li>Step 2: Blood sampling >10% per 24hr</li>
+                <li>Step 3: Animals will be killed - Schedule 1, Exsanguination and Perfusion fixation</li>
+              </ul>
+            </td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+
+    </div>
+
+    
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+
+.reuse-flag {
+  color: #6f777b
+}
+.reuse-flag:before {
+  content: '– '
+}
+</style>
+
+
+{% endblock %}

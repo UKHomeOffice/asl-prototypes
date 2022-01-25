@@ -1,0 +1,3630 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ppl-application.html" %}                
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+      {% include "includes/ppl-application-sidebar.html" %}                
+      
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+
+
+      <p>
+        <a href="#">View summary table</a>
+      </p>
+        
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        XXXX
+
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+    <span class="badge changed" >Changed</span>
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: Viral transduction, imaging, seizure induction and physiological monitoring</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">400</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            Briefly describe the purposes of this protocol
+          </h3>
+          <p class="govuk-hint">
+            Ensure that you state any relevant regulatory 
+          </p>guidelines.
+          
+          <p>
+            To optionally induce seizures and then to optionally use imaging, physiological recordings and behavioural testing of transduced, GA, wild type and control rodents to study the effects of the seizures on different types of neural cell in vivo.
+          </p>
+          
+          
+          <h3 class="govuk-heading-s">
+            Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
+          </h3>
+          <p>
+            Severe
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            What proportion of animals will experience this severity?
+          </h3>
+          <p>
+            75% of animals will have status epilepticus induced as well as cranial surgery this combination of procedures would be classed as severe. The remaining 25% of animals will be in control groups, which would be classed as moderate.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Why are you proposing this severity category?
+          </h3>
+          <p>
+            The recovery surgery for in vivo imaging itself is classified as moderate in our current project licence. However we propose to combine this with induction of status epilepticus. Given the additional burden on the animal we now classify this protocol as severe.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Locations where this protocol can be carried out
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <p>
+            University of Croydon
+          </p>
+          <h3 class="govuk-heading-s">
+            Which of your objectives will this protocol address?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <p>
+            Identifying the brainstem circuits affected by acute and chronic seizures
+          </p>
+          <p>
+            The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures          
+          </p>
+
+        </div>
+
+        <button class="accordion">Animals used in this protocol&emsp;<span class="badge changed" >Changed</span>
+        </button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Mice
+          </h3>
+          <h3 class="govuk-heading-s">
+            Which life stages will be used during this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Adult
+            </li>
+            <li>
+              Juvenile
+            </li>
+          </ul>
+          <h3 class="govuk-heading-s">
+            Will any animals coming on to this protocol be classed as ‘continued use’?
+          </h3>
+          <p class="govuk-hint">
+            ‘Continued use’ describes animals that are specifically genetically altered and bred for scientific use or animals that have had procedures applied to them in order to be prepared for use in this protocol.
+          </p>
+
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How did these animals start their use?
+          </h3>
+          <p class="govuk-hint">
+            Describe the procedures that have been applied to animals that will continue their use on to this protocol.
+          </p>
+
+          <p>
+            Protocol 2 or from other projects that have authority to breed and supply animals
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be re-using animals on to this protocol?
+          </h3>
+          <p class="govuk-hint">
+            ‘Re-use’ describes using animals again for a new experiment when you could equally use a naïve animal to get the same results.
+          </p>
+
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of animals that will be used on this protocol?
+          </h3>
+  
+          
+          <div class="showComparison">
+            <p>
+              <span class="badge changed">Changed</span>&emsp;<i class="fa fa-copy">
+              
+            </i> <a href="javascript:void()"  >See whats changed</a>
+            </p>
+          </div>
+          
+          <!-- The Modal -->
+          <div id="fateComparison" class="modal modal-dialoge">
+          
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="diff-window">
+                <div class="diff-window-header">
+                <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
+                  See what's changed
+                  <span class="govuk-body">
+                    <a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a>
+                  </span>
+                </h2>  
+                </div>
+                <div class="diff-window-body">
+                  <h2 class="govuk-heading-m">Do you need to transfer animals from a project that’s due to expire?</h2>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                      <h3 class="govuk-heading-s">Current licence</h3>
+                      <div class="panel-light-grey">
+                        <p class="highlight removed">
+                          300
+                        </p>
+                      </div>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                      <h3 class="govuk-heading-s">Proposed</h3>
+                      <div class="panel-light-grey">
+                        
+                        <p class="highlight added">
+                          400
+                        </p>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="diff-window-footer">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <p>
+            400
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of uses of this protocol per animal?
+          </h3>
+          <p class="govuk-hint">
+            For example, if some animals will go through this protocol three more times after their first use, the number of uses will be four. If no animals will go through this protocol more than once, enter '1'.
+          </p>
+          <p>
+            1
+          </p>
+        </div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Will this protocol use any genetically altered animals?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Which general types or strains will you be using and why?
+          </h3>
+          <p>
+            GA Mice with:
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
+            </li>
+            
+            <li>
+              Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
+            </li>
+            
+            <li>
+              Particular genes deleted or knocked in to analyze their function
+            </li>
+            
+            <li>
+              Floxed alleles of interest for subsequent conditional deletion for analysis of function
+            </li>
+            
+            <li>
+              Other modifications that enable specific and conditional targeting/expression of genes and constructs
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Do you expect any of these GAAs to show a harmful phenotype with welfare consequences?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <p class="govuk-hint">A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
+          <section class="step completed">
+            <h3 class='govuk-heading-s'>Step 1<span class="light smaller"> (optional)</span>
+            </h3>
+            <div class="review">
+              <h3 class='govuk-heading-s'>Describe the procedures that will be carried out during this step.</h3>
+              <p class="grey">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+              <div class="govuk-form-group">
+              <div id="title" class="editor readonly">
+              <div name="title" data-slate-editor="true" data-key="2345" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="2346">
+              <span data-slate-object="text" data-key="2347">
+              <span data-slate-leaf="true" data-offset-key="2347:0">
+              <span data-slate-string="true">Transfection, under general anaesthesia with recovery (AB):</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2348">
+              <span data-slate-object="text" data-key="2349">
+              <span data-slate-leaf="true" data-offset-key="2349:0">
+              <span data-slate-string="true">Induction and maintenance of general anaesthesia using an agent and by a route appropriate to the species and the procedure to be carried out (AB).</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2350">
+              <span data-slate-object="text" data-key="2351">
+              <span data-slate-leaf="true" data-offset-key="2351:0">
+              <span data-slate-string="true">Administration of analgesics (AB).</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2352">
+              <span data-slate-object="text" data-key="2353">
+              <span data-slate-leaf="true" data-offset-key="2353:0">
+              <span data-slate-string="true">The animal is placed into a stereotaxic frame, and held using non-traumatic ear bars. (AB)</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2354">
+              <span data-slate-object="text" data-key="2355">
+              <span data-slate-leaf="true" data-offset-key="2355:0">
+              <span data-slate-string="true">Exposure of the brain surface through a small hole drilled in an appropriate area to target the selected brain region or a durotomy to expose brain regions such as the calamus scriptorius.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2356">
+              <span data-slate-object="text" data-key="2357">
+              <span data-slate-leaf="true" data-offset-key="2357:0">
+              <span data-slate-string="true">Insertion of a micropipette into selected brain areas (e.g. brain stem, hypothalamus) and injection of virus particles, or sham injection, and optionally substances to induce conditional gene expression.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2358">
+              <span data-slate-object="text" data-key="2359">
+              <span data-slate-leaf="true" data-offset-key="2359:0">
+              <span data-slate-string="true">Wound repair, and recovery from anaesthesia.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2360">
+              <span data-slate-object="text" data-key="2361">
+              <span data-slate-leaf="true" data-offset-key="2361:0">
+              <span data-slate-string="true">Wait a minimum of 5 days for viral transduction to occur.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2362">
+              <span data-slate-object="text" data-key="2363">
+              <span data-slate-leaf="true" data-offset-key="2363:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <div class="review">
+              <h3 class=govuk-heading-s>Is this step optional?</h3>
+              <p>Yes</p>
+            </div>
+            <div class="review">
+              <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+              <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+              <p>Yes</p>
+            </div>
+            <div class="review">
+              <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+              <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+              <div class="govuk-form-group">
+              <div id="adverse-effects" class="editor readonly">
+              <div name="adverse-effects" data-slate-editor="true" data-key="2365" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="2366">
+              <span data-slate-object="text" data-key="2367">
+              <span data-slate-leaf="true" data-offset-key="2367:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">1. Induction of general anaesthesia</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2368">
+              <span data-slate-object="text" data-key="2369">
+              <span data-slate-leaf="true" data-offset-key="2369:0">
+              <span data-slate-string="true">Adverse effects: premature recovery</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2370">
+              <span data-slate-object="text" data-key="2371">
+              <span data-slate-leaf="true" data-offset-key="2371:0">
+              <span data-slate-string="true">Frequency &lt;1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2372">
+              <span data-slate-object="text" data-key="2373">
+              <span data-slate-leaf="true" data-offset-key="2373:0">
+              <span data-slate-string="true">Adverse effects: misplaced IP injection</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2374">
+              <span data-slate-object="text" data-key="2375">
+              <span data-slate-leaf="true" data-offset-key="2375:0">
+              <span data-slate-string="true">Frequency &lt;1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2376">
+              <span data-slate-object="text" data-key="2377">
+              <span data-slate-leaf="true" data-offset-key="2377:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2378">
+              <span data-slate-object="text" data-key="2379">
+              <span data-slate-leaf="true" data-offset-key="2379:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">2. General – Surgical manipulation</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2380">
+              <span data-slate-object="text" data-key="2381">
+              <span data-slate-leaf="true" data-offset-key="2381:0">
+              <span data-slate-string="true">Adverse effect: infection</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2382">
+              <span data-slate-object="text" data-key="2383">
+              <span data-slate-leaf="true" data-offset-key="2383:0">
+              <span data-slate-string="true">Frequency &lt;1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2384">
+              <span data-slate-object="text" data-key="2385">
+              <span data-slate-leaf="true" data-offset-key="2385:0">
+              <span data-slate-string="true">Adverse effect: Pain</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2386">
+              <span data-slate-object="text" data-key="2387">
+              <span data-slate-leaf="true" data-offset-key="2387:0">
+              <span data-slate-string="true">Frequency: 100%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2388">
+              <span data-slate-object="text" data-key="2389">
+              <span data-slate-leaf="true" data-offset-key="2389:0">
+              <span data-slate-string="true">Adverse effect: Wound dehiscence</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2390">
+              <span data-slate-object="text" data-key="2391">
+              <span data-slate-leaf="true" data-offset-key="2391:0">
+              <span data-slate-string="true">Frequency &lt;1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2392">
+              <span data-slate-object="text" data-key="2393">
+              <span data-slate-leaf="true" data-offset-key="2393:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2394">
+              <span data-slate-object="text" data-key="2395">
+              <span data-slate-leaf="true" data-offset-key="2395:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">3. Puncturing blood vessels</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2396">
+              <span data-slate-object="text" data-key="2397">
+              <span data-slate-leaf="true" data-offset-key="2397:0">
+              <span data-slate-string="true">Adverse effect: haemorrhage</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2398">
+              <span data-slate-object="text" data-key="2399">
+              <span data-slate-leaf="true" data-offset-key="2399:0">
+              <span data-slate-string="true">Incidence &lt;1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2400">
+              <span data-slate-object="text" data-key="2401">
+              <span data-slate-leaf="true" data-offset-key="2401:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2402">
+              <span data-slate-object="text" data-key="2403">
+              <span data-slate-leaf="true" data-offset-key="2403:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">4. Effects of injections on brain structure and function</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2404">
+              <span data-slate-object="text" data-key="2405">
+              <span data-slate-leaf="true" data-offset-key="2405:0">
+              <span data-slate-string="true">Adverse effect: Respiratory distress and cardiac issues may occur when the lesion site, created by the transfection products, is too large</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2406">
+              <span data-slate-object="text" data-key="2407">
+              <span data-slate-leaf="true" data-offset-key="2407:0">
+              <span data-slate-string="true">Incidence:   &lt;5%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2408">
+              <span data-slate-object="text" data-key="2409">
+              <span data-slate-leaf="true" data-offset-key="2409:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">5. Intraoperative death</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2410">
+              <span data-slate-object="text" data-key="2411">
+              <span data-slate-leaf="true" data-offset-key="2411:0">
+              <span data-slate-string="true">Incidence: &lt;0.1%</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2412">
+              <span data-slate-object="text" data-key="2413">
+              <span data-slate-leaf="true" data-offset-key="2413:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+              <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+              <div class="govuk-form-group">
+              <div id="prevent-adverse-effects" class="editor readonly">
+              <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2415" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <div data-slate-void="true" data-key="2416">
+              <div>
+              
+            </div>
+          </div>
+            <p data-slate-object="block" data-key="2418">
+              <span data-slate-object="text" data-key="2419">
+              <span data-slate-leaf="true" data-offset-key="2419:0">
+              <strong data-slate-object="mark">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <div data-slate-void="true" data-key="2420">
+              <div>
+              
+            </div>
+          </div>
+            <p data-slate-object="block" data-key="2422">
+              <span data-slate-object="text" data-key="2423">
+              <span data-slate-leaf="true" data-offset-key="2423:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">Monitoring</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2424">
+              <span data-slate-object="text" data-key="2425">
+              <span data-slate-leaf="true" data-offset-key="2425:0">
+              <span data-slate-string="true">A "Surgical and Post-Operative Evaluation Record for Mice and Rats" will be completed for each animal undergoing recovery surgery. The current version of the monitoring form (see above) may be altered as necessary. For all surgeries which have not been previously performed by the PIL holder, animals will be monitored daily for 2 weeks post-surgery, until the PPL holder and NACWO are satisfied that all post-surgical care is fully understood Subsequently, animals will be monitored at least daily until they have had an assessment score of 0 for 3 consecutive days, with a minimum observation period of 1 week post-surgery.  The monitoring forms allow both BSU staff and experimenters to see the procedures that have been applied to each animal and when they were carried out. They also allow for any complications that may have arisen or additional monitoring that may be required to be noted by both the researchers and BSU team. The forms will be removed from the BSU once the animal leaves the study, but will be kept for reference for at least 1 year by the PI.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2426">
+              <span data-slate-object="text" data-key="2427">
+              <span data-slate-leaf="true" data-offset-key="2427:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">1. Induction of general anaesthesia</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2428">
+              <span data-slate-object="text" data-key="2429">
+              <span data-slate-leaf="true" data-offset-key="2429:0">
+              <span data-slate-string="true">Adverse effects: premature recovery</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2430">
+              <span data-slate-object="text" data-key="2431">
+              <span data-slate-leaf="true" data-offset-key="2431:0">
+              <span data-slate-string="true">Prevention: Continuous monitoring of depth of anaesthesia by monitoring respiratory rate and testing withdrawal reflexes. </span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2432">
+              <span data-slate-object="text" data-key="2433">
+              <span data-slate-leaf="true" data-offset-key="2433:0">
+              <span data-slate-string="true">Control: Prepare supplemental doses of injection anaesthetics, and/or have a facemask connected to an isofluorane vaporizer ready. Administer supplemental injectable and/or inhalation anaesthetics when required.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2434">
+              <span data-slate-object="text" data-key="2435">
+              <span data-slate-leaf="true" data-offset-key="2435:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2436">
+              <span data-slate-object="text" data-key="2437">
+              <span data-slate-leaf="true" data-offset-key="2437:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">2. General – Surgical manipulation</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2438">
+              <span data-slate-object="text" data-key="2439">
+              <span data-slate-leaf="true" data-offset-key="2439:0">
+              <span data-slate-string="true">Adverse effect: infection</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2440">
+              <span data-slate-object="text" data-key="2441">
+              <span data-slate-leaf="true" data-offset-key="2441:0">
+              <span data-slate-string="true">Prevention: Sterile surgical technique. Should animals show signs of infection, injection or oral administration of an antibiotic (such as ampicillin), may be given under the guidance of the Named Veterinary Surgeon.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2442">
+              <span data-slate-object="text" data-key="2443">
+              <span data-slate-leaf="true" data-offset-key="2443:0">
+              <span data-slate-string="true">Adverse effect: Pain</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2444">
+              <span data-slate-object="text" data-key="2445">
+              <span data-slate-leaf="true" data-offset-key="2445:0">
+              <span data-slate-string="true">Frequency: 100%</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2446">
+              <span data-slate-object="text" data-key="2447">
+              <span data-slate-leaf="true" data-offset-key="2447:0">
+              <span data-slate-string="true">Prevention: Peri-operative analgesia (such as buprenorphine, carprofen or meloxicam) will be given for as long as required, according to the monitoring of any signs of pain or distress (such as weight loss, piloerection, hunched body posture, lethargy, etc and using the face grimace scale).</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2448">
+              <span data-slate-object="text" data-key="2449">
+              <span data-slate-leaf="true" data-offset-key="2449:0">
+              <span data-slate-string="true">Adverse effect: Wound dehiscence</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2450">
+              <span data-slate-object="text" data-key="2451">
+              <span data-slate-leaf="true" data-offset-key="2451:0">
+              <span data-slate-string="true">Frequency &lt;1%</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2452">
+              <span data-slate-object="text" data-key="2453">
+              <span data-slate-leaf="true" data-offset-key="2453:0">
+              <span data-slate-string="true">Prevention: Appropriate surgical technique, suture choice, and use of veterinary glue on the wound where appropriate.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2454">
+              <span data-slate-object="text" data-key="2455">
+              <span data-slate-leaf="true" data-offset-key="2455:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2456">
+              <span data-slate-object="text" data-key="2457">
+              <span data-slate-leaf="true" data-offset-key="2457:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">3. Puncturing blood vessels</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2458">
+              <span data-slate-object="text" data-key="2459">
+              <span data-slate-leaf="true" data-offset-key="2459:0">
+              <span data-slate-string="true">Adverse effect: haemorrhage</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2460">
+              <span data-slate-object="text" data-key="2461">
+              <span data-slate-leaf="true" data-offset-key="2461:0">
+              <span data-slate-string="true">Prevention: Care will be taken with surgical procedures, e.g., craniotomies, and injections. Sufficient time will be allowed to ensure no bleeding occurs after the injection is made and before the wound is closed.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2462">
+              <span data-slate-object="text" data-key="2463">
+              <span data-slate-leaf="true" data-offset-key="2463:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2464">
+              <span data-slate-object="text" data-key="2465">
+              <span data-slate-leaf="true" data-offset-key="2465:0">
+              <span data-slate-string="true"> </span>
+            </span>
+            </span>
+              <span data-slate-object="text" data-key="2466">
+              <span data-slate-leaf="true" data-offset-key="2466:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">4. Effects of injections on brain structure and function</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2467">
+              <span data-slate-object="text" data-key="2468">
+              <span data-slate-leaf="true" data-offset-key="2468:0">
+              <span data-slate-string="true">Adverse effect: Respiratory distress and cardiac issues may occur when the lesion site, created by the transfection products, is too large</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2469">
+              <span data-slate-object="text" data-key="2470">
+              <span data-slate-leaf="true" data-offset-key="2470:0">
+              <span data-slate-string="true">Prevention: Titrate the injections to establish the minimum effective lesion size. Use graduated pipettes to deliver an appropriate volume of neurotoxin, and to avoid spill over of neurotoxin outside of the targeted area.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2471">
+              <span data-slate-object="text" data-key="2472">
+              <span data-slate-leaf="true" data-offset-key="2472:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">5. Intraoperative death</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2473">
+              <span data-slate-object="text" data-key="2474">
+              <span data-slate-leaf="true" data-offset-key="2474:0">
+              <span data-slate-string="true">Prevention: control the rate of injection into the brainstem to no more than 100 nl in 10 seconds, and the total volume to no more than 400 nl.</span>
+            </span>
+            </span>
+            </p>
+            <p data-slate-object="block" data-key="2475">
+              <span data-slate-object="text" data-key="2476">
+              <span data-slate-leaf="true" data-offset-key="2476:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+          </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+              <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+              <div class="govuk-form-group">
+              <div id="endpoints" class="editor readonly">
+              <div name="endpoints" data-slate-editor="true" data-key="2478" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="2479">
+              <span data-slate-object="text" data-key="2480">
+              <span data-slate-leaf="true" data-offset-key="2480:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">1. Induction of general anaesthesia</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2481">
+              <span data-slate-object="text" data-key="2482">
+              <span data-slate-leaf="true" data-offset-key="2482:0">
+              <span data-slate-string="true">Adverse effects: misplaced IP injection</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2483">
+              <span data-slate-object="text" data-key="2484">
+              <span data-slate-leaf="true" data-offset-key="2484:0">
+              <span data-slate-string="true">Endpoint: Lack of defecation for 48 hours with no sign of feeding. Drop of body weight greater than 15% in 48 hours.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2485">
+              <span data-slate-object="text" data-key="2486">
+              <span data-slate-leaf="true" data-offset-key="2486:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2487">
+              <span data-slate-object="text" data-key="2488">
+              <span data-slate-leaf="true" data-offset-key="2488:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">2. General – Surgical manipulation</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2489">
+              <span data-slate-object="text" data-key="2490">
+              <span data-slate-leaf="true" data-offset-key="2490:0">
+              <span data-slate-string="true">Adverse effect: infection</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2491">
+              <span data-slate-object="text" data-key="2492">
+              <span data-slate-leaf="true" data-offset-key="2492:0">
+              <span data-slate-string="true">Endpoint: Should an animal show signs of infection (abnormal behaviour, lethargy, rough coat), of distress (piloerection, hunched body posture, lethargy, lack of defecation) the NVS and/or NACWO will be consulted for advice. If weight loss reaches 15% of the starting body weight daily monitoring will be introduced, if it is not already in place. Any animal with ≥20% weight loss or any animals that look likely to reach 20% loss in body weight before the next monitoring session will be humanely killed by a Schedule 1 method. Any animal with evidence of wound infection that persist for more than 48 hours despite supportive treatment and/or antibiotics (under advisement from the NVS/NACWO) will be humanely killed by a Schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2493">
+              <span data-slate-object="text" data-key="2494">
+              <span data-slate-leaf="true" data-offset-key="2494:0">
+              <span data-slate-string="true">Adverse effect: Pain</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2495">
+              <span data-slate-object="text" data-key="2496">
+              <span data-slate-leaf="true" data-offset-key="2496:0">
+              <span data-slate-string="true">Endpoints: Should an animal show signs of pain (abnormal behaviour, lethargy, piloerection, hunched body posture, lack of exploration, grimace), of distress (piloerection, hunched body posture, lethargy, lack of defecation) they will be immediately treated with analgesia and where necessary local anaesthesia, and the NVS and/or NACWO will be consulted for advice. If pain persists for more than 2 hours following treatment with analgesia and where necessary local anaesthetics, animals will be immediately humanely killed by a Schedule 1 method. If weight loss reaches 15% of the starting body weight daily monitoring will be introduced, if it is not already in place. Any animal with ≥20% weight loss or any animals that look likely to reach 20% loss in body weight before the next monitoring session will be humanely killed by a Schedule 1 method. Any animal with evidence of uncontrollable pain will be humanely killed by a Schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2497">
+              <span data-slate-object="text" data-key="2498">
+              <span data-slate-leaf="true" data-offset-key="2498:0">
+              <span data-slate-string="true">Adverse effect: Wound dehiscence</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2499">
+              <span data-slate-object="text" data-key="2500">
+              <span data-slate-leaf="true" data-offset-key="2500:0">
+              <span data-slate-string="true">Endpoint: If sutures breakdown and the wound re-opens, in uncomplicated uninfected cases of wound dehiscence, the animal will be anaesthetised with isoflurane the wound site will be extensively cleaned and repaired with advisement from the NVS as required. A maximum of 1 wound repair is permitted per animal, thus if it happens again the animal will be killed via a Schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2501">
+              <span data-slate-object="text" data-key="2502">
+              <span data-slate-leaf="true" data-offset-key="2502:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2503">
+              <span data-slate-object="text" data-key="2504">
+              <span data-slate-leaf="true" data-offset-key="2504:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">3. Puncturing blood vessels</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2505">
+              <span data-slate-object="text" data-key="2506">
+              <span data-slate-leaf="true" data-offset-key="2506:0">
+              <span data-slate-string="true">Adverse effect: haemorrhage</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2507">
+              <span data-slate-object="text" data-key="2508">
+              <span data-slate-leaf="true" data-offset-key="2508:0">
+              <span data-slate-string="true">Endpoints: Intracranial haemorrhage is likely to prove fatal, due to increased pressure inside the skull. Any uncontrolled intracranial haemorrhage will lead to animals being killed by a Schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2509">
+              <span data-slate-object="text" data-key="2510">
+              <span data-slate-leaf="true" data-offset-key="2510:0">
+              <span data-slate-string="true"> </span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2511">
+              <span data-slate-object="text" data-key="2512">
+              <span data-slate-leaf="true" data-offset-key="2512:0">
+              <strong data-slate-object="mark">
+              <span data-slate-string="true">4. Effects of injections on brain structure and function</span>
+            </strong>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2513">
+              <span data-slate-object="text" data-key="2514">
+              <span data-slate-leaf="true" data-offset-key="2514:0">
+              <span data-slate-string="true">Adverse effect: Respiratory distress and cardiac issues may occur when the lesion site, created by the transfection products, is too large</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2515">
+              <span data-slate-object="text" data-key="2516">
+              <span data-slate-leaf="true" data-offset-key="2516:0">
+              <span data-slate-string="true">Endpoints: Any animal experiencing altered breathing during wakefulness will be terminated by a schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2517">
+              <span data-slate-object="text" data-key="2518">
+              <span data-slate-leaf="true" data-offset-key="2518:0">
+              <span data-slate-string="true">Cardiac issues may result in lethargy, lack of movement, unresponsiveness. This will be recognised via the scoring sheet and any animal experiencing these symptoms would be killed by a schedule 1 method.</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="2519">
+              <span data-slate-object="text" data-key="2520">
+              <span data-slate-leaf="true" data-offset-key="2520:0">
+              <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+            </span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+            <section class="step completed">
+              <h3 class=govuk-heading-s>Step 2<span class="light smaller"> (optional)</span>
+            </h3>
+              <div class="review">
+              <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+              <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2522" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2523">
+  <span data-slate-object="text" data-key="2524">
+  <span data-slate-leaf="true" data-offset-key="2524:0">
+  <span data-slate-string="true">Implantation of optical fibres, cannulae, electrodes, or osmotic minipumps under general anaesthesia with recovery (AB):</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2525">
+  <span data-slate-object="text" data-key="2526">
+  <span data-slate-leaf="true" data-offset-key="2526:0">
+  <span data-slate-string="true">Induction and maintenance of general anaesthesia using an agent and by a route appropriate to the species and the procedure to be carried out (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2527">
+  <span data-slate-object="text" data-key="2528">
+  <span data-slate-leaf="true" data-offset-key="2528:0">
+  <span data-slate-string="true">Administration of analgesics (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2529">
+  <span data-slate-object="text" data-key="2530">
+  <span data-slate-leaf="true" data-offset-key="2530:0">
+  <span data-slate-string="true">The animal is placed into a stereotaxic frame, and held using non-traumatic ear bars. (AB-G)</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2531">
+  <span data-slate-object="text" data-key="2532">
+  <span data-slate-leaf="true" data-offset-key="2532:0">
+  <span data-slate-string="true">Optional: Exposure of the brain surface through a small hole drilled in an appropriate area to target the selected brain region.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2533">
+  <span data-slate-object="text" data-key="2534">
+  <span data-slate-leaf="true" data-offset-key="2534:0">
+  <span data-slate-string="true">Optional: Incision to allow subdermal insertion of osmotic mini-pump.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2535">
+  <span data-slate-object="text" data-key="2536">
+  <span data-slate-leaf="true" data-offset-key="2536:0">
+  <span data-slate-string="true">Optional: Insertion of optical fibres, cannulae and/or electrodes or screws under stereotaxic control into precise brain regions, such as the brain stem, the cortex, the hippocampus, the hypothalamus or third ventricle.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2537">
+  <span data-slate-object="text" data-key="2538">
+  <span data-slate-leaf="true" data-offset-key="2538:0">
+  <span data-slate-string="true">Optional: Incision on the lateral chest to allow attachment ECG electrodes tunnelled under the skin to attach to the muscles around chest.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2539">
+  <span data-slate-object="text" data-key="2540">
+  <span data-slate-leaf="true" data-offset-key="2540:0">
+  <span data-slate-string="true">Optional: Cementing of inserted items to the skull.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2541">
+  <span data-slate-object="text" data-key="2542">
+  <span data-slate-leaf="true" data-offset-key="2542:0">
+  <span data-slate-string="true">Wound repair, and recovery from anaesthesia.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2543">
+  <span data-slate-object="text" data-key="2544">
+  <span data-slate-leaf="true" data-offset-key="2544:0">
+  <span data-slate-string="true">Animal kept for up to 4 months to permit thorough phenotypic/physiological evaluation.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2545">
+  <span data-slate-object="text" data-key="2546">
+  <span data-slate-leaf="true" data-offset-key="2546:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2548" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2549">
+  <span data-slate-object="text" data-key="2550">
+  <span data-slate-leaf="true" data-offset-key="2550:0">
+  <span data-slate-string="true">Same as Step 1</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2552" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2553">
+  <span data-slate-object="text" data-key="2554">
+  <span data-slate-leaf="true" data-offset-key="2554:0">
+  <span data-slate-string="true">Same as Step 1</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2556" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2557">
+  <span data-slate-object="text" data-key="2558">
+  <span data-slate-leaf="true" data-offset-key="2558:0">
+  <span data-slate-string="true">Same as Step 1</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 3<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2560" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2561">
+  <span data-slate-object="text" data-key="2562">
+  <span data-slate-leaf="true" data-offset-key="2562:0">
+  <span data-slate-string="true">Attachment of headmounts (e.g. for electrodes, mini-microscopes) to skull, under general anaesthesia with recovery (AB):</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2563">
+  <span data-slate-object="text" data-key="2564">
+  <span data-slate-leaf="true" data-offset-key="2564:0">
+  <span data-slate-string="true">Induction and maintenance of general anaesthesia using an agent and by a route appropriate to the species and the procedure to be carried out (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2565">
+  <span data-slate-object="text" data-key="2566">
+  <span data-slate-leaf="true" data-offset-key="2566:0">
+  <span data-slate-string="true">Administration of analgesics (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2567">
+  <span data-slate-object="text" data-key="2568">
+  <span data-slate-leaf="true" data-offset-key="2568:0">
+  <span data-slate-string="true">The animal is placed into a stereotaxic frame, and held using non-traumatic ear bars. (AB-G)</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2569">
+  <span data-slate-object="text" data-key="2570">
+  <span data-slate-leaf="true" data-offset-key="2570:0">
+  <span data-slate-string="true">Optional: Exposure of skull, and insertion of small screws to attach headmount to skull</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2571">
+  <span data-slate-object="text" data-key="2572">
+  <span data-slate-leaf="true" data-offset-key="2572:0">
+  <span data-slate-string="true">Optional: insertion of electrodes into neck muscle for EMG recordings.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2573">
+  <span data-slate-object="text" data-key="2574">
+  <span data-slate-leaf="true" data-offset-key="2574:0">
+  <span data-slate-string="true">Cementing of inserted items to the skull.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2575">
+  <span data-slate-object="text" data-key="2576">
+  <span data-slate-leaf="true" data-offset-key="2576:0">
+  <span data-slate-string="true">Wound repair, and recovery from anaesthesia</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2577">
+  <span data-slate-object="text" data-key="2578">
+  <span data-slate-leaf="true" data-offset-key="2578:0">
+  <span data-slate-string="true">Animal kept for up to 4 months to permit thorough phenotypic/physiological evaluation</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2579">
+  <span data-slate-object="text" data-key="2580">
+  <span data-slate-leaf="true" data-offset-key="2580:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2582" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2583">
+  <span data-slate-object="text" data-key="2584">
+  <span data-slate-leaf="true" data-offset-key="2584:0">
+  <span data-slate-string="true">In addition to those listed for Step 1:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2585">
+  <span data-slate-object="text" data-key="2586">
+  <span data-slate-leaf="true" data-offset-key="2586:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2587">
+  <span data-slate-object="text" data-key="2588">
+  <span data-slate-leaf="true" data-offset-key="2588:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Head mount damage</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2589">
+  <span data-slate-object="text" data-key="2590">
+  <span data-slate-leaf="true" data-offset-key="2590:0">
+  <span data-slate-string="true">Adverse effect: Wound dehiscence</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2591">
+  <span data-slate-object="text" data-key="2592">
+  <span data-slate-leaf="true" data-offset-key="2592:0">
+  <span data-slate-string="true">Frequency &lt;1%</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2593">
+  <span data-slate-object="text" data-key="2594">
+  <span data-slate-leaf="true" data-offset-key="2594:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2595">
+  <span data-slate-object="text" data-key="2596">
+  <span data-slate-leaf="true" data-offset-key="2596:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Entanglement of wires from headmount</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2597">
+  <span data-slate-object="text" data-key="2598">
+  <span data-slate-leaf="true" data-offset-key="2598:0">
+  <span data-slate-string="true">Adverse effect: restriction of movement and resulting distress</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2599">
+  <span data-slate-object="text" data-key="2600">
+  <span data-slate-leaf="true" data-offset-key="2600:0">
+  <span data-slate-string="true">Frequency &lt;1%</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2601">
+  <span data-slate-object="text" data-key="2602">
+  <span data-slate-leaf="true" data-offset-key="2602:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2603">
+  <span data-slate-object="text" data-key="2604">
+  <span data-slate-leaf="true" data-offset-key="2604:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2606" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2607">
+  <span data-slate-object="text" data-key="2608">
+  <span data-slate-leaf="true" data-offset-key="2608:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Headmount damage</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2609">
+  <span data-slate-object="text" data-key="2610">
+  <span data-slate-leaf="true" data-offset-key="2610:0">
+  <span data-slate-string="true">Prevention: Use high quality dental cement, and check the expiration date and correctly mix the compounds before use</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2611">
+  <span data-slate-object="text" data-key="2612">
+  <span data-slate-leaf="true" data-offset-key="2612:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Entanglement of wires</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2613">
+  <span data-slate-object="text" data-key="2614">
+  <span data-slate-leaf="true" data-offset-key="2614:0">
+  <span data-slate-string="true">Prevention: Animals are tethered at the head, and only provided with enough wire to move freely around the plethysmograph, but not enough to get entangled, animals under constant observation while recording which is the only time that entanglement could happen.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2615">
+  <span data-slate-object="text" data-key="2616">
+  <span data-slate-leaf="true" data-offset-key="2616:0">
+  <span data-slate-string="true">Other monitoring and control as per step 1.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2617">
+  <span data-slate-object="text" data-key="2618">
+  <span data-slate-leaf="true" data-offset-key="2618:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2620" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2621">
+  <span data-slate-object="text" data-key="2622">
+  <span data-slate-leaf="true" data-offset-key="2622:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Headmount damage</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2623">
+  <span data-slate-object="text" data-key="2624">
+  <span data-slate-leaf="true" data-offset-key="2624:0">
+  <span data-slate-string="true">Endpoints: If the dental cement holding the head mount breakdowns and the wound re-opens, in uncomplicated uninfected cases of wound dehiscence, the wound site will be extensively cleaned and repaired with advisement from the NVS as required. If the wound breaks down for a second time the animal will be killed via a schedule 1 method. If the head mount/implant comes away from the skull the animal will immediately be killed by a schedule 1 method.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2625">
+  <span data-slate-object="text" data-key="2626">
+  <span data-slate-leaf="true" data-offset-key="2626:0">
+  <strong data-slate-object="mark">
+  <span data-slate-string="true">Entanglement of wires</span>
+</strong>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2627">
+  <span data-slate-object="text" data-key="2628">
+  <span data-slate-leaf="true" data-offset-key="2628:0">
+  <span data-slate-string="true">Endpoints: If entangled occurs, the animal will be untangled, and placed back in their home cage.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2629">
+  <span data-slate-object="text" data-key="2630">
+  <span data-slate-leaf="true" data-offset-key="2630:0">
+  <span data-slate-string="true">Other humane end points as per step 1.</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 4<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2632" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2633">
+  <span data-slate-object="text" data-key="2634">
+  <span data-slate-leaf="true" data-offset-key="2634:0">
+  <span data-slate-string="true"> In vivo imaging (AA/AB):</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2635">
+  <span data-slate-object="text" data-key="2636">
+  <span data-slate-leaf="true" data-offset-key="2636:0">
+  <span data-slate-string="true">Optional: Induction and maintenance of general anaesthesia to enable mounting of the mini-microscope or dummy microscope or EEG-ECG connectors (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2637">
+  <span data-slate-object="text" data-key="2638">
+  <span data-slate-leaf="true" data-offset-key="2638:0">
+  <span data-slate-string="true">Mini-microscope or dummy microscope or EEG-ECG connectors attached to or removed from headmount.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2639">
+  <span data-slate-object="text" data-key="2640">
+  <span data-slate-leaf="true" data-offset-key="2640:0">
+  <span data-slate-string="true">Optional: Recovery from anaesthesia.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2641">
+  <span data-slate-object="text" data-key="2642">
+  <span data-slate-leaf="true" data-offset-key="2642:0">
+  <span data-slate-string="true">Data collection via microscope and EEG-ECG connectors during behavioural tests.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2643">
+  <span data-slate-object="text" data-key="2644">
+  <span data-slate-leaf="true" data-offset-key="2644:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2646" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2647">
+  <span data-slate-object="text" data-key="2648">
+  <span data-slate-leaf="true" data-offset-key="2648:0">
+  <span data-slate-string="true">Entanglement of wires from headmount</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2649">
+  <span data-slate-object="text" data-key="2650">
+  <span data-slate-leaf="true" data-offset-key="2650:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2651">
+  <span data-slate-object="text" data-key="2652">
+  <span data-slate-leaf="true" data-offset-key="2652:0">
+  <span data-slate-string="true">Adverse effect: restriction of movement and resulting distress</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2653">
+  <span data-slate-object="text" data-key="2654">
+  <span data-slate-leaf="true" data-offset-key="2654:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2655">
+  <span data-slate-object="text" data-key="2656">
+  <span data-slate-leaf="true" data-offset-key="2656:0">
+  <span data-slate-string="true">Frequency &lt;1%</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2657">
+  <span data-slate-object="text" data-key="2658">
+  <span data-slate-leaf="true" data-offset-key="2658:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2660" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2661">
+  <span data-slate-object="text" data-key="2662">
+  <span data-slate-leaf="true" data-offset-key="2662:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2663">
+  <span data-slate-object="text" data-key="2664">
+  <span data-slate-leaf="true" data-offset-key="2664:0">
+  <span data-slate-string="true">Prevention: Animals are tethered at the head, and only provided with enough wire to move freely around the recording chamber, but not enough to get entangled, animals under constant observation while recording which is the only time that entanglement could happen.</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2666" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2667">
+  <span data-slate-object="text" data-key="2668">
+  <span data-slate-leaf="true" data-offset-key="2668:0">
+  <span data-slate-string="true">Endpoints: If entanglement occurs, the animal will be untangled, and placed back in their home cage.</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 5<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2670" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2671">
+  <span data-slate-object="text" data-key="2672">
+  <span data-slate-leaf="true" data-offset-key="2672:0">
+  <span data-slate-string="true">Induction of Status Epilepticus</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2673">
+  <span data-slate-object="text" data-key="2674">
+  <span data-slate-leaf="true" data-offset-key="2674:0">
+  <span data-slate-string="true">Injection of kainic acid (typically 0.3-0.4 μg in a volume of no more than 50nl), animals maintained up to 4 months following this.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2675">
+  <span data-slate-object="text" data-key="2676">
+  <span data-slate-leaf="true" data-offset-key="2676:0">
+  <span data-slate-string="true">Induction and maintenance of general anaesthesia via inhalation agent to enable injection of kainic acid through a cannula preinstalled into brain regions such as the amygdala or hippocampus to induce status epilepticus (SE) (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2677">
+  <span data-slate-object="text" data-key="2678">
+  <span data-slate-leaf="true" data-offset-key="2678:0">
+  <span data-slate-string="true">Injection tubing attached to or removed from cannula.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2679">
+  <span data-slate-object="text" data-key="2680">
+  <span data-slate-leaf="true" data-offset-key="2680:0">
+  <span data-slate-string="true">Upon awakening, mice will undergo KA-induced SE for a continuous period and will be scored using a modified Racine scale. The seizures will be terminated after 40-60 minutes by anticonvulsant agent/s such as diazepam or lorazepam optionally in combination with ketamine.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2681">
+  <span data-slate-object="text" data-key="2682">
+  <span data-slate-leaf="true" data-offset-key="2682:0">
+  <span data-slate-string="true">Seizure class	Behaviour</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2683">
+  <span data-slate-object="text" data-key="2684">
+  <span data-slate-leaf="true" data-offset-key="2684:0">
+  <span data-slate-string="true">0	normal activity</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2685">
+  <span data-slate-object="text" data-key="2686">
+  <span data-slate-leaf="true" data-offset-key="2686:0">
+  <span data-slate-string="true">1	rigid posture or immobility</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2687">
+  <span data-slate-object="text" data-key="2688">
+  <span data-slate-leaf="true" data-offset-key="2688:0">
+  <span data-slate-string="true">2	stiffened, extended, and often arched (Straub) tail</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2689">
+  <span data-slate-object="text" data-key="2690">
+  <span data-slate-leaf="true" data-offset-key="2690:0">
+  <span data-slate-string="true">3	partial body clonus, including forelimb or hindlimb clonus (seen rarely) or head bobbing</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2691">
+  <span data-slate-object="text" data-key="2692">
+  <span data-slate-leaf="true" data-offset-key="2692:0">
+  <span data-slate-string="true">3.5	whole body continuous clonic seizures while retaining posture</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2693">
+  <span data-slate-object="text" data-key="2694">
+  <span data-slate-leaf="true" data-offset-key="2694:0">
+  <span data-slate-string="true">4	rearing</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2695">
+  <span data-slate-object="text" data-key="2696">
+  <span data-slate-leaf="true" data-offset-key="2696:0">
+  <span data-slate-string="true">4.5	severe whole body continuous clonic seizures while retaining posture</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2697">
+  <span data-slate-object="text" data-key="2698">
+  <span data-slate-leaf="true" data-offset-key="2698:0">
+  <span data-slate-string="true">5	rearing and falling</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2699">
+  <span data-slate-object="text" data-key="2700">
+  <span data-slate-leaf="true" data-offset-key="2700:0">
+  <span data-slate-string="true">6	tonic–clonic seizures with loss of posture or jumping</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2701">
+  <span data-slate-object="text" data-key="2702">
+  <span data-slate-leaf="true" data-offset-key="2702:0">
+  <span data-slate-string="true">SE will be defined with a seizure score of between 2 and 3 for the majority of period, with intermittent stage 4 and 5 seizures. </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2703">
+  <span data-slate-object="text" data-key="2704">
+  <span data-slate-leaf="true" data-offset-key="2704:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2705">
+  <span data-slate-object="text" data-key="2706">
+  <span data-slate-leaf="true" data-offset-key="2706:0">
+  <span data-slate-string="true">Scoring will be repeated when the animals are in the chronic phase of epilepsy.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2707">
+  <span data-slate-object="text" data-key="2708">
+  <span data-slate-leaf="true" data-offset-key="2708:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2710" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2711">
+  <span data-slate-object="text" data-key="2712">
+  <span data-slate-leaf="true" data-offset-key="2712:0">
+  <span data-slate-string="true">Death is a possible adverse effect (up to 10%). </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2713">
+  <span data-slate-object="text" data-key="2714">
+  <span data-slate-leaf="true" data-offset-key="2714:0">
+  <span data-slate-string="true">The induced status epilepticus will produce changes in animal behavior including convulsions. It is also associated with injury to certain brain regions including the hippocampus and attendant long-term behavioral changes such as increased anxiety, memory/learning deficits and epilepsy.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2715">
+  <span data-slate-object="text" data-key="2716">
+  <span data-slate-leaf="true" data-offset-key="2716:0">
+  <span data-slate-string="true">Animals subject to status epilepticus frequently display reduced movement and feeding behavior in the first 24-48 h. They may be dehydrated. </span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2718" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2719">
+  <span data-slate-object="text" data-key="2720">
+  <span data-slate-leaf="true" data-offset-key="2720:0">
+  <span data-slate-string="true">This is a severe procedure and mice are expected to undergo recurrent KA-induced seizures, terminated with an anticonvulsant such as diazepam or lorazepam optionally in combination with ketamine. Following recovery, they will be monitored with the SE Score Sheet (attached) twice daily for two weeks, and euthanized if they reach the threshold. Once animals have stabilized (total score of 0 from SE Score Sheet for 3 days running), the monitoring frequency will be reduced to once per day. If the animals achieve 3 days of scoring 0 on the SE Score Sheet within the first two weeks, the reduced monitoring will take place from the point of achieving that score. After two weeks the animals will be in a normal state with occasional seizures and therefore the SE Score Sheet will no longer be used.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2721">
+  <span data-slate-object="text" data-key="2722">
+  <span data-slate-leaf="true" data-offset-key="2722:0">
+  <span data-slate-string="true">However, some behavioural abnormalities and signs of distress, related to chronic epilepsy (and the occasional seizures) are expected. In this phase the animals will be subject to normal visual monitoring on a daily basis.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2723">
+  <span data-slate-object="text" data-key="2724">
+  <span data-slate-leaf="true" data-offset-key="2724:0">
+  <span data-slate-string="true">To counter reduced feeding and drinking, animals will be provided support where necessary (e.g. fed by hand or given fluids).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2725">
+  <span data-slate-object="text" data-key="2726">
+  <span data-slate-leaf="true" data-offset-key="2726:0">
+  <span data-slate-string="true">Score sheet:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2727">
+  <span data-slate-object="text" data-key="2728">
+  <span data-slate-leaf="true" data-offset-key="2728:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+  <div data-slate-void="true" data-key="2729">
+  <div>
+  
+</div>
+</div>
+<p data-slate-object="block" data-key="2731">
+  <span data-slate-object="text" data-key="2732">
+  <span data-slate-leaf="true" data-offset-key="2732:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2734" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2735">
+  <span data-slate-object="text" data-key="2736">
+  <span data-slate-leaf="true" data-offset-key="2736:0">
+  <span data-slate-string="true">Following recovery, they will be monitored with the SE Score Sheet (attached) twice daily for two weeks, and euthanized if they reach the threshold. If the mouse scores 1 or more in the moderate to severe category column of the score sheet, it will be killed if the symptoms cannot be ameliorated within 3 days following appropriate treatment.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2737">
+  <span data-slate-object="text" data-key="2738">
+  <span data-slate-leaf="true" data-offset-key="2738:0">
+  <span data-slate-string="true">Animals unresponsive to two doses of lorazepam or other anticonvulsants (still having continuous convulsive episodes after 1.5h) will be euthanized.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2739">
+  <span data-slate-object="text" data-key="2740">
+  <span data-slate-leaf="true" data-offset-key="2740:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 6<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2742" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2743">
+  <span data-slate-object="text" data-key="2744">
+  <span data-slate-leaf="true" data-offset-key="2744:0">
+  <span data-slate-string="true">Administration of microglial activity modifying agents (such as minocycline or LPS) or control substances. Alone or in combination, continuously or intermittently by one or more of the following routes:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2745">
+  <span data-slate-object="text" data-key="2746">
+  <span data-slate-leaf="true" data-offset-key="2746:0">
+  <span data-slate-string="true">1.	In diet or drinking water (AA)</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2747">
+  <span data-slate-object="text" data-key="2748">
+  <span data-slate-leaf="true" data-offset-key="2748:0">
+  <span data-slate-string="true">2.	Intraperitoneal (AA) No more than one injection per day for no more than 4 days.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2749">
+  <span data-slate-object="text" data-key="2750">
+  <span data-slate-leaf="true" data-offset-key="2750:0">
+  <span data-slate-string="true">3.	Oral gavage (AA) No more than one gavage per day for no more than 4 days.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2751">
+  <span data-slate-object="text" data-key="2752">
+  <span data-slate-leaf="true" data-offset-key="2752:0">
+  <span data-slate-string="true">For optional steps 2 and 3 the volume of the substances to be given will not exceed those specified in the LASA guidelines.</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2754" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2755">
+  <span data-slate-object="text" data-key="2756">
+  <span data-slate-leaf="true" data-offset-key="2756:0">
+  <span data-slate-string="true">Administration of LPS:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2757">
+  <span data-slate-object="text" data-key="2758">
+  <span data-slate-leaf="true" data-offset-key="2758:0">
+  <span data-slate-string="true">If the dose is too high could cause inflammation, fever and hence loss of appetite and weight. Our pilot work will shall refine the dose to minimize occurrence of such effects in the main study, but such adverse effects could occur in the pilot study.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2759">
+  <span data-slate-object="text" data-key="2760">
+  <span data-slate-leaf="true" data-offset-key="2760:0">
+  <span data-slate-string="true">Administration of minocycline:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2761">
+  <span data-slate-object="text" data-key="2762">
+  <span data-slate-leaf="true" data-offset-key="2762:0">
+  <span data-slate-string="true">Although we shall use a published dosing regimen, there is a chance an adverse effect such as loss of appetite and weight could occur. </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2763">
+  <span data-slate-object="text" data-key="2764">
+  <span data-slate-leaf="true" data-offset-key="2764:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2766" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2767">
+  <span data-slate-object="text" data-key="2768">
+  <span data-slate-leaf="true" data-offset-key="2768:0">
+  <span data-slate-string="true">LPS/minocycline administration:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2769">
+  <span data-slate-object="text" data-key="2770">
+  <span data-slate-leaf="true" data-offset-key="2770:0">
+  <span data-slate-string="true">We shall use the post-operative monitoring sheet (included above in step 1) to monitor any adverse effects and guide the choice of final dose of drug.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2771">
+  <span data-slate-object="text" data-key="2772">
+  <span data-slate-leaf="true" data-offset-key="2772:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2774" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2775">
+  <span data-slate-object="text" data-key="2776">
+  <span data-slate-leaf="true" data-offset-key="2776:0">
+  <span data-slate-string="true">Adverse effects: Minocycline/LPS administration. </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2777">
+  <span data-slate-object="text" data-key="2778">
+  <span data-slate-leaf="true" data-offset-key="2778:0">
+  <span data-slate-string="true">If weight loss of more than 20% occurs animals will be killed by a Schedule 1 method.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2779">
+  <span data-slate-object="text" data-key="2780">
+  <span data-slate-leaf="true" data-offset-key="2780:0">
+  <span data-slate-string="true">Oral gavage:</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2781">
+  <span data-slate-object="text" data-key="2782">
+  <span data-slate-leaf="true" data-offset-key="2782:0">
+  <span data-slate-string="true">End point: If dosing into lungs occurs immediate respiratory distress will be evident and animal will be humanely killed by Schedule 1 method.</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 7<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2784" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2785">
+  <span data-slate-object="text" data-key="2786">
+  <span data-slate-leaf="true" data-offset-key="2786:0">
+  <span data-slate-string="true">Whole body plethysmography (AA): </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2787">
+  <span data-slate-object="text" data-key="2788">
+  <span data-slate-leaf="true" data-offset-key="2788:0">
+  <span data-slate-string="true">Testing breathing parameters against various concentrations between 0-10% inspired CO</span>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2789">
+  <span data-slate-leaf="true" data-offset-key="2789:0">
+  <sub data-slate-object="mark">
+  <span data-slate-string="true">2</span>
+</sub>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2790">
+  <span data-slate-leaf="true" data-offset-key="2790:0">
+  <span data-slate-string="true">.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2791">
+  <span data-slate-object="text" data-key="2792">
+  <span data-slate-leaf="true" data-offset-key="2792:0">
+  <span data-slate-string="true"> </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2793">
+  <span data-slate-object="text" data-key="2794">
+  <span data-slate-leaf="true" data-offset-key="2794:0">
+  <span data-slate-string="true">This can be performed more than once (maximum up to 4 times per session up to 6 sessions) to allow comparison of responses under normoxic 20% O</span>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2795">
+  <span data-slate-leaf="true" data-offset-key="2795:0">
+  <sub data-slate-object="mark">
+  <span data-slate-string="true">2</span>
+</sub>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2796">
+  <span data-slate-leaf="true" data-offset-key="2796:0">
+  <span data-slate-string="true"> and hyperoxic (&gt;50% O</span>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2797">
+  <span data-slate-leaf="true" data-offset-key="2797:0">
+  <sub data-slate-object="mark">
+  <span data-slate-string="true">2</span>
+</sub>
+</span>
+</span>
+  <span data-slate-object="text" data-key="2798">
+  <span data-slate-leaf="true" data-offset-key="2798:0">
+  <span data-slate-string="true">) conditions. Repetitions separated by at least 2 days. No regulated procedures involved.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2799">
+  <span data-slate-object="text" data-key="2800">
+  <span data-slate-leaf="true" data-offset-key="2800:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>No</p>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 8<span class="light smaller"> (optional)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2802" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2803">
+  <span data-slate-object="text" data-key="2804">
+  <span data-slate-leaf="true" data-offset-key="2804:0">
+  <span data-slate-string="true">Induction of an acute electrographic seizure without behavioural signs.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2805">
+  <span data-slate-object="text" data-key="2806">
+  <span data-slate-leaf="true" data-offset-key="2806:0">
+  <span data-slate-string="true">Induction and maintenance of general anaesthesia via inhalation agent to enable injection of kainic acid (typically 0.1 μg in a volume no more than 50nl) through a cannula preinstalled into brain regions such as the amygdala or hippocampus to induce mild seizure (AB-G).</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2807">
+  <span data-slate-object="text" data-key="2808">
+  <span data-slate-leaf="true" data-offset-key="2808:0">
+  <span data-slate-string="true">Injection tubing attached to or removed from cannula.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2809">
+  <span data-slate-object="text" data-key="2810">
+  <span data-slate-leaf="true" data-offset-key="2810:0">
+  <span data-slate-string="true">Recovery from anesthesia</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2811">
+  <span data-slate-object="text" data-key="2812">
+  <span data-slate-leaf="true" data-offset-key="2812:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>Yes</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the likely adverse effects of this step?&#8203;</h3>
+  <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+  <div class="govuk-form-group">
+  <div id="adverse-effects" class="editor readonly">
+  <div name="adverse-effects" data-slate-editor="true" data-key="2814" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2815">
+  <span data-slate-object="text" data-key="2816">
+  <span data-slate-leaf="true" data-offset-key="2816:0">
+  <span data-slate-string="true">Induction of behavioural seizure &lt;1%</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+  <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+  <div class="govuk-form-group">
+  <div id="prevent-adverse-effects" class="editor readonly">
+  <div name="prevent-adverse-effects" data-slate-editor="true" data-key="2818" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2819">
+  <span data-slate-object="text" data-key="2820">
+  <span data-slate-leaf="true" data-offset-key="2820:0">
+  <span data-slate-string="true">Monitoring: Animals will be under observation and recorded during and after injection for 30 minutes. </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2821">
+  <span data-slate-object="text" data-key="2822">
+  <span data-slate-leaf="true" data-offset-key="2822:0">
+  <span data-slate-string="true">Control: </span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2823">
+  <span data-slate-object="text" data-key="2824">
+  <span data-slate-leaf="true" data-offset-key="2824:0">
+  <span data-slate-string="true">Ensure that only small volume of kainic acid is injected; this should only induce an electrographic seizure and not a behvioural seizure.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2825">
+  <span data-slate-object="text" data-key="2826">
+  <span data-slate-leaf="true" data-offset-key="2826:0">
+  <span data-slate-string="true">If a behavioural seizure occurs administration of an anticonvulsant such as diazepam or lorazepam to terminate any such seizures that last more than 3 minutes and monitoring procedures for step 5 followed.</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2827">
+  <span data-slate-object="text" data-key="2828">
+  <span data-slate-leaf="true" data-offset-key="2828:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>What are the humane endpoints for this step?</h3>
+  <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+  <div class="govuk-form-group">
+  <div id="endpoints" class="editor readonly">
+  <div name="endpoints" data-slate-editor="true" data-key="2830" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2831">
+  <span data-slate-object="text" data-key="2832">
+  <span data-slate-leaf="true" data-offset-key="2832:0">
+  <span data-slate-string="true">If animal goes into uncontrolled status epilpeticus even with anticonvustant treatment, animal will be killed by Schedule 1 method</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="step completed">
+  <h3 class=govuk-heading-s>Step 9<span class="light smaller"> (mandatory)</span>
+</h3>
+  <div class="review">
+  <h3 class=govuk-heading-s>Describe the procedures that will be carried out during this step.</h3>
+  <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+<div class="govuk-form-group">
+  <div id="title" class="editor readonly">
+  <div name="title" data-slate-editor="true" data-key="2834" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+  <p data-slate-object="block" data-key="2835">
+  <span data-slate-object="text" data-key="2836">
+  <span data-slate-leaf="true" data-offset-key="2836:0">
+  <span data-slate-string="true">Terminal procedures</span>
+</span>
+</span>
+</p>
+  <p data-slate-object="block" data-key="2837">
+  <span data-slate-object="text" data-key="2838">
+  <span data-slate-leaf="true" data-offset-key="2838:0">
+  <span data-slate-string="true">Killing by a schedule 1 method OR General anaesthesia (AC) induced and maintained by an agent and route appropriate to the species and purpose. 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2839">
+  <span data-slate-object="text" data-key="2840">
+  <span data-slate-leaf="true" data-offset-key="2840:0">
+  <span data-slate-string="true">•	Optional: Surgical exposure and permanent cannulation of one or more of the following: arteries, veins, heart chambers, airways, ventricles of the brain 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2841">
+  <span data-slate-object="text" data-key="2842">
+  <span data-slate-leaf="true" data-offset-key="2842:0">
+  <span data-slate-string="true">•	Optional: Administration of substances by one or more of the following routes: intra-arterial, intravenous, chambers of the heart, intraperitoneal, subcutaneous or intracerebroventricular 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2843">
+  <span data-slate-object="text" data-key="2844">
+  <span data-slate-leaf="true" data-offset-key="2844:0">
+  <span data-slate-string="true">•	Optional: Induction of artificial ventilation. 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2845">
+  <span data-slate-object="text" data-key="2846">
+  <span data-slate-leaf="true" data-offset-key="2846:0">
+  <span data-slate-string="true">•	Optional: Withdrawal of body fluids 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2847">
+  <span data-slate-object="text" data-key="2848">
+  <span data-slate-leaf="true" data-offset-key="2848:0">
+  <span data-slate-string="true">•	Optional: Stimulation of peripheral nerves electrically, chemically, or by activating their associated receptors. The nerves may or may not be sectioned. 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2849">
+  <span data-slate-object="text" data-key="2850">
+  <span data-slate-leaf="true" data-offset-key="2850:0">
+  <span data-slate-string="true">•	Optional : Application of recording electrodes to peripheral nerves
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2851">
+  <span data-slate-object="text" data-key="2852">
+  <span data-slate-leaf="true" data-offset-key="2852:0">
+  <span data-slate-string="true">•	Optional: Placement of animals in a stereotaxic apparatus. Midline craniotomy to expose dorsal medulla oblongata or dorsal cortex or the hypothalamus and 3rd ventricle. Drugs may be injected and/or recordings/stimulations will be made from brain sites/neural cells using micropipettes or other devices, such as biosensors, carbon-fibre microelectrodes, or optic fibres 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2853">
+  <span data-slate-object="text" data-key="2854">
+  <span data-slate-leaf="true" data-offset-key="2854:0">
+  <span data-slate-string="true">•	Optional: Cardiac puncture for blood withdrawal or exsanguination
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2855">
+  <span data-slate-object="text" data-key="2856">
+  <span data-slate-leaf="true" data-offset-key="2856:0">
+  <span data-slate-string="true">•	Optional: Removal of tissue or organs 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2857">
+  <span data-slate-object="text" data-key="2858">
+  <span data-slate-leaf="true" data-offset-key="2858:0">
+  <span data-slate-string="true">•	Optional: Perfusion with anticoagulant, and/or ice cold saline and/or fixative solutions 
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2859">
+  <span data-slate-object="text" data-key="2860">
+  <span data-slate-leaf="true" data-offset-key="2860:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+<p data-slate-object="block" data-key="2861">
+  <span data-slate-object="text" data-key="2862">
+  <span data-slate-leaf="true" data-offset-key="2862:0">
+  <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+</span>
+</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="review">
+  <div class="review">
+  <h3 class=govuk-heading-s>Is this step optional?</h3>
+  <p>No</p>
+</div>
+<div class="review">
+  <h3 class=govuk-heading-s>Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+  <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+  <p>No</p>
+</div>
+</div>
+</section>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+          	What will happen to animals at the end of this protocol?​
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+           
+          <p>
+          	Killed
+          </p>
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">
+              Will you be using non-schedule 1 killing methods on a conscious animal?
+            </h3>
+            <p>
+              No
+            </p>
+          </div>
+        </div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel">
+                    
+          <h3 class="govuk-heading-s">
+            Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
+          </h3>
+          <p class="govuk-hint">
+            Consider the cumulative effect of any combinations of procedures that you may carry out.
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Viral transduction
+            </li>
+
+            <li>
+              2-4 weeks later implantation of the GRIN lens, cannulae, EEG and ECG electrodes
+            </li>
+
+            <li>
+              1-2 weeks later, installation of the baseplate
+            </li>
+
+            <li>
+              1-2 weeks after baseplate installation, Induction of status epilepticus with KA injection into brain region to produce chronic seizures followed by anticonvulsant treatment to terminate seizures after 60 minutes.
+            </li>
+
+            <li>
+              Modification of microglial activity, for example, with minocycline or LPS treatment
+            </li>
+
+            <li>
+              For up to 4 months, imaging of neural activity, EEG and ECG recordings, and analysis of breathing via WBP in baseline condition and following induction of an mild electrographic seizure.
+            </li>
+
+            <li>
+              Terminal procedures, perfusion fixation of brains to verify viral transduction and lens placement
+            </li>
+          </ul>
+
+          <p>
+            The animal will be within the protocol for a maximum of 5 months, typically we would expect to finish our study within 4 months of viral transduction.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Describe the general humane endpoints that you will apply during the protocol.
+          </h3>
+          <p class="govuk-hint">
+            These will be in addition to the endpoints stated for each step.
+          </p>
+
+          <p>
+            On recovery from surgery, should an animal exhibit neurological signs such as paralysis, impaired locomotion they will be euthanized.
+          </p>
+
+          <p>
+            Any animal that shows any other deviation from normal health will be monitored more frequently and supportive treatment provided such as warming and wet mash and a decision, if these symptoms are persistent or there are multiple such symptoms, taken as to whether to humanely kill the animal via a Schdeule 1 method. Such signs are covered by a Pain Scale assessment SOP:
+          </p>
+
+          <p>
+            In addition, any animal that loses 20% of its body weight compared to age matched controls will be killed.
+          </p>
+
+
+        </div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            What outputs are expected to arise from this protocol?
+          </h3>
+          <p class="govuk-hint">
+            For example, test results, phenotypic information, or products.
+          </p>
+
+          <p>
+            Fundamental scientific information on the mechanisms underlying seizures and their effects on cardiorespiratory nuclei in the brain stem. These will include:
+          </p>
+
+          <p>
+            1) effects of acute and chronic seizures on the operation of key brainstem cardiorespiratory nuclei, and changes in breathing and cardiac activity;
+          </p>
+
+          <p>
+            2) histological data which will indicate changes in microglial state in the acute and chronic phases of epilepsy;
+          </p>
+
+          <p>
+            3) whether manipulation of microglial activity has any effect on seizure frequency;
+          </p>
+
+          <p>
+            4) whether the effect of microglial activation/inhibition on the activity of neurons in the brainstem nuclei during seizures changes from the acute to the chronic state.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will this protocol generate quantitative data?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will your experimental design be determined by a regulatory guideline?
+          </h3>
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Where relevant, explain how and when pilot studies will be used.
+          </h3>
+          <p>
+            The KA induced SE model (via hippocampal cannula) is well studied and used in many labs. Dr Smith has used this model and there is no need for further pilot work to validate this model. We shall however perform pilot work to ensure that combination of this method with the in vivo imaging method does not cause unnecessary suffering. 
+          </p>
+
+          <p>
+            Specifically, we have a well-established surgical protocol to image brainstem neurons using lenses and miniscope. In this modified protocol, which involves additional implantation of a hippocampal cannula and EEG-ECG electrodes, we will perform a pilot study to establish the animal well-being and recoveries after each surgery. We shall then ensure that animals recover well after induction (and termination) of status epilepticus. We will start with three animals and closely observe their recoveries, well-being, and health and monitor them a minimum of twice daily for 2 weeks after each step of the protocol. Findings of the pilot data will be used to ensure that further studies proceed with appropriate care and measures in place.
+          </p>
+
+          <p>
+            To validate and establish the intraperitoneal LPS dose, we will perform a pilot study and inject 0.1 – 1.0 mg/kg of LPS for 4 days in naïve mice. We will monitor these mice for three weeks (body weight, behaviour, eating pattern etc.) and document any effects that the given dose of LPS has on its own. Brain histology of these mice will be performed to assess the efficacy of LPS-induced microglial activation by means of specific antibodies.
+          </p>
+
+          <p>
+            We already know that at the doses proposed minocycline inhibits microglial activation, so no pilot experiments are necessary. (Smith et al 2017. Inhibition of microglial activation with minocycline at the intrathecal level attenuates sympathoexcitatory and proarrhythmogenic changes in rats with chronic temporal lobe epilepsy. Neuroscience,350, 23-38).
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you choose different experimental groups?
+          </h3>
+          <p class="govuk-hint">
+            For example, controls, dose levels, satellites etc.
+          </p>
+
+          <p>
+            In Aim 1 we will group mice into experimental group, to image the effect of both acute and chronic seizures on cardiorespiratory brainstem neurons, and saline control to image the same cardiorespiratory neurons in mice treated with saline instead of KA.
+          </p>
+
+          <p>
+            In Aim 2, we will evaluate the effect of microglial activation or inhibition either before acute or chronic seizures on the function of one cardiovascular and one respiratory brainstem nuclei during the aetiology of epilepsy. We will have experimental mice groups where activity of cardiorespiratory neurons will be imaged during acute and chronic seizures with microglial activation or inhibition either before acute or chronic seizures. Both experimental and saline control groups of animals from first study will act as a positive control and sham operated group for this study.
+          </p>
+
+
+          <h3 class="govuk-heading-s">
+            How will you choose control groups?
+          </h3>
+          <p class="govuk-hint">
+            Provide a robust scientific justification for controls with significant suffering such as sham surgery controls or untreated infected controls.
+          </p>
+
+          <p>
+            Aim 1 the mice will act as their own control -activity recorded before kainic acid injection. This will give the baseline activity in the relevant brainstem nuclei prior to the induction of seizures. Moreover, we will have a saline control to image the same cardiorespiratory neurons in mice treated with saline instead of KA. This is required because we need to test whether the surgical procedures (specifically implantation of the cannula in the hippocampus, and injection of saline) themselves alter the activity of cardiorespiratory neurons in the brainstem. Without this essential control it will be very difficult to publish this work.
+          </p>
+
+          <p>
+            There will be no further control groups for Aim 2, as the controls from Aim 1 will pertain to Aim 2 and enable us to rule out confounding explanations of our data.
+          </p>
+
+
+          <h3 class="govuk-heading-s">
+            How will experiments and data analysis be randomised and blinded?
+          </h3>
+          <p class="govuk-hint">
+            Animals will be randomised to different groups by standard means. 
+          </p>
+
+          <p>
+            Blinding will not be possible in Aim 1 as this will record neuronal activity from different nuclei and it will be obvious what these nuclei are from inspection of the images. 
+          </p>
+
+          <p>
+            Blinding will be used during data collection in Aim 2 (effects of activating and inhibiting microglia).
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you minimise variables to ensure reproducibility?
+          </h3>
+          <p>
+            Throughout this study, equal husbandry and care will be provided to all the animals. To avoid any possible variability due to female oestrous cycle, we will initially use male mice to establish robust physiological data against which to eventually compare any sex differences. All mice used for the experiments will be age-matched to within 2 months. The quantity of injected virus, speed of injection and size of the injection capillary will be kept consistent to avoid variability in neuronal transfection. Post hoc histology will be performed to confirm virus transfection, lens and cannula placement and to identify the differences in brain pathology within and between different groups. Imaging will be performed in saline treated group of mice to identify the effect of experimental procedures on the function of brainstem neurons and compare them with the experimental groups.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you determine group sizes?
+          </h3>
+          <p class="govuk-hint">
+            You should reference POWER calculations you have made, if relevant.
+          </p>
+
+          <p>
+            Power calculations based on effect size. This will be taken from pilot experiments or from the scientific literature where sufficiently useful data exists. We shall use GPower software to perform power calculations. If necessary form more complex experimental designs we shall use the NC3Rs experimental design assistant.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you maximise the data output from the animals you use on this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Quantitative data required to establish Aim 1:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Ca2+ imaging from cardiorespiratory neurons, which will indicate their temporal pattern of activation and the intensity of their activity during acute and chronic seizures.
+          </li>
+
+          <li>
+            EEG recordings -this will indicate the amplitude and frequency of spontaneous and induced seizures.
+          </li>
+
+          <li>
+            ECG recordings -will document the effect of seizures on the cardiovascular system.
+          </li>
+
+          <li>
+            Whole body plethysmography (WBP) -will document the effect of seizures on breathing (tidal volume, breathing frequency and pattern) and enable us to develop the CO2 biomarker test.
+          </li>
+
+          <li>
+            Post-hoc immunohistological analysis of the morphology will enable us to characterise the proportion of microglia in the surveilling and activated states in the relevant brain locations (hippocampus and brainstem nuclei).
+          </li>
+          </ul>
+
+          <p>
+            Quantitative data required to establish Aim 2:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The data delineated above for Aim 1 will be acquired and analysed to substantiate this aim.
+          </li>
+
+          <li>
+            Additionally, we shall examine the effects of microglial activation and inhibition on all of these parameters.
+          </li>
+          </ul>
+
+
+        </div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Why is each type of animal, experimental model, and/or method selected for this protocol:
+          </h3>
+          <h3 class="govuk-heading-s">
+            a) the most appropriate scientific approach?​
+          </h3>
+          <p>
+            We have determined a detailed methodology for in vivo imaging of brainstem nuclei that enables us to image activity in mice in the awake non-anesthetized state. As anaesthesia alters neural activity and will change the way that seizures may affect the brainstem nuclei, and indeed alter the operation of those nuclei themselves we need to perform this on mice in the awake state. 
+          </p>
+
+          <p>
+            Intra cranial injection of kainic acid is a well recognised procedure for the induction of acute seizures and chronic epilepsy where the mice develop spontaneous recurrent seizures. The kainic acid model is the basis for studies on the effects of seizures on the brain and the effects of manipulations such as drugs on these seizures. This model has the advantage that the kainic acid can be targeted to the hippocampus to give an excellent model of temporal lobe epilepsy (TLE) -this type of epilepsy has the greatest incidence of SUDEP (more than 50% of SUDEP patients have TLE). This model involves an initial injection of kainic acid to induce status epilepticus. The animals' fits are terminated after 40-60 mins by the injection of anti-convulsant drugs. The animals then develop chronic epilepsy. A further much lower dose of kainic acid is given in 7-10 days after establishment of chronic seizures. The purpose of this second low dose of kainic acid is to induce an mild seizure at a predicted time to enable recording of how that seizure affects the brainstem neural circuits. In a case where a successful recording has not been obtained following this procedure, we will reinject this low dose of kainic acid one week later. Only two injections of the low dose of kainic acid will be performed per mouse.
+          </p>
+
+          <p>
+            We have considered the Pilocarpine model. This has the following disadvantages: 1) mortality rate is high to the detriment of animal welfare; and 2) pilocarpine must be injected peripherally and therefore there is no specificity in the brain structures affected, therefore there will be greater variability in the study and underlying mechanisms. Which in turn will mean a greater use of animals. 
+          </p>
+
+          <p>
+            We have also considered the electroconvulsive seizure model (via implanted electrodes) -quite apart from the welfare issues, this model is incompatible with our recording methods. 
+          </p>
+
+          <p>
+            Other models include pentylene tetrazole (PTZ) model and similar models only induce acute seizures and not chronic seizures and therefore will not allow us to tackle the key scientific questions as to why chronic seizures recruit additional mechanisms compared to acute seizures. 
+          </p>
+
+          <p>
+            We are considering the underlying neural circuit mechanisms that may lead to SUDEP. There is some evidence in humans that SUDEP arises from sudden failure of key neural networks in the brainstem that control breathing and cardiovascular systems. So we believe that by studying how seizures in the acute and chronic phases affect the brainstem cardiorespiratory networks, we will gain key insight into how certain mechanistic pathways may be involved in the aetiology of SUDEP in man. Current evidence suggests that rodent brainstem networks are very similar to those in humans, so the results of our work should have relevance in man.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            b) the most refined for the purpose?
+          </h3>
+          <p>
+            We have considerably refined our surgical methods for performing the in vivo imaging. The incidence of unexpected adverse effects is now very low. 
+          </p>
+
+          <p>
+            Motor nerve recordings would be less invasive but would only indicate altered motor outputs and would not tell us the mechanistic events that underlie and cause the altered outputs from the cardiorespiratory networks. For this, we have to observe directly the activity of the premotor networks, and this necessitates the in vivo imaging approach proposed.
+          </p>
+
+          <p>
+            Animals with a lower capacity to experience pain, suffering, distress or lasting harm such as fish cannot be used because their brain anatomy and cardiorespiratory control systems are sufficiently different from mammals and humans that they would not give sufficient insight into the mechanisms by which seizures alter cardiorespiratory control leading to SUDEP.
+          </p>
+
+          <p>
+            The injection of kainic acid into the hippocampus is the most refined approach. The alternatives -injection peripherally or into the amygdala are associated with greater mortality and peripheral injection gives no specificity for the affected structure and type of resulting epilepsy.
+          </p>
+
+          <p>
+            We distinguish status epilepticus from electrographic seizures and behavioural seizures. 
+          </p>
+
+          <p>
+            Status epilepticus: this is defined as a continuous convulsive siezure that lasts longer than 5 minutes.
+          </p>
+
+          <p>
+            Electrographic seizures: these are defined as being detectable via electrode recordings, but with no outward behavioural signs.
+          </p>
+
+          <p>
+            Behavioural seizures: these are defined as convulsive behaviour. These occur mainly during status epilepticus or in the chronic phase of epilepsy.
+          </p>
+
+          <p>
+            The chronic phase of epilepsy is defined by the animal undergoing spontaneous seizures. These are low in frequency and typically no more than 5/day. The chronic phase occurs some 5-30 days after induction of status epilepticus.
+          </p>
+
+          <p>
+            Our method for inducing status epilepticus is refined to minimize suffering as we will terminate this state (which untreated would normally last around 3 hours) with anticonvulsant injection after 40-60 minutes. We, and others, have established that this is the minimum duration of SE required to induce chronic epilepsy.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            For each model and/or method, what is the scientific need for the expected clinical signs?
+          </h3>
+          <p>
+            The main clinical sign of disease we expect to see is acute seizures (status epilepticus) following the initial injection of kainic acid. We need the animals to stay in status epilepticus for 40 mins to 1 hour to induce chronic epilepsy. Previous research has shown they need to exhibit status for this long to reliably induce chronic seizures.
+          </p>
+
+          <p>
+            The second injection of kainic acid is much lower. We are expecting that this will induce only an electrographic seizure, but on rare occasions the mouse may show a behavioural seizure. If this happens seizures will be terminated with appropriate drug regimen. It is necessary to give this second injection to induce a mild electrogrphic seizure so that we can examine its effects on the activity of brainstem neurons in the cardiorespiratory control networks during chronic epilepsy.
+          </p>
+
+          <p>
+            The surgical interventions will give rise to pain which will be controlled by the appropriate use of analgesia. The other steps on the protocol are not expected to generate significant clinical signs.
+          </p>
+
+          <p>
+            Without inducing seizures, the consequent changes in brain neurochemistry, cellular biology and structure will not occur. As we wish to study the consequences for brain function of these seizures we have no option but to induce them. Because the neural mechanisms that affect network connectivity gradually change from the acute to the chronic epileptic state, and continually develop in the chronic state, it is essential for our work that we induce this chronic state of epilepsy. To enter a chronic epileptic state, we have to induce status epilepticus (a continuous convulsive seizure lasting more than 5 minutes). However we shall minimize suffering by ensuring that this state lasts no longer than 60 minutes untreated and if an animal is unresponsive to treatment it will be humanely killed.
+          </p>
+
+          <p>
+            As we wish to understand the neuronal mechanisms underlying the altered cardiorespiratory control, we need to virally transduce the relevant neurons and then implant the imaging lens. Merely looking at the motor outputs from the system is insufficient to give a mechanism by which that altered motor output arises.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why scientifically do the animals need to suffer to this degree?
+          </h3>
+          <p>
+            Our experience is that the surgical procedures themselves cause minimal suffering following recovery from them. 
+          </p>
+
+          <p>
+            As we wish to study how seizure activity alters the functioning of brainstem cardiorespiratory nuclei, we have no option but to induce seizure activity. 
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why can't you achieve your scientific outputs with an earlier humane endpoint, or without animals showing any clinical signs?
+          </h3>
+          <p>
+            There is good evidence that the acute and chronic states of epilepsy affect the brainstem nuclei differently. Furthermore there may be progressive and maladaptive cellular mechanisms that occur in the chronic state. To understand why this arises we have to study both the acute and chronic states. This means that we cannot use an endpoint prior to the establishment of status epilepticus. To enter a chronic epileptic state, we have to induce status epilepticus (a continuous convulsive seizure lasting  more than 5 minutes). However we shall minimize suffering by ensuring that this state lasts no longer than 60 minutes untreated and if an animal is unresponsive to treatment it will be humanely killed. The consensus in the field is that SE needs to last at least an hour to induce the chronic epileptic state. (Lidster et al, 2016. "Opportunities for improving animal welfare in rodent models of epilepsy and seizures." Journal of Neuroscience Methods 260: 2-25.)
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be administering substances for experimental purposes?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you assess the suitability of these substances, and minimise the unnecessary harms arising from their administration given the particular strain or type of animal you will be using?
+          </h3>
+          <p>
+            When assessing suitability, state how you will consider toxicity, efficacy, and sterility.
+          </p>
+
+          <p>
+            Mice will be treated with minocycline to inhibit microglial activation and LPS to activate microglia and kainic acid (KA, low level) to induce acute seizures. At the doses given we do not expect any toxic effects, and we shall perform pilot work to ensure that this dosing regimen does not induce any unexpected adverse effects.
+          </p>
+
+          <p>
+            Mice will be treated with anticonvulsive agents to bring them out of SE (e.g. ketamine, lorazepam). These are commonly used for this purpose and will be of medicinal grade and therefore sterile and highly pure.
+          </p>
+
+          <p>
+            Minocycline is a commonly prescribed tetracycline derived antibiotic which is essentially well-tolerated and safe compound. Minocycline has anti-inflammatory properties in the CNS that are separate from its antimicrobial action. It is the best choice of drug to inhibit microglial activation and is more relevant for future clinical applications. Minocycline readily crosses the blood brain barrier and attenuates inflammation associated with microglial activation. The mechanism of action is unclear, but recent studies indicate that minocycline abrogates MAPkinase and NFκB dependent signalling pathways in microglia.
+          </p>
+
+          <p>
+            Lipopolysaccharide (LPS), the major component of Gram-negative bacterial walls, is a stimulator of macrophage and microglia leading to release of proinflammatory and/or cytotoxic factors such as TNF-α, IL-1β, nitric oxide, and prostaglandin E2. LPS modulates the immune system through activation of Toll like receptor (TLR) 4. LPS preconditioning is a phenomenon in which pre-treatment of the experimental animals with low-dose LPS blunts harmful response to subsequent destructive damage and is a commonly used as model for brain inflammation. Mice treated with LPS will be weighed daily. Moreover, the dose of LPS in our mice is at least 10 times lower than the dose required to cause neurodegeneration (Qin, L., et al., 2007).
+          </p>
+
+          <p>
+            To ensure purity and sterility we shall use the highest grade of minocycline, LPS and KA. For minocycline this will be medicinal grade. We shall prepare all solutions of these drugs in sterile ultrapure water (e.g. autoclaved, 18 MOhm grade) using sterile techniques.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How will you determine an appropriate dosing regimen?​
+          </h3>
+          <p class="govuk-hint">
+            Include routes, dosage volumes, frequencies, and durations.
+          </p>
+
+          <p>
+            Minocycline will be administrated via drinking water, oral gavage or IP at a dose of 30-50mg/kg/day. This dose regimen has been previously found to be effective in counteracting chronic stress-induced microglial alterations and behavioural changes (Henry, C.J., et al., 2008; Kreisel, T., et al., 2014; Wang, N., et al., 2015).
+          </p>
+
+          <p>
+            Based on the previous literature, microglia will be pharmacologically preconditioned in mice with a low dose (0.5-1.0 mg/kg i.p.) of LPS (E. coli) for 4 days before or after induction of status epilepticus (Burguillos, M.A., et al., 2011; Chen, Z., et al., 2012; Dmowska, M., et al., 2010; Eslami, M., et al., 2015). 
+          </p>
+
+          <p>
+            Status epilepticus (SE) will be induced in mice with 0.2-0.4 μg; 50nl of kainic acid (KA) injection into the brain (Bouilleret, V., et al., 1999; Mouri, G., et al., 2008; Kasugai, M., et al., 2007). 40-60 minutes following injection of KA, mice will receive 6-12mg/kg intraperitoneal lorazepam to terminate the SE (as established by Martin & Kapur, 2017). During chronic seizure period (spontaneous seizures), low dose (0.02-0.04 μg; 50nl) of KA will be injected into the brain to trigger electrographic (mild) seizures without behavioural changes.
+          </p>
+
+          <p>
+            We shall use the highest grade of KA and prepare all solutions in sterile ultrapure water (e.g. autoclaved, 18 MOhm grade) using sterile techniques.
+          </p>
+
+          <p>
+            Drug combinations: The combination of KA and anticonvulsants is a well-established procedure and increases the wefare of the animal. All other drugs will be applied well before or after induction of SE, and no drugs will be applied simultaneously.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <span class="badge changed">Changed</span>
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option2" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">2: Breeding and maintenance of GA mice</span>
+          </label>
+          <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            Briefly describe the purposes of this protocol
+          </h3>
+          <p class="govuk-hint">
+            Ensure that you state any relevant regulatory 
+            guidelines.</p>
+          
+          <p>To produce, maintain and provide genetically altered mice.</p>
+          
+          
+          <h3 class="govuk-heading-s">
+            Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
+          </h3>
+          <p>
+            Mild
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            What proportion of animals will experience this severity?
+          </h3>
+          <p>
+            All animals – we expect the phenotype to be sub-threshold
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Why are you proposing this severity category?
+          </h3>
+          <p>
+            Animals are not expected to show harmful phenotypes that are more than minor or transient.
+          </p>
+          
+          <h3 class="govuk-heading-s">
+            Locations where this protocol can be carried out
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          <p>
+            University of Croydon
+          </p>
+          <h3 class="govuk-heading-s">
+            Which of your objectives will this protocol address?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply.
+          </p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              ATP release during hypoxic-ischaemic neonatal brain injury
+            </li>
+            <li>
+              Expression and function of P2X7 in the brain following neonatal Hypoxia/Ischemia
+            </li>
+            <li>
+              Novel diagnostics and prognostics of neonatal encephalopathy in humans
+            </li>
+            <li>
+              Identifying the brainstem circuits affected by acute and chronic seizures
+            </li>
+            <li>
+              The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures
+            </li>
+          </ul>
+
+        </div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Mice
+          </h3>
+          <h3 class="govuk-heading-s">
+            Which life stages will be used during this protocol?
+          </h3>
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Juvenile
+            </li>
+            <li>
+              Adult
+            </li>
+            <li>
+              Pregnant adult
+            </li>
+          </ul>
+          <h3 class="govuk-heading-s">
+            Will any animals coming on to this protocol be classed as ‘continued use’?
+          </h3>
+          <p class="govuk-hint">
+            ‘Continued use’ describes animals that are specifically genetically altered and bred for scientific use or animals that have had procedures applied to them in order to be prepared for use in this protocol.
+          </p>
+
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            How did these animals start their use?
+          </h3>
+          <p class="govuk-hint">
+            Describe the procedures that have been applied to animals that will continue their use on to this protocol.
+          </p>
+
+          <p>
+            Genetically altered animals (and associated wild type controls) for use in this protocol may be obtained from other projects with authority to breed and maintain genetically altered animals of a type authorised in this project, and to provide them for use on other projects.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be re-using animals on to this protocol?
+          </h3>
+          <p class="govuk-hint">
+            ‘Re-use’ describes using animals again for a new experiment when you could equally use a naïve animal to get the same results.
+          </p>
+
+          <p>
+            No
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of animals that will be used on this protocol?
+          </h3>
+          <p>
+            1000
+          </p>
+
+          <h3 class="govuk-heading-s">
+            What is the maximum number of uses of this protocol per animal?
+          </h3>
+          <p class="govuk-hint">
+            For example, if some animals will go through this protocol three more times after their first use, the number of uses will be four. If no animals will go through this protocol more than once, enter '1'.
+          </p>
+          <p>
+            1
+          </p>
+        </div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Will this protocol use any genetically altered animals?
+          </h3>
+          <p>
+            Yes
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Which general types or strains will you be using and why?
+          </h3>
+          <p>
+            GA Mice with:
+          </p>
+          <ul class="govuk-list govuk-list--number">
+            <li>
+              Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
+            </li>
+            
+            <li>
+              Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
+            </li>
+            
+            <li>
+              Particular genes deleted or knocked in to analyze their function
+            </li>
+            
+            <li>
+              Floxed alleles of interest for subsequent conditional deletion for analysis of function
+            </li>
+            
+            <li>
+              Other modifications that enable specific and conditional targeting/expression of genes and constructs
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Do you expect any of these GAAs to show a harmful phenotype with welfare consequences?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <p class="govuk-hint">A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
+          <section class="step completed">
+            <h3 class="govuk-heading-s">Step 1<span class="light smaller"> (mandatory)</span>
+          </h3>
+            <div class="review">
+            <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+            <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+            When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+            <div class="govuk-form-group">
+              <div id="title" class="editor readonly">
+              <div name="title" data-slate-editor="true" data-key="1796" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="1797">
+              <span data-slate-object="text" data-key="1798">
+              <span data-slate-leaf="true" data-offset-key="1798:0">
+              <span data-slate-string="true">Breeding and maintenance of GA mice by conventional breeding methods.</span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <div class="review">
+              <h3 class="govuk-heading-s">Is this step optional?</h3>
+              <p>No</p>
+            </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+              <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+              <p>No</p>
+            </div>
+          </div>
+          </section>
+          
+          <section class="step completed">
+            <h3 class="govuk-heading-s">Step 2<span class="light smaller"> (optional)</span>
+          </h3>
+            <div class="review">
+            <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+            <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+            When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+            <div class="govuk-form-group">
+              <div id="title" class="editor readonly">
+              <div name="title" data-slate-editor="true" data-key="1800" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="1801">
+              <span data-slate-object="text" data-key="1802">
+              <span data-slate-leaf="true" data-offset-key="1802:0">
+              <span data-slate-string="true">Tissue biopsy to determine genetic status by one of the following methods: ear punch; blood sampling; hair sampling (AA)</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="1803">
+              <span data-slate-object="text" data-key="1804">
+              <span data-slate-leaf="true" data-offset-key="1804:0">
+              <span data-slate-string="true">Optional: removal of tail tip -no more than 0.3 cm (AB)</span>
+            </span>
+            </span>
+            </p>
+              <p data-slate-object="block" data-key="1805">
+              <span data-slate-object="text" data-key="1806">
+              <span data-slate-leaf="true" data-offset-key="1806:0">
+              <span data-slate-string="true">Optional: if technical problems arise in analysis a second sample may be taken by least invasive method.</span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <div class="review">
+              <h3 class="govuk-heading-s">Is this step optional?</h3>
+              <p>Yes</p>
+            </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+              <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+              <p>Yes</p>
+            </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">What are the likely adverse effects of this step?&#8203;</h3>
+              <p class="govuk-hint">State the expected adverse effect, including the likely incidence, and the anticipated degree and duration of suffering.</p>
+              <div class="govuk-form-group">
+              <div id="adverse-effects" class="editor readonly">
+              <div name="adverse-effects" data-slate-editor="true" data-key="1808" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="1809">
+              <span data-slate-object="text" data-key="1810">
+              <span data-slate-leaf="true" data-offset-key="1810:0">
+              <span data-slate-string="true">Minor and transient pain and discomfort.</span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?&#8203;</h3>
+              <p class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</p>
+              <div class="govuk-form-group">
+              <div id="prevent-adverse-effects" class="editor readonly">
+              <div name="prevent-adverse-effects" data-slate-editor="true" data-key="1812" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="1813">
+              <span data-slate-object="text" data-key="1814">
+              <span data-slate-leaf="true" data-offset-key="1814:0">
+              <span data-slate-string="true">Control For the tail tip no more than 0.3 cm will be removed. Pain will be controlled by using analgesics.</span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+            <div class="review">
+              <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+              <p class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</p>
+              <div class="govuk-form-group">
+              <div id="endpoints" class="editor readonly">
+              <div name="endpoints" data-slate-editor="true" data-key="1816" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+              <p data-slate-object="block" data-key="1817">
+              <span data-slate-object="text" data-key="1818">
+              <span data-slate-leaf="true" data-offset-key="1818:0">
+              <span data-slate-string="true">Any animal will be immediately killed by Schedule 1 method if it shows signs of suffering that is greater than minor and transient or in any way compromises normal behaviour.</span>
+            </span>
+            </span>
+            </p>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
+            <section class="step completed">
+              <h3 class="govuk-heading-s">Step 3<span class="light smaller"> (optional)</span>
+            </h3>
+              <div class="review">
+              <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+              <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.
+
+              When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+              <div class="govuk-form-group">
+                <div id="title" class="editor readonly">
+                <div name="title" data-slate-editor="true" data-key="1820" autocorrect="on" spellcheck="true" data-gramm="false" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+                <p data-slate-object="block" data-key="1821">
+                <span data-slate-object="text" data-key="1822">
+                <span data-slate-leaf="true" data-offset-key="1822:0">
+                <span data-slate-string="true">Animals not used on other protocols in this project or other projects will be killed by: a Schedule 1 method;  or by exsanguination under terminal anaesthesia, completed by a Schedule 1 method; or by perfusion fixation under terminal anaesthesia. </span>
+              </span>
+              </span>
+              </p>
+                <p data-slate-object="block" data-key="1823">
+                <span data-slate-object="text" data-key="1824">
+                <span data-slate-leaf="true" data-offset-key="1824:0">
+                <span data-slate-zero-width="n" data-slate-length="0">&#65279;<br>
+              </span>
+              </span>
+              </span>
+              </p>
+              </div>
+            </div>
+            </div>
+            </div>
+              <div class="review">
+                <div class="review">
+                <h3 class="govuk-heading-s">Is this step optional?</h3>
+                <p>Yes</p>
+              </div>
+              <div class="review">
+                <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+                <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+                <p>No</p>
+              </div>
+            </div>
+            </section>
+
+        </div>
+
+        <button class="accordion">Fate of animals&ensp;<span class="badge changed">Changed</span>
+        </button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+          	What will happen to animals at the end of this protocol?​
+          </h3>
+          
+          <!-- Trigger/Open The Modal -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="showComparison">
+            <p>
+              <span class="badge changed">Changed</span>&emsp;<i class="fa fa-copy">
+              
+            </i> <a href="javascript:void()"  >See whats changed</a>
+            </p>
+          </div>
+
+          <!-- The Modal -->
+          <div id="fateComparison" class="modal modal-dialoge">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="diff-window">
+                <div class="diff-window-header">
+                <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
+                  See what's changed
+                  <span class="govuk-body">
+                    <a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a>
+                  </span>
+                </h2>  
+                </div>
+                <div class="diff-window-body">
+                  <h2 class="govuk-heading-m">Do you need to transfer animals from a project that’s due to expire?</h2>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                      <h3 class="govuk-heading-s">Current licence</h3>
+                      <div class="panel-light-grey">
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <p>
+                              Continued use on another protocol in this project
+                            </p>
+                            <p>
+                              <strong>Please state the relevant protocol</strong>
+                            <br>
+                              Protocol 1
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Killed
+                            </p>
+                            <p>
+                              <strong>Will you be using non-schedule 1 killing methods on a conscious animal?</strong>
+                            <br>
+                              No
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Continued use on other projects
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                      <h3 class="govuk-heading-s">Proposed</h3>
+                      <div class="panel-light-grey">
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <p>
+                              Continued use on another protocol in this project
+                            </p>
+                            <p>
+                              <strong>Please state the relevant protocol</strong>
+                              <br>
+                              Protocol 1
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Killed
+                            </p>
+                            <p>
+                              <strong>Will you be using non-schedule 1 killing methods on a conscious animal?</strong>
+                              <br>
+                              No
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Continued use on other projects
+                            </p>
+                          </li>
+                          <li>
+                            <p class="highlight added">
+                              Rehomed
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="diff-window-footer">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="govuk-hint">
+            Select all that apply
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              
+                <p>
+                	Continued use on another protocol in this project
+                </p>
+                <p>
+                  <strong>Please state the relevant protocol</strong>
+                <br>
+                  Protocol 1
+                </p>
+            </li>
+            <li>
+              <p>
+                Killed
+              </p>
+                <p>
+                  <strong>Will you be using non-schedule 1 killing methods on a conscious animal?</strong>
+                <br>
+                  No
+                </p>
+              
+            </li>
+            <li>
+              <p>
+                Continued use on other projects
+              </p>
+            </li>
+            <li>
+              <p>
+                Rehomed
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel">
+                    
+          <h3 class="govuk-heading-s">
+            Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
+          </h3>
+          <p class="govuk-hint">
+            Consider the cumulative effect of any combinations of procedures that you may carry out.
+          </p>
+          <p>
+            Standard methods of breeding and maintenance with tissue samples taken for genotyping as part of standard husbandry. Animals produced under this protocol are not expected to exhibit any harmful phenotype.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Describe the general humane endpoints that you will apply during the protocol.
+          </h3>
+          <p class="govuk-hint">
+            These will be in addition to the endpoints stated for each step.
+          </p>
+
+          <p>
+            Any animal will be immediately killed by Schedule 1 method if it shows signs of suffering that is greater than minor and transient or in any way compromises normal behaviour. Animals exhibiting any unexpected harmful phenotypes will be killed (Schedule 1), or in the case of individual animals of particular scientific interest, advice will be sought promptly from the local Home Office Inspector.
+          </p>
+        </div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel">
+          
+          <h3 class="govuk-heading-s">
+            What outputs are expected to arise from this protocol?
+          </h3>
+          <p class="govuk-hint">
+            For example, test results, phenotypic information, or products.
+          </p>
+
+          <p>
+            GA mice for use in other protocols of this project or continued use in other projects
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will this protocol generate quantitative data?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel">
+          <h3 class="govuk-heading-s">
+            Why is each type of animal, experimental model, and/or method selected for this protocol:
+          </h3>
+          <h3 class="govuk-heading-s">
+            a) the most appropriate scientific approach?​
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            b) the most refined for the purpose?
+          </h3>
+          <p>
+            Tail biopsy will only be taken if more refined genotyping methods are not suitable scientifically.
+          </p>
+
+          <h3 class="govuk-heading-s">
+            For each model and/or method, what is the scientific need for the expected clinical signs?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why scientifically do the animals need to suffer to this degree?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Why can't you achieve your scientific outputs with an earlier humane endpoint, or without animals showing any clinical signs?
+          </h3>
+          <p>
+            N/A
+          </p>
+
+          <h3 class="govuk-heading-s">
+            Will you be administering substances for experimental purposes?
+          </h3>
+          <p>
+            No
+          </p>
+        </div>
+        {% set previousPage = '#' %}
+        {% set previousPageTitle = 'POLEs' %}
+        {% set nextPage = '#' %}
+        {% set nextPageTitle = 'Purpose bred animals' %}
+        {% include "includes/application-footer-nav.html" %}
+
+      </div>
+    </div>
+
+    
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

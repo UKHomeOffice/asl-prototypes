@@ -1,0 +1,102 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-banner">
+
+        <svg class="notification-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+        C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+  
+        <div class="notification-banner__message"  style="display: inline-block; padding-left: 10px;">
+          <span class="govuk-body"><strong>This personal licence requires a review within 25 days.</strong></span>
+        </div>
+        <div class="notification-banner-content">
+          <p>An amendment to this licence has been submitted.</p> 
+          <p>The licence will be reviewed as part of the amendment, so if the amendment is successful this review will be resolved.</p>
+          <p><a href="#">View task</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "includes/licence-header-pil.html" %} 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+            
+      <dl class="govuk-body">
+        <dt>Licence number</dt>
+        <dd>KW-740222</dd>
+        <dt>Establishment</dt>
+        <dd>04 August 2015</dd>
+        <dt>Issue date</dt>
+        <dd>04 August 2015</dd>
+        <dt>Last amended</dt>
+        <dd>–</dd>
+        <dt>Next review date</dt>
+        <dd>
+          04 August 2020
+          <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">Personal licence review required within 25 days</h3>
+            <p>Personal licence are required to be reviewed every 5 years.</p>
+            <p>An amendment to this licence has been submitted, the review will be comlete once the amendment is resolved.</p>
+            <p><a href="#">View task</a></p>
+
+          </div>
+        </dd>
+        <dt>Animal types</dt>
+        <dd>
+          <ul class="govuk-list">
+            <li>Mice</li>
+            <li>Rats</li>
+            <li>Hamsters</li>
+          </ul>
+        </dd>
+        <dt>Procedures</dt>
+        <dd>
+          <p><strong>A</strong>: Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+          <p><strong>B</strong>: Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical
+          procedures conducted under brief non-recovery general anaesthesia</p>
+
+          <p><strong>C</strong>: Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or
+          prolonged general anaesthesia.</p>
+        </dd>
+        <dt>Conditions</dt>
+        <dd>
+          <p><a href="#">The standard conditions apply</a></p>
+        </dd>
+      </dl>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Amend licence</h2>
+      <p>An amendment to this licence has been submitted and is being reviewed. You can view or recall the amendment.</p>
+      
+      <a class="govuk-button govuk-button--secondary">View task</a>
+
+      
+    </div>
+  </div>
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 30px;
+    width: 25%;
+  }
+  dd {
+    width: 60%;
+  }
+
+  
+</style>
+
+    
+
+{% endblock %}

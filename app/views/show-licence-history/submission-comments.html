@@ -1,0 +1,157 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+     <!-- <div class="licence-status-banner expired-licence">
+        <p>
+          <strong>EXPIRED</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+        <p><strong>Granted:</strong> 01 January 2017 | <strong>Expired:</strong> 31 December 2017</p>
+        <p>This licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p>View the <a href="licence-granted">most recent version of this licence</a></p>
+      </div> -->
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Project introduction</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Introductory details</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Applicant information</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Experience</a>
+        </li>
+        <li>
+          <a href="#">Funding</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Project location</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-establishments-1">Establishments</a>
+          <span class="badge changed float-right" style="margin-left: 10px;">changed</span>
+          <span class="badge comment float-right">2 comments</span>
+        </li>
+        <li>
+          <a href="ppl-transfer-1">Transfer and movement of animals</a>
+          <span class="badge changed float-right" style="margin-left: 10px;">changed</span>
+          <span class="badge comment float-right">4 comments</span>
+        </li>
+        <li>
+          <a href="ppl-poles-1">Places other than a licensed establishment (POLEs)</a>
+          <span class="badge changed float-right" style="margin-left: 10px;">changed</span>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Project plan</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Scientific background</a>
+        </li>
+        <li>
+          <a href="#">Action plan</a>
+        </li>
+        <li>
+          <a href="#">General principles</a>
+        </li>
+        <li>
+          <a href="#">Benefits</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Protocols</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ppl-protocols-1">Protocols</a>
+          <span class="badge changed float-right" style="margin-left: 10px;">changed</span>
+          <span class="badge comment float-right">7 comments</span>
+        </li>
+        <li>
+          <a href="#">Project harms</a>
+        </li>
+        <li>
+          <a href="#">Fate of animals</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Use of animals</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Purpose bred animals</a>
+        </li>
+        <li>
+          <a href="#">Endangered animals</a>
+        </li>
+        <li>
+          <a href="#">Animals taken from the wild</a>
+        </li>
+        <li>
+          <a href="#">Feral animals</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Other considerations</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Commercial slaughter</a>
+        </li>
+        <li>
+          <a href="#">Animals containing human material</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">The 3Rs</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Replacement</a>
+        </li>
+        <li>
+          <a href="#">Reduction</a>
+        </li>
+        <li>
+          <a href="#">Refinement</a>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Non-technical summary</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Review</a>
+        </li>
+      </ul>
+
+      <p>All sections must be marked as complete before you can continue and send your application to the Home Office.</p>
+
+      {% if (data['transfer-complete'] == 'true') and (data['est-complete'] == 'true') and (data['poles-complete'] == 'true') and (data['protocols-complete'] == 'true') %}
+        <a href="declaration" class="govuk-button">Continue</a>
+      {% elseif (data['transfer-complete'] != 'true') and (data['est-complete'] != 'true') and (data['poles-complete'] != 'true') and (data['protocols-complete'] != 'true') %}
+        <a href="declaration" class="govuk-button">Continue</a>
+      {% endif %}
+
+
+
+
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

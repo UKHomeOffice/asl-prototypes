@@ -1,0 +1,216 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+       <li class="selected"><a href="suitability-of-applicant">Applicant information</a></li>
+       <li><a href="suitability-of-places">Project location</a></li>
+       <li><a href="programme-of-work">Programme of work</a></li>
+       <li><a href="types-of-animals">Types of animals</a></li>
+       <li><a href="models-and-methods">Protocols</a></li>
+       <li><a href="application-of-3rs">Replacement, reduction & refinement</a></li>
+       <li><a href="non-technical-summary">Non-technical summary</a></li>
+       <li><a href="retrospective-assessment">Retrospective assessment</a></li>
+       <li><a href="additional-conditions">Other additional conditions</a></li>
+       <li><a href="harm-benefit-analysis">Harm-benefit analysis</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Applicant information</h1>
+      
+            
+          <h3 class="govuk-heading-m">Position within the establishment</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Applicants must be in an appropriate position of authority to take responsibility for the conduct of the programme of work</li>
+            <li>There must be no real or perceived conflicts of interest</li>
+          </ul>
+
+          <h3 class="govuk-heading-m">Education</h3>
+          <p>Applicants have:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Expert knowledge in the scientific discipline relating to the area of work </li>
+            <li>Specific knowledge of the biology, physiology and husbandry requirements of the species that will be used in the programme of work</li>
+            <li>A good knowledge of the methods, animal models and specialised equipment that they need to use, or close collaboration with others that do have such knowledge</li>
+            <li>Appropriate education and training in designing programmes of work under ASPA</li>
+            <li>Expertise in experimental design (including expertise in statistics Where appropriate) or access to such expertise</li>
+            <li>Expertise in Replacement, reduction & refinement in the area of work</li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Relevant application sections</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="../application/experience">View applicants experience</a></li>
+            <li><a href="#">View Bruce Banners personal licence</a></li>
+          </ul>
+
+
+          <h3 class="govuk-heading-m">Training</h3>
+          <p>Mandatory training</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Mandatory training requirements as shown in the Guidance at Figure 4 are fulfilled AND/OR</li>
+          </ul>
+            
+
+          <p>Exemptions</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>There is adequate evidence to support a request for exemption from any of the mandatory training requirements. This will be based on current knowledge, skills and/or education and accord with current policy</li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Relevant application sections</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="#">View Bruce Banner's personal licence</a></li>
+          </ul>
+          <h3 class="govuk-heading-m">Language </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Applicants have sufficient command of English to understand the terms and conditions of their project licence"</li>
+          </ul>
+
+      <h2 class="govuk-heading-s">Is the applicant suitable?</h2>
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Add comments
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <span id="more-detail-hint" class="govuk-hint">
+              These comments will only be visible to ASRU users.
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+        </div>
+      </details>
+
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Additional conditions</h2>
+      <p>Select any additional conditions you want to add to this licnece</p>
+      <div class="govuk-form-group">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+              Limited training exemption
+              <p>This licence authority will expire on [ X months after grant date] unless evidence that [NAME] has successfully completed accredited training module(s) [module codes] is provided to aspa.london@homeoffice.gov.uk</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+            </label>
+          </div>
+        </div>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+               Write new condition
+            </label>
+          </div>
+        </div>
+        </div>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">    
+      <div class="declaration-panel-grey">
+        <h3 class="govuk-heading-m">Mark this section as complete</h3>
+        <p>You can still edit this section later, but you will be unable make a recommendation for this application until all sections are marked as complete.</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Mark this section as complete
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>  
+      </div> 
+        <br>
+      <p>
+        <a href="review-pil-app-public-edit" class="govuk-button">Continue</a>
+        <a class="secondary-link" href="#">Cancel</a>
+      </p>
+  
+      
+      
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+</style>
+{% endblock %}

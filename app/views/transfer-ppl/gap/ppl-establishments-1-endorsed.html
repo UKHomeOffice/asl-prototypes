@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+
+      {% include "includes/licence-header-ppl.html" %}
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Establishments</h2>
+      
+      <form action="ppl-establishments-2" method="post">
+        <div class="govuk-form-group">  
+          <label class="govuk-heading-s" for="">
+            What is the primary establishment for this licence?
+          </label>
+          <p>Marvell Pharmaceuticals</p>
+          <div class="govuk-inset-text">
+            <p>
+              This amendment now has PEL holder endorsement. This means you are unable to further change the primary establishment for this amendment. 
+            </p>
+            <p>
+              To change the primary establishment for this licence you will need to discard this amendment and create a new one.
+            </p>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Will your project use any additional establishments?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-1" name="add-establishments" type="radio" value="Yes" data-aria-controls="conditional-add-establishments-1" checked="">
+                <label class="govuk-label govuk-radios__label" for="add-establishments-1">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-2" name="add-establishments" type="radio" value="No" data-aria-controls="conditional-add-establishments-2">
+                <label class="govuk-label govuk-radios__label" for="add-establishments-2">
+                  No
+                </label> 
+              </div>
+            </div>
+            
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

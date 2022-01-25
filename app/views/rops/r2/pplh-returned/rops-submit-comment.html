@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents</span>
+      <h1 class="govuk-heading-l">Submit return</h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="more-detail">
+         Remarks (optional)
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">Your remarks will be recorded and visible to relevant establishment and Home Office staff.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <p><a href="confirmation" class="govuk-button">Submit now</a><a class="secondary-link" href="#">Cancel</a></p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

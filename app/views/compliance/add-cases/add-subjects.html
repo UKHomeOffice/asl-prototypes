@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Add case subjects
+    </h1>
+
+    <h2 class="govuk-heading-m">Case details</h2>
+    <ul class="govuk-list">
+      <li><strong>Establishment</strong> University of Croydon</li>
+      <li><strong>Case number</strong> 21102</li>
+      <li><a href="#">Edit</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Enforcement subjects</h2>
+    
+    <div class="declaration-panel-grey">
+      <h2 class="govuk-heading-m">Enforcement subject 1</h2>
+      <form action="add-subjects-1" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="person-1">
+            Select person
+          </label>
+          <input class="govuk-input" id="person-1" name="person-1" type="text">
+        </div>
+        <button class="govuk-button">Add person</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

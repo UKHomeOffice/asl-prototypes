@@ -1,0 +1,194 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Review conditions
+      </h1>
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">
+        Additional conditions
+      </h2>
+      <p class="govuk-hint">
+        These additional conditions apply to the project as a whole.
+      </p>
+
+      <p class="govuk-hint">
+        Additional conditions that are specific to a set of procedures can be found in each protocol.
+      </p>
+
+      <h2 class="govuk-heading-s">Additional condition 1</h2>
+      <div class="govuk-inset-text condition">
+          A report containing information on the number of animals euthanised, score at which they were euthanised; number of animals scoring 3 but then recovering; number animals found dead; progress in using blood biochemistry to refine endpoints further, actual severity and the necessary frequency of observation of clinical signs in a form agreed by the assigned Home Office Inspector shall be made in writing to the Home Office (aspa.london@homeoffice.gov.uk) on completion of the first (pilot) cohort of animals that undergo induction of acute liver failure on protocol 3 of this licence .
+      </div>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">
+        Authorisations
+      </h2>
+      <p class="govuk-hint">
+        These authorisations apply to the project as a whole.
+      </p>
+
+      <p class="govuk-hint">
+        Authorisations that are specific to a set of procedures can be found in each protocol.
+      </p>
+      <h2 class="govuk-heading-s">Authorisation 1</h2>
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          Export of animals (transfer)
+        </h3>
+        <p>
+          Genetically altered rodents, genetically altered zebra fish and genetically altered Xenopus sp. bred and/or maintained under the authority of this project may be transferred to scientific establishments outside the United Kingdom only if:
+        </p>
+        <ul class="govuk-list govuk-list--number">
+          <li>
+            The transfer will be made to a recognised scientific research establishment with a scientific requirement for genetically altered animals (or their controls) of that type; and where appropriate veterinary care can be provided as necessary; and
+          </li>
+          <li>
+            Sending tissue, gametes or embryos is not practicable or carries a higher potential welfare cost than moving live animals; and
+          </li>
+          <li>
+            Animals will be transported in accordance with all relevant regulations regarding welfare of animals in transit or the import or export of animals; and
+          </li>
+          <li>
+            Animals will be inspected by a competent person before transfer; and
+          </li>
+          <li>
+            A veterinary surgeon will confirm that he/she is not aware of any reason why these animals might suffer by virtue of the fact of being moved to another recognised scientific establishment.
+          </li>
+          <li>
+            Any transport related problems with the welfare of the animals will be notified to the Home Office promptly.
+          </li>
+        </ul>
+      </div>
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Protocol 1</h2>
+      <h2 class="govuk-heading-s">Authorisation 1</h2>
+      <div class="govuk-inset-text condition">
+        <h2 class="govuk-heading-s">Continued use onto a protocol</h2>
+        <p>
+          Continued use on to protocol 3 used on this protocol may be obtained from protocol 1 of this project, or from other projects with authority to supply animals of a type authorised in this project.
+        </p>
+      </div>
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+  
+      <h2 class="govuk-heading-m">Protocol 3</h2>
+        <h2 class="govuk-heading-s">Authorisation 1</h2>
+        <div class="govuk-inset-text condition">
+          <h2 class="govuk-heading-s">Continued use onto a protocol</h2>
+          <p>
+            Mice used on this protocol may be obtained from protocol 1 of this project, or from other projects with authority to supply animals of a type authorised in this project.
+          </p>
+        </div>
+      <form action="recommend-confirmation" method="post">
+
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a class="secondary-link" href="#">Cancel</a>
+        </p>
+    
+      </form>
+        
+
+
+    
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

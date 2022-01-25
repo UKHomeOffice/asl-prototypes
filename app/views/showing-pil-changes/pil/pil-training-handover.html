@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Update training modules on the PIL holders profile</h1>
+      <p>You need to add your training and any exeptions to your ASPEL profile and return to your personal licence application.</p>
+      <p>
+      	<a href="/training-exemptions/ur/add-cert-1/profile-empty" class="govuk-button">Add training to your profile</a>
+      </p>
+      <p>
+        Alternatively you can <a href="javascript:history.go(-1)">continue with the rest of your application</a> and add your training later.
+      </p>
+    </div>
+  </div>
+<style type="text/css">
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+  .module-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+  }
+  
+  .module-evidence{
+    display: inline-block;
+    width: 70%;
+  }
+  dl{
+    padding-left: 30px;     
+    margin-block-start: 0px;
+  }
+  dl .govuk-body{
+    margin-bottom: 0px;
+  }
+  dt {
+    width: 25%;
+  }
+  dd {
+    width: 65%;
+  }
+</style>
+{% endblock %}

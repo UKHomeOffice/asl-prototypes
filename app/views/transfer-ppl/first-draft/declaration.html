@@ -1,0 +1,117 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Send amendment
+      </h1>
+      
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Amendments that include a change of primary establishment must be endorsed by administrators, acting on behalf of the PEL holders, at both establishments.
+      </div>
+
+       <!-- <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+         
+          <label class="govuk-label--s" for="">
+           Does this application have the endorsemant of the desitination establishment's PEL holder?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Please state the name of the destination establishment's PEL holder
+                </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Please state the date of their endorsement
+                </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                No
+              </label> 
+            </div>
+          </div>
+          
+        </fieldset>
+      </div> -->
+
+      <form action="transfer-request-submitted" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">Please state the date of the most recent AWERB review for each establishment including the proposed primary establishment and any additional establishments.</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="awerb-declaration" name="awerb-declaration" rows="5" aria-describedby="awerb-declaration-hint"></textarea>
+
+          </fieldset>
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">
+             Why are you making this amendment?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="amendment-reason" name="amendment-reason" rows="5" aria-describedby="amendment-reason-hint"></textarea>
+
+          </fieldset>
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">
+             When would you like this transfer to happen?
+            </label>
+            <span id="holding-hint" class="govuk-hint">The transfer will need to be endorsed by both PEL holders. ASRU will need ‘x’ days to process it. If it is urgent please contact ASRU.</span>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+
+          </fieldset>
+        </div>
+        
+        <button class="govuk-button govuk-button">Send to administrator</button> <a href='#' class="secondary-link">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

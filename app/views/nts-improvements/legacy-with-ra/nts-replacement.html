@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts-and-ra.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li>Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-replacement.html"><li class="selected">Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Replacement
+      </h1>
+      <h2 class="govuk-heading-s">
+        State why you need to use animals and why you cannot use non-animal alternatives.
+      </h2>
+      <p>
+        The intact Cardiovascular, Respiratory and Renal systems (heart, blood ,lung, kidney systems) are complex systems which interact with each other in ways that are not fully understood and therefore, there are no adequate models that can be set up in for example a laboratory dish to replace the whole animal experimental model, as the complex mechanisms under investigation cannot be adequately modelled in without the use of whole, intact and functioning animals.
+      </p>
+      <p>
+        However work in test tubes with cells will be used to help 'screen' suitability of potential substances for further testing in animals. This is because if for example toxicity or signs of abnormal cell development are identified in lab then the test drug/substance will not further progress into animal work.
+      </p>
+
+      <div class="grey-panel">
+
+        <h2 class="govuk-heading-l">Retrospective assssment summary</h2>
+
+        <label class="govuk-label--s" for="option-1-additional-1">
+          What, if any, non-animal alternatives were used or explored after the project started, how effective were they and are there any lessons worth sharing with others?
+        </label>
+        <span class="govuk-hint">These are non-animal alternatives that became available or viable after the project licence was granted. They could include genetically engineered tissue or computer modelling, for example.</span>
+        <p>
+          We are continuously doing some literature and web searches (Google, pubmed.com, nc3rs.org.uk) in an effort to find alternatives to any procedure that causes more than momentary pain or distress
+        </p>
+        <p>
+          Most work (e.g. myocardial infarction, stem cells injections, echocardiography, invasive hemodynamic measurements) requires an intact functional heart. However replacement has been possible in part of the work (e.g. cardiac cells protection/regeneration) with the cell culture approach.
+        </p>
+        <p>
+          Tissues/organs are frequently collected from animals killed by schedule 1 methods from most of our mouse lines. Samples of whole heart, lung, bone marrow, and occasionally liver, blood and skeletal muscle are used to maximise the information we can obtain from each mouse, particularly when it does not involve additional welfare cost to the animal. The tissues obtained are used in a broad range of downstream investigations, e.g. protein analysis, infarcts staining and histology, gene expression to aid our understanding of disease mechanisms taking place in our mice models of cardiac disease.
+        </p>
+        <p>
+          In cell graft experiments, only grafting to the intact heart itself is an adequate model to facilitate potential human trials of cell therapy for cardiac repair, and only grafting to the injured heart is an adequate model to ascertain the cells potential differentiation and functional impact in a clinically
+        </p>
+      </div>
+
+      
+
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="nts-harms" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Predicted harms</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-reduction" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Reduction</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

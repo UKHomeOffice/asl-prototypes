@@ -1,0 +1,87 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL transfer</span>
+      <h1 class="govuk-heading-xl">
+        Transfer licence
+      </h1>
+      
+      <!-- <p>Please select the establishment you want to transfer this PPL to. Your PEL holder of both the current and destinations will then need to approve the transfer.</p> -->
+
+      <p>If you can't find the new establishment for this licence in this list, contact the Home Office Liaison Contact (HOLC) of that establishment and ask them to send you an invitation.</p>
+
+      <form action="confirm-transfer-establishment" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">
+              Which establishment do you want to transfer this PPL to?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                  Establishment B
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                  A different establishment
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    You'll need to contact the Home Office Liaison Contact (HOLC) of that establishment and ask them to send you an invitation.
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">
+              Why are you requesting this transfer?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <textarea class="govuk-textarea" id="more-detail" name="transfer-reason" rows="5" aria-describedby="more-detail-hint"></textarea>
+            
+          </fieldset>
+        </div>
+ 
+        <button class="govuk-button">Continue</button>
+        <!-- <a href="confirm-transfer-establishment" class="govuk-button govuk-button">Continue</a> -->
+        <a href="" class="secondary-link">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

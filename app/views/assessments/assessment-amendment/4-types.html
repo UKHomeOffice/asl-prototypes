@@ -1,0 +1,299 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="0-summary">Summary of amendment</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts"> Non-technical summary: general</a></li>
+        <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li class="selected"><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Use of animals</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for use of animals
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+            	The animals’ origins are justified and relevant to the project.
+            </li>
+            <li>
+              Schedule 2 species are purpose bred, or there is a scientific justification for using Schedule 2 species that aren't purpose bred. 
+            </li>
+            <li>
+              Non-Schedule 2 species are from a source that can supply animals of a sufficient quality to produce satisfactory outputs. 
+            </li>
+            <li>
+              Stray animals will not be used. 
+            </li>
+            <li>
+              There is adequate competence to undertake decision-making about the health and welfare of animals kept alive
+            </li>
+          </ul>
+          [Lots more dynamic content depending on animal type]
+          <!-- <h3 class="govuk-heading-s">
+            Cats, dogs & equidae 
+          </h3>
+          are used where the programme of work can be achieved only by the use of:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              cats, dogs or equidae; or
+            </li>
+            <li>
+              other species which it is not practicable to obtain 
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Non-endangered NHPs
+          </h3>
+          are used only if:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              There is scientific justification that the purpose of the project cannot be achieved without using non-endangered primates; AND 
+            </li>
+            <li>
+              The project is for one of the following permitted purposes:
+            </li>
+            translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+            <li>
+              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+            </li>
+            basic research;
+            <li>
+              research aimed at preserving the species of primate being used.
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Endangered NHPs
+          </h3>
+          are used only if:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              There is scientific justification that the work cannot be achieved without using endangered primates; AND 
+            </li>
+            <li>
+              The project is for one of the following permitted purposes:
+            </li>
+            <li>
+              translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+            </li>
+            <li>
+              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+            </li>
+            <li>
+              research aimed at preserving the species of primate being used.
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Marmosets 
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              that are not offspring of marmosets bred in captivity or from a self-sustaining colony are used only if there is scientific justification that use is necessary for the project
+            </li>
+          </ul>
+
+
+          <h3 class="govuk-heading-s">
+            Endangered animals (not NHPs) 
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            are used only if:
+            <li>
+              There is scientific justification that the work cannot be achieved without using endangered animals; AND
+            </li>
+            <li>
+              The project is for one of the following permitted purposes
+            </li>
+            translational or applied research for the avoidance, prevention, diagnosis or treatment of disease, ill-health or other abnormality, or their effects, in man, animals or plants;
+            <li>
+              the development, manufacture or testing of the quality, effectiveness and safety of drugs, foodstuffs or feedstuffs for
+            </li>
+            the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man, animals or plants; or
+            <li>
+              the assessment, detection, regulation or modification of physiological conditions in man; or
+            </li>
+            <li>
+              the improvement of the welfare of animals reared for production purposes; 
+            </li>
+            <li>
+              research aimed at preserving the species of animal used
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Animals taken from the wild 
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              are used only if there is scientific justification that use is necessary for the project
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">
+            Feral animals are used only if:
+          </h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              There is scientific justification that the purpose of the project cannot be achieved except by the use of this type of feral animal
+            </li>
+            AND
+            <li>
+              A study is essential to protect the health or welfare of that species of animal or to avoid a serious threat to human or animal health or the environment
+            </li>
+          </ul> -->
+
+
+        </div>
+    </details>
+    
+    {% set amendment = 'true' %}
+    {% set sectionComplete = 'yes' %}
+        {% set assessOutcome = 'met' %}
+        {% set assessSection = 'types' %}
+        {% set assessSectionTitle = 'use of animals' %}
+        {% include "includes/assessment-met.html" %}
+        
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+<!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+     <p><span class="govuk-hint"><em>None automatically selected based on applicant’s responses</em></span></p>
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Marmosets
+                <p>Standard condition 13(c) of this licence shall not apply in cases when marmosets bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Animals taken from the wild
+                <p>Standard condition 13(b) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Feral animals
+                <p>Standard condition 13(a) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Non purpose bred schedule 2 animals
+                <p>Standard condition 13(d) of this licence shall not apply in cases when the relevant animals bred for use in procedures are not suitable for the purpose of the programme of work as justified in the project licence application.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Suffering of wild or ferral animals
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum ipsum eos exercitationem sit quia in quis quam aliquid repellendus illo tempora, nam debitis nihil molestias earum, laudantium necessitatibus nobis sunt.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Create custom condition
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                 Write new authorisation
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+    <br>  
+
+      {% include "includes/assessment-complete.html" %}
+
+  
+      
+      
+      </form>
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

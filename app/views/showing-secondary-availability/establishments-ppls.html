@@ -1,0 +1,274 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Projects
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="control-panel projects-actions">
+          <button class="govuk-button" style="margin-bottom:0px;">Apply for project licence</button> &ensp;
+          <button class="govuk-button govuk-button--secondary"style="margin-bottom:0px;">Upload draft application</button>
+      </div>
+       <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#active">
+              Active
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#expired">
+              Inactive
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#drafts">
+              Drafts
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#secondary">
+              Held elsewhere
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="active" style="border:none;">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group search-box">
+                <h3 class="govuk-heading-s">Search by project title, licence establishment or licence number</h3>
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+                </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h3 class="govuk-heading-m">All 277 results</h3>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col"><a href="#">Project title</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">PPL establishment</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">PPL number</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">Additional availability</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">Expiry date</a></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">AAV gene therapy vector characterisation</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kamal Woodward</a></td>
+                    <td class="govuk-table__cell" scope="col">089103</td>
+                    <td class="govuk-table__cell" scope="col">Yes (primary)</td>
+                    <td class="govuk-table__cell" scope="col">23 January 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ACID HANDLING AND SIGNALLING IN CANCER AND DISEASES OF THE HEART</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Vinnie Beech</a></td>
+                    <td class="govuk-table__cell" scope="col">181451</td>
+                    <td class="govuk-table__cell" scope="col">No</td>
+                    <td class="govuk-table__cell" scope="col">2 February 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Acute Inhalation Toxicology</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Winston Lam</a></td>
+                    <td class="govuk-table__cell" scope="col">721145</td>
+                    <td class="govuk-table__cell" scope="col">Yes (primary)</td>
+                    <td class="govuk-table__cell" scope="col">14 March 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptability of the auditory system in health and disease</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Fathima Nichols</a></td>
+                    <td class="govuk-table__cell" scope="col">933544</td>
+                    <td class="govuk-table__cell" scope="col">Yes (additional)
+                    <td class="govuk-table__cell" scope="col">19 July 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptation in the musculoskeletal system</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Maciej Mcgrath</a></td>
+                    <td class="govuk-table__cell" scope="col">447606</td>
+                    <td class="govuk-table__cell" scope="col">No</td>
+                    <td class="govuk-table__cell" scope="col">31 July 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adaptive mechanisms of the ischaemic myocardium</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Halle Rowe</a></td>
+                    <td class="govuk-table__cell" scope="col">202023</td>
+                    <td class="govuk-table__cell" scope="col">No</td>
+                    <td class="govuk-table__cell" scope="col">22 September 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">Adiponectin-PEPITEM pathway as a novel regulator of bone formation and remodelling</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kenan Neale</a></td>
+                    <td class="govuk-table__cell" scope="col">761149</td>
+                    <td class="govuk-table__cell" scope="col">Yes (primary)</td>
+                    <td class="govuk-table__cell" scope="col">22 September 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME (Adsorption, distribution, metabolism and excretion) and Tissue Residue Studies</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Ralphy Archer</a></td>
+                    <td class="govuk-table__cell" scope="col">369663</td>
+                    <td class="govuk-table__cell" scope="col">No</td>
+                    <td class="govuk-table__cell" scope="col">11 October 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME and Pharmacokinetic Studies</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Jardel Frazier</a></td>
+                    <td class="govuk-table__cell" scope="col">565106</td>
+                    <td class="govuk-table__cell" scope="col">No</td>
+                    <td class="govuk-table__cell" scope="col">25 October 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="#">ADME and PK/PD of new substances for Drug Discovery and Development</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Rachel Dunlap</a></td>
+                    <td class="govuk-table__cell" scope="col">974199</td>
+                    <td class="govuk-table__cell" scope="col">Yes (additional)
+                    </td>
+                    <td class="govuk-table__cell" scope="col">28 October 2020</td>
+                  </tr>
+                </tbody>
+              </table>
+              {% include "includes/pagination.html" %}        
+            
+            </section>
+            
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="expired" style="border:none;"> </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="revoked" style="border:none;"> </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="drafts" style="border:none;"> </section>
+            
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="secondary" style="border:none;">
+              
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group search-box">
+                <h3 class="govuk-heading-s">Search by project title, licence establishment or licence number</h3>
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+                </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h3 class="govuk-heading-m">All 26 results</h3>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col"><a href="#">Project title</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">PPL establishment</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">PPL number</a></th>
+                    <th class="govuk-table__header" scope="col"><a href="#">Expiry date</a></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Adoptive cell transfer for cancer immunotherapy</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kamal Woodward</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">089103</a></td>
+                    <td class="govuk-table__cell" scope="col">23 January 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Adoptive cell transfer for cancer immunotherapy</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Vinnie Beech</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">181451</a></td>
+                    <td class="govuk-table__cell" scope="col">2 February 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Adoptive T Cell Therapy for cancer</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Winston Lam</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">721145</a></td>
+                    <td class="govuk-table__cell" scope="col">14 March 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Advanced Education in Pharmacology</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Fathima Nichols</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">933544</a></td>
+                    <td class="govuk-table__cell" scope="col">19 July 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Advances in Tropical Fish Aquaculture</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Maciej Mcgrath</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">447606</a></td>
+                    <td class="govuk-table__cell" scope="col">31 July 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Advancing understanding of Paget’s disease of Bone</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Halle Rowe</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">202023</a></td>
+                    <td class="govuk-table__cell" scope="col">22 September 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Affect and cognition in rodents</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Kenan Neale</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">761149</a></td>
+                    <td class="govuk-table__cell" scope="col">22 September 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Age and agents to minimise radiation-induced<br> cardiovascular disease</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Ralphy Archer</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">369663</a></td>
+                    <td class="govuk-table__cell" scope="col">11 October 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">Amphibian egg extracts as tools for biomedical research</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Jardel Frazier</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">565106</a></td>
+                    <td class="govuk-table__cell" scope="col">25 October 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="col"><a href="secondary-ppl">A murine model of Oculocutaneous Albinism<br> to study the efficacy of drug PTC124 in treating albinism derived visual defects</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href='#'>Rachel Dunlap</a></td>
+                    <td class="govuk-table__cell" scope="col"><a href="#">974199</a></td>
+                    <td class="govuk-table__cell" scope="col">28 October 2020</td>
+                  </tr>
+                </tbody>
+              
+              </table>
+              
+              {% include "includes/pagination.html" %}
+            
+            </section>
+          </div>
+
+
+
+  
+    </div>
+  </div>
+
+  <style>
+    .js-enabled .govuk-tabs__tab--selected {
+      border-bottom: 2px solid #f3f3f3;
+    }
+  .projects-actions {
+    margin: 0;
+    margin-top: 0 !important;
+    float: right;
+  }
+  .control-panel, .next-steps {
+      margin-top: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  </style>
+{% endblock %}

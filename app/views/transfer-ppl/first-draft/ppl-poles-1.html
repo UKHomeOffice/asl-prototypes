@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Places other than a licensed establishment (POLEs)</h2>
+      
+      <form action="ppl-poles-2" method="post">
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-1" name="poles" type="radio" value="Yes" data-aria-controls="conditional-poles-1">
+                <label class="govuk-label govuk-radios__label" for="poles-1">
+                  Yes
+                </label> 
+              </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-poles-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-why-additional-1">Why can't this part of your project take place at a licensed establishment?</label>
+                  <textarea class="govuk-textarea" id="poles-why" name="poles-why" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="poles-2" name="poles" type="radio" value="No" data-aria-controls="conditional-poles-2" checked>
+                <label class="govuk-label govuk-radios__label" for="poles-2">
+                  No
+                </label> 
+              </div>
+            </div>
+            
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

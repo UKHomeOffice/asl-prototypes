@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-heading-l">
+            Performance metrics
+        </h1>
+        <p>
+          <a href="task-processing">Download monthly reports of task durations and decision</a><br>
+          Download metrics on the duration and decision of tasks by ASRU per month.
+        </p>
+        <p>
+          <a href="tasks-completed">Staff workload and performance</a><br>
+          Individual staff workloads and the rate of completed.
+        </p>
+        <p>
+          <a href="tasks-completed">Tasks completed by type</a><br>
+          Download all metrics on tasks actioned by ASRU per month.
+        </p>
+        <p>
+          <a href="active-licences">Total number of active licences</a><br>
+          View the total number of licences currently active in ASPeL.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Detection of Genotoxic Substances
+      </span>
+      <h1 class="govuk-heading-l">Return details: animals</h1>
+      <form action="setup-ga" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                {% if data['reuse'] == 'no' %}
+                Where were the animals born?
+                {% else %}
+                For any animals not reused, where were they born?
+                {% endif %}
+              </h1>
+            </legend>
+            <span class="govuk-hint">For eggs this is where they hatched. 
+            </span>
+            <div class="govuk-checkboxes" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="1" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the UK at a licensed establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="2" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the EU (non-UK) at a licensed establishment</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="3" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the UK <strong>not</strong> at a licensed establishment
+                </label>
+                <span class="govuk-hint  govuk-checkboxes__hint">For example, cattle sourced at a commercial farm or wild caught animals</span>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="4" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the EU (non UK) <strong>not</strong> at a registered breeder</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="5" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the rest of Europe</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="6" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the rest of the world</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

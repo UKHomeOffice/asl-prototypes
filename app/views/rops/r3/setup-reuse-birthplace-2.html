@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+ 
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Set up return: animals</h1>
+      <form action="setup-ga" method="POST">
+        <h3 class="govuk-heading-s">For animals born:</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>In the UK not at a licensed establishment</li>
+          <li>In the rest of Europe</li>
+        </ul>
+        <h3 class="govuk-heading-s">Confirm if any of the animals were Schedule 2 species and if you had prior authority to use non-purpose bred animals</h3>
+        <span class="govuk-hint">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Show list of Schedule 2 species
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>mice</li>
+                <li>rats</li>
+                <li>guinea pigs</li>
+                <li>hamsters</li>
+                <li>gerbils</li>
+                <li>rabbits</li>
+                <li>cats</li>
+                <li>dogs</li>
+                <li>ferrets</li>
+                <li>common quail</li>
+                <li>Xenopus Laevis</li>
+                <li>Xenopus Tropicalis</li>
+                <li>Rana Temporaria</li>
+                <li>Rana Pipiens</li>
+                <li>Zebrafish</li>
+                <li>genetically modified pigs</li>
+                <li>genetically modified sheep</li>
+              </ul>
+            </div>
+          </details>
+        </span>
+        <div class="govuk-form-group" id="q1" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              <label class="govuk-fieldset__legend--s" for="">Details of non-purpose bred Schedule 2 species used </label>
+            <span class="govuk-hint">
+              If not applicable, leave blank
+            </span>
+            <textarea name="" id="" rows="5" class="govuk-textarea"></textarea>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+    <div class="govuk-column-third">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-s">Related guidance</h3>
+      <span class="govuk-hint">Links open in a new tab</span>
+      <ul class="govuk-list">
+        <li><a href="#">General return of procedure guidance</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

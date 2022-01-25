@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      <!-- {% include "includes/list-of-sections.html" %} -->
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <!-- {% include "includes/nts-warning-small.html" %} -->
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="ra-index" ><li class="back-to-sections">&#9666; &ensp; List of sections</li></a>
+        <a href="ra-objectives-review"><li class="selected">Objectives</li></a>
+        <a href="ra-harms-review"><li>Harms</li></a>
+        <a href="ra-replacement-review.html"><li>Replacement</li></a>
+        <a href="ra-reduction-review.html"><li>Reduction</li></a>
+        <a href="ra-refinement-review.html"><li>Refinement</li></a>
+      </ul>
+      <hr class="govuk-section-break govuk-section-break--m ">
+
+      <h3 class="govuk-heading-s">Project links</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download Non-technical summary</a></li>
+        <li><a href="/ra-submission/ppl-app/ppl-granted-summary.html" target="_blank">View licence</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Objectives
+      </h1>
+      <h3 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="more-detail">
+          Is there a plan for this work to continue under another licence?
+        </label>
+      </h3>
+      <p>No</p> 
+       
+      <a href="#" class="govuk-button govuk-button--secondary">Add comment</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h3 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="more-detail">
+          Did the project achieve its aims and if not, why not?
+        </label>
+        <span class="govuk-hint">If some objectives were only partially achieved, explain why</span>
+      </h3>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show the project’s projected aims
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+            <h3 class="govuk-heading-s">
+              What is the aim of this project?
+            </h3>
+            <p>
+              The aim of this project is to provide quality scientific data to support the development and marketing of safe medicines for both human and veterinary use, and to make sure that chemicals that the population may be exposed to (like industrial chemicals and pesticides) are safe to be used by the general public too. We will mainly test if these substances are safe in the cardiovascular (heart and blood vessels) and respiratory (lungs) systems. We will also be testing new and potentially better drugs for important conditions like high blood pressure and irregular heartbeat, and asthma, to see if they work better and have less side effects compared to existing drugs. As part of this we will be seeing how much of these drugs are in the blood after we dose them to animals, because if there is not enough there, they simply won't have the effect we want.
+            </p>
+            <p>
+              A lot of the data we generate will be sent to the regulators who will then decide if the chemicals we test are fit for exposure to humans, or if the new drugs we test are safe to be given to humans for the first time.
+            </p>
+        </div>
+      </details>
+      <p>
+        Studies of putative adult cardiac stem cells in mouse myocardium has successfully identified cells with robust clone-forming ability and multi-lineage potential that are able to convert into cardiac muscle, vascular smooth muscle, or endothelium after grafting to the heart, and which improve cardiac pump function.
+      </p>
+      <p>
+        Major achievements relating to this BHF- and MRC-funded work include: Pinpointing which among the many classes of cardiac stromal cell has reproducible stem cell properties; defining the cells' molecular signature by single-cell qPCR and their embryological origin by Cre/lox fate-mapping; systematically investigating the properties of cloned adult cardiac stem cells (single-cell derivatives) and proving their fidelity to freshly isolated cells; showing that stem cell grafting helps prevent heart failure after experimental myocardial infarction, even though just 10-20 cells engraft durably; demonstrating that signals secreted by the adult cardiac stem cells can reduce human cardiac muscle cell death, using simulated myocardial infarction in tissue culture.
+      </p>
+      <p>
+        In addition, our Wellcome Trust-funded drug discovery programme to create small-molecule inhibitors of enzyme of interest has achieved: determining the compounds' pharmacokinetics and establishing conditions suitable for proof-of-concept testing in vivo; proving that this enzyme inhibition reduces infarct size by roughly 70%, if given prophylactically before ischemia-reperfusion; proving, further, that enzyme inhibition reduces infarct size by roughly 70%, even if given two hours after injury, reducing muscle cell death from both apoptosis and necrosis.
+      </p>
+      <a href="#" class="govuk-button govuk-button--secondary">Add comment</a>
+
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <!-- <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="ra-objectives" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Objectives</span>
+            </a>
+          </li> -->
+          <li class="gem-c-pagination__item">
+            <a href="ra-harms-review" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Harms</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View all sections</a> or <a href="/ra-submission/endorsement/ra-task">Back to task</a></span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

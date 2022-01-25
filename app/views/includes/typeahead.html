@@ -1,0 +1,27 @@
+  <form autocomplete="off" action="#">
+    <div class="autocomplete">
+      <input id="myInput" type="text" name="myCountry" placeholder="Country" class="govuk-input">
+    </div>
+    <!-- <input type="submit" class="govuk-button"> -->
+  </form>
+  
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/typeahead.js"></script>
+
+  <script>
+    /*An array containing all the country names in the world:*/
+    var inputValues = [
+    'PP-526696821',
+    'PP-584766063',
+    'PP-823690301',
+    'PP-769250078',
+    'PP-068006447',
+    'PP-333289254',
+    'PP-556234753',
+    'PP-862257266',
+    'PP-027956633',
+    'PP-148687410'
+    ];
+    
+    /*initiate the autocomplete function on the "myInput" element, and pass along the inputValues array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), inputValues);
+  </script>

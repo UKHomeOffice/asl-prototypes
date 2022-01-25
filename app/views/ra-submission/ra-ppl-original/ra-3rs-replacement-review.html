@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Check your answers for replacement
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            
+      <label class="govuk-label--s" for="option-1-additional-1">
+        What, if any, non-animal alternatives were used or explored after the project started, how effective were they and are there any lessons worth sharing with others?
+      </label>
+      <span class="govuk-hint">These are non-animal alternatives that became available or viable after the project licence was granted. They could include genetically engineered tissue or computer modelling, for example.</span>
+      <p>
+        We are continuously doing some literature and web searches (Google, pubmed.com, nc3rs.org.uk) in an effort to find alternatives to any procedure that causes more than momentary pain or distress
+      </p>
+      <p>
+        Most work (e.g. myocardial infarction, stem cells injections, echocardiography, invasive hemodynamic measurements) requires an intact functional heart. However replacement has been possible in part of the work (e.g. cardiac cells protection/regeneration) with the cell culture approach.
+      </p>
+      <p>
+        Tissues/organs are frequently collected from animals killed by schedule 1 methods from most of our mouse lines. Samples of whole heart, lung, bone marrow, and occasionally liver, blood and skeletal muscle are used to maximise the information we can obtain from each mouse, particularly when it does not involve additional welfare cost to the animal. The tissues obtained are used in a broad range of downstream investigations, e.g. protein analysis, infarcts staining and histology, gene expression to aid our understanding of disease mechanisms taking place in our mice models of cardiac disease.
+      </p>
+      <p>
+        In cell graft experiments, only grafting to the intact heart itself is an adequate model to facilitate potential human trials of cell therapy for cardiac repair, and only grafting to the injured heart is an adequate model to ascertain the cells potential differentiation and functional impact in a clinically
+      </p>
+      <a href="#" class="">Edit</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
+      <form action="ra-index" method="POST">
+        <div class="declaration-panel-grey">
+          <h3 class="govuk-heading-m">Mark this section as complete</h3>
+          <p>You can still edit this section later, but you will be unable submit this assessment until all sections are marked as complete.</p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="complete-replacement-hint">
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complete-replacement" name="complete-replacement" type="checkbox" value="yes">
+                  <label class="govuk-label govuk-checkboxes__label" for="complete-replacement">
+                    Mark this section as complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>  
+        </div>
+        <br>
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a href="ppl-overview" class="secondary-link">List of sections</a>
+        </p>
+      </div>
+    </form>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

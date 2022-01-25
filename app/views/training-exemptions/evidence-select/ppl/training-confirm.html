@@ -1,0 +1,179 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/status-banner-draft.html" %}
+    {% include "includes/licence-header-ppl.html" %}
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body-s">Please review your answers for:</div>
+        <h1 class="govuk-panel__title">Training</h1>
+      </div>
+          
+      <h3 class="govuk-heading-m">PPL holders current training modules</h3>
+      
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87478489</li>
+                <li>Awarded on: 3 January 2018</li>
+                <li>Awarded by: Universities Group</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 18287464</li>
+                <li>Awarded by: Royal Society of Biology</li>
+                <li>Awarded on: 16 November 2017</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="#">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="">Remove</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Exemption
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>PILA</li>
+                <li>PILB</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <span style="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, quam. At magni neque tenetur dolores fugit recusandae voluptates, aliquam quos, repudiandae distinctio nulla veniam tempore enim tempora perferendis consequuntur necessitatibus.</span>
+              
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="#">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="">Remove</a>
+                </li>
+              </ul>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+            
+      <h2 class="govuk-heading-m">Are these modules up to date?</h2>
+      <p>Yes</p>
+      <p><a href="#">Edit</a></p>
+
+      <div class="declaration-panel-grey">
+        <h3 class="govuk-heading-m">Mark this section as complete</h3>
+        <p>You can still edit this section later, but you will be unable make a recommendation for this application until all sections are marked as complete.</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="complete-9-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="complete-9" name="complete-9" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="complete-9">
+                  Mark this section as complete
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>  
+      </div>
+      <br>
+      <p>
+      	<a href="ppl-index-done" class="govuk-button">Continue</a><a href='ppl-index' class="secondary-link">List of sections</a>
+      </p>
+    </div>
+  </div>
+<style type="text/css">
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+  .module-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+  }
+  
+  .module-evidence{
+    display: inline-block;
+    width: 70%;
+  }
+  dl{
+    padding-left: 30px;     
+    margin-block-start: 0px;
+  }
+  dl .govuk-body{
+    margin-bottom: 0px;
+  }
+  dt {
+    width: 25%;
+  }
+  dd {
+    width: 65%;
+  }
+</style>
+{% endblock %}

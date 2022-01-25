@@ -1,0 +1,481 @@
+  
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+</li>
+        <li class="selected"><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+       
+
+
+        <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Harm-benefit analysis</h1>
+      <form action="assessment-overview" method="post">
+        <h3 class="govuk-heading-m">Analyse the nature of the harms</h3>
+        <p>Consider:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Contingent harms (environmental)
+          </li>
+          <li>
+            Project-Related Harms
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                the severity, frequency and duration of procedures 
+              </li>
+              <li>
+                the nature, severity and likelihood of each major adverse effect and the proportion of animals predicted to be affected 
+              </li>
+              <li>
+                the number origin, species, strain and age/stage of development of animals being used 
+              </li>
+              <li>
+                the fate (e.g. humane killing, re-use, rehoming)
+              </li>
+            </ul>
+          </li>
+          <li>
+            Cumulative Effects
+          </li>
+          <li>
+            Mitigation/Amelioration of Harm
+          </li>
+          <li>
+            Potential alternatives or refinements, including specific advice from referrals
+          </li>
+        </ul>
+
+          <!-- <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Harms stated in the applications NTS
+              </span>
+            </summary>
+            <div class="govuk-details__text">  
+              <h2 class="govuk-heading-s">
+                Explain why you are using these types of animals and your choice of life stages.
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, omnis. Quae veritatis maxime sequi, ab magnam doloremque officiis repellat id labore? Voluptate animi mollitia nihil perspiciatis, similique placeat rerum! Ut.
+              </p>
+              <h2 class="govuk-heading-s">
+                Typically, what will be done to an animal used in your project?
+              </h2>
+              <p>
+                The majority of animals within this project will administered test agents as a single administration or daily administration for up to 4 weeks. At various time-points animals will be observed for physiological or behavioural changes (e.g. body temperature, anxiety, exploration, social interaction, learning and memory, reaction to a stimulus). Blood samples may be taken on occasion so that test agent exposure levels or biomarkers of disease can be determined and related to the human situation.
+              </p>
+              <p>
+                These assessments may be conducted in normal animals, animals genetically susceptible to emotion state disorders, or animals which have various emotional states induced chemically. Animals assigned to protocols which require them to learn to lever press in order to obtain a positive reward (e.g. sugar pellet) have an extended duration or several months which is largely determined by how quickly the animals learn the task.
+              </p>
+              <p>
+                In all cases, upon completion of testing the animals are humanely killed.
+              </p>
+              <p>
+                The endpoints will be carefully selected based on the purpose of the study and by considering the effect that each test may have on the outcome of another test or on multiple testing. In general, each observation (test) is of short duration (e.g. 15 minutes). Examples of study designs based on therapeutic purpose are as follows;
+              </p>
+              <h2 class="govuk-heading-s">
+                Positive symptoms of Schizophrenia could be assessed in amphetamine pre-treated animals
+              </h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  Locomotor activity
+                </li>
+                <li>
+                  Visual observation for stereotype behaviour
+                </li>
+                <li>
+                  Pre-pulse inhibition (acoustic startle)
+                </li>
+              </ul>
+        
+              <h2 class="govuk-heading-s">
+                Negative symptoms of Schizophrenia could be assessed in MK-801 pre-treated animals
+              </h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  Novel object recognition 
+                </li>
+                <li>
+                  Social interaction
+                </li>
+                <li>
+                  Morris water maze
+                </li>
+              </ul>
+              <h2 class="govuk-heading-s">
+                Anxiety
+              </h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  Social interaction 
+                </li>
+                <li>
+                  Holeboard activity 
+                </li>
+                <li>
+                  Light/dark box 
+                </li>
+                <li>
+                  Staircase test
+                </li>
+              </ul>
+              <p>
+                The above could also be applied to Autism Spectrum Disorder in genetically susceptible animal or animals previously exposure to valproic acid.
+              </p>
+              <h2 class="govuk-heading-s">
+                OCD
+              </h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  Marble burying
+                </li>
+                <li>
+                  Pre-pulse inhibition
+                </li>
+              </ul>
+              The above could be applied to Autism Spectrum Disorder in <p>
+                genetically susceptible animals or animals previously exposure to valproic acid.
+              </p>
+              <p>
+                In all cases, a single intravenous administration of a non-labelled tracer may be administered (e.g. 15 to 60 minutes before the animal is killed) for receptor occupancy purposes.
+              </p>
+              <h2 class="govuk-heading-s">
+                What are the expected impacts and/or adverse effects for the animals during your project?
+              </h2>
+              <p>
+                Humane endpoints (documented within the licence) will be applied to animals used under the protocols specified in this licence.
+              </p>
+              <p>
+                Although these studies are typically conducted at the early stage of drug development and often for lead optimization purposes, preliminary toxicology and or pharmacokinetic studies are anticipated to have been performed and as such the dose levels can be carefully selected in order to avoid undue toxicity. The majority of the protocols within this licence are behaviorally based and as such adverse effects are not desirable.
+              </p>
+              <p>
+                These assessments may be conducted in normal animals, animals genetically susceptible to emotion state disorders, or animals which have various emotional states induced chemically. In the majority of cases, the resultant effects will not be obvious, with animals appearing normal. However, under certain conditions, such as a test which requires the animal to remember a task, to interact with another animal, respond to a novel environment or response to an auditory stimulus, the genetic or chemically-induced phenotype may be revealed. Such effects are also anticipated for positive controls used within this project licence.
+              </p>
+              <p>
+                If overt effects are seen, then these are anticipated to be transient and will typically be stimulant- or sedative-like.
+              </p>
+              <h2 class="govuk-heading-m">
+                Expected severity categories and the proportion of animals in each category, per species.
+              </h2>
+              <h2 class="govuk-heading-s">
+                What are the expected severities and the proportion of animals in each category (per animal type)?
+              </h2>
+              <p>
+                The severity limit specified (moderate) is considered to be the minimum commensurate with achieving study objectives. For the majority of studies conducted under this licence, the severity limit is moderate due to the procedures required to achieve the protocol objectives. Repeat dosing and multiple subthreshold and mild procedures are primarily responsible for the moderate severity imposed. In the majority of cases animals will not experience more than mild signs as a result of administration of the test agents. Marked effects anticipated are primarily those related to the known pharmacology of drugs e.g. sedation or stimulation.
+              </p>
+              
+            </div>
+        </details> -->
+
+        <div class="govuk-form-group">
+          <!--  <label class="govuk-label" for="comments-10">
+            Notes on the expected benefits
+           </label>
+           <span id="comments-10-hint" class="govuk-hint"></span> -->
+           <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="20" aria-describedby="comments-10-hint">As the purpose of this work is to identify novel analgesic therapies, it is inevitable that animals will experience pain. 
+             
+A total of 6300 mice are requested. Mice will be subjected to infrequent dosing by a variety of enteral or parenteral routes. Some mice will have infrequent blood samples. Some mice will be subject to non-invasive imaging under general anaesthesia. These manipulations should cause no more than transient pain or distress. Mice will be subject to behavioural testing to identify analgesic properties. In general these testing methods will cause no more than transient pain and distress as the animal is able to immediately escape the painful stimulus. Tis testing should not cause more than mild pain. 
+
+1800 mice will have inflammation induced over the course of an hour to several days. Many of these inflammatory models will not cause ongoing pain but will make the animal more sensitive to thermal or mechanical stimuli. Inflammatory models causing ongoing pain will be brief; no more than an hour. 1800 mice will be subject to surgery to cause neuropathic pain for a number of weeks. This is manifest by compromisation of a hind limb and ongoing discomfort, potentially reaching a high-moderate level.</textarea>
+         </div>
+
+        <h3 class="govuk-heading-m">Professional judgement on the likelihood of success</h3>
+        <p>Consider:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+          	proposed species, models and methods, experimental design, how realistic the objectives are and whether the outcomes can be delivered in the timeframe and to what quality (eg GLP)
+          </li>
+          <li>
+          	funding plans 
+          </li>
+          <li>
+          	availability of facilities, equipment, skills and services 
+          </li>
+          <li>
+          	validation of new or novel methodology and associated technical competence
+          </li>
+          <li>
+          	the experience and track record of the applicant and group in the field
+          </li>
+          <li>
+          	how scientifically sound the work is and how robust the plan is to disseminate the benefits, eg by publication 
+          </li>
+        </ul>
+
+        <!-- <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Likelyhood of success as stated in the applications NTS
+            </span>
+          </summary>
+          <div class="govuk-details__text">  
+            <h2 class="govuk-heading-s">
+              Explain why you are using these types of animals and your choice of life stages.
+            </h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, omnis. Quae veritatis maxime sequi, ab magnam doloremque officiis repellat id labore? Voluptate animi mollitia nihil perspiciatis, similique placeat rerum! Ut.
+            </p>
+            <h2 class="govuk-heading-s">
+              Typically, what will be done to an animal used in your project?
+            </h2>
+            <p>
+              The majority of animals within this project will administered test agents as a single administration or daily administration for up to 4 weeks. At various time-points animals will be observed for physiological or behavioural changes (e.g. body temperature, anxiety, exploration, social interaction, learning and memory, reaction to a stimulus). Blood samples may be taken on occasion so that test agent exposure levels or biomarkers of disease can be determined and related to the human situation.
+            </p>
+            <p>
+              These assessments may be conducted in normal animals, animals genetically susceptible to emotion state disorders, or animals which have various emotional states induced chemically. Animals assigned to protocols which require them to learn to lever press in order to obtain a positive reward (e.g. sugar pellet) have an extended duration or several months which is largely determined by how quickly the animals learn the task.
+            </p>
+            <p>
+              In all cases, upon completion of testing the animals are humanely killed.
+            </p>
+            <p>
+              The endpoints will be carefully selected based on the purpose of the study and by considering the effect that each test may have on the outcome of another test or on multiple testing. In general, each observation (test) is of short duration (e.g. 15 minutes). Examples of study designs based on therapeutic purpose are as follows;
+            </p>
+            <h2 class="govuk-heading-s">
+              Positive symptoms of Schizophrenia could be assessed in amphetamine pre-treated animals
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Locomotor activity
+              </li>
+              <li>
+                Visual observation for stereotype behaviour
+              </li>
+              <li>
+                Pre-pulse inhibition (acoustic startle)
+              </li>
+            </ul>
+      
+            <h2 class="govuk-heading-s">
+              Negative symptoms of Schizophrenia could be assessed in MK-801 pre-treated animals
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Novel object recognition 
+              </li>
+              <li>
+                Social interaction
+              </li>
+              <li>
+                Morris water maze
+              </li>
+            </ul>
+            <h2 class="govuk-heading-s">
+              Anxiety
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Social interaction 
+              </li>
+              <li>
+                Holeboard activity 
+              </li>
+              <li>
+                Light/dark box 
+              </li>
+              <li>
+                Staircase test
+              </li>
+            </ul>
+            <p>
+              The above could also be applied to Autism Spectrum Disorder in genetically susceptible animal or animals previously exposure to valproic acid.
+            </p>
+            <h2 class="govuk-heading-s">
+              OCD
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Marble burying
+              </li>
+              <li>
+                Pre-pulse inhibition
+              </li>
+            </ul>
+            The above could be applied to Autism Spectrum Disorder in <p>
+              genetically susceptible animals or animals previously exposure to valproic acid.
+            </p>
+            <p>
+              In all cases, a single intravenous administration of a non-labelled tracer may be administered (e.g. 15 to 60 minutes before the animal is killed) for receptor occupancy purposes.
+            </p>
+            <h2 class="govuk-heading-s">
+              What are the expected impacts and/or adverse effects for the animals during your project?
+            </h2>
+            <p>
+              Humane endpoints (documented within the licence) will be applied to animals used under the protocols specified in this licence.
+            </p>
+            <p>
+              Although these studies are typically conducted at the early stage of drug development and often for lead optimization purposes, preliminary toxicology and or pharmacokinetic studies are anticipated to have been performed and as such the dose levels can be carefully selected in order to avoid undue toxicity. The majority of the protocols within this licence are behaviorally based and as such adverse effects are not desirable.
+            </p>
+            <p>
+              These assessments may be conducted in normal animals, animals genetically susceptible to emotion state disorders, or animals which have various emotional states induced chemically. In the majority of cases, the resultant effects will not be obvious, with animals appearing normal. However, under certain conditions, such as a test which requires the animal to remember a task, to interact with another animal, respond to a novel environment or response to an auditory stimulus, the genetic or chemically-induced phenotype may be revealed. Such effects are also anticipated for positive controls used within this project licence.
+            </p>
+            <p>
+              If overt effects are seen, then these are anticipated to be transient and will typically be stimulant- or sedative-like.
+            </p>
+            <h2 class="govuk-heading-m">
+              Expected severity categories and the proportion of animals in each category, per species.
+            </h2> 
+            <h2 class="govuk-heading-s">
+              What are the expected severities and the proportion of animals in each category (per animal type)?
+            </h2>
+            <p>
+              The severity limit specified (moderate) is considered to be the minimum commensurate with achieving study objectives. For the majority of studies conducted under this licence, the severity limit is moderate due to the procedures required to achieve the protocol objectives. Repeat dosing and multiple subthreshold and mild procedures are primarily responsible for the moderate severity imposed. In the majority of cases animals will not experience more than mild signs as a result of administration of the test agents. Marked effects anticipated are primarily those related to the known pharmacology of drugs e.g. sedation or stimulation.
+            </p>
+            
+          </div>
+        </details> -->
+
+        <div class="govuk-form-group">
+          <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="50" aria-describedby="comments-10-hint">The proposed models and methods are standard for this type of work, as commonly reported in the literature. The advantages and disadvantages are recognised in the application. This is a new area of work for the establishment, which brings some area of uncertainty. In mitigation, the applicant has appropriate experience in conducting all the procedures and the establishment has robust governance and study review to ensure that suitable expertise will be developed to support the programme. The decision-making process is well described and appropriate for the proposed project. Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.
+            
+The proposed models and methods are standard for this type of work, as commonly reported in the literature. The advantages and disadvantages are recognised in the application. This is a new area of work for the establishment, which brings some area of uncertainty. In mitigation, the applicant has appropriate experience in conducting all the procedures and the establishment has robust governance and study review to ensure that suitable expertise will be developed to support the programme. The decision-making process is well described and appropriate for the proposed project. Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.
+
+The proposed models and methods are standard for this type of work, as commonly reported in the literature. The advantages and disadvantages are recognised in the application. This is a new area of work for the establishment, which brings some area of uncertainty. In mitigation, the applicant has appropriate experience in conducting all the procedures and the establishment has robust governance and study review to ensure that suitable expertise will be developed to support the programme. The decision-making process is well described and appropriate for the proposed project. Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.
+
+The proposed models and methods are standard for this type of work, as commonly reported in the literature. The advantages and disadvantages are recognised in the application. This is a new area of work for the establishment, which brings some area of uncertainty. In mitigation, the applicant has appropriate experience in conducting all the procedures and the establishment has robust governance and study review to ensure that suitable expertise will be developed to support the programme. The decision-making process is well described and appropriate for the proposed project. Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.
+          </textarea>
+        </div>
+        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+
+        <h3 class="govuk-heading-m">Professional judgement on the expected benefits</h3>
+        <p>Consider:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Direct or Project-Related Benefits
+          </li>
+          <li>
+            Indirect benefits
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Field-related benefits
+              </li>
+              <li>
+                Cross-field benefits
+              </li>
+              <li>
+                3Rs benefits
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Likelyhood of success as stated in the applications NTS
+            </span>
+          </summary>
+          <div class="govuk-details__text">  
+            <h2 class="govuk-heading-s">
+              What outputs do you think you will see at the end of this project?
+            </h2>
+            <p>
+              Reports and data which will be submitted to support the regulatory filing of new drugs.
+            </p>
+            <p>
+              The refinement of models and associated publications sharing such data and best practices.
+            </p>
+            <h2 class="govuk-heading-s">
+              Who or what will benefit from these outputs, and how?
+            </h2>
+            <p>
+              The primary benefit of work carried out under this licence will be to allow regulatory authorities (who are totally independent from the commercial interests behind every marketing application) to come to informed decisions, based upon data generated in these studies, regarding the risks and/or benefits when humans are exposed to medicinal products.
+            </p>
+            <p>
+              Achievement of the objectives of this Licence will enable medicinal products to progress into clinical testing and onwards to marketing authorisation and ultimately improving the health and welfare of humans. Without these pre-clinical studies, progression of new medicines to early human studies and on to patients/marketing could not occur.
+            </p>
+            <p>
+              There is also a major benefit when using early drug selection type experiments, as the most promising compounds for further development will be selected and then fully tested so that they can reach the market sooner and as such benefit the health and welfare of humans.
+            </p>
+            <p>
+              The use of the experiments described in this licence may indicate major safety concerns or lack of effectiveness with the substance under evaluation at an early stage thus precluding requirement for additional experiments after these screening studies. This can greatly reduce the number of animals required in a programme of work.
+            </p>
+            <p>
+              n addition, scientific knowledge gained in one programme of work will often be applied to future experiments in order to reduce animal numbers and/or reduce pain and stress to those animals used in the subsequent work, or to target investigations to a particular organ or tissue during toxicity testing or clinical trials.
+            </p>
+            <p>
+              Sponsors will benefit from work undertaken within this project licence, by obtaining data which allows them to make decisions on the development of the drugs and to support regulatory filings.
+            </p>
+            <h2 class="govuk-heading-s">
+              Will this work be offered as a service to others?
+            </h2>
+            <p>
+              No
+            </p>
+            <h2 class="govuk-heading-s">
+              How will you maximise the outputs of your work?
+            </h2>
+            <p>
+              Where confidentiality permits, data, study design and best practice will be openly shared at conferences, workshops, webinars, blogs and publications.
+            </p>
+            
+          </div>
+        </details> -->
+        
+        <div class="govuk-form-group">
+        <!--  <label class="govuk-label" for="comments-10">
+          Notes on the expected benefits
+          </label>
+          <span id="comments-10-hint" class="govuk-hint"></span> -->
+          <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="17" aria-describedby="comments-10-hint">The proposed models and methods are standard for this type of work, as commonly reported in the literature. The advantages and disadvantages are recognised in the application. 
+          
+This is a new area of work for the establishment, which brings some area of uncertainty. In mitigation, the applicant has appropriate experience in conducting all the procedures and the establishment has robust governance and study review to ensure that suitable expertise will be developed to support the programme. 
+
+The decision-making process is well described and appropriate for the proposed project. 
+
+Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.</textarea>
+        </div>
+
+        {% set sectionComplete = 'yes' %}
+        {% include "includes/assessment-complete.html" %}
+          
+      <form action="assessment-overview" method="post">
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% if data['subject-1-status'] == 'open' %}
+<div class="notification-banner notification-banner--open" style="padding: 0px 10px">
+  <div class="govuk-warning-text" style="margin-bottom: 0px;">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <span class="govuk-warning-text__text">
+      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to open enforcement case 21102</strong>
+      <br>
+      <a href="#">View details in Sharepoint (opens in a new tab)</a>
+    </span>
+  </div>
+</div>
+
+{% elif data['subject-1-status'] == 'remedial' %}
+
+<div class="notification-banner notification-banner--closed" style="padding: 0px 10px">
+  <div class="govuk-warning-text" style="margin-bottom: 0px;">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <span class="govuk-warning-text__text">
+      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to closed enforcement case 21102</strong>
+      <br>
+      <details class="govuk-details no-margin-bottom" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Case details
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ul class="govuk-list">
+            <li>Remedial action applied: Letter of reprimand</li>
+            <li>Closed flag in place until: 19 January 2027</li>
+            <li><a href="#">View details in Sharepoint (opens in a new tab)</a></li>
+          </ul>
+        </div>
+      </details>
+    </span>
+  </div>
+</div>
+
+{% endif %}

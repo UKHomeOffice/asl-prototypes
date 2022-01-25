@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Harms
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What harms were caused to the animals, how severe were those harms and how many animals were affected?
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          <p class="govuk-hint">
+            Don’t just list procedures but reflect on the animals’ experience. For example, ‘animals experienced mild discomfort as tumours 10mm wide were allowed to grow under the skin’.
+          </p>
+          <p class="govuk-hint">
+            If animals went through procedures more than once, make sure this is reflected in the numbers and in your assessment of their overall suffering.
+          </p>
+        </span>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show the project’s projected harms
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <h3 class="govuk-heading-s">
+              In the context of what you propose to do to the animals, what are the expected adverse effects and the likely/expected level of severity? What will happen to the animals at the end?
+            </h3>
+            <p>
+              Most of the dosing on these studies will be single dosing at a dose that has already been examined in other tests examining different physiology. This information will then be used to fix does in the studies we carry out. Most animals will experience no more than slight effects from dosing and other study procedures . To give an idea, blood sampling procedures and effects would be similar to what a patient would receive when giving a blood sample at the doctors, or having an injection there too.
+            </p>
+            <p>
+              Most animals will suffer nothing more than a scratch from a needle or a little bit of discomfort from dosing or other procedures. Occasionally though, there will be other slightly more pronounced effects (heart rate getting faster, blood pressure lowering) or other effects like weight loss (maybe 10 to 15% from their starting weight), ruffled fur, or bruising at the site of blood sampling. If this does happen then the animals will be carefully monitored, with vets on hand to administer advice and treatments if required. In fact throughout, all the animals are checked at least twice a day by our staff, and any issues or concerns about their health and well-being are reported to more senior staff and or vets who will then examine them and decide what needs to be done next.
+            </p>
+            <p>
+              Other procedures may be performed to help us carry out our experiments. These include confining animals in special cages to collect their urine and faeces, restraining animals during dosing when we are dosing into the lungs (in tubes for rats or mice) and by mask in dogs and pigs, and when fitting jackets to measure heart rhythms. And discomfort will be transient and the animals will be watched or checked regularly during these procedures.
+            </p>
+            <p>
+              Some animals may be operated on to implant devices in their abdomen which allow on line recording of blood pressure, heart rate and the rhythms of the heart. The animals will be operated on by vets or other highly trained staff, under sterile conditions in an operating theatre, and be treated like a human patient would having an operation under general anaesthesia. The animals will be given pain killers before and after, with antibiotics given too under the supervision of a vet. The animals will be allowed to fully recover from surgery before used in experiments. If a vet doesn't think they are fit to undergo experiments they won't be used until they are. These animals may be used again (see above for details) under a very strict criteria as defined by the government, and that will reduce the overall number of animals we have to use in these experiments.
+            </p>
+            <p>
+              The rest of the animals on this project will be humanely killed at the end of studies. Their tissues and other organs and bodily fluids may be used for other investigations after they are dead.
+            </p>
+          </div>
+        </details>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <p>
+        <a href="ra-harms-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

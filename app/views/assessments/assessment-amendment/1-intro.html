@@ -1,0 +1,121 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+          <li><a href="0-summary">Summary of amendment</a></li>
+          <li class="selected"><a href="1-intro">Introductory details</a></li>
+          <li><a href="7-nts"> Non-technical summary: general</a></li>
+          <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+          <li><a href="1-suitability">Applicant information</a></li>
+          <li><a href="2-suitability-places">Project location</a></li>
+          <li><a href="3-programme">Project plan</a></li>
+          <li><a href="5-models">Protocols</a></li>
+          <li><a href="4-types">Use of animals</a></li>
+          <li><a href="5a-end-of">Other considerations</a></li>
+          <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+          <li><a href="12-referrals">Referrals</a></li>
+          <li><a href="10-hba">Harm-benefit analysis</a></li>
+           
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Introductory details</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for introductory details
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          <ul class="govuk-list govuk-list--bullet">
+            
+            <li>
+            	The title adequately summarises the project
+            </li>
+            <li>
+              The project is for one or more permissible purposes
+            </li>
+            <li>
+              The correct permissible purposes have been selected 
+            </li>
+            <li>
+              It is clear what type of animals will be authorised for use
+            </li>
+            <li>
+              The project will not use great apes
+            </li>
+            <li>
+              Teaching licences are for higher education (acquisition of knowledge), or to acquire, maintain or improve vocational skills (acquisition of skills)
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      {% set amendment = 'true' %}
+      {% set assessOutcome = 'met' %}
+      {% set sectionComplete = 'yes' %}
+      {% set assessSection = 'introduction' %}
+      
+      {% set assessSectionTitle = 'introductory details' %}
+      {% include "includes/assessment-met.html" %}
+      
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+<!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+     <p><span class="govuk-hint"><em>None automatically selected based on applicant’s responses</em></span></p>
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Write new 
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                 Write new 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+
+      {% include "includes/assessment-complete.html" %}
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

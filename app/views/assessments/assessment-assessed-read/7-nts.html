@@ -1,0 +1,100 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li>
+        <li><a href="6-3rs">Replacement, reduction & refinement</a></li>
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ reporting condition</a></li>
+ reporting condition</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+        
+
+         <li><a href="12-referrals">Referrals</a></li> 
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Non-technical summary</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            The non-technical summary:
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        <p>
+          The non-technical summary:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            is written in non-technical language
+          </li>
+          <li>
+            includes adequate information on the project’s objectives, predicted harms and benefits, and the number and type of animals
+          </li>
+          <li>
+            demonstrates appropriate compliance with the principles of the 3Rs
+          </li>
+          <li>
+            contains no intellectual property or confidential material
+          </li>
+          <li>
+            contains no information from which the identity of the applicant or group could be ascertained
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Are you satisfied the standards have been met?</h2>
+      <p>Yes</p>
+
+      <h3 class="govuk-heading-s">Notes (optional)</h3>
+      <p><em>No answer provided</em></p>
+      
+      {% include "includes/assessment-footer-nav.html" %}
+      
+      </form>
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

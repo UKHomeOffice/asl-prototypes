@@ -1,0 +1,65 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="pil-app" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="pil-proceedures-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which procedures do you want to be licensed to carry out?
+            </h1>
+          </legend>
+          <span id="pil-proceedures-hint" class="govuk-hint">
+            Select each category that you want your licence to cover.
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="pil-proceedures" name="pil-proceedures" type="checkbox" value="A" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="pil-proceedures" >
+                A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="pil-proceedures-2" name="pil-proceedures" type="checkbox" value="B" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="pil-proceedures-2" >
+                B. Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical procedures conducted under brief non-recovery general anaesthesia
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="pil-proceedures-3" name="pil-proceedures" type="checkbox" value="C">
+              <label class="govuk-label govuk-checkboxes__label" for="pil-proceedures-3">
+                C. Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or prolonged general anaesthesia.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="pil-proceedures-4" name="pil-proceedures" type="checkbox" value="D">
+              <label class="govuk-label govuk-checkboxes__label" for="pil-proceedures-4">
+                D. Use of neuromuscular blocking agents
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="pil-proceedures-5" name="pil-proceedures" type="checkbox" value="F">
+              <label class="govuk-label govuk-checkboxes__label" for="pil-proceedures-5">
+                F. Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-inset-text">
+        <p>To apply for category E, contact the course provider</p>
+      </div>
+      <button class="govuk-button">Continue</button>
+    </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+      $('#userselect').change(function(){
+          $('.userwarning').hide();
+          if (($(this).val()) == 'other') {
+            $('.userwarning').show();
+          }
+      });
+    });
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">Specificity engineering keto studies</span>
+      <h1 class="govuk-heading-xl">Change PPL holder</h1>
+      <p>
+        <span class="govuk-label--s">Current PPL holder</span><br>
+        <span class="govuk-body">Bruce Banner</span>
+      </p>
+
+      <form action="#" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="sort">
+            Proposed PPL holder
+          </label>
+          <span id="holding-hint" class="govuk-hint">If you cannot see the person you are looking for please contact an administrator at your establishment who can make this change for you.</span>
+
+          <select id="userselect" class="govuk-select" id="sort" name="sort">
+            <option selected="" value="Basic">Select a PPL holder</option>
+            <option value="Evvy">Evvy Addams - eaddams23@example.com</option>
+            <option value="Megan">Megan Alberts - abc6@example.com</option>
+            <option value="Jason">Jason Alden - abc8@example.com</option>
+            <option value="Ian">Ian Ayers - abc7@example.com</option>
+            <option value="Wood">Wood Bagger - wbagger1d@example.com</option>
+            <!-- <option value="Bruce">Bruce Banner - vice-chancellor@example.com</option> -->
+            <option value="Nettie">Nettie Bean - zzwksetl@sharklasers.com</option>
+            <option value="Kingsley">Kingsley Collins - abc1@example.com</option>
+            <option value="Aspasia">Aspasia Dellaporta - aspasia@marvell-consulting.com</option>
+            <option value="Patricia">Patricia Gutierrez - cotvwgvy@sharklasers.com</option>
+            <option value="Aaron">Aaron Harris - abc2@example.com</option>
+            <option value="Lauren">Lauren Jones - abc4@example.com</option>
+            <option value="Harry">Harry OHuman - pmdiklif@sharklasers.com</option>
+            <option value="Benjamin">Benjamin Patton - abc10@example.com</option>
+            <option value="Nathan">Nathan Peters - abc3@example.com</option>
+            <option value="Brian">Brian Proudfoot - abc9@example.com</option>
+            <option value="Smokey">Smokey Robinson - smokey@example.com</option>
+            <option value="Mad">Mad Scientist - madscientist@mumbly.co.uk</option>
+            <option value="John">John Sharp - abc5@example.com</option>
+            <option value="Harry">Harry Smith - ben.stevens@digital.homeoffice.gov.uk</option>
+            <option value="Ben">Ben Stevens - benjamin_w_stevens@hotmail.com</option>
+            <option value="Neil">Neil Ticio - ntco@example.com</option>
+          </select>
+        </div>
+
+
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">Has this person managed similar work in this field before?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--inline" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-1" name="poles" type="radio" value="Yes" data-aria-controls="conditional-poles-1">
+                <label class="govuk-label govuk-radios__label" for="poles-1">
+                  Yes
+                </label> 
+              </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-poles-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-why-additional-1">Why can't this part of your project take place at a licensed establishment?</label>
+                    <textarea class="govuk-textarea" id="poles-why" name="poles-why" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="poles-2" name="poles" type="radio" value="No" data-aria-controls="conditional-poles-2" checked>
+                <label class="govuk-label govuk-radios__label" for="poles-2">
+                  No
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">What relevant scientific knowledge or education does this person have?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="poles-question-2" name="poles-question-2" rows="7" aria-describedby="poles-question-2-hint"></textarea>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">What experience does this person have of using the types of animals and experimental models stated in this licence application?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="poles-question-2" name="poles-question-2" rows="7" aria-describedby="poles-question-2-hint"></textarea>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">What experimental design and data analysis training has this person had?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="poles-question-2" name="poles-question-2" rows="7" aria-describedby="poles-question-2-hint"></textarea>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form> 
+
+
+    </div>
+  </div>
+
+{% endblock %}

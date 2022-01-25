@@ -1,0 +1,276 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#protocol-toggle').click(function(){
+      $('#protocol-content').toggle()
+    });
+  });
+
+  $(document).ready(function() {
+    $('#section-toggle').click(function(){
+      $('#section-content').toggle()
+    });
+  });
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Protocols</h2>
+      
+      <p>Please enter the details of the protocols that make up this project.</p>
+
+      <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+
+      <form action="ppl-protocols-review" method="post">
+
+      <div id="first-protocol" class="protocol-container"> 
+        <span class=" govuk-body incomplete badge">incomplete</span>
+        <div id="protocol-toggle" class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option1" class="row-toggle protocol-title"><span class="row-toggle-copy">1: Curing heartache</span></label>
+            <span class='protocol-title-link'><a href="#">Edit title</a></span>
+<!--             <span class="float-right badge">COMPLETED</span>
+ -->          </h3>
+          <p><strong>Severity category: Mild</strong></p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">100</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div id="protocol-content" class="protocol-content hide">
+
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+
+
+              <tr id="section-toggle" class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title">
+                  <a href="#">Protocol details</a>
+                  <!-- <span class=" govuk-body badge">incomplete </span> -->
+                </td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            
+
+              <tr id="section-content" class="govuk-table__row table-non-hover hide">
+                <td class="govuk-table__cell">
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="protocols-1-additional-1">Briefly describe the purposes of this protocol</label>
+                  <span id="holding-hint" class="govuk-hint">Ensure that you state any relevant regulatory guidelines.</span>
+                  <textarea class="govuk-textarea" id="protocols-1" name="protocols-1" rows="7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                  <div class="govuk-radios">
+                    <label class="govuk-label--s" for="protocols-2">Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?</label>
+                    <span id="holding-hint" class="govuk-hint"></span>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="protocols-2" name="protocols-2" type="radio" value="Mild">
+                      <label class="govuk-label govuk-radios__label" for="protocols-2">
+                        Mild
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="protocols-2-2" name="protocols-2" type="radio" value="Moderate" checked>
+                      <label class="govuk-label govuk-radios__label" for="protocols-2-2">
+                        Moderate
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="protocols-2-3" name="protocols-2" type="radio" value="Severe">
+                      <label class="govuk-label govuk-radios__label" for="protocols-2-3">
+                        Severe
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="protocols-2-4" name="protocols-2" type="radio" value="Non-recovery">
+                      <label class="govuk-label govuk-radios__label" for="protocols-2-4">
+                        Non-recovery
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="protocols-3-additional-1">What proportion of animals will experience this severity?</label>
+                  <span id="holding-hint" class="govuk-hint"></span>
+                  <textarea class="govuk-textarea" id="protocols-3" name="protocols-3" rows="7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="protocols-4-additional-1">Why are you proposing this severity category?</label>
+                  <span id="holding-hint" class="govuk-hint"></span>
+                  <textarea class="govuk-textarea" id="protocols-4" name="protocols-4" rows="7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <label class="govuk-label--s" for="protocols-4-additional-1">Select the establishments and POLEs where this protocol will be carried out.</label>
+                    </legend>
+                    <span id="waste-hint" class="govuk-hint">
+                      Select all that apply.
+                    </span>
+                    <div class="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="protocols-5" name="protocols-5" type="checkbox" value="University of Croydon" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="protocols-5" >
+                          University of Croydon
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="protocols-5-2" name="protocols-5" type="checkbox" value="Marvell Pharmaceuticals">
+                        <label class="govuk-label govuk-checkboxes__label" for="protocols-5-2">
+                          Marvell Pharmaceuticals
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br>
+                  <ul class="govuk-list">
+                    <li><a href="ppl-establishments-1">Add new establishment</a></li>
+                    <li><a href="ppl-poles-1">Add new POLE</a></li>
+                  </ul>
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="protocols-6-additional-1">What outputs are expected to arise from this protocol?</label>
+                  <span id="holding-hint" class="govuk-hint">For example, test results, phenotypic information, or products.</span>
+                  <textarea class="govuk-textarea" id="protocols-6" name="protocols-6" rows="7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</textarea>
+                </div>
+
+
+                </td>
+
+
+
+
+
+
+
+
+
+
+
+                <td class="govuk-table__cell "></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="declaration-panel-grey">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="yes">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     <strong>Mark this protocol as complete</strong>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+              <button class="govuk-button">Continue</button>
+          </div>  
+          <br>
+        </div>
+      </div>
+      <form action="ppl-protocols-review" method="post">
+        <a class="govuk-button">Continue</a><a href='ppl-index' class="secondary-link">List of sections</a>
+    </div>
+  </div>
+<style type="text/css">
+.protocol-content .table-non-hover:hover {
+  background-color: white;
+}
+
+.incomplete {
+  background-color: #d4351c;
+}
+
+</style>
+{% endblock %}

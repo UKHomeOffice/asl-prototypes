@@ -1,0 +1,121 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>s 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Places other than a licensed establishment (POLEs)</h2>
+      
+      <form action="ppl-poles-review" method="post">
+        
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">How will you ensure that procedures taking place at these POLEs can be inspected?</label>
+            <span id="holding-hint" class="govuk-hint">For example, how will you obtain consent from landowners?</span>
+            <textarea class="govuk-textarea" id="poles-question-1" name="poles-question-1" rows="7" aria-describedby="poles-question-1-hint"></textarea>
+          </fieldset>
+        </div>
+        
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">How will work at each POLE be done in the most environmentally sensitive manner?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <textarea class="govuk-textarea" id="poles-question-2" name="poles-question-2" rows="7" aria-describedby="poles-question-2-hint"></textarea>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">Will any animals be moved between a POLE and a licensed establishment during this project?</label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="poles-question-3" name="poles-question-3" type="radio" value="Yes" data-aria-controls="conditional-poles-question-3-1">
+                <label class="govuk-label govuk-radios__label" for="poles-question-3-1">
+                  Yes
+                </label> 
+              </div>
+               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-poles-question-3-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-4-additional-1">Why do you need to move animals between a POLE and a licensed establishment?</label>
+                    <textarea class="govuk-textarea" id="poles-question-4" name="poles-question-4" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-5-additional-1">What arrangements have been made to ensure animals can be safely transported and that any permits necessary to transport the species under study are/will be held?</label>
+                    <textarea class="govuk-textarea" id="poles-question-5" name="poles-question-5" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-6-additional-1">How might the movement of animals between a POLE and a licensed establishment affect the scientific delivery of this project?</label>
+                   <span id="holding-hint" class="govuk-hint"></span>
+                    <textarea class="govuk-textarea" id="poles-question-6" name="poles-question-6" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-7-additional-1">How will you ensure that animals are in a suitable condition to be transported?</label>
+                  <span id="holding-hint" class="govuk-hint">Include all checks that will be made for suitability and what will happen to animals that are not suitable to be transported.</span>
+                  <textarea class="govuk-textarea" id="poles-question-7" name="poles-question-7" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-8-additional-1">Who will be responsible for checking the animals before they are transported?</label>
+                  <span id="holding-hint" class="govuk-hint">This does not need to be a Named Veterinary Surgeon.</span>
+                  <textarea class="govuk-textarea" id="poles-question-8" name="poles-question-8" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-9-additional-1">How will you ensure that this person is competent to make the appropriate checks?</label>
+                  <textarea class="govuk-textarea" id="poles-question-9" name="poles-question-9" rows="7"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="poles-question-10-additional-1">What arrangements will be made to assure an animal's welfare during transport, particularly if they are being moved after the start of regulated procedures?</label>
+                  <textarea class="govuk-textarea" id="poles-question-10" name="poles-question-10" rows="7"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="poles-2" name="poles-question-3" type="radio" value="No" data-aria-controls="conditional-poles-2">
+                <label class="govuk-label govuk-radios__label" for="poles-2">
+                  No
+                </label> 
+              </div>
+            </div>
+            
+          </fieldset>
+        </div>
+
+
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Manage guest access
+      </h1>
+      <h2 class="govuk-heading-m">Colleagues at University of Croydon</h2>
+      <p>Allow colleagues to view this project. Administrators will have access by default.</p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <caption class="govuk-table__caption">Current colleagues with access</caption>
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Email</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Juliet Smith</td>
+            <td class="govuk-table__cell">juliet-smith@education.uk</td>
+            <td class="govuk-table__cell"><a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Shaun James</td>
+            <td class="govuk-table__cell">s.james@education.uk</td>
+            <td class="govuk-table__cell"><a href="#">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="#">Add a colleague</a></p>
+
+      <br>
+
+      <h2 class="govuk-heading-m">Other establishments</h2>
+      <p>Allow colleagues at other establishments, those with
+        with secondary availability for instance, view this project.</p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <caption class="govuk-table__caption">Current establishments with access</caption>
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Establishment</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">University of Slough</td>
+            <td class="govuk-table__cell"><a href="#">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="add-establishment">Add an establishment</a></p>
+        <br>
+        <br>
+      <a class="govuk-button">Back to project</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    dt {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dd {
+      width: 60%;
+      padding-bottom: 30px;
+      
+    }
+  </style>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Applicant</a>
+        <a href="#procedures" class="">Procedures</a>
+        <a href="#species" class="">Animal types</a>
+        <a href="#training" class="">Training</a>
+        <a href="#exemptions" class="">Exemptions</a>
+        <a href="#status" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">RETURNED</span>
+          <span class="date">17 July 2019</span>
+        </p>
+      <p><strong>Returned by:</strong> <a href="#">Neil Ticio</a></p>
+
+      <p>Heres yet another comment</p>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Previous activity
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="padding-left: 0px; border-left: 0px">
+          <br>
+          <p>
+            <span class="badge">AWAITING ENDORSEMENT</span>
+            <span class="date">17 July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> Mike Thomas</p>
+        </div>
+      </details>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Applicant</h2>
+      <p><a href="#">Mike Thomas</a></p>
+
+      <h3 class="govuk-heading-s">Applicant over 18?</h3>
+      <p>Yes</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Procedures</h2>
+      <h3 class="govuk-heading-s">Categories</h3>
+      <p>A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Animal types</h2>
+      <p><i>No animal types selected</i></p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training</h2>
+      <h3 class="govuk-heading-s">Certificate details</h3>
+
+      <ul class="govuk-list">
+        <li>Certificate number: 12345</li>
+        <li>Awarded on: 01/01/2017</li>
+        <li>Awarded by: Royal Society of Biology</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Modules completed</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>L</li>
+      </ul>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Exemptions</h2>
+      <p><i>No exemptions added</i></p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      <h3 class="govuk-heading-s">Edit and resubmit the application</h3>
+      <p>To make changes to the application you previously submitted and respond to any comments.</p>
+      <a href="review-pil-app-public-edit" class="govuk-button">Edit and resubmit</a>
+      
+      <hr class="govuk-section-break govuk-section-break--m">
+
+      <h3 class="govuk-heading-s">Respond to your NACWOs comments</h3>
+      <p>If you just want to respond to the previous comments.</p>
+      <a href="review-pil-app-public-comment" class="govuk-button govuk-button--secondary">Respond to comments</a>
+      
+      <hr class="govuk-section-break govuk-section-break--m">
+      
+      <h3 class="govuk-heading-s">Discard application</h3>
+      <p>You will need to create a new application to apply for this type of licence in the future.</p>
+      <a href="review-pil-app-public-discard" class="govuk-button govuk-button--warning">Discard</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+  </style>
+
+{% endblock %}

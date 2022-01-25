@@ -1,0 +1,130 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li class="selected">Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-fate.html"><li>Fate of animals</li></a>
+        <a href="nts-replacement.html"><li>Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Predicted benefits
+      </h1>
+      <h2 class="govuk-heading-s">
+        What outputs do you think you will see at the end of this project?
+      </h2>
+      <p>
+        Reports and data which will be submitted to support the regulatory filing of new drugs.
+      </p>
+      <p>
+        The refinement of models and associated publications sharing such data and best practices.
+      </p>
+      <h2 class="govuk-heading-s">
+        Who or what will benefit from these outputs, and how?
+      </h2>
+      <p>
+        The primary benefit of work carried out under this licence will be to allow regulatory authorities (who are totally independent from the commercial interests behind every marketing application) to come to informed decisions, based upon data generated in these studies, regarding the risks and/or benefits when humans are exposed to medicinal products.
+      </p>
+      <p>
+        Achievement of the objectives of this Licence will enable medicinal products to progress into clinical testing and onwards to marketing authorisation and ultimately improving the health and welfare of humans. Without these pre-clinical studies, progression of new medicines to early human studies and on to patients/marketing could not occur.
+      </p>
+      <p>
+        There is also a major benefit when using early drug selection type experiments, as the most promising compounds for further development will be selected and then fully tested so that they can reach the market sooner and as such benefit the health and welfare of humans.
+      </p>
+      <p>
+        The use of the experiments described in this licence may indicate major safety concerns or lack of effectiveness with the substance under evaluation at an early stage thus precluding requirement for additional experiments after these screening studies. This can greatly reduce the number of animals required in a programme of work.
+      </p>
+      <p>
+        n addition, scientific knowledge gained in one programme of work will often be applied to future experiments in order to reduce animal numbers and/or reduce pain and stress to those animals used in the subsequent work, or to target investigations to a particular organ or tissue during toxicity testing or clinical trials.
+      </p>
+      <p>
+        Sponsors will benefit from work undertaken within this project licence, by obtaining data which allows them to make decisions on the development of the drugs and to support regulatory filings.
+      </p>
+      <h2 class="govuk-heading-s">
+        Will this work be offered as a service to others?
+      </h2>
+      <p>
+        No
+      </p>
+      <h2 class="govuk-heading-s">
+        How will you maximise the outputs of your work?
+      </h2>
+      <p>
+        Where confidentiality permits, data, study design and best practice will be openly shared at conferences, workshops, webinars, blogs and publications.
+      </p>
+      <!-- <h2 class="govuk-heading-s">
+        Species and numbers of animals expected to be used
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Mice: 3500 
+        </li>
+        <li>
+          Rats: 3500
+        </li>
+      </ul> -->
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="ra-objectives" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Aims</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-harms.html" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Predicted harms</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

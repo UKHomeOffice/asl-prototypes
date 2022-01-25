@@ -1,0 +1,214 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <script> 
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+    
+        element.style.display = 'none';
+        document.body.appendChild(element);
+    
+        element.click();
+    
+        document.body.removeChild(element);
+    }
+      window.onload = function exampleFunction() { 
+          console.log('The Script will load now.'); 
+          var text = 'adfdsadfsa';
+          var filename = "RoPs_2021_03042022.csv";
+        
+        download(filename, text);
+    
+      } 
+    </script> 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">All downloads
+      </span>
+      
+      <h1 class="govuk-heading-l">Returns of procedures</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        Reporting period: 1 January 2021 to 31 December 2021
+        <!-- &ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>1 January 2021 to 31 December 2021</option>
+          <option value="updated">1 January 2020 to 31 December 2020</option>
+        </select> -->
+      </p>
+      <br>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+  <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,649</span>
+        <span class="label">returns due in 2021</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,621</span>
+        <span class="label">returns submitted</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">28</span>
+        <span class="label">returns outstanding</span>
+      </div>  
+    </div>
+  </div>
+  <br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Overview
+            </a>
+          </li>
+           <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Establishments
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#complete">
+              Download returns
+            </a>
+          </li>
+        
+        </ul>
+
+        <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          
+          <h3 class="govuk-heading-m">Returns due in 2021</h3>
+          <dl class="unbold">
+            <dt>Total returns due in 2021</dt>
+            <dd>3,649</dd>
+          </dl>
+          <h2 class="govuk-heading-m">Returns submitted</h2>
+          <dl class="unbold">
+            <dt>Total returns submitted</dt>
+            <dd>3,621</dd>
+            <dt>Returns updated</dt>
+            <dd>129</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Returns outstanding</h3>
+          <dl class="unbold">
+            <dt>Total returns outstanding</dt>
+            <dd>28</dd>
+            <dt>Returns undergoing corrections</dt>
+            <dd>29</dd>
+            <dt>Returns overdue</dt>
+            <dd>13</dd>
+          </dl>
+          
+          
+        </section>      
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
+          <h2 class="govuk-heading-m">Download returns</h2>
+          <h3 class="govuk-heading-s">Changes since last download
+          </h3>
+          <p><em>There have been no changes to the data</em></p>
+          <a href="stats-return-download-end" class="govuk-button">Download returns</a>
+          <h2 class="govuk-heading-m">Previous downloads</h2>
+          <table class="govuk-table ">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Downloaded on</th>
+                <th scope="col" class="govuk-table__header">Downloaded by</th>
+                <th scope="col" class="govuk-table__header">Submitted returns</th>
+                <th scope="col" class="govuk-table__header">Returns updated since previous download</th>
+                <th scope="col" class="govuk-table__header">Outstanding returns</th>
+                <th scope="col" class="govuk-table__header">Reference</th>
+                <th scope="col" class="govuk-table__header">Download again</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 April 2022</td>
+                <td class="govuk-table__cell">John Statistic</td>
+                <td class="govuk-table__cell">3,621</td>
+                <td class="govuk-table__cell">23</td>
+                <td class="govuk-table__cell">28</td>
+                <td class="govuk-table__cell">{{data['download-reference-2']}}</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">29 January 2022</td>
+                <td class="govuk-table__cell">John Statistic</td>
+                <td class="govuk-table__cell">3,598</td>
+                <td class="govuk-table__cell">134</td>
+                <td class="govuk-table__cell">49</td>
+                <td class="govuk-table__cell">All returns within deadline</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 January 2022</td>
+                <td class="govuk-table__cell">Jane Smith</td>
+                <td class="govuk-table__cell">158</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">2,498</td>
+                <td class="govuk-table__cell">Q4 expired projects</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1 October 2021</td>
+                <td class="govuk-table__cell">Jane Smith</td>
+                <td class="govuk-table__cell">156</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">2,499</td>
+                <td class="govuk-table__cell">Downloading Q3</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1 July 2021</td>
+                <td class="govuk-table__cell">Jane Smith</td>
+                <td class="govuk-table__cell">112</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3,531</td>
+                <td class="govuk-table__cell">Q2 returns</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">25 June 2021</td>
+                <td class="govuk-table__cell">Shaun James</td>
+                <td class="govuk-table__cell">108</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">3,519</td>
+                <td class="govuk-table__cell">Checking the Bristol U return</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1 April 2021</td>
+                <td class="govuk-table__cell">John Statistic</td>
+                <td class="govuk-table__cell">28</td>
+                <td class="govuk-table__cell">0</td>
+                <td class="govuk-table__cell">3,599</td>
+                <td class="govuk-table__cell">Downloading Q1 data</td>
+                <td class="govuk-table__cell"><a href="#">Download</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

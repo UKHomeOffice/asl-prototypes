@@ -1,0 +1,226 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review amendment
+      </h1>
+      <a href=""></a>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Applicant</a>
+        <a href="#procedures" class="">Procedures</a>
+        <a href="#procedures" class="">Animal Types</a>
+        <a href="#procedures" class="">Training</a>
+        <a href="#procedures" class="">Exemptions</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+
+    <form action="reassign-task" method="post">
+    
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Latest activity</h2>
+        <div class="previous-activity">
+          <p>
+            <span class="badge">Awaiting recommendation</span>
+            <span class="date">17 July 2019</span>
+          </p>
+
+          <dl class="govuk-body">
+            <dt><strong>Assigned to:</strong></dt>
+            <dd>
+              {% if data['assignee'].length > 1 %}
+                {{ data['assignee'] }}
+              {% else %}
+                University of Croydon inspectors
+              {% endif %}
+              <br> 
+              <a href="reassign-task" onclick="form.submit();">Assign to specific inspector</a></p>
+            </dd>
+            <dt><strong>Referred by:</strong></dt>
+            <dd>Brian Johnson</dd>
+          </dl>
+
+          <p>Can you confirm?</p>
+        </div>
+
+        <input type="hidden" name="remove" value="pil">
+      </form>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activity
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="border-left: none; padding-left: 0px;">
+          
+          <div class="previous-activity">
+          <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break"> -->
+            <p>
+              <span class="badge">Awaiting review</span>
+              <span class="date">15 July 2019</span>
+            </p>
+
+            <dl class="govuk-body">
+              <dt><strong>Endorsed by:</strong></dt>
+              <dd><a href="#">Nico Ticio</a></p></dd>
+              <p>This is good, but probably needs inspector review</p>
+            </dl>
+          </div>          
+          
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <div class="previous-activity">
+            <p>
+              <span class="badge">Awaiting endorsement</span>
+              <span class="date">10 July 2019</span>
+            </p>
+             <dl class="govuk-body">
+              <dt><strong>Submitted by:</strong></dt>
+              <dd><a href="#">Bruce Banner</a></dd>
+              <p>Can you give me a new PIL</p>
+            </dl>
+          </div>          
+
+        </div>
+      </details>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Applicant</h2>
+
+      <p><a href="#">Joan Andrews</a></p>
+      <p><strong>Applicant over 18?</strong>
+        <br>
+        Yes
+      </p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Procedures</h2>
+      <h3 class="govuk-heading-s">Categories</h3>
+      <p>A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+      <p>B. Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical procedures conducted under brief non-recovery general anaesthesia</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Animal types</h2>
+      <p>No animal types selected</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Training</h2>
+
+      <h3 class="govuk-heading-s">Certificate details</h3>
+      <ul class="govuk-list">
+        <li>Certificate number: 124312312</li>
+        <li>Awarded on: 20/02/2018</li>
+        <li>Awarded by: Universities Group</li>
+      </ul>
+      <h3 class="govuk-heading-s">Modules completed</h3>
+      <ul class="govuk-list">
+        <li>• L</li>
+      </ul>
+      <h3 class="govuk-heading-s">Certificate details</h3>
+      <ul class="govuk-list">
+        <li>Certificate number:</li>
+        <li>Awarded on: 01/01/1970</li>
+        <li>Accrediting body
+      </ul>
+
+      <h3 class="govuk-heading-s">Modules completed</h3>
+      <ul class="govuk-list">
+        <li>• PILB</li>
+      </ul>
+     
+
+ <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Exemptions</h2>
+
+      <h3 class="govuk-heading-s">Module:</h3>
+      <ul class="govuk-list">
+        <li>L</li>
+      </ul>
+      <h3 class="govuk-heading-s">Reasons for exemption:</h3>
+      <ul class="govuk-list">
+        <li>I have 20 years experience in this field</li>
+      </ul>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                uk-radios__label">Return to applicant</la
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommmend for rejection</label>
+                <span class="govuk-hint">The application will be sent to a Licensing Office who will action your recommendation.</span> 
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                uk-radios__label">Return to applicant</la
+            </div>
+          </fieldset>
+        </div>
+
+
+
+      <a href="review-pil-app-public-edit" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+dt {
+  width: 20%;
+  padding-bottom:10px;
+}
+dd {
+  width: 60%;
+}
+
+.highlight {
+  border-bottom: 3px solid #ffbf47;
+  margin-right: 1px;
+  background-color: #fff2d3;
+  padding: 2px 0px 0px;
+}
+
+  </style>
+
+
+{% endblock %}

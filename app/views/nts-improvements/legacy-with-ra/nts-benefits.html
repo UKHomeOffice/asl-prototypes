@@ -1,0 +1,88 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-nts-and-ra.html" %}
+      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="nts-overview"><li>Overview</li></a>
+        <a href="nts-objectives"><li>Aims</li></a>
+        <a href="nts-benefits"><li class="selected">Predicted benefits</li></a>
+        <a href="nts-harms"><li>Predicted harms</li></a>
+        <a href="nts-replacement.html"><li>Replacement</li></a>
+        <a href="nts-reduction.html"><li>Reduction</li></a>
+        <a href="nts-refinement.html"><li>Refinement</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Predicted benefits
+      </h1>
+      <!-- <h2 class="govuk-heading-m">        
+        Potential benefits likely to derive from the project, for example how science might be advanced or how humans, animals or the environment might benefit - these could be short-term benefits within the duration of the project or long-term benefits that accrue after the project has finished.
+      </h2> -->
+      <h2 class="govuk-heading-s">
+        What are the potential benefits that will derive from this project?
+      </h2>
+      <p>
+        We will be carrying out a series of experiments in animals to try and answer the questions we are asking, such as are these drugs/chemicals safe, and in the case of drugs, do they have the effect on say the heart or blood pressure we want. Most of the work we will do will be testing whether pharmaceuticals for animals and humans are safe at doses higher than intended for humans/animals (so if someone accidentally takes too much they will not suffer too many bad effects on their health). This is very important because without these tests and assurance the the regulatory authorities (the people who decide whether drugs and chemicals are safe for humans) then the regulators cannot decide whether the drugs or other substances should be authorised for use. As well as this we will also test new drugs for conditions primarily to do with the cardiovascular (heart and blood vessels), respiratory (lungs), renal (kidneys) and blood systems. This may show up some better drugs that have better effects on those systems (like lowering blood pressure, or work better in people with asthma) and with less side effects too. Testing non pharmaceuticals, like industrial chemicals and pesticides, will determine whether or not they are safe to be used by humans or be exposed to humans. These regulatory tests are absolutely essential-drugs cannot be tested in clinical trials without having first been declared safe in the cardiovascular and respiratory systems of animals beforehand.
+      </p>
+      
+      
+      <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="ra-objectives" class="gem-c-pagination__link" >
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider hidden">:</span>
+                <span class="gem-c-pagination__link-label">Aims</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item">
+            <a href="nts-harms.html" class="gem-c-pagination__link">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Predicted harms</span>
+            </a>
+          </li>
+          <li class="XXX">
+            <span class="gem-c-pagination__link-title"></span>
+            <span style="text-decoration: none;"class="gem-c-pagination__link-label"><a href="ra-index">View project overview</a> 
+              <!-- or <a href="/ra-submission/endorsement/ra-task">close task</a> -->
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+
+  </div>
+
+{% endblock %}

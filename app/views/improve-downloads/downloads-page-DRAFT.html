@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+        <p>Standard project draft heading</p>
+      </div>
+      <h3 class="govuk-heading-s">University of Croydon</h3>
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <!-- <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span> -->
+          <a href="#">Back to licence</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">Project licence download options</h1>
+
+      <h2 class="govuk-heading-m">Draft licence</h2>
+      
+
+      <p>
+        <span style="font-size: 24px;"><a href="#">How to cure heartache</a></span> <br>(.pdf, 576kb, 172 pages)<br>
+        <span class="govuk-hint">Download the draft licence which previews what you may need to comply with.</span>
+      </p>
+
+      <h2 class="govuk-heading-m">Supporting documnets</h2>
+      <p>
+        <span style="font-size: 24px;"><a href="#">Protocols summary</a></span> <br>(.pdf, 78kb, 4 pages)<br>
+        <span class="govuk-hint">A summary table of the steps, adverse events, controls and limitations, and humane end points shown for each protocol.</span>
+      </p>
+      
+      <p>
+        <span style="font-size: 24px;"><a href="#">Non-technical summary</a></span> <br>(.pdf, 78kb, 4 pages)<br>
+        <span class="govuk-hint">A summary of the scope of the work being carried out as well as steps being taken to minimise harms to the animals and to use alternatives.</span>
+      </p>
+      
+
+      <p>
+        <span style="font-size: 24px;"><a href="#">Project licence application</a></span> <br>(.docx, 576kb, 200 pages)<br>
+        <span class="govuk-hint">The full application for the licence that was granted in an editable Microsoft Word document.</span>
+      </p>
+      
+      <p>
+        <span style="font-size: 24px;"><a href="#">Project licence application, with comments</a></span> <br>(.docx, 576kb, 235 pages)<br>
+        <span class="govuk-hint">The full application for the licence that was granted in an editable Microsoft Word document that includes comments made during the drafting process.</span>
+      </p>
+
+    </div>
+  </div>
+<style type="text/css">
+
+.table-list li:first-child {
+  border-top: 1px solid #bfc1c3;
+
+}
+
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+
+  .changed {
+    margin-right: 5px;
+  }
+</style>
+{% endblock %}

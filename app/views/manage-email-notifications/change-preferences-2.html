@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Change your email notification preferences 
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <label class="govuk-fieldset__legend--s">
+            Which kinds of emails do you want to receive?
+          </label>
+          <span id="checkbox-hint" class="govuk-hint"></span>
+          <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="option-1" name="option" type="checkbox" value="value1" data-aria-controls="conditional-option-1" >
+                <label class="govuk-label govuk-checkboxes__label" for="option-1">
+                  The licences I hold
+                </label> 
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-1">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                      Personal licences
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                      Project licences
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                      Establishment licences
+                    </label>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="option-2" name="option" type="checkbox" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-checkboxes__label" for="option-2">
+                  The licences held by my establishmet
+                </label> 
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-2">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste" >
+                      Personal licences
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2" >
+                      Project licences
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3" >
+                      Establishment licences
+                    </label>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="event-name">
+          To the email address
+        </label>
+        <span id="checkbox-hint" class="govuk-hint"></span>
+
+        <input class="govuk-input" id="event-name" name="event-name" type="text" value="user@test.edu.uk">
+      </div>
+
+      <a href="email-preferences" class="govuk-button">Update preferences</a> 
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}
+
+

@@ -1,0 +1,504 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+ 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% if data['rowEditing'] > 0 %}
+        {% set toasterContent = 'Procedure No.'+ data['rowEditing'] + ' updated' %}
+        {% include "includes/toaster.html" %}
+      {% endif %}
+
+      {% include "includes/status-banner-draft-rops.html" %}
+      {% include "includes/licence-header-rops-research.html" %}
+      
+      
+      <h2 class="govuk-heading-m">Change set up details</h2>
+      <p>View and edit details used to set up this return.</p>
+<details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show set up details
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          
+          <h3 class="govuk-heading-m">General details <span class="govuk-body float-right"><a href="setup-any">Edit general details section</a></span></h3>
+          <dl>
+            <dt>
+              Procedures completed in 2021
+            </dt>
+            <dd>
+              Yes
+            </dd>
+            <dt>
+              Only protected embryonic forms used
+            </dt>
+            <dd>
+              No
+            </dd>
+            <dt>
+              Endangered animals used
+            </dt>
+            <dd>
+              No
+            </dd>
+            <dt>
+              NMBAs used
+            </dt>
+            <dd>
+              No
+            </dd>
+            <dt>
+              Rodenticide trials carried out
+            </dt>
+            <dd>
+              No
+            </dd>
+            <dt>
+              Techniques of special interest used
+            </dt>
+            <dd>
+              No
+            </dd>
+          </dl>
+    
+    
+          <hr class=" govuk-section-break--l govuk-section-break--visible">
+          
+          <h3 class="govuk-heading-m">Animals  <span class="govuk-body float-right"><a href="setup-animals">Edit animals section</a></span></h3>
+          <dl>
+            <dt>
+              Animal species
+            </dt>
+            <dd>
+              <ul class="govu-list govuk-list--bullet" style="margin-block-start: 0em;">
+                <li>Mice</li>
+              </ul>
+            </dd>
+            <dt>
+              Re-use
+            </dt>
+            <dd>
+              No
+            </dd>
+            <dt>
+              Place of birth for animals not reused
+            </dt>
+            <dd>
+              <ul class="govuk-list govuk-list--bullet" style="margin-block-start: 0em;">
+              <li>
+                UK, licensed establishment
+              </li>
+              <li>
+                EU (non-UK), registered breeder
+              </li>
+              </ul>
+            </dd>
+            <dt>
+              Genetically altered animals used
+            </dt>
+            <dd>
+              Yes
+            </dd>
+          </dl>
+    
+          <hr class=" govuk-section-break--l govuk-section-break--visible">
+          
+          <h3 class="govuk-heading-m">Purposes <span class="govuk-body float-right"><a href="edit-purpose">Edit purposes section</a></span></h3>
+          <dl>
+            <!-- <dt>
+              Purpose 1
+            </dt>
+            <dd>
+              Basic research 
+            </dd>
+            <dt>
+              Sub-purpose 1
+            </dt>
+            <dd>
+              <ul class="govuk-list govuk-list--bullet" style="margin-block-start:0">
+                <li>{{data['sub-p-1']}}</li>
+            </ul>
+            </dd> -->
+            <dt>
+              Purpose 1
+            </dt>
+            <dd>
+              Translational or applied research
+            </dd>
+            <dt>
+              Sub-purpose 2
+            </dt>
+            <dd>
+              <ul class="govuk-list govuk-list--bullet" style="margin-block-start:0">
+                <li>Human nervous and mental disorders</li>
+              </ul>
+            </dd>
+            <dt>
+              Purpose 2
+            </dt>
+            <dd>
+              <ul class="govuk-list govuk-list--bullet" style="margin-block-start:0">
+                <li>
+                  Breeding and maintenance of colonies for established genetically altered animals, not used in other procedures
+                </li>
+              </ul>
+            </dd>
+            <dt>
+              Creation of new genetic line
+            </dt>
+            <dd>
+              Yes
+            </dd>
+          </dl>
+          
+        </div>
+      </details>
+      <h2 class="govuk-heading-m">Procedures</h2>
+      <p>Add procedures completed in 2021.</p>
+      <a href="add-procedure.html" class="govuk-button">Add procedures</a>
+      <span class="float-right"><a href="#">Download table (CSV)</a></span>
+      <span class="showComparison float-right">
+        <a href="javascript:void()">View table in full screen</a>&emsp;
+      </span>
+      <div id="fateComparison" class="modal modal-dialoge container" style="z-index: 10;">
+      
+        <!-- Modal content -->
+        <div class="modal-content modal-content-table" >
+          <div class="diff-window">
+            <div class="diff-window-header">
+              <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Procedures
+                <span class="govuk-body"><a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a></span>
+              </h2>  
+            </div>
+            <div class="diff-window-body" style="background-color: #f3f3f3;">
+              
+              <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+                <div class="fullscreen-scrollable-table" >          
+        
+                  <table class="govuk-table  table-background" style="font-size: 14px; margin: 0 auto;" >
+                    <caption class="govuk-table__caption"> </caption>
+                    <thead class="govuk-table__head">
+                      
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Row</th>
+                        <th scope="col" class="govuk-table__header">Animal species</th>
+                        <th scope="col" class="govuk-table__header">Re-use</th>
+                        <th scope="col" class="govuk-table__header">Place of birth</th>
+                        <th scope="col" class="govuk-table__header">Genetic status</th>
+                        <th scope="col" class="govuk-table__header">New genetic<br>line</th>
+                        <th scope="col" class="govuk-table__header">Purpose</th>
+                        <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                        <th scope="col" class="govuk-table__header">Severity</th>
+                        <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                        <th scope="col" class="govuk-table__header">Edit</th>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">1</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">EU (non-UK), registered breeder</td>
+                        <td class="govuk-table__cell">GAA not used</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Translational and applied research</td>
+                        <td class="govuk-table__cell">Human nervous system and mental disorders</td>
+                        <td class="govuk-table__cell">Mild</td>
+                        <td class="govuk-table__cell">146</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=1">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">2</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">EU (non-UK), registered breeder</td>
+                        <td class="govuk-table__cell">GAA not used</td>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">Translational and applied research</td>
+                        <td class="govuk-table__cell">Human nervous system and mental disorders</td>
+                        <td class="govuk-table__cell">Mild</td>
+                        <td class="govuk-table__cell">36</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=2">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">3</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">UK, licensed establishment</td>
+                        <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Translational and applied research</td>
+                        <td class="govuk-table__cell">
+                          {% if data['row-3']['subpurpose'] == "Human immune disorders" %}
+                            Human immune disorders
+                          {% else %}
+                            Human nervous system and mental disorders
+                          {% endif %}
+                        </td>
+                        <td class="govuk-table__cell">Mild</td>
+                        <td class="govuk-table__cell">49</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=3&prosAdded=49">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">4</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">UK, licensed establishment</td>
+                        <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Translational and applied research</td>
+                        <td class="govuk-table__cell">
+                          {% if data['row-4']['subpurpose'] === "Human immune disorders" %}
+                            Human immune disorders
+                          {% else %}
+                            Human nervous system and mental disorders
+                          {% endif %}
+                        </td>
+                        <td class="govuk-table__cell">Non-recovery</td>
+                        <td class="govuk-table__cell">8</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=4&prosAdded=8">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">5</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">UK, licensed establishment</td>
+                        <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                        <td class="govuk-table__cell">–</td>
+                        <td class="govuk-table__cell">Sub-threshold</td>
+                        <td class="govuk-table__cell">230</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure=?rowEditing=5">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">6</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">UK, licensed establishment</td>
+                        <td class="govuk-table__cell">GAA with harmful phenotype</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                        <td class="govuk-table__cell">–</td>
+                        <td class="govuk-table__cell">Moderate</td>
+                        <td class="govuk-table__cell">10</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=6">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">7</td>
+                        <td class="govuk-table__cell">Mice</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">UK, licensed establishment</td>
+                        <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                        <td class="govuk-table__cell">–</td>
+                        <td class="govuk-table__cell">Mild</td>
+                        <td class="govuk-table__cell">11</td>
+                        <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=7">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+        <div class="fullscreen-scrollable-table">          
+
+          <table class="govuk-table  table-background" style="font-size: 14px;">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Row</th>
+                <th scope="col" class="govuk-table__header">Animal species</th>
+                <th scope="col" class="govuk-table__header">Re-use</th>
+                <th scope="col" class="govuk-table__header">Place of birth</th>
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <th scope="col" class="govuk-table__header">New genetic<br>line</th>
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                <th scope="col" class="govuk-table__header">Edit</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">EU (non-UK), registered breeder</td>
+                <td class="govuk-table__cell">GAA not used</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Translational and applied research</td>
+                <td class="govuk-table__cell">Human nervous system and mental disorders</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">146</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">EU (non-UK), registered breeder</td>
+                <td class="govuk-table__cell">GAA not used</td>
+                <td class="govuk-table__cell">Yes</td>
+                <td class="govuk-table__cell">Translational and applied research</td>
+                <td class="govuk-table__cell">Human nervous system and mental disorders</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">36</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=2">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Translational and applied research</td>
+                <td class="govuk-table__cell">
+                  {% if data['row-3']['subpurpose'] == "Human immune disorders" %}
+                    Human immune disorders
+                  {% else %}
+                    Human nervous system and mental disorders
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">49</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=3&prosAdded=49">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Translational and applied research</td>
+                <td class="govuk-table__cell">
+                  {% if data['row-4']['subpurpose'] === "Human immune disorders" %}
+                    Human immune disorders
+                  {% else %}
+                    Human nervous system and mental disorders
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">Non-recovery</td>
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=4&prosAdded=8">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                <td class="govuk-table__cell">–</td>
+                <td class="govuk-table__cell">Sub-threshold</td>
+                <td class="govuk-table__cell">230</td>
+                <td class="govuk-table__cell"><a href="edit-procedure=?rowEditing=5">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">GAA with harmful phenotype</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                <td class="govuk-table__cell">–</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=6">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">GAA without harmful phenotype</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Breeding and maintenance of colonies</td>
+                <td class="govuk-table__cell">–</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">11</td>
+                <td class="govuk-table__cell"><a href="edit-procedure?rowEditing=7">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       
+      </div>
+      
+      <hr>
+      <form action="submit-comment" method="post">
+        <h2 class="govuk-heading-m">Submit return</h2>
+        <p>Submit this project’s completed return of procedures.</p>
+        <a href="declaration" class="govuk-button govuk-button--secondary">Submit return</a>
+      </form>
+      {% if data['rowCount'] is not number %}
+        <form action="rops-empty" method="POST">
+          <input type="hidden" name="rowCount" value="0">
+          <button class="float-right">Reset</button>
+        </form>
+      {% endif %}
+      <style>
+        table {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+        .fullscreen-content {
+          box-sizing: border-box;
+          margin: 0 0 15px 0;
+          padding: 0 0 0 0;
+          position: relative;
+          overflow-x: scroll;
+          z-index: 8;
+              }
+        .fullscreen-scrollable-table {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
+
+     
+      </style>
+      
+  </div>  
+</div>
+
+<style>
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#858585;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.customized-scrollbar ::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+</style>
+
+{% endblock %}

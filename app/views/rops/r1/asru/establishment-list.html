@@ -1,0 +1,151 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">University of Croydon
+      </span>
+      
+      <h1 class="govuk-heading-l">Returns of procedures</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        Reporting period: 1 January 2021 to 31 December 2021
+        <!-- &ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>1 January 2021 to 31 December 2021</option>
+          <option value="updated">1 January 2020 to 31 December 2020</option>
+        </select> -->
+      </p>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+   <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">5</span>
+        <span class="label">returns due in 2021</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">2</span>
+        <span class="label">returns submitted</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3</span>
+        <span class="label">returns outstanding
+          <br>
+          (1 overdue)
+        </span>
+      </div>  
+       <!-- <div class="govuk-grid-column-one-third">
+        <span class="number">0</span>
+        <span class="label">returns overdue</span>
+      </div>   -->
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Outstanding
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#complete">
+              Submitted
+            </a>
+          </li>
+        
+        </ul>
+        <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          <table class="govuk-table ">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header sortable">Project title</th>
+                <th scope="col" class="govuk-table__header sortable">PPL holder</th>
+                <th scope="col" class="govuk-table__header sortable">Deadline for submission</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-started.html">Finding the cure for heartache</a></td>
+                <td class="govuk-table__cell"><a href="#">Billy Eastern</a></td>
+                <td class="govuk-table__cell">31 December 2021
+                  <br>
+                  <span class="red-text">10 days overdue</span>
+
+                </td>
+                <td class="govuk-table__cell"><span class="badge">RETURNED</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-started.html">Detection of genotoxic substances</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner</a></td>
+                <td class="govuk-table__cell">28 January 2022</td>
+                <td class="govuk-table__cell"><span class="badge">IN PROGRESS</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Curing heartache</a></td>
+                <td class="govuk-table__cell"><a href="#">Briony French</a></td>
+                <td class="govuk-table__cell">28 January 2022</td>
+                <td class="govuk-table__cell"><span class="badge">Not started</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>      
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
+        
+          <table class="govuk-table ">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header sortable">Project title</th>
+                <th scope="col" class="govuk-table__header sortable">PPL holder</th>
+                <th scope="col" class="govuk-table__header sortable">Date submitted</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-request-correction.html">Development of new biological anticancer agents</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner</a></td>
+                <td class="govuk-table__cell">24 January 2022</td>
+                <td class="govuk-table__cell"><span class="badge blue">submitted</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-complete.html">How to cure heartache</a></td>
+                <td class="govuk-table__cell"><a href="#">Billy Eastern</a></td>
+                <td class="govuk-table__cell">22 January 2022</td>
+                <td class="govuk-table__cell"><span class="badge blue">submitted</span></td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </section>
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

@@ -1,0 +1,108 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Microvascular surgery training</span>
+      <h1 class="govuk-heading-xl">
+        Add a participant
+      </h1>
+      <h2 class="govuk-heading-m">Course details</h2>
+      <form action="add-participant-confirm-2" method="POST">
+        <p>
+          <dl class="govuk-body">
+            <dt>Training Project licence title</dt>
+            <dd>Training in microvascular surgery</dd>
+            <dt>Training project licence number</dt>
+            <dd>PP-9874843</dd>
+            <dt>Course start date</dt>
+            <dd>18 June 2020</dd>
+            <dt>Animals to be used</dt>
+            <dd>Rats</dd>
+          </dd>
+          </dl>
+        </p>
+        <h2 class="govuk-heading-m">Participant details</h2>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="first-name-2">
+            First name
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="first-name-2" name="first-name-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="surname-2">
+            Last name
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="surname-2" name="surname-2" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="email-2">
+            Email address
+          </label>
+          <span class="govuk-hint"></span>
+          <input class="govuk-input" id="email-2" name="email-2" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="users-dob-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label class="govuk-label--s">
+                Date of birth
+              </label>
+            </legend>
+            <span id="users-dob-hint" class="govuk-hint">
+              For example, 12 11 1980
+            </span>
+            <div class="govuk-date-input" id="users-dob ">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-day-2">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="users-dob-day" name="users-dob-day-2" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-month-2">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="users-dob-month-2" name="users-dob-month-2" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="users-dob-year-2">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="users-dob-year-2" name="users-dob-year-2" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </fieldset>
+          </div> 
+          <div class="govuk-form-group">
+            <label class="govuk-label--s" for="personal-statement-2">
+              Training need
+            </label>
+            <span id="personal-statement-hint" class="govuk-hint">Include any information that may help justify the need for training - such as the participant’s job title, specialism, grade and organisation - and explain how their career will benefit from training. 
+            </span>
+            <textarea class="govuk-textarea" id="personal-statement" name="personal-statement" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>       
+          <button class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

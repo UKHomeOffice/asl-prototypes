@@ -1,0 +1,134 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Experience</h2>
+      
+      <form action="ppl-index" method="post">
+                 
+        <h2 class="govuk-heading-s">Who will be the project licence holder?
+        </h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>Bruce Banner</p>
+        <p><a href="#">Edit</a></p>
+
+        <h2 class="govuk-heading-s">Have you managed similar work in this field before?
+        </h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>Yes</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        
+        <h2 class="govuk-heading-s">What were your, or your group's, main achievements that are relevant to this application?</h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>{{data['experience-2']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          
+        <h2 class="govuk-heading-s">What relevant scientific knowledge or education do you have?</h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>{{data['experience-3']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">        
+             
+        <h2 class="govuk-heading-s">What experience do you have of using the types of animals and experimental models stated in this licence application?</h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>{{data['experience-4']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">        
+             
+        <h2 class="govuk-heading-s">What experimental design and data analysis training have you had?</h2>
+        <span id="holding-hint" class="govuk-hint">If you do not have this expertise, how will you access it?</span>
+        <p>{{data['experience-5']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">        
+             
+        <h2 class="govuk-heading-s">Why are you the most suitable person in the research group, department or company to manage the project?</h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>{{data['experience-6']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">        
+             
+        <h2 class="govuk-heading-s">What relevant expertise and staffing will be available to help you to deliver the programme of work?</h2>
+        <span id="holding-hint" class="govuk-hint">Include examples of practical, technical, and specialist support.</span>
+        <p>{{data['experience-7']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">        
+             
+        <h2 class="govuk-heading-s">Will other people help you manage the project? If so, how?</h2>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <p>{{data['experience-8']}}</p>
+        <p><a href="#">Edit</a></p>
+
+        <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+          <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+          <form action='ppl-index' method="post">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="experience-complete" name="experience-complete" type="checkbox" value="true">
+                    <label class="govuk-label--s govuk-checkboxes__label" for="experience-complete">
+                      This section is complete
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>          
+
+            <button class="govuk-button">Continue</button>
+          </form>
+        </div>
+    </div>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

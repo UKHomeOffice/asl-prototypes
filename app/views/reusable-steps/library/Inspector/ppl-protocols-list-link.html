@@ -1,0 +1,751 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+  
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ppl-application.html" %}                
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+      {% include "includes/ppl-application-sidebar-steps.html" %}                
+      
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+
+
+      <p>
+        <a href="#">View summary table</a>
+      </p>
+        
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        XXXX
+
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+    
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: First protocol</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="ppl-steps-links#step-1">Administration of agents to induce superovulation</a></li>
+            <li>2: <a href="ppl-steps-links#step-2">If embryos are needed these animals will also be mated</a></li>
+            <li>3: <a href="ppl-steps-links#step-3">Administration of agents to induce superovulation</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="secondProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option2" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">2: Second protocol</span>
+          </label>
+          <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Generation of genetically altered embryos</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="thirdProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option3" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">3: Third protocol</span>
+          </label>
+          <input type="checkbox" name="option3" id="option3" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Female mice will be rendered pseudo-pregnant</a></li>
+            <li>2: <a href="#">Embryos will be implanted surgically</a></li>
+            <li>3: <a href="#">After weaning of offspring, dams will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="fourthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option4" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">4: Fourth protocol</span>
+          </label>
+          <input type="checkbox" name="option4" id="option4" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Breeding and maintenance of genetically altered mice</a></li>
+            <li>2: <a href="#">Tissue biopsy to determine genetic status</a></li>
+            <li>3: <a href="#">Maintenance of animals</a></li>
+            <li>3: <a href="#">Animals not used on other protocols will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="fifthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option5" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">5: fifth protocol</span>
+          </label>
+          <input type="checkbox" name="option5" id="option5" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Induction of liver tumour growth</a></li>
+            <li>2: <a href="#">Transgene inducing or deleting agents</a></li>
+            <li>3: <a href="#">Administration of labelling agents - including Retrograde intraductal delivery</a></li>
+            <li>4: <a href="#">Administration of cells or cell-modulating agents</a></li>
+            <li>5: <a href="#">Bone marrow transplantation prior to tumour induction</a></li>
+            <li>6: <a href="#">Diet variation</a></li>
+            <li>7: <a href="#">Non-invasive in vivo imaging under general anaesthesia</a></li>
+            <li>8: <a href="#">Sampling of blood from a superficial blood vessel</a></li>
+            <li>9: <a href="#">Administration of therapeutic agents or control substances</a></li>
+            <li>10: <a href="#">Implantation of an imaging window</a></li>
+            <li>11: <a href="#">Optogenetic studies </a></li>
+            <li>12: <a href="#">Terminal imaging</a></li>
+            <li>13: <a href="#">Terminal electrophysiological recording of tissues</a></li>
+            <li>14: <a href="#">Animals will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="sixthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option6" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">6: The sixth prototcol</span>
+          </label>
+          <input type="checkbox" name="option6" id="option6" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Induction of tumor</a></li>
+            <li>2: <a href="#">Transgene inducing or deleting agents</a></li>
+            <li>3: <a href="#">Administration of labelling agents</a></li>
+            <li>4: <a href="#">Administration of cells or cell-modulating agents</a></li>
+            <li>5: <a href="#">Bone marrow transplantation prior to tumour induction</a></li>
+            <li>6: <a href="#">Diet variation (AA)</a></li>
+            <li>7: <a href="#">Non-invasive in vivo imaging under general anaesthesia</a></li>
+            <li>8: <a href="#">Sampling of blood from a superficial blood vessel</a></li>
+            <li>9: <a href="#">Administration of therapeutic agents</a></li>
+            <li>10: <a href="#">Implantation of a cutaneous imaging window</a></li>
+            <li>11: <a href="#">Optogenetic studies</a></li>
+            <li>12: <a href="#">Terminal imaging</a></li>
+            <li>13: <a href="#">Terminal electrophysiological recording of tissues</a></li>
+            <li>14: <a href="#">Animals will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="seventhProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option7" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">7: The seventh protocol</span>
+          </label>
+          <input type="checkbox" name="option7" id="option7" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Induction of pancreatic tumour</a></li>
+            <li>2: <a href="#">Transgene inducing or deleting agents</a></li>
+            <li>3: <a href="#">Administration of labelling agents</a></li>
+            <li>4: <a href="#">Administration of cells or cell-modulating agents</a></li>
+            <li>5: <a href="#">Bone marrow transplantation prior to tumour induction </a></li>
+            <li>6: <a href="#">Diet variation (AA)</a></li>
+            <li>7: <a href="#">Non-invasive in vivo imaging under general anaesthesia</a></li>
+            <li>8: <a href="#">Sampling of blood from a superficial blood vessel</a></li>
+            <li>9: <a href="#">Administration of therapeutic agents</a></li>
+            <li>10: <a href="#">Implantation of an imaging window</a></li>
+            <li>11: <a href="#">Optogenetic studies</a></li>
+            <li>12: <a href="#">Terminal imaging</a></li>
+            <li>13: <a href="#">Terminal electrophysiological recording of tissues</a></li>
+            <li>14: <a href="#">Animals will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="eighthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option8" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">8: Eighth protocol</span>
+          </label>
+          <input type="checkbox" name="option8" id="option8" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">Induction of tumour growth in lung</a></li>
+            <li>2: <a href="#">Transgene inducing or deleting agents</a></li>
+            <li>3: <a href="#">Administration of labelling agents</a></li>
+            <li>4: <a href="#">Administration of cells or cell-modulating agents</a></li>
+            <li>5: <a href="#">Bone marrow transplantation prior to tumour induction</a></li>
+            <li>6: <a href="#">Diet variation</a></li>
+            <li>7: <a href="#">Non-invasive in vivo imaging under general anaesthesia</a></li>
+            <li>8: <a href="#">Sampling of blood from a superficial blood vessel</a></li>
+            <li>9: <a href="#">Administration of therapeutic agents or control substances</a></li>
+            <li>10: <a href="#">Optogenetic studies </a></li>
+            <li>11: <a href="#">Terminal imaging</a></li>
+            <li>12: <a href="#">Terminal electrophysiological recording of tissues</a></li>
+            <li>13: <a href="#">Animals will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="ninthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option9" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">9: Ninth protocol</span>
+          </label>
+          <input type="checkbox" name="option9" id="option9" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>1: <a href="#">A single intracardiac injection of cells</a></li>
+            <li>2: <a href="#">Transgene inducing or deleting agents</a></li>
+            <li>3: <a href="#">Administration of labelling agents</a></li>
+            <li>4: <a href="#">Administration of cells or cell-modulating agents</a></li>
+            <li>5: <a href="#">Bone marrow transplantation prior to tumour induction</a></li>
+            <li>6: <a href="#">Diet variation</a></li>
+            <li>7: <a href="#">Non-invasive in vivo imaging under general anaesthesia</a></li>
+            <li>8: <a href="#">Sampling of blood from a superficial blood vessel</a></li>
+            <li>9: <a href="#">Administration of therapeutic agents or control substances</a></li>
+            <li>10: <a href="#">Optogenetic studies </a></li>
+            <li>11: <a href="#">Terminal imaging</a></li>
+            <li>12: <a href="#">Terminal electrophysiological recording of tissues</a></li>
+            <li>13: <a href="#">Animals will be killed</a></li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+
+      {% set previousPage = '#' %}
+      {% set previousPageTitle = 'POLEs' %}
+      {% set nextPage = '#' %}
+      {% set nextPageTitle = 'Purpose bred animals' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+
+
+
+    
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Fate of animals</h1>
+      {% include "includes/nts-warning-small.html" %}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              What will happen to animals at the end of this project?
+            </h1>
+          </legend>
+          <p>
+            Killed
+          </p>
+          <p><a href="#">Edit</a></p>
+        </fieldset>
+      </div>
+     
+      <form action="ppl-index">
+        <button class="govuk-button">Continue</button><a href="ppl-index.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">{{ data['course-name'] }}</span>
+      <h1 class="govuk-heading-xl">
+        Check course details
+      </h1>
+      <p>
+        <dl class="govuk-body">
+            <!-- <dt>Course title</dt>
+              <dd>{{ data['course-name'] }}</dd> -->
+            <dt>Project licence title</dt>
+            <dd>Training in microvascular surgery</dd>
+            <dt>Course start date</dt>
+            <dd>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</dd>
+            <dt>Animals to be used</dt>
+            <dd>{{ data['animal-types'] }}</dd>
+            <dt>Project licence number</dt>
+            <dd>{{ data['ppl-number'] }}</dd>
+          </dd>
+        </dl>
+      </p>
+      <form action="manage-pils.html">
+        <button class="govuk-button">Confirm and continue</button><a href="javascript:history.go(-1)" class="secondary-link">Edit</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

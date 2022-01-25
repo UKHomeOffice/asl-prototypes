@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+
+      <!-- <h1 class="govuk-heading-xl">Retrospective assessment</h1> -->
+      <div class="declaration-panel-yellow">
+        <h3 class="govuk-heading-s">Writing a successful assessment</h3>
+        <p>This assessment will be published on GOV.UK and may be read by non-specialists. Help them understand your work by describing the science in simple language, such as that used by the British Medical Journal</p>
+        <p>Do not include information that could identify people, locations, or intellectual property.</p>
+        <a href='ra-index' class="govuk-button">Continue</a>
+      </div>
+      
+    </div>
+  </div>
+<style type="text/css">
+
+
+
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+
+  .changed {
+    margin-right: 5px;
+  }
+</style>
+{% endblock %}

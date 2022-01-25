@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Non-technical summary</span>
+      <h1 class="govuk-heading-xl">
+        Discard non-technical summary
+      </h1>
+
+      <p>DESCRIPTION ABOUT WHAT WILL HAPPEN. </p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Why are you discarding this non-technical summary?</strong>
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="discard-confirmation.html" class="govuk-button">Discard non-technical summary</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Change</a>
+      
+    </div>
+  </div>
+
+  </style>
+
+{% endblock %}

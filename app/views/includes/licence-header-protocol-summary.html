@@ -1,0 +1,114 @@
+
+
+<div class="govuk-grid-row" id="pageHeader">
+	<div class="govuk-grid-column-full">
+	  <div class="download-header">
+	    <span class="govuk-body licence-identifier" class="">Protocol summary table</span> &ensp;
+	    <span class="float-right">
+        <!-- <span class="hod-download-button side-space icon-small"></span> -->
+        
+      <p class="govuk-body save-indicator">
+        <span id="downloads-label" style="position: absolute; top: 50%; right: -5%; transform: translate(-50%,-50%);">
+          <span class="header-download-link">
+            <span class="hod-download-button side-space icon-small"></span>&ensp;<a href="#">Download as a .pdf</a><br>
+          </span>
+          
+          <a onclick="toggleDetails()" href="ppl-overview">Go to project overview</a>
+        </span> 
+      </p>
+	    </span>
+      <span class="govuk-body licence-type" class="">Development of new biological anticancer agents&ensp;<a  onclick="toggleDetails()" href="javascript:void(0);" id="details-label">View details</a></span>
+      <div id="details-panel" class="details-panel">
+        <!-- <span class="float-right download-options">
+          <ul class="govuk-list">
+            <li><a href="#">Non-technical summary (.pdf)</a></li>
+            <li><a href="/ra-submission/downloads">All downloads</a></li>
+          </ul>
+        </span> -->
+        <dl class="govuk-body" style="width: 75%;">
+          <dt>Project title</dt>
+          <dd>Development of new biological anticancer agents
+          <dt>Project licence holder</dt>
+          <dd>Bruce Banner</dd>
+          <dt>Primary establishment</dt>
+          <dd>University of Croydon</dd>
+          <dt>Project licence number</dt>
+          <dd>78847475</dd>
+          <dt>Expiry date</dt>
+          <dd>01 July 2023</dd>
+        </dl> 
+      </div>
+	  </div>
+	</div>
+</div> 
+
+<div class="header hide" id="myHeader" >
+        
+  <div class="download-header" style="padding: 7px;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-body licence-type">Protocol summary table: Development of new biological anticancer agents
+          <!-- <span class="govuk-!-font-size-14">
+            <a href="#">View details</a>
+          </span> -->
+          &ensp;
+        </span>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <span class="govuk-!-font-size-14">
+          <span class="float-right">  
+          <a href="#" style="padding: 0 1em;">Back to top</a>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var pageHeader = document.getElementById("pageHeader");
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
+<Script>
+  function toggleDetails() {
+  var x = document.getElementById("details-panel");
+  var detailsLabel = document.getElementById("details-label");
+  var downloadsLabel = document.getElementById("downloads-label");
+  console.log(x.style.display)
+  if (x.style.display === "none") {
+    console.log("click")
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    // downloadsLabel.innerHTML = "Hide download options";
+  } else if (x.style.display === "block") {
+    x.style.display = "none";
+    detailsLabel.innerHTML = "View details";
+    // downloadsLabel.innerHTML = "View download options";
+  } else {
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    // downloadsLabel.innerHTML = "Hide download options";
+  }
+}
+</Script>
+  
+  <style>
+    .download-options {
+      width: 20%;
+    }
+    #details-panel{
+      display: none;
+      padding-top: 1rem;
+      }
+  </style>
+

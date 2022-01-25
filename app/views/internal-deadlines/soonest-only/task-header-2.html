@@ -1,0 +1,245 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  
+</style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Project licence amendment
+      </h1>      
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#procedures" class="">Latest submission</a>
+        <a href="#procedures" class="">Project continuation</a>
+        <a href="#procedures" class="">Task assignment</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h2 class="govuk-heading-m">Status</h2>
+      <p>
+        <span class="badge">Awaiting decision</span>
+        <span class="date">Currently with: Home Office inspector</span>
+      </p>
+      <h2 class="govuk-heading-s">Soonest deadline: 5 January 2022 (target date for processing)</h2>
+      <dl>
+        <dt>Statutory deadline for decision:</dt>
+        <dd>7 January 2022 <a href="#">Extend deadline</a></dd>
+        <dt>Project continuation:</dt>
+        <dd>Yes, from project licence <a href="#">PP3646474</a></dd>
+        <dt>Previous project expires:</dt>
+        <dd>19 January 2022</dd>
+      </dl>
+      <dl>
+        <dt><strong>Assigned inspector</strong></dt>
+        <dd><em>No assigned inspector</em>
+          <br><a href="#">Assign to me</a>&emsp;<a href="#">Assign to someone else</a><br><br></dd>
+      </dl>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Project details</h2>
+
+      <dl>
+        <dt><strong>Project title</strong></dt>
+        <dd><a href="#">How to cure heartache</a></dd>
+        <dt><strong>Licence holder</strong></dt>
+        <dd><a href="#">Billy Basic</a></dd>
+        <dt><strong>Licence number</strong></dt>
+        <dd><a href="#">PP97373464</a></dd>
+        <dt><strong>Establishment</strong></dt>
+        <dd><a href="#">University of Croydon</a></dd>
+        <dt><strong>Project continuation</strong></dt>
+        <dd>Yes, from project licence <a href="#">PP93843043</a></dd>
+      </dl>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest activity</h2>
+      <p><strong>Endorsed on behalf of the PEL holder at University of Croydon by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+
+      <dl>
+        <dt><strong>PPL holder endorsement</strong></dt>
+        <dd>Yes</dd>
+        <dt><strong>Inspector confirmed ready</strong></dt>
+        <dd>Yes</dd>
+        <dt><strong>University of Croydon AWERB review date</strong></dt>
+        <dd>6 November 2021</dd>
+      </dl>
+    <p>Declaration</p>
+    <div class="govuk-inset-text">
+      <p>By endorsing this application, I agree that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Auto Project's training record is accurate and up to date.</li>
+        <li>The non-technical summary uses everyday language and contains no information that could identify people, places or intellectual property.</li>
+      </ul>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Show preivous activity
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        XXX
+      </div>
+    </details>
+
+   
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+
+      <dl>
+        <dt><strong>PPL holder endorsement</strong></dt>
+        <dd>Yes</dd>
+        <dt><strong>Inspector confirmed ready</strong></dt>
+        <dd>Yes</dd>
+        <dt><strong>University of Croydon AWERB review date</strong></dt>
+        <dd>6 November 2021</dd>
+      </dl>
+
+      <p>This is the amendment that has been submitted for approval.</p>
+      <p><a href="review-ppl-index" class="govuk-button govuk-button--secondary">View latest submission</a></p>
+      
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Grant licence</label>
+                <span class="govuk-hint">A new licence will be granted.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Reject application</label>
+                <span class="govuk-hint">The applicant will need to create a new application to apply for this type of licence in the future.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return to applicant</label>
+                <span class="govuk-hint">The application will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="lo-approve-comment" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+<style>
+  dt {
+  margin-bottom: 5px;
+}
+</style>
+{% endblock %}

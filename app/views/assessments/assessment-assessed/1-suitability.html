@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li><a href="1-intro">Introductory details</a></li>
+          <li><a href="7-nts">Non-technical summary</a></li>
+          <li class="selected"><a href="1-suitability">Applicant information</a></li>
+          <li><a href="2-suitability-places">Project location</a></li>
+          <li><a href="3-programme">Project plan</a></li>
+          <li><a href="5-models">Protocols</a></li>
+          <li><a href="4-types">Use of animals</a></li>
+          <li><a href="5a-end-of">Other considerations</a></li>
+          <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ 
+          <li><a href="10-hba">Harm-benefit analysis</a></li>
+          
+
+         
+
+          <li><a href="12-referrals">Referrals</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Applicant information</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for applicant information
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+            	The applicant:  
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    is in an appropriate position of authority to take responsibility for the project
+                  </li>
+                  <li>
+                    has expert knowledge of the field relevant to the area of work
+                  </li>
+                  <li>
+                    has specific knowledge of the biology, physiology and husbandry requirements of the species to be used
+                  </li>
+                  <li>
+                    has good knowledge of the methods, animal models and specialised equipment to be used, or access to colleagues who do 
+                  </li>
+                  <li>
+                    has expertise in experimental design, including statistics where appropriate, or access to such expertise
+                  </li>
+                  <li>
+                    has appropriate education and training in designing programmes of work under ASPA 
+                  </li>
+                  <li>
+                    has expertise in applying the 3Rs in the relevant field
+                  </li>
+                  <li>
+                    meets the mandatory training requirements as shown in the Guidance at Figure 4 and/or has adequate evidence to support an exemption
+                  </li>
+                  <li>
+                    has adequate plans for funding the project
+                  </li>
+                  <li>
+                    knows enough English to be able to understand the terms and conditions of their project licence
+                  </li>
+                </ul>
+              </li>
+          </ul>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                The applicant or research group has adequate experience, or a track record, in the field and in the specific area of work.
+              </li>
+              <li>
+                There is adequate reassurance that there will be users with the required technical competence to carry out the procedures.
+              </li>
+              <li>
+                The application has been endorsed by the NPRC at all specified establishments and the AWERB(s) have been consulted.
+              </li>
+            </ul>
+        </div>
+    </details>
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Specify additional conditions</h2>
+    <p class="govuk-hint">No aditional conditions have been added automatically according to the selections made by the applicant.</p>
+
+    <div id="conditions-options" style="display: none;">
+      <div class="govuk-form-group">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+            <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+              Training requirement
+              <p>This licence authority will expire <<<INSERT number HERE>>> months after the initial grant date unless evidence that <<INSERT name HERE>>> has successfully completed accredited training module(s) <<<INSERT module codes HERE>>> is provided to aspa.london@homeoffice.gov.uk.</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+            </label>
+          </div>
+        </div>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+            <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+               Write new ion
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add more additional conditions</a>
+
+    {% set assessSection = 'suitable' %}
+    {% set assessOutcome = 'met' %}
+    {% set reason = 'This is a new area of work for the establishment. The applicant has suitable expertise in the proposed models and methods and plans to provide training for PILh himself. There is strong oversight by the NVSs so I have confidence that technical competence will be developed.' %}
+    {% set assessSectionTitle = 'this section' %}
+    {% include "includes/assessment-met.html" %}
+
+    {% set sectionComplete = 'yes' %}
+    {% include "includes/assessment-complete.html" %}
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

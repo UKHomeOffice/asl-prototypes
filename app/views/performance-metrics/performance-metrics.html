@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-xl">
+        Performance metrics
+      </h1>
+
+    </div>
+  </div>    
+  <style>
+    .perf-big-no {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 0.5rem;
+    }
+    .perf-big-no-description {
+    }
+  </style>  
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <div class="perf-big-no">
+        10742
+      </div>
+      <div class="perf-big-no-description">
+        Total tasks completed
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <div class="perf-big-no">
+        8
+      </div>
+      <div class="perf-big-no-description">
+        <a href="manage-overdue-ppls">Statutory deadlines passed</a>
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <div class="perf-big-no">
+        2.18
+      </div>
+      <div class="perf-big-no-description">
+        Iterations per legacy PPL application
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <div class="perf-big-no">
+        2.71
+      </div>
+      <div class="perf-big-no-description">
+        Iterations per new PPL application
+      </div>
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <hr class="govuk-section-break--l govuk-section-break">
+      <h2 class="govuk-heading-m">
+        Tasks completed by type:
+        <span class="float-right govuk-body"><a href="#">Download this data (.csv)</a></span>
+      </h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL applications</td>
+            <td class="govuk-table__cell right-align">350</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL amendments</td>
+            <td class="govuk-table__cell right-align">613</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL revocations</td>
+            <td class="govuk-table__cell right-align">43</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL transfers</td>
+            <td class="govuk-table__cell right-align">5</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PIL applications</td>
+            <td class="govuk-table__cell right-align">1924</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PIL amendments</td>
+            <td class="govuk-table__cell right-align">413</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PIL revocations</td>
+            <td class="govuk-table__cell right-align">2627</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PIL transfers</td>
+            <td class="govuk-table__cell right-align">209</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PIL reviews</td>
+            <td class="govuk-table__cell right-align">2513</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+  </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+              <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Named people assignments</td>
+            <td class="govuk-table__cell right-align">274</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Named people revocations</td>
+            <td class="govuk-table__cell right-align">239</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Approved area amendments</td>
+            <td class="govuk-table__cell right-align">811</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Approved area additions</td>
+            <td class="govuk-table__cell right-align">142</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Approved area deletions</td>
+            <td class="govuk-table__cell right-align">392</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Profile updates</td>
+            <td class="govuk-table__cell right-align">113</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="govuk-heading-m">
+        Tasks completed by type:
+        <span class="float-right govuk-body"><a href="#">Download this data (.csv)</a></span>
+      </h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Establishments</td>
+            <td class="govuk-table__cell right-align">148</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL amendments</td>
+            <td class="govuk-table__cell right-align">2498</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">PPL revocations</td>
+            <td class="govuk-table__cell right-align">14744</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Showing data for period: <strong>All</strong> This week This month This year</p>
+    </div>
+  </div>
+
+
+{% endblock %}

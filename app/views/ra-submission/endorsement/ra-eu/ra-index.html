@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+      <!-- {% include "includes/nts-warning-small.html" %} -->
+
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span>
+      <h1 class="govuk-heading-xl">
+        Retrospective assessment
+      </h1> -->
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <h2 class="govuk-heading-m">Project information</h2> -->
+
+      <dl class="govuk-body">
+        <dt>Retrospective assessment due</dt>
+        <dd>02 January 2021</dd>
+        <dt>Reason for retrospective assessment</dt>
+         <dd>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Contains severe procedures</li>
+              <li>Uses cats</li>
+              <li>Uses dogs</li>
+            </ul>
+          </dd>
+      </dl>    
+    </div>
+    <!-- <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">Reference material</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download the Non-technical summary</a></li>
+        <li><a href="ppl-app/ppl-granted-summary.html">View the granted licence</a></li>
+      </ul>
+      <h3 class="govuk-heading-s">Downloads</h3>
+      <ul class="govuk-list">
+        <li><a href="ppl-app/ppl-granted-summary.html">Download retrospective assessment (.pdf)</a></li>
+      </ul>
+    </div> -->
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">All sections</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="ra-objectives-review.html">Objectives</a>
+        </li>
+        <li>
+          <a href="ra-harms-review">Harms</a>
+        </li>
+        <li>
+          <a href="ra-3rs-review">Replacement, reduction and refinement</a>
+        </li>
+      </ul>
+      
+      <p>All sections must be marked as complete before you can continue and send your assessment to the Home Office.</p>
+
+      <a href="/ra-submission/endorsement/ra-task" class="govuk-button">Next steps</a>
+
+    </div>
+  </div>
+<style type="text/css">
+
+
+
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+
+  .changed {
+    margin-right: 5px;
+  }
+</style>
+{% endblock %}

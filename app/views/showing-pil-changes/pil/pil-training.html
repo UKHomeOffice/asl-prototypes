@@ -1,0 +1,143 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Training</h2>
+      <h3 class="govuk-heading-m">Evidence of training</h3>
+      <p>Applicants must provide evidence training requirements have been met. Evidence could be completed training modules, or professional experience that makes training unnecessary.</p>
+
+      {% if data['module'].length > 1 %}
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+            <th scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87478489</li>
+                <li>Awarded on: 3 January 2018</li>
+                <li>Awarded by: Universities Group</li>
+              </ul>
+              <p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Exemption
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Module K skills will be developed in-house as opportunities arise</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {% else %}
+      <p><em>No evidence added</em></p>
+      {% endif  %}
+      <form action="pil-training-handover" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label for="training" class="govuk-label--s">Do you need to add, or update, your evidence?</label>
+            <span class="govuk-hint"></span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="trainig-confirm" name="trainig-confirm" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="trainig-confirm">
+                  Yes, I need to add or update evidence
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="trainig-confirm-2" name="trainig-confirm" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="trainig-confirm-2">
+                  No, this is fine
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+<style type="text/css">
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+  .module-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+  }
+  
+  .module-evidence{
+    display: inline-block;
+    width: 60%;
+  }
+  dl{
+    padding-left: 30px;     
+    margin-block-start: 0px;
+  }
+  dl .govuk-body{
+    margin-bottom: 0px;
+  }
+  dt {
+    width: 25%;
+  }
+  dd {
+    width: 65%;
+  }
+</style>
+{% endblock %}

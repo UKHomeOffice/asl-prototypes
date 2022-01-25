@@ -1,0 +1,1436 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ppl-application.html" %}                
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+      {% include "includes/ppl-application-sidebar.html" %}                
+      
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Protocols</h1>
+
+
+      <p>
+        <a href="#">View summary table</a>
+      </p>
+        
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        XXXX
+
+        <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+        <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            The regulatory guidelines or frameworks to be met are clear.
+          </li>
+          <li>
+            There are no satisfactory non-animal alternatives.
+          </li>
+          <li>
+            Where non-animal alternatives are accepted by the regulator they are used.
+          </li>
+          <li>
+            There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+          </li>
+          <li>
+            Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+          </li>
+          <li>
+            For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+          </li>
+        </ul>
+      </div>
+    </details>   
+    
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: First protocol</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Administration of agents to induce superovulation
+                    <br>
+                    <span class="govuk-hint">Also appears on protocols 1, 2 and 4</span>
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <section class="step completed">
+                    <h2 class="govuk-heading-s">Step 1: Administration of agents to induce superovulation</h2><span class="govuk-hint float-right">Appears on 1 protocol</span>
+                    <div class="review">
+                    <h3 class="govuk-heading-s">Step description</h3>
+                    <p>Administration of agents to induce superovulation, e.g., gonadotrophin, hormones or other agents administered by intra-peritoneal or subcutaneous injections typically twice but rarely up to four times (AA).</p>
+                    <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+                    <p>Superovulation procedures may result in transient discomfort but should not cause any lasting harm.</p>
+                    <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+                    <p>Animals will be monitored for signs of discomfort and any unexpected signs. Genetically altered animals used in this protocol are not expected to exhibit any harmful phenotype but, if they do they will be immediately killed by a Schedule 1 method.</p>
+                    <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+                    <p>Animals will be monitored for signs of discomfort and any unexpected signs. Genetically altered animals used in this protocol are not expected to exhibit any harmful phenotype but, if they do they will be immediately killed by a Schedule 1 method.</p>
+                    </div>
+                    <br>
+                    <h3 class="govuk-heading-s">Also appears on:</h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="#">Protocol 1, step 4</a></li>
+                      <li><a href="#">Protocol 2, step 4</a></li>
+                      <li><a href="#">Protocol 3, step 5</a></li>
+                    </ul>
+                    </section>
+                </div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: If embryos are needed these animals will also be mated
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <section class="step completed">
+                    <h2 class="govuk-heading-s">Step 2: If embryos are needed these animals will also be mated</h2><span class="govuk-hint float-right">Appears on 1 protocol</span>
+                    
+                    <div class="review">
+                    <h3 class="govuk-heading-s">Step description</h3>
+                    <p>If embryos are needed these animals will also be mated.</p>
+                    <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+                    <p>-</p>
+                    <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+                    <p>-</p>
+                    <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+                    <p><a href="#">Edit</a></p>
+                    </div>
+                    </section>
+                </div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of agents to induce superovulation
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <section class="step completed">
+                    <h2 class="govuk-heading-s">Step 3: Animals killed and oocytes/embryos harvested post mortem</h2><span class="govuk-hint float-right">Appears on 1 protocol</span>
+                    
+                    <div class="review">
+                    <h3 class="govuk-heading-s">Step description</h3>
+                    <p>Animals will be killed by a Schedule 1 method and oocytes/embryos harvested post mortem.</p>
+                    <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+                    <p>-</p>
+                    <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+                    <p>-</p>
+                    <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+                    <p>- </p>
+                    <p><a href="#">Edit</a></p>
+                    </div>
+                    </section>
+                </div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="secondProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option2" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">2: Second protocol</span>
+          </label>
+          <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Generation of genetically altered embryos
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="thirdProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option3" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">3: Third protocol</span>
+          </label>
+          <input type="checkbox" name="option3" id="option3" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Female mice will be rendered pseudo-pregnant
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Embryos will be implanted surgically
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: After weaning of offspring, dams will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="fourthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option4" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">4: Fourth protocol</span>
+          </label>
+          <input type="checkbox" name="option4" id="option4" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Severe</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Breeding and maintenance of genetically altered mice
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Tissue biopsy to determine genetic status
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Maintenance of animals
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Animals not used on other protocols will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+
+      </div>
+    </div>
+
+    <div id="fifthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option5" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">5: fifth protocol</span>
+          </label>
+          <input type="checkbox" name="option5" id="option5" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Induction of liver tumour growth
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Transgene inducing or deleting agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of labelling agents - including Retrograde intraductal delivery
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    4: Administration of cells or cell-modulating agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    5: Bone marrow transplantation prior to tumour induction
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    6: Diet variation
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    7: Non-invasive in vivo imaging under general anaesthesia
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    8: Sampling of blood from a superficial blood vessel
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    9: Administration of therapeutic agents or control substances
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    10: Implantation of an imaging window
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    11: Optogenetic studies 
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    12: Terminal imaging
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    13: Terminal electrophysiological recording of tissues
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    14: Animals will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="sixthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option6" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">6: The sixth prototcol</span>
+          </label>
+          <input type="checkbox" name="option6" id="option6" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Induction of tumor
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Transgene inducing or deleting agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of labelling agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    4: Administration of cells or cell-modulating agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    5: Bone marrow transplantation prior to tumour induction
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    6: Diet variation (AA)
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    7: Non-invasive in vivo imaging under general anaesthesia
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    8: Sampling of blood from a superficial blood vessel
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    9: Administration of therapeutic agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    10: Implantation of a cutaneous imaging window
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    11: Optogenetic studies
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    12: Terminal imaging
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    13: Terminal electrophysiological recording of tissues
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    14: Animals will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="seventhProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option7" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">7: The seventh protocol</span>
+          </label>
+          <input type="checkbox" name="option7" id="option7" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Induction of pancreatic tumour
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Transgene inducing or deleting agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of labelling agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    4: Administration of cells or cell-modulating agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    5: Bone marrow transplantation prior to tumour induction 
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    6: Diet variation (AA)
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    7: Non-invasive in vivo imaging under general anaesthesia
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    8: Sampling of blood from a superficial blood vessel
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    9: Administration of therapeutic agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    10: Implantation of an imaging window
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    11: Optogenetic studies
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    12: Terminal imaging
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    13: Terminal electrophysiological recording of tissues
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    14: Animals will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="eighthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option8" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">8: Eighth protocol</span>
+          </label>
+          <input type="checkbox" name="option8" id="option8" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: Induction of tumour growth in lung
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Transgene inducing or deleting agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of labelling agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    4: Administration of cells or cell-modulating agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    5: Bone marrow transplantation prior to tumour induction
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    6: Diet variation
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    7: Non-invasive in vivo imaging under general anaesthesia
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    8: Sampling of blood from a superficial blood vessel
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    9: Administration of therapeutic agents or control substances
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    10: Optogenetic studies 
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    11: Terminal imaging
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    12: Terminal electrophysiological recording of tissues
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    13: Animals will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+    <div id="ninthProtocol" class="protocol-container">
+      <div class="protocol-header-complete">
+        <h3 class="govuk-heading-m">
+          <label for="option9" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">9: Ninth protocol</span>
+          </label>
+          <input type="checkbox" name="option9" id="option9" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">1000</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Juvenile, adult, pregnant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div class="protocol-content hide">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Steps</button>
+        <div class="panel">
+          <ul class="govuk-list">
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    1: A single intracardiac injection of cells
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    2: Transgene inducing or deleting agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    3: Administration of labelling agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    4: Administration of cells or cell-modulating agents
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    5: Bone marrow transplantation prior to tumour induction
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    6: Diet variation
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    7: Non-invasive in vivo imaging under general anaesthesia
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    8: Sampling of blood from a superficial blood vessel
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    9: Administration of therapeutic agents or control substances
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    10: Optogenetic studies 
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    11: Terminal imaging
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    12: Terminal electrophysiological recording of tissues
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+            <li>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    13: Animals will be killed
+                  </span>
+                </summary>
+                <div class="govuk-details__text"></div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        
+      </div>
+    </div>
+
+      {% set previousPage = '#' %}
+      {% set previousPageTitle = 'POLEs' %}
+      {% set nextPage = '#' %}
+      {% set nextPageTitle = 'Purpose bred animals' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+
+
+
+    
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

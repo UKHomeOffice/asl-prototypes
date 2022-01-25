@@ -1,0 +1,180 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Setup complete</h1>
+
+      <p>
+        Blurb about the form being set up, being able to edit it in the future
+      </p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-s">Project summary</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Procedures were carried out in 2021</li>
+        <li>Procedures weren't only carried out on 'protected' species in 2021</li>
+        <li>No endangered species were used</li>
+        <li>No NMBA's were used</li>
+        <li>No rodenticide trials took place</li>
+        <li>No techniques of special interest were used</li>
+      </ul>
+      <a href="#">Change</a>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-s">Animals</h3>
+      <ul class="govuk-list">
+        <li>Animals used:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>included Mice</li>
+            <li>included Hamsters (syrian)</li>
+            <li>were not reused</li>
+            <li>included animals born in the UK at a licenced establishment</li>
+            <li>included non-genetically altered animals</li>
+            <li>included genetically altered animals</li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#">Change</a>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-s">Purposes</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>(a) Basic research including the sub-purpose:
+          <ul class="govuk-list govuk-list--bullet">
+            <li style="list-style-type: none;">With the sub-purpose:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Nervous system</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>(d) Breeding</li>
+        <li>Do not include the creation of a new genetic line</li>
+      </ul>
+      <a href="#">Change</a>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+
+      
+
+      <!-- <table class="govuk-table">
+        <thead class="govuk-table__head">
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Procedures carried out</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Only 'protected' embryonic forms used?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Any endangered animals used?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Any techniques of special interest used?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Any NMBA's used?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Any rodenticide trials?</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Animal species</td>
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Re-use</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Place of birth</td>
+            <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Genetic status</td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  Not genetically altered
+                </li>
+                <li>
+                  Genetically altered without a harmful phenotype
+                </li>
+                <li>
+                  Genetically altered with a harmful phenotype
+                </li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Creation of a new genetic line</td>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Purpose</td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>(a) Basic Research</li>
+                <li>(d) Breeding/maintainence of colonies fo established genetically altered animals, not used in other procedures</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Sub-purpose</td>
+            <td class="govuk-table__cell">(a) Basic research: Nervous system</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+        </tbody>
+      </table> -->
+
+
+      <p>
+        You can now start adding procedures...
+      </p>
+      
+      <a href="rops-empty" class="govuk-button">Continue to return</a>
+    </div>
+    
+  </div>
+
+  <style>
+    dt {
+      width: 60%;
+    }
+    dd {
+      width: 35%;;
+    }
+  </style>
+{% endblock %}

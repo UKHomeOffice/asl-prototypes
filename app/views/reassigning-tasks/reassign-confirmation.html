@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Confirm reassignment of task
+      </h1>
+      
+      <h3 class="govuk-heading-m">You want to reassign this task to:</h3>
+      <p>{{ data['reassign'] }}</p>
+
+      <h3 class="govuk-heading-m">Why do you want to reassign this task?</h3>
+      <p>{{ data['more-detail-reassign'] }}</p>
+
+      <p><a href="#">Edit</a> | <a href="#">Cancel</a></p>
+
+      <button class="govuk-button">Confirm</button>
+
+      </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

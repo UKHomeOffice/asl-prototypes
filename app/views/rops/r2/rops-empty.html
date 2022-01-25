@@ -1,0 +1,750 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set tableRows = 0 %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    {% if data['row-5']['severity'].length < 5 %}
+      {% set toasterContent = data['row-5']['severity'].length + ' rows added: ' + data['row-5']['severity'] %}
+    {% elif data['row-4']['severity'].length < 5 %}
+      {% set toasterContent = data['row-4']['severity'].length + ' rows added: ' + data['row-4']['severity'] %}
+    {% elif data['row-3']['severity'].length < 5 %}
+      {% set toasterContent = data['row-3']['severity'].length + ' rows added: ' + data['row-3']['severity'] %}
+    {% elif data['row-2']['severity'].length < 5 %}
+      {% set toasterContent = data['row-2']['severity'].length + ' rows added: ' + data['row-2']['severity'] %}
+    {% elif data['row-1']['severity'].length < 5 %}
+      {% set toasterContent = data['row-1']['severity'].length + ' rows added: ' + data['row-1']['severity'] %}
+    {% elif data['row-5']['severity'].length > 5 %}
+      {% set toasterContent = '1 row added: ' + data['row-5']['severity'] %}
+    {% elif data['row-4']['severity'].length > 5 %}
+      {% set toasterContent = '1 row added: ' + data['row-4']['severity'] %}
+    {% elif data['row-3']['severity'].length > 5 %}
+      {% set toasterContent = '1 row added: ' + data['row-3']['severity'] %}
+    {% elif data['row-2']['severity'].length > 5 %}
+      {% set toasterContent = '1 row added: ' + data['row-2']['severity'] %}
+    {% elif data['row-1']['severity'].length > 5 %}
+      {% set toasterContent = '1 row added: ' + data['row-1']['severity'] %}
+    {% endif %}
+
+    {% if data['rowCount'] != 0 %}
+    {% include "includes/toaster.html" %}
+    {% endif %}
+    
+    {% include "includes/status-banner-draft-rops.html" %}
+    {% include "includes/licence-header-rops-research.html" %}
+    
+      <h2 class="govuk-heading-m">Change set up details</h2>
+      <p>View and change details used to set up this return, such as purposes or place of birth.</p>
+      <p><a href="setup-complete">Change set up details</a></p>
+      <h2 class="govuk-heading-m">Procedures</h2>
+      <p>Add procedures completed in 2021.</p>
+      <a href="add-procedure.html" class="govuk-button">Add procedures</a>
+      <span class="float-right"><a href="#">Download table (CSV)</a></span>
+      <span class="showComparison float-right">
+        <a href="javascript:void()">View table in full screen</a>&emsp;
+      </span>
+      <div id="fateComparison" class="modal modal-dialoge container" style="z-index: 10;">
+      
+        <!-- Modal content -->
+        <div class="modal-content modal-content-table" >
+          <div class="diff-window">
+            <div class="diff-window-header">
+              <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Procedures
+                <span class="govuk-body"><a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a></span>
+              </h2>  
+            </div>
+            <div class="diff-window-body" style="background-color: #f3f3f3;">
+              
+              <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+                <div class="fullscreen-scrollable-table" >          
+        
+                  <table class="govuk-table  table-background" style="font-size: 14px; margin: 0 auto;" >
+                  
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Row</th>
+                <th scope="col" class="govuk-table__header">Animal species</th>
+                <th scope="col" class="govuk-table__header">Re-use</th>
+                <th scope="col" class="govuk-table__header">Place of birth</th>
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <th scope="col" class="govuk-table__header">New genetic<br>line</th>
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                <th scope="col" class="govuk-table__header">Edit</th>
+              </tr>
+              {% if data['rowCount'] == 0 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" colspan='11'><em>No procedures added yet</em></td>
+              </tr>
+              {% endif %}
+              {% if data['row-1']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['purpose']}}</td>
+                  {% if data['row-1']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-1']['subpurpose-translational']}}</td>
+                  {% elif data['row-1']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-1']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-1']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-1']['severity'] == 'Sub-threshold' %}
+                    {{data['row-1']['procedure-no'][0]}}
+                    {% elif data['row-1']['severity'] == 'Non-recovery' %}
+                    {{data['row-1']['procedure-no'][1]}}
+                    {% elif data['row-1']['severity'] == 'Mild  ' %}
+                    {{data['row-1']['procedure-no'][2]}}
+                    {% elif data['row-1']['severity'] == 'Moderate' %}
+                    {{data['row-1']['procedure-no'][3]}}
+                    {% elif data['row-1']['severity'] == 'Severe' %}
+                    {{data['row-1']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-1']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['purpose']}}</td>
+                    {% if data['row-1']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-1']['subpurpose-translational']}}</td>
+                    {% elif data['row-1']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-1']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                      {% if item === 'Sub-threshold' %}
+                        {{data['row-1']['procedure-no'][0]}}
+                      {% elif item  === 'Non-recovery' %}
+                        {{data['row-1']['procedure-no'][1]}}
+                      {% elif item  === 'Mild  ' %}
+                        {{data['row-1']['procedure-no'][2]}}
+                      {% elif item  === 'Moderate' %}
+                        {{data['row-1']['procedure-no'][3]}}
+                      {% elif item  === 'Severe' %}
+                        {{data['row-1']['procedure-no'][4]}}
+                      {% endif %} 
+                    </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = data['row-1']['severity'].length %}
+              {% endif %}
+
+      
+              {% if data['row-2']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['purpose']}}</td>
+                  {% if data['row-2']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-2']['subpurpose-translational']}}</td>
+                  {% elif data['row-2']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-2']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-2']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-2']['severity'] === 'Sub-threshold' %}
+                      {{data['row-2']['procedure-no'][0]}}
+                    {% elif data['row-2']['severity'] === 'Non-recovery' %}
+                      {{data['row-2']['procedure-no'][1]}}
+                    {% elif data['row-2']['severity'] === 'Mild  ' %}
+                      {{data['row-2']['procedure-no'][2]}}
+                    {% elif data['row-2']['severity'] === 'Moderate' %}
+                      {{data['row-2']['procedure-no'][3]}}
+                    {% elif data['row-2']['severity'] === 'Severe' %}
+                      {{data['row-2']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-2']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['purpose']}}</td>
+                    {% if data['row-2']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-2']['subpurpose-translational']}}</td>
+                    {% elif data['row-2']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-2']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell"> 
+                    {% if item === 'Sub-threshold' %}
+                      {{data['row-2']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-2']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-2']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-2']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-2']['procedure-no'][4]}}
+                    {% endif %} </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = tableRows + data['row-2']['severity'].length %}
+              {% endif %}
+              {% if data['row-3']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['purpose']}}</td>
+                  {% if data['row-3']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-3']['subpurpose-translational']}}</td>
+                  {% elif data['row-3']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-3']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-3']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-3']['severity'] == 'Sub-threshold' %}
+                    {{data['row-3']['procedure-no'][0]}}
+                    {% elif data['row-3']['severity'] == 'Non-recovery' %}
+                    {{data['row-3']['procedure-no'][1]}}
+                    {% elif data['row-3']['severity'] == 'Mild  ' %}
+                    {{data['row-3']['procedure-no'][2]}}
+                    {% elif data['row-3']['severity'] == 'Moderate' %}
+                    {{data['row-3']['procedure-no'][3]}}
+                    {% elif data['row-3']['severity'] == 'Severe' %}
+                    {{data['row-3']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-3']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['purpose']}}</td>
+                    {% if data['row-3']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-3']['subpurpose-translational']}}</td>
+                    {% elif data['row-3']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-3']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                    {% if item === 'Sub-threshold' %}
+                      {{data['row-3']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-3']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-3']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-3']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-3']['procedure-no'][4]}}
+                    {% endif %} </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = tableRows + data['row-3']['severity'].length %}
+              {% endif %}
+              {% if data['row-4']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['purpose']}}</td>
+                  {% if data['row-4']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-4']['subpurpose-translational']}}</td>
+                  {% elif data['row-4']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-4']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-4']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-4']['severity'] == 'Sub-threshold' %}
+                    {{data['row-4']['procedure-no'][0]}}
+                    {% elif data['row-4']['severity'] == 'Non-recovery' %}
+                    {{data['row-4']['procedure-no'][1]}}
+                    {% elif data['row-4']['severity'] == 'Mild  ' %}
+                    {{data['row-4']['procedure-no'][2]}}
+                    {% elif data['row-4']['severity'] == 'Moderate' %}
+                    {{data['row-4']['procedure-no'][3]}}
+                    {% elif data['row-4']['severity'] == 'Severe' %}
+                    {{data['row-4']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-4']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['purpose']}}</td>
+                    {% if data['row-4']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-4']['subpurpose-translational']}}</td>
+                    {% elif data['row-4']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-4']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                      {% if item === 'Sub-threshold' %}
+                      {{data['row-4']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-4']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-4']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-4']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-4']['procedure-no'][4]}}
+                    {% endif %} 
+                    </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = data['row-4']['severity'].length %}
+              {% endif %}
+            </tbody>
+          
+                  </table>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      {% set tableRows = 0 %}
+
+      
+      <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+        <div class="fullscreen-scrollable-table">
+          <table class="govuk-table  table-background" style="font-size: 14px;">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Row</th>
+                <th scope="col" class="govuk-table__header">Animal species</th>
+                <th scope="col" class="govuk-table__header">Re-use</th>
+                <th scope="col" class="govuk-table__header">Place of birth</th>
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <th scope="col" class="govuk-table__header">New genetic<br>line</th>
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                <th scope="col" class="govuk-table__header">Edit</th>
+              </tr>
+              {% if data['rowCount'] == 0 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" colspan='11'><em>No procedures added yet</em></td>
+              </tr>
+              {% endif %}
+              {% if data['row-1']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-1']['purpose']}}</td>
+                  {% if data['row-1']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-1']['subpurpose-translational']}}</td>
+                  {% elif data['row-1']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-1']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-1']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-1']['severity'] == 'Sub-threshold' %}
+                    {{data['row-1']['procedure-no'][0]}}
+                    {% elif data['row-1']['severity'] == 'Non-recovery' %}
+                    {{data['row-1']['procedure-no'][1]}}
+                    {% elif data['row-1']['severity'] == 'Mild  ' %}
+                    {{data['row-1']['procedure-no'][2]}}
+                    {% elif data['row-1']['severity'] == 'Moderate' %}
+                    {{data['row-1']['procedure-no'][3]}}
+                    {% elif data['row-1']['severity'] == 'Severe' %}
+                    {{data['row-1']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-1']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-1']['purpose']}}</td>
+                    {% if data['row-1']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-1']['subpurpose-translational']}}</td>
+                    {% elif data['row-1']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-1']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                      {% if item === 'Sub-threshold' %}
+                        {{data['row-1']['procedure-no'][0]}}
+                      {% elif item  === 'Non-recovery' %}
+                        {{data['row-1']['procedure-no'][1]}}
+                      {% elif item  === 'Mild  ' %}
+                        {{data['row-1']['procedure-no'][2]}}
+                      {% elif item  === 'Moderate' %}
+                        {{data['row-1']['procedure-no'][3]}}
+                      {% elif item  === 'Severe' %}
+                        {{data['row-1']['procedure-no'][4]}}
+                      {% endif %} 
+                    </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = data['row-1']['severity'].length %}
+              {% endif %}
+
+      
+              {% if data['row-2']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-2']['purpose']}}</td>
+                  {% if data['row-2']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-2']['subpurpose-translational']}}</td>
+                  {% elif data['row-2']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-2']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-2']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-2']['severity'] === 'Sub-threshold' %}
+                      {{data['row-2']['procedure-no'][0]}}
+                    {% elif data['row-2']['severity'] === 'Non-recovery' %}
+                      {{data['row-2']['procedure-no'][1]}}
+                    {% elif data['row-2']['severity'] === 'Mild  ' %}
+                      {{data['row-2']['procedure-no'][2]}}
+                    {% elif data['row-2']['severity'] === 'Moderate' %}
+                      {{data['row-2']['procedure-no'][3]}}
+                    {% elif data['row-2']['severity'] === 'Severe' %}
+                      {{data['row-2']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-2']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-2']['purpose']}}</td>
+                    {% if data['row-2']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-2']['subpurpose-translational']}}</td>
+                    {% elif data['row-2']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-2']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell"> 
+                    {% if item === 'Sub-threshold' %}
+                      {{data['row-2']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-2']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-2']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-2']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-2']['procedure-no'][4]}}
+                    {% endif %} </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = tableRows + data['row-2']['severity'].length %}
+              {% endif %}
+              {% if data['row-3']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-3']['purpose']}}</td>
+                  {% if data['row-3']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-3']['subpurpose-translational']}}</td>
+                  {% elif data['row-3']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-3']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-3']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-3']['severity'] == 'Sub-threshold' %}
+                    {{data['row-3']['procedure-no'][0]}}
+                    {% elif data['row-3']['severity'] == 'Non-recovery' %}
+                    {{data['row-3']['procedure-no'][1]}}
+                    {% elif data['row-3']['severity'] == 'Mild  ' %}
+                    {{data['row-3']['procedure-no'][2]}}
+                    {% elif data['row-3']['severity'] == 'Moderate' %}
+                    {{data['row-3']['procedure-no'][3]}}
+                    {% elif data['row-3']['severity'] == 'Severe' %}
+                    {{data['row-3']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-3']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-3']['purpose']}}</td>
+                    {% if data['row-3']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-3']['subpurpose-translational']}}</td>
+                    {% elif data['row-3']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-3']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                    {% if item === 'Sub-threshold' %}
+                      {{data['row-3']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-3']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-3']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-3']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-3']['procedure-no'][4]}}
+                    {% endif %} </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = tableRows + data['row-3']['severity'].length %}
+              {% endif %}
+              {% if data['row-4']['severity'].length > 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">{{tableRows + 1}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['species']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['reuse']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['birthplace']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['gaa']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['line']}}</td>
+                  <td class="govuk-table__cell">{{data['row-4']['purpose']}}</td>
+                  {% if data['row-4']['purpose'] === 'Translational and applied research' %}
+                  <td class="govuk-table__cell">{{data['row-4']['subpurpose-translational']}}</td>
+                  {% elif data['row-4']['purpose'] === 'Basic research' %}
+                  <td class="govuk-table__cell">{{data['row-4']['subpurpose-basic']}}</td>
+                  {% else %}
+                  <td class="govuk-table__cell">–</td>
+                  {% endif %}
+                  <td class="govuk-table__cell">{{data['row-4']['severity'] | string}}</td>
+                  <td class="govuk-table__cell">
+                    {% if data['row-4']['severity'] == 'Sub-threshold' %}
+                    {{data['row-4']['procedure-no'][0]}}
+                    {% elif data['row-4']['severity'] == 'Non-recovery' %}
+                    {{data['row-4']['procedure-no'][1]}}
+                    {% elif data['row-4']['severity'] == 'Mild  ' %}
+                    {{data['row-4']['procedure-no'][2]}}
+                    {% elif data['row-4']['severity'] == 'Moderate' %}
+                    {{data['row-4']['procedure-no'][3]}}
+                    {% elif data['row-4']['severity'] == 'Severe' %}
+                    {{data['row-4']['procedure-no'][4]}}
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                </tr>
+                {% set tableRows = tableRows + 1 %}
+              {% else %}
+                {% for item in data['row-4']['severity'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{tableRows + loop.index}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['species']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['reuse']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['birthplace']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['gaa']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['line']}}</td>
+                    <td class="govuk-table__cell">{{data['row-4']['purpose']}}</td>
+                    {% if data['row-4']['purpose'] === 'Translational and applied research' %}
+                      <td class="govuk-table__cell">{{data['row-4']['subpurpose-translational']}}</td>
+                    {% elif data['row-4']['purpose'] === 'Basic research' %}
+                      <td class="govuk-table__cell">{{data['row-4']['subpurpose-basic']}}</td>
+                      {% else %}
+                      <td class="govuk-table__cell">–</td>
+                    {% endif %}
+                    <td class="govuk-table__cell">{{item}}</td>
+                    <td class="govuk-table__cell">
+                      {% if item === 'Sub-threshold' %}
+                      {{data['row-4']['procedure-no'][0]}}
+                    {% elif item  === 'Non-recovery' %}
+                      {{data['row-4']['procedure-no'][1]}}
+                    {% elif item  === 'Mild  ' %}
+                      {{data['row-4']['procedure-no'][2]}}
+                    {% elif item  === 'Moderate' %}
+                      {{data['row-4']['procedure-no'][3]}}
+                    {% elif item  === 'Severe' %}
+                      {{data['row-4']['procedure-no'][4]}}
+                    {% endif %} 
+                    </td>
+                    <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                  {% set tableRows = data['row-4']['severity'].length %}
+              {% endif %}
+            </tbody>
+          </table>
+         
+          <br>
+         
+        </div>
+      </div>
+
+      <hr>
+      <form action="submit-comment" method="post">
+        <h2 class="govuk-heading-m">Submit return</h2>
+        <p>Submit this project’s completed return of procedures.</p>
+        <a href="declaration" class="govuk-button govuk-button--secondary">Submit return</a>
+      </form>
+      {% if data['rowCount'] is not number %}
+        <form action="rops-empty" method="POST">
+          <input type="hidden" name="rowCount" value="0">
+          <button class="float-right">Reset</button>
+        </form>
+      {% endif %}
+      <style>
+        table {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+        .fullscreen-content {
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 0;
+    position: relative;
+    overflow-x: scroll;
+    z-index: 8;
+        }
+        .fullscreen-scrollable-table {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
+
+     
+      </style>
+      
+  </div>  
+</div>
+
+<style>
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#858585;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.customized-scrollbar ::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+</style>
+
+{% endblock %}

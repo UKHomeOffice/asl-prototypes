@@ -1,0 +1,142 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      What types of animals are used for this personal licence?
+    </h1>
+
+    <form action="pil-app" method="post">
+
+      <div class="govuk-form-group animals-selector">
+        <fieldset class="govuk-fieldset">
+        <label class="govuk-label--s" for="pil-animal-types">
+          Animals types
+        </label>
+        <span class="govuk-hint"></span>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Small animals
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <fieldset class="govuk-fieldset">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types" name="pil-animal-types" type="checkbox" value="mice">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types">
+                  Mice
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-2" name="pil-animal-types" type="checkbox" value="gerbils">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-2">
+                  Gerbils
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-3" name="pil-animal-types" type="checkbox" value="ferrets">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-3">
+                  Ferrets
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-4" name="pil-animal-types" type="checkbox" value="guinea-pigs">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-4">
+                  Guinea Pigs
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-5" name="pil-animal-types" type="checkbox" value="hamsters-chinese">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-5">
+                  Hamsters (Chinese)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-6" name="pil-animal-types" type="checkbox" value="hamsters-syrian">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-6">
+                  Hamsters (Syrian)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-7" name="pil-animal-types" type="checkbox" value="rabbits">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-7">
+                  Rabbits
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pil-animal-types-8" name="pil-animal-types" type="checkbox" value="rats">
+                <label class="govuk-label govuk-checkboxes__label" for="pil-animal-types-8">
+                  Rats
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          </div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Large animals
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Fish, reptiles and aquatic species
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Birds
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Cats, dogs and equidae
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Non-human primates
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Other
+            </span>
+          </summary>
+          <div class="govuk-details__text"></div>
+        </details>
+
+      </div>
+      <button class="govuk-button">Continue</button>
+    </form> 
+
+  </div>
+  </div>
+
+{% endblock %}

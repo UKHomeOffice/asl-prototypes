@@ -1,0 +1,134 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+ 
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Set up return: animals</h1>
+      <form action="setup-ga" method="POST">
+        <div class="govuk-form-group" id="q1" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              {% if data['reuse'] == 'no' %}
+              What was the place of birth for animals used in procedures in 2021?
+              {% else %}
+              For any animals not reused, what was the place of birth for animals used in procedures in 2021?
+              {% endif %}
+            </label>
+            <span class="govuk-hint">For eggs this is where they hatched. 
+            <br>
+            Select all that apply.
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-yes" name="q3" type="radio" value="1" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the UK at a licensed establishment</label>
+                <span class="govuk-hint  govuk-checkboxes__hint">Including your own establishment</span>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="2" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the EU (non-UK) at a registered breeder</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="3" data-aria-controls="conditional-A">
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the UK <strong>not</strong> at a licensed establishment
+                </label>
+                <span class="govuk-hint  govuk-checkboxes__hint">For example, cattle sourced at a commercial farm or wild caught animals</span>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-A">
+                <fieldset class="govuk-fieldset">
+                  <p>
+                    The following animal types are required to be purpose bred unless otherwise authorised:
+                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                  <label class="govuk-fieldset__legend--s" for="">
+                    Explain why these animals weren’t purpose bred
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea name="" id="" rows="5" class="govuk-textarea"></textarea>
+                </fieldset>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="4" data-aria-controls="conditional-b">
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the EU (non UK) <strong>not</strong> at a registered breeder</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-b">
+                <fieldset class="govuk-fieldset">
+                  <p>
+                    The following animal types are required to be purpose bred unless otherwise authorised:
+                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                  <label class="govuk-fieldset__legend--s" for="">
+                    Explain why these animals weren’t purpose bred
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea name="" id="" rows="5" class="govuk-textarea"></textarea>
+                </fieldset>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="5" data-aria-controls="conditional-c" >
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the rest of Europe</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-c">
+                <fieldset class="govuk-fieldset">
+                  <p>
+                    The following animal types are required to be purpose bred unless otherwise authorised:
+                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                  <label class="govuk-fieldset__legend--s" for="">
+                    Explain why these animals weren’t purpose bred
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea name="" id="" rows="5" class="govuk-textarea"></textarea>
+                </fieldset>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="q3-no" name="q3" type="checkbox" value="6" data-aria-controls="conditional-d">
+                <label for="q3" class="govuk-label govuk-checkboxes__label">In the rest of the world</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-d">
+                <fieldset class="govuk-fieldset">
+                  <p>
+                    The following animal types are required to be purpose bred unless otherwise authorised:
+                  </p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                  <label class="govuk-fieldset__legend--s" for="">
+                    Explain why these animals weren’t purpose bred
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea name="" id="" rows="5" class="govuk-textarea"></textarea>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

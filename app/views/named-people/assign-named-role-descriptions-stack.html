@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl"></span>
+      <h1 class="govuk-heading-xl">
+        Assign named role
+      </h1>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            More information about named roles
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h3 class="govuk-heading-s">
+            Home Office Liaison Contact (HOLC)
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+          <h3 class="govuk-heading-s">
+            Named Information Officer (NIO)
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+          <h3 class="govuk-heading-s">
+            Named Veterinary Surgeon (NVS)
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+          <h3 class="govuk-heading-s">
+            Suitably qualified person (SQP)
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+          <h3 class="govuk-heading-s">
+            Named Training and Competency Officer (NTCO)
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+          <h3 class="govuk-heading-s">
+            Establishment Licence Holder
+          </h3>
+          <p>Description about this role, what the requirements are and what options are available to users with this role.</p>
+        </div>
+      </details>
+      
+      <form action="#" method="post">
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Which named role do you want to assign?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Home Office Liaison Contact (HOLC)
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Information Officer (NIO)
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Veterinary Surgeon (NVS)
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Suitably qualified person (SQP)
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Training and Competency Officer (NTCO)
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+                <label class="govuk-label govuk-radios__label" for="option-1">
+                  Establishment Licence Holder
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  Named Person Responsible for Compliance (NPRC)            
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="more-detail">
+            Why is this person suitable for this named role?
+          </label>
+          <span id="more-detail-hint" class="govuk-hint">
+            Include any relevant training in your answer, or explain why this training is not necessary.
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">Cancel</a>
+      </form> 
+    </div>
+  </div>
+
+{% endblock %}

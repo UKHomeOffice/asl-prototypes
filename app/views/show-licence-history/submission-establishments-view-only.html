@@ -1,0 +1,157 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      
+      <p><strong>University of Croydon</strong></p>
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+
+      <div class="back-to-sections-link govuk-body">
+        <a href="review-ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="pelha-ppl-index" class="back-to-sections"><li>List of sections</li></a>
+        <a href="#"><li>Project introduction</li></a>
+        <a href="#"><li>Applicant information</li></a>
+        <a href="#"><li class="selected">Project location</li></a>
+        <a href="pelha-establishments-1"><li class="selected-child">Establishments</li></a>
+        <a href="pelha-transfer-1"><li class="selected-child">Transfer and movement of animals</li></a>
+        <a href="pelha-poles-1"><li class="selected-child">Places other than a licensed establishment (POLEs)</li></a>
+        <a href="#"><li>Project plan</li></a>
+        <a href="pelha-protocols-1"><li>Protocols</li></a>
+        <a href="#"><li>Use of animals</li></a>
+        <a href="#"><li>Other considerations</li></a>
+        <a href="#"><li>The 3Rs</li></a>
+        <a href="#"><li>Non-technical summary</li></a>
+        <a href="#"><li>Additional conditions</li></a>
+        <a href="#"><li>Authorisations</li></a>
+      </ul>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Establishments</h2>
+      
+
+      <!--  -->
+
+  
+      <h2 class="govuk-heading-s">What is the primary establishment for this licence?</h2>
+      <p>University of Croydon</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
+
+      <p>No</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-s">Do the housing, husbandry, and care conditions at each establishment meet the requirements laid out in the Code of Practice for each type of animal you will be using?</h2>
+
+      <p>Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.</p>
+      <p>Yes</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

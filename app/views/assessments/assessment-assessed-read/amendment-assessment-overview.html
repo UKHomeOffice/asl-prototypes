@@ -1,0 +1,229 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    
+
+      {% include "includes/licence-header-assessment-complete.html" %}
+
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Assessment sections</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="1-intro">Introductory details</a>
+          {% if data['complete-0'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['intro-0'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="1-suitability">Applicant information</a>
+          {% if data['complete-1'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['suitable-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <!-- <span class="badge float-right">No change</span> -->
+            <span class="badge changed float-right">To review</span>
+          <span class="badge badge-condition float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="2-suitability-places">Project location</a>
+          {% if data['complete-2'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['places-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+            <span class="badge float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="3-programme">Project plan</a>
+          {% if data['complete-3'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['plan-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="5-models">Protocols</a>
+          {% if data['complete-5'] == 'yes' %}
+          <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          <!-- <span class="badge blue float-right">Fullfilled</span> -->
+          <span class="badge float-right">No change</span>
+          <span class="badge float-right">5 Conditions</span>
+
+        <li>
+          <a href="4-types">Use of animals</a>
+          {% if data['complete-4'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['types-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <!-- <span class="badge float-right">No change</span> -->
+            <span class="badge changed float-right">To review</span>
+          <span class="badge badge-condition float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="5a-end-of">Other considerations</a>
+          {% if data['complete-5a'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['considerations-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+            <span class="badge float-right">2 Condition</span>
+        </li>  
+        <li>
+          <a href="6-3rs">Replacement, reduction & refinement</a>
+          {% if data['complete-6'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['3rs-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+            <span class="badge float-right">2 Conditions</span>
+        </li>
+        <li>
+          <a href="7-nts">Non-technical summary</a>
+          {% if data['complete-7'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['considerations-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+            <span class="badge float-right">2 Condition</span>
+        </li>
+        <li>
+          <a href="11-reporting
+          {% if data['complete-11'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          {% if data['whole-1'] == 'no' %}
+            <span class="badge badge-red float-right">Not fullfilled</span>
+          {% endif %} 
+            <!-- <span class="badge blue float-right">Fullfilled</span> -->
+            <span class="badge float-right">No change</span>
+            <span class="badge float-right">2 Condition</span>
+        </li>
+        <li>
+          <a href="10-hba">Harm-benefit analysis</a>
+          {% if data['complete-10'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          <!-- <span class="badge blue float-right">Fullfilled</span> -->
+          <span class="badge float-right">No change</span>
+
+        </li>
+        <li>
+          <a href="8-retrospective">Retrospective assessment</a>
+          {% if data['complete-8'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          <!-- <span class="badge blue float-right">Fullfilled</span> -->
+          <span class="badge float-right">No change</span>
+            <span class="badge float-right">2 Condition</span>
+
+        </li>
+        <li>
+          <a href="9-additional-conditions">Further additional conditions</a>
+          {% if data['complete-9'] == 'yes' %}
+            <span class="badge blue float-right">Complete</span>
+          {% endif %} 
+          <!-- <span class="badge blue float-right">Fullfilled</span> -->
+          <span class="badge float-right">No change</span>
+
+            <span class="badge float-right">2 Condition</span>
+        </li>
+      </ul>
+
+      <p>All sections must be marked as complete before you submit this project assessment.</p>
+
+      <a class="govuk-button" onclick="window.close();">Close assessment</a>
+
+    </div>
+  </div>
+<style type="text/css">
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+  .badge {
+    margin-left: 5px;
+  }
+</style>
+{% endblock %}

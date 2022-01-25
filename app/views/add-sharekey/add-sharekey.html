@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">The Royal Institute of Monkeys</span>
+
+      <h1 class="govuk-heading-xl">
+        Establishment SharedKey
+      </h1>
+      
+      <p>The SharedKey can be used to open password protected PDF's from this establishment.</p>
+      
+      <form action="establishment-overview" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+            <strong>Enter SharedKey</strong>
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="SharedKey" type="text" value='{{data['SharedKey']}}'>
+        </div>
+        <button class="govuk-button">Save SharedKey</button> <a onclick="javascript:confirm('Are you sure you want to remove this SharedKey?')" href='establishment-overview' class="secondary-link">Remove SharedKey</a><a href='establishment-overview' class="secondary-link">Cancel</a>
+      </form> 
+
+
+    </div>
+  </div>
+
+{% endblock %}

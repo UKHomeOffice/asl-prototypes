@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Reduction</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h2 class="govuk-heading-s">Enter the estimated number of animals of each type used in this project.</h2>
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="account-number">
+          Mice
+          </label>
+        </h1>
+        <input class="govuk-input" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric" value="500">
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How have you estimated the numbers of animals you will use?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          Do not mention POWER calculations here. If relevant, there will be an opportunity to provide these details elsewhere.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">For the ApoE-/- mouse model, we are using a low dose of radiation, but slightly higher than the minimal dose published to have an effect. This is to provide higher power of the data while using fewer animals (without significant increase in negative effects). As radiation effect in LDLr-/- mice has been studied, the inclusion of a small pilot will prevent using larger numbers in the main experiment with uncertain outcomes. </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What steps did you take during the experimental design phase to reduce the number of animals being used in this project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          You may want to reference online tools (such as the NC3R's Experimental Design Assistant) or any relevant regulatory requirements.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Good experimental design (including randomising treatments and blinding) have been used to maximise effect and reduce unwanted variability. We have also used all existing data available from our own cell culture models and other researchers that have used these mouse models to gain a best estimate of the expected effects. Therefore, group sizes and overall number of mice used can be kept to a minimum while still getting a clear result on the effect of age on radiation-induced atherosclerosis and the use of drugs to prevent this.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What measures, apart from good experimental design, will you use to optimise the number of animals you plan to use in your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          This may include efficient breeding, pilot studies, computer modelling, or sharing of tissue.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Throughout the project, we will consider results that may allow a reduction of mice used in later stages. For example, if out pilot experiment shows that LDLr-/- mice do not demonstrate radiation-induced atherosclerosis then no further experiments will be carried out in this strain, considerably reducing overall numbers. </textarea>
+      </div>
+
+    
+      <form action="ppl-reduction-review">
+        <button class="govuk-button">Continue</button><a href="ppl-intro-review.html" class="secondary-link">List of sections</a>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

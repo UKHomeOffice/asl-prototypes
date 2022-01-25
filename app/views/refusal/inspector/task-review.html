@@ -1,0 +1,210 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+      <h3 class="govuk-heading-s">Development of new biological anticancer agents</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#procedures" class="">Latest submission</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Status</h2>
+      <p>
+        <span class="badge">Awaiting Recommendation</span>
+         <span class="float-right"><strong>Currently with:</strong> Home Office Inspector</span>
+      </p>
+      <strong>
+        <h3 class="govuk-heading-s">Deadline for decision:<span class="date-1-week"></span></h3>
+      </strong>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Extend deadline
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          XXX
+        </div>
+      </details>
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+      <p><strong>Endorsed on behalf of the PEL holder by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activity
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          XXX
+        </div>
+      </details>
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+     
+      <h2 class="govuk-heading-m">PPL holder</h2>
+      <p><a href="#">Bruce Banner</a></p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+      <ul class="govuk-list">
+        <li>
+          <strong>PEL holder endorsement:</strong> Yes
+        </li>
+        <li>
+          <strong>AWERB review:</strong> Yes
+        </li>
+        <li>
+          <strong>AWERB review date:</strong>
+          <br>
+          <span class="date-8-weeks-ago"></span>
+        </li>
+        <li>
+         <strong>Inspector confirmed ready:</strong> Yes
+        </li>
+      </ul>
+      <p>This is the application that has been submitted for approval.</p>
+      <a href="application/ppl-index" class="govuk-button govuk-button--secondary">View latest submission</a>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recommendation-3" name="recommendation" type="radio" value="england">
+              <label for="recommendation-3" class="govuk-label govuk-radios__label">
+                Return to applicant
+              </label>
+              <span class="govuk-hint  govuk-radios__hint">The application will be returned to the applicant with your comments</span> 
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recommendation-1" name="recommendation" type="radio" value="england">
+              <label for="recommendation-1" class="govuk-label govuk-radios__label">Grant licence</label>
+              <span class="govuk-hint">A new licence will be granted
+              </span> 
+            </div>
+            <!-- <p>You can't recommend an applciation for approval until all sections of the assessment have been answered</p> -->
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="recommendation-2" name="recommendation" type="radio" value="england">
+              <label for="recommendation-2" class="govuk-label govuk-radios__label">Refuse licence</label>
+              <span class="govuk-hint">The applicant will be sent a refusal notice with 28 days to respond</span> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <a href="recommend-refusal" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

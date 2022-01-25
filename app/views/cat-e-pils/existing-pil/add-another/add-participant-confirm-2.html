@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">{{ data['course-name-2'] }}</span>
+      <h1 class="govuk-heading-xl">
+        Check licence details
+      </h1>
+      
+      <h2 class="govuk-heading-m">Participant details</h2>
+      
+      <p>
+        <dl class="govuk-body">
+          <!-- <dt>Course name</dt>
+            <dd>{{ data['course-name-2'] }}</dd> -->
+            <dt>First name</dt>
+            <dd>{{ data['first-name-2'] }}</dd>
+            
+            <dt>Last name</dt>
+            <dd>{{ data['surname-2'] }}</dd>
+            
+            <dt>Email address</dt>
+            <dd>{{ data['email-2'] }}</dd>
+            
+            <dt>Date of birth</dt>
+            <dd>{{ data['users-dob-day-2'] }} / {{ data['users-dob-month-2'] }} / {{ data['users-dob-year-2'] }}</dd>
+            
+            <dt>Training need</dt>
+            <dd>{{ data['personal-statement-2'] }}</dd>
+        </dl>
+      </p>
+            
+      <h2 class="govuk-heading-m">Course details</h2>
+        <p>
+          <dl class="govuk-body">            
+          <dt>Course title</dt>
+          <dd>microvascular sugery training</dd>
+          
+          <dt>Training Project licence title</dt>
+          <dd>Training in microvascular surgery</dd>
+          <dt>Training project licence number</dt>
+          <dd>PP-9874843</dd>
+          <dt>Course start date</dt>
+          <dd>18 June 2020</dd>
+          <dt>Animals to be used</dt>
+          <dd>Rats</dd>
+        </dl>
+        
+      </p>
+      <p><a class="govuk-button" href="submission-confirmation">Submit application to NTCO</a></p>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Contact information for billing
+      </h1>
+      <p>These details can be used for any contact regarding billing or finances.</p>
+      <div class="govuk-inset-text" style="border-left-color: #b1b4b6">
+      <p>All fields are optional.</p>
+    </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="name">
+            Billing contact
+          </label><br>
+          <input class="govuk-input  govuk-input--width-20" id="name" name="name" type="text">
+        </div>
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="number">
+            Contact number
+          </label><br>
+          <input class="govuk-input govuk-input--width-20" id="number" name="number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="email">
+            Contact email address
+          </label><br>
+          <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="email">
+            Billing address
+          </label><br>
+          <textarea class="govuk-textarea" id="area" name="area" rows="5" aria-describedby="area-hint"></textarea>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="email">
+            Purchase order number for 6 April 2019 to 5 April 2020
+          </label><br>
+          <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label--s" for="address">
+            Any other billing information
+          </label><br>
+          <textarea class="govuk-textarea" id="area" name="area" rows="5" aria-describedby="area-hint"></textarea>
+        </div>
+
+        <a href='reporting-establishment-final-billing#billing-info' class="govuk-button">Save</button><a href='reporting-establishment-final-billing#billing-info' class="secondary-link">Cancel</a>
+      
+
+
+    </div>
+  </div>
+
+{% endblock %}

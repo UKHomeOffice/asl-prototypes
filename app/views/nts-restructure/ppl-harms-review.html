@@ -1,0 +1,92 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Project harms</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Explain why you are using these types of animals and your choice of life stages.
+          </label>
+        </h3>
+        <p>
+          Exposure to radiation is known to increase the risk of cardiovascular disease development and there is some evidence that age at exposure may affect this risk. However, this has been shown in cultured cells and it is unknown if a whole animal would respond in the same way. There are also drugs that we have shown to reduce early stage development of atherosclerosis in cultured cells, but again it is not known if these effects will be seen in the complexity of a whole organism.
+        </p>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Typically, what will be done to an animal used in your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          For example, injections and surgical procedures. Include any relevant information about the duration of experiments and the number of procedures.
+        </div>
+        <p>
+          The animals will receive an X-ray dose (0.5-4 Gy, depending on strain) at either a young or older age, which may result in a small and transient weight reduction. This is most likely to occur in the pilot experiment where the response to radiation has not been tested previously. Any mice receiving drugs are expected to have a beneficial effect on their health. All mice will be monitored daily, those showing any adverse effects will be monitored more closely and any signs of severe pain, suffering or will be euthanised. Mice will be kept for up to 6 months following X-rays (or sham) exposure to allow atherosclerotic plaques to develop. 
+        </p>
+          
+        <p>
+          The mice will be group housed and provided with enrichment. At the end of the experiment all animals be killed by a humane method, after which, tissues (blood, aorta and other organs) will be removed for analysis to assess atherosclerosis development and ageing in the mice.
+        </p>
+
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What are the expected impacts and/or adverse effects for the animals during your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint">
+          Examples can include pain, weight loss, tumours, or abnormal behaviour. State the estimated duration of these effects on an animal.
+        </div>
+        <p>
+          The project is anticipated to have no adverse health effects. It is possible that a small number of mice may experience moderate effects as a result of exposure to ionising radiation or the effects of the genetic background of the model and associated atherosclerosis development, although this is unlikely within the timeframes proposed.
+        </p>
+        <p><a href="#">Edit</a></p>
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What are the expected severities and the proportion of animals in each category (per animal type)?
+          </label>
+        </h3>
+        <p>
+          Then we will use up to 100 mice in the first part of the project to establish the effect of age-at-exposure on radiation induced atherosclerosis.
+        </p>
+        <p>
+          If these results are clear, we expect to use up to a further 100 mice in phase two of the project to treat with drugs following radiation exposure; with the aim of preventing radiation-induced cardiovascular disease. If a significant age effect is not seen in stage one, only 80 additional mice will be required, as mice of a single age group only will be tested.
+        </p>
+        <p><a href="#">Edit</a></p>
+      </div>
+      <form action="ppl-index">
+      <button class="govuk-button">Continue</button><a href="ppl-intro-review.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

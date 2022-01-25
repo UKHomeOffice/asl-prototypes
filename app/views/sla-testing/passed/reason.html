@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Confirm reason for statutory deadline passing 
+      </h1>
+      <p>This application is 1 day after the deadline for when a decision was due. Confirm the reason so ASRU can assess if it's a justified delay.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Reason for statutory deadline passing </strong>
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Visible only to ASRU business support
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="comment" class="govuk-button">Submit recommendation</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Change</a>
+      
+    </div>
+  </div>
+
+  </style>
+
+{% endblock %}

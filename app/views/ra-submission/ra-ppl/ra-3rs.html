@@ -1,0 +1,233 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Replacement, reduction and refinement
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+      <h2 class="govuk-heading-m">Replacement</h2>
+    
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            During the project, were any new techniques introduced or considered to replace the use of animals?
+          </label>
+          <span id="holding-hint" class="govuk-hint">For example, use of genetically engineered tissue or computer modelling.</span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Outline the techniques and any insights that might help others, including things that didn’t work.
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            Are you aware of any emerging techniques with the potential to replace animals, or animal work, in the future?
+          </label>
+          <span id="holding-hint" class="govuk-hint">These could be methods that are in development but unvalidated.</span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Outline the techniques and any insights that might help others, including things that didn’t work.
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="govuk-heading-m">Reduction</h2>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            During the project, were any changes made or considered to reduce the use of animals?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Outline the changes and any learnings that might help others, including things that didn’t work.
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            If this work continued, are there any new or experimental techniques to reduce the use of animals that would be worth trialling now?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Outline the techniques and why you think they might be effective at reducing the use of animals
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="govuk-heading-m">Refinements</h2>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            During the project, were any changes made or considered to improve the animals’ welfare?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Briefly describe how you tried to improve the animals’ welfare and any insights that might help others
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            If this work continued, are there any new or experimental techniques to improve animal welfare that would be worth trialling now?
+          </label>
+          <span id="holding-hint" class="govuk-hint">For example, new technologies, earlier endpoints or changes to housing, husbandry or welfare assessment methods.</span>
+          
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1">
+              <label class="govuk-label govuk-radios__label" for="option-1">
+                Yes
+              </label> 
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="option-1-additional-1">
+                  Briefly describe how you tried to reduce the use of animals and any insights that might help others
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+              <label class="govuk-label govuk-radios__label" for="option-2">
+                No
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <p>
+        <a href="ra-3rs-review.html" class="govuk-button">Continue</a>
+        <a href="ppl-overview" class="secondary-link">List of sections</a>
+      </p>
+    </div>
+    
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

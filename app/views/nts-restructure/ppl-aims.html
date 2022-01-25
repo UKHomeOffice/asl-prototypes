@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Aims</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the aim of this project?
+        </label>
+        <span class="govuk-hint">Keep this to a short one or two sentence summary.</span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">This project aims to answer two questions:
+
+1. Does age at exposure affect development of radiation-induced cardiovascular disease?
+          
+2. Does removal of senescent cells, which seem to be main mediator of radiation’s detrimental effects on endothelium, prevent or mitigate radiation-induced cardiovascular disease?
+        </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Why is it important to undertake this work?
+        </label>
+        <span class="govuk-hint"></span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Cardiovascular disease is one of the most common cause of death in developed world. The main cause of cardiovascular disease is atherosclerosis, which is a swelling inside the wall of blood vessels (plaque) causing obstruction to blood flow that may result in heart attack or stroke.
+
+Exposure to radiation is known to increase the risk of cardiovascular disease development and there is some evidence that age at exposure may affect this risk. However, this has been shown in cultured cells and it is unknown if a whole animal would respond in the same way. There are also drugs that we have shown to reduce early stage development of atherosclerosis in cultured cells, but again it is not known if these effects will be seen in the complexity of a whole organism.
+        </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="width-20">
+          Key words that describe this project
+        </label>
+        <span class="govuk-hint">Choose up to 5. For example: cancer, stem cells, therapy.</span>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Science"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Research"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Autophagy"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Hematopoietic system"><br><br>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Animals"><br><br>
+      </div>
+      <form action="ppl-aims-review">
+        <button class="govuk-button">Continue</button><a href="ppl-index.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

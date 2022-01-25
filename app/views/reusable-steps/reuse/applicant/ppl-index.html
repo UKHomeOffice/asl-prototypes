@@ -1,0 +1,205 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>
+
+  {{data['step-reference']}}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Introductory details</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="introduction">Introductory details</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Non technical summary</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Aims</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Benefits</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Project harms</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Fate of animals</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li><li>
+          <a href="#">Replacement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Reduction</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Refinement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Applicant information</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Experience</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Funding</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Training</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>  
+      <h2 class="govuk-heading-m">Project location</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Establishments</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Places other than a licensed establishment (POLEs)</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Project plan</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Scientific background</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Action plan</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="general-principles">General principles</a>
+          {% if data["general-complete"] == 'true' %}
+            <span class="badge badge-blue float-right">complete</span>
+          {% endif %}
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Protocols</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <form action="protocols" method="post">
+            <input type="hidden" name="stepId" value="1">
+            <input type="hidden" name="stepNumber" value="1">
+            <button class="link-button">Protocols</button>
+          </form>
+          <!-- <span class="badge float-right">incomplete</span> -->
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Use of animals</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Purpose bred animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Endangered animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Animals taken from the wild</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Feral animals</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+      <h2 class="govuk-heading-m">Other considerations</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Neuromuscular blocking agents (NMBAs)</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Commercial slaughter</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+        <li>
+          <a href="#">Animals containing human material</a>
+          <!-- <span class="badge badge-blue float-right">complete</span> -->
+        </li>
+      </ul>
+     
+      <h2 class="govuk-heading-m">Submit application</h2>
+      <p>All sections must be marked as complete before you can continue and send your application to the Home Office.</p>
+
+      <a class="govuk-button">Continue</a>
+
+      <a href="#" class="secondary-link">Back to project overview</a>
+
+
+    </div>
+  </div>
+<style type="text/css">
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+</style>
+{% endblock %}

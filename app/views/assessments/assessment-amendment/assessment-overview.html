@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Assessment - Development of new biological anticancer agents
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    
+      {% include "includes/licence-header-assessment.html" %}
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Assessment sections</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="0-summary">Summary of amendment</a>
+          {% if data['summary-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          {% endif %}
+        </li>
+        <li>
+          <a href="1-intro">Introductory details</a>
+        </li>
+        <li>
+          <a href="7-nts"> Non-technical summary: general</a>
+          {% if data['nts-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          {% endif %}
+        </li>
+        <li>
+          <a href="7-nts"> Non-technical summary: 3Rs</a>
+          {% if data['3rs-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          {% endif %}
+        </li>
+        <li>
+          <a href="1-suitability">Applicant information</a>
+          <!-- <span class="badge float-right">1 Condition</span> -->
+        </li>
+        <li>
+          <a href="2-suitability-places">Project location</a>
+          <!-- {% if data['places-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          <span class="badge badge-condition float-right">1 Condition</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          <span class="badge changed float-right">1 Condition changed</span>
+          {% endif %} -->
+        </li>
+        <li>
+          <a href="3-programme">Project plan</a>
+        </li>
+        <li>
+          <a href="5-models">Protocols</a>
+          {% if data['protocols-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          <span class="badge badge-condition float-right">4 authorisations</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          <!-- <span class="badge float-right">1 Conditions</span> -->
+          <span class="badge changed float-right">1 Authorisation changed</span>
+          {% endif %}
+        </li>
+        <li>
+          <a href="4-types">Use of animals</a>
+        </li>
+        <li>
+          <a href="5a-end-of">Other considerations</a>
+          <!-- <span class="badge float-right">2 Conditions</span> -->
+        </li> 
+        <li>
+          <a href="11-reporting"> Other conditions and authorisations</a>  
+           <!-- <span class="badge float-right">1 Condition</span> -->
+        </li> 
+        <li>
+          <a href="12-referrals.html">Referrals</a>
+        </li>
+        <li>
+          <a href="10-hba">Harm-benefit analysis</a>
+          {% if data['hba-complete'] == 'true' %}
+          <span class="badge blue float-right">Complete</span>
+          {% else %}
+          <span class="badge float-right">To review</span>
+          {% endif %}
+        </li>
+      </ul>
+
+      <a class="govuk-button" onclick="window.close();">Close assessment</a>
+
+    </div>
+  </div>
+<style type="text/css">
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  
+  .badge {
+    margin-left: 5px;
+  }
+</style>
+{% endblock %}

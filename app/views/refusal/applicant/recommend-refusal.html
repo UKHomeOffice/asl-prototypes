@@ -1,0 +1,153 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">PPL application</span>
+      <h1 class="govuk-heading-xl">
+        Notify of the intent to refuse
+      </h1>
+      
+      <h2 class="govuk-heading-m">Review reasons provided by the inspector</h2>
+      <p>You need to review the reasons provided to the inspector and ensure they are publishable.</p>
+      <p>These reasons will be provided to the applicant in a section 12 notice and on the returned task</p>
+      <form action="recommend-comment" method="post">
+        <h3 class="govuk-heading-s">PPL standards not met</h3>  
+        <p>
+          {% if data["refusal-list"].length > 1 %}
+            {{data["refusal-list"]}}
+          {% else %}
+            PPLA3.2.2 Non-endangered NHPs 
+          {% endif %}
+        </p>
+        <p><a href="#">Edit</a></p>
+        <h3 class="govuk-heading-s">Summary of the reason ofdafadfa refusal</h3>  
+        <p>
+          {% if data["refusal-summary"].length > 1 %}
+            {{data["refusal-summary"]}}
+          {% else %}
+            The use of NHPs is not justified and the applicant refuses to use an alternative
+          {% endif %}
+        </p>
+        <p><a href="#">Edit</a></p>
+        <!-- <div class="govuk-form-group">
+            <label class="govuk-label--s" for="refusal-summary">
+              List the PPL standards not met
+            </label>
+            <span class="govuk-hint">This will be used to...</span>
+            <textarea class="govuk-textarea" id="refusal-summary" name="refusal-summary" rows="10"></textarea>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label--s" for="refusal-summary">
+              Summary rationale for refusal for the 'Notice of Intent to Refuse'
+            </label>
+            <span class="govuk-hint">This will be used to...</span>
+            <textarea class="govuk-textarea" id="refusal-summary" name="refusal-summary" rows="10"></textarea>
+          </div> -->
+
+          <h2 class="govuk-heading-m">Submit refusal</h2>
+          <p>If the reasons are complete and correct, submitting the refusal will return the task and send the PEL holder a section 12 letter.</p>
+          <p>
+            <button class="govuk-button">Continue</button>
+            <a class="secondary-link" href="#">Cancel</a>
+          </p>
+    
+      </form>
+        
+
+
+    
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

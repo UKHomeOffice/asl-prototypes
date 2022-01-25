@@ -1,0 +1,53 @@
+
+
+<section id="{{stepIdAnchor}}" class="step completed">
+  <h3 class="govuk-heading-s">
+    Step: {{stepsReference}}
+    <span class="font-light">
+      {% if stepsOptional == 'Yes' %}
+        (Optional)
+      {% else %}
+        (Mandatory)
+      {% endif %}
+    </span>
+    <span class="light smaller"> 
+    </span>
+    <span class="float-right font-light"><a href="#">Hide details</a></p></span>
+  </h3>
+  <div class="review">
+    <h3 class="govuk-heading-s">Describe the procedures that will be carried out during this step.</h3>
+    <p class="govuk-hint">Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia. When describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.</p>
+    <p>{{stepsDetail}}</p>
+  </div>
+  {% if stepsExpected === "Yes" %}
+  <div class="review">
+    <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+    <p class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</p>
+    <p>{{stepsExpected}}</p>
+  </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">How will you monitor for, control, and limit any of these adverse effects?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{stepsLimits}}</p>
+    </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">What are the likely adverse effects of this step?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{likelyStepsEffects}}</p>
+    </div>
+    <div class="review">
+      <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
+      <p class="govuk-hint"></p>
+      <p>{{stepsEndpoints}}</p>
+    </div>
+  {% else %}
+    <div class="review">
+      <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
+      <p>No</p>
+    </div>
+  {% endif %}
+  <div class="review">
+    <p><a href="#">Edit step</a>&ensp;|&ensp;<a href="#">Duplicate</a>&ensp;|&ensp;<a href="#">Delete</a></p></p>
+  </div>
+
+</section>

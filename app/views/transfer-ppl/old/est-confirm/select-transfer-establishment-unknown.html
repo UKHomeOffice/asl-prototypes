@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL amendment</span>
+      <h1 class="govuk-heading-xl">
+        Transfer licence
+      </h1>
+      
+      <p>Please provide the name of the establishment you want to transfer this PPL to. ASRU will check with that establishment and confirm the transfer.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="event-name">
+          Which establishment do you want to transfer this PPL to?
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+      
+      <a href="confirm-transfer-establishment" class="govuk-button govuk-button">Continue</a>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

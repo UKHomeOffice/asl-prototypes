@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-panel green-bg">
+    <div class="govuk-panel__body-s">Please review your answers for:</div>
+    <h1 class="govuk-panel__title">Places other than a licensed establishment (POLEs)</h1>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+    {% if data['poles'].length > 1 %}
+      <h2 class="govuk-heading-s">Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?</h2>
+      {% if data['poles'] != 'No' %}
+        <p><span class="badge changed govuk-body">Changed</span></p>
+      {% endif %}
+      <p>{{data["poles"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-why'].length > 1 %}
+      <h2 class="govuk-heading-s">Why can't this part of your project take place at a licensed establishment?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-why"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-1'].length > 1 %}
+      <h2 class="govuk-heading-s">How will you ensure that procedures taking place at these POLEs can be inspected?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-1"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-2'].length > 1 %}
+      <h2 class="govuk-heading-s">How will work at each POLE be done in the most environmentally sensitive manner?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-2"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-3'].length > 1 %}
+      <h2 class="govuk-heading-s">Will any animals be moved between a POLE and a licensed establishment during this project?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-3"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-4'].length > 1 %}
+      <h2 class="govuk-heading-s">Why do you need to move animals between a POLE and a licensed establishment?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-4"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-5'].length > 1 %}
+      <h2 class="govuk-heading-s">What arrangements have been made to ensure animals can be safely transported and that any permits necessary to transport the species under study are/will be held?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-5"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-6'].length > 1 %}
+      <h2 class="govuk-heading-s">How might the movement of animals between a POLE and a licensed establishment affect the scientific delivery of this project?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-6"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-7'].length > 1 %}
+      <h2 class="govuk-heading-s">How will you ensure that animals are in a suitable condition to be transported?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-7"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-8'].length > 1 %}
+      <h2 class="govuk-heading-s">Who will be responsible for checking the animals before they are transported?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-8"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-9'].length > 1 %}
+      <h2 class="govuk-heading-s">How will you ensure that this person is competent to make the appropriate checks?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-9"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+    {% if data['poles-question-10'].length > 1 %}
+      <h2 class="govuk-heading-s">What arrangements will be made to assure an animal's welfare during transport, particularly if they are being moved after the start of regulated procedures?</h2>
+      <p><span class="badge changed govuk-body">Changed</span></p>
+      <p>{{data["poles-question-10"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% endif %}
+  
+
+
+
+
+    <div class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+        <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+        <form action='ppl-index' method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="poles-complete" name="poles-complete" type="checkbox" value="true">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="poles-complete">
+                    This section is complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+
+          <button class="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

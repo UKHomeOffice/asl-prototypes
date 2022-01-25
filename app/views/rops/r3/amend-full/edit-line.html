@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details: purposes</h1>
+      <form action="edit-complete" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Did any of the procedures in 2021 involve the creation of a new genetic line? 
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-rodent-yes" name="setup-rodent" type="radio" value="true" data-aria-controls="conditional-option-1" checked>
+                <label for="setup-rodent-yes" class="govuk-label govuk-radios__label">Yes, new genetic lines were created</label>
+              </div>
+              <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Details of rodenticide trials undertaken
+                  </label>
+                  <span class="govuk-hint"></span>
+                  <textarea name="setup-rodent-details" class="govuk-textarea" rows="5"></textarea>
+                </fieldset>
+              </div> -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-rodent-no" name="setup-rodent" type="radio" value="false" data-aria-controls="conditional-option-2">
+                <label for="setup-rodent-no" class="govuk-label govuk-radios__label">No, new genetic lines were not created
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL transfer</span>
+      <h1 class="govuk-heading-xl">
+        Transfer licence
+      </h1>
+      
+      <p>Please provide the name of the establishment you want to transfer this PPL to. Your PEL holder or their delegate will need to approve the transfer.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+         
+          <label class="govuk-label--s" for="">
+            Which establishment do you want to transfer this PPL to?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <input class="govuk-input" id="destination-establishment" name="destination-establishment" type="text">
+
+          
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+         
+          <label class="govuk-label--s" for="">
+            Why are you requesting this transfer?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          
+        </fieldset>
+      </div>
+ 
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>The request will be sent to the establishment to confirm where they will also be able to view this licence.
+        </strong>
+      </div>
+      
+      <a href="confirm-transfer-establishment" class="govuk-button govuk-button">Continue</a>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

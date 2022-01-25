@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/status-banner-draft.html" %}
+    {% include "includes/licence-header-ppl.html" %}
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body-s">Please review your answers for:</div>
+        <h1 class="govuk-panel__title">Appendix</h1>
+      </div>
+          
+      <h3 class="govuk-heading-m">Appendix</h3>
+      
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Appendix A</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius nulla sint. Ullam nisi in tempore nulla a atque, nam neque voluptates, distinctio obcaecati aliquam aliquid aperiam alias, odit quod.</p>
+        </div>
+      </div>
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Appendix B</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius nulla sint. Ullam nisi in tempore nulla a atque, nam neque voluptates, distinctio obcaecati aliquam aliquid aperiam alias, odit quod.</p>
+        </div>
+      </div>
+
+      <div class="declaration-panel-grey">
+        <h3 class="govuk-heading-m">Mark this section as complete</h3>
+        <p>You can still edit this section later, but you will be unable make a recommendation for this application until all sections are marked as complete.</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="complete-9-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="complete-9" name="complete-9" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="complete-9">
+                  Mark this section as complete
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>  
+      </div>
+      <br>
+      <p>
+      	<a href="ppl-index-done" class="govuk-button">Continue</a><a href='ppl-index' class="secondary-link">List of sections</a>
+      </p>
+    </div>
+  </div>
+<style type="text/css">
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+  .module-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+  }
+  
+  .module-evidence{
+    display: inline-block;
+    width: 70%;
+  }
+  dl{
+    padding-left: 30px;     
+    margin-block-start: 0px;
+  }
+  dl .govuk-body{
+    margin-bottom: 0px;
+  }
+  dt {
+    width: 25%;
+  }
+  dd {
+    width: 65%;
+  }
+</style>
+{% endblock %}

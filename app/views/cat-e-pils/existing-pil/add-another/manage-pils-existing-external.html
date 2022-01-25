@@ -1,0 +1,122 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Microvascular surgery training</span>
+    <h1 class="govuk-heading-xl">
+      Manage course
+    </h1>
+    <p>
+      <dl class="govuk-body">
+        <dt>Training Project licence title</dt>
+        <dd>Training in microvascular surgery</dd>
+        <dt>Training project licence number</dt>
+        <dd>PP-9874843</dd>
+        <dt>Course start date</dt>
+        <dd>18 June 2020</dd>
+        <dt>Animals to be used</dt>
+        <dd>Rats</dd>
+      </dd>
+      </dl>
+    </p>
+  </div>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">   
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Course participants</h2>
+      
+      <p><a class="govuk-button govuk-button--secondary" href="add-participant-2.html">Apply for a licence</a></p>
+      
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Task status</th>
+            <th scope="col" class="govuk-table__header">Details</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="#">Mary Jones</a> 
+              <br>
+              Existing licence holder
+            </td>
+            <td class="govuk-table__cell">
+              <span class="badge">Awaiting endorsement</span>
+              <br>
+              External establishment
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-task-review-external-ntco">View task</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">John Smith</a></td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting endorsement</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-task-review-admin">View task</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Maria Bernal</a></td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting endorsement</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-task-review-admin">View task</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Angela Jones</a></td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting endorsement</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-task-review-admin">View task</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#">Janet Andrews</a></td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting review</span></td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="pil-task-review-admin">View task</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+
+  <style>
+    dt {
+      font-weight: bold;
+    }
+  </style>
+{% endblock %}

@@ -1,0 +1,167 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Area amendment</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Establishment details</a>
+        <a href="#procedures" class="">Amendment requested</a>
+        <a href="#species" class="">Comments</a>
+        <a href="#training" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">RECALLED</span>
+          <span class="date">17 July 2019</span>
+        </p>
+      <p><strong>Recalled by:</strong> <a href="#">Bruce Banner</a></p>
+
+      <p>I made an error on selecting the NACWO, I'll update it now.</p>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Previous activity
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="padding-left: 0px; border-left: 0px">
+          <br>
+          <p>
+            <span class="badge">AWAITING ENDORSEMENT</span>
+            <span class="date">17 July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong>Bruce Banner</p>
+        </div>
+      </details>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Applicant</h2>
+
+      <p>
+        <dl class="govuk-body">
+          <dt>Establishment</dt>
+          <dd><strong>University of Croydon</strong></dd>
+          <dt>Licence number</dt>
+          <dd><strong>78847475</strong></dd>
+          <dt>Establishment licence holder</dt>
+          <dd><strong>Bruce Banner</strong></dd>
+        </dl>
+      </p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Amendment requested</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col"></th>
+            <th class="govuk-table__header" scope="col">Current</th>
+            <th class="govuk-table__header" scope="col">Proposed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Site</th>
+            <td class="govuk-table__cell">2 Marsham Street</td>
+            <td class="govuk-table__cell"><span class=" highlight">3 Marsham Street</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Area</th>
+            <td class="govuk-table__cell">6th floor</td>
+            <td class="govuk-table__cell">6th floor</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Name</th>
+            <td class="govuk-table__cell">Room 23</td>
+            <td class="govuk-table__cell">Room 23</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Suitability</th>
+            <td class="govuk-table__cell">AQ, CAT</td>
+            <td class="govuk-table__cell">AQ, CAT</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Holding code</th>
+            <td class="govuk-table__cell">LTH, NOH</td>
+            <td class="govuk-table__cell">LTH, NOH</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">NACWO</th>
+            <td class="govuk-table__cell">Steph Jones</td>
+            <td class="govuk-table__cell"><span class=" highlight">Megan Alberts</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Why is this change being requested?</h2>
+      <p>To update the building names and NACWO for the Marsham St buildings</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <form action="edit-return-action" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h2 class="govuk-heading-m">
+                What do you want to do?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="what-to-do-1" name="what-to-do" type="radio" value="edit">
+                <label class="govuk-label--s govuk-radios__label" for="what-to-do-1">
+                  Edit this amendment and resubmit with comments
+                </label>
+                <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">To make changes to the application you previously submitted and respond to any comments.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="what-to-do-2" name="what-to-do" type="radio" value="respond">
+                <label class="govuk-label--s govuk-radios__label" for="what-to-do-2">
+                  Resubmit with comments
+                </label>
+                <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">To respond to or send the task reviewer some comments.</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="what-to-do-3" name="what-to-do" type="radio" value="delete">
+                <label class="govuk-label--s govuk-radios__label" for="what-to-do-3">
+                  Withdraw application
+                </label>
+                <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">This application will be withdrawn you'll need to reapply to make any future changes.</span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,243 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">PPL application</span>
+    <h1 class="govuk-heading-xl">
+      Review application
+    </h1>
+    <h3 class="govuk-heading-s">Development of new biological anticancer agents</h3>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+      <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+      <a href="#applicant.application" class="">PPL holder</a>
+      <a href="#procedures" class="">Latest submission</a>
+      <a href="#procedures" class="">What do you want to do?</a>
+    </nav>&nbsp;
+  </div>
+  
+
+  
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Status</h2>
+    <p>
+      <span class="badge">AWAITING REFUSAL</span>
+      <span class='float-right'><strong>Currently with:</strong> Inspector</span>
+    </p>
+    </details>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        The Home Office have decided to refuse this application. You have until [DATE 28 DAYS FROM SUBMISSION] to respond.
+      </strong>
+    </div>
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Latest activity</h2>
+    <p>
+      <strong>Refused by:</strong> <a href="#">Inspector Morse</a>
+      <span class='float-right'><span class="date-today"></span></span>
+    </p>
+    <!-- <p><strong>Standards not met:</strong> </p>      
+    <div class="govuk-inset-text">
+      {{data["refusal-list"]}}
+    </div>   -->
+
+    <p><strong>Refusal notice:</strong></p>
+    <div class="govuk-inset-text">
+      <p><span class='date-today'></span></p>
+        <p>Dear [APPLICANTS NAME],</p>
+        <p><strong>NOTICE OF INTENTION TO REFUSE A LICENCE UNDER THE ANIMALS (SCIENTIFIC PROCEDURES) ACT 1986</strong></p>
+        <p>Application title: [PROJECT TITLE]</p>
+        <p>On behalf of the Secretary of State, I am providing notice of intent to refuse your application as required by <a href="#">Section 12(1)</a> of the Act following evaluation under <a href="#">section 5B</a> of the Act by an inspector appointed under <a href="#">Section 18(1)</a> and in accordance with their duty under <a href="#">Section 18(2[a])</a> of the Act.</p>
+        <p>It is proposed to refuse your licence application for the following reasons below:</p>
+        <div class="govuk-inset-text">
+          <p>
+            {% if data["refusal-summary"].length > 1 %}
+                {{data["refusal-summary"]}}
+              {% else %}
+                The use of NHPs is not justified and the applicant refuses to use an alternative
+              {% endif %}
+          </p>
+        </div>
+        <p>Under <a href="#">Section 12(3)</a> of the Act, you have the right to make representations in writing or in person against the Secretary of State’s proposal to refuse your application for a licence. Should you wish to make representations to a person appointed by the Secretary of State, you must respond to this notice by [DATE 28 DAYS FROM REFUSAL SUBMISSION]. You may give notice of your intention to make representations by emailing <a href="mailto:aspa.london@homeoffice.gov.uk">aspa.london@homeoffice.gov.uk</a>.</p>
+        <p>Please refer to <a href="https://www.gov.uk/guidance/guidance-on-the-operation-of-the-animals-scientific-procedures-act-1986">Appendix E of the Guidance on the Operation of the Act</a> for details on the process of making representations.</p>
+        <p>Yours sincerely, </p>
+        <p>[INSPECTORS NAME]</p> 
+      </div>  
+
+    <p><strong>Inspector Morse remarked:</strong></p>      
+    <div class="govuk-inset-text">
+      {% if data["inspector-comment"].length > 1 %}
+        {{data["inspector-comment"]}}
+      {% else %}
+        I am refusing this application for the reasons stated above
+      {% endif %}
+    </div>  
+    <p></p>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Show previous activity
+        </span>
+      </summary>
+      <div class="govuk-details__text"> 
+        
+        <p>
+          <strong>Endorsed on behalf of the PEL holder by:</strong> <a href="#">Bruce Banner</a>
+          <span class='float-right'><span class="date-1-week-ago"></span></span>
+        </p>
+    <p>{{data["pelhb-comment"]}}</p>
+      </div>
+    </details>
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+   
+    <h2 class="govuk-heading-m">PPL holder</h2>
+    <p><a href="#">Bruce Banner</a></p>
+    
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Latest submission</h2>
+    <ul class="govuk-list">
+      <li>
+        <strong>PEL holder endorsement:</strong> Yes
+      </li>
+      <li>
+        <strong>AWERB review:</strong> Yes
+      </li>
+      <li>
+        <strong>AWERB review date:</strong>
+        <br>
+        <span class="date-8-weeks-ago"></span>
+      </li>
+      <li>
+       <strong>Inspector confirmed ready:</strong> Yes
+      </li>
+    </ul>
+    <p>This is the application that has been submitted for approval.</p>
+    <a href="application/ppl-index" class="govuk-button govuk-button--secondary">View latest submission</a>
+    
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      <span class="govuk-label"><strong>Respond to the Home Office</strong></span>
+      <span class="govuk-hint">If you want to appeal the Home Office’s decision you must inform your SPOC or email <a href="mailto:aspa.london@homeoffice.gov.uk">aspa.london@homeoffice.gov.uk</a> by <span class="date-28-days"></span>.</span>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Edit and resubmit the application</label>
+              <span class="govuk-hint">Make changes to the application you previously submitted and respond to any comments.</span> 
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live" class="govuk-label govuk-radios__label">Discard application</label>
+              <span class="govuk-hint">You will need to create a new application to apply for this type of licence in the future.</span> 
+            </div>
+            
+          </div>
+        </fieldset>
+      </div>
+
+      <a href="recommend-refusal" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

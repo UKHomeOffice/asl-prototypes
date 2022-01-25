@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What are the certificate details?
+      </h1>
+
+      <form action="training-cert-modules" method="post">
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="certificate-no">
+            Certificate number
+          </label>
+          <input class="govuk-input" id="certificate-no" name="certificate-no" type="text">
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="cert-body-hint">
+            <label class="govuk-label govuk-label--s" for="example-2">
+              Accrediting body
+            </label>
+            <span id="cert-body-hint" class="govuk-hint"></span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cert-body" name="cert-body" type="radio" value="Royal Society of Biology">
+                <label class="govuk-label govuk-radios__label" for="cert-body">
+                  Royal Society of Biology
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cert-body-2" name="cert-body" type="radio" value="Universities Group">
+                <label class="govuk-label govuk-radios__label" for="cert-body-2">
+                  Universities Group
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cert-body-3" name="cert-body" type="radio" value="Scottish Accreditation Board">
+                <label class="govuk-label govuk-radios__label" for="cert-body-3">
+                  Scottish Accreditation Board
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cert-body-4" name="cert-body" type="radio" value="Royal Veterinary College">
+                <label class="govuk-label govuk-radios__label" for="cert-body-4">
+                  Royal Veterinary College
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cert-body-5" name="cert-body" type="radio" value="Other">
+                <label class="govuk-label govuk-radios__label" for="cert-body-5">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="cert-issued-hint">
+            <label class="govuk-label govuk-label--s" for="example-2">
+              Date awarded
+            </label>
+            <span id="cert-issued-hint" class="govuk-hint">
+              For example, 12 11 2007
+            </span>
+            <div class="govuk-date-input" id="cert-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="cert-issued-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cert-issued-day" name="cert-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="cert-issued-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cert-issued-month" name="cert-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="cert-issued-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="cert-issued-year" name="cert-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>        
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">Cancel</a>
+      </form> 
+
+    </div>
+  </div>
+
+{% endblock %}

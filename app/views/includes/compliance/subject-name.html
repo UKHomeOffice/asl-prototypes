@@ -1,0 +1,14 @@
+<div class="declaration-panel-grey">
+  <form action="add-subject-1-details#subject-{{user}}" method="post">
+    <h2 id='subject-{{user}}' class="govuk-heading-m">Enforcement subject {{user}}</h2>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--s" for="subject-name-{{user}}">
+        Select person
+      </label>
+      {% include "includes/compliance/typeahead-people.html" %}
+    </div>
+    <input type="hidden" name="user-{{user}}-added" value='true'>
+    <input type="hidden" name="user-{{user}}-status" value='edit'>
+    <button class="govuk-button">Add person</button>
+  </form>
+</div>

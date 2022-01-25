@@ -1,0 +1,189 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Amend approved area
+      </h1>
+      <div class="govuk-inset-text">
+      <p>Any changes to sutability or holding codes will need to be assesed.</p>
+     </div>
+
+      <form action="comment" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="sop-site">
+          Site
+        </label>
+        <span id="holding-hint" class="govuk-hint"></span>
+        <input class="govuk-input" id="sop-site" name="sop-site" type="text" spellcheck="false" value="2 Marsham Street" >
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="sop-area">
+          Area
+        </label>
+        <span id="holding-hint" class="govuk-hint">For example, a building, a floor, or a field</span>
+
+        <input class="govuk-input" id="sop-area" name="sop-area" type="text" value="6th floor">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="sop-name">
+          Name
+        </label>
+        <span id="holding-hint" class="govuk-hint">Please provide a unique identifier</span>
+
+        <input class="govuk-input" id="sop-name" name="sop-name" type="text"  value=" Room 23">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="">
+          Suitability
+        </label>
+        <span id="holding-hint" class="govuk-hint"></span>
+
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-sa" name="suitability" value="SA">
+              <label for="suitability-sa" class="govuk-label govuk-checkboxes__label">Small animals (SA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-la" name="suitability" value="LA">
+              <label for="suitability-la" class="govuk-label govuk-checkboxes__label">Large animals (LA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-aq" name="suitability" value="AQ" checked>
+              <label for="suitability-aq" class="govuk-label govuk-checkboxes__label">Aquatic species (AQ)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-av" name="suitability" value="AV">
+              <label for="suitability-av" class="govuk-label govuk-checkboxes__label">Birds (AV)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-dog" name="suitability" value="DOG">
+              <label for="suitability-dog" class="govuk-label govuk-checkboxes__label">Dogs (DOG)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-cat" name="suitability" value="CAT" checked>
+              <label for="suitability-cat" class="govuk-label govuk-checkboxes__label">Cats (CAT)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-equ" name="suitability" value="EQU">
+              <label for="suitability-equ" class="govuk-label govuk-checkboxes__label">Equidae (EQU)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="suitability-nhp" name="suitability" value="NHP">
+              <label for="suitability-nhp" class="govuk-label govuk-checkboxes__label">Non-human primates (NHP)</label>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset id="holding" class="govuk-fieldset">
+          <label class="govuk-label--s" for="sop-name">
+            Holding code
+          </label>
+                  <span id="holding-hint" class="govuk-hint"></span>
+
+          <legend class="govuk-fieldset__legend">
+          </legend>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="holding-sth" name="holding" value="STH">
+              <label for="holding-sth" class="govuk-label govuk-checkboxes__label">Short term holding (STH)</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="holding-lth" name="holding" value="LTH" checked>
+              <label for="holding-lth" class="govuk-label govuk-checkboxes__label">Long term holding (LTH)</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="holding-noh" name="holding" value="NOH" checked>
+              <label for="holding-noh" class="govuk-label govuk-checkboxes__label">Not for overnight holding (NOH)</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="holding-sep" name="holding" value="SEP">
+              <label for="holding-sep" class="govuk-label govuk-checkboxes__label">Sterile experimental procedures (SEP)</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input type="checkbox" class="govuk-checkboxes__input" id="holding-nsep" name="holding" value="NSEP">
+              <label for="holding-nsep" class="govuk-label govuk-checkboxes__label">Non-sterile experimental procedures (NSEP)</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="sop-name">
+          NACWO
+        </label>
+        <span id="holding-hint" class="govuk-hint"></span>
+
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="nacwo" name="nacwo">
+            <option selected="" value="">Megan Alberts</option>
+            <option value="d24d5123">John Sharp</option>
+            <option value="ee295338">Megan Alberts</option>
+            <option value="5899f8ac">Ian Ayers</option>
+            <option value="6108c582">Brian Proudfoot</option>
+            <option value="38224226">Benjamin Patton</option>
+            <option value="77c6ec56">Ben Stevens</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">      
+        <h3 class="govuk-heading-s">Current restrictions</h3>
+        <div class="govuk-inset-text" style="border-left: 10px solid #8F23B3;  margin-top: 15px;">
+          MRM scanner only to be used under supervision of Dr Thompson
+        </div>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+         
+          <label class="govuk-label--s" for="">
+            Do the restrictions for this area need to be changed?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+          
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                Yes
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+              <label class="govuk-label govuk-radios__label" for="changed-name-2" >
+                No
+              </label> </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-heading-s" for="comments">Why are you amending this approved area?</label><span id="comments-hint" class="govuk-hint">Comments can be seen by establishment users, as well as inspectors and Home Office team members.</span>
+        <textarea class="govuk-textarea" id="comments" name="comments"
+          rows="4">To update the building names and NACWO for the Marsham St buildings</textarea>
+      </div>
+
+      <button class="govuk-button">Submit</button>
+      
+
+      </form>
+    </div>
+  </div>
+
+<style type="text/css">
+  .restriction-icon {
+    color: #8F23B3;
+  }
+</style>
+
+{% endblock %}

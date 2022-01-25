@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Add an establishment
+      </h1>
+      <p>
+        Allow colleagues at other establishments, those with
+        with secondary availability for instance, view this project.
+      </p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Choose establishment
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Woking College of Science
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Slough University
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+             Why is the establishment I need not listed?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>If the establishment is not listed, ask the Home Office Liaison Contact (HOLC) of that establishment to send you an invitation. Once you accept the invitation, you can request your licence to be transferred.</p>
+          </div>
+        </details>
+      <a href='added' class="govuk-button">Add establishment</a> <a href="#" class="secondary-link">Cancel</a>
+    </div>
+  </div>
+
+  <style type="text/css">
+    dt {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dd {
+      width: 60%;
+      padding-bottom: 30px;
+      
+    }
+  </style>
+
+{% endblock %}

@@ -1,0 +1,763 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="#" class="back-to-sections"><li>List of sections</li></a>
+        <a href="#"><li>Project introduction</li></a>
+        <a href="#"><li>Applicant information</li></a>
+        <a href="#"><li>Project location</li></a>
+        <a href="#"><li>Project plan</li></a>
+        <a href="#"><li class="selected">Protocols</li></a>
+        <a href="#"><li class="selected-child">Protocols</li></a>
+        <a href="#"><li class="selected-child">Project harms</li></a>
+        <a href="#"><li class="selected-child">Fate of animals</li></a>
+        <a href="#"><li>Use of animals</li></a>
+        <a href="#"><li>Other considerations</li></a>
+        <a href="#"><li>The 3Rs</li></a>
+        <a href="#"><li>Non-technical summary</li></a>
+        <a href="#"><li>Additional conditions</li></a>
+        <a href="#"><li>Authorisations</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      
+
+      <h1 class="govuk-heading-l">Protocols</h1>
+      <p><a  href="#" onclick="window.open('separate-2-steps-simple-selected','name','width=1200,height=800')"  >View summary table</a></p>
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Anaesthesia, surgery, substance administration and withdrawal of fluid constraints relate to each of these protocols.</p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+        </div>
+      </details>
+      <div id="first-protocol" class="protocol-container"> 
+        <div class="protocol-header-complete" id="option1">
+          <h3 class="govuk-heading-m">
+            <label for="option1" class="row-toggle protocol-title"><span class="row-toggle-copy">1. Breeding and maintenance of genetically altered animals</span></label>
+            <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+          </h3>
+          <p><strong>Severity category: Mild</strong></p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">2000</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">2000</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="declaration-panel-grey">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="yes" checked >
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     <strong>Mark this protocol as complete</strong>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+              <button class="govuk-button">Continue</button>
+          </div>  
+          <br>
+           <p class="protocol-controls">
+            Reorder: 
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
+            or 
+            <a href="#" onclick="MoveProtocolDown();">Down</a>
+            <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+          </p>
+        </div>
+      </div>
+
+
+      <div id="secondProtocol" class="protocol-container"  id="option2">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option2" class="row-toggle protocol-title"><span class="row-toggle-copy">2. Maintenance of parasitic nematodes</span></label>
+            <input type="checkbox" name="option2" id="option2" data-toggle="toggle">
+          </h3>
+          <p><strong>Severity category: Mild</strong></p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">200</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">200</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="declaration-panel-grey">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="yesked >
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     <strong>Mark this protocol as complete</strong>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+              <button class="govuk-button">Continue</button>
+          </div>  
+          <br>
+           <p class="protocol-controls">
+            Reorder: 
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
+            or 
+            <a href="#" onclick="MoveProtocolDown();">Down</a>
+            <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+          </p>
+        </div>
+      </div>
+      
+
+      <div class="protocol-container"  id="option3">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option3" class="row-toggle"><span class="row-toggle-copy">3. Assessment of anthelminthic activity</span></label>
+            <input type="checkbox" name="option3" id="option3" data-toggle="toggle">
+          </h3>
+          
+          <p><strong>Severity category: Mild</strong></p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+
+      <div class="protocol-container"  id="option4">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option4" class="row-toggle"><span class="row-toggle-copy">4. Infection with gastrointestinal helminths</span></label>
+            <input type="checkbox" name="option4" id="option4" data-toggle="toggle">
+          </h3>
+          
+          <p><strong>Severity category: Mild</strong></p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="protocol-container"  id="option5">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option5" class="row-toggle"><span class="row-toggle-copy">5. Induction of inflammatory arthritis</span></label>
+            <input type="checkbox" name="option5" id="option5" data-toggle="toggle">
+          </h3>
+          
+          <p><strong>Severity category: Mild</strong></p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="protocol-container"  id="option6">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option6" class="row-toggle"><span class="row-toggle-copy">6. Induction of diabetes</span></label>
+            <input type="checkbox" name="option6" id="option6" data-toggle="toggle">
+          </h3>
+          
+          <p><strong>Severity category: Mild</strong></p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="protocol-container"  id="option7">
+        <div class="protocol-header-complete">
+          <h3 class="govuk-heading-m">
+            <label for="option7" class="row-toggle"><span class="row-toggle-copy">7. Induction o cardiovascular disease</span></label>
+            <input type="checkbox" name="option7" id="option7" data-toggle="toggle">
+          </h3>
+          
+          <p><strong>Severity category: Mild</strong></p>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- <div class="protocol-container">  id="option5" 
+        <div class="protocol-header-in-progress">
+          <h3 class="govuk-heading-m ">
+            <label for="option5" class="row-toggle"><span class="row-toggle-copy">The fifth protocol</span></label>
+            <input type="checkbox" name="option5" id="option5" data-toggle="toggle">
+          </h3>
+          <p><strong>Severity category: Mild</strong></p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">100</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">embryo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+
+        <div class="protocol-content hide">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol details</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animals used in this protocol</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Genetically altered animals (GAA)</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Steps</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Animal experience</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Experimental design</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Protocol justification</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell protocol-section-title"><a href="#">Fate of animals</a></td>
+                <td class="govuk-table__cell accordian-toggle">+</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="declaration-panel-grey">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="yes">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                     <strong>Mark this protocol as complete</strong>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+              <button class="govuk-button">Continue</button>
+          </div>  
+          <br>
+           <p class="protocol-controls">
+            Reorder: 
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
+            or 
+            <a href="#" onclick="MoveProtocolDown();">Down</a>
+            <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+          </p>
+        </div>
+      </div> -->
+
+      <!-- <div class="protocol-container">        
+        <div class="protocol-header-in-progress">
+          <h3 class="govuk-heading-m">
+            Protocol 5
+          </h3>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="protocol-name">
+              Title
+            </label>
+            <input class="govuk-input" id="protocol-name" name="protocol-name" type="text">
+          </div>
+          <button class="govuk-button">Continue</button>
+        </div>  
+      </div> -->
+
+
+      <p>
+        <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+      </p>
+      <p>
+        <button class="govuk-button">Continue</button>
+        <span class="secondary-link"><a href="#">List of sections</a></span>
+      </p>
+
+    </div>
+  </div>
+
+
+
+<style type="text/css">
+
+
+
+</style>
+{% endblock %}

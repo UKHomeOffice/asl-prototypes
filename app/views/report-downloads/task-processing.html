@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Tasks processed by duration and decision
+      </h1>
+      
+      <p>Download a monthly report broken down by task type including:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>The number of task processing targets exceeded</li>
+        <li>The number of approved, returned or outstanding tasks</li>
+        <li>The median time taken to process tasks from submission</li>
+        <li>The median time taken to process tasks from assignment</li>
+      </ul>
+      <p>New reports become available on the 1st of each month.</p>
+
+      <h2 class="govuk-heading-m">Download reports</h2>
+      <ul class="govuk-list">
+        <li><a href="">Tasks processed by duration and decision for November 2021 (ZIP)</a></li>
+        <li><a href="">Tasks processed by duration and decision for October 2021 (ZIP)</a></li>
+        <li><a href="">Tasks processed by duration and decision for September 2021 (ZIP)</a></li>
+      </ul>
+
+      <p><a href="performance-metrics.">Back to performance metrics</a></p>
+    </div>
+  </div>
+
+{% endblock %}

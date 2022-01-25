@@ -1,0 +1,25 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+            Remove licence from Slough University
+          </label>
+        </h1>
+        <p>Remove this licence from Slough University. This will revoke all details apart from procedure E, which is managed by another establishment. The training establishment will then take control of the licence.</p>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+      <button class="govuk-button">Save</button><a href="#" class="secondary-link">Cancel</a>
+    </div>
+  </div>
+
+{% endblock %}

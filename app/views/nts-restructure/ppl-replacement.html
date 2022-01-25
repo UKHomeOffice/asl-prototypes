@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Replacement</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why do you need to use animals to achieve the aim of your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">We have set up and tested a method to investigate atherosclerosis resulting from radiation in cultured cells isolated from humans, including young and old donors to determine age effects in this non-animal alternative model. Having established the mechanism of the early steps involved in radiation-induced plaque formation and assessed the effect of drugs in this system, it is necessary to confirm these results in an animal model.
+        </textarea>
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What was your strategy for searching for non-animal alternatives?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Numerous resources including NC3Rs, PREPARE guidelines and Norecopa have been used to investigate additional non-animal alternatives.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why were they not suitable?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Lower species such as non-vertebrates and fish are not appropriate for this research as they have very different circulatory systems and have not been proven to be a good model for studying atherosclerosis.</textarea>
+      </div>
+      <form action="ppl-replacement-review">
+        <button class="govuk-button">Continue</button><a href="ppl-intro-review.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

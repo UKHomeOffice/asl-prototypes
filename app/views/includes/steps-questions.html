@@ -1,0 +1,76 @@
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--s" for="step-detail">
+    Describe the procedures that will be carried out during this step.
+  </label>
+  <div id="step-detail-hint" class="govuk-hint"></div>
+  <textarea class="govuk-textarea" id="step-detail" name="step-detail" rows="5" aria-describedby="step-detail-hint"></textarea>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="step-optional-hint">        
+    <label class="govuk-label--s" for="">
+      Is this step optional?<br><br>
+    </label>
+    
+    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="step-optional-conditional-3" name="step-optional" type="radio" value="email" data-aria-controls="conditional-step-optional-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="step-optional-conditional-3">
+          Yes
+        </label> 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="step-optional-conditional-4" name="step-optional" type="radio" value="phone" data-aria-controls="conditional-step-optional-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="step-optional-conditional-4">
+          No
+        </label> 
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-hint">        
+    <label class="govuk-label--s" for="">
+      Do you expect this step to have adverse effects for the animals that are more than mild and transient?
+    </label>
+    <div id="more-detail-hint" class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</div>
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="steps-expected-effects-conditional-3" name="steps-expected-effects" type="radio" value="email" data-aria-controls="conditional-steps-expected-effects-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="steps-expected-effects-conditional-3">
+          Yes
+        </label> 
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-adverse-effects-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="steps-likely-effects">
+            What are the likely adverse effects of this step?
+          </label>
+          <div id="steps-likely-effects-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="steps-likely-effects" name="steps-likely-effects" rows="5" aria-describedby="steps-likely-effects-hint"></textarea>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="steps-limits">
+            How will you monitor for, control, and limit any of these adverse effects?
+          </label>
+          <div id="steps-limits-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="steps-limits" name="steps-limits" rows="5" aria-describedby="steps-limits-hint"></textarea>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="steps-endpoints">
+            What are the humane endpoints for this step?
+          </label>
+          <div id="steps-endpoints-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="steps-endpoints" name="steps-endpoints" rows="5" aria-describedby="steps-endpoints-hint"></textarea>
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="adverse-effects-conditional-4" name="adverse-effects" type="radio" value="phone" data-aria-controls="conditional-adverse-effects-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="adverse-effects-conditional-4">
+          No
+        </label> 
+      </div>
+    </div>
+  </fieldset>
+</div>

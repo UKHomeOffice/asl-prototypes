@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Change your email notification preferences 
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <label class="govuk-fieldset__legend--s">
+            Do you want to recieve email notifications?
+          </label>  
+          <span id="checkbox-hint" class="govuk-hint">These include any changes made to the licences you hold or are responsible for.</span>
+
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-2" name="option" type="radio" value="value2" data-aria-controls="conditional-option-2">
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                  No
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="option-1" name="option" type="radio" value="value1" data-aria-controls="conditional-option-1" checked>
+                <label class="govuk-label govuk-radios__label" for="option-1">
+                  Yes
+                  <!-- <span id="checkbox-hint" class="govuk-hint">You will recieve all emails relating to X, Y and Z.</span> -->
+                </label> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+               
+                <div class="govuk-form-group">
+                  <label class="govuk-label--s" for="event-name">
+                    Which email address do you want the notifications sent to?
+                    <span id="checkbox-hint" class="govuk-hint"></span>
+                  </label>
+
+                  <input class="govuk-input" id="event-name" name="event-name" type="text" value="user.name@university.edu.uk">
+                </div>
+              </div>
+            </div>
+            
+          </fieldset>
+        
+      </div>
+
+
+      <a href="email-preferences" class="govuk-button">Update preferences</a> 
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}
+
+

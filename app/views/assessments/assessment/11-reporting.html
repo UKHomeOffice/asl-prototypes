@@ -1,0 +1,207 @@
+  
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary: general</a></li>
+        <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li class="selected"><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Other conditions and authorisations
+        <script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+    
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+      <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+     
+      
+      <div class="cond-read-view">
+        <div class="govuk-inset-text condition">
+          <h3 class="govuk-heading-s">
+            Retrospective assessment
+          </h3>
+          <p class="govuk-hint">Automatically selected based on applicant's responses.</p>
+          <div class="view-condition">
+            <div class="cond-content"><p>A retrospective assessment is due on this project 6 months after its revocation.</p>
+            </div>
+          </div>
+          <div class="edit-condition hide">
+            <textarea class="cond-text-edit govuk-textarea " id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="edit-buttons">
+            <button  onclick="editCondition(this)" class="condEdit link-button">Edit</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Remove</a>
+          </div>
+          <div class="save-buttons hide">
+            <button onClick="saveCondition(this)" class="condSave govuk-button">Save</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+
+     <h2 class="govuk-heading-m">Additional condition 1</h2>
+     <div class="govuk-inset-text condition">
+       <h3 class="govuk-heading-s">
+         General reporting requirement
+       </h3>
+       <p>A report in writing to [aspa.london@homeoffice.gov.uk](aspa.london@homeoffice.gov.uk) or orally to &#60;&#60;&#60;INSERT name of assigned inspector HERE&#62;&#62;&#62;  on the project shall be made by &#60;&#60;&#60;INSERT date HERE&#62;&#62;&#62;  or after &#60;&#60;&#60;INSERT number HERE&#62;&#62;&#62; animals have been used, whichever is the sooner. The report shall contain &#60;&#60;&#60;INSERT required content of the report HERE&#62;&#62;&#62;.</p>
+       <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          This text requires editing
+        </strong>
+      </div>
+       <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+     </div>
+
+     <h2 class="govuk-heading-m">Additional condition 1</h2>
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          Export of animals (transfer)
+        </h3>
+        <p class="govuk-hint">Automatically selected basedselected based on applicant's responses.</p>
+        <p>Genetically altered rodents, genetically altered zebra fish and genetically altered Xenopus sp. bred and/or maintained under the authority of this project may be transferred to scientific establishments outside the United Kingdom only if:</p>
+        <ul class="govuk-list govuk-list--bullet ">
+          <li>
+            The transfer will be made to a recognised scientific research establishment with a scientific requirement for genetically altered animals (or their controls) of that type; and where appropriate veterinary care can be provided as necessary; and
+          </li>
+          <li>
+            Sending tissue, gametes or embryos is not practicable or carries a higher potential welfare cost than moving live animals; and
+          </li>
+          <li>
+            Animals will be transported in accordance with all relevant regulations regarding welfare of animals in transit or the import or export of animals; and
+          </li>
+          <li>
+            Animals will be inspected by a competent person before transfer; and
+          </li>
+          <li>
+            A veterinary surgeon will confirm that he/she is not aware of any reason why these animals might suffer by virtue of the fact of being moved to another recognised scientific establishment.
+          </li>
+          <li>
+            Any transport related problems with the welfare of the animals will be notified to the Home Office promptly.
+          </li>
+        </ul>
+        <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+      </div>
+   <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Retrospective assessment
+                <p>A retrospective assessment is due on this project 6 months after its revocation.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div> -->
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                General reporting requirement
+                <p>A report in writing to [aspa.london@homeoffice.gov.uk](aspa.london@homeoffice.gov.uk) or orally to &#60;&#60;&#60;INSERT name of assigned inspector HERE&#62;&#62;&#62;  on the project shall be made by &#60;&#60;&#60;INSERT date HERE&#62;&#62;&#62;  or after &#60;&#60;&#60;INSERT number HERE&#62;&#62;&#62; animals have been used, whichever is the sooner. The report shall contain &#60;&#60;&#60;INSERT required content of the report HERE&#62;&#62;&#62;.</p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Inspection requirement
+                <p>
+                  The licence holder shall ensure that the assigned inspector is notified before regulated procedures are applied at any place specified in this licence to enable the inspector to be present if he/she wishes. The minimum periods of notice to be given, the information to be provided, and the means of notification shall be agreed in writing with the Inspector at least 7 days before commencement of regulated procedures in this project.
+                </p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Create custom condition
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Create custom authorisation
+              </label>
+            </div>
+          </div>
+          <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="authorisation" name="authorisation" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="authorisation">
+                 Write new n
+              </label>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+      {% set assessSection = 'reporting' %}
+      <form action="assessment-overview" method="post">
+
+      {% include "includes/assessment-complete.html" %}
+
+  
+      
+      
+      </form>
+
+    
+    <s/div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

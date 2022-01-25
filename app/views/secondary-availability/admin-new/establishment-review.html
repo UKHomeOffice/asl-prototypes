@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/status-banner-draft.html" %}
+    {% include "includes/licence-header-ppl.html" %}
+    {% include "includes/list-of-sections.html" %}
+
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body">
+          <span style="font-size: 18px;font-weight:bold;">Please review your answers for:</span >
+        </div>
+        <h1 class="govuk-panel__title">Establishments</h1>
+      </div>
+      
+      <h3 class="govuk-heading-s">Will your project use any additional establishments?</h3>
+      <p>Yes</p>
+      <p><a href="#">Edit</a></p>
+      
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Additional establishment 1</h2>
+          <h3 class="govuk-heading-s">Additional establishment name</h3>
+          <p><em>No answer provided</em></p>
+          <div class="govuk-inset-text">
+            Only the personal licence holder can name the additional establishments on their licence
+          </div>
+
+
+
+
+         <h3 class="govuk-heading-s">
+            Why do you need to carry out work at this establishment?
+          </h3>
+          <span id="est1-reason-hint" class="govuk-hint">For example, there may be important specialised equipment at this location that is not available at your primary establishment.</span>
+          <p>Reason</p>
+          <p><a href="#">Edit</a></p>
+      
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+         <h3 class="govuk-heading-s">
+          Who will be responsible for supervising your work at this establishment?
+          </h3>
+          <p>Reason</p>
+          <p><a href="#">Edit</a></p>
+                
+        </div>
+      </div>
+      <h3 class="govuk-heading-s">
+        Do the housing, husbandry, and care conditions at each establishment meet the requirements laid out in the Code of Practice for each type of animal you will be using?
+      </h3>
+      <span id="est1-reason-hint" class="govuk-hint">Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.</span>
+      <p>Yes</p>
+      <p><a href="#">Edit</a></p>
+  
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+          <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+          <form action='ppl-index' method="post">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="poles-complete" name="poles-complete" type="checkbox" value="true">
+                    <label class="govuk-label--s govuk-checkboxes__label" for="poles-complete">
+                      This section is complete
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>          
+  
+            <button class="govuk-button">Continue</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

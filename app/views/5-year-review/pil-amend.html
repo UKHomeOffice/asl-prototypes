@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Amend personal licence - Categories A, B, C, D, and F
+      </h1>
+      <p>Please complete all of the following sections.</p>
+ 
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-m">
+        <a href="">Applicant details</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-m">
+        <a href="">Establishment</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>
+      <p>University of Croydon</p>
+      <p><a href="#">Edit</a></p>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-m">
+        <a href="">Procedures</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>
+      <div class="govuk-inset-text">
+        Proceedure category <strong>A</strong>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">
+        <a href="">Animal types</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><strong>Mice</strong></li>
+        <li><strong>Rats</strong></li>
+      </ul>
+          
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-m">
+        <a href="">Training</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>    
+      <h3 class="govuk-heading-s">Certificate 1</h3>
+      <div class="govuk-inset-text">
+        <dt><strong>Certificate number</strong></dd>
+        <dd>1234</dd>
+        <dt><strong>Accrediting body</strong></dd>
+        <dd>Royal Society of Biology</dd>
+        <dt><strong>Date awarded</strong></dd>
+        <dd>01 January 1999</dd>
+        <dt><strong>Modules completed</strong></dd>
+        <dd>
+          L<br> 
+          E1<br> 
+          PILA (theory)
+        </dd>
+        <dt><strong>Animal types</strong></dt>
+        <dd>Apes (Hominoidea)<br> Baboons (Papio spp.)</dd>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-m">
+        <a href="">Exemptions</a>
+        <div class="float-right">
+          <div class="govuk-body">
+            <span class="badge badge-blue">COMPLETED</span>
+          </div>
+        </div>
+      </h3>
+      <p>No exemptions</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <div class="application-confirm">
+        <h2 class="govuk-heading-m">Please confirm that you understand</h2>
+        <p>The terms and conditions under which you may hold a licence under the Animals Scientific Procedure Act 1986, and that you may be guilty of an offence if for the purpose of obtaining a licence under this Act you provide information which you know to be false or misleading.   </p>
+      </div>
+      <button class="govuk-button">Submit to NTCO</button>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    .application-confirm {
+    border: 3px solid #bfc1c3;
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+  </style>
+
+{% endblock %}

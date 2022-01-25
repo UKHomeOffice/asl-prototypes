@@ -1,0 +1,307 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+        <p>This amendment has not been approved yet.</p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">Test project name</span>
+        <span class="float-right"><a href="#">Download application</a></span>
+      </div>
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="protocol-nav">
+        <a href="#" class="back-to-sections"><li>List of sections</li></a>
+        <a href="#"><li>Project introduction</li></a>
+        <a href="#"><li>Applicant information</li></a>
+        <a href="#"><li>Project location</li></a>
+        <a href="#"><li>Project plan</li></a>
+        <a href="#"><li>Protocols</li></a>
+        <a href="#"><li>Use of animals</li></a>
+        <a href="#"><li>Other considerations</li></a>
+        <a href="#"><li>The 3Rs</li></a>
+        <a href="#"><li>Non-technical summary</li></a>
+        <a href="#"><li class="selected">Additional conditions</li></a>
+        <a href="#"><li class="selected-child">Additional conditions</li></a>
+        <a href="#"><li>Authorisations</li></a>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Additional conditions</h1>
+
+      <div>
+        <p class="govuk-hint">Additional conditions have been added automatically according to the selections made by the applicant.</p>
+
+        <p class="govuk-hint">Please review all sections of this application before making a recommendation.</p>
+      </div>
+
+      <h2 class="govuk-heading-m">Additional condition 1</h2>
+            <div class="govuk-inset-text">
+   
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">        
+            <label class="govuk-label--s" for="">
+              <h3 class="govuk-heading-s">Retrospective assessment</h3>
+              
+            </label>
+            
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1" checked>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                    <strong>This project licence requires a retrospective assessment</strong><br>
+                    <span class="govuk-hint">The Secretary of State has determined that a retrospective review of this licence is required, and should be submitted within the 6 months of the licence's revocation date.</span>
+                  </label> 
+                </div>
+                <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1" style="border-left: 10px solid #8F23B3;">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      <h3 class="govuk-heading-s">Retrospective assessment</h3>
+                      
+                    </label>
+                  </div>
+                </div> --> 
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                    <strong>This project licence does not require a retrospective assessment</strong><br>
+                    <span class="govuk-hint">The Secretary of State has determined that a retrospective assessment of this licence is not required.</span>
+                  </label> 
+                </div>
+              
+              <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2" style="border-left: 10px solid #8F23B3;">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-phone">
+                      <h3 class="govuk-heading-s">Retrospective assessment</h3>
+                      The Secretary of State has determined that a retrospective review of this licence is required, and should be submitted within the 6 months of the licence's revocation date.
+                    </label>
+                  </div>
+
+                </div> -->
+          </fieldset>
+        <button class="govuk-button govuk-button--secondary" style="margin-bottom: 0px;">Save</button><a href="#" class="secondary-link">Cancel</a>
+        </div>
+      </div>
+      <h2 class="govuk-heading-m">Additional condition 2</h2>
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">Feral animals</h3>
+        <p>Standard condition 13(a) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+        <a href="#">Edit</a> | <a href="#">Remove</a>
+      </div>
+      
+      
+      <h2 class="govuk-heading-m">Additional condition 3</h2>
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">POLEs</h3>
+        <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are due to start.</p>
+        <a href="#">Edit</a> | <a href="#">Remove</a>
+      </div>
+      
+      
+      <h2 class="govuk-heading-m">Additional condition 4</h2>
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">Non purpose bred schedule 2 animals</h3>
+        <p>Standard condition 13(d) of this licence shall not apply in cases when the relevant animals bred for use in procedures are not suitable for the purpose of the programme of work as justified in the project licence application.</p>
+        <a href="#">Edit</a> | <a href="#">Remove</a>
+      </div>
+      
+      <h2 class="govuk-heading-m">Additional conditions</h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Additional conditions
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Regulatory toxicology
+              <p>Where studies are requested in order to meet regulatory requi...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Antibody generation
+              <p>Unless otherwise specified, antibodies can only be generated...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Reporting requirement
+              <p>A report in writing to aspa.london@homeoffice.gov.uk or orally...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Inspection requirement
+              <p>The licence holder shall ensure that the assigned inspector is ...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Anaesthesia
+              <p>Induction and maintenance of general or local anaesthesia, sed...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                General anaesthesia
+              <p>Unless otherwise specified, all animals are expected to make a...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Surgery
+              <p>Unless otherwise specified:</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Administration of substances and withdrawal of fluids
+              <p>Unless otherwise specified, administration of substances and w...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Batch testing
+              <p>For all batch quality control testing using live animals, the subst...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Testing household products
+              <p>The following conditions apply to the testing of finished househ...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Minimising suffering for wild or feral animals
+              <p>In accordance with paragraph 25(5) of Schedule 2C to the Act...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                 Write new 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+  
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--secondary">Continue</a>
+      <a class="secondary-link" href="#">Cancel</a>
+      
+      
+
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+</style>
+{% endblock %}

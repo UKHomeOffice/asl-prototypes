@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Check your answers for replacement, reduction and refinement
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+      <h2 class="govuk-heading-m">Refinement</h2>
+
+      <label class="govuk-label--s" for="option-1-additional-1">
+        With the knowledge you now have, could the choice of animals or models used have been improved at all? During the project, how did you minimise harm to animals?
+      </label>
+      <span class="govuk-hint">High quality facilities and good processes for managing the animals’ care and wellbeing can reduce harms, for example. </span>
+      
+      <p>
+        Myocardial infarction
+      </p>
+      <p>
+        Surgery is conducted using aseptic technique and physiological support such as supplementary heat and fluids. Analgesia is provided routinely before and after surgery.
+      </p>
+      <p>The majority of deaths associated with the surgical induction of myocardial infarction occur in the intra-operative period whilst the animal is still under general anaesthesia. Careful monitoring is applied post-operatively to identify key clinical signs and minimise  suffering associated with adverse effects. Where these occurred, score sheets identified the extent and timing so that early endpoints could be applied and thereby avoid animals being found dead.
+      </p>
+      <p>
+        Post-operative mortality is principally due to cardiac rupture. Since this occurs more in male mice, the risk is partly mitigated by use of female mice for this model.
+      </p>
+      <p>
+        Gene induction
+      </p>
+      <p>
+        Pilot studies have been undertaken in small numbers of animals to determine the lowest effective dose of tamoxifen to induce genetic alteration in a conditional knock-out affecting cardiac cells. Information from this study in conjunction with imaging studies, should enable safer and effective gene ‘knock out’.
+      </p>
+      <a href="#" class="">Edit</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <form action="ra-index" method="POST">
+        <div class="declaration-panel-grey">
+          <h3 class="govuk-heading-m">Mark this section as complete</h3>
+          <p>You can still edit this section later, but you will be unable submit this assessment until all sections are marked as complete.</p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="complete-refinement-hint">
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complete-refinement" name="complete-refinement" type="checkbox" value="yes">
+                  <label class="govuk-label govuk-checkboxes__label" for="complete-refinement">
+                    Mark this section as complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>  
+        </div>
+        <br>
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a href="ppl-overview" class="secondary-link">List of sections</a>
+        </p>
+      </div>
+    </form>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

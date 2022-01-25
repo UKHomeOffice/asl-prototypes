@@ -1,0 +1,149 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ra.html" %}
+
+      <!-- <h1 class="govuk-heading-xl">Retrospective assessment</h1> -->
+      <div class="declaration-panel-yellow">
+          <h3 class="govuk-heading-s">Writing for the public</h3>
+          <p>
+            This assessment will be made publicly available and may be read by non-specialists. 
+          </p>
+          <p>
+            Help them understand your work by describing it as simply and clearly as possible, similarly to how new research might be explained in the BMJ or other scientific press.
+          </p>
+          <p>
+            Do not include information that could identify people, places, or intellectual property. 
+          </p>
+          </strong>
+          <span id="details-arrow-nts">&#9658;</span> <a onclick="toggleNTSDetails()" href="javascript:void(0);" id="details-label-nts" style="color: #0b0c0c;">Tips on writing for the public</a>
+          <div id="details-panel-nts">
+            <br>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                use short sentences - these are easier to read
+              </li>
+              <li>
+                use bullet points to break up long paragraphs of text
+              </li>
+              <li>
+                if you have several points to make, separate them with headings
+              </li>
+              <li>
+                leave out extensive detail or background information - give the information required and no more
+              </li>
+              <li>
+                use simple words instead of long words, for example, instead of saying ‘The findings are indicative of…’ say, ‘The findings suggest’ or ‘The finding show’
+              </li>
+              <li>
+                explain technical terms in brackets wherever possible
+              </li>
+            </ul>
+          </div>
+          <br>
+          <br>
+          <p>
+            <a href='ra-index' class="govuk-button">Continue</a>
+          </p>
+      </div>
+      
+      
+      <Script>
+        function toggleNTSDetails() {
+        var x = document.getElementById("details-panel-nts");
+        var detailsLabelNTS = document.getElementById("details-label-nts");
+        var detailsArrowNTS = document.getElementById("details-arrow-nts");
+        console.log(x.style.display)
+        if (x.style.display === "none") {
+          console.log("click")
+          x.style.display = "block";
+          detailsArrowNTS.innerHTML = "&#9660;";
+          // detailsLabelNTS.innerHTML = "Less information";
+        } else if (x.style.display === "block") {
+          x.style.display = "none";
+          detailsArrowNTS.innerHTML = "&#9658;";
+          // detailsLabelNTS.innerHTML = "More information";
+        } else {
+          x.style.display = "block";
+          detailsArrowNTS.innerHTML = "&#9660;";
+          // detailsLabelNTS.innerHTML = "Less information";
+        }
+      }
+      </Script>
+        
+        <style>
+          .download-options {
+            width: 20%;
+          }
+          #details-panel-nts{
+            display: none;
+          }
+        </style>
+
+      
+    </div>
+  </div>
+<style type="text/css">
+
+
+
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+
+  .changed {
+    margin-right: 5px;
+  }
+</style>
+{% endblock %}

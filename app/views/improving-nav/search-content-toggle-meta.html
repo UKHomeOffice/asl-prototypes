@@ -1,0 +1,477 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Inspector
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#tasks">
+              Tasks
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Establishments
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#people">
+              People
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#projects">
+              Projects
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="tasks" style="border:none;"></section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="projects" style="border:none;">
+          <h2 class="govuk-heading-m">Projects</h2>
+
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Search projects
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-nmbas-no" name="setup-nmbas" type="radio" value="false" data-aria-controls="conditional-option-2" checked>
+                <label for="setup-nmbas" class="govuk-label govuk-radios__label">Search by project metadata
+                </label>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-nmbas-yes" name="setup-nmbas" type="radio" value="true" data-aria-controls="conditional-option-1">
+                <label for="setup-nmbas" class="govuk-label govuk-radios__label">Search by project data</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
+                <div class="govuk-form-group search-box">
+                  <label for="" class="govuk-label">Search projects</label>
+                  <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+                  <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+                </div>
+                <ul class='tasks-nav'>
+                  <li class="">
+                    Status:
+                  </li>
+                  <li class="tasks-nav-selected">
+                    Active
+                  </li>
+                  <li>
+                    <a href="#">Expired</a> 
+                  </li>
+                  <li>
+                    <a href="#">Inactive</a> 
+                  </li>
+                  <li>
+                    <a href="#">Revoked</a> 
+                  </li>
+                  <li>
+                    <a href="#">Transferred out</a> 
+                  </li>
+                  <li>
+                    <a href="#">Show all</a> 
+                  </li>
+                </ul>
+              
+                <h2 class="govuk-heading-m">Showing 152 results</h2>
+      
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col">Project title</th>
+                      <th class="govuk-table__header" scope="col">Primary stablishment </th>
+                      <th class="govuk-table__header" scope="col">PPL holder</th>
+                      <th class="govuk-table__header" scope="col">Status</th>
+                      <th class="govuk-table__header" scope="col">Expiry date</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PIL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Dagny Aberkirder  </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">17 May 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PPL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Kurtis Savage </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">06 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Megan Alberts </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Aspasia Dellaporta</td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Bruce Banner</td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Bruce Banner  </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">11 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Area removal</td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Area removal  </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="col">PEL </td>
+                      <td class="govuk-table__cell" scope="col">University of Croydon </td>
+                      <td class="govuk-table__cell" scope="col">Area amendment  </td>
+                      <td class="govuk-table__cell" scope="col"><span class="badge">Active</span></td>
+                      <td class="govuk-table__cell" scope="col">13 June 2019</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav role="navigation" aria-label="Pagination">
+                  <div class="pagination__summary">Showing 1 &ndash; 10 of 31 results</div>
+                  <ul class="pagination">
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+                  </ul>
+                </nav>  
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-1">
+                <div class="govuk-form-group search-box">
+                  <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px" placeholder="Study">
+                  <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+                </div>
+                <div class="govuk-gird-row">
+                <div class="govuk-grid-column-one-quarter">
+                  <h3 class="govuk-heading-s">Filter by</h3>
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        Project documents
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                           Licence
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                            Application
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                            Non-technical summary
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        Status
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                           Active
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                            Expired
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                            Inactive
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                            Revoked
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                            Transferred out
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+      
+      
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        Additional features
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                           Requires a retrospective assessment
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                            Includes project continuation
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+                  <p>Showing 3 results for <strong>'Study'</strong> and <strong>'Status: Active'</strong></p>
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                  
+                  <!-- <p>
+                  <h2 class="govuk-heading-m">A <span class="highlight">study</span> on treatment and penetrance of inherited cardiac conditions</h2>
+                </p> -->
+                <p>
+                    <a class="search-project-heading" href="#">A <span class="highlight">study</span> on treatment and penetrance of inherited cardiac conditions</a>
+                  </p>
+                <div class="govuk-grid-row ppl-metadata">
+                  <div class="govuk-grid-column-one-half">
+                    <ul class="govuk-list govuk-hint">
+                      <li>PPL holder: Bruce Banner</li>
+                      <!-- <li>PPL number: PB9375H87</li> -->
+                      <li>Establishment: University of Croydon</li>
+                    </ul>
+                  </div>
+                  <div class="govuk-grid-column-one-half">
+                    <ul class="govuk-list govuk-hint">
+                      <li>
+                        Expiry date: 12 June 2020 (4 weeks)
+                      </li>
+                      <li>
+                        Status: Active
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- <p><a href="#">Go to project overview</a></p> -->
+                <h3 class="govuk-heading-s">Included in the sections:</h3> 
+                  <div class="govuk-details__text">
+                    <h3 class="govuk-heading-s">Introductory details <span class="unbold">(<a href="#">Licence</a>, <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                  </div>
+                  <br>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        See 6 more sections contatining [search result]
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <h3 class="govuk-heading-s">Section: Aims and objectives <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Section: Protocols <span class="unbold">(<a href="#">Licence</a> and <a href="#">application</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Found in:</h3> 
+                        <h3 class="govuk-heading-s">Scientific background <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                    </div>
+                  </details>
+      
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                  
+                  <!-- <p>
+                    <h2 class="govuk-heading-m">A <span class="highlight">study</span> to identify new treatments for renal fibro</h2>
+                  </p> -->
+                  <p>
+                    <a class="search-project-heading" href="#">A <span class="highlight">study</span> to identify new treatments for renal fibro</a>
+                  </p>
+                  <div class="govuk-grid-row ppl-metadata">
+                    <div class="govuk-grid-column-one-half">
+                      <ul class="govuk-list govuk-hint">
+                        <li>PPL holder: Janet Simmonds</li>
+                        <!-- <li>PPL number: H84847JK9</li> -->
+                        <li>Establishment: University of Croydon</li>
+                      </ul>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                      <ul class="govuk-list govuk-hint">
+                        <li>
+                          Expiry date: 12 June 2020
+                        </li>
+                        <li>
+                          Status: Active
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- <p><a href="#">Go to project overview</a></p> -->
+                  <h3 class="govuk-heading-s">Section: Introductory details <span class="unbold">(<a href="#">Licence</a>, <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        See 6 more sections contatining [search result]
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <h3 class="govuk-heading-s">Section: Aims and objectives <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Section: Protocols <span class="unbold">(<a href="#">Licence</a> and <a href="#">application</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Section: Scientific background <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                    </div>
+                  </details>
+                
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                  
+                  <!-- <p>
+                    <h2 class="govuk-heading-m">A <span class="highlight">study</span> of microvascular techniques for surgeons</h2>
+                  </p> -->
+                  <p>
+                    <a class="search-project-heading" href="#">A <span class="highlight">study</span> of microvascular techniques for surgeons</a>
+                  </p>
+                  <div class="govuk-grid-row ppl-metadata">
+                    <div class="govuk-grid-column-one-half">
+                      <ul class="govuk-list govuk-hint">
+                        <li>PPL holder: Dave Lee</li>
+                        <!-- <li>PPL number: P88375958</li> -->
+                        <li>Establishment: University of Croydon</li>
+                      </ul>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                      <ul class="govuk-list govuk-hint">
+                        <li>
+                          Expiry date: 1 May 2025
+                        </li>
+                        <li>
+                          Status: Active (Includes project continuation)
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    
+                    
+                  </div>
+                  <!-- <p><a href="#">Go to project overview</a></p> -->
+                  <h3 class="govuk-heading-s">Section: Introductory details <span class="unbold">(<a href="#">Licence</a>, <a href="#">application</a> and <a href="#">NTS</a>)</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        See 6 more sections contatining [search result]
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <h3 class="govuk-heading-s">Section: Aims and objectives <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Section: Protocols <span class="unbold">(<a href="#">Licence</a> and <a href="#">application</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+      
+                      <h3 class="govuk-heading-s">Section: Scientific background <span class="unbold">(<a href="#">Application</a> and <a href="#">NTS</a>)</span></h3>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti repudiandae esse ratione nemo nesciunt, <span class="highlight">impedit totam</span> harum a accusantium dignissimos quaerat officiis atque nobis omnis incidunt fuga dolore ducimus.</p>
+                    </div>
+                  </details>
+                  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </div>
+              </div>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+         
+
+        </section>
+
+      </div>
+
+      
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .unbold {
+      font-weight: normal;
+    }
+    .ppl-metadata ul {
+      font-size: 16px;
+    }
+  </style>
+
+{% endblock %}

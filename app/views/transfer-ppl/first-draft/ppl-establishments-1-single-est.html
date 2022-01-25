@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Establishments</h2>
+      
+      <form action="ppl-establishments-2" method="post">
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              What is the primary establishment for this licence?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+
+            
+            
+            <p>University of Croydon</p>
+            
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+               Why is the establishment I need not listed?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>If the establishment is not listed, ask the Home Office Liaison Contact (HOLC) of that establishment to send you an invitation. Once you accept the invitation, you can request your licence to be transferred.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="govuk-form-group">  
+          <fieldset class="govuk-fieldset">         
+            <label class="govuk-label--s" for="">
+              Will your project use any additional establishments?
+            </label>
+            <span id="holding-hint" class="govuk-hint"></span>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-1" name="add-establishments" type="radio" value="Yes" data-aria-controls="conditional-add-establishments-1" checked="">
+                <label class="govuk-label govuk-radios__label" for="add-establishments-1">
+                  Yes
+                </label> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-establishments-2" name="add-establishments" type="radio" value="No" data-aria-controls="conditional-add-establishments-2">
+                <label class="govuk-label govuk-radios__label" for="add-establishments-2">
+                  No
+                </label> 
+              </div>
+            </div>
+            
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

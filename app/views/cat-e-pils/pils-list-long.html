@@ -1,0 +1,220 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">University of Croydon</span>
+      <h1 class="govuk-heading-xl">
+        Personal licences
+      </h1>
+      <i class="fa fa-search"></i>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#pils">
+              General
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#cat-e-pils">
+              Category E
+            </a>
+          </li>
+        </ul>
+        
+        <section class="govuk-tabs__panel" id="pils" style="border:none;">
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Personal licence reviews
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Personal licences must be reviewed every 5 years to confirm they are still in use and up to date. The licence holder or an admin can complete a review.</p>
+              <p>If a licence requires no changes, it can be reviewed by an NTCO on behalf of the licence holder up to 12 weeks before the deadline.</p>
+            </div>
+          </details>
+
+      <div class="govuk-form-group search-box">
+        <label for="filter-*" class="govuk-label--s">Search by licence holder or PIL number</label>
+        <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+        <button style="height: 40px; width: 40px;background-color:#005ea5 ;display: inline-block;position: absolute; border: solid 2px black; border-left: none;"></button>
+      </div>
+      <h2 class="govuk-heading-m">All 102 results</h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"><a href="#">Licence holder</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">PIL number</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Start date</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Review date</a></th>
+            <th scope="col" class="govuk-table__header">Review status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Cele Siviter</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">YW-052506</a></td>
+            <td class="govuk-table__cell list-start-date">20 March 2015</td>
+            <td class="govuk-table__cell list-end-date">20 March 2020</td>
+            <td class="govuk-table__cell list-review-status"><span class="badge badge-red">OVERDUE</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Westbrook Otson</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">IY-717444</a></td>
+            <td class="govuk-table__cell list-start-date">01 July 2016</td>
+            <td class="govuk-table__cell list-end-date">01 July 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Tyson MacArd</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">UQ-448361</a></td>
+            <td class="govuk-table__cell list-start-date">20 August 2015</td>
+            <td class="govuk-table__cell list-end-date">20 August 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Amii Coffee</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">XL-612841</a></td>
+            <td class="govuk-table__cell list-start-date">06 June 2015</td>
+            <td class="govuk-table__cell list-end-date">06 June 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Ignaz Middell</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">PF-361444</a></td>
+            <td class="govuk-table__cell list-start-date">13 November 2015</td>
+            <td class="govuk-table__cell list-end-date">13 November 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Aloise Morrish</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">NU-025953</a></td>
+            <td class="govuk-table__cell list-start-date">08 December 2015</td>
+            <td class="govuk-table__cell list-end-date">08 December 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Webb Rieger</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">LH-058387</a></td>
+            <td class="govuk-table__cell list-start-date">08 November 2015</td>
+            <td class="govuk-table__cell list-end-date">08 November 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Jonah Drewe</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">SE-404623</a></td>
+            <td class="govuk-table__cell list-start-date">16 June 2016</td>
+            <td class="govuk-table__cell list-end-date">16 June 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Flemming Fishe</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">KI-399400</a></td>
+            <td class="govuk-table__cell list-start-date">18 October 2017</td>
+            <td class="govuk-table__cell list-end-date">18 October 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell list-pil-holder"><a href="#">Fayth Reyna</a></td>
+            <td class="govuk-table__cell list-pil-number"><a href="#">PC-818226</a></td>
+            <td class="govuk-table__cell list-start-date">24 May 2015</td>
+            <td class="govuk-table__cell list-end-date">24 May 2020</td>
+            <td class="govuk-table__cell list-review-status"></td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+        
+      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="cat-e-pils" style="border:none;">  
+        <div><p> Create a course to apply for personal licences for people doing higher education and training courses. </p><a href="apply-for-training-licences" class="govuk-button">Create new course</a></div>     
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Course name</th>
+              <th scope="col" class="govuk-table__header">Licences grant date</th>
+              <th scope="col" class="govuk-table__header">Submitted applications</th>
+              <th scope="col" class="govuk-table__header">Granted licences</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners microsurgery Cohort 5</a></td>
+              <td class="govuk-table__cell list-start-date">20 April 2020</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+              <td class="govuk-table__cell list-end-date">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Intovascular surgery 101</a></td>
+              <td class="govuk-table__cell list-start-date">13 April 2020</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners microsurgery Cohort 4</a></td>
+              <td class="govuk-table__cell list-start-date">2 April 2020</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners intovascular surgery</a></td>
+              <td class="govuk-table__cell list-start-date">19 March 2020</td>
+              <td class="govuk-table__cell list-end-date">6</td>
+              <td class="govuk-table__cell list-end-date">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners microsurgery Cohort 3</a></td>
+              <td class="govuk-table__cell list-start-date">6 March 2020</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Microsurgery 125</a></td>
+              <td class="govuk-table__cell list-start-date">1 March 2020</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Microsurgery 187</a></td>
+              <td class="govuk-table__cell list-start-date">17 February 2020</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners microsurgery Cohort 2</a></td>
+              <td class="govuk-table__cell list-start-date">15 February 2020</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+              <td class="govuk-table__cell list-end-date">12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell list-pil-holder"><a href="manage-pils-progression">Beginners microsurgery Cohort 1</a></td>
+              <td class="govuk-table__cell list-start-date">2 February 2020</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+              <td class="govuk-table__cell list-end-date">5</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+    </div>
+  </div>
+
+{% endblock %}

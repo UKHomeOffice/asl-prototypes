@@ -1,0 +1,178 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-nts.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-panel green-bg">
+        <div class="govuk-panel__body-s">Please review your answers for:</div>
+        <h1 class="govuk-panel__title">Summary introductory details</h1>
+      </div>
+
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the title of this project?
+        </label>
+        <span class="govuk-hint">Focus on your broad aims and use simple language. For example 'Genes and lifestyle influences on brain ageing'.</span>
+        <p> Autophagy in the hematopoietic system</p>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the aim of this project?
+        </label>
+        <span class="govuk-hint">Keep this to a short one or two sentence summary.</span>
+        <p>
+          <span class="badge changed">Changed</span>
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae eveniet,  tempore amet quia ipsum placeat aut pariatur possimus ea, velit hic aliquid. Facere optio qui quis excepturi eius. Laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem minima facilis quam ea atque fugit, voluptatibus, quia quidem vel consequuntur ipsam magni ipsa, in at adipisci omnis! Deserunt, recusandae.
+        </p>
+        <section class="expanding-panel open comments has-new">
+          <div class="comment-header">
+            <h3 class="govuk-heading-s" style="background-color: #f3f3f3; padding-top: 15px;"><a href="#">Hide comments</a><span class="float-right">–</span></h3>
+          </div class="comment-header">
+          <div class="content">
+            <div class="comment isNew mine">
+              <div class="header govuk-body">
+                <strong>1. NTS reviewer</strong> 1 June 2020
+              </div>
+              <div class="content">
+                <p>Please remove this reference to University of Croydon so we can publish this NTS</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Why is it important to undertake this work?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae eveniet,  tempore amet quia ipsum placeat aut pariatur possimus ea, velit hic aliquid. Facere optio qui quis excepturi eius. Laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem minima facilis quam ea atque fugit, voluptatibus, quia quidem vel consequuntur ipsam magni ipsa, in at adipisci omnis! Deserunt, recusandae.
+        </p>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">  
+        <fieldset class="govuk-fieldset">         
+          <label class="govuk-label--s" for="">
+            Is this project for higher education and training purposes?
+          </label>
+          <span id="holding-hint" class="govuk-hint"></span>
+            <p>
+              No
+            </p>
+        </fieldset>
+      </div>
+            
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Which permissible purposes apply to this project?
+          </legend>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              (a) Basic research
+            </li>
+            <li>
+              (b) Translational or applied research with one of the following aims:
+            </li>
+            <li>
+              (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or their effects, in man, animals or plants
+            </li>
+          </ul>
+        </fieldset>
+
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="width-20">
+          Key words that describe this project
+        </label>
+        <span class="govuk-hint">Choose up to 5. For example: cancer, stem cells, therapy.</span>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Science
+          </li>
+          <li>
+            Research
+          </li>
+          <li>
+            Autophagy
+          </li>
+          <li>
+            Hematopoietic system
+          </li>
+          <li>
+            Animals
+          </li>
+        </ul>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="govuk-form-group duration">
+        <label class="govuk-label--s" for="duration">What will be the duration of this project?</label>
+        <p>5 years 0 months</p>
+        <p><a href="#">Edit</a></p>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="">Which types of animals will be used in this project?</label>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Mice
+          </li>
+          <li>
+            Rats
+          </li>
+        </ul>
+        <p><a href="#">Edit</a></p>
+      </div>
+
+      <div class="protocol-header-in-progress">
+        <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+        <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+        <form action='nts-index?complete=true' method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="poles-complete" name="poles-complete" type="checkbox" value="true" checked>
+                  <label class="govuk-label--s govuk-checkboxes__label" for="poles-complete">
+                    This section is complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+
+          <button class="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

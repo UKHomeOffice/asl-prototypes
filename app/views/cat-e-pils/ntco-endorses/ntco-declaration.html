@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">PIL Application</span>
+      <h1 class="govuk-heading-l">Endorse application</h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="more-detail">
+         Comments
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Comments can be seen by establishment users, as well as inspectors and Home Office team members. They will be added to the 'Latest activity' log of this task.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <h2 class="govuk-heading-m">Declaration</h2>
+      <p>By endorsing this application, I agree that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Mary Jones will receive all relevant training before carrying out regulated procedures on protected animals as part of this course.</li>
+        <li>I have the authority of the establishment licence holder and they are aware they will be liable for the licence’s cost.</li>
+      </ul>
+        <p><a href="ntco-confirmation" class="govuk-button">Endorse application</a><a class="secondary-link" href="ntco-confirmation">Cancel</a></p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

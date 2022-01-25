@@ -1,0 +1,465 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+
+<script>
+
+</script>
+  {% set rowCount = data['rowCount']|int %}
+  {% set row = rowCount + 1 %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      
+      <h1 class="govuk-heading-l">Add procedures</h1>
+    </div>
+ </div>
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <form action="rops-empty" method="POST">
+        <input type="hidden" name="rowCount" value="{{row}}">
+        
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Animals
+          <span class="govuk-body float-right"><a href="edit-animals">Edit animals section</a></span>
+        </h2>
+
+        <div class="govuk-form-group" id="q1" data-required="Please answer the question">
+         
+            <label class="govuk-label--s" for="gaa">
+              Animal species
+            </label>
+           <p>Mice</p>
+         
+           <label class="govuk-fieldset__legend--s" for="">
+            Re-use
+            </label>
+            <p>No</p>
+          
+            <label class="govuk-label--s" for="gaa">
+              Animals' place of birth 
+            </label>
+            <p>UK, licensed establishment</p>
+         
+        </div>
+        
+
+ 
+        <div class="govuk-form-group" id="gaa" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              Genetically altered (GA) animals
+            </label>
+            <span class="govuk-hint">Select if genetically altered animals used</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-no" name="row-{{row}}[gaa]" type="radio" value="GAA were not used" data-aria-controls="conditional-option-1">
+                <label for="gaa" class="govuk-label govuk-radios__label">GA animals were not used</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-unharm" name="row-{{row}}[gaa]" type="radio" value="GAA without a harmful phenotype were used" data-aria-controls="conditional-option-2">
+                <label for="gaa" class="govuk-label govuk-radios__label">GA animals without a harmful phenotype were used</label>
+                <span class="govuk-hint">For strains showing no or sub-threshold phenotypes</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gaa-harm" name="row-{{row}}[gaa]" type="radio" value="GAA with a harmful phenotype were used" data-aria-controls="conditional-option-3">
+                <label for="gaa" class="govuk-label govuk-radios__label">GA animals with a harmful phenotype were used</label>
+                <span class="govuk-hint">For strains showing overtly harmful phenotypes</span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Purposes
+          <span class="govuk-body float-right"><a href="edit-purpose-setup">Edit purposes section</a></span>
+        </h2>
+        <div class="govuk-form-group" id="purpose" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">
+              Purpose
+            </label>
+            <span class="govuk-hint">Select purpose of this procedure</span>
+            <span class="govuk-hint">If a new genetic line was created, this is the primary scientific purpose for which the line was created. 
+            </span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-yes" name="row-{{row}}[purpose]" type="radio" value="Basic research" data-aria-controls="conditional-option-3">
+                <label for="purpose" class="govuk-label govuk-radios__label">Basic research</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-heading-s">
+                    Sub-purpose of this procedure
+                  </label>
+                  <p class="govuk-body">Nervous system</span>
+                  <input type="hidden" name="row-{{row}}[subpurpose-basic]" value="Nervous system">
+                </div>
+              </div> -->
+               
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-no" name="row-{{row}}[purpose]" type="radio" value="Translational and applied research" data-aria-controls="conditional-option-4">
+                <label for="purpose" class="govuk-label govuk-radios__label">Translational and applied research</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-heading-s">
+                    Sub-purpose of this procedure
+                  </label>
+                  <p class="govuk-body">Human Nervous and Mental Disorders</span>
+                  <input type="hidden" name="row-{{row}}[subpurpose-translational]" value="Human Nervous and Mental Disorders">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-yes" name="row-{{row}}[purpose]" type="radio" value="Breeding and maintenance of colonies" data-aria-controls="conditional-option-5">
+                <label for="purpose" class="govuk-label govuk-radios__label">Breeding and maintenance of colonies</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group" id="genetic-line" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s heading-medium" for="gaa" id="gaa">
+              New genetic line
+            </label>
+            <span class="govuk-hint">Select if new genetic lines created</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="line-no" name="row-{{row}}[line]" type="radio" value="No" data-aria-controls="conditional-option-1">
+                <label for="line-no" class="govuk-label govuk-radios__label">No</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="line-yes" name="row-{{row}}[line]" type="radio" value="Yes" data-aria-controls="conditional-option-2">
+                <label for="line-yes" class="govuk-label govuk-radios__label">Yes</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <h2 class="govuk-heading-m">Outcomes</h2>
+        
+        <div class="govuk-form-group" id="severity" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="">Select actual severities and enter number of procedures </label>
+            <span class="govuk-hint">Severities are those experienced by animals as a result of the procedure. 
+            </span>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Reporting re-use, tiny animals, NHPs and large numbers over 999
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <h3 class="govuk-heading-s">
+                  Re-use
+                </h3>
+                <p>
+                  If animals were used in the same procedure across multiple studies, you can give one figure for all the procedures carried out. However you should record the first use of the animals separately to subsequent re-uses. Be sure to check the <a href="#">detailed guidance on reporting re-use</a> to ensure you record the figures correctly.
+                </p>
+                  
+                <h3 class="govuk-heading-s">
+                  Tiny animals
+                </h3>
+                <p>
+                  If tiny animals such as fish larvae were used, estimates are fine.
+                </p>
+
+                <h3 class="govuk-heading-s">
+                  Numbers over 999 and NHPs
+                </h3>
+                <p>
+                  If the number of procedures is over 99 for NHPs, or 999 for any other animal, add a note to the Home Office explaining why. For example if you’ve given a single figure for multiple studies, a large number of animals were used on the same breeding protocol or for any other reason.
+                </p>
+              </div>
+            </details>
+            <span class="govuk-hint">
+              Select all that apply
+            </span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="severity-sub" name="row-{{row}}[severity]" type="checkbox" value="Sub-threshold" data-aria-controls="conditional-sub">
+                <label for="severity" class="govuk-label govuk-checkboxes__label">Sub-threshold</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-sub">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">Enter number of sub-threshold procedures carried out</label>
+                    <span class="govuk-hint">For example, a procedure carried out on 100 mice is 100 procedures.</span>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Reporting sub-threshold on experimental studies 
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p>
+                          Add an explanatory note if the study was experimental and severities were sub-threshold. An experimental study is one that was carried out for any purpose other than breeding GA animals and that didn’t create a new genetic line.
+                        </p>
+                      </div>
+                    </details>
+                  </h1>
+                  <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+                </div>
+                <br>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Add a note
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note to Home Office (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note for personal use (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="severity-non" name="row-{{row}}[severity]" type="checkbox" value="Non-recovery" data-aria-controls="conditional-non">
+                <label for="severity" class="govuk-label govuk-checkboxes__label">Non-recovery</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-non">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">
+                    Enter number of non-recovery procedures carried out
+                    </label>
+                    <span class="govuk-hint">For example, a procedure carried out on 100 mice would be 100 procedures.</span>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Reporting non-recovery with new genetic lines or breeding purposes
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p>
+                          If you have non-recovery procedures in combination with new genetic lines being createdor a purpose of breeding or maintaining colonies of GA animals, add an explanatory noteto the Home Office. 
+                        </p>
+                      </div>
+                    </details>
+                  </h1>
+                  <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+                </div>
+                <br>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Add a note
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note to Home Office (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note for personal use (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="severity-mild" name="row-{{row}}[severity]" type="checkbox" value="Mild  " data-aria-controls="conditional-mild">
+                <label for="severity" class="govuk-label govuk-checkboxes__label">Mild</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-mild">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">
+                    Enter number of mild procedures carried out
+                    </label>
+                    <span class="govuk-hint">For example, a procedure carried out on 100 mice would be 100 procedures.</span>
+                  </h1>
+                  <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+                </div>
+                <br>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Add a note
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note to Home Office (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note for personal use (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="severity-moderate" name="row-{{row}}[severity]" type="checkbox" value="Moderate" data-aria-controls="conditional-moderate">
+                <label for="severity" class="govuk-label govuk-checkboxes__label">Moderate</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-moderate">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">
+                    Enter number of moderate procedures carried out
+                    </label>
+                    <span class="govuk-hint">For example, a procedure carried out on 100 mice would be 100 procedures.</span>
+                  </h1>
+                  <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+                </div>
+                <br>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Add a note
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note to Home Office (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note for personal use (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="severity-severe" name="row-{{row}}[severity]" type="checkbox" value="Severe" data-aria-controls="conditional-severe">
+                <label for="severity" class="govuk-label govuk-checkboxes__label">Severe</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-severe">
+                <div class="govuk-form-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="procedure-number">
+                    Enter number of severe procedures carried out
+                    </label>
+                    <span class="govuk-hint">For example, a procedure carried out on 100 mice would be 100 procedures.</span>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Reporting exceeded severities
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p>If the animal suffered severe, prolonged pain that was not alleviated, add a note to the Home Office explaining why and if you had prior authorisation.</p>
+                      </div>
+                    </details>
+                  </h1>
+                  <input class="govuk-input govuk-!-width-one-third" id="procedure-number" name="row-{{row}}[procedure-no]" type="text">
+                </div>
+                <br>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Add a note
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note to Home Office (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="comment" name="row-{{row}}[comment]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                    <div class="govuk-form-group">
+                      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="comment">
+                        Note for personal use (optional)
+                        </label>
+                        <span class="govuk-hint"></span>
+                      </h1>
+                      <textarea class="govuk-textarea" id="note" name="row-{{row}}[note]" rows="5" aria-describedby="more-detail-hint"></textarea>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <h3 class="govuk-heading-s">Related guidance</h3>
+        <span class="govuk-hint">Links open in a new tab</span>
+        <ul class="govuk-list">
+          <li><a href="#">Actual severity reporting</a></li>
+          <li><a href="#">Severity classification of genetically altered animals</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+        
+        <div class="govuk-form-group">
+          <input type="hidden" name="row" value="{{rowCount}}">
+          <button class="govuk-button">Add procedures</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<style>
+  dt {
+      width: 50%;
+      font-weight: normal;
+    }
+    dd {
+      width: 40%;
+      /* width: 65%;
+      margin-inline-start: 0px;
+      padding-bottom: 30px; */
+    }
+</style>
+{% endblock %}

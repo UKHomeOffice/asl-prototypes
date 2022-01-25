@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">{{ data['course-name'] }}</span>
+      <h1 class="govuk-heading-xl">
+        Manage course participants
+      </h1>
+      <!-- <h2 class="govuk-heading-m">Course details</h2> -->
+      <p>
+        <dl class="govuk-body">
+          <!-- <dt>Course name</dt>
+          <dd>{{ data['course-name'] }}</dd> -->
+          <dt>Training Project licence title</dt>
+          <dd>Training in microvascular surgery</dd>
+          <dt>Training project licence number</dt>
+          <dd>{{ data['ppl-number'] }}</dd>
+          <dt>Course start date</dt>
+          <dd>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</dd>
+           
+          
+
+          <dt>Animals to be used</dt>
+          <dd>{{ data['animal-types'] }}</dd>
+        </dd>
+        </dl>
+      </p>
+      {% if (data['first-name'] == undefined) %}
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Once you have applied for licences for this course, you will no longer be able to change these details.
+          </strong>
+        </div>
+        <p><a href="javascript:history.go(-1)">Edit</a></p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Course participants</h2>
+<p>Licences will be valid for 3 months from the date of approval.</p>
+      {% if (data['first-name'].length > 1) %}
+        <p><a class="govuk-button govuk-button--secondary" href="#">Apply for a licence</a></p>
+      
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Name</th>
+              <!-- <th scope="col" class="govuk-table__header">Email</th> -->
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Details</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#">{{ data['first-name'] }} {{ data['surname'] }}</a>
+              <br>
+              Existing licence holder
+            </td>
+            <td class="govuk-table__cell">
+              <span class="badge">Awaiting endorsement</span>
+              <br>
+              External establishment
+            </td>
+              <td class="govuk-table__cell"><a href="pil-task-review-admin.html">View task</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+      {% else %}
+      <p><a class="govuk-button govuk-button--secondary" href="add-participant">Apply for a licence</a></p>
+      <p><em>No participant details added yet</em></p>
+
+      {% endif %}
+      
+    </div>
+  </div>
+
+  <style>
+    dt {
+      font-weight: bold;
+    }
+  </style>
+{% endblock %}

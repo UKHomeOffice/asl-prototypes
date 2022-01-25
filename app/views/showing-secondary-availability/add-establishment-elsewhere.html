@@ -1,0 +1,104 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <!-- <h2 class="govuk-heading-l">Establishments</h2>
+       <p>Add any additional establishments where work on this project will be carried out beyond just the primary establishemt.</p>
+      <h3 class="govuk-heading-s">Primary establishment</h3>
+      <p>{{data["est-primary"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <br> -->
+      <form action="ppl-establishments-3" method="post">
+        
+        <div class="protocol-container">
+          <div class="protocol-header-in-progress">
+
+            <h3 class="govuk-heading-m">Additional establishment 1</h3>
+            <p>Note, establishment administrators will be able to see this application</p>
+            <!-- <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                This establishment will also need to conduct an AWERB review of this application before it can be submitted.
+              </strong>
+            </div> -->
+            <p> </p>
+            <div class="govuk-form-group">
+              <label class="govuk-heading-s" for="sort">
+                Establishment
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="published">Select an establishment...</option>
+                <option value="published">Marvell Pharma</option>
+                <option value="updated">University of Slough</option>
+              </select>
+            </div>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                 Why is the establishment I need not listed?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>If the establishment is not listed, ask the Home Office Liaison Contact (HOLC) of that establishment to send you an invitation. Once you accept the invitation, you can request your licence to be transferred.</p>
+              </div>
+            </details>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="est1-reason">
+                Why do you need to carry out work at this establishment?
+              </label>
+              <span id="est1-reason-hint" class="govuk-hint">For example, there may be important specialised equipment at this location that is not available at your primary establishment.</span>
+              <textarea class="govuk-textarea" id="est1-reason" name="est1-reason" rows="7" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="est1-who">
+                Who will be responsible for supervising your work at this establishment?
+              </label>
+              <textarea class="govuk-textarea" id="est1-who" name="est1-who" rows="7" aria-describedby="more-detail-hint"></textarea>
+            </div>
+          </div> 
+        </div>
+        
+        <p><a class="govuk-button govuk-button--secondary">Add another additional Establishment</a></p>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

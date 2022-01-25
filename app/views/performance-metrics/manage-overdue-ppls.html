@@ -1,0 +1,128 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-xl">
+        Manage statutory deadlines that have passed
+      </h1>
+
+    </div>
+  </div>    
+  <style>
+    .perf-big-no {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .perf-big-no-description {
+      font-weight: bold;
+    }
+  </style>  
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div class="perf-big-no-description">
+        Total times the SLA has passed
+      </div>
+      <div class="perf-big-no">
+        8
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="perf-big-no-description">
+        Overdue SLAs that are valid
+      </div>
+      <div class="perf-big-no">
+        2
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="perf-big-no-description">
+        Overdue SLAs that are not valid
+      </div>
+      <div class="perf-big-no">
+        6
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break--l govuk-section-break">
+      <h2 class="govuk-heading-m">
+        Statutory deadlines that have passed
+        <span class="float-right govuk-body"></span>
+      </h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Project title</th>
+            <th scope="col" class="govuk-table__header">Statutory deadline date</th>
+            <th scope="col" class="govuk-table__header">Days overdue</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">XXX</td>
+            <td class="govuk-table__cell">YYY</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Valid</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Showing data for period: <strong>All</strong> This week This month This year</p>
+    </div>
+  </div>
+
+
+{% endblock %}

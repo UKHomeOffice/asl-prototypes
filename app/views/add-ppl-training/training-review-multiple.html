@@ -1,0 +1,153 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT AMENDMENT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-panel green-bg">
+    <div class="govuk-panel__body-s">Please review your answers for:</div>
+    <h1 class="govuk-panel__title">Training</h1>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="declaration-panel-grey">
+        <h2 class="govuk-heading-m">Certificate 1</h2>
+         <h2 class="govuk-heading-s">Certificate number</h2>
+         <p>09384759596756464</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Accrediting bodyh2>
+         <p>Universities Group</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Date awarded</h2>
+         <p>10 January 2019</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Modules completed</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>L</li>
+             <li>E1</li>
+             <li>PILA (theory)</li>
+             <li>PILA (skills)</li>
+             <li>K (theory)</li>
+             <li>E2</li>
+           </ul>
+         </p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Animal types</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>Rats</li>
+             <li>Mice</li>
+           </ul>
+         </p>
+         <p><a href="#">Edit</a>
+      </div>
+      
+      <hr class="govuk-section-break govuk-section-break--m">
+      
+      <div class="declaration-panel-grey">
+        <h2 class="govuk-heading-m">Certificate 2</h2>
+         <h2 class="govuk-heading-s">Certificate number</h2>
+         <p>89340890438532895023</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Accrediting bodyh2>
+         <p>Royal Veterinarian College</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+     
+         <h2 class="govuk-heading-s">Date awarded</h2>
+         <p>1 June 2017</p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Modules completed</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>L</li>
+             <li>E1</li>
+             <li>PILA (theory)</li>
+             <li>PILA (skills)</li>
+             <li>K (theory)</li>
+             <li>E2</li>
+           </ul>
+         </p>
+         <!-- <p><a href="#">Edit</a></p>
+         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+   
+         <h2 class="govuk-heading-s">Animal types</h2>
+         <p>
+           <ul class="govuk-list govuk-list--bullet">
+             <li>Hamsters</li>
+           </ul>
+         </p>
+         <p><a href="#">Edit</a>
+      </div>
+  
+      <hr class="govuk-section-break govuk-section-break--m">
+
+
+    <div class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h2 class="govuk-heading-m">Mark this section as complete?</h2>
+        <p>You can still edit this section later, but you will be unable to send this application to the Home Office until all sections are marked as complete.</p>
+        <form action='ppl-index' method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="poles-complete" name="poles-complete" type="checkbox" value="true">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="poles-complete">
+                    This section is complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+
+          <button class="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

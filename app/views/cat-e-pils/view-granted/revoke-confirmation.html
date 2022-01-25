@@ -1,0 +1,25 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Mary Jones</span>
+      <h1 class="govuk-heading-l">Confirm revocation</h1>
+      <h2 class="govuk-heading-m">
+        Why are you revoking this licence?
+      </h2>
+      <p>{{data["revoke-reason"]}}</p>
+      
+      <a href="revoke-success" class="govuk-button">Submit</a><a class="secondary-link" href="#">Cancel</a>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

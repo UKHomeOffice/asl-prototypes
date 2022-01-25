@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-rops.html" %}
+
+      <h2 class="govuk-heading-m">Return details</h2>
+      <p>View and edit details about this return, including information used to customise procedures. </p>
+      <p><a href="setup-complete">Show return details</a></p>
+      
+      <h2 class="govuk-heading-m">Procedures</h2>
+      <p>Add details for procedures completed in 2021 using a form customised to this project.</p>
+      <a href="add-procedure-5.html" class="govuk-button">Add procedure</a>
+
+      <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+        <div class="fullscreen-scrollable-table">
+          <table class="govuk-table  table-background" style="font-size: 14px;">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">No.</th>
+                <th scope="col" class="govuk-table__header">Animal species</th>
+                <th scope="col" class="govuk-table__header">Re-use</th>
+                <th scope="col" class="govuk-table__header">Place of birth</th>
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Type of legislation</th>
+                <th scope="col" class="govuk-table__header">Origin of legislation</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                <th scope="col" class="govuk-table__header">Edit</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">{{data['row-1']['species']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['reuse']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['birthplace']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['gaa']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['purpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['subpurpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['typeleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['originleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['severity']}}</td>
+                <td class="govuk-table__cell">{{data['row-1']['procedure-no']}}</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">{{data['row-2']['species']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['reuse']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['birthplace']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['gaa']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['purpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['subpurpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['typeleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['originleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['severity']}}</td>
+                <td class="govuk-table__cell">{{data['row-2']['procedure-no']}}</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">{{data['row-3']['species']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['reuse']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['birthplace']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['gaa']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['purpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['subpurpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['typeleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['originleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['severity']}}</td>
+                <td class="govuk-table__cell">{{data['row-3']['procedure-no']}}</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">{{data['row-4']['species']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['reuse']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['birthplace']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['gaa']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['purpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['subpurpose']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['typeleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['originleg']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['severity']}}</td>
+                <td class="govuk-table__cell">{{data['row-4']['procedure-no']}}</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+      <form action="submit-comment" method="post">
+        <h2 class="govuk-heading-m">Submit return</h2>
+        <p>Submit this project’s completed return of procedures.</p>
+        <a href="declaration" class="govuk-button govuk-button--secondary">Submit return</a>
+      </form>
+      
+      <style>
+        table {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+        .fullscreen-content {
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 0;
+    position: relative;
+    overflow-x: scroll;
+    z-index: 10;
+        }
+        .fullscreen-scrollable-table {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
+
+     
+      </style>
+      
+  </div>  
+</div>
+
+<style>
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#858585;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.customized-scrollbar ::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+</style>
+
+{% endblock %}

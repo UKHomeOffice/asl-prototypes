@@ -1,0 +1,138 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Assessment - Development of new biological anticancer agents
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Assessment sections</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="1-intro">Introductory details</a>
+            <span class="badge float-right">Fulfilled</span>
+        </li>
+        <li>
+          <a href="1-suitability">Applicant information</a>
+            <span class="badge float-right">Fulfilled</span>
+            <span class="badge badge-condition float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="2-suitability-places">Project location</a>
+          <span class="badge float-right">Not fulfilled</span>
+          <span class="badge badge-condition float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="3-programme">Project plan</a>
+          <span class="badge float-right">Fulfilled</span>
+        </li>
+        <li>
+          <a href="5-models">Protocols</a>
+          <span class="badge float-right">Fulfilled</span>
+          <span class="badge badge-condition float-right">5 Conditions</span>
+        <li>
+          <a href="4-types">Use of animals</a>
+            <span class="badge float-right">Fulfilled</span>
+            <span class="badge badge-condition float-right">1 Condition</span>
+        </li>
+        <li>
+          <a href="5a-end-of">Other considerations</a>
+            <span class="badge float-right">Fulfilled</span>
+            <span class="badge badge-condition float-right">2 Condition</span>
+        </li>  
+        <li>
+          <a href="6-3rs">Replacement, reduction & refinement</a>
+            <span class="badge float-right">Fulfilled</span>
+        </li>
+        <li>
+          <a href="7-nts"> Non-technical summary: general</a>
+            <span class="badge float-right">Fulfilled</span>
+        </li>
+        <li>
+          <a href="11-reporting
+            <span class="badge float-right">Not fulfilled</span>
+        </li>
+        <li>
+          <a href="10-hba">Harm-benefit analysis</a>
+        </li>
+        <li>
+          <a href="8-retrospective">Retrospective assessment</a>
+            <span class="badge badge-condition float-right">2 Condition</span>
+        </li>
+        <li>
+          <a href="9-additional-conditions">Further additional conditions</a>
+            <span class="badge badge-condition float-right">2 Condition</span>
+        </li>
+      </ul>
+
+      <p>All sections must be marked as complete before you can recommend the licence for approval.</p>
+
+      <a class="govuk-button" onclick="window.close();">Close assessment</a>
+
+    </div>
+  </div>
+<style type="text/css">
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+  .badge {
+    margin-left: 5px;
+  }
+</style>
+{% endblock %}

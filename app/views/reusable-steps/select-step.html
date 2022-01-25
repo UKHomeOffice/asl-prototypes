@@ -1,0 +1,91 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.hide').toggle();
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+
+    $("#protocol-continue").click(function(){
+      $("#protocol-amend-content").toggle(1);
+      $("#animal-numbers").html("200");
+      $("#change-label").toggleClass('hide');
+      $('#protocol-2-label').toggleClass("selected");
+    });
+  });
+
+
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Steps</h1>
+
+Administration of agents to induce superovulation
+If embryos are needed these animals will also be mated
+Animals killed and oocytes/embryos harvested post mortem
+Generation of genetically altered embryos
+Female mice will be rendered pseudo-pregnant
+Embryos implanted into reproductive tract
+After weaning of offspring, dams will be killed
+Breeding and maintenance of genetically altered mice
+Tissue biopsy to determine genetic status
+Maintenance of animals up to 12 months
+Animals not used on other protocols will be killed
+Induction of liver tumour growth
+Transgene inducing or deleting agents
+Administration of labelling agents - including Retrograde intraductal delivery
+Administration of cells or cell-modulating agents
+Bone marrow transplantation prior to tumour induction
+Diet variation
+Non-invasive in vivo imaging under general anaesthesia
+Sampling of blood from a superficial blood vessel
+Administration of therapeutic agents or control substances
+Implantation of an imaging window
+Optogenetic studies 
+Terminal imaging
+Terminal electrophysiological recording of tissues
+Animals will be killed
+Induction of tumour
+Transgene inducing or deleting agents
+Administration of labelling agents
+Administration of cells or cell-modulating agents
+Implantation of a cutaneous imaging window
+Induction of pancreatic tumour
+Induce tumours in the lung
+A single intracardiac injection of cells
+              
+        <form action="ppl-protocols-review" method="post">
+          <button class="govuk-button">Continue</button>
+          <span class="secondary-link"><a href="#">List of sections</a></span>
+        </form>
+      </p>
+
+    </div>
+  </div>
+
+
+
+<style type="text/css">
+.section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+</style>
+{% endblock %}

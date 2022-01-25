@@ -1,0 +1,65 @@
+<div class="declaration-panel-yellow">
+  <p>
+    <strong>Use everyday language and do not include information that could identify people, places, or intellectual property
+      <br>
+    </strong>
+    <span id="details-arrow-nts">&#9658;</span> <a onclick="toggleNTSDetails()" href="javascript:void(0);" id="details-label-nts" style="color: #0b0c0c;">Tips on writing for the public</a>
+  </p>
+    <div id="details-panel-nts">
+      <br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          use short sentences - these are easier to read
+        </li>
+        <li>
+          use bullet points to break up long paragraphs of text
+        </li>
+        <li>
+          if you have several points to make, separate them with headings
+        </li>
+        <li>
+          leave out extensive detail or background information - give the information required and no more
+        </li>
+        <li>
+          use simple words instead of long words, for example, instead of saying ‘The findings are indicative of…’ say, ‘The findings suggest’ or ‘The finding show’
+        </li>
+        <li>
+          explain technical terms in brackets wherever possible
+        </li>
+      </ul>
+    </div>
+  
+</div>
+
+
+<Script>
+   function toggleNTSDetails() {
+        var x = document.getElementById("details-panel-nts");
+        var detailsLabelNTS = document.getElementById("details-label-nts");
+        var detailsArrowNTS = document.getElementById("details-arrow-nts");
+        console.log(x.style.display)
+        if (x.style.display === "none") {
+          console.log("click")
+          x.style.display = "block";
+          detailsArrowNTS.innerHTML = "&#9660;";
+          // detailsLabelNTS.innerHTML = "Less information";
+        } else if (x.style.display === "block") {
+          x.style.display = "none";
+          detailsArrowNTS.innerHTML = "&#9658;";
+          // detailsLabelNTS.innerHTML = "More information";
+        } else {
+          x.style.display = "block";
+          detailsArrowNTS.innerHTML = "&#9660;";
+          // detailsLabelNTS.innerHTML = "Less information";
+        }
+      }
+</Script>
+  
+  <style>
+    .download-options {
+      width: 20%;
+    }
+    #details-panel-nts{
+      display: none;
+    }
+  </style>

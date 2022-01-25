@@ -1,0 +1,268 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">University of Croydon</span>
+      <h1 class="govuk-heading-l">
+        Apply for personal licence - Categories A, B, C, D and F
+      </h1>
+
+      <p>Please complete all of the following sections.</p>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <hr class=" govuk-section-break">
+
+
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Applicant details<span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+      <a href="#">View applicant details</a>
+      
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Establishment<span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+      <p>University of Croydon</p>
+      <p><a href="#">Edit establishment</a></p>
+      
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-m">
+        Procedures
+        {% if data['pil-proceedures'].length > 1 %} 
+        <span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+        <dl class="govuk-body">
+            <dt>Procedure category</dt>
+            <dd>A</dd>
+            <dt>Procedure category</dt>
+            <dd>B</dd>
+          </dl>
+          <p><a href="#">Edit</a></p>
+        {% else %}
+        </h3>
+        {% endif %}
+        <p><em>No procedures added</em></p>
+        <a href="pil-proceedures.html">Add procedures</a>
+
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">
+        Animal types
+        {% if data['pil-animal-types'].length > 1 %} 
+          <span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Mice</li>
+            <li>Rats</li>
+          </ul>
+          <p>
+            <a href="#">Edit</a>
+          </p>
+        {% else %}
+        </h3>
+        {% endif %}
+        <p><em>No animal types added</em></p>
+        <a href="pil-animal-types.html">Add animal types</a>
+
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">
+        Training
+        {% if data['exempt-module'].length > 0 %} 
+        <span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+          <table class="govuk-table" >
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+                <th scope="col" class="govuk-table__header">Evidence</th>
+                <th scope="col" class="govuk-table__header">Modules</th>
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Evidence details</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  Training certificate
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>L</li>
+                    <li>E1</li>
+                    <li>PILA (theory)</li>
+                    <li>  PILA (skills)</li>
+                    <li>PILB</li>
+                    <li>K (theory)</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list">
+                    <li>Certificate number: 87478489</li>
+                    <li>Awarded by: Universities Group</li>
+                    <li>Awarded on: 3 January 2018</li>
+                  </ul>
+                  <p>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  Exemption
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>K (skills)</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <p>Module K skills will be developed in-house as opportunities arise</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="pil-training-handover">Edit</a></p>
+        {% elif data['cert-module'].length > 0 %} 
+          <span style="font-size: 18px;" class="badge">COMPLETED</span></h3>
+          <table class="govuk-table" >
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+                <th scope="col" class="govuk-table__header">Evidence</th>
+                <th scope="col" class="govuk-table__header">Modules</th>
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Evidence details</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  Training certificate
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>L</li>
+                    <li>E1</li>
+                    <li>PILA (theory)</li>
+                    <li>  PILA (skills)</li>
+                    <li>PILB</li>
+                    <li>K (theory)</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list">
+                    <li>Certificate number: 87478489</li>
+                    <li>Awarded by: Universities Group</li>
+                    <li>Awarded on: 3 January 2018</li>
+                  </ul>
+                  <p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="pil-training-handover">Edit</a></p>
+        {% else %}
+        </h3>
+        {% endif %}      
+        <p><em>No animal types added</em></p>
+        <a href="pil-animal-types.html">Add animal types</a>
+
+      <hr class=" govuk-section-break--m govuk-section-break--visible">
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="application-confirm">
+      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
+
+      
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                 The terms and conditions under which you may hold a licence under the Animals Scientific Procedure Act 1986, and that you may be guilty of an offence if for the purpose of obtaining a licence under this Act you provide information which you know to be false or misleading.
+                </label> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <a href="pil-comment" class="govuk-button" style="margin-bottom: 0px;">Submit to NTCO</a>
+      </div>
+    </div>
+  </div>
+
+<style type="text/css">
+    .float-right {
+      float: right;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #005ea5;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      float: right;
+    }
+
+    .application-confirm {
+      border: 3px solid #bfc1c3;
+      background-color: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    dl {
+      width: 100%;
+    }
+
+    dt {
+      font-weight: bold;
+      clear: left;
+      display: inline-block;
+      width: 35%;
+      padding-bottom:5px;
+    }
+    dd {
+      padding-bottom:5px;
+      display: inline-block;
+      width: 50% 
+      /*font-weight: 400;*/
+      /*background-color: red;*/
+    }
+    table td {
+      vertical-align: top;
+    }
+</style>
+
+
+{% endblock %}

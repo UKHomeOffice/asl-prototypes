@@ -1,0 +1,253 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">How to cure heartache</span>
+      <h1 class="govuk-heading-xl">
+        Protocol summary table
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">    
+
+<style>
+
+.label tr td label {
+	display: block;
+}
+
+
+[data-toggle="toggle"] {
+	display: none;
+}
+.selected-row {
+  background-color: #f8f8f8;
+  border-bottom: 4px solid #f8f8f8;
+}
+.row-toggle {
+  cursor: pointer;
+}
+.red {
+  color: red;
+}
+</style>
+
+<script>
+  $(document).ready(function() {
+	$('[data-toggle="toggle"]').change(function(){
+		$(this).parent().parent().toggleClass('selected-row');
+		$(this).parents().next('.hide').toggle();
+	});
+});
+</script>
+
+      <p><a class="govuk-button" href="protocols-separate">Back to protocols</a></p>  
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Protocol</a></th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+            <th scope="col" class="govuk-table__header">Est. max. no. uses per animal</th>
+            <th scope="col" class="govuk-table__header">Life stages</th>
+            <th scope="col" class="govuk-table__header">GA</th>
+            <th scope="col" class="govuk-table__header">Severity category</th>
+          </tr>
+        </thead>
+        
+        <tbody class="govuk-table__body labels">
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <label for="accounting" class="row-toggle">1. Breeding and maintenance of genetically altered animal</label>
+              <input type="checkbox" name="accounting" id="accounting" data-toggle="toggle">
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">2000</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Mild</td>
+          </tr>
+        </tbody>
+        <tbody class="govuk-table__body hide">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="background-color: #f8f8f8;" colspan=7>
+            <div class="">
+              <h3 class="govuk-heading-s" style="padding-left: 25px;">Steps</h3>
+              <ol>
+                <li>
+                  Breeding and maintenance of genetically altered mice by conventional breeding methods.
+                </li>
+                <li>
+                  OPTIONAL Tissue biopsy to determine genetic status by one of the following methods:
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                    ear punch, blood sampling, hair sampling (AA).
+                    </li>  
+                  <li>
+                    If removal of tip of tail (AB) is scientifically necessary no more than 0.3 cm will be removed.
+                  </li>  
+                  <li>
+                    Rarely, due to technical problems during analysis, a second sample may be taken using the least invasive method.
+                  </li>
+                  </ul>
+                </li>
+                <li>
+                  Maintenance of animals by methods appropriate to their genetic alteration until they reach a maximum of 12 months of age.
+                </li>
+                <li>
+                  "Animals not used on other protocols will be killed by:  
+                  <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    a Schedule 1 method (AC); 
+                  </li>
+                  <li>
+                    or by exsanguination under terminal anaesthesia, completed by a Schedule 1 method(AC); 
+                  </li>
+                  <li>
+                    or by perfusion fixation under terminal anaesthesia."
+                  </li>
+                  </ul>
+                </li>
+                </ol>
+            </div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody class="govuk-table__body">
+
+          
+          <tr class="govuk-table__row protocol-table-clickable" data-href='/'>
+            <td class="govuk-table__cell ">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+                2. Maintenance of parasitic nematodes
+              </div>
+            </td>
+            <td class="govuk-table__cell ">Rats</td>
+            <td class="govuk-table__cell ">200</td>
+            <td class="govuk-table__cell ">10</td>
+            <td class="govuk-table__cell ">Adult</td>
+            <td class="govuk-table__cell ">No</td>
+            <td class="govuk-table__cell ">Moderate</td>
+          </tr>
+          
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+                3. Assessment of anthelminthic activity
+              </div>
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">250</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+              4. Infection with gastrointestinal helminths
+                </div>
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">250</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+              5. Induction of inflammatory arthritis
+                </div>
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">100</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Severe</td>
+          </tr>
+          
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+              6. Induction of diabetes
+                </div>
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">100</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          
+          <tr class="govuk-table__row protocol-table-clickable">
+            <td class="govuk-table__cell">
+              <div class="row-toggle protocol-table-arrow-right"></div>
+              <div class="protocol-table-title">
+              7. Induction of cardiovascular disease
+                </div>
+            </td>
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">100</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Adult</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Moderate</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+<style type="text/css">
+  .empty-below {
+    border-bottom: none;
+  }
+  ol li {
+    margin-bottom: 15px;
+  }
+  .govuk-details__summary-text{
+    color: #626a6e;
+  }
+  .govuk-details__summary:before {
+    color: #626a6e;
+  }
+
+</style>
+
+     
+
+  </section>
+</div>
+
+
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

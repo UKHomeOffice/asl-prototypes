@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">USERS NAME</span>
+      <h1 class="govuk-heading-xl">
+        Personal Licence
+      </h1>
+    </div>
+  </div>  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+            
+      <dl class="govuk-body">
+        <dt>Licence number</dt>
+        <dd>KW-740222</dd>
+        <dt>Issue date</dt>
+        <dd>04 August 2015</dd>
+        <dt>Establishment</dt>
+        <dd>04 August 2015</dd>
+        <dt>Animal types</dt>
+        <dd>
+          <ul class="govuk-list">
+            <li>Mice</li>
+            <li>Rats</li>
+            <li>Hamsters</li>
+          </ul>
+        </dd>
+        <dt>Procedures</dt>
+        <dd>
+          <p><strong>A</strong>: Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+          <p><strong>B</strong>: Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical
+          procedures conducted under brief non-recovery general anaesthesia</p>
+
+          <p><strong>C</strong>: Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or
+          prolonged general anaesthesia.</p>
+        </dd>
+        <dt>Conditions</dt>
+        <dd>
+          <p><a href="#">The standard conditions apply</a></p>
+        </dd>
+      </dl>
+      <p>You can't amend this PIL because it is held at another establishment.</p>
+      <a href="#">Back to profile</a>
+      
+      
+    </div>
+  </div>
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+</style>
+
+    
+
+{% endblock %}

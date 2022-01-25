@@ -1,0 +1,368 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Inspector
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#tasks">
+              Tasks
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Establishments
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#people">
+              People
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#projects">
+              Projects
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="tasks" style="border:none;"></section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="projects" style="border:none;">
+          <h2 class="govuk-heading-m">Advanced project search</h2>
+          <p>Search all current and past projects.</p>
+          <div class="govuk-form-group search-box">
+            <form action="search-content-link-content#projects">
+              <label for="" class="govuk-label">Enter a search term</label>
+              <span class="govuk-hint">For example, stem cells</span>
+              <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px" placeholder="Search projects">
+              <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+            </form>
+          </div>
+          <p>
+            <a href="/improving-nav/search-content-link-meta#projects">Back to project directory</a>
+          </p>
+          <br>
+          <div class="govuk-gird-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span><strong>Filter projects</strong></span>
+            {% include "includes/search-filters.html" %}
+          </div>
+          <div class="govuk-grid-column-three-quarters">
+            <p>
+              All 3342 projects
+              <span class="float-right"><a href="#">Download project details as a .csv</a></span>
+            </p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+            <h2 class="govuk-heading-m">A study on treatment and penetrance of inherited cardiac conditions</h2>
+          </p> -->
+          <p>
+            <a class="search-project-heading" href="#">Neuron-Glia Interactions in Health and Disease</a>
+          </p>
+          <div class="govuk-grid-row ppl-metadata">
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>PPL holder: Bruce Banner</li>
+                <!-- <li>PPL number: PB9375H87</li> -->
+                <li>Establishment: University of Croydon</li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>
+                  Licence status: Active
+                </li>
+                <li>
+                  Expiry date: 12 June 2020
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">XXXrenal fibro</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">(Epi) Genetic Programming of Growth and Metabolism - Partial record</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+           
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <p>
+              <a class="search-project-heading" href="#">A NEW FRAMEWORK FOR COMPUTATIONAL BIOMECHANICAL MODELS AND 3RS IN MUSCULOSKELETAL RESEARCH</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Dave Lee</li>
+                  <!-- <li>PPL number: P88375958</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active (Includes project continuation)
+                  </li>
+                  <li>
+                    Expiry date: 1 May 2025
+                  </li>
+                </ul>
+              </div>  
+            </div>
+            
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p>
+            <a class="search-project-heading" href="#">A Nipah virus vaccine to eliminate porcine reservoirs and safeguard human health</a>
+          </p>
+          <div class="govuk-grid-row ppl-metadata">
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>PPL holder: Bruce Banner</li>
+                <!-- <li>PPL number: PB9375H87</li> -->
+                <li>Establishment: University of Croydon</li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>
+                  Licence status: Active
+                </li>
+                <li>
+                  Expiry date: 12 June 2020
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          
+            <p>
+              <a class="search-project-heading" href="#">A murine model of Oculocutaneous Albinism to study the efficacy of drug PTC124 in treating albinism derived visual defects</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+           
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <p>
+              <a class="search-project-heading" href="#">A practical training in microvascular techniques for surgeons</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Dave Lee</li>
+                  <!-- <li>PPL number: P88375958</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active (Includes project continuation)
+                  </li>
+                  <li>
+                    Expiry date: 1 May 2025
+                  </li>
+                </ul>
+              </div>  
+            </div>
+            
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p>
+            <a class="search-project-heading" href="#">A service to enable the cryopreservation and rederivation of genetically modified mice</a>
+          </p>
+          <div class="govuk-grid-row ppl-metadata">
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>PPL holder: Bruce Banner</li>
+                <!-- <li>PPL number: PB9375H87</li> -->
+                <li>Establishment: University of Croydon</li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <ul class="govuk-list govuk-hint">
+                <li>
+                  Licence status: Active
+                </li>
+                <li>
+                  Expiry date: 12 June 2020
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">XXXrenal fibro</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">A study on treatment and penetrance of inherited cardiac conditions</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">XXXrenal fibro</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">A study on treatment and penetrance of genotoxic conditions</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            
+            <!-- <p>
+              <h2 class="govuk-heading-m">XXXrenal fibro</h2>
+            </p> -->
+            <p>
+              <a class="search-project-heading" href="#">A study on treatment and penetrance of inherited cardiac conditions</a>
+            </p>
+            <div class="govuk-grid-row ppl-metadata">
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>PPL holder: Janet Simmonds</li>
+                  <!-- <li>PPL number: H84847JK9</li> -->
+                  <li>Establishment: University of Croydon</li>
+                </ul>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <ul class="govuk-list govuk-hint">
+                  <li>
+                    Licence status: Active
+                  </li>
+                  <li>
+                    Expiry date: 12 June 2020
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            {% set paginationTotal = '3342' %}
+            {% include "includes/pagination.html" %}
+          </div>
+
+        </div>
+
+        </section>
+
+      </div>
+
+      
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .unbold {
+      font-weight: normal;
+    }
+    .ppl-metadata ul {
+      font-size: 16px;
+    }
+  </style>
+
+{% endblock %}

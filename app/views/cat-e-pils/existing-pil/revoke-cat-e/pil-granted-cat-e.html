@@ -1,0 +1,121 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="download-header">
+            <span class="govuk-body licence-identifier" class="">Bruce Banner</span>
+            <span class="float-right download-options">
+              <span class="hod-download-button side-space icon-small"></span>
+              <a href="#">View download options</a>
+            </span>
+            <span class="govuk-body licence-type" class="">Personal licence</span>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+            
+      <dl class="govuk-body">
+        <dt>Licence number</dt>
+        <dd>KW-740222</dd>
+        <dt>Establishment</dt>
+        <dd>Slough University</dd>
+        <dt>Issue date</dt>
+        <dd>04 April 2020</dd>
+        <dt>Animal types</dt>
+        <dd>
+          <ul class="govuk-list">
+            <li>Mice</li>
+          </ul>
+        </dd>
+        <dt>Procedures</dt>
+        <dd>
+        <p>
+          A. Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.
+        </p>
+  
+        <p>
+          B. Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical procedures conducted under brief non-recovery general anaesthesia
+        </p>
+        <p style="margin-bottom: 0px;">E. Training and education</p>
+        <div class="govuk-inset-text" style="margin-top: 0px;">
+          <h3 class="govuk-heading-s"></h3>
+          <p>
+            <strong>Grant date</strong> 
+            <br>
+            18 June 2020
+          </p>
+          <p>  
+            <strong>Expiry date</strong> 
+            <br>
+            17 September 2020
+          </p>
+          <p>  
+            <strong>Animal types</strong> 
+            <br>
+            Mice
+          </p>
+          <p>  
+            <strong>Training establishment</strong> 
+            <br>
+            University of Croydon
+          </p>
+          <p>  
+            <strong>Project licence title</strong> 
+            <br>
+            Microvasuclar surgery
+          </p>
+          <a href="revoke-confirmation" class="govuk-button govuk-button--warning">Remove category E</a>
+          
+        </div>
+        <dt>Conditions</dt>
+        <dd>
+          <p><a href="#">The standard conditions apply</a></p>
+        </dd>
+      </dl>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Amend licence</h2>
+      <p>You can ask for this licence to be amended but only the licence holder can transfer it.</p>
+      <p><button class="govuk-button govuk-button--secondary">Amend licence</button></p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Revoke licence</h2>
+      <p>Cancel this licence if it is no longer needed.</p>
+      <p><button class="govuk-button govuk-button--warning">Revoke licence</button></p>
+
+    </div>
+  </div>
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 30px;
+    width: 25%;
+  }
+
+  .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 15px;
+    position: relative;
+}
+</style>
+
+    
+
+{% endblock %}

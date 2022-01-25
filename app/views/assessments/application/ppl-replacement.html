@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'replacement' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Replacement</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why do you need to use animals to achieve the aim of your project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          This project seeks to understand phenomena that arise in the whole brain, and rely on interconnections within the brain such as: the mechanisms that underlie acute and chronic seizures; and how seizure activity can disrupt autonomic activity -specifically the neural circuits in the brainstem that control breathing and cardiovascular regulation. Catastrophic disruption of the activity in these neural circuits is likely to underlie SUDEP. These phenomena can only be studied in whole animals and tissues taken from animals, in which seizures have been previously induced. It would be unethical to use human subjects in these experiments.
+        </p>
+
+        <p>
+          Brain organoids replicate to a very limited extent some of the circuitry of the brain. While these are unlikely any time soon to give detailed recapitulation of brainstem cardiorespiratory networks suitable for our aims, we shall monitor developments in this area, in case advances may make them suitable for investigating cellular and molecular mechanisms within the relevant neuronal subtypes and subcircuits.
+        </p>
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What was your strategy for searching for non-animal alternatives?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          Induction of seizure like activity in isolated brain tissue
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why were they not suitable?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <p>
+          Seizure induction in isolated tissue:
+        </p>
+
+        <p>
+          These models are acceptable for investigation of rather general phenomena related to the mechanisms of seizures. Brain slices are typically cut from one region. Our investigation of the mechanisms that could lead to SUDEP requires an interconnected brain whereby a seizure initiated in the cortex can invade, through many interposed steps, the key brainstem nuclei involved in cardiorespiratory control. It is impossible to achieve this type of interconnectivity in vitro. In vitro models are inadequate to progress the aims of the project.
+        </p>
+
+
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      {% set previousPage = 'ppl-fate' %}
+      {% set previousPageTitle = 'Fate of animals' %}
+      {% set nextPage = 'ppl-reduction' %}
+      {% set nextPageTitle = 'Reduction' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+  </div>
+
+{% endblock %}

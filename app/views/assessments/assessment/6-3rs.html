@@ -1,0 +1,126 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li class="back-to-sections"><a href="assessment-overview">&#x25C0; &ensp; List of sections</a></li>
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary: general</a></li>
+        <li class="selected"><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+        <li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li>
+        <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="10-hba">Harm-benefit analysis</a></li>         
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Non-technical summary: 3Rs</h1>
+      
+      <form action="assessment-overview" method="post">
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for replacement, reduction & refinement
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Reasonable steps have been taken to find alternatives, for example NC3Rs or Norecopa.
+            </li>
+            <li>
+              The project’s objectives justify the use of protected animals and could not be achieved using non-animal alternatives.
+            </li>
+            <li>
+              There is a reasonable explanation for the numbers of animals to be used.
+              <br><span class="govuk-hint">Information relevant to this standard may also be found in project plan</span>
+            </li>
+            <li>
+              The project will use the least sentient species and life stages to achieve its objectives.
+              <br><span class="govuk-hint">Information relevant to this standard may also be found in protocols</span>
+            </li>
+            <li>
+              Methods to replace, reduce and refine are appropriate and adequate.
+              <br><span class="govuk-hint">Information relevant to this standard may also be found in project plan and protocols</span>
+            </li>
+          </ul>
+        </div>
+      </details>
+      
+      {% set assessSection = '3rs' %}
+      {% set assessSectionTitle = 'the 3 Rs' %}
+      {% include "includes/assessment-met.html" %}
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+      <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+      <p><span class="govuk-hint"><em>None automatically selected based on applicant’s responses</em></span></p>
+   <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Establishment licences not meeting Code of Practice
+                <p>If an establishment does not meet the requirements laid out in the Code of Practice for the housing and care of animals bred, supplied, or used for scentific purposes, the following conditions apply:<br>
+                  • <<<INSERT conditions HERE>>></p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Write new condition
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+      {% include "includes/assessment-complete.html" %}
+
+    
+      </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

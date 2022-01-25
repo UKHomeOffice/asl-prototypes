@@ -1,0 +1,23 @@
+<div class="edit-block">
+  <div class="writeEdit hide">
+    <form method="post">
+    <p><strong>Reason for refusal</strong>
+      <span class="govuk-hint">Explain why this licence is being refused, including any assessment standards that haven’t been met. Your reason will be included in the refusal notice to the applicant.</span>
+    </p>
+    <textarea class="EditBox govuk-textarea " id="more-detail" name="refusal-summary" rows="5" aria-describedby="more-detail-hint">{% if data["refusal-summary"].length > 1 %}
+{{data["refusal-summary"]}}{% else %}The use of NHPs is not justified and the applicant refuses to use an alternative{% endif %}
+    </textarea>
+    <button onClick='saveEdit(this)' class="saveEditButton govuk-button govuk-button--secondary">Save changes</button> <a class="secondary-link" href="javascript:void(0)">Cancel</a>
+  </form>
+  </div>
+  <div class="addedEdit  hide">
+    <div class="">
+    </div>  
+    <div class="Edit-content">
+      <p></p>
+    </div>
+  </div> 
+  <div class="initiateEdit" >
+    <button onClick='initiateEdit(this)' class="govuk-button govuk-button--secondary">Edit</button>
+  </div>
+</div>  

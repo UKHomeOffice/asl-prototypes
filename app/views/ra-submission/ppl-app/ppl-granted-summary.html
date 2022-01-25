@@ -1,0 +1,221 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-expired.html" %}
+      {% include "includes/licence-header-ppl.html" %}
+      <!-- {% include "includes/list-of-sections.html" %} -->
+    </div>
+  </div>
+
+ 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="ppl-sidebar">
+        <li class="active-sidebar">
+        	<a href="#">Project summary</a>
+        </li>
+        <li>
+        	<a href="#">Conditions</a>
+        </li>
+        <li>
+        	<a href="#">Authorisations</a>
+        </li>
+        <li>
+        	<a href="#">Action plan</a>
+        </li>
+        <li>
+        	<a href="#">Protocols</a>
+        </li>
+        <li>
+        	<a href="#">Animals taken from the wild</a>
+        </li>       
+      </ul>
+    </div>
+
+<style>
+  .ppl-sidebar {
+    padding-inline-start: 0px;
+  }
+  .ppl-sidebar a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .ppl-sidebar li{    
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    background-color: #ffffff;
+  }
+  .ppl-sidebar .active-sidebar {
+    background-color: #005ea5;
+    color: #fff;
+  }
+</style>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Project summary
+      </h1>
+      <h3 class="govuk-heading-s">
+        Retrospective assessment
+      </h3>
+      <p>
+        The Secretary of State has determined that a retrospective assessment of this licence is required, and should be submitted within 6 months of the licence's revocation date.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Project licence number
+      </h2>
+      <p>
+        PP2582730
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Project licence holder
+      </h2>
+      <p>
+        Bruce Banner
+      </p>
+
+      <p>
+        This PROJECT LICENCE permits the licence holder to carry out a programme of scientific procedures on living animals under the ANIMALS (SCIENTIFIC PROCEDURES) ACT 1986.
+      </p>
+
+      <p>
+        The project licence holder may carry out the specified programme of work, subject to the restrictions and provisions contained within the Act and any limitations and conditions specified within this licence or by the Secretary of State.
+      </p>
+
+      <p>
+        This licence does not authorise the holder or any other person to carry out procedures on any animals unless they hold an appropriate personal licence issued under the Act.
+      </p>
+
+      <h3 class="govuk-heading-s">
+        Which permissible purposes apply to this project?
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          (a) Basic research
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">
+        Key words that describe this project
+      </h3>
+      <p>
+        Choose up to 5. For example: cancer, stem cells, therapy.
+      </p>
+
+      <p>
+        No answer provided
+      </p>
+
+      <h3 class="govuk-heading-s">
+        Project licence duration
+      </h3>
+      <p>
+        <strong>Years</strong> 3
+        <br>
+        <strong>Months</strong> 5
+      </p>
+      <h3 class="govuk-heading-s">
+        Date granted
+      </h3>
+      <p>
+        05 November 2019
+      </p>
+
+      <h3 class="govuk-heading-s">
+        Expiry date
+      </h3>
+      <p>
+        05 April 2023
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Project location
+      </h2>
+      <p>
+        You are authorised to undertake this programme of scientific procedures at the following places:
+      </p>
+
+      <h3 class="govuk-heading-s">
+        Primary establishment
+      </h3>
+      <p>
+        University of Croydon
+      </p>
+
+      <dl>
+        <dt>
+          Establishment licence number:
+        </dt>
+        <dd>
+          XCC09J64D
+        </dd>
+        <dt>
+          Establishment licence holder:
+        </dt>
+        <dd>
+          Bruce Banner
+        </dd>
+        <dt>
+          Address:
+        </dt>
+        <dd>
+          University of Croydon, Lunar House, CR0 1AB, Surrey
+        </dd>
+      </dl>
+      <h3 class="govuk-heading-s">
+        Additional establishments
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Slough University
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">
+        Places other than a licensed establishment (POLEs):
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Slough Farm
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Granted authority
+      </h2>
+      <p>
+        This licence has been granted based on the information provided during the application process.
+      </p>
+
+      <p>
+        This licence authorises, only:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          work to meet the specified project aims
+        </li>
+        <li>
+          use of specified animals and procedures
+        </li>
+        <li>
+          work at the specified places
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

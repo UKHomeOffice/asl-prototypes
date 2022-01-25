@@ -1,0 +1,116 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'benefits' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Benefits</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What outputs do you think you will see at the end of this project?
+        </label>
+        <span class="govuk-hint"></span>
+        <h3 class="govuk-heading-s">Sudden unexpected death in epilepsy (SUDEP)</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Identification of the key cardiovascular and/or respiratory autonomic neurons that are impacted by seizures. The knowledge of functional changes in neurons in specific cardiorespiratory nuclei will help us to understand how these changes may lead to SUDEP.
+          </li>
+
+          <li>
+            Potential for development of functional biomarker tests for people with epilepsy who are at higher risk of SUDEP.
+          </li>
+          
+          <li>
+            Establishing whether inhibition or activation of microglia could be effective in preventing seizures and maintaining the activity of cardiorespiratory networks during acute or chronic seizures.
+          </li>
+          <li>
+            High impact publications and generation of new intellectual property.
+          </li>
+        </ul>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Who or what will benefit from these outputs, and how?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>
+          Our project may lead to direct patient benefits in the short to medium term:
+        </p>
+
+        <p>
+          Non-invasive testing of the responses of cardiorespiratory autonomic neurons to CO2 (biomarker test) at different phases of epilepsy might identify people with epilepsy who are at higher risk of SUDEP. This would allow adjustment of lifestyles (e.g. supervision, nocturnal breathing support) to mitigate risk. Minocycline is a commonly prescribed antibiotic, that crosses the blood brain barrier. There is evidence to suggest this drug also blocks microglial activation, and if we can identify that microglial activation could lead to SUDEP then this drug might be a potential intervention to lower the risk of SUDEP. 
+        </p>
+        
+        <p>
+          Longer term 
+        </p>
+        
+        <p>
+          The identification of the mechanisms that underlie SUDEP -specifically the alterations to brainstem neural circuitry may suggest new strategies to lessen the risk of SUDEP e.g. use of stimulants that might act specifically on certain key circuits. Additionally these new therapeutic targets could lead to new drug development or repurposing of existing drugs that already act on these targets.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Will this work be offered as a service to others?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>No</p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          How will you maximise the outputs of your work?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>
+          In addition to disseminating our findings through high quality scientific papers and conference presentations, we shall have a systematic program to engage with a wider audience.
+        </p>
+        <p>
+          This wider engagement will involve:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Dissemination through funders and relevant charities (e.g. ERUK)
+          </li>
+          <li>
+            Engagement with relevant patient groups
+          </li>
+          <li>
+            More general public engagement e.g. with communities local to the University, Science Fairs, Schools.
+          </li>
+        </ul>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+      {% set previousPage = 'ppl-aims' %}
+      {% set previousPageTitle = 'Project aims' %}
+      {% set nextPage = 'ppl-harms' %}
+      {% set nextPageTitle = 'Project harms' %}
+      {% include "includes/application-footer-nav.html" %}
+    </div>
+  </div>
+
+{% endblock %}

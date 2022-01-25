@@ -1,0 +1,154 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Returns of procedures
+      </span>
+      
+      <h1 class="govuk-heading-l">Download returns of procedures</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        Reporting period: &ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>1 January 2021 to 31 December 2021</option>
+          <option value="updated">1 January 2020 to 31 December 2020</option>
+        </select>
+      </p>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+  <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,737</span>
+        <span class="label">Expected</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">1,369</span>
+        <span class="label">Incomplete</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">2,368</span>
+        <span class="label">Complete</span>
+      </div>  
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Overview
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#complete">
+              Download returns
+            </a>
+          </li>
+        
+        </ul>
+
+        <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          <h2 class="govuk-heading-m">Complete returns</h2>
+          <dl>
+            <dt>Total complete</dt>
+            <dd>2,368</dd>
+            <dt>Total that required correcting</dt>
+            <dd>128</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Incomplete RoPs</h3>
+          <dl>
+            <dt>Total incomplete</dt>
+            <dd>1,369</dd>
+            <dt>Total unstarted</dt>
+            <dd>297</dd>
+            <dt>Total unsubmitted</dt>
+            <dd>1,027</dd>
+            <dt>Total undergoing corrections</dt>
+            <dd>45</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Returns expected</h3>
+          <dl>
+            <dt>Total expected returns</dt>
+            <dd>3,737</dd>
+          </dl>
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <h2 class="govuk-heading-m">Download returns</h2>
+          <a href="download" class="govuk-button">Download returns</a>
+          <table class="govuk-table ">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Downloaded on</th>
+                <th scope="col" class="govuk-table__header">Note</th>
+                <th scope="col" class="govuk-table__header">Downloaders name</th>
+                <th scope="col" class="govuk-table__header">Expected</th>
+                <th scope="col" class="govuk-table__header">Complete</th>
+                <th scope="col" class="govuk-table__header">Incomplete</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">23 June 2021</td>
+                <td class="govuk-table__cell">This is the final cut</td>
+                <td class="govuk-table__cell">Stanley Tate</td>
+                <td class="govuk-table__cell">3,737</td>
+                <td class="govuk-table__cell">2,368</td>
+                <td class="govuk-table__cell">1,027</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>      
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
+        
+          <table class="govuk-table ">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Project title</th>
+                <th scope="col" class="govuk-table__header">PPL holder</th>
+                <th scope="col" class="govuk-table__header">Date submitted</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-complete.html">Development of new biological anticancer agents</a></td>
+                <td class="govuk-table__cell">Bruce Banner</td>
+                <td class="govuk-table__cell">24 January 2020</td>
+                <td class="govuk-table__cell"><span class="badge blue">Corrected</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="rops-complete.html">How to cure heartache</a></td>
+                <td class="govuk-table__cell">Billy Eastern</td>
+                <td class="govuk-table__cell">22 January 2020</td>
+                <td class="govuk-table__cell"><span class="badge blue">Complete</span></td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </section>
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

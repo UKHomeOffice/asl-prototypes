@@ -1,0 +1,203 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+#toaster {
+  visibility: hidden;
+  min-width: 100%;
+  margin-left: 0;
+  background-color: #00703c;
+  color: #ffff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top:0;
+  font-size: 17px;
+}
+#toaster h2 {
+    color: #ffff;
+
+}
+
+#toaster.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/*@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 0px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+*/
+@-webkit-keyframes fadeout {
+  from {top: 0px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 0px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+</style>
+</head>
+
+
+<script>
+
+
+  
+function myFunction() {
+  var x = document.getElementById("toaster");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  
+}
+
+
+</script>
+<body onload="myFunction()"></body>
+
+<div id="toaster">
+  <h2 class="govuk-heading-m" style="margin-bottom: 0px;">Your inactive establishment has been created</h2>
+</div>
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Inspector
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="search-panel">
+        <h2 class="govuk-heading-m">Search</h2>
+        <p>
+          <a href="search/establishments" class="active">Establishments</a>
+           | 
+          <a href="search/people" class="">People</a>
+           | 
+          <a href="search/projects" class="">Projects</a>
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            
+              <div class="govuk-form-group search-box">
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+                <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>ss="hod-search side-space icon-small" style="color: white;"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="view-all-link">
+              <span class="secondary-link"><a href="/search/establishments">View all establishments</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-m">
+        All 7 results
+        <span class="govuk-body float-right"><a href="create-pel">Create inactive establishment</a></span>
+      </h3>
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Name</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+                <th class="govuk-table__header" scope="col">Inspector</th>
+                <th class="govuk-table__header" scope="col">SPoC</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">John Smith</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Marvell Pharma</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">Janet Andrews</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Compu-health</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">Steven Ash</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Science4U</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">Dominic Brown</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Royal College for Animals</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">Anna Smith</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">London Bridge University</a></td>
+                <td class="govuk-table__cell">Active</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">Tony Black</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="trim">The Royal Institute of Monkeys</a></td>
+                <td class="govuk-table__cell">Inactive</td>
+                <td class="govuk-table__cell">Inspector Morse</td>
+                <td class="govuk-table__cell">–</td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 7 of 7 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+          
+
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

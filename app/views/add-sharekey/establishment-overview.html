@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        The Royal Institute of Monkeys
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">     
+      <div class="est-container">
+        <p>
+          <a href="#">Establishment details</a><br>
+          Contact information for this establishment, as well as any conditions and authorisations.
+        </p>
+      </div>
+      <div class="est-container">
+        <p>
+          <a href="#">Approved areas</a><br>
+          Approved areas in this establishment where animals may be used.
+        </p>
+      </div>
+      <div class="est-container">
+        <p>
+          <a href="#">People</a><br>
+          Named people, licence holders, and the Home Office Liaison Contact.
+        </p>
+      </div>
+      <div class="est-container">
+        <p>
+          <a href="#">Projects</a><br>
+          Projects with primary availability at this establishment.
+        </p>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-third">
+      <h3 class="govuk-heading-s">Establishment licence number
+        <br><span class="govuk-body">XCC09J64D</span>
+      </h3>
+      <h3 class="govuk-heading-s">Establishment licence holder
+        <br><span class="govuk-body"><a href="#">Bruce Banner</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Named person responsible for compliance
+        <br><span class="govuk-body"><a href="#">Hugh Smith</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Inspectors
+        <br><span class="govuk-body"><a href="#">Inspector Morse</a></span>
+        <br><span class="govuk-body"><a href="#">Edit</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Single Point of Contact (SPoC)
+        <br><span class="govuk-body"><a href="#">Edit</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">SharedKey
+        {% if data['SharedKey'].length > 0 %}
+        <br><span class="govuk-body">{{data['SharedKey']}}</span>
+        <br><span class="govuk-body"><a href="add-SharedKey">Edit</a></span>
+        {% else %}
+        <br><span class="govuk-body">–</span>
+        <br><span class="govuk-body"><a href="add-sharekey">Add</a></span>
+        {% endif %}
+      </h3>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    .est-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+{% endblock %}

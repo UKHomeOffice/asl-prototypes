@@ -1,0 +1,156 @@
+  
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ul class="assessment-nav">
+        <li><a href="1-intro">Introductory details</a></li>
+        <li><a href="7-nts">Non-technical summary</a></li>
+       <li><a href="6-3rs">Replacement, reduction and refinement (NTS)</a></li>
+<li><a href="1-suitability">Applicant information</a></li>
+        <li><a href="2-suitability-places">Project location</a></li>
+        <li><a href="3-programme">Project plan</a></li>
+        <li><a href="5-models">Protocols</a></li>
+        <li><a href="4-types">Use of animals</a></li>
+        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ reporting condition</a></li>
+</li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
+        
+
+       
+
+        <li class='selected'><a href="12-referrals">Referrals</a></li> 
+
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Referrals</h1>
+      
+
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Add a referral outcome
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+              Include who the referral was made to and your agreed outcome of that referral.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h2 class="govuk-heading-m">
+              Select any referrals you have made
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes" data-module="checkboxes">
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                Internal referral
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Summarise the advice you received
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" aria-describedby="contact-by-email-hint">I have discussed killing by removal of the heart with Inspector Lestrade and we agreed that this could be exsanguination and cessation of the circulation. In practice,animals will be killed with minimal harms.</textarea>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+                ASC referral
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Summarise the ASC review
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-phone" name="contact-by-phone" rows="5" aria-describedby="contact-by-phone-hint"></textarea>
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-mobile">
+                  ASRU response to the ASC review
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-mobile" name="contact-by-mobile" rows="5" aria-describedby="contact-by-mobile-hint"></textarea>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+                External review
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Summarise the external review
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-phone" name="contact-by-phone" rows="5" aria-describedby="contact-by-phone-hint"></textarea>
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-mobile">
+                  ASRU response to the external review
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-mobile" name="contact-by-mobile" rows="5" aria-describedby="contact-by-mobile-hint"></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <!-- <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add a referral</a> -->
+
+      <form action="assessment-overview" method="POST">
+      
+        {% set sectionComplete = 'yes' %}
+        {% include "includes/assessment-complete.html" %}
+      
+      </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+</style>
+{% endblock %}

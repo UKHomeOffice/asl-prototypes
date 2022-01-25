@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'aims' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Aims</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          What's the aim of this project?
+        </label>
+        <span class="govuk-hint">Keep this to a short one or two sentence summary.</span>
+        <!-- <p>
+          <span class="badge changed">Changed</span>
+        </p> -->
+        <p>
+          In a certain proportion of adults, especially those that are untreatable with current medications, there is a risk of sudden unexpected death in epilepsy (SUDEP) in adults. The aetiology of this condition is not fully understood, but there is the possibility that neurological dysfunction associated with the epileptic fits may lead to cardiorespiratory failure. Our aim is to understand the mechanisms by which epileptic fits could compromise the function of cardio respiratory neurons which in turn could lead to SUDEP, and to look at new treatments that could prevent it from happening.
+        </p>
+        <!-- <section class="expanding-panel open comments has-new">
+          <div class="comment-header">
+            <h3 class="govuk-heading-s" style="background-color: #f3f3f3; padding-top: 15px;"><a href="#">Hide comments</a><span class="float-right">–</span></h3>
+          </div class="comment-header">
+          <div class="content">
+            <div class="comment isNew mine">
+              <div class="header govuk-body">
+                <strong>1. NTS reviewer</strong> 1 June 2020
+              </div>
+              <div class="content">
+                <p>Please remove this reference to University of Croydon so we can publish this NTS</p>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Why is it important to undertake this work?
+        </label>
+        <span class="govuk-hint"></span>
+        <p>
+          In the UK, around 600,000 people – almost 1% of the population – have epilepsy. Of these people with epilepsy approximately 600 die every year from SUDEP. Many more people have to live daily with the risk of SUDEP hanging over them. Whilst it is known that seizure-induced cardiorespiratory autonomic dysfunction is a potential cause of SUDEP, identification of effective therapies to prevent SUDEP is hampered by poor understanding of the underlying neural mechanisms that lead to seizure-induced cessation of breathing and/or circulation. Improved knowledge of microglial activation or inhibition in regulating cardiorespiratory function and seizure threshold/frequency will help to inform the future development of therapeutic interventions. Developments in therapeutic care will ultimately benefit the patients, clinicians and the health care system. It will reduce the duration of hospitalization and disabilities due to uncontrolled seizures in patients with epilepsy and reduce suffering of their family members, and improve the quality of life in lessening concerns over seizures and SUDEP. We hope that in the longer term, the UK health care system will benefit by saving money and resources spent on epilepsy patients.
+        </p>
+        {% include "includes/add-comment.html" %}
+
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="width-20">
+          Key words that describe this project
+        </label>
+        <span class="govuk-hint">Choose up to 5. For example: cancer, stem cells, therapy.</span>
+        <p><em>No answer provided</em></p>
+        {% include "includes/add-comment.html" %}
+      </div>
+   
+      {% set previousPage = 'ppl-intro' %}
+      {% set previousPageTitle = 'Introductory details' %}
+      {% set nextPage = 'ppl-benefits' %}
+      {% set nextPageTitle = 'Benefits' %}
+      {% include "includes/application-footer-nav.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

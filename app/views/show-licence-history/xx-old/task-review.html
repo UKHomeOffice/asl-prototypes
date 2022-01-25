@@ -1,0 +1,137 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL amendment</span>
+      <h1 class="govuk-heading-xl">
+        Review amendment
+      </h1>
+      <h3 class="govuk-heading-s">Finding the cure for heartache</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#applicant.application" class="">Latest submission</a>
+        <a href="#procedures" class="">Statutory target deadline</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge blue">approved</span>
+          <span class="date">14 June 2019</span>
+        </p>
+      <p><strong>Granted by:</strong> <a href="#">John Smith</a></p>
+      <p>This looks good.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show previous activity
+          </span>
+        </summary>
+        <div class="">
+          <br>
+          <p>
+            <span class="badge">Recommendation made</span>
+            <span class="date">8 June 2019</span>
+          </p>
+          <p><strong>Recommended by:</strong>Inspector Morse</p>
+          <p><strong>Recommendation:</strong> Approve</p>
+          <p>This is good to go, please grant the licence</p>
+          <br>
+          <p>
+            <span class="badge">Awaiting recommendation</span>
+            <span class="date">28 May July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+          <p>I hope that is statisfactory, please let me know if you require anything else.</p>
+          <br>
+          <p>
+            <span class="badge">Returned</span>
+            <span class="date">20 May July 2019</span>
+          </p>
+          <p><strong>Returned by:</strong> <a href="#">Inspector Morse</a></p>
+          <p>Please could you address the comments I have made?</p>
+          <br>
+          <p>
+            <span class="badge">Awaiting recommendation</span>
+            <span class="date">16 May July 2019</span>
+          </p>
+          <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+          
+        </div>
+      </details>
+
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">PPL holder</h2>
+      <p><a href="#">Bruce Banner</a></p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+      <p>This is the application that has been submitted for approval.</p>
+
+      <button class="govuk-button govuk-button--secondary">View latest submission</button>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Statutory target deadline</h2>
+      
+      <p><strong>27 June 2019</strong></p>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+  </style>
+
+{% endblock %}

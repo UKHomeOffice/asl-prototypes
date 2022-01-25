@@ -1,0 +1,89 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-ra.html" %}
+      {% include "includes/list-of-sections.html" %}
+      <!-- <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span> -->
+      <h1 class="govuk-heading-xl">
+        Check your answers for reduction
+      </h1>
+      {% include "includes/nts-warning-small.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+           
+      <label class="govuk-label--s" for="option-1-additional-1">
+        How did you minimise the numbers of animals used on your project and is there anything others can learn from your experience?
+      </label>
+      <span class="govuk-hint"></span>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show the project’s planned reduction measures
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h2 class="govuk-heading-s">
+            Explain how you will assure the use of minimum numbers of animals.
+          </h2>
+          <p>
+            The experiments we perform are only permitted on the condition we use the least number of animals possible to get a meaningful result to assess safety or whether a drug has the desired effect. These numbers are sometimes based on a number set by a regulator, or based on our own experience. We regularly consult with statisticians when new study types are performed. They do a special calculation (power calculation) which takes into account the size of likely effect we will see to help determine the number of animals we use. Although we do use the least number of animals possible, its important to use enough animals to get a meaningful result, otherwise we would end up using more animals overall than we needed to.
+          </p>
+          <p>
+            Where we can we only use one control group per study (effectively dosed with the drug formulation without the drug in it) which acts as a baseline to compare any effect of the drug itself. We also try not to use extra animals to compare an existing drug (which we know provides an effect in the experimental model) where possible. We also re-use animals where this does not adversely impact on the welfare of the animal concerned (see the sections above) and this reduces the overall numbers of animals we use too.
+          </p>
+          <p>
+            Studies are also carefully designed to combine the different aspects needed to evaluate the safety or whether a drug has its effect combined, and again this reduces the overall numbers of animals used.
+          </p>
+        </div>
+      </details>
+      <p>
+        Using the latest imaging technologies, e.g. cine-magnetic resonance (MRI) – including late gadolinium enhancement (LGE) imaging- we strive to maximize the information obtained from each animal during the same imaging study. Detection of subtle cardiac changes in mice treated with new compounds which would potentially be missed by conventional imaging and by accurately detecting changes in infarct size and cardiac haemodynamics and reducing the ‘noise’ in the dataset, this allows us to use fewer animals than before to identify differences between the treated group and the control group.
+      </p>
+      <p>
+        Refined use of primary cell cultures, the number of mice being required to be humanely killed to generate clones has been reduced from 30 to 10 by incubating cells in ‘hypoxic conditions’ to improve cloning efficiency. The number of cells needed for our analytical procedure has been reduced by the establishment of robust methods for single-cell measurements of gene expression.
+      </p>
+      <a href="#" class="">Edit</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <form action="ra-index" method="POST">
+        <div class="declaration-panel-grey">
+          <h3 class="govuk-heading-m">Mark this section as complete</h3>
+          <p>You can still edit this section later, but you will be unable submit this assessment until all sections are marked as complete.</p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="complete-reduction-hint">
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complete-reduction" name="complete-reduction" type="checkbox" value="yes">
+                  <label class="govuk-label govuk-checkboxes__label" for="complete-reduction">
+                    Mark this section as complete
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>  
+        </div>
+        <br>
+        <p>
+          <button class="govuk-button">Continue</button>
+          <a href="ppl-overview" class="secondary-link">List of sections</a>
+        </p>
+      </div>
+    </form>
+
+    {% include "includes/ra-sidebar.html" %}
+
+  </div>
+
+{% endblock %}

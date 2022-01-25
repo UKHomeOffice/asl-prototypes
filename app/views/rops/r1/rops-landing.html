@@ -1,0 +1,207 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-rops.html" %}
+
+      
+      <p>In the current reported year:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>procedures were carried out and completed</li>
+        <li>no 'protected' embryonic forms used</li>
+        <li>no endangered species were used</li>
+        <li>no neuromuscular blocking agents (NMBA) were used</li>
+        <li>no rodenticide trials undertaken</li>
+      </ul>
+      <p>
+        <a href="#">Change</a>
+      </p>
+      <h2 class="govuk-heading-m">Procedures completed</h2>
+      <p>All procdeures in this return:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>used mice</li>
+        <li>had no reuse</li>
+        <li>used animals born in the UK at a licenced establishment</li>
+        <li>didn't involve the creation of a new genetic line</li>
+      </ul>
+      <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+        <div class="fullscreen-left-shadow with-transition"></div>
+        <div class="fullscreen-scrollable-table" style=" box-shadow: inset -1px 0 0 0 #bfc1c3, inset -5px 0 0 0 rgba(191,193,195,0.4);">
+          <table class="govuk-table" style="font-size: 14px;">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Row</th>
+                <!-- <th scope="col" class="govuk-table__header">Re-use</th> -->
+                <!-- <th scope="col" class="govuk-table__header">Place of birth</th> -->
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <!-- <th scope="col" class="govuk-table__header">Creation of a new genetic line</th> -->
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Not geneticaly altered</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Nervous system</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">20</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">2</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Nervous system</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Nervous system</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">35</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">4</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Breeding/maintenance of colonies of established genetically altered animals, not used in other procedures</td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">42</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">5</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Breeding/maintenance of colonies of established genetically altered animals, not used in other procedures</td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">76</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Nervous system</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">299</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">7</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <!-- <td class="govuk-table__cell">Animals born in the UK at a licenced establishment</td> -->
+                <td class="govuk-table__cell">Genetically altered without a harmful phenotype</td>
+                <!-- <td class="govuk-table__cell">No</td> -->
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Nervous system</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">299</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="fullscreen-right-shadow visible with-transition" ></div> -->
+      </div>
+      
+      <style>
+        table {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+        .fullscreen-content {
+            box-sizing: border-box;
+            margin: 0 0 15px 0;
+            padding: 0 0 0 0;
+            position: relative;
+            overflow-x: scroll;
+            z-index: 10;
+        }
+        .fullscreen-left-shadow {
+          left: 0;
+        }
+        .with-transition {
+          transition: box-shadow 0.4s ease-out;  
+        }
+        .fullscreen-scrollable-table {
+          overflow-x: auto;
+          overflow-y: hidden;
+        }
+
+        .fullscreen-right-shadow .visible {
+          box-shadow: inset -1px 0 0 0 #bfc1c3, inset -5px 0 0 0 rgba(191,193,195,0.4);
+        }
+      </style>
+      <a href="add-procedure-other.html" class="govuk-button">Add procedure</a>
+      
+
+      <!-- <dl>
+        <dt> Were any procedures carried out and completed in the reported year?</dt>
+        <dd>{{ data["setup-any"]}}</dd>
+        <dt>Were only 'protected' embryonic forms used in the reported year?</dt>
+        <dd>{{ data["setup-protected"]}}</dd>
+        <dt>Were any endangered species listed in Annex A to Council Regulation EC 338/97 used in any procedures in the reported year? </dt>
+        <dd>{{ data["setup-endangered"]}}</dd>
+        <dt>Were neuromuscular blocking agents (NMBA) used in any procedures in the reported year?</dt>
+        <dd>{{ data["setup-nmbas"]}}</dd>
+        {% if data["setup-nmbas"] == "Yes" %}
+          <dt>Was general anaesthesia used throughout the entire period of neuromuscular blockade?</dt>
+          <dd>{{ data["setup-ga"]}}</dd>
+        {% endif %}
+        <dt>Were any rodenticide trials undertaken in the reported year?</dt>
+        <dd>{{ data["setup-ga"]}}</dd>
+      </dl> -->
+      
+  </div>  
+</div>
+
+<style>
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#858585;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.customized-scrollbar ::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
+}
+</style>
+
+{% endblock %}

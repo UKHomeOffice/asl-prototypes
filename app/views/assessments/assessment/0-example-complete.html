@@ -1,0 +1,133 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li class="selected"><a href="1-intro">Introductory details</a></li>
+         <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+          <li><a href="1-suitability">Applicant information</a></li>
+          <li><a href="2-suitability-places">Project location</a></li>
+          <li><a href="3-programme">Project plan</a></li>
+          <li><a href="5-models">Protocols</a></li>
+          <li><a href="4-types">Use of animals</a></li>
+          <li><a href="5a-end-of">Other considerations</a></li>
+          <li><a href="6-3rs">Replacement, reduction & refinement</a></li>
+          <li><a href="7-nts">Non-technical summary: general</a></li>
+          <li><a href="10-hba">Harm-benefit analysis</a></li>
+          <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
+ reporting condition</a></li>
+</li>
+          <li><a href="12-referrals">Referrals</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Example section</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show standards for example section
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          <ul class="govuk-list govuk-list--bullet">
+            
+            <li>
+            	[Section standard 1]
+            </li>
+            <li>
+              [Section standard 2]
+            </li>
+            <li>
+              [Section standard 3]
+            </li>
+          </ul>
+        </div>
+      </details>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Add condition or authorisation</h2>
+<!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">Auto-added condition requiring editing<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
+          
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eius rem iusto assumenda earum repellat, vero qui error alias odit voluptates  blanditiis aliquam doloremque officia quibusdam exercitationem. Officia, accusamus explicabo:<br>
+            • Condition 1<br>
+            • Condition 2</p>
+        </div>
+        <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        <br>
+        <br>
+        
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">Condition added by the inspector</h3>
+          
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eius rem iusto assumenda earum repellat, vero qui error alias odit voluptates  blanditiis aliquam doloremque officia quibusdam exercitationem. Officia, accusamus explicabo:<br>
+            • Condition 1<br>
+            • Condition 2</p>
+        </div>
+        <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
+        <br>
+        <br>
+      
+      <div id="conditions-options" style="display: none;">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition-1" name="condition-1" type="checkbox" value="1">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition-1">
+                Establishment licences not meeting Code of Practice
+                <p>If an establishment does not meet the requirements laid out in the Code of Practice for the housing and care of animals bred, supplied, or used for scentific purposes, the following conditions apply:<br>
+                  • <<<INSERT conditions HERE>>></p>
+                <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
+              <label class="govuk-label--s govuk-checkboxes__label" for="condition">
+                 Create custom condition
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
+      <br>
+
+      {% set assessSection = 'section' %}
+      {% set assessSectionTitle = 'example section' %}
+      {% set assessOutcome = 'met' %}
+      {% set reason = 'This is a new area of work for the establishment. The applicant has suitable expertise in the proposed models and methods and plans to provide training for PILh himself. There is strong oversight by the NVSs so I have confidence that technical competence will be developed.' %}
+
+      {% include "includes/assessment-met.html" %}
+      
+      
+      {% set assess = 'example section' %}
+      {% include "includes/assessment-complete.html" %}
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

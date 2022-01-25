@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Assessment - Development of new biological anticancer agents
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    
+
+      {% include "includes/licence-header-assessment.html" %}
+
+                
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Assessment sections</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="1-intro">Introductory details</a>
+          <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="7-nts">Non-technical summary</a>
+          <span class="badge blue float-right">Complete</span>
+          <span class="badge changed float-right">Amended</span>
+        </li>
+        <li>
+          <a href="1-suitability">Applicant information</a>
+          <span class="badge float-right">No change</span>
+            <span class="badge float-right">1 Condition</span>
+          </li>
+        <li>
+          <a href="2-suitability-places">Project location</a>
+          <span class="badge float-right">No change</span>
+            <span class="badge float-right">1 Condition</span>
+          </li>
+        <li>
+          <a href="3-programme">Project plan</a>
+          <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="5-models">Protocols</a>
+          <span class="badge blue float-right">Complete</span>
+          <span class="badge changed float-right">Amended</span>
+          <span class="badge float-right">2 Conditions</span>
+          <span class="badge float-right">1 Authorisation</span>
+        </li>
+        <li>
+          <a href="4-types">Use of animals</a>
+          <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="5a-end-of">Other considerations</a>
+          <span class="badge float-right">No change</span>
+          <span class="badge float-right">2 Conditions</span>
+        </li> 
+        <li>
+          <a href="11-reporting
+          <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="10-hba">Harm-benefit analysis</a>
+          <span class="badge float-right">No change</span>
+        </li>
+        <li>
+          <a href="12-referrals.html">Referrals</a>
+          <span class="badge float-right">No change</span>
+        </li>
+      </ul>
+
+      <p>All sections must be marked as complete before you can recommend the licence for approval. </p>
+        
+      <p>
+        Not all standards need to be met for you to be able to recommend that the licence should be granted.
+      </p>
+
+      <a class="govuk-button" onclick="window.close();">Close assessment</a>
+
+    </div>
+  </div>
+<style type="text/css">
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  
+  .badge {
+    margin-left: 5px;
+  }
+</style>
+{% endblock %}

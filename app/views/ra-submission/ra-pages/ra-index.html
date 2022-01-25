@@ -1,0 +1,116 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Retrospective assessment</h1>
+      <dl class="govuk-body">
+        <dt>PPL title</dt>
+        <dd>Autophagy in the hematopoietic system</dd>
+        <dt>PPL number</dt>
+        <dd>78847475</dd>
+        <dt>PPL holder</dt>
+        <dd>Bruce Banner</dd>
+        <dt>Expiry date</dt>
+        <dd>01 May 2020</dd>
+        <dt>Retrospective assessment due</dt>
+        <dd>02 November 2024</dd>
+        <dt>Reason for retrospective assessment</dt>
+         <dd>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Contains severe procedures</li>
+              <li>Uses cats</li>
+              <li>Uses dogs</li>
+            </ul>
+          </dd>
+      </dl>    
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">Title</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="#">Objectives</a>
+        </li>
+        <li>
+          <a href="#">Harms</a>
+        </li>
+        <li>
+          <a href="#">Replacement, reduction and refinement</a>
+        </li>
+      </ul>
+      
+
+      <p>All sections must be marked as complete before you can continue and send your assessment to the Home Office.</p>
+
+        <a href="declaration" class="govuk-button">Continue</a>
+
+
+
+
+    </div>
+  </div>
+<style type="text/css">
+
+
+
+.table-list li {
+  padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+  .protocol-section-title .badge badge-blue {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    font-size: 16px;
+}
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+  .licence-status-banner {
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background-color: #6f777b;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .licence-status-banner p{
+    color: #fff;
+    font-size: 16px;
+  }
+  .licence-status-banner hr{
+    border-bottom: 1px solid white;
+
+  }
+
+  .licence-status-banner a{
+    color: #fff;
+    font-size: 16px;
+  }
+
+ .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 27px;
+    position: relative;
+  }
+
+  .changed {
+    margin-right: 5px;
+  }
+</style>
+{% endblock %}

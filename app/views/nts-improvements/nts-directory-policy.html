@@ -1,0 +1,1000 @@
+
+{% extends "layout-no-breadcrumb.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Non-technical summaries
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#unpublished">
+              Awaiting review
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#progress">
+              In progress
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#published">
+              Published
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#archived">
+              archived
+            </a>
+          </li>
+        </ul>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="unpublished" style="border:none;">
+        
+          <h2 class="govuk-heading-m"></h2>
+
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by project title, keywords or animal types</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <!-- <ul class='tasks-nav'>
+            <li class="">
+              Retrospective assessment:
+            </li>
+            <li class="tasks-nav-selected">
+              Show all 
+            </li>
+            <li>
+              <a href="#">NTS</a>
+            </li>
+            <li>
+              <a href="#">NTS (requires RA)</a> 
+            </li>
+
+            <li>
+              <a href="#">NTS with RA</a> 
+            </li>
+          </ul> -->
+          <p>Showing 2,940 non-technical summaries</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Project title</th>
+                <th class="govuk-table__header" scope="col">Key words</th>
+                <th class="govuk-table__header" scope="col">Animal types</th>
+                <!-- <th class="govuk-table__header" scope="col">Licence status</th> -->
+                <!-- <th class="govuk-table__header" scope="col">NTS type</th> -->
+                <th class="govuk-table__header" scope="col">Licence last&nbsp;updated</th>
+                <th class="govuk-table__header" scope="col">Review NTS</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A NEW FRAMEWORK FOR COMPUTATIONAL BIOMECHANICAL MODELS AND 3RS IN MICROVASCULAR RESEARCH</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Cardiovascular</li>
+                    <li>respiratory</li>
+                    <li>safety</li>
+                    <li>efficacy</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS with RA</td> -->
+                <td class="govuk-table__cell" scope="col">17 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Endometriosis</li>
+                    <li>Preclinical model</li>
+                    <li>Fertility</li>
+                    <li>Drug therapy</li>
+                    <li>Inflammation</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td> -->
+                <td class="govuk-table__cell" scope="col">14 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Teleost models </li>
+                    <li>Aematopoietic disease</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS</td> -->
+                <td class="govuk-table__cell" scope="col">26 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Neuroscience</li>
+                    <li>Phylogeny</li>
+                    <li>Drug therapy</li>
+                    <li>Parenchyma</li>
+                    <li>Endometriosis</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Zebra fish</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS with RA</td> -->
+                <td class="govuk-table__cell" scope="col">24 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Parenchyma</li>
+                    <li>Drug therapy</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Pigs</li>
+                    <li>Sheep</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS</td> -->
+                <td class="govuk-table__cell" scope="col">23 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Drug therapy</li>
+                    <li>Ammonification</li>
+                    <li>Heterozygous</li>
+                    <li>Neuroscience</li>
+                    <li>Parenchyma</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td> -->
+                <td class="govuk-table__cell" scope="col">11 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Gene Flow</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Phylogeny</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS</td> -->
+                <td class="govuk-table__cell" scope="col">8	June 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Parenchyma</li>
+                    <li>Ammonification</li>
+                    <li>Drug therapy</li>
+                    <li>Phylogeny</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS with RA</td> -->
+                <td class="govuk-table__cell" scope="col">29 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="/nts-improvements/review/nts-overview">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Neuroscience</li>
+                    <li>Gene Flow</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Rainbow trout</li>
+                    <li>Atlantic salmon</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <!-- <td class="govuk-table__cell" scope="col">NTS</td> -->
+                <td class="govuk-table__cell" scope="col">15 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">Start review</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="govuk-tabs__panel" id="progress" style="border:none;">
+
+          <h2 class="govuk-heading-m"></h2>
+
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by project title, keywords or animal types</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <ul class='tasks-nav'>
+            <li class="">
+              Retrospective assessment:
+            </li>
+            <li class="tasks-nav-selected">
+              Show all 
+            </li>
+            <li>
+              <a href="#">NTS</a>
+            </li>
+            <li>
+              <a href="#">NTS (requires RA)</a> 
+            </li>
+
+            <li>
+              <a href="#">NTS with RA</a> 
+            </li>
+          </ul>
+          <p>Showing 89 non-technical summaries</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Project title</th>
+                <th class="govuk-table__header" scope="col">Key words</th>
+                <th class="govuk-table__header" scope="col">Animal types</th>
+                <!-- <th class="govuk-table__header" scope="col">Licence status</th> -->
+                <th class="govuk-table__header" scope="col">NTS type</th>
+                <th class="govuk-table__header" scope="col">Last&nbsp;updated</th>
+                <th class="govuk-table__header" scope="col">View task</th>
+                <th class="govuk-table__header" scope="col">Task status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A NEW FRAMEWORK FOR COMPUTATIONAL BIOMECHANICAL MODELS AND 3RS IN MICROVASCULAR RESEARCH</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Cardiovascular</li>
+                    <li>respiratory</li>
+                    <li>safety</li>
+                    <li>efficacy</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">17 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Endometriosis</li>
+                    <li>Preclinical model</li>
+                    <li>Fertility</li>
+                    <li>Drug therapy</li>
+                    <li>Inflammation</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">14 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Teleost models </li>
+                    <li>Aematopoietic disease</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">26 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Changes required</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Neuroscience</li>
+                    <li>Phylogeny</li>
+                    <li>Drug therapy</li>
+                    <li>Parenchyma</li>
+                    <li>Endometriosis</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Zebra fish</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">24 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Parenchyma</li>
+                    <li>Drug therapy</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Pigs</li>
+                    <li>Sheep</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">23 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Drug therapy</li>
+                    <li>Ammonification</li>
+                    <li>Heterozygous</li>
+                    <li>Neuroscience</li>
+                    <li>Parenchyma</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">11 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Changes required</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Gene Flow</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Phylogeny</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">8	June 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Parenchyma</li>
+                    <li>Ammonification</li>
+                    <li>Drug therapy</li>
+                    <li>Phylogeny</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">29 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Review started</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Neuroscience</li>
+                    <li>Gene Flow</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Rainbow trout</li>
+                    <li>Atlantic salmon</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">15 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-task">View&nbsp;task</a></td>
+                <td class="govuk-table__cell" scope="col"><span class="badge">Awaiting decision</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+      </section>
+        <section class="govuk-tabs__panel" id="published" style="border:none;">
+        
+          <h2 class="govuk-heading-m"></h2>
+
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by project title, keywords or animal types</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <ul class='tasks-nav'>
+            <li class="">
+              Retrospective assessment:
+            </li>
+            <li class="tasks-nav-selected">
+              Show all 
+            </li>
+            <li>
+              <a href="#">NTS</a>
+            </li>
+            <li>
+              <a href="#">NTS (requires RA)</a> 
+            </li>
+
+            <li>
+              <a href="#">NTS with RA</a> 
+            </li>
+          </ul>
+          <p>Showing 89 non-technical summaries</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Project title</th>
+                <th class="govuk-table__header" scope="col">Key words</th>
+                <th class="govuk-table__header" scope="col">Animal types</th>
+                <!-- <th class="govuk-table__header" scope="col">Licence status</th> -->
+                <th class="govuk-table__header" scope="col">NTS type</th>
+                <th class="govuk-table__header" scope="col">Last&nbsp;updated</th>
+                <th class="govuk-table__header" scope="col">Unpublish</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A NEW FRAMEWORK FOR COMPUTATIONAL BIOMECHANICAL MODELS AND 3RS IN MICROVASCULAR RESEARCH</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Cardiovascular</li>
+                    <li>respiratory</li>
+                    <li>safety</li>
+                    <li>efficacy</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">17 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Endometriosis</li>
+                    <li>Preclinical model</li>
+                    <li>Fertility</li>
+                    <li>Drug therapy</li>
+                    <li>Inflammation</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">14 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Teleost models </li>
+                    <li>Aematopoietic disease</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">26 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Neuroscience</li>
+                    <li>Phylogeny</li>
+                    <li>Drug therapy</li>
+                    <li>Parenchyma</li>
+                    <li>Endometriosis</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Zebra fish</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">24 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Parenchyma</li>
+                    <li>Drug therapy</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Pigs</li>
+                    <li>Sheep</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">23 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Drug therapy</li>
+                    <li>Ammonification</li>
+                    <li>Heterozygous</li>
+                    <li>Neuroscience</li>
+                    <li>Parenchyma</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">11 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Gene Flow</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Phylogeny</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">8	June 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Parenchyma</li>
+                    <li>Ammonification</li>
+                    <li>Drug therapy</li>
+                    <li>Phylogeny</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">29 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Neuroscience</li>
+                    <li>Gene Flow</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Rainbow trout</li>
+                    <li>Atlantic salmon</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">15 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-unpublish" class="red-link">Unpublish</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+              
+        <section class="govuk-tabs__panel" id="archived" style="border:none;">
+        
+          <h2 class="govuk-heading-m"></h2>
+
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search by project title, keywords or animal types</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          <ul class='tasks-nav'>
+            <li class="">
+              Retrospective assessment:
+            </li>
+            <li class="tasks-nav-selected">
+              Show all 
+            </li>
+            <li>
+              <a href="#">NTS</a>
+            </li>
+            <li>
+              <a href="#">NTS (requires RA)</a> 
+            </li>
+
+            <li>
+              <a href="#">NTS with RA</a> 
+            </li>
+          </ul>
+          <p>Showing 89 non-technical summaries</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Project title</th>
+                <th class="govuk-table__header" scope="col">Key words</th>
+                <th class="govuk-table__header" scope="col">Animal types</th>
+                <!-- <th class="govuk-table__header" scope="col">Licence status</th> -->
+                <th class="govuk-table__header" scope="col">NTS type</th>
+                <th class="govuk-table__header" scope="col">Last&nbsp;updated</th>
+                <th class="govuk-table__header" scope="col">Re-assess</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A NEW FRAMEWORK FOR COMPUTATIONAL BIOMECHANICAL MODELS AND 3RS IN MICROVASCULAR RESEARCH</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Cardiovascular</li>
+                    <li>respiratory</li>
+                    <li>safety</li>
+                    <li>efficacy</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">17 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Endometriosis</li>
+                    <li>Preclinical model</li>
+                    <li>Fertility</li>
+                    <li>Drug therapy</li>
+                    <li>Inflammation</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">14 July	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Teleost models </li>
+                    <li>Aematopoietic disease</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">26 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Neuroscience</li>
+                    <li>Phylogeny</li>
+                    <li>Drug therapy</li>
+                    <li>Parenchyma</li>
+                    <li>Endometriosis</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Zebra fish</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">24 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Parenchyma</li>
+                    <li>Drug therapy</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Pigs</li>
+                    <li>Sheep</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">23 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A Nipah virus vaccine to eliminate microvascular reservoirs and safeguard human health</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Drug therapy</li>
+                    <li>Ammonification</li>
+                    <li>Heterozygous</li>
+                    <li>Neuroscience</li>
+                    <li>Parenchyma</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS<br> (requires RA)</td>
+                <td class="govuk-table__cell" scope="col">11 June	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A practical training in microvascular techniques for surgeons</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Gene Flow</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Phylogeny</li>
+                    <li>Neuroscience</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">8	June 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A service to enable the microvascular rederivation of genetically modified mice</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Parenchyma</li>
+                    <li>Ammonification</li>
+                    <li>Drug therapy</li>
+                    <li>Phylogeny</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Mice</li>
+                    <li>Rats</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-red">Revoked</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS with RA</td>
+                <td class="govuk-table__cell" scope="col">29 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="col"><a href="#">A study on microvascular treatment and penetrance of inherited cardiac conditions</a> </td>
+                <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Heterozygous</li>
+                    <li>Homoplasy</li>
+                    <li>Unicellular</li>
+                    <li>Neuroscience</li>
+                    <li>Gene Flow</li>
+                  </ul>
+                </td>
+               <td class="govuk-table__cell" scope="col">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Rainbow trout</li>
+                    <li>Atlantic salmon</li>
+                  </ul>
+                </td>
+                <!-- <td class="govuk-table__cell" scope="col"><span class="badge badge-blue">Active</span></td> -->
+                <td class="govuk-table__cell" scope="col">NTS</td>
+                <td class="govuk-table__cell" scope="col">15 May 	2020</td>
+                <td class="govuk-table__cell" scope="col"><a href="nts-re-assess">Re-assess</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+      </section>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

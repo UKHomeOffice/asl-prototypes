@@ -1,0 +1,1866 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set assessSection = "protocols" %}
+<script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).prev().toggleClass("selected");
+      $(this).parents().next('.protocol-content').toggleClass('hide');
+      $(this).parents().toggleClass('no-underline');
+      $(this).parents().siblings('td').toggleClass('no-underline');
+    });
+  });
+</script>
+{% set stepCount = data['stepCount']|int %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-ppl-application.html" %}
+      {% include "includes/list-of-sections.html" %}               
+   
+      <h1 class="govuk-heading-l">Protocols</h1>   
+      <p>
+        <a href="#">View summary table</a>
+      </p>
+        
+      <h2 class="govuk-heading-m">General constraints</h2>
+
+      <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
+     
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show general constraints
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+        Induction of liver tumour growth
+
+          <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
+          <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The regulatory guidelines or frameworks to be met are clear.
+            </li>
+            <li>
+              There are no satisfactory non-animal alternatives.
+            </li>
+            <li>
+              Where non-animal alternatives are accepted by the regulator they are used.
+            </li>
+            <li>
+              There’s a commitment to follow the most refined tests using the minimum numbers of animals that will satisfy the regulator(s).
+            </li>
+            <li>
+              Where testing is for non-EU countries, the method used is the most refined, uses the fewest animals of the least sentient species and provides a scientific result recognised as valid by EU legislation.
+            </li>
+            <li>
+              For all batch quality testing using live animals, the substance or product to be tested is named and a scientific justification provided.
+            </li>
+          </ul>
+        </div>
+      </details>   
+    
+    <div id="firstProtocol" class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">1: First protocol</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Mild</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div id="" class="protocol-content ">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button id="p1-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+
+        <button  id="steps-p1-p2-p3" class="accordion active">Protocol steps</button>
+        <div class="panel" style="display: block;">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+
+            {% for item in data['no1']['selection'] %}
+              {% if item == 1 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id1">{{data['id1']['ref']}}</a> {{data['p1']['optional1']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note1']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 2 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id2">{{data['id2']['ref']}}</a> {{data['p1']['optional2']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note2']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 3 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id3">{{data['id3']['ref']}}</a> {{data['p1']['optional3']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note3']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 4 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id4">{{data['id4']['ref']}}</a> {{data['p1']['optional4']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note4']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 5 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id5">{{data['id5']['ref']}}</a> {{data['p1']['optional5']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note5']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 6 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id6">{{data['id6']['ref']}}</a> {{data['p1']['optional6']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note6']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 7 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id7">{{data['id7']['ref']}}</a> {{data['p1']['optional7']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note7']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 8 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id8">{{data['id8']['ref']}}</a> {{data['p1']['optional8']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note8']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 9 %}
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id9">{{data['id9']['ref']}}</a> {{data['p1']['optional9']}}</td>
+              <td class="govuk-table__cell">{{data['id9']['note9']}}</td>
+              <td class="govuk-table__cell"><a href="#">Move up</a> | l"><a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+            </tr>
+              {% elif item == 10 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id10">{{data['id10']['ref']}}</a> {{data['p1']['optional10']}}</td>
+                <td class="govuk-table__cell">{{data['p1']['note10']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
+                              
+            </tbody>
+          </table>
+
+          <div class="comment-block">
+            <div class="writeComment hide">
+              
+              <form action="protocols#p1-steps-anchor" method="POST">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="step-hint">
+                    <legend class="govuk-label--s">
+                      Select the steps that will be used in this protocol.
+                    </legend>
+                    <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="checkboxes">
+                      {% if data['stepId'] > 1 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-1" name="no1[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-1">
+                            {{data['id1']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-1" name="p1[optional1]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-1">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-2" name="p1[optional1]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-2">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note1]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 2 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-2" name="no1[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-2">
+                            {{data['id2']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-3" name="p1[optional2]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-3">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-4" name="p1[optional2]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-4">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note2]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 3 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-3" name="no1[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-3">
+                            {{data['id3']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-5" name="p1[optional3]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-5">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-6" name="p1[optional3]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-6">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note3]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 4 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-4" name="no1[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-4">
+                            {{data['id4']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-7" name="p1[optional4]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-7">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-8" name="p1[optional4]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-8">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note4]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 5 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-5" name="no1[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-5">
+                            {{data['id5']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-9" name="p1[optional5]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-9">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-10" name="p1[optional5]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-10">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note5]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 6 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-6" name="no1[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-6">
+                            {{data['id6']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-11" name="p1[optional6]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-11">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-12" name="p1[optional6]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-12">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note6]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 7 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-7" name="no1[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-7">
+                            {{data['id7']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-13" name="p1[optional7]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-13">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-14" name="p1[optional7]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-14">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note7]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 8 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-8" name="no1[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-8">
+                            {{data['id8']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-15" name="p1[optional8]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-15">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-16" name="p1[optional8]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-16">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note8]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 9 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-9" name="no1[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-9">
+                            {{data['id9']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-17" name="p1[optional9]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-17">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-18" name="p1[optional9]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-18">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note9]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 10 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-10" name="no1[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-10">
+                            {{data['id10']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-19" name="p1[optional10]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-19">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no1[optional]-conditional-20" name="p1[optional10]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-20">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p1[note10]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      <!-- {% if data['stepId']  > 2 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-2" data-aria-controls="2" name="no1[selection]" type="checkbox" value="2" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-2">
+                            {{data['id2']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="2">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 3 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-3" data-aria-controls="3" name="no1[selection]" type="checkbox" value="3" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-3">
+                            {{data['id3']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="3">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 4 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-4" data-aria-controls="4" name="no1[selection]" type="checkbox" value="4" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-4">
+                            {{data['id4']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="4">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 5 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-5" data-aria-controls="5" name="no1[selection]" type="checkbox" value="5" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-5">
+                            {{data['id5']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="5">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 6 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-6" data-aria-controls="6" name="no1[selection]" type="checkbox" value="6" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-6">
+                            {{data['id6']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="6">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 7 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-7" data-aria-controls="7" name="no1[selection]" type="checkbox" value="7" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-7">
+                            {{data['id7']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="7">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 8 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-8" data-aria-controls="8" name="no1[selection]" type="checkbox" value="8" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-8">
+                            {{data['id8']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="8">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 9 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-9" data-aria-controls="9" name="no1[selection]" type="checkbox" value="9" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-9">
+                            {{data['id9']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="9">XXXX</div>
+                      {% endif %}
+                      {% if data['stepId']  > 10 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no1[selection]-10" data-aria-controls="10" name="no1[selection]" type="checkbox" value="10" >
+                          <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-10">
+                            {{data['id10']['ref']}}
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="10">XXXX</div>
+                      {% endif %} -->
+                    </div>
+                  </fieldset>
+                  {% set p1StepNo = data['p1StepNo'] | int %}
+                  {% set nextP1Step = p1StepNo + 1 %}
+                  <div class="govuk-form-group">
+                    <input type="hidden" name="p1StepNo" value={{nextP1Step}}>
+                    <button class="govuk-button">Add steps to protocol</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            {% if data['stepId'] == undefined %}
+            <span class="govuk-hint">No steps have been created in the steps libary.</span>
+              <p>
+                <form action="steps" method="post">
+                  <input type="hidden" name="stepId" value="1">
+                  <button class="govuk-button">Create steps in step library</button>
+                </form>
+              </p>
+            {% else %}
+              <div class="initiateComment">
+                <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
+              </div>
+              <p><a href="steps">Edit steps in steps library</a></p>
+            {% endif %}
+          </div>  
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        <br>
+        <br>
+        {% include "includes/mark-protocol-complete.html" %}
+      </div>
+    </div>
+
+      <div id="secondProtocol" class="protocol-container">
+      <div class="protocol-header-in-progress">
+        <h3 class="govuk-heading-m">
+          <label for="option1" class="row-toggle protocol-title">
+            <span class="row-toggle-copy">2: Second protocol</span>
+          </label>
+          <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+        </h3>
+        <p>
+          <strong>Severity category: Moderate</strong>
+        </p>
+        <p>This protocol uses genetically altered (GA) animals</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Animal types</th>
+              <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+              <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+              <th scope="col" class="govuk-table__header">Life stages</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mice</td>
+              <td class="govuk-table__cell">300</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Adult, juvenile</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+      <div id="" class="protocol-content ">
+        
+        <button class="accordion">Protocol details</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animals used in this protocol</button>
+        <div class="panel"></div>
+
+        <button id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+        <div class="panel"></div>
+
+
+        <button  id="steps-p2-p3" class="accordion active">Protocol steps</button>
+        <div class="panel" style="display: block;">
+
+          <p></p>
+                    <table class="govuk-table">
+            <tbody class="govuk-table__body">
+
+            {% for item in data['no2']['selection'] %}
+              {% if item == 1 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id1">{{data['id1']['ref']}}</a> {{data['p2']['optional1']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note1']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 2 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id2">{{data['id2']['ref']}}</a> {{data['p2']['optional2']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note2']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 3 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id3">{{data['id3']['ref']}}</a> {{data['p2']['optional3']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note3']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 4 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id4">{{data['id4']['ref']}}</a> {{data['p2']['optional4']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note4']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 5 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id5">{{data['id5']['ref']}}</a> {{data['p2']['optional5']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note5']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 6 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id6">{{data['id6']['ref']}}</a> {{data['p2']['optional6']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note6']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 7 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id7">{{data['id7']['ref']}}</a> {{data['p2']['optional7']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note7']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 8 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id8">{{data['id8']['ref']}}</a> {{data['p2']['optional8']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note8']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% elif item == 9 %}
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id9">{{data['id9']['ref']}}</a> {{data['p2']['optional9']}}</td>
+              <td class="govuk-table__cell">{{data['id9']['note9']}}</td>
+              <td class="govuk-table__cell"><a href="#">Move up</a> | l"><a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+            </tr>
+              {% elif item == 10 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id10">{{data['id10']['ref']}}</a> {{data['p2']['optional10']}}</td>
+                <td class="govuk-table__cell">{{data['p2']['note10']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
+                              
+            </tbody>
+          </table>
+          <div class="comment-block">
+            <div class="writeComment hide">
+              <form action="protocols#p2-steps-anchor" method="POST">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="step-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">Select the steps that will be used in this protocol. </h1>
+                    </legend>
+                    <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                      {% if data['stepId'] > 1 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-1" name="no2[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-1">
+                            {{data['id1']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-1" name="p2[optional1]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-1">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-2" name="p2[optional1]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-2">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note1]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 2 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-2" name="no2[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-2">
+                            {{data['id2']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-3" name="p2[optional2]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-3">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-4" name="p2[optional2]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-4">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note2]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 3 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-3" name="no2[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-3">
+                            {{data['id3']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-5" name="p2[optional3]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-5">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-6" name="p2[optional3]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-6">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note3]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 4 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-4" name="no2[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-4">
+                            {{data['id4']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-7" name="p2[optional4]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-7">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-8" name="p2[optional4]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-8">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note4]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 5 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-5" name="no2[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-5">
+                            {{data['id5']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-9" name="p2[optional5]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-9">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-10" name="p2[optional5]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-10">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note5]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 6 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-6" name="no2[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-6">
+                            {{data['id6']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-11" name="p2[optional6]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-11">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-12" name="p2[optional6]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-12">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note6]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 7 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-7" name="no2[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-7">
+                            {{data['id7']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-13" name="p2[optional7]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-13">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-14" name="p2[optional7]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-14">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note7]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 8 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-8" name="no2[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-8">
+                            {{data['id8']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-15" name="p2[optional8]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-15">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-16" name="p2[optional8]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-16">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note8]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 9 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-9" name="no2[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-9">
+                            {{data['id9']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-17" name="p2[optional9]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-17">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-18" name="p2[optional9]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-18">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note9]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 10 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no2[selection]-10" name="no2[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
+                          <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-10">
+                            {{data['id10']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-19" name="p2[optional10]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-19">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no2[optional]-conditional-20" name="p2[optional10]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-20">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no2[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no2[note]" name="p2[note10]" rows="4" aria-describedby="no2[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </fieldset>
+                  {% set p2StepNo = data['p2StepNo'] | int %}
+                  {% set nextP2Step = p2StepNo + 1 %}
+                  <div class="govuk-form-group">
+                    <input type="hidden" name="p2StepNo" value={{nextP2Step}}>
+                    <button class="govuk-button">Add step</button>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+            {% if data['stepId'] == undefined %}
+              <span class="govuk-hint">No steps have been created in the steps libary.</span>
+                <p>
+                  <form action="steps" method="post">
+                    <input type="hidden" name="stepId" value="1">
+                    <button class="govuk-button">Create steps in step library</button>
+                  </form>
+                </p>
+              {% else %}
+                <div class="initiateComment">
+                  <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
+                </div>
+                <p><a href="steps">Edit steps in steps library</a></p>
+              {% endif %}
+          </div>  
+        </div>
+
+        <button class="accordion">Fate of animals</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Animal experience</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Experimental design</button>
+        <div class="panel"></div>
+
+        <button class="accordion">Protocol justification</button>
+        <div class="panel"></div>
+        <br>
+        <br>
+        {% include "includes/mark-protocol-complete.html" %}
+      </div>
+
+
+    </div>
+
+      <div id="thirdProtocol" class="protocol-container">
+        <div class="protocol-header-in-progress">
+          <h3 class="govuk-heading-m">
+            <label for="option1" class="row-toggle protocol-title">
+              <span class="row-toggle-copy">3: Third protocol</span>
+            </label>
+            <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
+          </h3>
+          <p>
+            <strong>Severity category: Moderate</strong>
+          </p>
+          <p>This protocol uses genetically altered (GA) animals</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Animal types</th>
+                <th scope="col" class="govuk-table__header">Est. max. no. of animals</th>
+                <th scope="col" class="govuk-table__header">Max. no. of uses per animal</th>
+                <th scope="col" class="govuk-table__header">Life stages</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">300</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">Adult, juvenile</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div id="" class="protocol-content ">
+          
+          <button class="accordion">Protocol details</button>
+          <div class="panel"></div>
+  
+          <button class="accordion">Animals used in this protocol</button>
+          <div class="panel"></div>
+  
+          <button id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+          <div class="panel"></div>
+  
+  
+          <button  id="steps-p3" class="accordion active">Protocol steps</button>
+          <div class="panel" style="display: block;">
+  
+            <p></p>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+  
+              {% for item in data['no3']['selection'] %}
+                {% if item == 1 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id1">{{data['id1']['ref']}}</a> {{data['p3']['optional1']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note1']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 2 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id2">{{data['id2']['ref']}}</a> {{data['p3']['optional2']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note2']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 3 %}
+                  <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id3">{{data['id3']['ref']}}</a> {{data['p3']['optional3']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note3']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 4 %}
+                  <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id4">{{data['id4']['ref']}}</a> {{data['p3']['optional4']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note4']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 5 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id5">{{data['id5']['ref']}}</a> {{data['p3']['optional5']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note5']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 6 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id6">{{data['id6']['ref']}}</a> {{data['p3']['optional6']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note6']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 7 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id7">{{data['id7']['ref']}}</a> {{data['p3']['optional7']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note7']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 8 %}
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id8">{{data['id8']['ref']}}</a> {{data['p3']['optional8']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note8']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% elif item == 9 %}
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id9">{{data['id9']['ref']}}</a> {{data['p3']['optional9']}}</td>
+                <td class="govuk-table__cell">{{data['p3']['note9']}}</td>
+                <td class="govuk-table__cell"><a href="#">Move up</a> | l"><a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+              </tr>
+                {% elif item == 10 %}
+                  <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Step {{loop.index}}:  <a href="steps#id10">{{data['id10']['ref']}}</a> {{data['p3']['optional10']}}</td>
+                  <td class="govuk-table__cell">{{data['p3']['note10']}}</td>
+                  <td class="govuk-table__cell"><a href="#">Move up</a> | <a href="#">Move down</a></td>
+                  <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                {% endif %}
+              {% endfor %}
+                                
+              </tbody>
+            </table>
+            <div class="comment-block">
+              <div class="writeComment hide">
+                <form action="protocols#p3-steps-anchor" method="POST">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="step-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h1 class="govuk-fieldset__heading">Select the steps that will be used in this protocol. </h1>
+                      </legend>
+                      <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
+                      <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="checkboxes">
+                        {% if data['stepId'] > 1 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-1" name="no3[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-1">
+                            {{data['id1']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-1" name="p3[optional1]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-1">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-2" name="p3[optional1]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-2">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note1]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 2 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-2" name="no3[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-2">
+                            {{data['id2']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-3" name="p3[optional2]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-3">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-4" name="p3[optional2]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-4">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note2]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 3 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-3" name="no3[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-3">
+                            {{data['id3']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-5" name="p3[optional3]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-5">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-6" name="p3[optional3]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-6">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note3]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 4 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-4" name="no3[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-4">
+                            {{data['id4']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-7" name="p3[optional4]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-7">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-8" name="p3[optional4]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-8">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note4]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 5 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-5" name="no3[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-5">
+                            {{data['id5']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-9" name="p3[optional5]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-9">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-10" name="p3[optional5]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-10">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note5]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 6 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-6" name="no3[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-6">
+                            {{data['id6']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-11" name="p3[optional6]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-11">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-12" name="p3[optional6]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-12">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note6]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 7 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-7" name="no3[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-7">
+                            {{data['id7']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-13" name="p3[optional7]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-13">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-14" name="p3[optional7]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-14">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note7]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 8 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-8" name="no3[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-8">
+                            {{data['id8']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-15" name="p3[optional8]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-15">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-16" name="p3[optional8]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-16">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note8]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 9 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-9" name="no3[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-9">
+                            {{data['id9']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-17" name="p3[optional9]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-17">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-18" name="p3[optional9]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-18">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no3[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no3[note]" name="p3[note9]" rows="4" aria-describedby="no3[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if data['stepId'] > 10 %}
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="no3[selection]-10" name="no3[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
+                          <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-10">
+                            {{data['id10']['ref']}}
+                          </label> 
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                              <label class="govuk-label--s" for="">
+                                Is this step optional?<br><br>
+                              </label>
+                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-19" name="p3[optional10]" type="radio" value="(optional)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-19">
+                                    Yes
+                                  </label> 
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="no3[optional]-conditional-20" name="p3[optional10]" type="radio" value="(mandatory)">
+                                  <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-20">
+                                    No
+                                  </label> 
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label--s" for="">
+                              Add optional note with this step
+                            </label>
+                            <div id="no1[note]-hint" class="govuk-hint"></div>
+                            <textarea class="govuk-textarea" id="no1[note]" name="p3[note10]" rows="4" aria-describedby="no1[note]-hint"></textarea>
+                          </div>
+                        </div>
+                      {% endif %}
+                      </div>
+                    </fieldset>
+                    {% set p3StepNo = data['p3StepNo'] | int %}
+                    {% set nextP3Step = p3StepNo + 1 %}
+                    <div class="govuk-form-group">
+                      <input type="hidden" name="p3StepNo" value={{nextP3Step}}>
+                      <button class="govuk-button">Add step</button>
+                    </div>
+                  </form>
+                </div>  
+              </div>
+              {% if data['stepId'] == undefined %}
+              <span class="govuk-hint">No steps have been created in the steps libary.</span>
+                <p>
+                  <form action="steps" method="post">
+                    <input type="hidden" name="stepId" value="1">
+                    <button class="govuk-button">Create steps in step library</button>
+                  </form>
+                </p>
+              {% else %}
+                <div class="initiateComment">
+                  <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
+                </div>
+                <p><a href="steps">Edit steps in steps library</a></p>
+              {% endif %}
+            </div>  
+          </div>
+  
+          <button class="accordion">Fate of animals</button>
+          <div class="panel"></div>
+  
+          <button class="accordion">Animal experience</button>
+          <div class="panel"></div>
+  
+          <button class="accordion">Experimental design</button>
+          <div class="panel"></div>
+  
+          <button class="accordion">Protocol justification</button>
+          <div class="panel"></div>
+          <br>
+          <br>
+          {% include "includes/mark-protocol-complete.html" %}
+        </div>
+    </div>
+
+    <form action="protocols" method="post">
+      <input type="hidden" name="stepNo" value="1">
+      <input type="hidden" name="p1StepNo" value="1">
+      <input type="hidden" name="p2StepNo" value="1">
+      <input type="hidden" name="p3StepNo" value="1">
+      <button>Reset</button>
+    </form>
+
+    </div>
+  </div>
+
+<style type="text/css">
+
+.govuk-inset-text {
+border-left: 10px solid #8F23B3;
+}
+
+
+  .govuk-details-protocols {
+    margin-bottom: 0px;;
+  }
+
+  .section-content {
+  background-color: #ffffff;
+    cursor: pointer;
+}
+</style>
+{% endblock %}

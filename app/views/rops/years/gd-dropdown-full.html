@@ -1,0 +1,231 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">All projects
+      </span>
+      
+      <h1 class="govuk-heading-l">Returns of procedures
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class=" govuk-!-font-size-24">
+        Reporting period: 1 January 2023 to 31 December 2023
+      </p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Select reporting period
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ul class="govuk-list list">
+            <li><span class="secondary-text">1 January 2023 to 31 December 2023 (Currently displayed)</span></li>
+            <li><a href="#">1 January 2022 to 31 December 2022</a></li>
+            <li><a href="#">1 January 2021 to 31 December 2021</a></li>
+            <li><a href="#">1 January 2020 to 31 December 2020</a></li>
+          </ul>
+        </div>
+      </details>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+  <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,627</span>
+        <span class="label">returns due in 2021</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">28</span>
+        <span class="label">returns submitted</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,599</span>
+        <span class="label">returns outstanding</span>
+      </div>  
+    </div>
+  </div>
+  <br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Overview
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Establishments
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#complete">
+              Download returns
+            </a>
+          </li>
+        
+        </ul>
+
+        <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          <h3 class="govuk-heading-m">Returns due in 2021</h3>
+          <dl class='unbold'>
+            <dt>Total returns due in 2021</dt>
+            <dd>3,627</dd>
+          </dl>
+          <h2 class="govuk-heading-m">Returns submitted</h2>
+          <dl class='unbold'>
+            <dt>Total returns submitted</dt>
+            <dd>28</dd>
+            <dt>Returns updated </dt>
+            <dd>0</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Returns outstanding</h3>
+          <dl class='unbold'>
+            <dt>Total returns outstanding</dt>
+            <dd>3,599</dd>
+            <dt> Returns queried by Home Office </dt>
+            <dd>0</dd>
+            <dt>Returns overdue</dt>
+            <dd>0</dd>
+          </dl>
+         </section>      
+        
+        
+         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;">
+          <div class="govuk-form-group search-box">
+            <label for="" class="govuk-label">Search establishments by name</label>
+            <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
+            <button style="height: 40px; width: 40px;background-color: #005ea5;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+          </div>
+          
+          <h2 class="govuk-heading-m">143 establishments</h2>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header sortable">Establishment name</th>
+                <th scope="col" class="govuk-table__header sortable">Returns submitted</th>
+                <th scope="col" class="govuk-table__header sortable">Returns outstanding</th>
+                <th scope="col" class="govuk-table__header sortable">Returns overdue</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">University of Aberdeen</td>
+                <td class="govuk-table__cell">14</td>
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Anglia Ruskin University</td>
+                <td class="govuk-table__cell">9</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">2</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Bath Spa University</td>
+                <td class="govuk-table__cell">14</td>
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Biotech</td>
+                <td class="govuk-table__cell">39</td>
+                <td class="govuk-table__cell">29</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">University of Cambridge</td>
+                <td class="govuk-table__cell">30</td>
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">2</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">5</td>
+                <td class="govuk-table__cell">1</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Cardiff University</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Crillion</td>
+                <td class="govuk-table__cell">8</td>
+                <td class="govuk-table__cell">16</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Coventry University</td>
+                <td class="govuk-table__cell">12</td>
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">UCLA</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+            </tbody>
+          </table>
+        
+          {% include "includes/pagination.html" %}
+
+          
+          
+        </section>
+        
+        
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
+          <h2 class="govuk-heading-m">Download returns</h2>
+          <h3 class="govuk-heading-s">Changes since last download
+          </h3>
+          <p><em>No returns have been download</em></p>
+
+          <a href="download" class="govuk-button">Download  returns</a>
+          <h2 class="govuk-heading-m">Previous downloads</h2>
+          <table class="govuk-table ">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Downloaded on</th>
+                <th scope="col" class="govuk-table__header">Downloaded by</th>
+                <th scope="col" class="govuk-table__header">Submitted returns</th>
+                <th scope="col" class="govuk-table__header">Returns updated since previous download</th>
+                <th scope="col" class="govuk-table__header">Outstanding returns</th>
+                <th scope="col" class="govuk-table__header">Reference</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" colspan='6'><em>No returns downloaded yet</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

@@ -1,0 +1,196 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Non-technical summary</span>
+      <h1 class="govuk-heading-xl">
+        Review non-technical summary
+      </h1>
+      <h3 class="govuk-heading-s">Autophagy in the hematopoietic system</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Current status</a>
+        <a href="#activity">Latest activity</a>
+        <a href="#applicant.application" class="">PPL holder</a>
+        <a href="#procedures" class="">Non-technical summary</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Status</h2>
+      <p>
+        <span class="badge">Returned</span>&emsp;Currently with: PPL holder
+      </p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="date">20 July 2020</span>
+        </p>
+      <p><strong>Returned by:</strong> <a href="#">NTS reviewer</a></p>
+      <p>NTS reviewer commented:
+      <div class="govuk-inset-text">
+        NTS's shouldn't contain any identifying information. Please remove your references to the University of Croydon in the objectives section
+      </div>  
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+     
+      <h2 class="govuk-heading-m">PPL holder</h2>
+      <p><a href="#">Janet Andrews</a></p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Non-technical summary</h2>
+      <!-- <p>Check the assessment’s accurate, uses simple language and contains no information that could identify people, places or intellectual property</p> -->
+
+      <p><a href="nts-index" class="govuk-button">Review changes required   </a></p>
+
+      <!-- <h3 class="govuk-heading-s">Does this application have the endorsement of your primary establishment's PEL holder?</h3>
+
+      <p>Yes</p>
+
+      <p>PEL Holder: Bruce Banner</p>
+
+      <p>Endorsement date: 10 May 2020</p>
+
+      <h3 class="govuk-heading-s">Has this application been reviewed by all the relevant Animal Welfare and Ethical Review Bodies (AWERBs)?</h3>
+
+      <p>Yes</p>
+
+      <p>AWERB review date: 31st January 2020</p>
+
+      <h3 class="govuk-heading-s">Has an inspector advised that this version of the draft application is ready for assessment?</h3>
+
+      <p>Yes</p>
+
+     
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+    
+      <h2 class="govuk-heading-m">Statutory deadline</h2>
+      <p><strong>20 August 2020</strong></p> -->
+      
+<!-- 
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live-2" class="govuk-label govuk-radios__label">Edit and resubmit summary</label>
+              <span class="govuk-hint">XXX</span> 
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+              <label for="where-do-you-live-1" class="govuk-label govuk-radios__label">Resubmit summary</label>
+              <span class="govuk-hint">The summary will be returned to the applicant with your comments.</span> 
+            </div>
+        </fieldset>
+      </div>
+
+      <a href="nts-index" class="govuk-button">Continue</a> -->
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

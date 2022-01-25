@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Return details</h1>
+      <form action="setup-endangered" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">Were only ‘embryonic’ forms of animals used in 2021?</h1>
+            </legend>
+            <!-- <span class="govuk-hint">Protected embryonic forms of animals are old enough to be regulated but do not require a full return to be submitted.  </span> -->
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Definitions of embryonic forms of animals
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Mammals, birds and reptiles are defined as embryonic before they are born or hatched. Amphibians, cephalopods and larval forms of fish are embryonic before they can feed independently.</p>
+              </div>
+            </details>
+        
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-protected-2" name="setup-protected" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="setup-protected-2">
+                  No, older animals were used
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-protected" name="setup-protected" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="setup-protected">
+                  Yes, only embryonic forms of animals were used
+                </label>
+              </div>
+            </div>
+            <br>
+            
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

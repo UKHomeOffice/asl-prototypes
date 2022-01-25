@@ -1,0 +1,130 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+      <h3 class="govuk-heading-s">Title of the project</h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Latest submission</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+        <p>
+          <span class="badge">Awaiting recommendation</span>
+          <span class="date">17 July 2019</span>
+        </p>
+      <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest submission</h2>
+      <p>This is the application that has been submitted for approval.</p>
+
+      <button class="govuk-button govuk-button--secondary">View latest submission</button>
+
+      <h3 class="govuk-heading-s">Does this amendment have the endorsement of your primary establishment’s PEL holder?</p>
+
+      <p>Not yet</p>
+
+      <hr class=" govuk-section-break">
+
+
+      <h3 class="govuk-heading-s">Has this amendment been reviewed by the AWERB of each relevant establishment?</p>
+      <p>No</p>
+
+      <p>Reason: Because it isn't really changing that much.</p>
+<!-- 
+      <hr class=" govuk-section-break">
+
+      <h3 class="govuk-heading-s">Why has this amendment not been reviewed by the AWERB of each relevant establishment?</p>
+      <p>Because it isn't really changing that much.</p> -->
+
+
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                uk-radios__label">Return to applicant</la
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommmend for rejection</label>
+                <span class="govuk-hint">The application will be sent to a Licensing Office who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                uk-radios__label">Return to applicant</la
+            </div>
+          </fieldset>
+        </div>
+
+
+
+      <a href="review-pil-app-public-edit" class="govuk-button">Edit and resubmit</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+  </style>
+
+{% endblock %}

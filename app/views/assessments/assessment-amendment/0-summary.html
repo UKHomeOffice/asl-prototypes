@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'summary' %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/licence-header-assessment.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li class="selected"><a href="0-summary">Summary of amendment</a></li>
+          <li><a href="1-intro">Introductory details</a></li>
+          <li><a href="7-nts"> Non-technical summary: general</a></li>
+          <li><a href="6-3rs">Non-technical summary: 3Rs</a></li>
+          <li><a href="1-suitability">Applicant information</a></li>
+          <li><a href="2-suitability-places">Project location</a></li>
+          <li><a href="3-programme">Project plan</a></li>
+          <li><a href="5-models">Protocols</a></li>
+          <li><a href="4-types">Use of animals</a></li>
+          <li><a href="5a-end-of">Other considerations</a></li>
+          <li><a href="11-reporting"> Other conditions and authorisations</a></li>
+          <li><a href="12-referrals">Referrals</a></li>
+          <li><a href="10-hba">Harm-benefit analysis</a></li>
+           
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Summary of amendment</h1>
+      <h2 class="govuk-heading-m">Reason for amendment</h2>
+      <p>We are coming up to 75% of our animals use and therefore wish to increase the total number</p>
+      <form action="assessment-overview" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+            Summarise the rationale and justification for the amendment request
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint"></div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+      
+        {% include "includes/assessment-complete.html" %}
+  
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

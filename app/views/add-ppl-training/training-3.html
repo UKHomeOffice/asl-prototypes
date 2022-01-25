@@ -1,0 +1,212 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="licence-status-banner">
+        <p>
+          <strong>DRAFT</strong>
+          <span class="float-right"><a href="#">Show less</a></span>
+          <hr>
+        </p>
+         <p>This amendment has not been submitted and the licence is not active. The licence holder or applicant is not authorised to carry out the programme of work as stated in this licence/application.</p>
+        <p><a href="#">View granted licence</a></p>
+      </div>
+
+      <div class="download-header">
+        <span style="font-size: 24px;" class="govuk-body">How to cure heartache</span>
+        <span class="float-right">
+          <span class="hod-download-button side-space icon-small" style="margin-right: 0px; color:#005ea5"></span>
+          <a href="#">Download application</a>
+        </span>
+      </div>
+      <div class="back-to-sections-link govuk-body">
+        <a href="ppl-index">List of sections</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Which types of animals did this certificate cover?</h2>
+      
+        <form action="training-review" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="cert-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  
+              </legend>
+              <span id="cert-hint" class="govuk-hint">
+                Select all that apply.
+              </span>
+
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Small animals
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <div class="govuk-checkboxes ">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert" name="cert" type="checkbox" value="L">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert">
+                       Mice
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-2" name="cert" type="checkbox" value="E1">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-2">
+                        Rats
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-3" name="cert" type="checkbox" value="PILA (theory)">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-3">
+                        Guinea pigs
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-4" name="cert" type="checkbox" value="PILA (skills)">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-4">
+                        Hamsters (Syrian)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-5" name="cert" type="checkbox" value="PILB">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-5">
+                        Hamsters (Chinese)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-6" name="cert" type="checkbox" value="PILC">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-6">
+                        Mongolian gerbils
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-7" name="cert" type="checkbox" value="K (theory)">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-7">
+                        Other rodents
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-8" name="cert" type="checkbox" value="K (skills)">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-8">
+                        Rabbits
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cert-3" name="cert" type="checkbox" value="E2">
+                      <label class="govuk-label govuk-checkboxes__label" for="cert-3">
+                        Ferrets
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Large animals
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Aquatic species
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Birds
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Dogs
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Cats
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Equidae
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Non-human primates
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Other
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  XXXX
+                </div>
+              </details>
+
+
+              
+            </fieldset>
+          </div>         
+                      
+          <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+        </form>   
+    </div>
+  </div>
+<style type="text/css">
+.govuk-details {
+  margin-bottom: 0px;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,164 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Manage training
+      </h1>
+      <p> Show evidence training requirements have been met to support an application. Evidence can be completed training modules or professional experience that makes training unnecessary. </p>
+      <h2 class="govuk-heading-m">Evidence of training</h2>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col" class="govuk-table__header" style="width: 20%;">Evidence</th> -->
+            <th scope="col" class="govuk-table__header">Evidence</th>
+            <th scope="col" class="govuk-table__header">Modules</th>
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Evidence details</th>
+            <th scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>L</li>
+                <li>E1</li>
+                <li>PILA (theory)</li>
+                <li>  PILA (skills)</li>
+                <li>PILB</li>
+                <li>K (theory)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87478489</li>
+                <li>Awarded on: 3 January 2018</li>
+                <li>Awarded by: Universities Group</li>
+              </ul>
+              <p>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="#">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="">Remove</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Exemption
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>K (skills)</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mice</li>
+                <li>Rats</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Module K skills will be developed in-house as opportunities arise</p>
+            </td>
+            
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="#">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="">Remove</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              Training certificate
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>E2</li>
+                <li>PPL</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+             </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Certificate number: 87595/33</li>
+                <li>Awarded on: 12 April 2020</li>
+                <li>Awarded by: Royal Veterinary College</li>
+              </ul>
+              <p>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>
+                  <a href="#">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="">Remove</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        <p>
+        <a href="evidence-type" class="govuk-button">Add evidence</a>
+      </p>
+    </div>
+  </div>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Resume application</h3>
+      <p> <a href="/training-exemptions/ur/ppl/ppl-index-added" id="">Autophagy in the hematopoietic system</a> project application at University of Croydon</p>
+      <!-- <p>Or any of your other applications or amendments:</p>
+      <ul class="govuk-list">
+        <li><a href="#">How to cure heartache</a> amendment at University of Croydon</li>
+        <li><a href="#">Training for microvascular surgery</a> application at Slough University</li>
+      </ul> -->
+
+    </div>
+  </div>
+
+
+<style>
+  td .govuk-details {
+    margin-bottom: 0px;
+  }
+  td {
+    vertical-align: top;
+  }
+</style>
+
+{% endblock %}

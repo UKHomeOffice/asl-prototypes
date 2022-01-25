@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL amendment</span>
+      <h1 class="govuk-heading-xl">
+        Endorse amendment
+      </h1>
+      <form action='pelha-confirmation-endorsed' method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+           
+            <label class="govuk-label--s" for="">
+              Comments
+            </label>
+            <span id="holding-hint" class="govuk-hint">Comments can be seen by establishment users, as well as inspectors and Home Office team members. They will be added to the 'Latest activity' log of this task.</span>
+            
+            <textarea class="govuk-textarea" id="more-detail" name="comment-pelha" rows="5" aria-describedby="more-detail-hint"></textarea>
+            
+          </fieldset>
+        </div>
+        <button class="govuk-button">Endorse amendment</button>
+        <a href="" class="secondary-link">Cancel</a>
+      </form>
+    </div>
+
+    <!--   <h3 class="govuk-heading-s">Current establishment</h3>
+      <p>Establishment A</p>
+
+      <h3 class="govuk-heading-s">New establishment</h3>
+      <p>Est B</p>
+
+      <h3 class="govuk-heading-s">Reason for transfer</h3>
+      <p>I'm moving to Establishment B and I want to take my project with me</p>
+
+      <p><a href="#">Edit</a></p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>The request will be sent to the establishment to confirm where they will also be able to view this licence.
+        </strong>
+      </div>
+        
+      <br>
+    
+      <a href="transfer-request-submitted" class="govuk-button govuk-button">Submit</a> <a href='#' class="secondary-link">Cancel</a>
+
+    </div> -->
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

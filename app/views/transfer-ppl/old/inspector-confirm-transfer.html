@@ -1,0 +1,182 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PPL amendment</span>
+      <h1 class="govuk-heading-xl">
+        Confirm PPL transfer
+      </h1>
+      
+      <h3 class="govuk-heading-s">Current establishment</h3>
+      <p>University of Croydon</p>
+
+      <h3 class="govuk-heading-s">New establishment</h3>
+      <p>Marvell Pharma</p>
+
+       <div class="govuk-form-group">
+        <h3 class="govuk-heading-s">Confrim the new establishment</h3>
+        <!-- <label  class="govuk-label" for="establishment-list">Confirm the new establishment</label> -->
+        <input list="establishment-list" id="myBrowser" name="myBrowser" class="govuk-input" />
+        <datalist id="establishment-list">
+          <option value="Cambridge">
+          <option value="Oxford">
+          <option value="St Andrews">
+          <option value="London School of Economics">
+          <option value="Imperial College London">
+          <option value="Durham">
+          <option value="Lancaster">
+          <option value="Loughborough">
+          <option value="Bath">
+          <option value="University College London">
+          <option value="Exeter">
+          <option value="Croydon">
+          <option value="Birmingham">
+          <option value="Leeds">
+          <option value="Manchester">
+          <option value="Marvell Pharma">
+          <option value="Edinburgh">
+          <option value="Bristol">
+          <option value="Glasgow">
+          <option value="Nottingham">
+          <option value="Southampton">
+          <option value="East Anglia (UEA)">
+          <option value="Newcastle">
+          <option value="Royal Holloway, University of London">
+          <option value="Surrey">
+          <option value="King's College London">
+          <option value="Cardiff">
+          <option value="Harper Adams">
+          <option value="Liverpool">
+          <option value="Aberdeen">
+          <option value="York">
+          <option value="Dundee">
+          <option value="Sussex">
+          <option value="Sheffield">
+          <option value="Aston">
+          <option value="Swansea">
+          <option value="Heriot-Watt">
+          <option value="Queen's, Belfast">
+          <option value="Nottingham Trent">
+          <option value="Strathclyde">
+          <option value="Reading">
+          <option value="Queen Mary, University of London">
+          <option value="Lincoln">
+          <option value="Stirling">
+          <option value="Essex">
+          <option value="SOAS University of London">
+          <option value="Leicester">
+          <option value="St George's, University of London">
+          <option value="University for the Creative Arts">
+          <option value="Kent">
+          <option value="Northumbria">
+          <option value="Oxford Brookes">
+          <option value="Keele">
+          <option value="Coventry">
+          <option value="Portsmouth">
+          <option value="West of England, Bristol">
+          <option value="Manchester Metropolitan">
+          <option value="City, University of London">
+          <option value="Ulster">
+          <option value="Edge Hill">
+          <option value="Staffordshire">
+          <option value="University of the Arts, London">
+          <option value="Liverpool Hope">
+          <option value="Bradford">
+          <option value="Huddersfield">
+          <option value="Arts University Bournemouth">
+          <option value="Liverpool John Moores">
+          <option value="De Montfort">
+          <option value="Queen Margaret">
+          <option value="Brunel University London">
+          <option value="Bournemouth">
+          <option value="Aberystwyth">
+          <option value="Goldsmiths, University of London">
+          <option value="Sheffield Hallam">
+          <option value="Hertfordshire">
+          <option value="Central Lancashire">
+          <option value="Norwich University of the Arts">
+          <option value="Glasgow Caledonian">
+          <option value="Plymouth">
+          <option value="Falmouth">
+          <option value="Salford">
+          <option value="Roehampton">
+          <option value="Hull">
+          <option value="Bangor">
+          <option value="Greenwich">
+          <option value="Robert Gordon">
+          <option value="Edinburgh Napier">
+          <option value="London South Bank">
+          <option value="Chichester">
+          <option value="Middlesex">
+          <option value="West London">
+          <option value="Birmingham City">
+          <option value="Westminster">
+          <option value="Kingston">
+          <option value="Bath Spa">
+          <option value="Leeds Arts University">
+          <option value="Cardiff Metropolitan">
+          <option value="St Mary's, Twickenham">
+          <option value="Derby">
+          <option value="Gloucestershire">
+          <option value="Teesside">
+          <option value="Chester">
+          <option value="University of Wales Trinity Saint David">
+          <option value="Abertay">
+          <option value="West of Scotland">
+          <option value="Solent">
+          <option value="Winchester">
+          <option value="Sunderland">
+          <option value="Buckingham">
+          <option value="Worcester">
+          <option value="Northampton">
+          <option value="York St John">
+          <option value="Leeds Trinity">
+          <option value="South Wales">
+          <option value="Brighton">
+          <option value="Buckinghamshire New">
+          <option value="East London">
+          <option value="Canterbury Christ Church">
+          <option value="Anglia Ruskin">
+          <option value="Bishop Grosseteste">
+          <option value="Cumbria">
+          <option value="Leeds Beckett">
+          <option value="Bedfordshire">
+          <option value="Royal Agricultural University">
+          <option value="Wolverhampton">
+          <option value="Newman">
+          <option value="London Metropolitan">
+          <option value="Plymouth Marjon">
+          <option value="Bolton">
+          <option value="Suffolk">
+          <option value="Wrexham Glyndŵr">
+          <option value="Ravensbourne">
+
+        </datalist>
+      </div>
+      <br>
+
+      
+      <a href="inspector-review-transfer-confirmed" class="govuk-button govuk-button">Confirm establishment</a> <a href='#' class="secondary-link">Back</a>
+
+    </div>
+  </div>
+
+  <style type="text/css">
+    dd {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dt {
+      width: 68%;
+    }
+  </style>
+
+{% endblock %}

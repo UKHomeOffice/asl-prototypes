@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Finding the cure for heartache</span>
+      <h1 class="govuk-heading-xl">
+        Change date granted
+      </h1>
+
+      <p>
+        <strong>Project duration</strong><br>
+        5 years 0 months
+      </p>
+
+      <p>
+        <strong>Expiry date</strong><br>
+        2 August 2020
+      </p>
+
+<!--       <p>
+        <strong>Current date granted</strong><br>
+        2 August 2019
+      </p>
+
+      <p>
+        <strong>New date granted</strong><br>
+        2 August 2017
+      </p> -->
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Current date granted</th>
+            <th class="govuk-table__header" scope="col">New date granted</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2 August 2019</td>
+            <td class="govuk-table__cell"><span class=" highlight">2 August 2015</span></td>
+          </tr>
+         
+        </tbody>
+      </table>
+<!-- 
+
+      <h3 class="govuk-heading-s">Why are you making this change?</h3>
+      <p>This was a legacy licence that was uploaded 3 years into the licence. This is being corrected.</p>
+      <br> -->
+      <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="change-submitted" class="govuk-button">Update date granted</a> 
+      </div>
+      <a href="#" style="padding-left: 10px;">Change</a>
+      
+    </div>
+  </div>
+
+  </style>
+
+{% endblock %}

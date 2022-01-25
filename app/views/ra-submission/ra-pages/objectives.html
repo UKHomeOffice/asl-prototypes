@@ -1,0 +1,95 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Autophagy in the hematopoietic system</span>
+      <h1 class="govuk-heading-xl">Retrospective assessment</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div id='navbar'>
+        <ul class="assessment-nav">
+          <li><a href="programme">Extent of the programme of work</a></li>
+          <li class="selected"><a href="objectives">Achievement of the objectives</a></li>
+          <li><a href="hba">Actual harms caused</a></li>
+          <li><a href="3rs">Lessons learnt contributing to the 3Rs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds float-right">
+      <h1 class="govuk-heading-l">Achievement of the objectives</h1>
+
+      <form action="assessment-overview" method="post">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Useful stuff related to this question
+          </span>
+        </summary>
+        <div class="govuk-details__text">  
+          XXX
+        </div>
+      </details>
+      <h2 class="govuk-heading-m">Did the project achieve its aims and if not, why not?</h2>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Objective 1 - Improved understanding of gene regulatory networks in the early gonad and how these lead to specification of cell fates in the testis and ovary.
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Please state whether the programme of work has been completed or if it is to be continued under the authority of a further project licence if necessary
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Objective 2 - Improved understanding of gene regulation during gonadal development.
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Please state whether the programme of work has been completed or if it is to be continued under the authority of a further project licence if necessary
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          Objective 3 - Improved understanding of gonadal sex maintenance and reversal
+
+
+          </label>
+        </h3>
+        <span id="more-detail-hint" class="govuk-hint">
+          Please state whether the programme of work has been completed or if it is to be continued under the authority of a further project licence if necessary
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+         
+      </div>
+      
+      <a href="#" class="govuk-button govuk-button--secondary">Add Another objective</a>
+
+      <p>
+        <button class="govuk-button">Continue</button>
+        <a class="secondary-link" href="#">Cancel</a>
+      </p>
+  
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Manage training
+      </h1>
+      <p> Show evidence training requirements have been met to support an application. Evidence can be completed training modules or professional experience that makes training unnecessary. </p>
+      <h2 class="govuk-heading-m">Evidence of training</h2>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <!-- <p><em>No evidence added</em></p> -->
+      <p>
+        <a href="evidence-type" class="govuk-button">Add evidence</a>
+      </p>
+    </div>
+  </div>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">Resume application</h3>
+       <p><a href="/training-exemptions/ur/pil/pil-app" id="">Personal licence application</a></p>
+      <!-- <p>Or any of your other applications or amendments:</p>
+      <ul class="govuk-list">
+        <li><a href="#">How to cure heartache</a> amendment at University of Croydon</li>
+        <li><a href="#">Training for microvascular surgery</a> application at Slough University</li>
+      </ul> -->
+
+    </div>
+  </div>
+
+{% endblock %}

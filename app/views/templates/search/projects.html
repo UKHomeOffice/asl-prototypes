@@ -1,0 +1,148 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Hello Bruce
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="search-panel">
+        <h2 class="govuk-heading-m">Search</h2>
+        <p>
+          <a href="establishments" class="">Establishments</a>
+           | 
+          <a href="people" class="">People</a>
+           | 
+          <a href="projects" class="active">Projects</a>
+        </p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            
+              <div class="govuk-form-group search-box">
+                <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="">
+                
+              </div>
+            </form>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="view-all-link">
+              <span class="secondary-link"><a href="inspector-landing-page-establishments">View all projects</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-s">Showing 42 of 42 results</h3>
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col"><a href="#">Project title</a>
+                <th class="govuk-table__header" scope="col"><a href="#">Primary establishment</a>
+                <th class="govuk-table__header" scope="col"><a href="#">PPL holder</a>
+                <th class="govuk-table__header" scope="col"><a href="#">Status</a>
+                <th class="govuk-table__header" scope="col"><a href="#">Expiry date</a>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">1525to the lord your god before he cause darkness and 1</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Carmen Riddle</a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">18940out before the children i will not be your god 8</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Carmen Riddle</a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">4916bless in his name for ever being a cripple from his And a change </a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Carmen Riddle</a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Another draft</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner </a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">blue Estonia Wooden scalable Borders JSON matrix RSS Adaptive Maine</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner </a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Cheese Avon Dynamic Generic dynamic driver input Ball Web platforms</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner </a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Demo PPL draft </a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">afzal dhada</a></td>
+                <td class="govuk-table__cell">inactive</td>
+                <td class="govuk-table__cell"> -</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Expired project</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner </a></td>
+                <td class="govuk-table__cell">expired</td>
+                <td class="govuk-table__cell">06 July 2019<br>Expired</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">How to cure heartache</a></td>
+                <td class="govuk-table__cell"><a href="#">University of Croydon</a></td>
+                <td class="govuk-table__cell"><a href="#">Bruce Banner </a></td>
+                <td class="govuk-table__cell">active</td>
+                <td class="govuk-table__cell"> 07 July 2029</td>
+              </tr>
+            </tbody>
+          </table>
+          <nav role="navigation" aria-label="Pagination">
+            <div class="pagination__summary">Showing 1 &ndash; 10 of 42 results</div>
+            <ul class="pagination">
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+            </ul>
+          </nav>
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        </section>
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

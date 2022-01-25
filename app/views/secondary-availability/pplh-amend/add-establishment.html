@@ -1,0 +1,100 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-amendment.html" %}
+      {% include "includes/licence-header-ppl.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+     <h2 class="govuk-heading-l">Establishments</h2>
+      <!--   <p>Add any additional establishments where work on this project will be carried out beyond just the primary establishemt.</p>
+      <h3 class="govuk-heading-s">Primary establishment</h3>
+      <p>{{data["est-primary"]}}</p>
+      <p><a href="#">Edit</a></p>
+      <br> -->
+      <form action="ppl-establishments-3" method="post">
+        
+        <div class="protocol-container">
+          <div class="protocol-header-in-progress">
+
+            <h3 class="govuk-heading-m">Additional establishment 1</h3>
+            <div class="govuk-form-group">
+              <h3 class="govuk-heading-s">Additional establishment name
+              </h3>
+              <p>Answer provided:
+              <div class="govuk-inset-text">
+                Slough Uni
+              </div>
+            </p>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    Confirm this establishment by selecting it from the list:
+                    <span class="govuk-hint">Note, establishment administrators will be able to see this application
+                    </span>
+                  </legend>
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                        Marvell Pharma
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                        Slough University
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+            </div>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                 Why is the establishment I need not listed?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>If the establishment is not listed, ask the Home Office Liaison Contact (HOLC) of that establishment to send you an invitation. Once you accept the invitation, you can add that establishment as an additional establishment.</p>
+              </div>
+            </details>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="est1-reason">
+                Why do you need to carry out work at this establishment?
+              </label>
+              <span id="est1-reason-hint" class="govuk-hint">For example, there may be important specialised equipment at this location that is not available at your primary establishment.</span>
+              <textarea class="govuk-textarea" id="est1-reason" name="est1-reason" rows="7" aria-describedby="more-detail-hint">Slough Uni has the MRI machine that we need to carry out prototcol 3</textarea>
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label--s" for="est1-who">
+                Who will be responsible for supervising your work at this establishment?
+              </label>
+              <textarea class="govuk-textarea" id="est1-who" name="est1-who" rows="7" aria-describedby="more-detail-hint">Dr Janet Andrews</textarea>
+            </div>
+          </div> 
+        </div>
+        
+        <p><a class="govuk-button govuk-button--secondary">Add another additional Establishment</a></p>
+        <button class="govuk-button">Continue</button><a href='ppl-index' class="secondary-link">List of sections</a>
+      </form>   
+    </div>
+  </div>
+<style type="text/css">
+
+</style>
+{% endblock %}

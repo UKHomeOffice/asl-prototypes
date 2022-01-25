@@ -1,0 +1,384 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {% set row = '1' %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Animals in Science Regulation Unit</span>
+      <h1 class="govuk-heading-l">Staff memebers task management
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <!-- &ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>1 January 2021 to 31 December 2021</option>
+          <option value="updated">1 January 2020 to 31 December 2020</option>
+        </select> -->
+        <span class="inline-label">Showing tasks for the staff memeber:&ensp;
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>Derrick Kavanagh</option>
+          <option value="views">Delucie Foster</option>
+          <option value="comments">Gladys Enriquez</option>
+          <option value="comments">Hebe John</option>
+        </select>
+      </p>
+    </div>  
+  </div>
+
+  <style>
+    
+  </style>
+  <!-- <div class="govuk-grid-row">
+    <div class="big-numbers">
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,627</span>
+        <span class="label">returns due in 2021</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">28</span>
+        <span class="label">returns submitted</span>
+      </div>  
+      <div class="govuk-grid-column-one-third">
+        <span class="number">3,599</span>
+        <span class="label">returns outstanding</span>
+      </div>  
+    </div>
+  </div> -->
+  <br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#incomplete">
+              Open tasks
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#establishments">
+              Completed tasks
+            </a>
+          </li>
+        
+        </ul>
+
+        <!-- <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+          <h3 class="govuk-heading-m">Returns due in 2021</h3>
+          <dl class='unbold'>
+            <dt>Total returns due in 2021</dt>
+            <dd>3,627</dd>
+          </dl>
+          <h2 class="govuk-heading-m">Returns submitted</h2>
+          <dl class='unbold'>
+            <dt>Total returns submitted</dt>
+            <dd>28</dd>
+            <dt>Returns updated </dt>
+            <dd>0</dd>
+          </dl>
+          <h3 class="govuk-heading-m">Returns outstanding</h3>
+          <dl class='unbold'>
+            <dt>Total returns outstanding</dt>
+            <dd>3,599</dd>
+            <dt> Returns queried by Home Office </dt>
+            <dd>0</dd>
+            <dt>Returns overdue</dt>
+            <dd>0</dd>
+          </dl>
+         </section> -->
+
+
+         <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
+         
+          <h2 class="govuk-heading-m">Open tasks assigned to Derrick Kavanagh</h2>
+          
+          <h3 class="govuk-heading-s">5 tasks with ASRU</h3>
+          
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+                <th class="govuk-table__header" scope="col">Assignee</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP9358303</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">Retrospective assessment</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Awaiting decision</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>1993</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Stuart Wood
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Awaiting decision</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">5 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP1948863</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Maartin Allcock
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Awaiting decision</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>8210757</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Stuart Wood
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Returned</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL application</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Awaiting decision</span><br>Includes project continuation</td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              
+            </tbody>
+            
+          </table>
+          
+       <style>
+         .inline-label  {
+           display: inline-block;
+         }
+       </style>   
+          
+        </section>      
+        
+        
+         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;">
+          <h2 class="govuk-heading-m">Tasks completed by ASRU staff</h2>
+          <p>All completed tasks by the staff member who completed them</p>
+          <span class="inline-label">Showing tasks completed in the period:&ensp;
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="updated" selected>September 2021</option>
+            <option value="views">August 2021</option>
+            <option value="comments">July 2021</option>
+            <option value="comments">June 2021</option>
+          </select>
+          <button class="govuk-button">Update</button> 
+          <p>
+            Filter by staff role:&emsp;<strong>All roles</strong>&emsp;<a href="#">Inspectors</a>&emsp;<a href="#">Licensing Officers</a>
+            <span class="float-right"><a href="#">Download CSV</a></span>
+          </p>
+                    
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+                <th class="govuk-table__header" scope="col">Assignee</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP9358303</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">Retrospective assessment</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">6 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>1993</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Stuart Wood
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">5 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP1948863</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Maartin Allcock
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>8210757</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Stuart Wood
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL application</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span><br>Includes project continuation</td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">The University of Training and Planing</td>
+                <td class="govuk-table__cell">PPL<br>12345678</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Bruce Banner
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3 Aug 2021</td>
+                <td class="govuk-table__cell">The University of Training and Planing</td>
+                <td class="govuk-table__cell">PPLDC-191<br>669</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Bruce Banner
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">22 Jul 2021</td>
+                <td class="govuk-table__cell">The University of Training and Planing</td>
+                <td class="govuk-table__cell">PIL</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PIL application</a><br>
+                  Roger Carey
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">21 Jul 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP6181559</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL amendment</a><br>
+                  Basic User
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">21 Jul 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP0821721</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL amendment</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">15 Jul 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP1384407</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL amendment</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">15 Jul 2021</td>
+                <td class="govuk-table__cell">The University of Training and Planing</td>
+                <td class="govuk-table__cell">PPL<br>132197</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL amendment</a><br>
+                  Stuart Wood
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">15 Jul 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL application</a><br>
+                  Auto Project
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span><br>5 weeks left<br>includes project continuation</td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">13 Jul 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL<br>PP2008238</td>
+                <td class="govuk-table__cell">
+                  <a href="task-review">PPL transfer</a><br>
+                  Maartin Allcock
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Complete</span></td>
+                <td class="govuk-table__cell"><em>Derrick Kavanagh</em></td>
+              </tr>
+             
+            </tbody>
+            
+          </table>
+        
+          
+          
+        </section>
+        
+      </div>
+    </div>  
+  </div>
+<style>
+</style>
+{% endblock %}

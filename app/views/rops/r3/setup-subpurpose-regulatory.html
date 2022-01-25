@@ -1,0 +1,127 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['validate'] == 'true' %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/validation.js"></script>
+{% endif %}
+ 
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents
+      </span>
+      <h1 class="govuk-heading-l">Set up return: purposes</h1>
+      <h1 class="govuk-heading-s">For the purpose</h1>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Regulatory research</li>
+      </ul>
+      <form action="setup-subpurpose-regulatory-2.html" method="POST">
+        <div class="govuk-form-group" id="q1" data-required="Please answer the question">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label--s" for="gaa">
+              Which of the following sub-purposes apply?
+            </label>
+            <span class="govuk-hint">Select all that apply</span>
+            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-yes" name="sub-p-3" type="checkbox" value="Oncology" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production: Blood based products</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Cardiovascular blood and lymphatic system" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production: Monoclonal antibodies
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Nervous system" data-aria-controls="conditional-option-rp">
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Routine production: Other</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-rp">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Specify other
+                  </label>
+                  <input class="govuk-input" id="other-rp" name="other-rp" type="text">
+                </fieldset>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Respiratory system" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control: Batch safety testing</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Gastrointestinal system including liver" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control: Pyrogenicity testing</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Musculoskeletal system" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control: Batch potency testing</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Dentistry" data-aria-controls="conditional-option-qc">
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Quality control: Other quality controls</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-qc">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Specify other
+                  </label>
+                  <input class="govuk-input" id="other-qc" name="other-qc" type="text">
+                </fieldset>
+              </div>              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Immune system" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Other efficacy and tolerance testing</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Urogenital/reproductive system" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute LD50, LC50</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Sensory organs (skin, eyes and ears)" data-aria-controls="conditional-option-tc">
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute: Other lethal methods</label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-option-tc">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label--s" for="">
+                    Specify other
+                  </label>
+                  <input class="govuk-input" id="other-tc" name="other-tc" type="text">
+                </fieldset>
+              </div>  
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Endocrine system/metabolism" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and acute and sub-acute: Non lethal methods</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sub-p-3-no" name="sub-p-3" type="checkbox" value="Multisystemic" >
+                <label for="sub-p-3" class="govuk-label govuk-checkboxes__label">Toxicity and skin irritation/corrosion
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+        
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+    <div class="govuk-column-third">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <h3 class="govuk-heading-s">Related guidance</h3>
+      <span class="govuk-hint">Links open in a new tab</span>
+      <ul class="govuk-list">
+        <li><a href="#">General return of procedure guidance</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

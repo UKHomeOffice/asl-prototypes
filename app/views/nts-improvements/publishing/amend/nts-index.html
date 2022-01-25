@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-amendment.html" %}
+      {% include "includes/licence-header-nts.html" %}
+      <!-- {% include "includes/list-of-sections.html" %} -->
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      <h2 class="govuk-heading-m">Project introduction</h2>
+      <ul class="govuk-list table-list">
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show introductory details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <h2 class="govuk-heading-s">
+              Project duration 
+            </h2>
+            <p>
+              5 years 0 Months
+            </p>
+            
+            <h2 class="govuk-heading-s">
+              Project purpose
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                (b) Translational or applied research with one of the following aims:
+              <ul class="govuk-list govuk-list--bullet">
+                (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or their effects, in man, animals or plants
+                (ii) Assessment, detection, regulation or modification of physiological conditions in man, animals or plants
+              </ul>
+              </li>
+              <li>
+                (c) Development, manufacture or testing of the quality, effectiveness and safety of drugs, foodstuffs and feedstuffs or any other substances or products, with one of the following aims mentioned in paragraph (b)
+              </li>
+            </ul>
+            <h2 class="govuk-heading-s">
+              Key words
+            </h2>
+            <p>
+              Mental illness, Central Nervous System, Mood disorders      
+            </p>
+            <table class="govuk-table">
+              <caption class="govuk-table__caption">Animal types and life stages</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Animal types</th>
+                  <th scope="col" class="govuk-table__header">Life stage</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Mice</td>
+                  <td class="govuk-table__cell">adult, pregnant, neonate, juvenile</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rats</td>
+                  <td class="govuk-table__cell">adult, pregnant, neonate, juvenile</td>
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>
+        </details>
+
+
+      </ul>
+      <h2 class="govuk-heading-m">Non-technical summary</h2>
+      <ul class="govuk-list table-list">
+        <li>
+          <a href="nts-aims">Project aims</a>
+          <div class="float-right">
+            {% if data['complete'] == 'true'%}
+            <span class="badge changed">Changed</span>
+            {% endif %}
+            <span class="badge comment">1 comment</span>
+             
+            <span class="badge badge-blue">complete</span>
+          </div>
+           
+        </li>
+        <li>
+          <a href="#">Benefits</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Project harms</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Fate of animals</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Replacement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Reduction</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+        <li>
+          <a href="#">Refinement</a>
+          <span class="badge badge-blue float-right">complete</span>
+        </li>
+      </ul>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Amend full licence
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            Any changes to the project's licence will need to be reviewed by an Animal Welfare and Ethical Review Body and assessed by a Home Office inspector.
+          </p>
+          <p><a href="nts-index-full">Amend licence now</a></p>
+        </div>
+      </details>
+      
+
+      <p>All sections must be marked as complete before you can continue.</p>
+
+      <a class="govuk-button" href="nts-declaration">Continue</a><span class="secondary-link"> <a href="#">Back to project overview</a></span>
+
+    </div>
+  </div>
+
+{% endblock %}

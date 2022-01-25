@@ -1,0 +1,91 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-amendment.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Refinement</h1>
+      {% include "includes/nts-warning-small.html" %}
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why are the animals, models and methods you will use the best to meet your objectives? Why will your approach cause the least pain, suffering, distress or lasting harm?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">The removal of tissue for analysis only after the death of the animal means procedures in living animals are reduced. Post-mortem techniques required will also be practiced beforehand on cadavers to ensure they are carried out correctly on experimental animals. </textarea>
+      </div>
+      
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Why can’t you use a less sentient animal, (for example at an immature stage, a less sentient species or using terminally anaesthetised animals)?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Genetically altered mouse models will be used in order to study plaque formation, which does not occur in normal mice fed a normal diet, and also prevents feeding a high-fat diet that can allow plaque formation but results in obesity and metabolic syndrome. </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What are you going to do to refine the procedures (for example increased monitoring, post- operative care, pain management, training of animals) to minimise the welfare costs (harms) to the animals?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">Drugs will be used at doses reported not to be toxic to the animals and where possible will be provided orally in food/water to minimise handling and distress.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            What published best practice guidance will be followed to ensure experiments are conducted in most refined way?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">A single sub-lethal X-ray dose will be selected that is the minimum dose required to see a clear increase in plaque formation. </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            How will you ensure you continue to use the most refined methods during the lifetime of this project?
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">We have chosen a radiation dose and end-point where we anticipate that plaque development will have progresses enough for analysis, but before any negative effect is expected to be experience by the mouse.
+        </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Explain the choice of species and the related life stages
+          </label>
+        </h3>
+        <div id="more-detail-hint" class="govuk-hint"></div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">All animals will be provided with comfortable group housing and enrichment. We do not anticipate the animals to experience any pain, but analgesics and increased monitoring will be used if considered appropriate.</textarea>
+      </div>
+      <form action="ppl-refinement-review">
+      <button class="govuk-button">Continue</button><a href="ppl-intro-review.html" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

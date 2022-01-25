@@ -1,0 +1,201 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">PIL application</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Establishment details</a>
+        <a href="#procedures" class="">Applicant</a>
+        <a href="#procedures" class="">Procedures</a>
+        <a href="#procedures" class="">Animal types</a>
+        <a href="#applicant.application" class="">Training and education project licence details</a>
+        <a href="#applicant.application" class="">Training need</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Latest activity</h2>
+      <p>
+        <span class="badge">Awaiting RECOMMENDATION</span>
+        <span class="date">20 April 2020</span>
+      </p>
+      <p><strong>Endorsed by:</strong> <a href="#">Nico Teller</a></p>
+      
+      <a href="#">Show previous activity</a>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Establishment details</h2>
+      <p>University of Croydon</p>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h3 class="govuk-heading-s">Applicant over 18?</h3>
+      <p>Yes</p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+      
+      <h2 class="govuk-heading-m">Procedures</h2>
+      
+      <h3 class="govuk-heading-s">Categories</h3>
+      
+      <p>E. Training and education</p>
+
+      <div class="govuk-inset-text" style="margin-top:0px;">
+        <p><strong>Animal types</strong><br>
+        {{ data['animal-types']}}</p>
+
+        <p><strong>Course start date</strong><br>
+        {{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</p>
+        
+        <p><strong>Training establishment</strong><br>
+        University of Croydon</p>
+      
+        <p><strong>Project licence title</strong><br>
+        Training in microvascular surgery</p>
+        
+        <p><strong>Project licence number</strong><br>
+          {{ data['ppl-number'] }}</p>
+      </div>
+      
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Training need</h2>
+      
+      <p>Mary is a surgeon at Slough Royal Hospital. She requires the training in microvascular surgery to progress with her career as a consultant vascular surgeon.</p>
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for approval</label>
+                <span class="govuk-hint">The amendment will be sent to a Licensing Officer who will action your recommendation.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Recommend for rejection</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return the application</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="inspector-declaration" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

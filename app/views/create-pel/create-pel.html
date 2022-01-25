@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        Create an inactive establishment
+      </h1>
+      <p>Once the new inactive establishment has been created, you should invite an admin user to it so they can begin to fill in further details. </p>
+      <p>When all the establishments information has been added, you will then be able to grant the Establishments licence.</p>
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label--s" for="event-name">
+          What is the name of the new establishment?
+        </label>
+        <span class="govuk-hint"></span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <a class="govuk-button" href="inspector-landing-created">Create inactive establishment</a><a href='ppl-index' class="secondary-link">Cancel</a>
+
+    </div>
+  </div>
+
+{% endblock %}

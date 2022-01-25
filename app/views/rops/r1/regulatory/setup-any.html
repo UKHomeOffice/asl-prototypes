@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Detection of Genotoxic Substances
+      </span>
+      <h1 class="govuk-heading-l">Return details</h1>
+      <form action="setup-protected" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Were any procedures carried out and completed in 2021?
+              </h1>
+            </legend>
+            <span class="govuk-hint">Include regulated procedures only.</span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-any" name="setup-any" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="setup-any">
+                  Yes, procedures were completed in 2021
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="setup-any-2" name="setup-any" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="setup-any-2">
+                  No, there were no completed procedures in 2021
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button">Continue</button> <a href="rops-landing" class="secondary-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

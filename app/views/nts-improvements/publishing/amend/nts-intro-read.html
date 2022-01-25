@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-amendment.html" %}
+      {% include "includes/licence-header-nts.html" %}
+      {% include "includes/list-of-sections.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Introductory details</h1>
+      {% include "includes/nts-warning-small.html" %}
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Change answers in this section
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            To change this answer you'll need to make a full licence amendment. This will need to go be reviewed by an inspector before it can be completed.
+          </p>
+          <p><a href="nts-index-full">Make a full amendment</a></p>
+        </div>
+      </details>
+      <h2 class="govuk-heading-s">
+        Project duration 
+      </h2>
+      <p>
+        5 years 0 Months
+      </p>
+      
+      <h2 class="govuk-heading-s">
+        Project purpose
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          (b) Translational or applied research with one of the following aims:
+        <ul class="govuk-list govuk-list--bullet">
+          (i) Avoidance, prevention, diagnosis or treatment of disease, ill-health or abnormality, or their effects, in man, animals or plants
+          (ii) Assessment, detection, regulation or modification of physiological conditions in man, animals or plants
+        </ul>
+        </li>
+        <li>
+          (c) Development, manufacture or testing of the quality, effectiveness and safety of drugs, foodstuffs and feedstuffs or any other substances or products, with one of the following aims mentioned in paragraph (b)
+        </li>
+      </ul>
+      <h2 class="govuk-heading-s">
+        Key words
+      </h2>
+      <p>
+        Mental illness, Central Nervous System, Mood disorders      
+      </p>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Animal types and life stages</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Animal types</th>
+            <th scope="col" class="govuk-table__header">Life stage</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Mice</td>
+            <td class="govuk-table__cell">adult, pregnant, neonate, juvenile</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rats</td>
+            <td class="govuk-table__cell">adult, pregnant, neonate, juvenile</td>
+          </tr>
+        </tbody>
+      </table>
+      <form action="nts-intro-review" method="post">
+        <button class="govuk-button">Continue</button><a href="#" class="secondary-link">List of sections</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

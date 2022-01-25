@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-heading-l">
+          Currently active licences by type
+        </h1>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Licence tyoe</th>
+              <th scope="col" class="govuk-table__header">Number of licences</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Establishments</td>
+              <td class="govuk-table__cell">17</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Projects</td>
+              <td class="govuk-table__cell">139</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Category A, B, C, D and F PILs</td>
+              <td class="govuk-table__cell">13,304</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Category E PILs</td>
+              <td class="govuk-table__cell">36</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a href="performance-metrics">Back to performance metrics</a></p>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

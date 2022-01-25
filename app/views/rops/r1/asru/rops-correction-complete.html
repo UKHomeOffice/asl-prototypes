@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% set toasterContent = 'Return of procedure successfully corrected' %}
+{% include "includes/toaster.html" %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% include "includes/licence-header-rops-research.html" %}
+
+      <h2 class="govuk-heading-m">Return details</h2>
+      <p>View and edit details about this return, including information used to customise procedures. </p>
+
+      <h3 class="govuk-heading-s">This return was corrected on 26 January 2021</h3>
+      <h2 class="govuk-heading-m">Procedures</h2>
+
+      <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
+        <div class="fullscreen-scrollable-table">
+          <table class="govuk-table  table-background" style="font-size: 14px;">
+            <caption class="govuk-table__caption"> </caption>
+            <thead class="govuk-table__head">
+              
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">No.</th>
+                <th scope="col" class="govuk-table__header">Animal species</th>
+                <th scope="col" class="govuk-table__header">Re-use</th>
+                <th scope="col" class="govuk-table__header">Place of birth</th>
+                <th scope="col" class="govuk-table__header">Genetic status</th>
+                <th scope="col" class="govuk-table__header">Purpose</th>
+                <th scope="col" class="govuk-table__header">Sub-purpose</th>
+                <th scope="col" class="govuk-table__header">Severity</th>
+                <th scope="col" class="govuk-table__header">Number of<br>procedures</th>
+                <th scope="col" class="govuk-table__header">Edit</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Oncology</td>
+                <td class="govuk-table__cell">Sub</td>
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell">Mice</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Oncology</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">18</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3</td>
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Oncology</td>
+                <td class="govuk-table__cell">Mild</td>
+                <td class="govuk-table__cell">83</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">4</td>
+                <td class="govuk-table__cell">Rats</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">UK, licensed establishment</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Basic research</td>
+                <td class="govuk-table__cell">Oncology</td>
+                <td class="govuk-table__cell">Moderate</td>
+                <td class="govuk-table__cell">29</td>
+                <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+      <form action="submit-comment" method="post">
+        <h2 class="govuk-heading-m">Correct return</h2>
+        <p>Correct this return of procedures.</p>
+        <a href="declaration" class="govuk-button govuk-button--secondary">Correct return</a>
+        <h3 class="govuk-heading-s">Previously submitted versions of this return</h3>
+        <p><a href="#">Submission 1 – 24 Jan 2021</a></p>
+      </form>
+      
+  </div>  
+</div>
+
+
+
+{% endblock %}

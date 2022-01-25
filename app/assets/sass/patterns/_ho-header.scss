@@ -7,7 +7,7 @@ header {
   background-color: #FFF;
   padding: 10px 20px;
   align-items: center;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: 'Inter UI', sans-serif!important;
 }
@@ -40,6 +40,7 @@ header {
 .header-title {
   margin-right: auto;
   align-self: center;
+  font-size: 16px;
 
   a:hover {
     text-decoration: underline;
@@ -47,8 +48,13 @@ header {
 }
 
 .header-name {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
+}
+
+.sign-in-options {
+  font-size: 16px;
+  float: right;
 }
 
 .wrapper-header a:hover {
