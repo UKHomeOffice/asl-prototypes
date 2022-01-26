@@ -20,14 +20,14 @@
     <form action="add-subject-1-details" method="POST">
       <div class="govuk-form-group">
         <label class="govuk-label" for="case-establishment">
-          Establishment
+          Select establishment
         </label>
         {% include "includes/typeahead-establishments.html" %}
 
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="case-number">
-          Case number
+          Enter case number
         </label>
         <input class="govuk-input  govuk-input--width-10" id="case-number" name="case-number" type="number" min="21101" max="100000" oninvalid="this.setCustomValidity('This case number is already being used')">
       </div>
