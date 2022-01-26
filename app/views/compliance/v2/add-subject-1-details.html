@@ -6,6 +6,12 @@
 {% endblock %}
 
 {% block content %}
+
+{% if (data['user-1-status'] === 'saved') or (data['user-2-status'] === 'saved') or (data['user-3-status'] === 'saved') %}
+  {% set toasterContent = 'Enforcement flags saved' %}
+  {% include "includes/toaster.html" %}
+{% endif %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -34,9 +40,7 @@
       {% include "includes/compliance/subject-status.html" %}
     {% endif %}
 
-    {{data['user-1-added']}} | {{data['user-1-status']}} |
-    {% if (data['user-1-added'] === 'true') and (data['user-1-status'] === 'saved') %}   
-    asdfs
+    {% if ((data['user-1-added'] === 'true') and (data['user-1-status'] === 'saved')) and (data['subject-1-status'] !== 'removed') %}   
       <br>
       {% set user = "1" %}
       {% include "includes/compliance/subject-status-saved.html" %}
@@ -51,43 +55,42 @@
 
     
     {% if (data['user-2-added'] === 'true') and (data['user-2-status'] === 'edit') %}  
-    <br>
+      <br>
       {% set user = "2" %}
       {% include "includes/compliance/subject-status.html" %}
     {% endif %}
 
     
-    {% if (data['user-2-added'] === 'true') and (data['user-2-status'] === 'saved') %}   
-    <br>
+    {% if ((data['user-2-added'] === 'true') and (data['user-2-status'] === 'saved')) and (data['subject-2-status'] !== 'removed') %}   
+      <br>
       {% set user = "2" %}
       {% include "includes/compliance/subject-status-saved.html" %}
     {% endif %}
 
     <!-- User 3 -->
     {% if (data['user-3-added'] === 'true') and (data['user-3-status'] === undefined) %}  
-    <br>
+      <br>
       {% set user = "3" %}
       {% include "includes/compliance/subject-name.html" %}
     {% endif %}
 
     
     {% if (data['user-3-added'] === 'true') and (data['user-3-status'] === 'edit') %}  
-    <br>
+      <br>
       {% set user = "3" %}
       {% include "includes/compliance/subject-status.html" %}
     {% endif %}
 
     
-    {% if (data['user-3-added'] === 'true') and (data['user-3-status'] === 'saved') %}   
-    <br>
+    {% if ((data['user-3-added'] === 'true') and (data['user-3-status'] === 'saved')) and (data['subject-3-status'] !== 'removed') %}  
+      <br>
       {% set user = "3" %}
       {% include "includes/compliance/subject-status-saved.html" %}
     {% endif %}
   
     <br>
-    <p><a href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another subject</a></p>
-    <a href="all-cases-2" class="govuk-button">Save case</a>
-    <a href="all-cases" class="govuk-button">View all cases</a>
+    <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another subject</a></p>
+    <a href="all-cases" class="">View all enforcement cases</a>
   </div>
 </div>
 

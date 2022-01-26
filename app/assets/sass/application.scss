@@ -322,8 +322,12 @@ footer {
   white-space: nowrap;  
 }
 
-.badge.changed {
-  background: #ff1493;
+.badge.changed, .badge.open-case {
+  background: #d53880;
+}
+
+.badge.changed, .badge.closed-case {
+  background: #f47738;
 }
 
 .badge.comment {

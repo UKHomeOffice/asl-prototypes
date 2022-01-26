@@ -1,0 +1,11 @@
+
+  {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
+  )%}
+    Jane McGregor options
+  {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
+  )%}
+    Patel Williams options
+  {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
+  )%}
+    Bruce Banner options
+  {% endif %}

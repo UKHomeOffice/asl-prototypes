@@ -1,16 +1,16 @@
-{% if data['subject-1-status'] == 'open' %}
+{% if flagStatus == 'open' %}
 <div class="notification-banner notification-banner--open" style="padding: 0px 10px">
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__text">
-      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to open enforcement case 21102</strong>
+      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to open <a href="add-subject-1-details">enforcement case 21102</a></strong>
       <br>
-      <a href="#">View details in Sharepoint (opens in a new tab)</a>
+      For more information view the case folder on Sharepoint or speak to the enforcement team at <a href="#">enforcement@homeoffice.gov.uk</a>
     </span>
   </div>
 </div>
 
-{% elif data['subject-1-status'] == 'remedial' %}
+{% elif flagStatus == 'closed' %}
 
 <div class="notification-banner notification-banner--closed" style="padding: 0px 10px">
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
@@ -26,9 +26,9 @@
         </summary>
         <div class="govuk-details__text">
           <ul class="govuk-list">
-            <li>Remedial action applied: Letter of reprimand</li>
-            <li>Closed flag in place until: 19 January 2027</li>
-            <li><a href="#">View details in Sharepoint (opens in a new tab)</a></li>
+            <li>Remedial action applied: letter of reprimand</li>
+            <li>Closed flag in place until: 28 January 2027</li>
+            <li>For more information view the case folder on Sharepoint or speak to the enforcement team at <a href="#">enforcement@homeoffice.gov.uk</a></li>
           </ul>
         </div>
       </details>

@@ -6,13 +6,18 @@
 {% endblock %}
 
 {% block content %}
+
+<script>
+
+</script>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
       Add case details
     </h1>
-    <form action="add-subject-1" method="POST">
+    <form action="add-subject-1-details" method="POST">
       <div class="govuk-form-group">
         <label class="govuk-label" for="case-establishment">
           Establishment
@@ -24,12 +29,13 @@
         <label class="govuk-label" for="case-number">
           Case number
         </label>
-        <input class="govuk-input  govuk-input--width-10" id="case-number" name="case-number" type="text">
+        <input class="govuk-input  govuk-input--width-10" id="case-number" name="case-number" type="number" min="21101" max="100000" oninvalid="this.setCustomValidity('This case number is already being used')">
       </div>
       <button class="govuk-button">Continue</button>
     </form>
   </div>
 </div>
+
 
 
 {% endblock %}

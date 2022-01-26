@@ -6,13 +6,15 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set flagStatus = data['flag-status'] %}
+    {% set entityType = 'establishment' %}
+    {% include "includes/compliance/flag.html" %}
+  </div>
+</div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      {% set entityType = "establishment" %}
-      {% include "includes/compliance/flag.html" %}
-
       <!-- <span class="govuk-caption-xl">XXX</span> -->
       <h1 class="govuk-heading-xl">
         University of Croydon

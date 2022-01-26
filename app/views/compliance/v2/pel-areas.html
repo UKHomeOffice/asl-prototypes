@@ -8,12 +8,13 @@
 {% block content %}
 
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      {% set entityType = "establishment" %}
-      {% include "includes/compliance/flag.html" %}
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set flagStatus = data['flag-status'] %}
+    {% set entityType = 'list of approved areas' %}
+    {% include "includes/compliance/flag.html" %}
   </div>
+</div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -335,9 +336,84 @@
     </tbody>
 </table>
 
+{% include "includes/pagination.html" %}
 
 
-      <a href="review-pil-app-public-edit" class="govuk-button">Continue</a>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            
+      <h2 class="govuk-heading-m">Related tasks</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Received</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Licence </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">Assigned to</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">Area amendment</a><br>
+              Room 23b
+            </td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+              {% set flagStatus = data['flag-status'] %}
+              {% include "includes/compliance/badge.html" %}
+            </td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">New approved area</a><br>
+              Room 105
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">New approved area</a><br>
+              Room 104
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">New approved area</a><br>
+              Room 103
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">Area amendment</a><br>
+              Room 36b
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+        </tbody>
+      </table>
       
     </div>
   </div>

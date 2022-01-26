@@ -7,15 +7,13 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-
-      {% set entityType = "establishment" %}
-      {% include "includes/compliance/flag.html" %}
-
-      {% include "includes/licence-header-pel.html" %}
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set flagStatus = data['flag-status'] %}
+    {% set entityType = 'establishment' %}
+    {% include "includes/compliance/flag.html" %}
   </div>
+</div>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -98,6 +96,7 @@
             <th class="govuk-table__header" scope="col">Licence </th>
             <th class="govuk-table__header" scope="col">Type</th>
             <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">Assigned to</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -106,10 +105,64 @@
             <td class="govuk-table__cell">University of Croydon</td>
             <td class="govuk-table__cell">PEL</td>
             <td class="govuk-table__cell">
-              <a href="pil-task-review-complete">PEL application</a><br>
-              University of Croydon
+              <a href="pil-task-review-complete">Remove named person (NACWO)</a><br>
+              Juliet Sheet
+            </td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+              {% set flagStatus = data['flag-status'] %}
+              {% include "includes/compliance/badge.html" %}
+            </td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">Add named person (NACWO)</a><br>
+              Cassandra Arkett
+            </td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+              {% set flagStatus = data['flag-status'] %}
+              {% include "includes/compliance/badge.html" %}
+            </td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">Add named person (HOLC)</a><br>
+              James Smith
             </td>
             <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">Area amendment</a><br>
+              Room 23b
+            </td>
+            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+              {% set flagStatus = data['flag-status'] %}
+              {% include "includes/compliance/badge.html" %}
+            </td>
+            <td class="govuk-table__cell">Inspector Morse</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2019  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">
+              <a href="pil-task-review-complete">New approved area</a><br>
+              Room 105
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">Inspector Morse</td>
           </tr>
         </tbody>
       </table>

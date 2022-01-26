@@ -1,20 +1,16 @@
+
 <script type="text/javascript" language="javascript">
-  
-	window.onload=function()  //executes when the page finishes loading
-	{
-		console.log('hello')
+	document.addEventListener("DOMContentLoaded", function(){
 		setTimeout(fadeout, 5000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-	};
-	function func1()
-	{
-		document.getElementById("toaster").classList.add("toasterHide");
-	}
+	});
 	function fadeout() {
-		console.log("hello")
 		document.getElementById('toaster').style.opacity = '0';
-}
-	
-</script>
-<div id="toaster">
-	<span class="govuk-body">{{ toasterContent}}</span>
-</div>
+		console.log('hello')
+			console.log()
+	}
+		
+		
+	</script>
+	<div id="toaster">
+		<span class="govuk-body">{{ toasterContent}}</span>
+	</div>

@@ -9,19 +9,7 @@
       {{data['subject-1-name']}}
     {% endif %}
   </p>
-  {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
-  )%}
-    Jane McGregor options
-  {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
-  )%}
-    Patel Williams options
-  {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
-  )%}
-    Bruce Banner options
-  {% endif %}
-
-
-
+ 
     <form action="add-subject-1-details#subject-{{user}}" method="post">
       <div class="govuk-form-group" id="subject-{{user}}" data-required="">
         <fieldset class="govuk-fieldset">
@@ -42,15 +30,6 @@
                 </legend> 
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
-                  Jane McGregor options
-                {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
-                )%}
-                  Patel Williams options
-                {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
-                )%}
-                  Bruce Banner options
-                {% endif %}
-              
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile</label>
@@ -63,6 +42,108 @@
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-innocent" name="subject-{{user}}-entity" type="checkbox" value="ppl" data-aria-controls="subject-{{user}}-conditional-option-3">
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
+                </div>
+                {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
+                )%}
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Patel Williams' profile</label>
+                  <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 737534</label>
+                </div>
+                {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
+                )%}
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Bruce Banners's profile</label>
+                  <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-open" name="subject-x-entity" type="checkbox" value="pel" data-aria-controls="subject-x-conditional-option-1">
+                  <label for="subject-x-entity" class="govuk-label govuk-checkboxes__label">Tasks related to establishment licence XCC09J64D</label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="subject-x-conditional-option-1">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="subject-x-est-hint">
+                      <legend class="govuk-fieldset__legend govuk-label--s">
+                        Apply flags to:
+                      </legend>
+                      <div id="subject-x-est-hint" class="govuk-hint">
+                        Select all that apply.
+                      </div>
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="subject-x-est" name="subject-x-est" type="checkbox" value="areas">
+                          <label class="govuk-label govuk-checkboxes__label" for="subject-x-est">
+                            Tasks related to approved area changes
+                            <span class="govuk-hint no-margin-bottom">Including new areas, changes to areas and area removals</span>
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="subject-x-est-2" name="subject-x-est" type="checkbox" value="people">
+                          <label class="govuk-label govuk-checkboxes__label" for="subject-x-est-2">
+                            Tasks related to named person changes
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="subject-x-est-3" name="subject-x-est" type="checkbox" value="details">
+                          <label class="govuk-label govuk-checkboxes__label" for="subject-x-est-3">
+                            Tasks related establishment detail changes
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="subject-{{user}}-status-closed" name="subject-{{user}}-status" type="radio" value="closed" data-aria-controls="subject-{{user}}-conditional-option-2">
+              <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Closed case - remedial action applied</label>
+            </div>
+
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                <legend class="govuk-fieldset__legend govuk-label--s">
+                  Apply flags to:
+                </legend> 
+                {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
+                )%}
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile</label>
+                  <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 932131</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-innocent" name="subject-{{user}}-entity" type="checkbox" value="ppl" data-aria-controls="subject-{{user}}-conditional-option-3">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
+                </div>
+                {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
+                )%}
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Patel Williams' profile</label>
+                  <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence XXXXX</label>
+                </div>
+                {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
+                )%}
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Bruce Banners's profile</label>
+                  <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-open" name="subject-{{user}}-entity" type="checkbox" value="pel" data-aria-controls="subject-{{user}}-conditional-option-1">
@@ -101,70 +182,7 @@
                     </fieldset>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="subject-{{user}}-status-closed" name="subject-{{user}}-status" type="radio" value="closed" data-aria-controls="subject-{{user}}-conditional-option-2">
-              <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Closed case - remedial action applied</label>
-            </div>
-
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">  
-              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
-                <legend class="govuk-fieldset__legend govuk-label--s">
-                  Apply flags to:
-                </legend> 
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-profile" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
-                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile
-                    <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
-                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 932131</label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-innocent" name="subject-{{user}}-entity" type="checkbox" value="ppl" data-aria-controls="subject-{{user}}-conditional-option-3">
-                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-open" name="subject-{{user}}-entity" type="checkbox" value="pel" data-aria-controls="subject-{{user}}-conditional-option-1">
-                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to establishment licence XCC09J64D</label>
-                </div>
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="subject-{{user}}-conditional-option-1">
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="subject-{{user}}-est-hint">
-                      <legend class="govuk-fieldset__legend govuk-label--s">
-                        Apply flag to:
-                      </legend>
-                      <div id="subject-{{user}}-est-hint" class="govuk-hint">
-                        Select all that apply.
-                      </div>
-                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-{{user}}-est" name="subject-{{user}}-est" type="checkbox" value="areas">
-                          <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-est">
-                            Tasks related to approved area changes
-                            <span class="govuk-hint no-margin-bottom">Including new areas, changes to areas and area removals</span>
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-{{user}}-est-2" name="subject-{{user}}-est" type="checkbox" value="people">
-                          <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-est-2">
-                            Tasks related to named person changes
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-{{user}}-est-3" name="subject-{{user}}-est" type="checkbox" value="details">
-                          <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-est-3">
-                            Tasks related establishment details
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                </div>
+                {% endif %}
               </div>
             </div>
             <div class="govuk-radios__item">
