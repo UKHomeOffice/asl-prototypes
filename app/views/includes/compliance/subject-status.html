@@ -20,17 +20,32 @@
     {% endif %}
   </p>
   <h3 class="govuk-heading-m">Enforcement flag</h2>
- 
+    {% if (data['subject-1-status'] === 'open') and (user === '1') %}
+      checked
+    {% elif (data['subject-2-status'] === 'open') and (user === '2') %}
+      checked
+    {% elif (data['subject-3-status'] === 'open') and (user === '3') %}
+      checked
+    {% endif %}
     <form action="add-subject-1-details#subject-{{user}}" method="post">
       <div class="govuk-form-group" id="subject-{{user}}" data-required="">
         <fieldset class="govuk-fieldset">
           <label class="govuk-label--s" for="gaa">
             Select status for enforcement flag
           </label>
+          dsdf {{data['subject-1-entity-1']}} {{user}}
           <span class="govuk-hint"></span>
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1">
+              <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1" 
+              {% if (data['subject-1-status'] === 'open') and (user === '1') %}
+                checked
+              {% elif (data['subject-2-status'] === 'open') and (user === '2') %}
+                checked
+              {% elif (data['subject-3-status'] === 'open') and (user === '3') %}
+                checked
+              {% endif %}
+              >
               <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Open case
               </label>
             </div>
@@ -40,41 +55,91 @@
                   Apply flags to:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
                 </legend> 
+                
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
-                  <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile</label>
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity-1" type="checkbox" value="a" data-aria-controls="subject-{{user}}-conditional-option-2"
+                  {% if (data['subject-1-entity-1'] === 'a') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-1'] === 'a') and (user === '2') %}
+                    checked
+                  {% elif (data['subject-3-entity-1'] === 'a') and (user === '3') %}
+                    checked
+                  {% endif %}
+              >
+                  <label for="subject-{{user}}-entity-1" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile</label>
                   <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity-2" type="checkbox" value="b" data-aria-controls="subject-{{user}}-conditional-option-2"
+                  {% if (data['subject-1-entity-2'] === 'b') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-2'] === 'b') and (user === '2') %}
+                    checked
+                  {% elif (data['subject-3-entity-2'] === 'b') and (user === '3') %}
+                    checked
+                  {% endif %}
+              >
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 932131</label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-innocent" name="subject-{{user}}-entity" type="checkbox" value="ppl" data-aria-controls="subject-{{user}}-conditional-option-3">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-innocent" name="subject-{{user}}-entity-3" type="checkbox" value="c" data-aria-controls="subject-{{user}}-conditional-option-3"
+                  {% if (data['subject-1-entity-3'] === 'c') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-3'] === 'c') and (user === '2') %}
+                    checked
+                  {% elif (data['subject-3-entity-3'] === 'c') and (user === '3') %}
+                    checked
+                  {% endif %}
+              >
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
                 </div>
                 {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
                 )%}
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity-1" type="checkbox" value="a" data-aria-controls="subject-{{user}}-conditional-option-2"
+                  {% if (data['subject-1-entity-1'] === 'a') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-1'] === 'a') and (user === '2') %}
+                    checked
+                  {% elif (data['subject-3-entity-1'] === 'a') and (user === '3') %}
+                    checked
+                  {% endif %}
+                  >
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Patel Williams' profile</label>
                   <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="pil" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity-2" type="checkbox" value="b" data-aria-controls="subject-{{user}}-conditional-option-2"
+                  {% if (data['subject-1-entity-2'] === 'b') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-2'] === 'b') and (user === '2') %}
+                    checked
+                  {% endif %}>
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 737534</label>
                 </div>
                 {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
                 )%}
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity-1" type="checkbox" value="a" data-aria-controls="subject-{{user}}-conditional-option-2"
+                  {% if (data['subject-1-entity-1'] === 'a') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-1'] === 'a') and (user === '2') %}
+                    checked
+                  {% endif %}
+                  >
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Bruce Banners's profile</label>
                   <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-open" name="subject-{{user}}-entity" type="checkbox" value="pel" data-aria-controls="subject-x-conditional-option-1">
+                  <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-open" name="subject-{{user}}-entity-2" type="checkbox" value="b" data-aria-controls="subject-x-conditional-option-1"
+                  {% if (data['subject-1-entity-2'] === 'b') and (user === '1') %}
+                    checked
+                  {% elif (data['subject-2-entity-2'] === 'b') and (user === '2') %}
+                    checked
+                  {% endif %}
+                  >
                   <label for="subject-x-entity" class="govuk-label govuk-checkboxes__label">Tasks related to establishment licence XCC09J64D</label>
                 </div>
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="subject-x-conditional-option-1">
@@ -88,20 +153,44 @@
                       </div>
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-x-est" name="subject-x-est" type="checkbox" value="areas">
+                          <input class="govuk-checkboxes__input" id="subject-x-est" name="subject-x-est-1" type="checkbox" value="a"
+                          {% if (data['subject-x-est-1'] === 'a') and (user === '1') %}
+                            checked
+                          {% elif (data['subject-x-est-1'] === 'a') and (user === '2') %}
+                            checked
+                          {% elif (data['subject-x-est-1'] === 'a') and (user === '3') %}
+                            checked
+                          {% endif %}
+                          >
                           <label class="govuk-label govuk-checkboxes__label" for="subject-x-est">
                             Tasks related to approved area changes
                             <span class="govuk-hint no-margin-bottom">Including new areas, changes to areas and area removals</span>
                           </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-x-est-2" name="subject-x-est" type="checkbox" value="people">
+                          <input class="govuk-checkboxes__input" id="subject-x-est-2" name="subject-x-est-2" type="checkbox" value="b"
+                          {% if (data['subject-x-est-2'] === 'b') and (user === '1') %}
+                            checked
+                          {% elif (data['subject-x-est-2'] === 'b') and (user === '2') %}
+                            checked
+                          {% elif (data['subject-x-est-2'] === 'b') and (user === '3') %}
+                            checked
+                          {% endif %}
+                          >
                           <label class="govuk-label govuk-checkboxes__label" for="subject-x-est-2">
                             Tasks related to named person changes
                           </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="subject-x-est-3" name="subject-x-est" type="checkbox" value="details">
+                          <input class="govuk-checkboxes__input" id="subject-x-est-3" name="subject-x-est-3" type="checkbox" value="c"
+                          {% if (data['subject-x-est-3'] === 'c') and (user === '1') %}
+                            checked
+                          {% elif (data['subject-x-est-3'] === 'c') and (user === '2') %}
+                            checked
+                          {% elif (data['subject-x-est-3'] === 'c') and (user === '3') %}
+                            checked
+                          {% endif %}
+                          >
                           <label class="govuk-label govuk-checkboxes__label" for="subject-x-est-3">
                             Tasks related establishment detail changes
                           </label>
