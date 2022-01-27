@@ -1,0 +1,228 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% set flagStatus = data['flag-status'] %}
+      {% set entityType = 'project' %}
+      {% include "includes/compliance/flag.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Add named person</span>
+      <h1 class="govuk-heading-xl">
+        Review application
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <nav class="sticky-nav" style="position: static; top: 0px; width: 300px;">
+        <a href="#activity" class="active" style="color: #fff;">Latest activity</a>
+        <a href="#applicant.application" class="">Establishment details</a>
+        <a href="#procedures" class="">Applicant</a>
+        <a href="#procedures" class="">Named role details</a>
+        <a href="#procedures" class="">Task assignment</a>
+        <a href="#procedures" class="">What do you want to do?</a>
+      </nav>&nbsp;
+    </div>
+    
+
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Status</h2>
+        <p>
+          <span class="badge">Awaiting decision</span>
+          <span class="date">Currently with: Home Office inspector</span>
+        </p>
+
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Latest activity</h2>
+      <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
+      <p>{{data["pelhb-comment"]}}</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Show preivous activity
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        XXX
+      </div>
+    </details>
+
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Establishment details</h2>
+
+    <dl>
+      <dt><strong>Establishment</strong></dt>
+      <dd>University of Croydon</dd>
+      <dt><strong>Licence number</strong></dt>
+      <dd>XCC09J64D</dd>
+      <dt><strong>Establishment licence holder</strong></dt>
+      <dd>Bruce Banner</dd>
+    </dl>
+    
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+    
+    
+    <h2 class="govuk-heading-m">Applicant</h2>
+    <p><a href="profile-jane">Cassandra Arkett</a></p>
+    
+    
+    <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Named role details</h2>
+
+    <dl>
+      <dt><strong>Role</strong></dt>
+      <dd>Named Animal Care and Welfare Officer (NACWO)
+      </dd>
+    </dl>
+     
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Task assignment</h2>
+
+      <p>Assigned to: Inspector Morse</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Assign to:
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">select</option>
+          <option value="updated" selected>Select...</option>
+          <option value="views">Most views</option>
+          <option value="comments">Most commentsMost commentsMost</option>
+        </select>
+        <a href="secondary-link">Assign</a>
+      </div>
+
+      <hr class=" govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">What do you want to do?</h2>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Update licence</label>
+                <span class="govuk-hint">The licence will be updated.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Reject amendment</label>
+                <span class="govuk-hint">The applicant will need to create a new amendment to apply for this type of licence in the future.</span> 
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label for="where-do-you-live" class="govuk-label govuk-radios__label">Return to applicant</label>
+                <span class="govuk-hint">The amendment will be returned to the applicant with your comments.</span> 
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      <a href="lo-approve-comment" class="govuk-button">Continue</a>
+      
+    </div>
+  </div>
+
+  <style type="text/css">
+
+
+
+.govuk-radios__item label {
+  font-weight: bold;
+}
+
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+
+
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+    }
+
+
+
+dl {
+  width: 100%;
+}
+
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+  </style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}
