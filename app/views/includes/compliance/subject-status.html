@@ -1,6 +1,6 @@
 <div class="declaration-panel-grey">
   <h2 id="subject-{{user}}" class="govuk-heading-m">Enforcement subject {{user}}</h2>
-  <p>
+  <p><strong>Person</strong><br>
     {% if user === '3' %}  
       {{data['subject-3-name']}}
     {% elif user === '2' %}
@@ -9,6 +9,17 @@
       {{data['subject-1-name']}}
     {% endif %}
   </p>
+  <p>
+    <strong>Role</strong><br>
+    {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
+      PEL holder
+    {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
+      PPL holder, PIL holder
+    {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
+      PIL holder
+    {% endif %}
+  </p>
+  <h3 class="govuk-heading-m">Enforcement flag</h2>
  
     <form action="add-subject-1-details#subject-{{user}}" method="post">
       <div class="govuk-form-group" id="subject-{{user}}" data-required="">
