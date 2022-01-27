@@ -39,8 +39,13 @@
       {% set user = "1" %}
       {% include "includes/compliance/subject-status.html" %}
     {% endif %}
+    {% if ((data['user-1-added'] === 'true') and (data['user-1-status'] === 'saved')) and (data['subject-1-status'] === 'open') %}   
+      <br>
+      {% set user = "1" %}
+      {% include "includes/compliance/subject-status-saved.html" %}
+    {% endif %}
 
-    {% if ((data['user-1-added'] === 'true') and (data['user-1-status'] === 'saved')) and (data['subject-1-status'] !== 'removed') %}   
+    {% if ((data['user-1-added'] === 'true') and (data['user-1-status'] === 'saved')) and ((data['subject-1-status'] === 'closed') and (data['subject-1-remedial'].length > '1')) %}   
       <br>
       {% set user = "1" %}
       {% include "includes/compliance/subject-status-saved.html" %}
@@ -61,12 +66,18 @@
     {% endif %}
 
     
-    {% if ((data['user-2-added'] === 'true') and (data['user-2-status'] === 'saved')) and (data['subject-2-status'] !== 'removed') %}   
+      {% if ((data['user-2-added'] === 'true') and (data['user-2-status'] === 'saved')) and (data['subject-2-status'] === 'open') %}   
       <br>
       {% set user = "2" %}
       {% include "includes/compliance/subject-status-saved.html" %}
     {% endif %}
 
+    {% if ((data['user-2-added'] === 'true') and (data['user-2-status'] === 'saved')) and ((data['subject-2-status'] === 'closed') and (data['subject-2-remedial'].length > '1')) %}   
+      <br>
+      {% set user = "1" %}
+      {% include "includes/compliance/subject-status-saved.html" %}
+    {% endif %}
+    {{data['subject-1-remedial'].length}}
     <!-- User 3 -->
     {% if (data['user-3-added'] === 'true') and (data['user-3-status'] === undefined) %}  
       <br>
@@ -82,11 +93,18 @@
     {% endif %}
 
     
-    {% if ((data['user-3-added'] === 'true') and (data['user-3-status'] === 'saved')) and (data['subject-3-status'] !== 'removed') %}  
+    {% if ((data['user-3-added'] === 'true') and (data['user-3-status'] === 'saved')) and (data['subject-3-status'] === 'open') %}   
       <br>
       {% set user = "3" %}
       {% include "includes/compliance/subject-status-saved.html" %}
     {% endif %}
+
+    {% if ((data['user-3-added'] === 'true') and (data['user-3-status'] === 'saved')) and ((data['subject-3-status'] === 'closed') and (data['subject-3-remedial'].length > '3')) %}   
+      <br>
+      {% set user = "3" %}
+      {% include "includes/compliance/subject-status-saved.html" %}
+    {% endif %}
+    {{data['subject-3-remedial'].length}}
   
     <br>
     <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
