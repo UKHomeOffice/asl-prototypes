@@ -7,7 +7,7 @@
 
 {% block content %}
 
-{% if (data['user-1-status'] === 'saved') or (data['user-2-status'] === 'saved') or (data['user-3-status'] === 'saved') %}
+{% if data['toaster'] === 'true' %}
   {% set toasterContent = 'Enforcement flags saved' %}
   {% include "includes/toaster.html" %}
 {% endif %}

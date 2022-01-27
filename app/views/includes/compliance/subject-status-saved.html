@@ -9,7 +9,6 @@
         {{data['subject-1-name']}}
       {% endif %}
     </p>
-
     <h3 class="govuk-heading-s">Enforcement flag status</h2>
       
       <div class="notification-banner notification-banner--{% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}
@@ -70,6 +69,6 @@
       {% endif %}
     </ul>
 
-    <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="add-subject-1-details?user-{{user}}-status=edit#subject-{{user}}">Edit enforcement flag</a></p>
+    <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="add-subject-1-details?user-{{user}}-status=edit&toaster=false#subject-{{user}}">Edit enforcement flag</a></p>
 
 </div>
