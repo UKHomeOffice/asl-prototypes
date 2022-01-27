@@ -42,7 +42,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">University of Croydon</td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Bruce Banner</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="profile-bruce">Profile</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -50,7 +50,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Bruce Banner</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="pel-overview">PEL: XCC09J64D</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -58,7 +58,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Bruce Banner</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="pel-people">PEL: XCC09J64D (Named people)</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -66,7 +66,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Bruce Banner</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="pel-areas">PEL: XCC09J64D (Approved areas)</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         {% endif %}
@@ -76,7 +76,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Jane McGregor</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="profile-jane">Profile</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -84,7 +84,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Jane McGregor</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="pil-jane">PIL: 932131</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -92,7 +92,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Jane McGregor</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="ppl-jane">PPL: 372383</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         {% endif %}
@@ -102,7 +102,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Patel Williams</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="profile-patel">Profile</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         <tr class="govuk-table__row">
@@ -110,7 +110,7 @@
           <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"></td>
           <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Patel Williams</td>
           <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="pil-patel">PIL: 932131</a></td>
-          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Open</td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">{% if data['subject-1-status'] === 'closed' %}Closed{% else %}Open{% endif %}</td>
           <td class="govuk-table__cell no-border-bottom row-date" scope="col">28 January 2022</td>
         </tr>
         {% endif %}
