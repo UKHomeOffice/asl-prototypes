@@ -458,7 +458,17 @@ router.post('/5-year-review/mark-reviewed-comment', function (req, res) {
 })
 
 
+router.get('/compliance/v2/add-subject-1-details', function(req, res) {
+  res.render('compliance/v2/add-subject-1-details', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v2/all-cases', 'breadcrumb2' : 'Manage cases' });
+});
 
+router.get('/compliance/v2/add-case', function(req, res) {
+  res.render('compliance/v2/add-case', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v2/all-cases', 'breadcrumb2' : 'Add case' });
+});
+
+router.get('/compliance/v2/all-cases', function(req, res) {
+  res.render('compliance/v2/all-cases', { 'breadcrumb1' : 'Enforcement cases' });
+});
 
 
 

@@ -62,8 +62,14 @@
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item"><a href="/">Home</a></li>
-      <li class="govuk-breadcrumbs__list-item">Lorem ipsum</li>
+      {% if breadcrumb2.length > 1 %}
+        <li class="govuk-breadcrumbs__list-item"><a href="{{breadcrumb1url}}">{{breadcrumb1}}</a></li>
+        <li class="govuk-breadcrumbs__list-item">{{breadcrumb2}}</li>
+      {% elif breadcrumb1.length > 1 %}
+        <li class="govuk-breadcrumbs__list-item">{{breadcrumb1}}</li>
+      {% endif %}
     </ol>
+    {{name}}
   </div>
   </div>
 
