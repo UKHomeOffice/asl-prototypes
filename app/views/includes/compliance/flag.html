@@ -3,7 +3,7 @@
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__text">
-      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to open enforcement case 21102</strong>
+      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} related to open enforcement case 21102</strong>
       <br>
       For more information speak to the enforcement team at <a href="#">enforcement@homeoffice.gov.uk</a>
     </span>
@@ -16,7 +16,7 @@
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__text">
-      <strong>This {% if entityType > '1' %}{{entityType}}{% else %}subject{% endif %} is related to closed enforcement case 21102</strong>
+      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} related to closed enforcement case 21102</strong>
       <br>
       <details class="govuk-details no-margin-bottom" data-module="govuk-details">
         <summary class="govuk-details__summary">

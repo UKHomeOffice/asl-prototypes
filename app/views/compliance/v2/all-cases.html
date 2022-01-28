@@ -7,30 +7,33 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
+  <div class="govuk-grid-column-full">
+    
     <h1 class="govuk-heading-xl">
       Enforcement cases
     </h1>
-    <a href="add-case" class="govuk-button">Create new case</a>
-    <h3 class="govuk-label--s">Search by case number, licence number or name</h3>
-    <div class="govuk-form-group search-box">
-      <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
-      <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-label--s">Search by case number, licence number or name</h3>
+      <div class="govuk-form-group search-box">
+        <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+        <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
     </div>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m">All cases</h2>
+    <h2 class="govuk-heading-m">All cases <div class="float-right"><a href="add-case" class="govuk-button">Create new case</a></div></h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col">Case number</th>
           <th class="govuk-table__header" scope="col">Establishment </th>
-          <th class="govuk-table__header" scope="col">Entity holder </th>
-          <th class="govuk-table__header" scope="col">Entity flagged</th>
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Flag applied to</th>
           <th class="govuk-table__header" scope="col">Flag status</th>
           <th class="govuk-table__header" scope="col">Last updated</th>
         </tr>

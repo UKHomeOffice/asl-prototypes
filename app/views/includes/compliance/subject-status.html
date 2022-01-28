@@ -45,7 +45,7 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-1">
               <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
-                  Apply flags to:
+                  Select where flag should appear:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
                 </legend> 
                 
@@ -141,13 +141,13 @@
                     checked
                   {% endif %}
                   >
-                  <label for="subject-x-entity" class="govuk-label govuk-checkboxes__label">Tasks related to establishment licence XCC09J64D</label>
+                  <label for="subject-x-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Bruce Banner's PEL XCC09J64D</label>
                 </div>
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="subject-x-conditional-option-1">
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="subject-x-est-hint">
                       <legend class="govuk-fieldset__legend govuk-label--s">
-                        Apply flags to:
+                        Select where flag should appear:
                       </legend>
                       <div id="subject-x-est-hint" class="govuk-hint">
                         Select all that apply.
@@ -206,15 +206,16 @@
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="subject-{{user}}-status-closed" name="subject-{{user}}-status" type="radio" value="closed" data-aria-controls="subject-{{user}}-conditional-option-2">
-              <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Closed case</label>
+              <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Closed case
+                <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
+              </label>
             </div>
 
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">
               <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
-                  Apply flag to:
+                  Select where flag should appear:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
-                  <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
                 </legend> 
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
@@ -261,7 +262,7 @@
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="subject-{{user}}-est-hint">
                       <legend class="govuk-fieldset__legend govuk-label--s">
-                        Apply flags to:
+                        Select where flag should appear:
                       </legend>
                       <div id="subject-{{user}}-est-hint" class="govuk-hint">
                         Select all that apply.
@@ -342,6 +343,7 @@
             
           </div>
 
+          <a href="add-subject-1-details?user-{{user}}-status=removed" class="red-text">Remove flag and delete subject</a>
         </fieldset>
       </div>
       <input type="hidden" name="user-{{user}}-status" value="saved">

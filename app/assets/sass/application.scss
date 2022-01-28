@@ -1527,6 +1527,9 @@ text-decoration: none;
 .red-text {
   color: $govuk-error-colour;
 }
+a.red-text {
+  color: $govuk-error-colour;
+}
 
 .list-of-sections-link{
   background-color: #0b0c0c;
