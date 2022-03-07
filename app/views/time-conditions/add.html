@@ -1,0 +1,214 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'reduction' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar-conditions.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Additional conditions</h1>
+      <p class="govuk-hint">Additional conditions have been added automatically according to the selections made by the applicant.</p>
+      <p class="govuk-hint">Please review all sections of this application before making a recommendation.</p>
+      
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          Retrospective assessment
+        </h3>
+        <p>
+          The Secretary of State has determined that a retrospective assessment of this licence is not required.
+        </p>
+      </div>
+      <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+
+      <h2 class="govuk-heading-m">Additional condition 1</h2>
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          POLEs
+        </h3>
+        <p>
+          The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are due to start.
+        </p>
+      </div>
+      <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+
+         
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Additional conditions
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Regulatory toxicology
+              <p class="govuk-body">Where studies are requested in order to meet regulatory requirements, they will...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Antibody generation
+              <p class="govuk-body">Unless otherwise specified, antibodies can only be generated using animals whe...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Reporting requirement
+              <div class="comment-block">
+                  <div class="writeComment hide">
+                    <div class="govuk-form-group">
+                      <textarea class="commentBox govuk-textarea" id="more-detail" name="more-detail" rows="6" style="margin-bottom: 10px; width: 747px;" aria-describedby="more-detail-hint">A report in writing to aspa.london@homeoffice.gov.uk or orally to &lt;&lt;&lt;INSERT name of assigned inspector HERE&gt;&gt;&gt;  on the project shall be made by &lt;&lt;&lt;INSERT date HERE&gt;&gt;&gt;  or after &lt;&lt;&lt;INSERT number HERE&gt;&gt;&gt; animals have been used, whichever is the sooner. The report shall contain &lt;&lt;&lt;INSERT required content of report HERE&gt;&gt;&gt;.</textarea>
+          
+                      <div class="govuk-checkboxes  govuk-checkboxes--small govuk-checkboxes--conditional" data-module="checkboxes">
+          
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-ongoing" name="subject-{{user}}-entity" type="checkbox" value="b" data-aria-controls="subject-x-conditional-option-1">
+                          <label for="subject-x-entity" class="govuk-label--s govuk-checkboxes__label">Add a reminder for this condition for the applicant and ASRU?
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="subject-x-conditional-option-1">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="subject-x-est-hint">
+                              <h3 class="govuk-heading-sgovuk-body">Date of deadline</h3>
+                              <span class="govuk-hint">Enter the date for the required action. The applicant will be sent a reminder 1 month and 1 week before the deadline. ASRU will be notified once the deadline has passed.</span>
+                              <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>  
+                            </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <p><a href="#">Add another deadline</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <button onClick='saveComment(this)' class="saveCommentButton govuk-button">Save comment</button> <a class="secondary-link" href="javascript:void(0)">Cancel</a>
+                  </div>
+                  <div class="addedComment hide">
+                    <p class="govuk-body">A report in writing to aspa.london@homeoffice.gov.uk or orally to Inspector Morse on the project shall be made by 21/6/2021  or after 100 animals have been used, whichever is the sooner.</p>
+                    <p><em>Reminders set for the deadline of: 21 June 2021</em></p>
+                  </div> 
+                  <div class="initiateComment" >
+
+                    <div id="uneditedComment">
+                      <p class="govuk-body">A report in writing to <a href="aspa.london@homeoffice.gov.uk">aspa.london@homeoffice.gov.uk</a> or orally to &lt;&lt;&lt;INSERT name of assigned inspector HERE&gt;&gt;&gt;  on the project shall be made by &lt;&lt;&lt;INSERT date HERE&gt;&gt;&gt;  or after &lt;&lt;&lt;INSERT number HERE&gt;&gt;&gt; animals have been used, whichever is the sooner. The report shall contain &lt;&lt;&lt;INSERT required content of report HERE&gt;&gt;&gt;.</p>
+                    </div>
+                    <p></p>
+                    <span class="collapse-link govuk-body"><a href="#">Collapse</a></span> | <button onClick='initiateComment(this)' class="link-button">Edit</button>
+                      
+                  </div>
+                </div>
+              </label>
+            </div>
+
+
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Inspection requirement
+              <p class="govuk-body">The licence holder shall ensure that the assigned inspector is notified before reg...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Batch testing
+              <p class="govuk-body">For all batch quality control testing using live animals, the substance or product to...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Testing household products
+              <p class="govuk-body">The following conditions apply to the testing of finished household products or th...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Minimising suffering for wild or feral animals
+              <p class="govuk-body">In accordance with paragraph 25(5) of Schedule 2C to the Act, the words “...and,...</p>
+              <p class='expand-link'><a href="#">Expand</a> | <a href="#">Edit</a></p>
+              </label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
+                Create your own additional condition
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <a href="added" class="govuk-button govuk-button--secondary">Confirm</a><a href="#" class="secondary-link">Cancel</a>
+      </div>
+      {% set previousPage = 'ppl-replacement' %}
+      {% set previousPageTitle = 'Replacement' %}
+      {% set nextPage = 'ppl-refinement' %}
+      {% set nextPageTitle = 'Refinement' %}
+      {% include "includes/application-footer-nav.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

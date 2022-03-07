@@ -1,0 +1,576 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set flagStatus = data['flag-status'] %}
+    {% set entityType = 'This project licence is' %}
+    {% include "includes/compliance/flag.html" %}
+ 
+
+<div class="govuk-grid-row" id="pageHeader">
+	<div class="govuk-grid-column-full">
+	  <div class="download-header">
+	    <span class="govuk-body licence-identifier" class="">Project</span>
+	    <span class="float-right">
+        <!-- <span class="hod-download-button side-space icon-small"></span> -->
+        
+        <!-- <p class="govuk-body save-indicator">
+        <span id="downloads-label" style="position: absolute; top: 50%; right: -5%; transform: translate(-50%,-50%);">
+          <span class="header-download-link">
+            <span class="hod-download-button side-space icon-small"></span>&ensp;<a href="#">Download as a .pdf</a><br>
+          </span>
+          
+          <a onclick="toggleDetails()" href="ppl-overview">View project</a>
+        </span> 
+      </p> -->
+	    </span>
+      <span class="govuk-body licence-type" class="">Development of new biological anticancer agents</span>
+      <div id="details-panel" class="details-panel">
+        <span class="float-right download-options">
+          <ul class="govuk-list">
+            <li><a href="#">Non-technical summary (.pdf)</a></li>
+            <li><a href="/ra-submission/downloads">All downloads</a></li>
+          </ul>
+        </span>
+        <dl class="govuk-body" style="width: 75%;">
+          <dt>PPL title</dt>
+          <dd>Development of new biological anticancer agents</dd>
+          <dt>PPL number</dt>
+          <dd>372383</dd>
+          <dt>Expiry date</dt>
+          <dd>10 December 2022</dd>
+        </dl> 
+      </div>
+	  </div>
+	</div>
+</div> 
+<style>
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 1200px;
+    display: inline-block;
+  }
+  .save-indicator {
+    color: #505a5f;
+  }
+  
+  </style>
+<div class="header hide" id="myHeader" >
+        
+  <div class="download-header" style="padding: 7px;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-body licence-type">Project: Development of new biological anticancer agents 
+          <!-- <span class="govuk-!-font-size-14">
+            <a href="#">View details</a>
+          </span> -->
+          &ensp;<span class="save-indicator govuk-!-font-size-14">Last saved seconds ago</span>
+        </span>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <span class="govuk-!-font-size-14">
+          <span class="float-right">  
+          <a href="#" style="padding: 0 1em;">Back to top</a>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var pageHeader = document.getElementById("pageHeader");
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
+<Script>
+  function toggleDetails() {
+  var x = document.getElementById("details-panel");
+  var detailsLabel = document.getElementById("details-label");
+  var downloadsLabel = document.getElementById("downloads-label");
+  console.log(x.style.display)
+  if (x.style.display === "none") {
+    console.log("click")
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    downloadsLabel.innerHTML = "Hide download options";
+  } else if (x.style.display === "block") {
+    x.style.display = "none";
+    detailsLabel.innerHTML = "View details";
+    downloadsLabel.innerHTML = "View download options";
+  } else {
+    x.style.display = "block";
+    detailsLabel.innerHTML = "Hide details";
+    downloadsLabel.innerHTML = "Hide download options";
+  }
+}
+</Script>
+  
+  <style>
+    .download-options {
+      width: 20%;
+    }
+    #details-panel{
+      display: none;
+      padding-top: 1rem;
+    }
+  </style>
+
+
+
+      
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab  govuk-tabs__tab--selected" href="#overview">
+              Project overview
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#change">
+              Change licence contents
+            </a>
+          </li> -->
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#manage">
+              Manage licence
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#rops">
+              Reporting
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#history">
+              History
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#guest-access">
+              Guest access
+            </a>
+          </li> -->
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#downloads">
+              Downloads
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="overview" style="border:none;">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m">Licence details</h2>
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+              <dl class="">
+                <dt>Licence holder</dt>
+                <dd><a href="profile-jane">Jane McGregor</a></dd>
+                <dt>Establishment</dt>
+                <dd>University of Croydon</dd>
+                <dt>Additional availability at</dt>
+                <dd>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      Univeristy of Croydon (East Croydon campus)
+                    </li>
+                  </ul>
+                </dd>
+                <dt>Licence number</dt>
+                <dd>372383</dd>
+                <dt>Date granted</dt>
+                <dd>10 December 2017</dd>
+                <dt>Last amended</dt>
+                <dd>06 January 2020</dd>
+                <dt>Expiry date</dt>
+                <dd>10 December 2022</dd>
+              </dl>    
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-m">Licence</h2>
+              <ul class="govuk-list">
+                <li>
+                  <a href="granted-licence.html">View licence</a>
+                </li>
+                <li>
+                  <a href="granted-licence.html">Download licence (PDF)</a>
+                </li>
+              </ul>
+              <h2 class="govuk-heading-s">Other documents</h2>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a href="#">Steps and adverse effects</a></li>
+                <li><a href="#">Non-technical summary</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-m">Current activity</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Received</th>
+                    <th class="govuk-table__header" scope="col">Establishment </th>
+                    <th class="govuk-table__header" scope="col">Licence </th>
+                    <th class="govuk-table__header" scope="col">Type</th>
+                    <th class="govuk-table__header" scope="col">Status</th>
+                    <th class="govuk-table__header" scope="col">Assignee</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">17 December 2021</td>
+                    <td class="govuk-table__cell">University of Croydon</td>
+                    <td class="govuk-table__cell">PPL</td>
+                    <td class="govuk-table__cell">
+                      <a href="PPL-task-review-complete">PPL amendment</a><br>
+                      Jane McGregor
+                    </td>
+                    <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+                      {% set flagStatus = data['flag-status'] %}
+                      {% include "includes/compliance/badge.html" %}
+                    </td>
+                    <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>  
+        </section>
+        
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="manage" style="border:none;">
+            
+          <h2 class="govuk-heading-m">Changes and transfers</h2>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              
+              <h2 class="govuk-heading-s">Amend licence</h2>
+              <p>Includes transfers to new establishments.</p>
+              <a href="ppl-index" class="govuk-button govuk-button--secondary">Amend licence</a>
+              <a href="review-pil-app-public-edit" class="secondary-link">or change licence holder</a>
+
+              <!-- <h2 class="govuk-heading-s">Change PPL holder</h2>
+              <a href="review-pil-app-public-edit" class="govuk-button govuk-button--secondary">Change PPL holder</a> -->
+
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+              <h2 class="govuk-heading-m">Cancel licence</h2>
+              <p>Ask the Home Office to cancel this licence.</p>
+              <a href="review-pil-app-public-edit" class="govuk-button govuk-button--warning">Cancel licence</a>
+            </div>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <h2 class="govuk-heading-m">Guest access</h2>
+          <p>Allow colleagues to view this project. Administrators will have access by default.</p>
+          <a href="#">Grant access</a>
+
+              
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="downloads" style="border:none;">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">Project downloads</h2>
+  
+            <h3 class="govuk-heading-s">
+              Licence
+            </h3>
+            <p>
+            	<a href="#">Licence: Autophagy in the hematopoietic system (.pdf)</a><br>
+            	<span class="govuk-hint">Download the official licence for this project.</span>
+            </p>
+  
+            <h3 class="govuk-heading-s">
+              Non-technical summary
+            </h3>
+            <p>
+              <a href="#">Non-technical summary (.pdf)</a><br>
+              <span class="govuk-hint">Download the project's non-technical summary.</span>
+            </p>
+  
+            <h3 class="govuk-heading-s">
+              Protocols
+            </h3>
+            <p>
+              <a href="#">Steps and adverse effects (.pdf)</a><br>
+              <span class="govuk-hint">Download a table of each protocol’s steps, adverse effects, controls and limitations, and humane endpoints.</span>
+            </p>
+
+            <h3 class="govuk-heading-s">
+              Application
+            </h3>
+            <p>
+              <a href="#">Full application (.docx)</a><br>
+              <a href="#">Full application (.pdf)</a><br>
+              <span class="govuk-hint">Download the full application, including background information and justification not detailed in the licence.</span>
+            </p>
+  
+            <h3 class="govuk-heading-s">
+              Template
+            </h3>
+            <p>
+              <a href="#">Template (.ppl)</a><br>
+              <span class="govuk-hint">Download a copy of the application data that can be used as a template for similar projects. The file can be uploaded to avoid creating new applications from scratch.</span>
+            </p>
+
+            <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+            <h2 class="govuk-heading-m">Earlier project versions</h2>
+            <p>View downloads for previous versions of this project</p>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Downloads for the licence amended on 15 February 2021
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <ul class="govuk-list">
+                  <li>
+                    <a href="#">Superseeded Licence: Biochemists complex the and a are living the is always. (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Full application (.docx)</a>
+                  </li>
+                  <li>
+                    <a href="#">Full application (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Template (.ppl)</a>
+                  </li>
+                  <li>
+                    <a href="#">Non-technical summary (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Steps and adverse effects (.pdf)</a>
+                  </li>
+                </ul>
+              </div>
+            </details> 
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Downloads for the licence amended on 23 July 2019
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <ul class="govuk-list">
+                  <li>
+                    <a href="#">Superseeded Licence: Biochemists complex the and a are living the is always. (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Full application (.docx)</a>
+                  </li>
+                  <li>
+                    <a href="#">Full application (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Template (.ppl)</a>
+                  </li>
+                  <li>
+                    <a href="#">Non-technical summary (.pdf)</a>
+                  </li>
+                  <li>
+                    <a href="#">Steps and adverse effects (.pdf)</a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Downloads for the licence granted on 16 January 2019.
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quo doloribus quam, beatae dolorum explicabo tenetur. Quis saepe at, atque, repellat voluptatem harum eum vero nobis ut cum delectus nemo.
+              </div>
+            </details>
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Downloads for the licence amended on 23 July 2019
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quo doloribus quam, beatae dolorum explicabo tenetur. Quis saepe at, atque, repellat voluptatem harum eum vero nobis ut cum delectus nemo.
+              </div>
+            </details>
+
+          </div> -->
+          </div>
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="rops" style="border:none;">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m">Return of procedures</h2>
+              <p>Complete this project’s return of procedures for 2021.</p>
+              <p><strong>Deadline for submission: </strong> 31 January 2022</p>
+              <a href='setup-start' class="govuk-button">Fill in return</a>
+
+              <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-m">Compliance</h2>
+              <h2 class="govuk-heading-s">Report breach of severity levels</h2>
+              <p>This is known as a standard condition 18 notification. Reports must be submitted within 72 hours.</p>
+              <a href="#">Report a breach of severity levels</a>
+
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-m">Retrospective assessment</h2>
+              <p>This project is due a retrospective assessment by 3 June 2023.</p>
+              <a href="#">View retrospective assessment criteria on the NTS</a>
+            </div> -->
+          </div>
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history" style="border:none;">
+          <h2 class="govuk-heading-m">History</h2>
+          <p>View previous versions of this licence and links to their published documents.</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+                <th class="govuk-table__header" scope="col">Assignee</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">17 December 2021</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="PPL-task-review-complete">PPL amendment</a><br>
+                  Jane McGregor
+                </td>
+                <td class="govuk-table__cell"><span class="badge">Awaiting decision</span>
+
+                </td>
+                <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">06 January 2020</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="PPL-task-review-complete">PPL amendment</a><br>
+                  Jane McGregor
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+                <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">10 December 2017</td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="PPL-task-review-complete">PPL Application</a><br>
+                  Jane McGregor
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+                <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <h2 class="govuk-heading-m">Related tasks</h2>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Received</th>
+                <th class="govuk-table__header" scope="col">Establishment </th>
+                <th class="govuk-table__header" scope="col">Licence </th>
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">22 July 2019  </td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="PPL-task-review-complete">PPL Amendment</a><br>
+                  Mary Jones
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">16 January 2019  </td>
+                <td class="govuk-table__cell">University of Croydon</td>
+                <td class="govuk-table__cell">PPL</td>
+                <td class="govuk-table__cell">
+                  <a href="PPL-task-review-complete">PPL Application</a><br>
+                  Mary Jones
+                </td>
+                <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+              </tr>
+            </tbody>
+          </table> -->
+
+        </section>
+
+        <!-- <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="guest-access" style="border:none;">
+          <h2 class="govuk-heading-m">Guest access</h2>
+          <p>Allow colleagues to view this project. Administrators will have access by default.</p>
+          <a href="#">Grant access</a>
+    
+        </section> -->
+
+      </div>
+  
+  </div>
+  
+
+  <style type="text/css">
+    dt {
+      width: 30%;
+      margin-inline-start: 0px;
+    }
+    dd {
+      width: 60%;
+      padding-bottom: 10px;
+      
+    }
+  </style>
+
+{% endblock %}

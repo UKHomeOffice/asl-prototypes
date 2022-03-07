@@ -8,15 +8,16 @@ function initiateComment(button) {
   
 function saveComment(button) {
   var textArea = $(button).prev()
-  console.log(textArea)
   var writeComment = $(button).parent()
   var initiateComment = $(button).parent().siblings('.initiateComment')
   var addedComment = $(button).parent().siblings('.addedComment')
+  var uneditedComment = $('#uneditedComment')
   var commentContent = textArea.val();
 
-  console.log(commentContent)
   addedComment.find('.comment-content').text(commentContent)
   writeComment.addClass('hide')
+  uneditedComment.addClass('hide')
+  console.log(uneditedComment)
   addedComment.removeClass('hide')
   initiateComment.toggleClass('hide')
 };

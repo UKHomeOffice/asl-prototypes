@@ -11,28 +11,28 @@
     <div class="govuk-grid-column-full">
       
       {% set flagStatus = data['flag-status'] %}
-      {% set entityType = 'Person is' %}
+      {% set entityType = 'This person is' %}
       {% include "includes/compliance/flag.html" %}
-
+      
       <h1 class="govuk-heading-l">
-        Bruce Banner
+        Patel Williams
       </h1>
       
       <p>
         <strong>Email:</strong></br>
-        bruce-banner@university-of-croydon.edu.uk
+        patel-williams@university-of-croydon.edu.uk
       </p>
       <p>
         <strong>Telephone:</strong></br>
-        01840 345 6702
+        01840 847 3393
       </p>
       <p>
         <strong>Date of birth:</strong></br>
-        23 April 1970
+        19 July 1982
       </p>
       <p>
         <strong>Latest activity:</strong></br>
-        17 December 2021
+        18 June 2019
       </p>
 
       <h3 class="govuk-heading-m">Projects</h3>
@@ -55,7 +55,7 @@
         </ul>
   
         <section class="govuk-tabs__panel" id="tasks" style="border:none;">
-          No projects
+        None
         </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
@@ -64,13 +64,13 @@
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Roles at this establishment</h3>
-      <p>• PEL holder</p>
+      <p>None</p>
       <button class="govuk-button govuk-button--secondary">Add role</button>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Personal licence</h3>
-      <p>No personal licence</p>
+      <p><a href="pil-patel">2838474</a></p>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -109,35 +109,12 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">17 December 2021</td>
+            <td class="govuk-table__cell">18 June 2019</td>
             <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">PIL</td>
             <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL amendment</a><br>
-              Bruce Banner
-            </td>
-            <td class="govuk-table__cell"><span class="badge">Awaiting decision</span> {% set flagStatus = data['flag-status'] %}
-              {% include "includes/compliance/badge.html" %}</td>
-            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">06 January 2020</td>
-            <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
-            <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL amendment</a><br>
-              Bruce Banner
-            </td>
-            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
-            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">10 December 2017</td>
-            <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
-            <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL Application</a><br>
-              Bruce Banner
+              <a href="PPL-task-review-complete">PIL Application</a><br>
+              Patel Williams
             </td>
             <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
             <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>

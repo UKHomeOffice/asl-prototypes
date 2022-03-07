@@ -1,0 +1,44 @@
+<style>
+.selected .float-right{
+  visibility: hidden;
+  }    
+.selected .float-right:after{
+  content:'▼';
+  visibility: visible;
+  }    
+</style>
+
+<div class="govuk-grid-column-one-third">
+  <ul class="protocol-nav">
+    <a href="ppl-index" class="back-to-sections"><li>&#x25C0; &ensp; List of sections</li></a>
+    
+    <a href="ppl-intro"><li{% if assessSection == "introduction" %}
+      class='selected'{% endif %}>Introductory details <span class="float-right">&#x25B6;</span></li></a>
+   
+    <a href="ppl-aims"><li>Non-technical summary <span class="float-right">&#x25B6;</span></li></a>
+    
+
+    <a href="#"><li>Applicant information <span class="float-right">&#x25B6;</span></li></a>
+    
+
+    <a href="#"><li>Project location <span class="float-right">&#x25B6;</span></li></a>
+   
+
+    <a href="ppl-background"><li{% if (assessSection == "background") or (assessSection == "plan") or (assessSection == "principles")%}
+      class='selected'{% endif %}>Project plan <span class="float-right">&#x25B6;</span></li></a>
+
+
+    <a href="ppl-protocols"><li{% if assessSection == "protocols" %}
+      class='selected'{% endif %}>Protocols <span class="float-right">&#x25B6;</span></li></a>
+   
+
+    <a href="#"><li>Use of animals <span class="float-right">&#x25B6;</span></li></a>
+    
+    <a href="#"><li>Other considerations <span class="float-right">&#x25B6;</span></li></a>
+    
+    <a href="#"><li  class='selected'>Additional conditions <span class="float-right">&#x25B6;</span></li></a>
+    <a href="#"><li class="selected-child">Additional conditions</li></a>
+    
+    <a href="#"><li>Authorisations <span class="float-right">&#x25B6;</span></li></a>
+  </ul>
+</div>

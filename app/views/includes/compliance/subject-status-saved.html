@@ -1,24 +1,39 @@
 <div class="declaration-panel-grey">
     <h2 id="subject-{{user}}" class="govuk-heading-m">Enforcement subject {{user}}</h2>
-    <p><strong>Person</strong><br>
-      {% if user === '3' %}  
-        {{data['subject-3-name']}}
-      {% elif user === '2' %}
-        {{data['subject-2-name']}}
-      {% else %}
-        {{data['subject-1-name']}}
-      {% endif %}
-    </p>
-    <p>
-      <strong>Role</strong><br>
-      {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
-        PEL holder
-      {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
-        PPL holder, PIL holder
-      {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
-        PIL holder
-      {% endif %}
-    </p>
+    <dl class="govuk-list">
+      <dt><strong>Primary establishment</strong></dt>
+      <dd>University of Croydon</dd>
+      <dt><strong>Person</strong></dt>
+      <dd>
+        {% if user === '3' %}  
+          {{data['subject-3-name']}}
+        {% elif user === '2' %}
+          {{data['subject-2-name']}}
+        {% else %}
+          {{data['subject-1-name']}}
+        {% endif %}
+        &ensp;<a href="#">Edit</a>
+      </dd>
+      <dt><strong>Roles</strong></dt>
+        <dd>  
+          {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
+          <ul class="govuk-list govuk-list--bullet no-margin-top">
+            <li>PEL holder: XCC09J64D</li>
+          </ul>  
+          {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
+          <ul class="govuk-list govuk-list--bullet no-margin-top  no-margin-bottom">
+            <li>PIL holder: 932131</li>
+            <li>PPL holder: PP372383</li>
+            <li>PPL holder: PP783242</li>
+            <li>NIO</li>
+          </ul>  
+          {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
+            <ul class="govuk-list govuk-list--bullet no-margin-top  no-margin-bottom">
+              <li>PIL holder: 213213</li>
+            </ul> 
+          {% endif %}
+        </dd>
+    </dl>
     <h3 class="govuk-heading-m">Enforcement flag</h2>
     <h3 class="govuk-heading-s">Enforcement flag status</h2>
       
@@ -30,16 +45,17 @@
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <span class="govuk-warning-text__text">
             <strong>This subject is related to 
-              
-            {% if user === '3' %}  
-              {{data['subject-3-status']}}
-            {% elif user === '2' %}
-              {{data['subject-2-status']}}
-            {% else %}
-              {{data['subject-1-status']}}
-            {% endif %}
 
-              enforcement case 21102</strong>
+            {% if (user === '3') and (data['subject-3-status'] === 'ongoing') %}  
+              open enforcement case 21102
+            {% elif (user === '2') and (data['subject-2-status'] === 'ongoing')  %}
+              open enforcement case 21102
+            {% elif (user === '1') and (data['subject-1-status'] === 'ongoing')  %}
+              open enforcement case 21102
+            {% else %}
+              a confirmed non-compliance under case 21102
+            {% endif %}
+          </strong>
           </span>
         </div>
 
@@ -51,31 +67,72 @@
       {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
       )%}
       <li>
-        Tasks related to <a href="profile-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Jane McGregor's profile</a>
-        <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+        <a href="profile-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Jane McGregor's profile and related tasks</a>
+        <span class="govuk-hint">
+          The flag will appear on: 
+          <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
+            <li>any requests by the subject to change their name or date of birth</li>
+            <li>applications for new licences</li>
+            <li>requests to transfer project licences if they hold one or more project licences</li>
+            <li>any tasks related to their named role if they hold a named role</li>
+          </ul>
+        </span>
       </li>
-      <li>Tasks related to <a href="pil-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">personal licence 932131</a></li>
-      <li>Tasks related to <a href="ppl-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">project licence 372383</a></li>
+      <li><a href="pil-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Jane McGregor's personal licence PP12345</a>
+        <span class="govuk-hint">
+          The flag will appear on: 
+          <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
+            <li>requests to amend, revoke or transfer the licence to a new establishment</li>
+          </ul>
+        </span>
+      </li>
+      <li><a href="ppl-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Jane McGregor's project licence PP12345</a>
+        <span class="govuk-hint">
+          The flag will appear on: 
+          <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
+            <li>amend, revoke or transfer the licence to a new establishment</li> 
+            <li>transfer the licence to another person</li>
+          </ul>
+        </span>
+      </li>
       {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
       )%}
       <li>
-        Tasks related to <a href="profile-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Patel Williams' profile</a>
-        <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+        <a href="profile-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Patel Williams' profile and related tasks</a>
+        <span class="govuk-hint">
+          The flag will appear on: 
+          <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
+            <li>any requests by the subject to change their name or date of birth</li>
+            <li>applications for new licences</li>
+            <li>requests to transfer project licences if they hold one or more project licences</li>
+            <li>any tasks related to their named role if they hold a named role</li>
+          </ul>
+        </span>
       </li>
-      <li>Tasks related to <a href="pil-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">personal licence 932131</a></li>
+      <li><a href="pil-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Patel Williams's personal licence PP12345</a>
+        <span class="govuk-hint">
+          The flag will appear on: 
+          <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
+            <li>requests to amend, revoke or transfer the licence to a new establishment</li>
+          </ul>
+        </span>
+      </li>
       {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
       )%}
       <li>
-        Tasks related to <a href="profile-bruce?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Bruce Banners's profile</a>
+        <a href="profile-bruce?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Bruce Banners's profile and related tasks</a>
         <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
       </li>
       <li>
-        Tasks related to Bruce Banner's <a href="pel-overview?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">PEL XCC09J64D</a>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Tasks related to <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">approved area changes</a></li>
-          <li>Tasks related to <a href="pel-people?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">named person changes</a></li>
-          <li>Tasks related <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">establishment details</a></li>
-        </ul>
+        <a href="pel-overview?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Bruce Banners's establishment licence XCC09J64D</a>
+          <span class="govuk-hint no-margin-bottom">The flag will appear on: </span>
+          <ul class="govuk-list govuk-list--bullet no-margin-top secondary-text">
+            <li>requests to change the <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">establishment’s approved areas</a></li>
+            <li>requests to change the <a href="pel-people?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">establishment’s named people or PEL holder</a></li>
+            <li>requests to change the <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">establishment details</a>
+              <span class="govuk-hint">For example, the address or what the establishment is licensed to do</span>
+            </li>
+          </ul>
       </li>
       {% endif %}
     </ul>

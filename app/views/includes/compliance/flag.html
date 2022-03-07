@@ -1,9 +1,9 @@
-{% if flagStatus == 'open' %}
-<div class="notification-banner notification-banner--open" style="padding: 0px 10px">
+{% if flagStatus == 'ongoing' %}
+<div class="notification-banner notification-banner--ongoing" style="padding: 0px 10px">
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__text">
-      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} related to open enforcement case 21102</strong>
+      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} subject to ongoing enforcement activity under case 21102</strong>
       <br>
       For more information speak to the enforcement team at <a href="#">enforcement@homeoffice.gov.uk</a>
     </span>
@@ -16,7 +16,7 @@
   <div class="govuk-warning-text" style="margin-bottom: 0px;">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__text">
-      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} related to closed enforcement case 21102</strong>
+      <strong>{% if entityType > '1' %}{{entityType}}{% else %}Subject{% endif %} related to a confirmed non-compliance under case 21102</strong>
       <br>
       <details class="govuk-details no-margin-bottom" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -27,7 +27,7 @@
         <div class="govuk-details__text">
           <ul class="govuk-list">
             <li>Remedial action applied: letter of reprimand</li>
-            <li>Closed flag in place until: 28 January 2027</li>
+            <li>Enforcement flag in place until: 28 January 2027</li>
             <li>For more information speak to the enforcement team at <a href="#">enforcement@homeoffice.gov.uk</a></li>
           </ul>
         </div>

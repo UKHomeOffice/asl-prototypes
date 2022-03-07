@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'reduction' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/licence-header-ppl-application.html" %}
+    </div>
+  </div>      
+  <div class="govuk-grid-row">
+    {% include "includes/ppl-application-sidebar-conditions.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Additional conditions</h1>
+      <p class="govuk-hint">Additional conditions have been added automatically according to the selections made by the applicant.</p>
+      <p class="govuk-hint">Please review all sections of this application before making a recommendation.</p>
+      
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          Retrospective assessment
+        </h3>
+        <p>
+          The Secretary of State has determined that a retrospective assessment of this licence is not required.
+        </p>
+      </div>
+      <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+
+      <h2 class="govuk-heading-m">Additional condition 1</h2>
+      <div class="govuk-inset-text condition">
+        <h3 class="govuk-heading-s">
+          POLEs
+        </h3>
+        <p>
+          The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are due to start.
+        </p>
+      </div>
+      <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+
+      <h2 class="govuk-heading-m">Additional condition 2</h2>
+      <div class="govuk-inset-text condition" style="margin-bottom: 10px;">
+        <h3 class="govuk-heading-s">
+          Reporting requirement
+        </h3>
+        <p>
+          A report in writing to aspa.london@homeoffice.gov.uk or orally to Inspector Morse on the project shall be made by 21/6/2021  or after 100 animals have been used, whichever is the sooner.
+        </p>
+      </div>
+      <p><em>Reminders set for the deadline of: 21 June 2021</em></p>
+      <p><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></p>
+
+
+      {% set previousPage = 'ppl-replacement' %}
+      {% set previousPageTitle = 'Replacement' %}
+      {% set nextPage = 'ppl-refinement' %}
+      {% set nextPageTitle = 'Refinement' %}
+      {% include "includes/application-footer-nav.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

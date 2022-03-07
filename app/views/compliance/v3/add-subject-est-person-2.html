@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['toaster'] === 'true' %}
+  {% set toasterContent = 'Enforcement flags saved' %}
+  {% include "includes/toaster.html" %}
+{% endif %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Add enforcement subjects
+    </h1>
+    <h2 class="govuk-heading-m">Case details</h2>
+    <ul class="govuk-list">
+      <li><strong>Establishment</strong> University of Croydon</li>
+      <li><strong>Case number</strong> 21102</li>
+      <li><a href="#">Edit</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Enforcement subjects</h2>
+
+    <div class="declaration-panel-grey">
+      <form action="add-subject-est-person-3" method="post">
+        <h2 id='subject-1' class="govuk-heading-m">Enforcement subject 1</h2>
+        <h2 id='' class="govuk-heading-s">Establishment</h2>
+        <p>University of Croydon <a href="#">change</a></p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="subject-name-1">
+            Select person
+          </label>
+          {% include "includes/typeahead-people.html" %}
+        </div>
+        <input type="hidden" name="user-1-added" value='true'>
+        <input type="hidden" name="user-1-status" value='edit'>
+        <input type="hidden" name="subject-1-name" value='Jane McGregor'>
+        <input type="hidden" name="toaster" value='false'>
+        <button class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
+      </form>
+    </div>
+    
+  
+    <br>
+    <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
+    <a href="all-cases" class="">View all enforcement cases</a>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

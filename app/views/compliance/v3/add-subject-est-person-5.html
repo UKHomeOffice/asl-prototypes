@@ -1,0 +1,133 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% if data['toaster'] === 'true' %}
+  {% set toasterContent = 'Enforcement flags saved' %}
+  {% include "includes/toaster.html" %}
+  {% endif %}
+  
+  {% set 'subject-1-name' = 'Jane McGregor' %}
+  {% set user = '1' %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Add enforcement subjects
+    </h1>
+    <h2 class="govuk-heading-m">Case details</h2>
+    <ul class="govuk-list">
+      <li><strong>Establishment</strong> University of Croydon</li>
+      <li><strong>Case number</strong> 21102</li>
+      <li><a href="#">Edit</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Enforcement subjects</h2>
+
+    <div class="declaration-panel-grey">
+      <form action="add-subject-est-person-4" method="post">
+        <h2 id='subject-1' class="govuk-heading-m">Enforcement subject 1</h2>
+        <h2 id='' class="govuk-heading-s">Establishment</h2>
+        <p>University of Croydon</p>
+
+        <h2 id='' class="govuk-heading-s">Person</h2>
+        <p>Jane McGregor <a href="#">change</a></p>
+
+      <p>
+        <strong>Role</strong><br>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>PIL holder</li>
+          <li>PPL holder</li>
+        </ul>
+      </p>
+      <h3 class="govuk-heading-m">Enforcement flag</h2>
+        <h3 class="govuk-heading-s">Enforcement flag status</h2>
+      
+          <div class="notification-banner notification-banner--open" style="padding: 0px 10px">
+    
+            <div class="govuk-warning-text" style="margin-bottom: 0px;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                <strong>This subject is related to open enforcement case 21102</strong>
+              </span>
+            </div>
+    
+          </div>
+          
+        <h3 class="govuk-heading-s">Flag applied to</h2>
+    
+        <ul class="govuk-list govuk-list--bullet">
+          {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
+          )%}
+          <li>
+            Tasks related to <a href="profile-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Jane McGregor's profile</a>
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>Tasks related to <a href="pil-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">personal licence 932131</a></li>
+          <li>Tasks related to <a href="ppl-jane?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">project licence 372383</a></li>
+          {% elif ((user === '1') and (data['subject-1-name'] === 'Patel Williams')or(user === '2') and (data['subject-2-name'] === 'Patel Williams')or(user === '3') and (data['subject-3-name'] === 'Patel Williams')
+          )%}
+          <li>
+            Tasks related to <a href="profile-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Patel Williams' profile</a>
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>Tasks related to <a href="pil-patel?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">personal licence 932131</a></li>
+          {% elif ((user === '1') and (data['subject-1-name'] === 'Bruce Banner')or(user === '2') and (data['subject-2-name'] === 'Bruce Banner')or(user === '3') and (data['subject-3-name'] === 'Bruce Banner')
+          )%}
+          <li>
+            Tasks related to <a href="profile-bruce?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">Bruce Banners's profile</a>
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>
+            Tasks related to Bruce Banner's <a href="pel-overview?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">PEL XCC09J64D</a>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Tasks related to <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">approved area changes</a></li>
+              <li>Tasks related to <a href="pel-people?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">named person changes</a></li>
+              <li>Tasks related <a href="pel-areas?flag-status={% if user === '3' %}{{data['subject-3-status']}}{% elif user === '2' %}{{data['subject-2-status']}}{% else %}{{data['subject-1-status']}}{% endif %}">establishment details</a></li>
+            </ul>
+          </li>
+          {% endif %}
+        </ul>
+    
+        <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="add-subject-1-details?user-{{user}}-status=edit&toaster=false#subject-{{user}}">Edit enforcement flag</a></p>
+    
+        
+      </div>
+    <br>
+    <div class="declaration-panel-grey">
+      <form action="add-subject-est-person-3" method="post">
+        <h2 id='subject-1' class="govuk-heading-m">Enforcement subject 2</h2>
+        <h2 id='' class="govuk-heading-s">Establishment</h2>
+        <p>University of Croydon <a href="#">change</a></p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="subject-name-1">
+            Select person
+          </label>
+          {% include "includes/typeahead-people.html" %}
+        </div>
+        <input type="hidden" name="user-1-added" value='true'>
+        <input type="hidden" name="user-1-status" value='edit'>
+        <input type="hidden" name="subject-1-name" value='Jane McGregor'>
+        <input type="hidden" name="toaster" value='false'>
+        <button class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
+      </form>
+    </div>
+    <br>
+    <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
+    <a href="all-cases" class="">View all enforcement cases</a>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

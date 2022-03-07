@@ -11,16 +11,16 @@
     <div class="govuk-grid-column-full">
       
       {% set flagStatus = data['flag-status'] %}
-      {% set entityType = 'Person is' %}
+      {% set entityType = 'This person is' %}
       {% include "includes/compliance/flag.html" %}
 
       <h1 class="govuk-heading-l">
-        Bruce Banner
+        Jane McGregor
       </h1>
       
       <p>
         <strong>Email:</strong></br>
-        bruce-banner@university-of-croydon.edu.uk
+        jane-mcgregor@university-of-croydon.edu.uk
       </p>
       <p>
         <strong>Telephone:</strong></br>
@@ -55,7 +55,11 @@
         </ul>
   
         <section class="govuk-tabs__panel" id="tasks" style="border:none;">
-          No projects
+          <p><a href="ppl-jane">Development of new biological anticancer agents</a></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Expires on 10 December 2022</li>
+            <li>Additional availability at University of Croydon (East Croydon campus)</li>
+          </ul>
         </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
@@ -64,13 +68,13 @@
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Roles at this establishment</h3>
-      <p>• PEL holder</p>
+      <p>None</p>
       <button class="govuk-button govuk-button--secondary">Add role</button>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Personal licence</h3>
-      <p>No personal licence</p>
+      <p><a href="pil-jane">932131</a></p>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -111,10 +115,10 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">17 December 2021</td>
             <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">PPL</td>
             <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL amendment</a><br>
-              Bruce Banner
+              <a href="PPL-task-review-complete">PPL amendment</a><br>
+              Jane McGregor
             </td>
             <td class="govuk-table__cell"><span class="badge">Awaiting decision</span> {% set flagStatus = data['flag-status'] %}
               {% include "includes/compliance/badge.html" %}</td>
@@ -123,10 +127,10 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">06 January 2020</td>
             <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">PPL</td>
             <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL amendment</a><br>
-              Bruce Banner
+              <a href="PPL-task-review-complete">PPL amendment</a><br>
+              Jane McGregor
             </td>
             <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
             <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
@@ -134,10 +138,21 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">10 December 2017</td>
             <td class="govuk-table__cell">University of Croydon</td>
-            <td class="govuk-table__cell">PEL</td>
+            <td class="govuk-table__cell">PPL</td>
             <td class="govuk-table__cell">
-              <a href="PEL-task-review-complete">PEL Application</a><br>
-              Bruce Banner
+              <a href="PPL-task-review-complete">PPL Application</a><br>
+              Jane McGregor
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19 November 2017</td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">PIL</td>
+            <td class="govuk-table__cell">
+              <a href="PPL-task-review-complete">PIL Application</a><br>
+              Jane McGregor
             </td>
             <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
             <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>

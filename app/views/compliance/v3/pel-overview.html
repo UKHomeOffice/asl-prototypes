@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set flagStatus = data['flag-status'] %}
+    {% set entityType = 'This establishment is' %}
+    {% include "includes/compliance/flag.html" %}
+  </div>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <span class="govuk-caption-xl">XXX</span> -->
+      <h1 class="govuk-heading-xl">
+        University of Croydon
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">     
+      <div class="establishment-container">
+        <p>
+          <a href="pel-details">Establishment details</a><br>
+          Contact information, conditions and authorisations.
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="pel-areas">Approved areas</a><br>
+          Approved areas where animals may be used.
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="pel-people">People</a><br>
+          People affiliated with University of Croydon including named people, licence holders and Home Office liaison contacts.
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="#">Personal licences</a><br>
+          Personal licences held at University of Croydon.
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="#">Projects</a><br>
+          Projects held at University of Croydon and those held elsewhere but licensed to work here.
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="#">Returns of procedures</a><br>
+          View and manage all returns of procedures at University of Croydon
+        </p>
+      </div>
+      <div class="establishment-container">
+        <p>
+          <a href="#">Licence fees</a><br>
+          All billable licences held at University of Croydon.
+        </p>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third ">
+      <div class="establishment-metadata">
+      
+        <h3 class="govuk-heading-s">Establishment licence number
+          <br><span class="govuk-body">XCC09J64D</span>
+        </h3>
+        <h3 class="govuk-heading-s">Establishment licence holder
+          <br><span class="govuk-body"><a href="#">Bruce Banner</a></span>
+        </h3>
+        <h3 class="govuk-heading-s">Home Office Liaison Contact (HOLC)
+          <br><span class="govuk-body"><a href="#">Susan Smith</a></span>
+        </h3>
+        <h3 class="govuk-heading-s">Inspectors
+          <br><span class="govuk-body"><a href="#">Inspector Morse</a></span>
+          <!-- <br><span class="govuk-body"><a href="#">Edit</a></span> -->
+        </h3>
+        <h3 class="govuk-heading-s">Single Point of Contact (SPoC)
+          <br><span class="govuk-body"><a href="#">Julie Stevens</a></span>
+          <!-- <br><span class="govuk-body"><a href="#">Edit</a></span> -->
+        </h3>
+  
+      
+      </div>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .establishment-container {
+      background: #f8f8f8;
+      border: 1px solid #6f777b;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    .establishment-metadata {
+      border-top: 3px solid #8f23b3;
+      padding-top: 15px;
+    }
+  </style>
+{% endblock %}

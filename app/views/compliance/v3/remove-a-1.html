@@ -1,0 +1,282 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Add enforcement subjects
+    </h1>
+    <h2 class="govuk-heading-m">Case details</h2>
+    
+    <h2 class="govuk-heading-m">Enforcement subjects</h2>
+    
+    <style>
+      dt {
+        width: 25%;
+      }
+      dd {
+        width: 70;
+      }
+    </style>
+    {% set user = "1" %}
+    <div class="declaration-panel-grey">
+      <h2 id="subject-1" class="govuk-heading-m">Enforcement subject 1</h2>
+      <dl class="govuk-list">
+        <dt><strong>Case number</strong></dt>
+        <dd>21102</dd>
+        <dt><strong>Establishment</strong></dt>
+        <dd>University of Croydon</dd>
+        <dt><strong>Subject</strong></dt>
+        <dd>Jane McGregor &ensp;<a href="#">Edit</a></dd>
+        <dt><strong>Subjects roles</strong></dt>
+        <dd>
+          <ul class="govuk-list govuk-list--bullet no-margin-top">
+            <li>PIL holder</li>
+            <li>PPL holder</li>
+          </ul>
+        </dd>
+      </dl>
+       
+        <h3 class="govuk-heading-m">Enforcement flag</h2>
+      
+          <form action="remove-a-2" method="post">
+            <div class="govuk-form-group" id="subject-1" data-required="">
+              <fieldset class="govuk-fieldset">
+                <label class="govuk-label--s" for="gaa">
+                  Select status for enforcement flag
+                </label>
+                <span class="govuk-hint"></span>
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="subject-1-status-open" name="subject-1-status" type="radio" value="open" data-aria-controls="subject-1-conditional-option-1" checked>
+                    <label for="subject-1-status" class="govuk-label govuk-radios__label">Open case
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-1-conditional-option-1">
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                      <legend class="govuk-fieldset__legend govuk-label--s">
+                        Select where flag should appear:
+                        <span class="govuk-hint no-margin-bottom">Select all that apply</span>
+                      </legend> 
+                      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-remedial" name="subject-1-entity-1" type="checkbox" value="a" data-aria-controls="subject-1-conditional-option-2" checked>
+                        <label for="subject-1-entity-1" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile</label>
+                        <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-remedial" name="subject-1-entity-2" type="checkbox" value="b" data-aria-controls="subject-1-conditional-option-2">
+                        <label for="subject-1-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 932131</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-innocent" name="subject-1-entity-3" type="checkbox" value="c" data-aria-controls="subject-1-conditional-option-3" checked>
+                        <label for="subject-1-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="subject-1-status-closed" name="subject-1-status" type="radio" value="closed" data-aria-controls="subject-1-conditional-option-2">
+                    <label for="subject-1-status" class="govuk-label govuk-radios__label">Closed case – remedial action applied
+                      <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
+                    </label>
+                  </div>
+      
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-1-conditional-option-2">
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                      <legend class="govuk-fieldset__legend govuk-label--s">
+                        Select where flag should appear:
+                        <span class="govuk-hint no-margin-bottom">Select all that apply</span>
+                      </legend> 
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-remedial" name="subject-1-entity" type="checkbox" value="profile" data-aria-controls="subject-1-conditional-option-2">
+                        <label for="subject-1-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile
+                          <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
+                          
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-remedial" name="subject-1-entity" type="checkbox" value="pil" data-aria-controls="subject-1-conditional-option-2">
+                        <label for="subject-1-entity" class="govuk-label govuk-checkboxes__label">Tasks related to personal licence 932131</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="subject-1-entity-innocent" name="subject-1-entity" type="checkbox" value="ppl" data-aria-controls="subject-1-conditional-option-3">
+                        <label for="subject-1-entity" class="govuk-label govuk-checkboxes__label">Tasks related to project licence 372383</label>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="remedial-one-hint">
+                        <label class="govuk-label govuk-label--s" for="gaa">
+                          Select remedial action taken    
+                        </label>
+                        <span class="govuk-hint"></span>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial" name="subject-1-remedial" type="checkbox" value="inspector advice">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial">Inspector advice</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-2" name="subject-1-remedial" type="checkbox" value="letter of reprimand">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-2">Letter of reprimand</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-3" name="subject-1-remedial" type="checkbox" value="letter of reprimand and retraining">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-3">Letter of reprimand and retraining</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-4" name="subject-1-remedial" type="checkbox" value="compliance notice">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-4">Compliance notice</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-4" name="subject-1-remedial" type="checkbox" value="suspension and retraining">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-5">Suspension and retraining</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-4" name="subject-1-remedial" type="checkbox" value="revocation of licence">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-6">Revocation of licence</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="subject-1-remedial-5" name="subject-1-remedial" type="checkbox" value="Other">
+                            <label class="govuk-label govuk-checkboxes__label" for="subject-1-remedial-6">Other</label>
+                          </div>
+                        </div>
+                    
+                      </fieldset>
+                    </div>
+                  
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="subject-1-status-open" name="subject-1-status" type="radio" value="removed" data-aria-controls="subject-1-conditional-option-3">
+                    <label for="subject-1-status" class="govuk-label govuk-radios__label">Closed case – no remedial action taken
+                      <span class="govuk-hint no-margin-bottom">Enforcement flags and subject will be removed from this case</span>
+                    </label>
+                  </div>
+                  <!-- <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="subject-1-status-removed" name="subject-1-status" type="radio" value="removed" data-aria-controls="subject-1-conditional-option-3">
+                    <label for="subject-1-status" class="govuk-label govuk-radios__label">Closed case - no breach
+                      <span class="govuk-hint">Status is removed immediately</span>
+                    </label>
+                  </div> -->
+                  
+                </div>
+              </fieldset>
+            </div>
+            <input type="hidden" name="user-1-status" value="saved">
+            <input type="hidden" name="toaster" value="true">
+            <button class="govuk-button">Save</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
+          </form>
+        </div>   
+  
+    <br>
+    <div class="declaration-panel-grey">
+      <h2 id="subject-1" class="govuk-heading-m">Enforcement subject 2</h2>
+      <dl class="govuk-list">
+        <dt><strong>Case number</strong></dt>
+        <dd>21102</dd>
+        <dt><strong>Establishment</strong></dt>
+        <dd>University of Croydon</dd>
+        <dt><strong>Subject</strong></dt>
+        <dd>Patel Williams &ensp;<a href="#">Edit</a></dd>
+        <dt><strong>Subjects roles</strong></dt>
+        <dd>
+          <ul class="govuk-list govuk-list--bullet no-margin-top">
+            <li>PIL holder</li>
+          </ul>
+        </dd>
+      </dl>
+       
+      <h3 class="govuk-heading-m">Enforcement flag</h2>
+        <h3 class="govuk-heading-s">Enforcement flag status</h2>
+      
+          <div class="notification-banner notification-banner--open" style="padding: 0px 10px">
+    
+            <div class="govuk-warning-text" style="margin-bottom: 0px;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                <strong>This subject is related to open enforcement case 21102</strong>
+              </span>
+            </div>
+    
+          </div>
+          
+        <h3 class="govuk-heading-s">Flag applied to</h2>
+    
+        <ul class="govuk-list govuk-list--bullet">
+
+          <li>
+            Tasks related to <a href="profile-jane?flag-status=open">Patel Williams's profile</a>
+            <span class="govuk-hint no-margin-bottom">Including new applications for a licence or named role tasks</span>
+          </li>
+          <li>Tasks related to <a href="pil-jane?flag-status=open">personal licence 2312321</a></li>
+        </ul>
+    
+        <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="remove-a-1">Edit enforcement flag</a></p>
+    </div>  
+    <br>
+    <div class="declaration-panel-grey">
+      <h2 id="subject-1" class="govuk-heading-m">Enforcement subject 3</h2>
+      <dl class="govuk-list">
+        <dt><strong>Case number</strong></dt>
+        <dd>21102</dd>
+        <dt><strong>Establishment</strong></dt>
+        <dd>University of Croydon</dd>
+        <dt><strong>Subject</strong></dt>
+        <dd>Bruce Banner &ensp;<a href="#">Edit</a></dd>
+        <dt><strong>Subjects roles</strong></dt>
+        <dd>
+          <ul class="govuk-list govuk-list--bullet no-margin-top">
+            <li>PEL holder</li>
+          </ul>
+        </dd>
+      </dl>
+       
+      <h3 class="govuk-heading-m">Enforcement flag</h2>
+        <h3 class="govuk-heading-s">Enforcement flag status</h2>
+      
+          <div class="notification-banner notification-banner--open" style="padding: 0px 10px">
+    
+            <div class="govuk-warning-text" style="margin-bottom: 0px;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <span class="govuk-warning-text__text">
+                <strong>This subject is related to open enforcement case 21102</strong>
+              </span>
+            </div>
+    
+          </div>
+          
+        <h3 class="govuk-heading-s">Flag applied to</h2>
+    
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Tasks related to Bruce Banner's <a href="pel-overview?flag-status=open">PEL XCC09J64D</a>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Tasks related <a href="pel-areas?flag-status=open">establishment details</a></li>
+              <li>Tasks related to <a href="pel-areas?flag-status=open">approved area changes</a></li>
+              <li>Tasks related to <a href="pel-people?flag-status=open">named person changes</a></li>
+            </ul>
+        </ul>
+    
+        <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="remove-a-1">Edit enforcement flag</a></p>
+    </div>  
+    <br>
+    <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
+    <a href="all-cases" class="">View all enforcement cases</a>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
