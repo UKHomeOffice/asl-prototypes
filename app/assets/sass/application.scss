@@ -120,7 +120,6 @@ $govuk-typography-scale: (
   )
 );
 
-
 // Import GOV.UK Frontend
 @import "node_modules/govuk-frontend/all";
 
@@ -143,6 +142,7 @@ $govuk-typography-scale: (
 $purple: #8F23B3;
 $background-grey: #f3f3f3;
 $dark-grey: #3B3B3B;
+$orange: #CB4B0B;
 
 // Other styling
 .ho-body {
@@ -2125,4 +2125,12 @@ a.search-project-heading {
     }
     .no-border-top {
       border-top: none !important;
+    }
+
+    .govuk-button--suspend {
+      background-color: #CB4B0B;
+      &:active, &:focus, &:hover  {
+        background-color: #A43D09;
+      }
+      
     }

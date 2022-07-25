@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Univerisy of Croydon</span>
+      <h1 class="govuk-heading-l">Confirm establishment licence reinstatement</h1>
+      <h3 class="govuk-heading-s">Licence holder</h3>
+      <p>Shaun Jones</p>
+      <h3 class="govuk-heading-s">Licence number</h3>
+      <p>KW-740222</p>
+      <h3 class="govuk-heading-s">Reason for reinstating the licence</h3>
+      <p>{{ data['reinstate-reason'] }}</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The estblishment will be authorised to apply regulated procedures to protected animals, out to breed, supply, or keep protected animals in any area at the establishment.
+        </strong>
+      </div>
+      <a href="reinstate-completed" class="govuk-button">Confirm reinstatement</a>
+    </div>
+  </div>
+
+{% endblock %}
+
+

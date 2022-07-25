@@ -1,0 +1,34 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Shaun Jones</span>
+      <h1 class="govuk-heading-l">Reinstate suspended personal licence</h1>
+      <form action="reinstate-confirm" method="post">
+        <!-- <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            The licence holder will be authorised to carry out regulated procedures in the categories stated in this licence intil the licence is reinstated.
+          </strong>
+        </div> -->
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="event-name">
+            Why are you reinstating this licence?
+          </label>
+          </h1>
+          <textarea class="govuk-textarea" id="reinstate-reason" name="reinstate-reason" rows="5" aria-describedby="reinstate-reason-hint"></textarea>
+        </div>
+        <button class="govuk-button">Continue</button><a href="#" class="secondary-link">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

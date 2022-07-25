@@ -1,0 +1,138 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "includes/enforcement-flag-ongoing-suspended.html" %}
+      {% include "includes/status-banner-suspended-pil.html" %}
+      {% include "includes/licence-header-pil.html" %}
+    </div>
+  </div>  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+            
+      <dl class="govuk-body">
+        <dt>Licence number</dt>
+        <dd>KW-740222</dd>
+        <dt>Establishment</dt>
+        <dd>University of Croydon</dd>
+        <dt>Issue date</dt>
+        <dd>22 July 2020</dd>
+        <dt>Last amended</dt>
+        <dd>–</dd>
+        <dt>Next review date</dt>
+        <dd>22 July 2025</dd>
+        <dt>Animal types</dt>
+        <dd>
+          <ul class="govuk-list">
+            <li>Mice</li>
+            <li>Rats</li>
+            <li>Hamsters</li>
+          </ul>
+        </dd>
+        <dt>Procedures</dt>
+        <dd>
+          <p><strong>A</strong>: Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+
+          <p><strong>B</strong>: Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical
+          procedures conducted under brief non-recovery general anaesthesia</p>
+
+          <p><strong>C</strong>: Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or
+          prolonged general anaesthesia.</p>
+        </dd>
+        <dt>Conditions</dt>
+        <dd>
+          <p><a href="#">The standard conditions apply</a></p>
+        </dd>
+      </dl>
+     
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Amend or transfer licence</h2>
+      <p>You can ask for this licence to be amended but only the licence holder can transfer it.</p>
+
+      <button class="govuk-button govuk-button--secondary">Amend licence</button>
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Reinstate licence</h2>
+      <p>Reinstate this suspended licence if the licence holder should be authorised to carry out regulated procedures in the categories stated in this licence.</p>
+      <form action="reinstate-reason" method="POST">
+
+        <button class="govuk-button">Reinstate licence</button>
+      </form>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Revoke licence</h2>
+      <p>Cancel this licence if it is no longer needed. If the licence includes category E, this can be removed by viewing the relevant training course.</p>
+      <button class="govuk-button govuk-button--warning">Revoke licence</button>      
+           
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Related tasks</h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Last amended</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">Deadline</th>
+            <th class="govuk-table__header" scope="col">Assigned to</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">16 July 2022  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">
+              <a href="suspend-task">PIL suspension</a><br>
+              Shaun Jones
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">APPROVED</span></td>
+            <td class="govuk-table__cell"><span class="secondary-text">No deadline</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">22 July 2020  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell">
+              <a href="#">PIL application</a><br>
+              Shaun Jones
+            </td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">APPROVED</span></td>
+            <td class="govuk-table__cell"><span class="secondary-text">No deadline</span></td>
+            <td class="govuk-table__cell"><a href="#">Inspector Morse</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 15px;
+    width: 25%;
+  }
+
+  .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 15px;
+    position: relative;
+}
+</style>
+
+    
+
+{% endblock %}

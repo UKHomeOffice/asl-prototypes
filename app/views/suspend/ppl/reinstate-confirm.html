@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Development of new biological anticancer agents</span>
+      <h1 class="govuk-heading-l">Confirm project licence reinstatement</h1>
+      <h3 class="govuk-heading-s">Licence holder</h3>
+      <p>Shaun Jones</p>
+      <h3 class="govuk-heading-s">Licence number</h3>
+      <p>KW-740222</p>
+      <h3 class="govuk-heading-s">Reason for reinstating the licence</h3>
+      <p>{{ data['reinstate-reason'] }}</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Regulated procedures will be authorised to be carried out under this licence.
+        </strong>
+      </div>
+      <a href="reinstate-completed" class="govuk-button">Confirm reinstatement</a>
+    </div>
+  </div>
+
+{% endblock %}
+
+

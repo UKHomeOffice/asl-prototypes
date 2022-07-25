@@ -1,0 +1,165 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Enforcement cases
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>Flag people and licences subject to enforcement to help inspectors make informed decisions when granting or amending licences in ASPeL.</p>
+    <h3 class="govuk-label--s">Search by case number, licence number or name</h3>
+    <div class="govuk-form-group search-box">
+      <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+      <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m">All cases <div class="float-right"><a href="add-case" class="govuk-button">Add new case</a></div></h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Case number</th>
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Establishment </th>
+          <th class="govuk-table__header" scope="col">Flag applied to</th>
+          <th class="govuk-table__header" scope="col">Enforcement flag</th>
+          <th class="govuk-table__header" scope="col">Last updated</th>
+          <th class="govuk-table__header" scope="col">View details</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+       
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" style="border-top: 1px solid #bfc1c3;" scope="col"><a >21101</a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" style="border-top: 1px solid #bfc1c3;" scope="col">Shaun Jones</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" style="border-top: 1px solid #bfc1c3;" scope="col">University of Croydon</td>
+          <td class="govuk-table__cell no-border-bottom row-entity" style="border-top: 1px solid #bfc1c3;" scope="col"><a href="#">Profile</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" style="border-top: 1px solid #bfc1c3;" scope="col">Ongoing</td>
+          <td class="govuk-table__cell no-border-bottom row-date" style="border-top: 1px solid #bfc1c3;" scope="col">16 Jul 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" style="border-top: 1px solid #bfc1c3;" scope="col"><a href="case-active">View case</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell row-case" style="" scope="col"><a ></a></td>
+          <td class="govuk-table__cell row-holder" style="" scope="col">Shaun Jones</td>
+          <td class="govuk-table__cell row-establishment" style="" scope="col">University of Croydon</td>
+          <td class="govuk-table__cell row-entity" style="" scope="col"><a href="pil/pil-suspended">PIL: KW-740222</a><br><span class="badge badge-red">SUSPENDED</span></td>
+          <td class="govuk-table__cell row-status" style="" scope="col">Ongoing</td>
+          <td class="govuk-table__cell row-date" style="" scope="col">16 Jul 2022</td>
+          <td class="govuk-table__cell row-date" style="" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a >21100</a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Angela Vioni</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">Royal Scientific College of Luton </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">Profile</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details">View case</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Angela Vioni</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">Royal Scientific College of Luton </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">PIL: 885955</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell row-holder" scope="col">Angela Vioni</td>
+          <td class="govuk-table__cell row-establishment" scope="col">Royal Scientific College of Luton </td>
+          <td class="govuk-table__cell row-entity" scope="col"><a href="#">PPL: 258575</a></td>
+          <td class="govuk-table__cell row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a >21099</a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Janet Simpson</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">University of Croydon </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">Profile</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">16 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details">View case</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell row-holder" scope="col">Janet Simpson</td>
+          <td class="govuk-table__cell row-establishment" scope="col">University of Croydon </td>
+          <td class="govuk-table__cell row-entity" scope="col"><a href="#">PI:948484</a></td>
+          <td class="govuk-table__cell row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell row-date" scope="col">16 Jan 2022</td>
+          <td class="govuk-table__cell row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell row-case" scope="col"><a >21098</a></td>
+          <td class="govuk-table__cell row-holder" scope="col" colspan="5"><em>No subjects with ongoing or closed enforcement flags</em></td>
+          <td class="govuk-table__cell row-date" scope="col"><a href="add-subject-1-details">View case</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a >21097</a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Renato Bernal</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">Slough University </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">Profile</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Closed</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details">View case</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Renato Bernal</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col">Slough University </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">PIL: 885955</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Closed</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell no-border-bottom row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell no-border-bottom row-holder" scope="col">Susan James</td>
+          <td class="govuk-table__cell no-border-bottom row-establishment" scope="col"> Slough University </td>
+          <td class="govuk-table__cell no-border-bottom row-entity" scope="col"><a href="#">Profile</a></td>
+          <td class="govuk-table__cell no-border-bottom row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell no-border-bottom row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell row-case" scope="col"><a ></a></td>
+          <td class="govuk-table__cell row-holder" scope="col">Susan James</td>
+          <td class="govuk-table__cell row-establishment" scope="col"> Slough University</td>
+          <td class="govuk-table__cell row-entity" scope="col"><a href="#">PPL: 258575</a></td>
+          <td class="govuk-table__cell row-status" scope="col">Ongoing</td>
+          <td class="govuk-table__cell row-date" scope="col">15 Jan 2022</td>
+          <td class="govuk-table__cell row-date" scope="col"><a href="add-subject-1-details"></a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    {% include "includes/pagination.html" %}
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
