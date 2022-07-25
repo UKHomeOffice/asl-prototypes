@@ -1,0 +1,151 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% set assessSection = 'reduction' %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Licence conditions with deadlines</h1>
+      <p class="govuk-hint">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, ducimus eius qui labore in eaque perspiciatis reprehenderit obcaecati.</p>
+      <div class="govuk-form-group search-box">
+        <h3 class="govuk-heading-s no-margin-bottom">Search by licence holder, licence number or establishment</h3>
+        <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
+        <button style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+      </div>
+    </div>
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Licence holder</th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Licence type</th>
+            <th class="govuk-table__header" scope="col">Licence</th>
+            <th class="govuk-table__header" scope="col">Condition type</th>
+            <th class="govuk-table__header" scope="col">Deadline</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Aedan Tran</td>
+            <td class="govuk-table__cell establishment">University of Croydon</td>
+            <td class="govuk-table__cell type">PPL</td>
+            <td class="govuk-table__cell licenceno">HDPT48FG</td>
+            <td class="govuk-table__cell id"><a href="#">Custom</a></td>
+            <td class="govuk-table__cell deadline">21 Mar 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Anabelle Byrd</td>
+            <td class="govuk-table__cell establishment">Slough University</td>
+            <td class="govuk-table__cell type">PPL</td> 
+            <td class="govuk-table__cell licenceno">EH7FJL2F</td>
+            <td class="govuk-table__cell id"><a href="#">Reporting condition</a></td>
+            <td class="govuk-table__cell deadline">24 Mar 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Dimitri Boyer</td>
+            <td class="govuk-table__cell establishment">BIOtech Inc.</td>
+            <td class="govuk-table__cell type">PIL</td>
+            <td class="govuk-table__cell licenceno">JF838375</td>
+            <td class="govuk-table__cell id"><a href="#">Additional</a></td>
+            <td class="govuk-table__cell deadline">27 Mar 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Roy Kay</td>
+            <td class="govuk-table__cell establishment">Slough University</td>
+            <td class="govuk-table__cell type">PEL</td>
+            <td class="govuk-table__cell licenceno">J3QRJ5GF</td>
+            <td class="govuk-table__cell id"><a href="#">Additional</a></td>
+            <td class="govuk-table__cell deadline">02 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Amritpal Wright</td>
+            <td class="govuk-table__cell establishment">Royal College of Woking</td>
+            <td class="govuk-table__cell type">PPL</td>
+            <td class="govuk-table__cell licenceno">EVF3BLEJ</td>
+            <td class="govuk-table__cell id"><a href="#">Reporting condition</a></td>
+            <td class="govuk-table__cell deadline">05 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Gregor Higgs</td>
+            <td class="govuk-table__cell establishment">BIOtech Inc.</td>
+            <td class="govuk-table__cell type">PPL</td>
+            <td class="govuk-table__cell licenceno">Z97KYFKS</td>
+            <td class="govuk-table__cell id"><a href="#">Custom</a></td>
+            <td class="govuk-table__cell deadline">08 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Kaden Clay</td>
+            <td class="govuk-table__cell establishment">Slough University</td>
+            <td class="govuk-table__cell type">PEL</td>
+            <td class="govuk-table__cell licenceno">RQ6FJY98</td>
+            <td class="govuk-table__cell id"><a href="#">General</a></td>
+            <td class="govuk-table__cell deadline">11 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Neal Joseph</td>
+            <td class="govuk-table__cell establishment">Royal College of Woking</td>
+            <td class="govuk-table__cell type">PPL</td>
+            <td class="govuk-table__cell licenceno">KCE5JZZ3</td>
+            <td class="govuk-table__cell id"><a href="#">General</a></td>
+            <td class="govuk-table__cell deadline">14 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Tina Gaines</td>
+            <td class="govuk-table__cell establishment">Westhamptonshire University</td>
+            <td class="govuk-table__cell type">PIL</td>
+            <td class="govuk-table__cell licenceno">YTJTS2ZB</td>
+            <td class="govuk-table__cell id"><a href="#">General</a></td>
+            <td class="govuk-table__cell deadline">17 Apr 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell holder">Damien Landry</td>
+            <td class="govuk-table__cell establishment">BIOtech Inc.</td>
+            <td class="govuk-table__cell type">PPL</td>
+            <td class="govuk-table__cell licenceno">HCSA7RGJ</td>
+            <td class="govuk-table__cell id"><a href="#">General</a></td>
+            <td class="govuk-table__cell deadline">20 Apr 2022</td>
+          </tr>
+         
+        </tbody>
+        
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
