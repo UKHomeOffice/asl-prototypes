@@ -1,0 +1,1607 @@
+
+
+Section title: 'Introductory details',
+Page title: 'Introductory details',
+
+Question: 'What\'s the title of this project?',
+Hint text: 'Focus on your broad aims and use simple language. For example \'Genes and lifestyle influences on brain ageing\'.',
+User input: 'text'
+
+Question: 'Is this project for higher education and training purposes?',
+User input: 'radio',
+Option: 'Yes',
+Hint text: `Permissible purpose: (f) Higher education or training for the acquisition, maintenance or improvement of vocational skills`,
+		If selected reveal:
+		Question: 'Why is this higher education and training licence needed?',
+		User input: Text editor
+
+		Question: 'What course or scientific or medical discipline does this application relate to?',
+		User input: Text editor
+
+Option: 'No',
+		If selected reveal: permissiblePurpose
+
+
+Question: 'What will be the duration of this project?',
+User input: 'duration'
+
+Question: 'Which types of animals will be used in this project?',
+User input: 'species-selector',
+
+Section title: 'Non-technical summary',
+Page title: 'Aims',
+Included in NTS: true,
+
+Question: 'What\'s the aim of this project?',
+Hint text: 'Keep this to a short one or two sentence summary.',
+Qlaybackquestion: 'Aim of this project',
+User input: Text editor
+
+Question: 'Why is it important to undertake this work?',
+User input: Text editor
+
+Question: 'Key words that describe this project',
+Hint text: 'Choose up to 5. For example: cancer, stem cells, therapy.',
+User input: 'keywords'
+
+
+Page title: 'Benefits',
+Included in NTS: true,
+
+Show if: Project is not a training licence ?????
+Question: 'What outputs do you think you will see at the end of this project?',
+Hint text: 'Outputs can include new information, publications, or products.',
+User input: Text editor
+
+Show if: Project is not a training licence ?????
+Question: 'Who or what will benefit from these outputs, and how?',
+Hint text: 'The impact of these outputs may be seen in the short-term, or they may not be fully realised until you\'ve completed the project. Consider all timescales in your answer.',
+User input: Text editor
+
+Show if: Project is not a training licence ????
+Question: 'Will this work be offered as a service to others?',
+User input: 'radio',
+options: [
+				Option: 'Yes',
+		reveal: {
+			Question: 'What are the benefits of offering this work as a service?',
+			User input: Text editor
+
+
+				Option: 'No',
+
+
+Show if: the project is a training licence
+Question: 'How will course attendees use their knowledge or skills in their future careers?',
+User input: Text editor
+
+Show if: the project is a training licence
+Question: 'What are the principal learning outcomes from the course?',
+User input: Text editor
+
+Show if: the project is a training licence
+Question: 'How are these learning outcomes important to the people on the course?',
+User input: Text editor
+
+Show if: the project is a training licence
+Question: 'Who or what will benefit from the transfer of knowledge, or acquisition of skills that this course will deliver?',
+User input: Text editor
+
+Question: 'How will you look to maximise the outputs of this work?',
+Hint text: 'For example, collaboration, dissemination of new knowledge, or publication of unsuccessful approaches.',
+User input: Text editor
+
+
+Section title: 'Project harms',
+Included in NTS: true,
+
+Question: 'Explain why you are using these types of animals and your choice of life stages.',
+User input: Text editor
+
+Question: 'Typically, what will be done to an animal used in your project?',
+Hint text: 'For example, injections and surgical procedures. Include any relevant information about the duration of experiments and the number of procedures.',
+User input: Text editor
+
+Question: 'What are the expected impacts and/or adverse effects for the animals during your project?',
+Hint text: 'Examples can include pain, weight loss, tumours, or abnormal behaviour. State the estimated duration of these effects on an animal.',
+User input: Text editor
+
+Question: 'What are the expected severities and the proportion of animals in each category (per animal type)?',
+User input: Text editor
+
+
+Section title: 'Fate of animals',
+Included in NTS: true,
+
+Question: 'What will happen to animals at the end of this project?',
+User input: 'checkbox',
+Checkbox options:
+	Option: Killed
+	Option: Kept alive
+	Option: Set free
+	Option: Rehomed
+	Option: Used in other projects
+
+Section title: 'Replacement',
+Included in NTS: true,
+
+	Question: 'Why do you need to use animals to achieve the aim of your project?',
+	User input: Text editor
+
+	Show if: Project is not a training licence
+	Question: 'Which non-animal alternatives did you consider for use in this project?',
+	User input: Text editor
+
+	Show if: Project is not a training licence
+	Question: 'Why were they not suitable?',
+	User input: Text editor
+
+	Show if: the project is a training licence
+	Question: 'Why can\'t your aim be met by observing or by participating in ongoing research or clinical procedures?',
+	User input: Text editor
+
+Section title: 'Reduction',
+Included in NTS: true,
+
+	Question: 'Enter the estimated number of animals of each type used in this project.',
+	User input: 'animal-quantities'
+
+	Question: 'How have you estimated the numbers of animals you will use?',
+	Hint text: 'Do not mention POWER calculations here. If relevant, there will be an opportunity to provide these details elsewhere.',
+	User input: Text editor
+
+	Show if: Project is not a training licence
+	Question: 'What steps did you take during the experimental design phase to reduce the number of animals being used in this project?',
+	Hint text: 'You may want to reference online tools (such as the NC3R\'s Experimental Design Assistant) or any relevant regulatory requirements.',
+	User input: Text editor
+
+	Show if: Project is not a training licence
+	Question: 'What measures, apart from good experimental design, will you use to optimise the number of animals you plan to use in your project?',
+	Hint text: 'This may include efficient breeding, pilot studies, computer modelling, or sharing of tissue.',
+	User input: Text editor
+
+	Show if: the project is a training licence
+	Question: 'What in silico or ex vivo techniques will you use during training?',
+	User input: Text editor
+
+	Show if: the project is a training licence
+	Question: 'Will these techniques reduce animal numbers? If so, how?',
+	User input: Text editor
+
+	Show if: the project is a training licence
+	Question: 'What other measures will you use to minimise the number of animals you plan to use in your project?',
+	User input: Text editor
+
+Section title: 'Refinement',
+Included in NTS: true,
+
+Question: 'Which animal models and methods will you use during this project?',
+Hint text: 'Explain why these models and methods cause the least pain, suffering, distress, or lasting harm to the animals.',
+User input: Text editor
+
+Question: 'Why can’t you use animals that are less sentient?',
+Hint text: 'For example, animals at a more immature life stage, species that are less sentient, or animals that have been terminally anaesthetised.',
+User input: Text editor
+
+Question: 'How will you stay informed about advances in the 3Rs, and implement these advances effectively, during the project?',
+User input: Text editor
+
+Question: 'How will you refine the procedures you\'re using to minimise the welfare costs (harms) for the animals?',
+Hint text: 'Potential refinements include increased monitoring, post-operative care, pain management, and training of animals.',
+User input: Text editor
+
+Question: 'What published best practice guidance will you follow to ensure experiments are conducted in the most refined way?',
+User input: Text editor
+
+
+Section title: 'Applicant information',
+
+Page title: 'Funding',
+???
+
+Page title: 'Funding',
+Show if: Project is not a training licence
+
+	Question: 'How do you plan to fund your work?',
+	Hint text: 'If you do not have full funding, explain how you will stage your work and the likelihood of you obtaining further funding.',
+	User input: Text editor
+
+	Question: 'Will this work support basic or translational research, or non-regulatory drug or device development?',
+	User input: 'radio',
+	options: [
+					Option: 'Yes',
+			reveal: {
+				Question: 'Were any grant applications for this work peer reviewed? If so, by whom and what was the outcome?',
+				User input: Text editor
+
+
+					Option: 'No',
+
+
+--------------------
+
+
+
+
+Page title: 'Training',
+intro: 'Add details of relevant training completed. All project licence holders must have completed the PPL and E2 training modules, unless they have grounds for an exemption.',
+
+Question: 'Do you need to update this training record?',
+User input: 'radio',
+	Option: 'Yes, I need to update it',
+				If yes, go to training profile
+	Option: 'No, this training record is up to date',
+
+
+Section title: 'Project location',
+
+Section title: 'Establishments',
+	
+Question: 'What is the primary establishment for this licence?',
+User input: 'establishment-selector',
+Show if: application => application.project && !application.isFullApplication
+
+Question: 'Will your project use any additional establishments?',
+User input: 'radio',
+	Option: 'Yes',
+	Option: 'No',
+	
+If yes to additional establishments
+Question: 'Select an establishment where work will be carried out',
+readOnlyWarning: 'Only the licence holder can agree to disclose their licence to another establishment.',
+User input: 'additional-availability',
+repeats: true
+
+Question: 'Why do you need to carry out work at this additional establishment?',
+Hint text: 'For example, there may be important specialised equipment at this location that is not available at your primary establishment.',
+User input: Text editor,
+repeats: true
+
+Question: 'Who will be responsible for supervising your work at this additional establishment?',
+User input: Text editor,
+repeats: true
+
+Question: 'Do the housing, husbandry, and care conditions at each establishment meet the requirements laid out in the Code of Practice for each type of animal you will be using?',
+Hint text: 'Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.',
+User input: 'radio',
+	Option: 'Yes',
+
+	Option: 'No',
+		If no, show:
+			Question: 'If any establishment does not meet these requirements, or if any type of animal you\'re using is not listed in the Code of Practice, explain how you will ensure that housing, husbandry, and care conditions are appropriate for your project.',
+			User input: Text editor
+
+
+
+Section title: 'Places other than a licensed establishment (POLEs)',
+	
+Question: 'Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?',
+User input: 'radio',
+	Option: 'Yes',
+		If yes, show
+			Question: 'Why can\'t this part of your project take place at a licensed establishment?',
+			User input: Text editor
+	Option: 'No',
+
+If project uses POLEs
+
+					
+	Page title: 'Specify the details of each POLE that you will be using.',
+	Hint text: `If you can’t specify a grid reference for a POLE, include details that allows it to be easily identified for inspection. This could be an address of a site or a postcode of a farm. If you can only add generic information at this stage, provide a general description of the types of areas you are considering.`,
+	
+	For each POLE added
+		Question: 'Name',
+		User input: 'text',
+
+		Question: 'Details',
+		User input: Text editor,
+
+
+	
+	Question: 'How will you ensure that procedures taking place at these POLEs can be inspected?',
+	Hint text: 'For example, how will you obtain consent from landowners?',
+	User input: Text editor
+
+	Question: 'How will work at each POLE be done in the most environmentally sensitive manner?',
+	User input: Text editor
+
+	Question: 'Will any animals be moved between a POLE and a licensed establishment during this project?',
+	User input: 'radio',
+		Option: 'Yes',
+			If yes, show:
+				Question: 'Why do you need to move animals between a POLE and a licensed establishment?',
+				User input: Text editor
+
+				Question: 'What arrangements have been made to ensure animals can be safely transported and that any permits necessary to transport the species under study are/will be held?',
+				User input: Text editor
+
+				Question: 'How might the movement of animals between a POLE and a licensed establishment affect the scientific delivery of this project?',
+				User input: Text editor
+
+				Question: 'How will you ensure that animals are in a suitable condition to be transported?',
+				Hint text: 'Include all checks that will be made for suitability and what will happen to animals that are not suitable to be transported.',
+				User input: Text editor
+
+				Question: 'Who will be responsible for checking the animals before they are transported?',
+				Hint text: 'This does not need to be a Named Veterinary Surgeon.',
+				User input: Text editor
+
+				Question: 'How will you ensure that this person is competent to make the appropriate checks?',
+				User input: Text editor
+
+				Question: 'What arrangements will be made to assure an animal\'s welfare during transport, particularly if they are being moved after the start of regulated procedures?',
+				User input: Text editor
+
+
+		Option: 'No',
+
+--------------------
+
+	Section title: 'Project plan',
+
+			Section title: 'Scientific background',
+			Show if: Project is not a training licence
+
+					Question: 'Will this work support basic or translational research, or non-regulatory drug or device development?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'Briefly summarise the current state of scientific knowledge in this area of work to show how you arrived at the starting point of this project.',
+									Hint text: 'Be specific and relevant to your project aim - thee\'s no need for a detailed overview of the entire field. Include any relevant non-animal research if it has contributed to the starting point of your project.',
+									User input: Text editor
+
+									Question: 'What new knowledge do you hope to discover that will address a gap in fundamental scientific knowledge or meet a clinical need?',
+									Hint text: 'Refer to the basis for any scientific hypotheses you plan to test during this project.',
+									User input: Text editor
+
+									Question: 'Does your project mainly involve translational or veterinary clinical applications?',
+									User input: 'radio',
+									options: [
+																	Option: 'Yes',
+											reveal:
+													Question: 'How prevalent and severe are the relevant clinical conditions?',
+													User input: Text editor
+
+													Question: 'What are the problems with current treatments which mean that further work is necessary?',
+													User input: Text editor
+
+													Question: 'What is the scientific basis for your proposed approach?',
+													User input: Text editor
+
+
+																	Option: 'No',
+
+
+
+									Option: 'No',
+
+
+					Question: 'Will you be producing data primarily for regulatory authorities that use standardised protocol frameworks?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'What substances or devices will undergo regulatory testing?',
+									User input: Text editor
+
+									Question: 'Will this testing be offered as a service to others?',
+									User input: 'radio',
+									options: [
+																	Option: 'Yes',
+											reveal:vice-nature',
+													Question: 'What is the nature of the service you wish to provide?',
+													User input: 'textditor'
+
+													Question: 'Who will you provide the service to?',
+													User input: Text editor
+
+													Question: 'In general terms, how will those using your service use the data that you produce?',
+													User input: Text editor
+
+													Question: 'What are the likely demands for the service over the lifetime of the project?',
+													User input: Text editor
+
+
+																	Option: 'No',
+
+
+									Option: 'No',
+
+
+					Question: 'Will you be undertaking non-regulatory testing or screening as a service to others?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'What service do you wish to provide?',
+									User input: Text editor
+
+									labl: 'Who will you provide the service to?',
+									User input: Text editor
+
+									Question: 'In general terms, how will your clients use the data or other outputs that you produce?',
+									User input: Text editor
+
+									Question: 'How will you select the most appropriate scientific model or method?',
+									User input: Text editor
+
+									Question: 'What are the likely demands for the service over the lifetime of the project?',
+									User input: Text editor
+
+									Question: 'Does this project relate directly to a clinical condition?',
+									User input: 'radio',
+									options: [
+																	Option: 'Yes',
+											reveal:dition-severe',
+													Question: 'How prevalent and severe are the relevant clinical conditions?',
+													User input: 'textditor'
+
+													Question: 'What are the problems with current treatments which mean that further work is necessary?',
+													User input: Text editor
+
+
+																	Option: 'No',
+
+
+
+									Option: 'No',
+
+
+					Question: 'Will you be producing genetically altered or surgically prepared animals/animal products using standardised protocol frameworks as a service to others?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'What products do you wish to provide?',
+									User input: Text editor
+
+									Question: 'Who will you provide a service to?',
+									User input: Text editor
+
+									Question: 'In general terms, how will those using your service use the product?',
+									Hint text: 'This can include advancing scientific knowledge, or to benefit humans, animals, or the environment.',
+									User input: Text editor
+
+									Question: 'What are the likely demands for the products over the lifetime of the project?',
+									User input: Text editor
+
+
+									Option: 'No',
+
+
+					Question: 'Will you be manufacturing vaccines and medicines for medical or veterinary use?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'How will these products benefit human health, animal health, or the environment?',
+									User input: Text editor
+
+									Question: 'What are the likely demands for the products over the lifetime of the project?',
+									User input: Text editor
+
+
+									Option: 'No',
+
+
+					Question: 'Do you need to transfer animals from a project that’s due to expire?',
+					User input: 'radio',
+
+					options: [
+									Option: 'Yes',
+							reveal:
+									User input: 'repeater',
+									singular: 'Expiring project',
+									QddAnotherquestion: 'Add another project to transfer animals from',
+					
+											User input: 'text',
+											Question: 'Project licence number'
+
+											User input: 'date',
+											Question: 'Expiry date',
+											Hint text: 'For example, 13 06 2019'
+
+
+
+									Option: 'No',
+
+
+			Section title: 'Scientific background',
+			Show if: the project is a training licence
+
+					Question: 'What do you anticipate demand for this training to be over the lifetime of the project?',
+					User input: Text editor
+
+					Question: 'Describe if the training is endorsed or otherwise supported by any specialist bodies or societies.',
+					User input: Text editor
+
+					Question: 'Is this training a mandatory requirement for a professional qualification?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal: {
+								Question: 'Explain who mandates the training and what the requirement is.',
+								User input: Text editor
+
+
+									Option: 'No',
+
+
+					Question: 'How will you measure the success of the training?',
+					User input: Text editor
+
+					Question: 'How will you evaluate if the participants\' learning has been enhanced by the use of protected animals?',
+					Hint text: 'For example, by reviewing feedback from participants or potential employers.',
+					User input: Text editor
+
+					Question: 'What arrangements have you made for an annual review of the course by your Animal Welfare and Ethical Review Body (AWERB)?',
+					User input: Text editor
+
+					Question: 'Do you need to transfer animals from a project that’s due to expire?',
+					User input: 'radio',
+
+					options: [
+									Option: 'Yes',
+							reveal:
+									User input: 'repeater',
+									singular: 'Expiring project',
+									QddAnotherquestion: 'Add another project to transfer animals from',
+					
+											User input: 'text',
+											Question: 'Project licence number'
+
+											User input: 'date',
+											Question: 'Expiry date',
+											Hint text: 'For example, 13 06 2019'
+
+
+
+									Option: 'No',
+
+			Section title: 'Action plan',
+
+			playback: values => isTrainingLicence(values) ? undefined : 'project-aim',
+			review: ObjectivesReview,
+
+			steps: [
+					Section title: 'Action plan - 1 of 2',
+					intro: 'There are several useful resources to help you plan your experiments. It is recommended that you read the ARRIVE, PREPARE guidelines, the NC3Rs\' Experimental Design Assistant and any other relevant guidelines before answering the questions in this section.',
+					singular: 'Objective',
+					component: Objectives,
+					repeats: 'objectives',
+					confirmRemove: confirmProtocolsAffected('remove', 'objectives', 'objective', 'title'),
+	
+							Question: 'Title',
+							review: 'Objective title',
+							User input: 'text',
+							objective: true,
+							repeats: true,
+							toggleEdit: true,
+							confirmEdit: confirmProtocolsAffected('edit', 'objectives', 'objective', 'title'),
+
+							Show if: Project is not a training licence
+							Question: 'How do each of these objectives relate to each other and help you to achieve your aim?',
+							Hint text: `Outline any interdependencies, stop:go points, and milestones. Include any key in vitro, ex vivo or in silico work, clinical findings, or results from epidemiological studies carried out under other projects that will enable you to achieve your objectives.
+
+							Consider including images (.jpg and .png files) of annotated flow charts and decision trees in your action plan to illustrate how objectives relate to each other.`,
+							User input: Text editor
+
+					Section title: 'Action plan - 2 of 2',
+	
+							Show if: Project is not a training licence
+							Question: 'Where relevant, how will you seek to use or develop non-animal alternatives for all or part of your work?',
+							User input: Text editor
+
+							Question: 'Will you be producing data primarily for regulatory authorities that use standardised protocol frameworks?',
+							User input: 'radio',
+							Show if: values => {
+								return !isTrainingLicence(values) && (!values.isGranted || !!values['objectives-regulatory-authorities']);
+
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'What tests will be performed for regulatory purposes?',
+											Hint text: 'State under which guidelines, and for which regulators.',
+											User input: 'exteditor'
+
+											Question: 'How have you determined that an in vivo test is required by the regulator and that non-animal alternatives cannot be used?',
+											User input: Text editor
+
+											Question: 'How will you deal with requests to use tests not required by the UK or EU?',
+											User input: Text editor
+
+											Question: 'Will all regulatory testing be conducted in compliance with Good Laboratory Practice (GLP) standards?',
+											Hint text: 'If not, explain why this is not required.',
+											User input: Text editor
+
+											Question: 'Will this testing be offered as a service to others?',
+											User input: 'radio',
+											options: [
+																			Option: 'Yes',
+													reveal:s-service-process',
+															Question: 'What is your process for accepting or rejecting work?',
+															User input: Text editor
+
+															Question: 'What specific criteria will you use to decide whether to accept or reject work?',
+															User input: Text editor
+
+															Question: 'Will others help you make decisions about accepting or rejecting work?',
+															Hint text: 'If so, who and how?',
+															User input: Text editor
+
+
+																			Option: 'No',
+
+													Option: 'No',
+
+
+							Question: 'Will you be undertaking non-regulatory testing or screening as a service to others?',
+							User input: 'radio',
+							Show if: values => {
+								return !isTrainingLicence(values) && (!values.isGranted || !!values['objectives-non-regulatory']);
+
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'What is your process for accepting or rejecting work?',
+											User input: Text editor
+
+											Question: 'What specific criteria will you use to decide whether to accept or reject work?',
+											User input: Text editor
+
+											Question: 'Will others help you make decisions about accepting or rejecting work?',
+											Hint text: 'If so, who and how?',
+											User input: Text editor
+
+													Option: 'No',
+
+							Question: 'Will you be producing genetically altered or surgically prepared animals/animal products using standardised protocol frameworks?',
+							User input: 'radio',
+							Show if: values => {
+								return !isTrainingLicence(values) && (!values.isGranted || !!values['objectives-genetically-altered']);
+
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'How do you assure the quality of the products?',
+											User input: Text editor
+
+											Question: 'How will you match the supply of your products with demand?',
+											User input: Text editor
+
+											Question: 'Will these products be offered as a service to others?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+													reveal:ervice-process',
+															Question: 'What is your process for accepting or rejecting work?',
+															User input: Text editor
+
+															Question: 'What specific criteria will you use to decide whether to accept or reject work?',
+															User input: Text editor
+
+															Question: 'Will others help you make decisions about accepting or rejecting work?',
+															Hint text: 'If so, who and how?',
+															User input: Text editor
+
+
+																					Option: 'No',
+
+													Option: 'No',
+
+
+							Question: 'Will you be manufacturing vaccines and medicines for medical or veterinary use?',
+							User input: 'radio',
+							Show if: values => {
+								return !isTrainingLicence(values) && (!values.isGranted || !!values['objectives-vaccines']);
+
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'Will all manufacturing be conducted in compliance with Good Manufacturing Practice (GMP) standards?',
+											Hint text: 'If not, explain why this is not required.',
+											User input: 'exteditor'
+
+											Question: 'Describe how animals are used throughout the manufacturing process.',
+											User input: Text editor
+
+											Question: 'What animal-based tests do you need to undertake on your products, and for which regulator?',
+											User input: Text editor
+
+											Question: 'How do you assure the quality of your products?',
+											User input: Text editor
+
+											Question: 'How will you match the supply of your products with demand?',
+											User input: Text editor
+
+											Question: 'Will you use animals to develop and validate more refined methods or non-animal alternatives?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+													reveal: {
+														Question: 'Explain the type of work you will do, and indicate which steps in the manufacturing process this relates to.',
+														User input: Text editor
+
+
+																					Option: 'No',
+
+
+
+													Option: 'No',
+
+
+							Show if: the project is a training licence
+							Question: 'Why can\'t learning outcomes be achieved without the use of live animals?',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'How are attendees selected?',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'Will animals be used to produce a longer-term teaching aid such as a video?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal: {
+										Question: 'Describe the material you plan to produce.',
+										User input: Text editor
+
+
+													Option: 'No',
+
+
+							Show if: the project is a training licence
+							Question: 'Describe any resources you use, or are currently developing, to supplement or replace the use of animals.',
+							Hint text: 'This could include videos, in silico or ex vivo material.',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'Specify any resources you’ve explored to ensure there are no suitable non-animal alternatives.',
+							Hint text: 'For example, Norecopa.',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'How will you keep up to date with any non-animal alternatives developed during the course of this project?',
+							User input: Text editor
+
+
+,
+		'general-principles': {
+			Section title: 'General principles',
+
+					Show if: Project is not a training licence
+					Question: 'Unnecessary duplication of work must be avoided. Under what circumstances would you knowingly duplicate work?',
+					User input: Text editor
+
+					Show if: the project is a training licence
+					Question: 'Does data or learning material exist from previous work?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal: {
+								Question: 'How will you use this data or material?',
+								User input: Text editor
+
+
+									Option: 'No',
+
+
+					Question: 'Will all of your protocols or experiments use animals of both sexes?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+
+									Option: 'No',
+							reveal: {
+								Question: 'Why will you use animals of a single sex in some protocols or experiments?',
+								User input: Text editor
+
+
+	Section title: 'Protocols',
+		protocols: {
+			Section title: 'Protocols',
+			sections: {
+				details: {
+					Section title: 'Protocol details',
+	
+							Question: 'Briefly describe the purposes of this protocol',
+							Hint text: 'Ensure that you state any relevant regulatory guidelines.',
+							User input: Text editor
+
+							Question: 'Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?',
+							User input: 'radio',
+							options: [
+													Question: 'Mild',
+
+													Question: 'Moderate',
+
+													Question: 'Severe',
+
+													Question: 'Non-recovery',
+
+							Question: 'What proportion of animals will experience this severity?',
+							User input: Text editor
+
+							Question: 'Why are you proposing this severity category?',
+							User input: Text editor
+
+							Question: 'Select the establishments and POLEs where this protocol will be carried out.',
+							review: 'Locations where this protocol can be carried out',
+							Hint text: 'Select all that apply.',
+							User input: 'list of establishments'
+
+							Question: 'Which of your objectives will this protocol address?',
+							Hint text: 'Select all that apply.',
+							User input: 'list of objectives'
+
+							Show if: the project is a training licence
+							Question: 'What will this protocol be used for?',
+							Hint text: 'If your purpose isn’t listed you can leave this blank.',
+							User input: 'checkbox',
+							options: [
+													Question: 'Demonstration purposes',
+
+													Question: 'Tissue provision',
+
+
+							Show if: the project is a training licence
+							Question: 'Who will be responsible for the animals used in this protocol?',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'Will students carry out regulated procedures under this protocol?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal: {
+										Question: 'What type of personal licence will they need?',
+										User input: 'radio',
+										options: [
+																			Question: 'A and B',
+																			Question: 'A, B and C',
+																			Question: 'E',
+
+
+													Option: 'No',
+
+							Show if: the project is a training licence
+							Question: 'What training will participants receive before they can use protected animals?',
+							User input: Text editor
+
+
+					Section title: 'Purpose and outputs',
+					Show if: props => props.isGranted && !props.isFullApplication,
+						review: Purpose
+
+
+					Section title: 'Establishments and POLEs',
+					Show if: props => props.isGranted && !props.isFullApplication,
+						review: ProtocolEstablishments
+
+
+					Section title: 'Animals used in this protocol',
+					repeats: 'speciesDetails',
+	
+							Question: 'Which types of animals would you like to add to this protocol?',
+							Hint text: 'Select all that apply.',
+							User input: 'checkbox',
+							section: 'intro'
+
+							Question: 'Which life stages will be used during this protocol?',
+							Hint text: 'Select all that apply',
+							User input: 'checkbox',
+							options: [
+													Question: 'Embryo and egg',
+													Question: 'Neonate',
+													Question: 'Juvenile',
+													Question: 'Adult',
+													Question: 'Pregnant adult',
+													Question: 'Aged animal',
+
+
+							Question: 'Will any animals coming on to this protocol be classed as ‘continued use’?',
+							Hint text: '‘Continued use’ describes animals that are specifically genetically altered and bred for scientific use or animals that have had procedures applied to them in order to be prepared for use in this protocol.',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal: {
+										Question: 'How did these animals start their use?',
+										Hint text: 'Describe the procedures that have been applied to animals that will continue their use on to this protocol.',
+										User input: Text editor
+
+
+													Option: 'No',
+,
+
+							Question: 'Will you be re-using animals on to this protocol?',
+							Hint text: '‘Re-use’ describes using animals again for a new experiment when you could equally use a naïve animal to get the same results.',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'Describe any procedure that may have been applied to these animals, and why you are choosing to re-use them.',
+											User input: Text editor
+										
+
+													Option: 'No',
+,
+
+							Question: 'What is the maximum number of animals that will be used on this protocol?',
+							User input: 'text'
+
+							Question: 'What is the maximum number of uses of this protocol per animal?',
+							Hint text: 'For example, if some animals will go through this protocol three more times after their first use, the number of uses will be four.\n\n If no animals will go through this protocol more than once, enter \'1\'.',
+							User input: 'text'
+
+
+					Section title: 'Genetically altered animals (GAA)',
+
+	
+							Question: 'Will this protocol use any genetically altered animals?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'Which general types or strains will you be using and why?',
+											User input: Text editor
+
+											Question: 'Do you expect any of these GAAs to show a harmful phenotype with welfare consequences?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+													reveal:
+															Question: 'Why are each of these harmful phenotypes necessary?',
+															User input: Text editor
+															Question: 'How will you minimise the harms associated with these phenotypes?',
+															Hint text: 'Ensure that you include any humane endpoints that you will use.',
+															User input: Text editor
+
+
+																					Option: 'No',
+
+
+
+													Option: 'No',
+
+
+					Section title: 'Objectives',
+					Show if: props => props.isGranted && !props.isFullApplication,
+						review: ProtocolObjectives
+
+
+					Section title: 'Steps',
+					Hint text: 'A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.',
+					footer: 'Once you’ve created a list of steps, you need to add information about adverse effects, controls and limitations, and humane endpoints to each one.',
+					repeats: 'steps',
+
+							User input: Text editor,
+							Question: 'Describe the procedures that will be carried out during this step.',
+							Hint text: 'Explain where one or more steps are repeated in one experiment, list any alternative techniques within a step (e.g. dosing routes), and include all procedures performed under terminal anaesthesia.\n\nWhen describing the technical aspects of a step, be broad enough to be flexible when the variation does not impact on animal welfare (e.g. use "antibiotic" instead of "penicillin"). Finally, avoid specifying volumes and frequencies when they do not impact on animal welfare.'
+
+							Question: 'Is this step optional?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+													Option: 'No',
+
+
+							Question: 'Do you expect this step to have adverse effects for the animals that are more than mild and transient?',
+							Hint text: 'Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'What are the likely adverse effects of this step?',
+											Hint text: 'State the expected adverse effect, including the likely incidence, and the anticipated degree and duratio of suffering.',
+											User input: Text editor
+
+											Question: 'How will you monitor for, control, and limit any of these adverse effects?',
+											Hint text: 'If adverse effects can\'t be prevented, how will you attempt to ameliorate their initial signs?',
+											User input: Text editor
+
+											Question: 'What are the humane endpoints for this step?',
+											Hint text: 'This would be the point at which you would kill the animal to prevent further suffering.',
+											User input: Text editor
+
+
+													Option: 'No',
+
+
+
+					Section title: 'Fate of animals',
+					Show if: ({ isGranted, isFullApplication }) => !isGranted || isFullApplication,
+
+	
+							Question: 'What will happen to animals at the end of this protocol?',
+							Hint text: 'Select all that apply',
+							User input: 'checkbox',
+							options: [
+													Question: 'Killed',
+															Hint text: 'Ensure that the methods of killing to be used are described in the final step of this protocol.',
+									reveal: {
+										Question: 'Will you be using non-schedule 1 killing methods on a conscious animal?',
+										User input: 'radio',
+										options: [
+																			Option: 'Yes',
+												reveal: {
+													Question: 'For each non-schedule 1 method, explain why this is necessary.',
+													User input: Text editor
+
+
+																			Option: 'No',
+
+
+
+													Question: 'Kept alive',
+
+													Question: 'Continued use on another protocol in this project',
+									reveal: {
+										Question: 'Please state the relevant protocol.',
+										User input: Text editor
+
+
+													Question: 'Continued use on other projects',
+
+
+
+					Section title: 'Animal experience',
+
+	
+							Question: 'Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.',
+							Hint text: 'Consider the cumulative effect of any combinations of procedures that you may carry out.',
+							User input: Text editor
+
+							Question: 'Describe the general humane endpoints that you will apply during the protocol.',
+							Hint text: 'These will be in addition to the endpoints stated for each step.',
+							User input: Text editor
+
+
+					Section title: 'Experimental design',
+
+	
+							Show if: the project is not a training licence
+							Question: 'What outputs are expected to arise from this protocol?',
+							Hint text: 'For example, test results, phenotypic information, or products.',
+							User input: Text editor
+
+							Show if: the project is a training licence
+							Question: 'What learning outcomes are expected to arise from this protocol?',
+							User input: Text editor
+
+							Question: 'Will this protocol generate quantitative data?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'Will your experimental design be determined by a regulatory guideline?',
+											User input: 'radio',
+											options: [
+																	Option: 'Yes',
+													reveal: {
+														Question: 'How will you ensure that you are using the most refined methodology?',
+														User input: Text editor
+
+
+																					Option: 'No',
+													reveal:how',
+															Question: 'Where relevant, explain how and when pilot studies will be used.',
+															User input: Text editor
+
+															Question: 'How will you choose different experimental groups?',
+															Hint text: 'For example, controls, dose levels, satellites etc.',
+															User input: Text editor
+
+															Question: 'How will you choose control groups?',
+															Hint text: 'Provide a robust scientific justification for controls with significant suffering such as sham surgery controls or untreated infected controls.',
+															User input: Text editor
+
+															Question: 'How will experiments and data analysis be randomised and blinded?',
+															User input: Text editor
+
+															Question: 'How will you minimise variables to ensure reproducibility?',
+															User input: Text editor
+
+															Question: 'How will you determine group sizes?',
+															Hint text: 'You should reference POWER calculations you have made, if relevant.',
+															User input: Text editor
+
+															Question: 'How will you maximise the data output from the animals you use on this protocol?',
+															User input: Text editor
+
+													Option: 'No',
+
+
+					Section title: 'Protocol justification',
+					Question: 'Why is each type of animal, experimental model, and/or method selected for this protocol:',
+
+	
+							Question: 'a) the most appropriate scientific approach?',
+							User input: Text editor
+
+							Question: 'b) the most refined for the purpose?',
+							User input: Text editor
+
+							Question: 'For each model and/or method, what is the scientific need for the expected clinical signs?',
+							User input: Text editor
+
+							Question: 'Why scientifically do the animals need to suffer to this degree?',
+							User input: Text editor
+
+							Question: 'Why can\'t you achieve your scientific outputs with an earlier humane endpoint, or without animals showing any clinical signs?',
+							User input: Text editor
+
+							Question: 'Will you be administering substances for experimental purposes?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'How will you assess the suitability of these substances, and minimise the unnecessary harms arising from their administration given the particular strain or type of animal you will be using?',
+											Hint text: 'hen assessing suitability, state how you will consider toxicity, efficacy, and sterility.',
+											User input: Text editor
+
+											Question: 'How will you determine an appropriate dosing regimen?',
+											Hint text: 'Include routes, dosage volumes, frequencies, and durations.',
+											User input: Text editor
+
+
+													Option: 'No',
+
+
+					Section title: 'Additional conditions',
+					items: 'Additional conditions',
+
+					Section title: 'Authorisations',
+					items: 'Authorisations',
+
+	Section title: 'Use of animals',
+		domestic: {
+			Section title: 'Cats, dogs, and equidae',
+			intro: 'You are seeing this section because you added a type of cat, dog, or equid to your project. To change this, go to Introductory details.',
+			Show if: values => intersection(
+				SPECIES.DOM.map(s => s.value),
+				values.species
+			).length,
+
+					Question: 'What are the scientific reasons for using cats, dogs, or equidae in your project?',
+					Hint text: 'A licence cannot be granted unless your scientific objectives or research questions can only be achieved or answered by the use of cats, dogs or equidae. This includes instances when it is not practicable to obtain other types of animal.',
+					User input: Text editor
+
+
+			Section title: 'Non-human primates',
+			intro: 'You are seeing this section because you added a non-human primate to your project. To change this, go to Introductory details.',
+			Show if: values => intersection(SPECIES.NHP.map(s => s.value), values.species).length,
+
+					Question: 'Why do you need to use non-human primates, rather than any other type of animal, to achieve your objectives?',
+					User input: Text editor
+
+					Question: 'Are any of these non-human primates endangered?',
+					Hint text: 'Endangered animals are any of the species listed on Annex A of Council Regulation 338/97 and are not bred in captivity.',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'Why can\'t you achieve your objectives by using non-human primates that are not endangered?',
+									Hint text: 'Also explain how you will comply with other regulations including CITES.',
+									typ: 'texteditor'
+
+									Question: 'Explain how the project is for one of the permitted purposes.',
+									Hint text: `The permitted purposes for the use of endangered non-human primates are:
+											* translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* research aimed at preserving the species of animal subjected to regulated procedures.`,
+									User input: Text editor
+
+
+									Option: 'No',
+							reveal: {
+								Question: 'Explain how the project is for one of the permitted purposes.',
+								Hint text: `The permitted purposes for the use of non-human primates are:
+											* basic research
+											* translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* research aimed at preserving the species of animal subjected to regulated procedures`,
+								User input: Text editor
+
+
+
+					Question: 'Might any of these non-human primates be wild-caught?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal: {
+								Question: 'Why can\'t you achieve your objectives without using wild-caught non-human primates?',
+								User input: Text editor
+
+
+									Option: 'No',
+
+
+					Question: 'Will all marmosets be sourced from a self-sustaining colony?',
+					Hint text: `This is a colony that is kept in captivity in a way that:
+
+							* ensures animals are accustomed to humans.
+							* consists only of animals that have been bred in captivity.
+							* is sustained only by animals bred within the same colony, or animals that are sourced from another self-sustaining colony.`,
+
+					User input: 'radio',
+					Show if: values => (values.species || []).includes('marmosets'),
+					options: [
+									Option: 'Yes',
+
+									Option: 'No',
+							reveal: {
+								Question: 'Why can’t you achieve your objectives without using marmosets from a self-sustaining colony?',
+								User input: Text editor
+
+			Section title: 'Purpose bred animals',
+
+					Question: 'Will all animals used in your project be purpose bred?',
+					Hint text: 'This means animals that have been bred primarily to be used in regulated procedures or for the use of their tissues or organs for scientific purposes.',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+
+									Option: 'No',
+							reveal:
+									Question: 'Where will you obtain non-purpose bred animals from?',
+									Hint text: 'Consider the source of all animals you plan to use, as this information will help to assess the impact on the scintific output and the quality of the animal.',
+									User input: Text editor
+
+									Question: 'Why can’t you achieve your objectives by only using purpose bred animals?',
+									User input: Text editor
+
+			Section title: 'Endangered animals',
+
+					Question: 'Will you be using any endangered animals, apart from non-human primates?',
+					Hint text: 'Endangered animals are any of the species listed on Annex A of Council Regulation 338/97 and are not bred in captivity.',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'Why can’t you achieve your objectives without using endangered animals?',
+									Hint text: 'Also explain how you will comply with other regulations including CITES.',
+									typ: 'texteditor'
+
+									Question: 'Explain how the project is for one of the permitted purposes.',
+									Hint text: `The permitted purposes for the use of endangered animals are:
+											* translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man
+											* research aimed at preserving the species of animal subjected to regulated procedures.`,
+									User input: Text editor
+
+
+									Option: 'No',
+
+			Section title: 'Animals taken from the wild',
+				Show if: values => values['wild-animals'] === true
+
+			steps: [
+					Section title: 'Animals taken from the wild - 1 of 2',
+	
+							Question: 'Will you be using any animals taken from the wild?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'Why can’t you achieve your objectives without using animals taken from the wild?',
+											User input: Text editor
+
+											Question: 'How will these animals be captured?',
+											Hint text: 'Explain how each method is the most refined for the animal type or purpose of the study. Also include any relevant considerations around trapping, including the frequency of checks and trap positioning.',
+											User input: Text editor
+
+											Question: 'How will you minimise potential harms when catching these animals?',
+											User input: Text editor
+
+											Question: 'Will your capture methods catch non-target animals?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+													reveal:ds-minimise-suffering',
+															Question: 'How will you minimise the risk of capturing non-target animals, including strays and animals of  different sex?',
+															User input: Text editor
+
+															Question: 'What will you do with any non-target animals that you capture?',
+															User input: Text editor
+
+
+																					Option: 'No',
+
+
+											Question: 'How will you ensure the competence of any person responsible for the capture of animals?',
+											User input: Text editor
+
+											Question: 'How will you examine any animals that are found to be ill or injured at the time of capture?',
+											Hint text: 'Include details about what will be done with these animals after they have been examined.',
+											User input: Text editor
+
+											Question: 'Will a veterinary surgeon perform the examination?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+
+																					Option: 'No',
+													reveal: {
+														Question: 'How will you ensure the competence of the person responsible for making this assessment?',
+														User input: Text editor
+
+
+
+											Question: 'Is it necessary to use animals that are injured or in poor health during your project?',
+											User input: 'radio',
+											options: [
+																					Option: 'Yes',
+													reveal: {
+														Question: 'Explain why it is scientifically necessary to use animals that are injured or in poor health during your project.',
+														User input: Text editor
+
+
+																					Option: 'No',
+
+													Option: 'No',
+
+
+
+					Section title: 'Animals taken from the wild - 2 of 2',
+					Show if: values => values['wild-animals'] === true,
+	
+							Question: 'If sick or injured animals are to be treated, how will you transport them for treatment?',
+							Hint text: 'Include how you will ensure that any potential harms during their transport will be minimised.',
+							User input: Text editor
+
+							Question: 'If sick or injured animals are to be humanely killed, which methods will you use?',
+							User input: Text editor
+
+							Question: 'Will animals be marked, or otherwise identified, during the project?',
+							Hint text: 'Consider both regulated and non-regulated procedures in your answer.',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal: {
+										Question: 'How will animals be identified?',
+										Hint text: 'State which methods may cause more than momentary pain, distress, or lasting harm to an animal.',
+										User input: Text editor
+
+
+													Option: 'No',
+
+
+							Question: 'Will any devices be attached to or implanted in animals during this project?',
+							Hint text: 'For example, any device used to identify, track, and monitor an animal’s behaviour in its natural habitat.',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+									reveal:
+											Question: 'How will any adverse effects from a device\'s attachment or implantation be minimised?',
+											User input: Text editor
+
+											Question: 'How will you locate and recapture the animals or otherwise ensure the devices are removed at the end of the regulated procedures?',
+											Hint text: 'If devices will not be removed, explain why it is not required.',
+											User input: Text editor
+
+											Question: 'If animals will not have devices removed, what are the potential effects on them, other animals, the environment and human health?',
+											User input: Text editor
+
+
+													Option: 'No',
+
+
+							Question: 'I confirm that I have, or will have, all necessary permissions from other regulators in place before commencing any work involving animals taken from the wild.',
+							User input: 'declaration',
+
+			Section title: 'Feral animals',
+
+					Question: 'Will you be using any feral animals in your project?',
+					Hint text: 'A feral animal is an animal living in the wild but descended from domesticated individuals.',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal:
+									Question: 'Why can\'t you use non-feral animals to achieve your objectives?',
+									User input: Text editor
+
+									Question: 'Why is the use of feral animals essential to protect the health or welfare of that species or to avoid a serious threat to human or animal health or the environment?',
+									User input: Text editor
+
+									Question: 'Which procedures will be carried out on feral animals? And under which protocols?',
+									User input: Text editor
+
+
+									Option: 'No',
+
+
+	Section title: 'Other considerations',
+			Section title: 'Neuromuscular blocking agents (NMBAs)',
+			steps: [
+					Section title: 'Neuromuscular blocking agents (NMBAs)',
+	
+							Question: 'Will this project involve the use of neuromuscular blocking agents (NMBAs)?',
+							User input: 'radio',
+							options: [
+													Option: 'Yes',
+
+													Option: 'No',
+
+
+
+					Section title: 'Neuromuscular blocking agents (NMBAs) - 1 of 2',
+					Show if: values => values['nmbas-used'],
+	
+							Question: 'Why do you need to use NMBAs in your protocols?',
+							User input: Text editor
+
+							Question: 'What anaesthetic and analgesic regime will you use?',
+							User input: Text editor
+
+							Question: 'How will you ensure that animals have adequate ventilation?',
+							User input: Text editor
+
+							Question: 'How will you minimise pain, suffering, and distress for an animal under the influence of an NMBA?',
+							User input: Text editor
+
+
+					Section title: 'Neuromuscular blocking agents (NMBAs) - 2 of 2',
+					Show if: values => values['nmbas-used'],
+	
+							Question: 'How will you monitor the depth of anaesthesia?',
+							User input: Text editor
+
+							Question: 'How will you ensure there are sufficient staff present throughout the use of NMBAs (including during recovery periods) who are competent to use them in these types of animal?',
+							User input: Text editor
+
+							Question: 'Explain the agreed emergency routine at your establishment that covers potential hazardous events (such as a power failure).',
+							User input: Text editor
+
+			Section title: 'Re-using animals',
+			Show if: project => some(project.protocols, protocol => protocol && some(protocol.speciesDetails, species => (species || {}).reuse)),
+			intro: 'You are seeing this section because you will be re-using animals during your project. If this is not correct, you can change this in Protocols.',
+
+					Question: 'Why do you intend to re-use animals?',
+					Hint text: 'Explain how you will balance the needs of refining and reducing animal use before making your decision.',
+					User input: Text editor
+
+					Question: 'What are the limitations on re-using animals for this project?',
+					Hint text: 'For example, there may be a maximum number of times that an animal can be re-used, or a set of performance standards that requires a limit on re-use.',
+					User input: Text editor
+
+			Section title: 'Commercial slaughter',
+
+					Question: 'Will you send any farm animals to a commercial slaughterhouse at the end of their use?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+							reveal: {
+								Question: 'How will you ensure that these animals are healthy and meet commercial requirements for meat hygiene to enable them to enter the food chain?',
+								Hint text: 'Include any relevant information about drug withdrawal times.',
+								User input: Text editor
+
+
+									Option: 'No',
+
+			Section title: 'Animals containing human material',
+
+					Question: 'Do you intend to use animals containing human material in experiments classed as Category 2 or 3 by the Academy of Medical Sciences?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+
+									Option: 'No',
+
+			Section title: 'Keeping animals alive',
+			Show if: project => (project['fate-of-animals'] || []).includes('kept-alive'),
+
+					Question: 'What types of animals will you keep alive?',
+					User input: Text editor
+
+					Question: 'What criteria will the veterinary surgeon, or competent person trained by a veterinary surgeon, use to determine whether animals can be kept alive?',
+					User input: Text editor
+
+					Question: 'Are there any limitations on the period of time that animals that have been kept alive can be held under the supervision of the veterinary surgeon?',
+					User input: Text editor
+
+
+			Section title: 'Setting animals free',
+			Show if: project => (project['fate-of-animals'] || []).includes('set-free'),
+
+					Question: 'How will an animal\'s health be assessed to determine whether it can be set free?',
+					User input: Text editor
+
+					Question: 'Will a veterinary surgeon perform this assessment?',
+					User input: 'radio',
+					options: [
+									Option: 'Yes',
+
+									Option: 'No',
+							reveal: {
+								Question: 'How will you ensure the competence of the person responsible for assessing whether animals can be set free?',
+								User input: Text editor
+
+
+
+					Question: 'How will you ensure that setting animals free will not be harmful to other species, the environment, and human health?',
+					User input: Text editor
+
+					Question: 'Will you rehabilitate animals before setting them free? If so, how?',
+					User input: Text editor
+
+					Question: 'Will you attempt to socialise any animals that you have set free? If so, how?',
+					User input: Text editor
+
+					Question: 'How will you prevent inadvertent re-use of animals that have been released at the end of procedures?',
+					User input: Text editor
+
+					Question: 'If animals are lost to the study or not re-captured, how will you determine whether your project is complete?',
+					Hint text: 'This information is important to ensure that the use of these animals is recorded in the return of procedures, and is considered when determining the actual severity of your protocols.',
+					User input: Text editor
+
+			Section title: 'Rehoming animals',
+			Show if: project => (project['fate-of-animals'] || []).includes('rehomed'),
+
+					Question: 'What types of animals do you intend to rehome?',
+					Hint text: 'Also state the protocols on which they would have been used.',
+					User input: Text editor
+
+					Question: 'How will you make sure that an animal’s health allows it to be rehomed?',
+					User input: Text editor
+
+					Question: 'How will you ensure that rehoming does not pose a danger to public health, animal health, or the environment?',
+					User input: Text editor
+
+					Question: 'What scheme is in place to ensure socialisation when an animal is rehomed?',
+					User input: Text editor
+
+					Question: 'What other measures will you take to safeguard an animal’s wellbeing when it is rehomed?',
+					User input: Text editor
+
+	Section title: 'Additional conditions and authorisations',
+	subSection title: 'Additional conditions',
+	Show if: props => props.showConditions,
+		conditions: {
+			Section title: 'Additional conditions',
+				review: GrantedConditions,
+				Section title: 'Conditions',
+				subSection title: 'Additional conditions',
+				intro: `These additional conditions apply to the project as a whole.
+
+							Additional conditions that are specific to a set of procedures can be found in each protocol.`,
+				pdf: 'These additional conditions apply to the project as a whole. Additional conditions that are specific to a set of procedures can be found in each protocol. Standard conditions that apply to all project licences can be found at the end of this document.'
+			intro: `Additional conditions have been added automatically according to the selections made by the applicant.
+
+			Please review all sections of this application before making a recommendation.`,
+			emptyIntro: `Additional conditions have been added automatically according to the selections made by the applicant.
+
+Please review all sections of this application before making a recommendation.`,
+			emptyIntroReadOnly: null,
+			User input: 'condition',
+			singular: 'Additional condition',
+			review: Conditions
+
+
+
+	subSection title: 'Authorisations',
+	Show if: props => props.showConditions,
+		authorisations: {
+			Section title: 'Authorisations',
+				Show if: props => {
+					return props.isPreview || (props.conditions || []).find(c => c.type === 'authorisation');
+
+				review: GrantedAuthorisations,
+				intro: `These authorisations apply to the project as a whole.
+
+Authorisations that are specific to a set of procedures can be found in each protocol.`
+,
+			addMore: 'Add more authorisations',
+			intro: `Authorisations have been added automatically according to the selections made by the applicant.
+
+Please review all sections of this application before making a recommendation.`,
+			emptyIntro: `No authorisations have been added to this licence.
+
+If you want to add an authorisation, you will need to create one.`,
+			emptyIntroReadOnly: 'No authorisations have been added to this licence.',
+			User input: 'authorisation',
+			singular: 'Authorisation',
+			review: Authorisations
+
+
