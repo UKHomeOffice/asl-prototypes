@@ -484,5 +484,17 @@ router.get('/compliance/v3/all-cases', function(req, res) {
 });
 
 
+router.get('/prototypes', function(req, res) {
+  res.render('prototypes', { 'breadcrumb1' : 'Design prototypes'});
+});
+
+router.get('/components', function(req, res) {
+  res.render('components', { 'breadcrumb1' : 'Example design components'});
+});
+
+router.get('/templates', function(req, res) {
+  res.render('templates', { 'breadcrumb1' : 'Page templates'});
+});
+
 
 module.exports = router

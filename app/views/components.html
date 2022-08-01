@@ -1,0 +1,240 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Common components
+    </h1>  
+    <p>This is a list of common components that are used across ASPeL that can be quickly reused when creating new prototypes. These are all includes that can be included in prototype pages.</p>
+
+    <p>Note: These pages need to be continually updated to match the live service so some may currently be sightly of date.</p>
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">PPL review comment component</h3>
+    {% include "includes/add-comment.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Animal type picker</h3>
+    <p>Used across different licence applications and users training profiles</p>
+    {% include "includes/animal-types-picker.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Licence footer navigation</h3>
+    <p>Used for navigating linear, multi-page document formats such as licences and retrospective assessments. Adapted from GOV.UKs multi-page guidance.</p>
+    {% include "includes/assessment-footer-nav.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Filters for the establishment licence's approved area page</h3>
+    <p>Pattern adapted from GOV.UKs previous search filters</p>
+    {% include "includes/approved-areas-filter-restictions.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Breadcrumbs</h3>
+    <p>Used for navigating nested pages. Pattern adapted from GOV.UK</p>
+    
+    {% include "includes/breadcrumb_examples.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Previous answer comparison</h3>
+    <p>Used for comparing different versions of answers across multiple iterations of licence applications.</p>
+    {% set current = "My old answer"%}
+    {% set proposed = "A new reason"%}
+    {% include "includes/change-comparison-amendment.html" %}
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Enforcement flag: ongoing case</h3>
+    <p>Displayed on licences, profiles and tasks of entities related to open enforcement cases. Flags can be for 'This personal licence...', 'This project licence...', 'This establishment licence...' or 'This person...'</p>
+    {% include "includes/enforcement-flag-ongoing.html" %}
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Enforcement flag: closed case</h3>
+    <p>Displayed on licences, profiles and tasks of entities related to closed enforcement cases with confirmed non-compliances. Flags can be for 'This personal licence...', 'This project licence...', 'This establishment licence...' or 'This person...'</p>
+    {% include "includes/flag-closed.html" %}
+
+
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Document headers</h3>
+    <p>Displayed on licences applications and reports. This unique header style is used to differentiate documents from general web pages and provide quick access to relevant document metadata, links and downloads. The header also has a minimised sticky version when the user scrolls down the page to help orientate users cross-referencing multiple docuements across different tabs.</p>
+    <h3 class="govuk-heading-s">General header format</h3>
+    {% include "includes/licence-header-example.html" %}
+    <h3 class="govuk-heading-s">Example header for PPL applications</h3>
+    {% include "includes/licence-header-ppl-application.html" %}
+    
+  
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Mark section as complete</h3>
+    <p>Used on project licence applications and amendments to help applicants track which sections are complete. When checked, a 'complete' flag is displayed on the section.</p>
+    {% include "includes/mark-section-complete.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <h3 class="govuk-heading-m">Mark sub-section as complete</h3>
+    <p>Used on sub-sections (e.g. protocols) of project licence applications and amendments to help applicants track which sections are complete. When checked, a 'complete' flag is displayed on the subsection.
+    </p>
+    {% include "includes/mark-protocol-complete.html" %}
+
+      
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Non-technical summary writing guidance</h3>
+    <p>Used on non-technical summary sections of the project licence application and retrospective assessment report to warn applicants to write in plain English and not include any identifying information.</p>
+    {% include "includes/nts-warning-small.html" %}
+
+      
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Pagination</h3>
+    <p>Used mostly on tables and list pages that work best when spanning multiple screens. Adapted from GOV.UK.</p>
+    {% include "includes/pagination.html" %}
+  
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Left-hand navigation for multi-page documents</h3>
+    <p>Used on review pages for licences and applications. Can support two levels of hierarchy.</p>
+    {% include "includes/ppl-application-sidebar-conditions.html" %}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <br>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Related content list</h3>
+    <p>Used on guidance and information pages to provide links to related documents and information</p>
+    {% include "includes/ra-sidebar.html" %}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Expandable sidebar filters</h3>
+    <p>Used to refine search results. Adapted from GOV.UK search results pages.</p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/search-filters.html" %}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Application/licence status banners</h3>
+    <p>Displayed at the top of applications or licences that are not currently active to indicate to users that science is not authorised under them.</p>
+    <h3 class="govuk-heading-s">Not-yet-active banners: e.g. draft</h3>
+    <p>When an application has not yet been granted we use the grey banner. This is used for the 'draft' or 'amendment in progress' states to be clear that the document the user is working on has not yet been granted.</p>
+    {% include "includes/status-banner-draft.html" %}
+    
+    <h3 class="govuk-heading-s">No-longer-active banners: e.g. dxpired</h3>
+    <p>When a licence has at one point, but is no longer, active we use the red banner. This is used for the 'expired', 'revoked', 'suspended', 'superseeded', 'transfered out' or had it's 'additional availability removed'. These will also contain the grant date and date the licence became inactive.</p>
+    {% include "includes/status-banner-expired.html" %}
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Toaster messages</h3>
+    <p>Used to confirm actions by the user when they haven't left the page the action was taken on. Thes should be the full width of the window, stick to the top of the window and fade out after 5 seconds.</p>
+    {% include "includes/toaster-example.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    
+    <h3 class="govuk-heading-m">In-system notifications</h3>
+    <p>Displayed on external users home pages and relevant licences to warn them of upcoming required actions. These will appear when the user has outstanding returns of procedures, retrospective assessments, 5 year PIL reviews or licence conditions requiring action.</p>
+    
+    <h3 class="govuk-heading-s">Basic user</h3>
+    <p>Basic users will only receive these notifications intermitently, so each notification has a unique banner.
+    {% include "includes/in-system-notification-basic.html" %}
+    
+    
+    <h3 class="govuk-heading-s">Admin user</h3>
+    <p>Admin users receive notifications for all users at their establishments. Therefore they get a consolidated banner for all the notifications at each establishment. They will also receive individual notifications for actions related to licences they hold personally.</p>
+    {% include "includes/in-system-notification-holc.html" %}
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h3 class="govuk-heading-m">Conditions</h3>
+    <p>Conditions are added to each of the licence types by the inspector assessing them. They are displayed as per the GOV.UK inset text but using the Home Office purple, so they stand out from other content on the page </p>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+        {% include "includes/condition.html" %}
+      </div>
+      <div class="govuk-grid-column-full">
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-m">Accordions</h3>
+        <p>Used where there is a large amount of information that would break the users flow if we split it across separate pages or left it at full length. Adapted from the (recently updated) GOV.UK accordion pattern.</p>
+        ===== TO BE ADDED ====
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-m">Tabs</h3>
+        <p>Used where there is a largeer amount of information that would break the users flow if we split it across separate pages or left it at full length. Adapted from the (recently updated) GOV.UK accordion pattern. Example use is on ASRU users home pages and the the project licence overview page.</p>
+        <br>        
+        {% include "includes/tabs-example.html" %}
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-m">Tables</h3>
+        <p>Used wherever we need to dispay large amounts of data or lists which require additional mettadata, such as task lists or lists of licences. Adapted from the GOV.UK table pattern.</p>
+
+        {% include "includes/table-example.html" %}
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <h3 class="govuk-heading-m">KPIs</h3>
+        <p>Used primarily in the reporting sections of the system to highlight the key metrics on the page. These are typically displayed in 1/3 or 1/4 columns at the top of the page.</p>
+      </div>
+    </div>  
+    <div class="govuk-grid-row">
+        {% include "includes/kpis-example.html" %}
+    </div>
+    <div class="grid-row">
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h3 class="govuk-heading-m">Status badges</h3>
+
+        <p>Used typically in table views to highlight the status of the items in the list. There are a range of different labels depending on the context but the colours used are as follows:</p>
+        <p><strong>Grey</strong>: The thing is in a nutural state, e.g. awaiting a decision or not yet active</p>
+        <p><span class="badge badge-grey">Awaiting decision</span>&emsp;<span class="badge badge-grey">Draft</span>&emsp;<span class="badge badge-grey">Incomplete</span></p>
+        <p><strong>Blue</strong>: The thing is in a positive state, e.g. approved or currently active</p>
+        <p><span class="badge badge-blue">Approved</span> &emsp;<span class="badge badge-blue">Active</span>&emsp;<span class="badge badge-blue">Complete</span></p>
+        <p><strong>Red</strong>: The thing is in a negative state, e.g. rejected or expired</p>
+        <p><span class="badge badge-red">Rejected</span> &emsp;<span class="badge badge-red">Expired</span> &emsp;<span class="badge badge-red">Revoked</span></p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h3 class="govuk-heading-m">Section panels</h3>
+        <p>Used on section overview pages to direct users to sub-sections with the obective of distinguishing this navigational content from regular page content.</p>
+        <div class="establishment-container">
+          <p>
+            <a href="#">Link to section</a>
+            <br>
+            Description of section
+          </p>
+        </div>
+  </div>
+</div>
+
+{% endblock %}
