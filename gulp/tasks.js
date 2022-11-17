@@ -6,38 +6,44 @@
 
 const gulp = require('gulp')
 const mocha = require('gulp-mocha')
-const runSequence = require('run-sequence')
-
-gulp.task('default', function (done) {
-  runSequence('generate-assets',
-    'watch',
-    'server', done)
-})
-
-gulp.task('generate-assets', function (done) {
-  runSequence('clean',
-    'sass',
-    'copy-assets',
-    'sass-documentation',
-    'copy-assets-documentation',
-    'sass-v6',
-    'copy-assets-v6', done)
-})
-
-gulp.task('watch', function (done) {
-  runSequence('watch-sass',
-    'watch-assets',
-    'watch-sass-v6',
-    'watch-assets-v6', done)
-})
-
-gulp.task('test', function () {
-  runSequence('generate-assets',
-    'mocha')
-})
+require('./clean');
+require('./copy-assets');
+require('./nodemon');
+require('./sass');
+require('./watch');
 
 gulp.task('mocha', function () {
   return gulp.src(['test/**/*.js'], { read: false })
     .pipe(mocha({ reporter: 'spec', exit: true }))
     .on('error', console.error)
 })
+
+gulp.task('generate-assets', gulp.series(
+  'clean',
+  'sass',
+  'copy-assets',
+  'sass-documentation',
+  'copy-assets-documentation',
+  'sass-v6',
+  'copy-assets-v6'
+))
+
+gulp.task('watch', gulp.series(
+  'watch-sass',
+  'watch-assets',
+  'watch-sass-v6',
+  'watch-assets-v6'
+))
+
+gulp.task('test', gulp.series(
+  'generate-assets',
+  'mocha'
+))
+
+gulp.task('default', gulp.series(
+  'generate-assets',
+  gulp.parallel(
+    'watch',
+    'server'
+  )
+))
