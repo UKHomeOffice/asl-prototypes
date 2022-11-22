@@ -5,7 +5,7 @@
     <dd>University of Croydon&ensp;<a href="#">Edit</a></dd>
     <dt><strong>Person</strong></dt>
     <dd>
-      {% if user === '3' %}  
+      {% if user === '3' %}
         {{data['subject-3-name']}}
       {% elif user === '2' %}
         {{data['subject-2-name']}}
@@ -15,20 +15,20 @@
       &ensp;<a href="#">Edit</a>
     </dd>
     <dt><strong>Roles</strong></dt>
-      <dd>  
-        {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
+      <dd>
+        {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}
           PEL holder
-        {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
+        {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}
           PIL holder: 932131
           <br>
           PPL holder: 372383
-        {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
+        {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}
           PIL holder
         {% endif %}
       </dd>
   </dl>
   <p><strong>Person</strong><br>
-    {% if user === '3' %}  
+    {% if user === '3' %}
       {{data['subject-3-name']}}
     {% elif user === '2' %}
       {{data['subject-2-name']}}
@@ -38,11 +38,11 @@
   </p>
   <p>
     <strong>Role</strong><br>
-    {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
+    {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}
       PEL holder
-    {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
+    {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}
       PPL holder, PIL holder
-    {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
+    {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}
       PIL holder
     {% endif %}
   </p>
@@ -61,9 +61,9 @@
             Select status for enforcement flag
           </label>
           <span class="govuk-hint"></span>
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1" 
+              <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1"
               {% if (data['subject-1-status'] === 'open') and (user === '1') %}
                 checked
               {% elif (data['subject-2-status'] === 'open') and (user === '2') %}
@@ -76,12 +76,12 @@
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-1">
-              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
                   Apply flags to:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
-                </legend> 
-                
+                </legend>
+
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
                 <div class="govuk-checkboxes__item">
@@ -186,19 +186,19 @@
             </div>
 
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">
-              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
                   Apply flag to:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
                   <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
-                </legend> 
+                </legend>
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
                   <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile
                     <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
-                    
+
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
@@ -269,7 +269,7 @@
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="remedial-one-hint">
                   <label class="govuk-label govuk-label--s" for="gaa">
-                    Select remedial action taken    
+                    Select remedial action taken
                   </label>
                   <span class="govuk-hint"></span>
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -302,10 +302,10 @@
                       <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-remedial-6">Other</label>
                     </div>
                   </div>
-              
+
                 </fieldset>
               </div>
-            
+
             </div>
             <!-- <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="subject-{{user}}-status-removed" name="subject-{{user}}-status" type="radio" value="removed" data-aria-controls="subject-{{user}}-conditional-option-3">
@@ -313,7 +313,7 @@
                 <span class="govuk-hint">Status is removed immediately</span>
               </label>
             </div> -->
-            
+
           </div>
 
         </fieldset>

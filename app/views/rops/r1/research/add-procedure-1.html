@@ -15,21 +15,21 @@
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">Development of new biological anticancer agents
       </span>
-      
+
       <h1 class="govuk-heading-l">Add procedure details: {{row}}</h1>
     </div>
  </div>
  <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      
+
       <form action="rops-added-{{row}}" method="POST">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <label class="govuk-label--s" for="gaa">
-              Animal species 
+              Animal species
             </label>
             <span class="govuk-hint">Select animal species used</span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="species-mice" name="row-{{row}}[species]" type="radio" value="Mice" data-aria-controls="conditional-option-1">
                 <label for="species-mice" class="govuk-label govuk-radios__label">Mice</label>
@@ -41,7 +41,7 @@
             </div>
           </fieldset>
         </div>
-        
+
         <div class="govuk-form-group">
           <label class="govuk-label--s">
             Re-use
@@ -49,7 +49,7 @@
           <p class="govuk-body">No</span>
           <input type="hidden" name="row-{{row}}[reuse]" value="No">
         </div>
-        
+
         <div class="govuk-form-group">
           <label class="govuk-label--s">
             Animals place of birth
@@ -58,14 +58,14 @@
           <input type="hidden" name="row-{{row}}[birthplace]" value="UK, licensed establishment">
         </div>
 
- 
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <label class="govuk-label--s" for="gaa">
               Genetically altered animals
             </label>
             <span class="govuk-hint">Select whether genetically altered animals (GAA) were used in this procedure: </span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="gaa-no" name="row-{{row}}[gaa]" type="radio" value="GAA were not used" data-aria-controls="conditional-option-1">
                 <label for="gaa" class="govuk-label govuk-radios__label">GAA were not used</label>
@@ -88,7 +88,7 @@
               Purpose
             </label>
             <span class="govuk-hint">Select the purpose of this procedure</span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="purpose-yes" name="row-{{row}}[purpose]" type="radio" value="Basic research" data-aria-controls="conditional-option-3">
                 <label for="purpose" class="govuk-label govuk-radios__label">Basic research</label>
@@ -100,7 +100,7 @@
                       Select the sub-purpose of this procedure
                     </label>
                     <span class="govuk-hint"></span>
-                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="subpurpose-no" name="row-{{row}}[subpurpose]" type="radio" value="Oncology" data-aria-controls="conditional-option-1">
                         <label for="subpurpose" class="govuk-label govuk-radios__label">Oncology</label>
@@ -113,7 +113,7 @@
                   </fieldset>
                 </div>
               </div>
-              
+
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="purpose-no" name="row-{{row}}[purpose]" type="radio" value="Translational/Applied research" data-aria-controls="conditional-option-4">
                 <label for="purpose" class="govuk-label govuk-radios__label">Translational/Applied research</label>
@@ -125,7 +125,7 @@
                       Select the sub-purpose of this procedure
                     </label>
                     <span class="govuk-hint"></span>
-                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="subpurpose-no" name="row-{{row}}[subpurpose]" type="radio" value="Human cancer" data-aria-controls="conditional-option-1">
                         <label for="subpurpose" class="govuk-label govuk-radios__label">Human cancer</label>
@@ -155,7 +155,7 @@
               Severity
             </label>
             <span class="govuk-hint">Select actual severity of procedure</span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="severity-sub" name="row-{{row}}[severity]" type="radio" value="Sub-threshold" data-aria-controls="conditional-option-1">
                 <label for="severity" class="govuk-label govuk-radios__label">Sub-threshold</label>

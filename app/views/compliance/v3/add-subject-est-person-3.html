@@ -11,7 +11,7 @@
   {% set toasterContent = 'Enforcement flags saved' %}
   {% include "includes/toaster.html" %}
   {% endif %}
-  
+
   {% set 'subject-1-name' = 'Jane McGregor' %}
   {% set user = '1' %}
 
@@ -47,7 +47,7 @@
         </ul>
       </p>
       <h3 class="govuk-heading-m">Enforcement flag</h2>
-    
+
         <form action="add-subject-1-details#subject-{{user}}" method="post">
           <div class="govuk-form-group" id="subject-{{user}}" data-required="">
             <fieldset class="govuk-fieldset">
@@ -55,9 +55,9 @@
                 Select status for enforcement flag
               </label>
               <span class="govuk-hint"></span>
-              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1" 
+                  <input class="govuk-radios__input" id="subject-{{user}}-status-open" name="subject-{{user}}-status" type="radio" value="open" data-aria-controls="subject-{{user}}-conditional-option-1"
                   {% if (data['subject-1-status'] === 'open') and (user === '1') %}
                     checked
                   {% elif (data['subject-2-status'] === 'open') and (user === '2') %}
@@ -70,12 +70,12 @@
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-1">
-                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                     <legend class="govuk-fieldset__legend govuk-label--s">
                       Select where flag should appear:
                       <span class="govuk-hint no-margin-bottom">Select all that apply</span>
-                    </legend> 
-                    
+                    </legend>
+
                     {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                     )%}
                     <div class="govuk-checkboxes__item">
@@ -230,27 +230,27 @@
                     {% endif %}
                   </div>
                 </div>
-    
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="subject-{{user}}-status-closed" name="subject-{{user}}-status" type="radio" value="closed" data-aria-controls="subject-{{user}}-conditional-option-2">
                   <label for="subject-{{user}}-status" class="govuk-label govuk-radios__label">Closed case
                     <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
                   </label>
                 </div>
-    
+
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">
-                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                     <legend class="govuk-fieldset__legend govuk-label--s">
                       Select where flag should appear:
                       <span class="govuk-hint no-margin-bottom">Select all that apply</span>
-                    </legend> 
+                    </legend>
                     {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                     )%}
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
                       <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Jane McGregor's profile
                         <span class="govuk-hint">Including new applications for a licence or named role tasks</span>
-                        
+
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
@@ -267,7 +267,7 @@
                       <input class="govuk-checkboxes__input" id="subject-{{user}}-entity-remedial" name="subject-{{user}}-entity" type="checkbox" value="profile" data-aria-controls="subject-{{user}}-conditional-option-2">
                       <label for="subject-{{user}}-entity" class="govuk-label govuk-checkboxes__label">Tasks related to Patel Williams' profile
                         <span class="govuk-hint govuk-hint--checkboxes">Including new applications for a licence or named  role tasks</span>
-    
+
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
@@ -323,7 +323,7 @@
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="remedial-one-hint">
                       <label class="govuk-label govuk-label--s" for="gaa">
-                        Select remedial action taken    
+                        Select remedial action taken
                       </label>
                       <span class="govuk-hint"></span>
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -356,10 +356,10 @@
                           <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-remedial-6">Other</label>
                         </div>
                       </div>
-                  
+
                     </fieldset>
                   </div>
-                
+
                 </div>
                 <!-- <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="subject-{{user}}-status-removed" name="subject-{{user}}-status" type="radio" value="removed" data-aria-controls="subject-{{user}}-conditional-option-3">
@@ -367,9 +367,9 @@
                     <span class="govuk-hint">Status is removed immediately</span>
                   </label>
                 </div> -->
-                
+
               </div>
-    
+
               <a href="add-subject-1-details?user-{{user}}-status=removed" class="red-text">Remove flag and delete subject</a>
             </fieldset>
           </div>

@@ -7,33 +7,33 @@
 
 {% block content %}
   {% set row = '1' %}
-  <script> 
+  <script>
     function download(filename, text) {
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
         element.setAttribute('download', filename);
-    
+
         element.style.display = 'none';
         document.body.appendChild(element);
-    
+
         element.click();
-    
+
         document.body.removeChild(element);
     }
-      window.onload = function exampleFunction() { 
-          console.log('The Script will load now.'); 
+      window.onload = function exampleFunction() {
+          console.log('The Script will load now.');
           var text = 'adfdsadfsa';
           var filename = "RoPs_2021_03042022.csv";
-        
+
         download(filename, text);
-    
-      } 
-    </script> 
+
+      }
+    </script>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">All downloads
       </span>
-      
+
       <h1 class="govuk-heading-l">Returns of procedures</h1>
     </div>
   </div>
@@ -48,32 +48,32 @@
         </select> -->
       </p>
       <br>
-    </div>  
+    </div>
   </div>
 
   <style>
-    
+
   </style>
   <div class="govuk-grid-row">
     <div class="big-numbers">
       <div class="govuk-grid-column-one-third">
         <span class="number">3,649</span>
         <span class="label">returns due in 2021</span>
-      </div>  
+      </div>
       <div class="govuk-grid-column-one-third">
         <span class="number">3,621</span>
         <span class="label">returns submitted</span>
-      </div>  
+      </div>
       <div class="govuk-grid-column-one-third">
         <span class="number">28</span>
         <span class="label">returns outstanding</span>
-      </div>  
+      </div>
     </div>
   </div>
   <br>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <div class="govuk-tabs" data-module="tabs">
+      <div class="govuk-tabs" data-module="govuk-tabs">
         <h2 class="govuk-tabs__title">
           Contents
         </h2>
@@ -93,11 +93,11 @@
               Download returns
             </a>
           </li>
-        
+
         </ul>
 
         <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
-          
+
           <h3 class="govuk-heading-m">Returns due in 2021</h3>
           <dl class="unbold">
             <dt>Total returns due in 2021</dt>
@@ -119,9 +119,9 @@
             <dt>Returns overdue</dt>
             <dd>13</dd>
           </dl>
-          
-          
-        </section>      
+
+
+        </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
           <h2 class="govuk-heading-m">Download returns</h2>
           <h3 class="govuk-heading-s">Changes since last download
@@ -207,7 +207,7 @@
           </table>
         </section>
       </div>
-    </div>  
+    </div>
   </div>
 <style>
 </style>
