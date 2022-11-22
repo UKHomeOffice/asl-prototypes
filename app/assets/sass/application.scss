@@ -121,7 +121,8 @@ $govuk-typography-scale: (
 );
 
 // Import GOV.UK Frontend
-@import "node_modules/govuk-frontend/all";
+$govuk-use-legacy-palette: true;
+@import "node_modules/govuk-frontend/govuk/all";
 
 // Patterns that aren't in Frontend
 @import "patterns/check-your-answers";
@@ -319,7 +320,7 @@ footer {
   background: #6F777B;
   text-transform: uppercase;
   font-weight: bold;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 .badge.changed, .badge.open-case {
@@ -364,7 +365,7 @@ footer {
   li {
     display: inline-block;
     a {
-      
+
       color: #005EA5;
       display: inline-block;
       padding: 15px 5px 10px 5px;
@@ -466,8 +467,8 @@ footer {
     color: #b10e1e;
   }
 
-  
-  
+
+
 
 // SEARCH PANEL
 
@@ -543,7 +544,7 @@ dd {
 // BANNER
 
 .govuk-phase-banner-badge {
-  
+
   color: #fff;
   border-bottom: 0;
   width: 100%;
@@ -651,7 +652,7 @@ dd {
   color:#005ea5;
 }
 
-// APPROVED AREAS FILTER 
+// APPROVED AREAS FILTER
 
 
 .app-c-option-select {
@@ -719,7 +720,7 @@ dd {
     border: 5px solid #dee0e2;
 }
 
-// HO ICONS 
+// HO ICONS
 
 .side-space {
   margin-right: .5em;
@@ -806,7 +807,7 @@ dd {
   }
 
   .protocol-table-title {
-    display: inline-block; 
+    display: inline-block;
     width:90%;
   }
   .protocol-table-arrow-right {
@@ -822,7 +823,7 @@ dd {
 // inpage navigation
   .inpage-nav {
     background: #fff;
-    user-select: none;  
+    user-select: none;
     list-style-type: none;
     padding-left: 0px;
     font-weight: bold;
@@ -839,7 +840,7 @@ dd {
       background-color: #005ea5;
       color: white;
     }
-   
+
     .selected-child {
       font-weight: normal;
       text-decoration: underline;
@@ -855,7 +856,7 @@ dd {
 // Project navigation
   .protocol-nav {
     background: #fff;
-    user-select: none;  
+    user-select: none;
     list-style-type: none;
     padding-left: 0px;
     li {
@@ -901,7 +902,7 @@ dd {
   .assessment-nav {
     margin-top: 0px;;
     background: #fff;
-    user-select: none;  
+    user-select: none;
     list-style-type: none;
     padding-left: 0px;
     li {
@@ -970,7 +971,7 @@ dd {
     color: #005ea5;
     padding-right: 0.25em;
   }
-  
+
 // Project elements
 
 // .govuk-inset-text {
@@ -994,7 +995,7 @@ dd {
     border-bottom: 1px solid white;
 
   }
-  
+
   .licence-status-banner a{
     color: #fff;
     font-size: 16px;
@@ -1017,10 +1018,10 @@ dd {
   }
 
   .expired {
-    background-color: #b10e1e; 
+    background-color: #b10e1e;
   }
   .revoked {
-    background-color: #b10e1e; 
+    background-color: #b10e1e;
   }
 
   .licence-status-banner ul.licence-dates {
@@ -1063,7 +1064,7 @@ dd {
   }
 
   .icon-small{
-    margin-right: 0px; 
+    margin-right: 0px;
     color: #005ea5;
   }
 
@@ -1133,7 +1134,7 @@ dd {
     // color: black;
   }
   .removed {
-    color: grey;  
+    color: grey;
   }
 }
 
@@ -1236,7 +1237,7 @@ dd {
     border: 5px solid #d53880;
     background-color: #FFFFFF;
     .govuk-warning-text__icon {
-      background: #d53880 !important; 
+      background: #d53880 !important;
       border-color: #d53880 !important;
     }
   }
@@ -1244,12 +1245,12 @@ dd {
     border: 5px solid 	#f47738;
     background-color: #FFFFFF;
     .govuk-warning-text__icon {
-      background: 	#f47738 !important; 
+      background: 	#f47738 !important;
       border-color: 	#f47738 !important;
     }
   }
   .govuk-warning-text__icon {
-    background:#1d70b8; 
+    background:#1d70b8;
     border-color: #1d70b8;
   }
 }
@@ -1274,7 +1275,7 @@ dd {
 }
 
 .stacked-descriptions {
-  
+
   dd {
     margin-left: 0px;
     display: block;
@@ -1403,18 +1404,18 @@ td {
   font-family: "Inter UI", sans-serif;
   padding: 10px;
   cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 /*when hovering an item:*/
 .autocomplete-items div:hover {
-  background-color: #e9e9e9; 
+  background-color: #e9e9e9;
 }
 
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-      color: #ffffff; 
+      color: #ffffff;
 }
 
 
@@ -1564,7 +1565,7 @@ a.red-text {
 
 .related-links {
   border-top: 5px solid #1d70b8;
-  padding-top: 1em; 
+  padding-top: 1em;
 }
 
 
@@ -1579,7 +1580,7 @@ a.red-text {
 .save-indicator {
   color: #505a5f;
 }
-  
+
 .header-download-link {
   margin-bottom: 0.5em;
   display: block;
@@ -1627,7 +1628,7 @@ a.red-text {
 .govuk-inset-text .condition {
   border-left: 10px solid #8F23B3;
   }
-  
+
 
 .highlight.removed {
   text-decoration: line-through;
@@ -1666,10 +1667,10 @@ a.red-text {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
   }
-  
+
   /* Modal Content/Box */
   .modal-content .modal-content-table {
-    background-color: #f3f3f3 ; 
+    background-color: #f3f3f3 ;
   }
 
   .modal-content {
@@ -1677,10 +1678,10 @@ a.red-text {
       max-height: 94vh;
       width: 96vw;
       // background-color: white;
-      overflow: scroll;   
+      overflow: scroll;
   }
 
-  
+
   /* The Close Button */
   .close {
     color: #aaa;
@@ -1688,14 +1689,14 @@ a.red-text {
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   .closeModal {
     :before {
       content: '';
@@ -1707,7 +1708,7 @@ a.red-text {
       height: 1.5em;
     }
   }
-  
+
   .diff-window-header {
     border-bottom: 1px solid #3b3b3b;
     padding: 30px;
@@ -1823,12 +1824,12 @@ a.red-text {
   transition: all 0.5s linear;
 }
 
-#toaster .govuk-body {  
+#toaster .govuk-body {
   font-size: 19px;
   font-weight: bold;
   color: white;
 }
-.toasterHide {  
+.toasterHide {
   display: none;
   opacity: 0;
 }
@@ -1840,7 +1841,7 @@ a.red-text {
   text-align: center;
   padding: 15px;
   transition: all 0.5s linear;
-  .govuk-body {  
+  .govuk-body {
    font-size: 19px;
    font-weight: bold;
    color: white;
@@ -1851,7 +1852,7 @@ a.red-text {
   text-decoration: underline;
   color: #005ea5;
   cursor: pointer;
-} 
+}
 .govuk-table__header.sortable:hover {
   color: #2b8cc4;
   }
@@ -2024,7 +2025,7 @@ a.search-project-heading {
   .error-summary p {
     margin-bottom: 10px; }
   .error-summary .error-summary-list {
-    padding-left: 0; 
+    padding-left: 0;
     list-style-type: none;}
     @media (min-width: 641px) {
       .error-summary .error-summary-list li {
@@ -2128,7 +2129,7 @@ a.search-project-heading {
     }
 
     .govuk-radios__input {
-      background-color: white !important; 
+      background-color: white !important;
     }
 
     .no-margin-bottom {
@@ -2151,7 +2152,7 @@ a.search-project-heading {
       &:active, &:focus, &:hover  {
         background-color: #A43D09;
       }
-      
+
     }
 
     .condition {

@@ -1,4 +1,5 @@
-@import "node_modules/govuk-frontend/all";
+$govuk-use-legacy-palette: true;
+@import "node_modules/govuk-frontend/govuk/all";
 
 img{
   max-width: 100%;
