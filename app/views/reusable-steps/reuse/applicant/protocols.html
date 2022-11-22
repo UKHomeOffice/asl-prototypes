@@ -21,27 +21,27 @@
 </script>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    {% include "includes/licence-header-ppl-application.html" %}                
+    {% include "includes/licence-header-ppl-application.html" %}
     {% include "includes/list-of-sections.html" %}
 
     <h1 class="govuk-heading-l">Protocols</h1>
 
-    
+
     <p>
       <a href="#">View summary table</a>
     </p>
-      
+
     <h2 class="govuk-heading-m">General constraints</h2>
 
     <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-    
+
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           Show general constraints
         </span>
       </summary>
-      <div class="govuk-details__text">  
+      <div class="govuk-details__text">
       Induction of liver tumour growth
 
       <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
@@ -67,8 +67,8 @@
         </li>
       </ul>
     </div>
-    </details>   
-  
+    </details>
+
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-in-progress">
         <h3 class="govuk-heading-m">
@@ -99,9 +99,9 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
+
         <button class="accordion">Protocol details</button>
         <div class="panel"></div>
 
@@ -114,7 +114,7 @@
 
         <button  id="steps-p1" class="accordion active">Protocol steps</button>
         <div class="panel" style="display: block;">
-          
+
           <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
 
             {% if (data["stepId"] > 1) and (data['id1']['protocol'] == 1) %}
@@ -124,10 +124,10 @@
               {% set stepsExpected      = data['id1']['any'] %}
               {% set stepsLimits        = data['id1']['limits'] %}
               {% set likelyStepsEffects = data['id1']['likely'] %}
-              {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-              {% set stepsReuse         = data['id1']['reuse'] %}    
+              {% set stepsEndpoints     = data['id1']['endpoints'] %}
+              {% set stepsReuse         = data['id1']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if (data["stepId"] > 2) and (data['id2']['protocol'] == 1)  %}
               {% set stepsReference     = data['id2']['ref'] %}
@@ -136,10 +136,10 @@
               {% set stepsExpected      = data['id2']['any'] %}
               {% set stepsLimits        = data['id2']['limits'] %}
               {% set likelyStepsEffects = data['id2']['likely'] %}
-              {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-              {% set stepsReuse         = data['id2']['reuse'] %}    
+              {% set stepsEndpoints     = data['id2']['endpoints'] %}
+              {% set stepsReuse         = data['id2']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if (data["stepId"] > 3) and (data['id3']['protocol'] == 1)%}
               {% set stepsReference     = data['id3']['ref'] %}
@@ -148,10 +148,10 @@
               {% set stepsExpected      = data['id3']['any'] %}
               {% set stepsLimits        = data['id3']['limits'] %}
               {% set likelyStepsEffects = data['id3']['likely'] %}
-              {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-              {% set stepsReuse         = data['id3']['reuse'] %}    
+              {% set stepsEndpoints     = data['id3']['endpoints'] %}
+              {% set stepsReuse         = data['id3']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 4) and (data['id4']['protocol'] == 1)%}
@@ -161,10 +161,10 @@
               {% set stepsExpected      = data['id4']['any'] %}
               {% set stepsLimits        = data['id4']['limits'] %}
               {% set likelyStepsEffects = data['id4']['likely'] %}
-              {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-              {% set stepsReuse         = data['id4']['reuse'] %}    
+              {% set stepsEndpoints     = data['id4']['endpoints'] %}
+              {% set stepsReuse         = data['id4']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 5) and (data['id5']['protocol'] == 1)%}
@@ -174,10 +174,10 @@
               {% set stepsExpected      = data['id5']['any'] %}
               {% set stepsLimits        = data['id5']['limits'] %}
               {% set likelyStepsEffects = data['id5']['likely'] %}
-              {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-              {% set stepsReuse         = data['id5']['reuse'] %}    
+              {% set stepsEndpoints     = data['id5']['endpoints'] %}
+              {% set stepsReuse         = data['id5']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 6) and (data['id6']['protocol'] == 1)%}
@@ -187,10 +187,10 @@
               {% set stepsExpected      = data['id6']['any'] %}
               {% set stepsLimits        = data['id6']['limits'] %}
               {% set likelyStepsEffects = data['id6']['likely'] %}
-              {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-              {% set stepsReuse         = data['id6']['reuse'] %}    
+              {% set stepsEndpoints     = data['id6']['endpoints'] %}
+              {% set stepsReuse         = data['id6']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 7) and (data['id7']['protocol'] == 1)%}
@@ -200,10 +200,10 @@
               {% set stepsExpected      = data['id7']['any'] %}
               {% set stepsLimits        = data['id7']['limits'] %}
               {% set likelyStepsEffects = data['id7']['likely'] %}
-              {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-              {% set stepsReuse         = data['id7']['reuse'] %}    
+              {% set stepsEndpoints     = data['id7']['endpoints'] %}
+              {% set stepsReuse         = data['id7']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 8) and (data['id8']['protocol'] == 1)%}
@@ -213,10 +213,10 @@
               {% set stepsExpected      = data['id8']['any'] %}
               {% set stepsLimits        = data['id8']['limits'] %}
               {% set likelyStepsEffects = data['id8']['likely'] %}
-              {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-              {% set stepsReuse         = data['id8']['reuse'] %}    
+              {% set stepsEndpoints     = data['id8']['endpoints'] %}
+              {% set stepsReuse         = data['id8']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 9) and (data['id9']['protocol'] == 1)%}
@@ -226,10 +226,10 @@
               {% set stepsExpected      = data['id9']['any'] %}
               {% set stepsLimits        = data['id9']['limits'] %}
               {% set likelyStepsEffects = data['id9']['likely'] %}
-              {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-              {% set stepsReuse         = data['id9']['reuse'] %}    
+              {% set stepsEndpoints     = data['id9']['endpoints'] %}
+              {% set stepsReuse         = data['id9']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if (data["stepId"] > 10) and (data['id10']['protocol'] == 1)%}
@@ -239,10 +239,10 @@
               {% set stepsExpected      = data['id10']['any'] %}
               {% set stepsLimits        = data['id10']['limits'] %}
               {% set likelyStepsEffects = data['id10']['likely'] %}
-              {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-              {% set stepsReuse         = data['id10']['reuse'] %}    
+              {% set stepsEndpoints     = data['id10']['endpoints'] %}
+              {% set stepsReuse         = data['id10']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
 
@@ -254,10 +254,10 @@
               {% set stepsExpected      = data['id1']['any'] %}
               {% set stepsLimits        = data['id1']['limits'] %}
               {% set likelyStepsEffects = data['id1']['likely'] %}
-              {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-              {% set stepsReuse         = data['id1']['reuse'] %}    
+              {% set stepsEndpoints     = data['id1']['endpoints'] %}
+              {% set stepsReuse         = data['id1']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if item == 2%}
               {% set stepsReference     = data['id2']['ref'] %}
@@ -266,10 +266,10 @@
               {% set stepsExpected      = data['id2']['any'] %}
               {% set stepsLimits        = data['id2']['limits'] %}
               {% set likelyStepsEffects = data['id2']['likely'] %}
-              {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-              {% set stepsReuse         = data['id2']['reuse'] %}    
+              {% set stepsEndpoints     = data['id2']['endpoints'] %}
+              {% set stepsReuse         = data['id2']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if item == 3%}
@@ -279,12 +279,12 @@
               {% set stepsExpected      = data['id3']['any'] %}
               {% set stepsLimits        = data['id3']['limits'] %}
               {% set likelyStepsEffects = data['id3']['likely'] %}
-              {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-              {% set stepsReuse         = data['id3']['reuse'] %}    
+              {% set stepsEndpoints     = data['id3']['endpoints'] %}
+              {% set stepsReuse         = data['id3']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 4%}
               {% set stepsReference     = data['id4']['ref'] %}
               {% set stepsDetail        = data['id4']['details'] %}
@@ -292,12 +292,12 @@
               {% set stepsExpected      = data['id4']['any'] %}
               {% set stepsLimits        = data['id4']['limits'] %}
               {% set likelyStepsEffects = data['id4']['likely'] %}
-              {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-              {% set stepsReuse         = data['id4']['reuse'] %}    
+              {% set stepsEndpoints     = data['id4']['endpoints'] %}
+              {% set stepsReuse         = data['id4']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 5%}
               {% set stepsReference     = data['id5']['ref'] %}
               {% set stepsDetail        = data['id5']['details'] %}
@@ -305,12 +305,12 @@
               {% set stepsExpected      = data['id5']['any'] %}
               {% set stepsLimits        = data['id5']['limits'] %}
               {% set likelyStepsEffects = data['id5']['likely'] %}
-              {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-              {% set stepsReuse         = data['id5']['reuse'] %}    
+              {% set stepsEndpoints     = data['id5']['endpoints'] %}
+              {% set stepsReuse         = data['id5']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 6%}
               {% set stepsReference     = data['id6']['ref'] %}
               {% set stepsDetail        = data['id6']['details'] %}
@@ -318,12 +318,12 @@
               {% set stepsExpected      = data['id6']['any'] %}
               {% set stepsLimits        = data['id6']['limits'] %}
               {% set likelyStepsEffects = data['id6']['likely'] %}
-              {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-              {% set stepsReuse         = data['id6']['reuse'] %}    
+              {% set stepsEndpoints     = data['id6']['endpoints'] %}
+              {% set stepsReuse         = data['id6']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 7%}
               {% set stepsReference     = data['id7']['ref'] %}
               {% set stepsDetail        = data['id7']['details'] %}
@@ -331,12 +331,12 @@
               {% set stepsExpected      = data['id7']['any'] %}
               {% set stepsLimits        = data['id7']['limits'] %}
               {% set likelyStepsEffects = data['id7']['likely'] %}
-              {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-              {% set stepsReuse         = data['id7']['reuse'] %}    
+              {% set stepsEndpoints     = data['id7']['endpoints'] %}
+              {% set stepsReuse         = data['id7']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 8%}
               {% set stepsReference     = data['id8']['ref'] %}
               {% set stepsDetail        = data['id8']['details'] %}
@@ -344,12 +344,12 @@
               {% set stepsExpected      = data['id8']['any'] %}
               {% set stepsLimits        = data['id8']['limits'] %}
               {% set likelyStepsEffects = data['id8']['likely'] %}
-              {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-              {% set stepsReuse         = data['id8']['reuse'] %}    
+              {% set stepsEndpoints     = data['id8']['endpoints'] %}
+              {% set stepsReuse         = data['id8']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 9%}
               {% set stepsReference     = data['id9']['ref'] %}
               {% set stepsDetail        = data['id9']['details'] %}
@@ -357,12 +357,12 @@
               {% set stepsExpected      = data['id9']['any'] %}
               {% set stepsLimits        = data['id9']['limits'] %}
               {% set likelyStepsEffects = data['id9']['likely'] %}
-              {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-              {% set stepsReuse         = data['id9']['reuse'] %}    
+              {% set stepsEndpoints     = data['id9']['endpoints'] %}
+              {% set stepsReuse         = data['id9']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 10%}
               {% set stepsReference     = data['id10']['ref'] %}
               {% set stepsDetail        = data['id10']['details'] %}
@@ -370,19 +370,19 @@
               {% set stepsExpected      = data['id10']['any'] %}
               {% set stepsLimits        = data['id10']['limits'] %}
               {% set likelyStepsEffects = data['id10']['likely'] %}
-              {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-              {% set stepsReuse         = data['id10']['reuse'] %}    
+              {% set stepsEndpoints     = data['id10']['endpoints'] %}
+              {% set stepsReuse         = data['id10']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
           {% endfor %}
-           
+
             <div class="comment-block">
               <div class="writeComment hide">
                 {% if data['stepId'] == '1' %}
 
                   <form action="protocols#p1-steps-anchor" method="post">
-                  
+
                     <div class="govuk-form-group">
                       <label class="govuk-label govuk-label--s" for="id{{data['stepId']}}[details]">
                         Describe the procedures that will be carried out during this step.
@@ -400,45 +400,45 @@
                       <div id="id{{data['stepId']}}[ref]-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                       <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="id{{data['stepId']}}[ref]" name="id{{data['stepId']}}[ref]" aria-describedby="id{{data['stepId']}}[ref]-hint"></input>
                     </div>
-                    
+
                     <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">        
+                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">
                         <label class="govuk-label--s" for="">
                           Is this step optional?<br><br>
                         </label>
-                        
-                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-3" name="id{{data['stepId']}}[optional]" type="radio" value="Yes">
                             <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-3">
                               Yes
-                            </label> 
+                            </label>
                           </div>
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-4" name="id{{data['stepId']}}[optional]" type="radio" value="No">
                             <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-4">
                               No
-                            </label> 
+                            </label>
                           </div>
                         </div>
                       </fieldset>
                     </div>
-                    
+
                     <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">        
+                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">
                         <label class="govuk-label--s" for="">
                           Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                         </label>
                         <div id="id{{data['stepId']}}[any]-hint" class="govuk-hint">
                           Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.
                         </div>
-                    
-                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[any]" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                             <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-5">
                               Yes
-                            </label> 
+                            </label>
                           </div>
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                             <div class="govuk-form-group">
@@ -469,25 +469,25 @@
                             <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[any]" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-6">
                             <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-6">
                               No
-                            </label> 
+                            </label>
                           </div>
                         </div>
                       </fieldset>
                     </div>
-                    
+
                     <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">        
+                      <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">
                         <label class="govuk-label--s" for="">
                           Do you want to be able to use this step on other protocols?
                         </label>
                         <span class="govuk-hint"></span>
-                    
-                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[reuse]" type="radio" value="Yes" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                             <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-5">
                               Yes
-                            </label> 
+                            </label>
                           </div>
                           <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                           </div> -->
@@ -495,16 +495,16 @@
                             <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[reuse]" type="radio" value="No" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-6">
                             <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-6">
                               No
-                            </label> 
+                            </label>
                           </div>
 
                         </div>
                       </fieldset>
                     </div>
-        
+
                     {% set stepId = data['stepId']|int %}
                     {% set nextStep = stepId + 1 %}
-        
+
                     {% set stepCounter = data['stepId'] %}
                     {% set addStep = stepCounter + 1 %}
                     <div class="govuk-form-group">
@@ -513,8 +513,8 @@
                       <button class="govuk-button">Save</button>
                     </div>
                   </form>
-              
-              
+
+
                 {% else %}
                   <div class="govuk-form-group" id="q1" data-required="Please answer the question">
                     <fieldset class="govuk-fieldset">
@@ -522,7 +522,7 @@
                         Add step
                       </label>
                       <span class="govuk-hint"></span>
-                      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="setup-nmbas-no" name="setup-nmbas" type="radio" value="false" data-aria-controls="conditional-option-3">
                           <label for="setup-nmbas" class="govuk-label govuk-radios__label">Create a new step</label>
@@ -544,43 +544,43 @@
                               <div id="id{{data['stepId']}}[ref]-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                               <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="id{{data['stepId']}}[ref]" name="id{{data['stepId']}}[ref]" aria-describedby="id{{data['stepId']}}[ref]-hint"></input>
                             </div>
-                            
+
                             <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">        
+                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">
                                 <label class="govuk-label--s" for="">
                                   Is this step optional?<br><br>
                                 </label>
-                                
-                                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                   <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-3" name="id{{data['stepId']}}[optional]" type="radio" value="Yes">
                                     <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-3">
                                       Yes
-                                    </label> 
+                                    </label>
                                   </div>
                                   <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-4" name="id{{data['stepId']}}[optional]" type="radio" value="No">
                                     <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-4">
                                       No
-                                    </label> 
+                                    </label>
                                   </div>
                                 </div>
                               </fieldset>
                             </div>
-                            
+
                             <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">        
+                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">
                                 <label class="govuk-label--s" for="">
                                   Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                                 </label>
                                 <div id="id{{data['stepId']}}[any]-hint" class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</div>
-                            
-                                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                   <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[any]" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                     <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-5">
                                       Yes
-                                    </label> 
+                                    </label>
                                   </div>
                                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                     <div class="govuk-form-group">
@@ -609,40 +609,40 @@
                                     <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[any]" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-6">
                                     <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-6">
                                       No
-                                    </label> 
+                                    </label>
                                   </div>
                                 </div>
                               </fieldset>
                             </div>
-                            
+
                             <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">        
+                              <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">
                                 <label class="govuk-label--s" for="">
                                   Do you want to be able to use this step on other protocols?
                                 </label>
                                 <span class="govuk-hint"></span>
-                            
-                                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                   <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[reuse]" type="radio" value="Yes" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                                     <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-5">
                                       Yes
-                                    </label> 
+                                    </label>
                                   </div>
                                   <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[reuse]" type="radio" value="No" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-6">
                                     <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-6">
                                       No
-                                    </label> 
+                                    </label>
                                   </div>
 
                                 </div>
                               </fieldset>
                             </div>
-                
+
                             {% set stepId = data['stepId']|int %}
                             {% set nextStep = stepId + 1 %}
-                
+
                             {% set stepCounter = data['stepId'] %}
                             {% set addStep = stepCounter + 1 %}
 
@@ -763,13 +763,13 @@
                   </div>
                 {% endif %}
 
-                
+
               </div>
-            
+
             <div class="initiateComment" >
               <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
             </div>
-            
+
 
         </div>
 
@@ -819,23 +819,23 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div id="" class="protocol-content ">
-          
+
           <button class="accordion">Protocol details</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Animals used in this protocol</button>
           <div class="panel"></div>
-  
+
           <button id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
           <div class="panel"></div>
-  
-  
+
+
           <button  id="p2" class="accordion active">Protocol steps</button>
           <div class="panel" style="display: block;">
             <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
-            
+
             {% if (data["stepId"] > 1) and (data['id1']['protocol'] == 2) %}
             {% set stepsReference     = data['id1']['ref'] %}
             {% set stepsDetail        = data['id1']['details'] %}
@@ -843,10 +843,10 @@
             {% set stepsExpected      = data['id1']['any'] %}
             {% set stepsLimits        = data['id1']['limits'] %}
             {% set likelyStepsEffects = data['id1']['likely'] %}
-            {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-            {% set stepsReuse         = data['id1']['reuse'] %}    
+            {% set stepsEndpoints     = data['id1']['endpoints'] %}
+            {% set stepsReuse         = data['id1']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
           {% if (data["stepId"] > 2) and (data['id2']['protocol'] == 2)  %}
             {% set stepsReference     = data['id2']['ref'] %}
@@ -855,10 +855,10 @@
             {% set stepsExpected      = data['id2']['any'] %}
             {% set stepsLimits        = data['id2']['limits'] %}
             {% set likelyStepsEffects = data['id2']['likely'] %}
-            {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-            {% set stepsReuse         = data['id2']['reuse'] %}    
+            {% set stepsEndpoints     = data['id2']['endpoints'] %}
+            {% set stepsReuse         = data['id2']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
           {% if (data["stepId"] > 3) and (data['id3']['protocol'] == 2)%}
             {% set stepsReference     = data['id3']['ref'] %}
@@ -867,10 +867,10 @@
             {% set stepsExpected      = data['id3']['any'] %}
             {% set stepsLimits        = data['id3']['limits'] %}
             {% set likelyStepsEffects = data['id3']['likely'] %}
-            {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-            {% set stepsReuse         = data['id3']['reuse'] %}    
+            {% set stepsEndpoints     = data['id3']['endpoints'] %}
+            {% set stepsReuse         = data['id3']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 4) and (data['id4']['protocol'] == 2)%}
@@ -880,10 +880,10 @@
             {% set stepsExpected      = data['id4']['any'] %}
             {% set stepsLimits        = data['id4']['limits'] %}
             {% set likelyStepsEffects = data['id4']['likely'] %}
-            {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-            {% set stepsReuse         = data['id4']['reuse'] %}    
+            {% set stepsEndpoints     = data['id4']['endpoints'] %}
+            {% set stepsReuse         = data['id4']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 5) and (data['id5']['protocol'] == 2)%}
@@ -893,10 +893,10 @@
             {% set stepsExpected      = data['id5']['any'] %}
             {% set stepsLimits        = data['id5']['limits'] %}
             {% set likelyStepsEffects = data['id5']['likely'] %}
-            {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-            {% set stepsReuse         = data['id5']['reuse'] %}    
+            {% set stepsEndpoints     = data['id5']['endpoints'] %}
+            {% set stepsReuse         = data['id5']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 6) and (data['id6']['protocol'] == 2)%}
@@ -906,10 +906,10 @@
             {% set stepsExpected      = data['id6']['any'] %}
             {% set stepsLimits        = data['id6']['limits'] %}
             {% set likelyStepsEffects = data['id6']['likely'] %}
-            {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-            {% set stepsReuse         = data['id6']['reuse'] %}    
+            {% set stepsEndpoints     = data['id6']['endpoints'] %}
+            {% set stepsReuse         = data['id6']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 7) and (data['id7']['protocol'] == 2)%}
@@ -919,10 +919,10 @@
             {% set stepsExpected      = data['id7']['any'] %}
             {% set stepsLimits        = data['id7']['limits'] %}
             {% set likelyStepsEffects = data['id7']['likely'] %}
-            {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-            {% set stepsReuse         = data['id7']['reuse'] %}    
+            {% set stepsEndpoints     = data['id7']['endpoints'] %}
+            {% set stepsReuse         = data['id7']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 8) and (data['id8']['protocol'] == 2)%}
@@ -932,10 +932,10 @@
             {% set stepsExpected      = data['id8']['any'] %}
             {% set stepsLimits        = data['id8']['limits'] %}
             {% set likelyStepsEffects = data['id8']['likely'] %}
-            {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-            {% set stepsReuse         = data['id8']['reuse'] %}    
+            {% set stepsEndpoints     = data['id8']['endpoints'] %}
+            {% set stepsReuse         = data['id8']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 9) and (data['id9']['protocol'] == 2)%}
@@ -945,10 +945,10 @@
             {% set stepsExpected      = data['id9']['any'] %}
             {% set stepsLimits        = data['id9']['limits'] %}
             {% set likelyStepsEffects = data['id9']['likely'] %}
-            {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-            {% set stepsReuse         = data['id9']['reuse'] %}    
+            {% set stepsEndpoints     = data['id9']['endpoints'] %}
+            {% set stepsReuse         = data['id9']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% if (data["stepId"] > 10) and (data['id10']['protocol'] == 2)%}
@@ -958,10 +958,10 @@
             {% set stepsExpected      = data['id10']['any'] %}
             {% set stepsLimits        = data['id10']['limits'] %}
             {% set likelyStepsEffects = data['id10']['likely'] %}
-            {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-            {% set stepsReuse         = data['id10']['reuse'] %}    
+            {% set stepsEndpoints     = data['id10']['endpoints'] %}
+            {% set stepsReuse         = data['id10']['reuse'] %}
 
-            {% include "includes/steps-data.html" %}                
+            {% include "includes/steps-data.html" %}
           {% endif %}
 
           {% for item in data['p2reuse'] %}
@@ -972,10 +972,10 @@
               {% set stepsExpected      = data['id1']['any'] %}
               {% set stepsLimits        = data['id1']['limits'] %}
               {% set likelyStepsEffects = data['id1']['likely'] %}
-              {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-              {% set stepsReuse         = data['id1']['reuse'] %}    
+              {% set stepsEndpoints     = data['id1']['endpoints'] %}
+              {% set stepsReuse         = data['id1']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if item == 2%}
               {% set stepsReference     = data['id2']['ref'] %}
@@ -984,10 +984,10 @@
               {% set stepsExpected      = data['id2']['any'] %}
               {% set stepsLimits        = data['id2']['limits'] %}
               {% set likelyStepsEffects = data['id2']['likely'] %}
-              {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-              {% set stepsReuse         = data['id2']['reuse'] %}    
+              {% set stepsEndpoints     = data['id2']['endpoints'] %}
+              {% set stepsReuse         = data['id2']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
 
             {% if item == 3%}
@@ -997,12 +997,12 @@
               {% set stepsExpected      = data['id3']['any'] %}
               {% set stepsLimits        = data['id3']['limits'] %}
               {% set likelyStepsEffects = data['id3']['likely'] %}
-              {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-              {% set stepsReuse         = data['id3']['reuse'] %}    
+              {% set stepsEndpoints     = data['id3']['endpoints'] %}
+              {% set stepsReuse         = data['id3']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 4%}
               {% set stepsReference     = data['id4']['ref'] %}
               {% set stepsDetail        = data['id4']['details'] %}
@@ -1010,12 +1010,12 @@
               {% set stepsExpected      = data['id4']['any'] %}
               {% set stepsLimits        = data['id4']['limits'] %}
               {% set likelyStepsEffects = data['id4']['likely'] %}
-              {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-              {% set stepsReuse         = data['id4']['reuse'] %}    
+              {% set stepsEndpoints     = data['id4']['endpoints'] %}
+              {% set stepsReuse         = data['id4']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 5%}
               {% set stepsReference     = data['id5']['ref'] %}
               {% set stepsDetail        = data['id5']['details'] %}
@@ -1023,12 +1023,12 @@
               {% set stepsExpected      = data['id5']['any'] %}
               {% set stepsLimits        = data['id5']['limits'] %}
               {% set likelyStepsEffects = data['id5']['likely'] %}
-              {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-              {% set stepsReuse         = data['id5']['reuse'] %}    
+              {% set stepsEndpoints     = data['id5']['endpoints'] %}
+              {% set stepsReuse         = data['id5']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 6%}
               {% set stepsReference     = data['id6']['ref'] %}
               {% set stepsDetail        = data['id6']['details'] %}
@@ -1036,12 +1036,12 @@
               {% set stepsExpected      = data['id6']['any'] %}
               {% set stepsLimits        = data['id6']['limits'] %}
               {% set likelyStepsEffects = data['id6']['likely'] %}
-              {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-              {% set stepsReuse         = data['id6']['reuse'] %}    
+              {% set stepsEndpoints     = data['id6']['endpoints'] %}
+              {% set stepsReuse         = data['id6']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 7%}
               {% set stepsReference     = data['id7']['ref'] %}
               {% set stepsDetail        = data['id7']['details'] %}
@@ -1049,12 +1049,12 @@
               {% set stepsExpected      = data['id7']['any'] %}
               {% set stepsLimits        = data['id7']['limits'] %}
               {% set likelyStepsEffects = data['id7']['likely'] %}
-              {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-              {% set stepsReuse         = data['id7']['reuse'] %}    
+              {% set stepsEndpoints     = data['id7']['endpoints'] %}
+              {% set stepsReuse         = data['id7']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 8%}
               {% set stepsReference     = data['id8']['ref'] %}
               {% set stepsDetail        = data['id8']['details'] %}
@@ -1062,12 +1062,12 @@
               {% set stepsExpected      = data['id8']['any'] %}
               {% set stepsLimits        = data['id8']['limits'] %}
               {% set likelyStepsEffects = data['id8']['likely'] %}
-              {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-              {% set stepsReuse         = data['id8']['reuse'] %}    
+              {% set stepsEndpoints     = data['id8']['endpoints'] %}
+              {% set stepsReuse         = data['id8']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 9%}
               {% set stepsReference     = data['id9']['ref'] %}
               {% set stepsDetail        = data['id9']['details'] %}
@@ -1075,12 +1075,12 @@
               {% set stepsExpected      = data['id9']['any'] %}
               {% set stepsLimits        = data['id9']['limits'] %}
               {% set likelyStepsEffects = data['id9']['likely'] %}
-              {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-              {% set stepsReuse         = data['id9']['reuse'] %}    
+              {% set stepsEndpoints     = data['id9']['endpoints'] %}
+              {% set stepsReuse         = data['id9']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
-            
+
             {% if item == 10%}
               {% set stepsReference     = data['id10']['ref'] %}
               {% set stepsDetail        = data['id10']['details'] %}
@@ -1088,14 +1088,14 @@
               {% set stepsExpected      = data['id10']['any'] %}
               {% set stepsLimits        = data['id10']['limits'] %}
               {% set likelyStepsEffects = data['id10']['likely'] %}
-              {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-              {% set stepsReuse         = data['id10']['reuse'] %}    
+              {% set stepsEndpoints     = data['id10']['endpoints'] %}
+              {% set stepsReuse         = data['id10']['reuse'] %}
 
-              {% include "includes/steps-data.html" %}                
+              {% include "includes/steps-data.html" %}
             {% endif %}
           {% endfor %}
 
-            
+
             <div class="comment-block">
               <div class="writeComment hide">
                 <h2 class="govuk-heading-m"></h2>
@@ -1105,7 +1105,7 @@
                       Add step
                     </label>
                     <span class="govuk-hint"></span>
-                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="setup-nmbas-no" name="setup-nmbas" type="radio" value="false" data-aria-controls="conditional-option-3">
                         <label for="setup-nmbas" class="govuk-label govuk-radios__label">Create a new step
@@ -1113,7 +1113,7 @@
                       </div>
                       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-3">
                         <form action="protocols#p2-steps-anchor" method="post">
-                
+
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-label--s" for="id{{data['stepId']}}[details]">
                             Describe the procedures that will be carried out during this step.
@@ -1129,43 +1129,43 @@
                           <div id="id{{data['stepId']}}[ref]-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                           <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="id{{data['stepId']}}[ref]" name="id{{data['stepId']}}[ref]" aria-describedby="id{{data['stepId']}}[ref]-hint"></input>
                         </div>
-                        
+
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">
                             <label class="govuk-label--s" for="">
                               Is this step optional?<br><br>
                             </label>
-                            
-                            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-3" name="id{{data['stepId']}}[optional]" type="radio" value="Yes">
                                 <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-3">
                                   Yes
-                                </label> 
+                                </label>
                               </div>
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-4" name="id{{data['stepId']}}[optional]" type="radio" value="No">
                                 <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-4">
                                   No
-                                </label> 
+                                </label>
                               </div>
                             </div>
                           </fieldset>
                         </div>
-                        
+
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">
                             <label class="govuk-label--s" for="">
                               Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                             </label>
                             <div id="id{{data['stepId']}}[any]-hint" class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</div>
-                        
-                            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[any]" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                 <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-5">
                                   Yes
-                                </label> 
+                                </label>
                               </div>
                               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                 <div class="govuk-form-group">
@@ -1194,25 +1194,25 @@
                                 <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[any]" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-6">
                                 <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-6">
                                   No
-                                </label> 
+                                </label>
                               </div>
                             </div>
                           </fieldset>
                         </div>
-                        
+
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">
                             <label class="govuk-label--s" for="">
                               Do you want to be able to use this step on other protocols?
                             </label>
                             <span class="govuk-hint"></span>
-                        
-                            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[reuse]" type="radio" value="Yes" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                                 <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-5">
                                   Yes
-                                </label> 
+                                </label>
                               </div>
                               <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                               </div> -->
@@ -1220,16 +1220,16 @@
                                 <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[reuse]" type="radio" value="No" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-6">
                                 <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-6">
                                   No
-                                </label> 
+                                </label>
                               </div>
 
                             </div>
                           </fieldset>
                         </div>
-            
+
                         {% set stepId = data['stepId']|int %}
                         {% set nextStep = stepId + 1 %}
-            
+
                         {% set stepCounter = data['stepId'] %}
                         {% set addStep = stepCounter + 1 %}
                         <div class="govuk-form-group">
@@ -1238,7 +1238,7 @@
                           <button class="govuk-button">Save</button>
                         </div>
                       </form>
-                    
+
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="setup-nmbas-yes" name="setup-nmbas" type="radio" value="true" data-aria-controls="conditional-option-4">
@@ -1353,22 +1353,22 @@
               </div>
             </div>
 
-  
-  
+
+
           </div>
-  
+
           <button class="accordion">Fate of animals</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Animal experience</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Experimental design</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Protocol justification</button>
           <div class="panel"></div>
-  
+
         </div>
       </div>
         <div id="thirdProtocol" class="protocol-container">
@@ -1401,23 +1401,23 @@
                 </tr>
               </tbody>
             </table>
-          </div>  
+          </div>
           <div id="" class="protocol-content ">
-            
+
             <button class="accordion">Protocol details</button>
             <div class="panel"></div>
-    
+
             <button class="accordion">Animals used in this protocol</button>
             <div class="panel"></div>
-    
+
             <button id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
             <div class="panel"></div>
-    
-    
+
+
             <button  id="p3" class="accordion active">Protocol steps</button>
             <div class="panel" style="display: block;">
               <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
-              
+
               {% if (data["stepId"] > 1) and (data['id1']['protocol'] == 3) %}
               {% set stepsReference     = data['id1']['ref'] %}
               {% set stepsDetail        = data['id1']['details'] %}
@@ -1425,10 +1425,10 @@
               {% set stepsExpected      = data['id1']['any'] %}
               {% set stepsLimits        = data['id1']['limits'] %}
               {% set likelyStepsEffects = data['id1']['likely'] %}
-              {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-              {% set stepsReuse         = data['id1']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id1']['endpoints'] %}
+              {% set stepsReuse         = data['id1']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if (data["stepId"] > 2) and (data['id2']['protocol'] == 3)  %}
               {% set stepsReference     = data['id2']['ref'] %}
@@ -1437,10 +1437,10 @@
               {% set stepsExpected      = data['id2']['any'] %}
               {% set stepsLimits        = data['id2']['limits'] %}
               {% set likelyStepsEffects = data['id2']['likely'] %}
-              {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-              {% set stepsReuse         = data['id2']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id2']['endpoints'] %}
+              {% set stepsReuse         = data['id2']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
             {% if (data["stepId"] > 3) and (data['id3']['protocol'] == 3)%}
               {% set stepsReference     = data['id3']['ref'] %}
@@ -1449,12 +1449,12 @@
               {% set stepsExpected      = data['id3']['any'] %}
               {% set stepsLimits        = data['id3']['limits'] %}
               {% set likelyStepsEffects = data['id3']['likely'] %}
-              {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-              {% set stepsReuse         = data['id3']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id3']['endpoints'] %}
+              {% set stepsReuse         = data['id3']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 4) and (data['id4']['protocol'] == 3)%}
               {% set stepsReference     = data['id4']['ref'] %}
               {% set stepsDetail        = data['id4']['details'] %}
@@ -1462,12 +1462,12 @@
               {% set stepsExpected      = data['id4']['any'] %}
               {% set stepsLimits        = data['id4']['limits'] %}
               {% set likelyStepsEffects = data['id4']['likely'] %}
-              {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-              {% set stepsReuse         = data['id4']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id4']['endpoints'] %}
+              {% set stepsReuse         = data['id4']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 5) and (data['id5']['protocol'] == 3)%}
               {% set stepsReference     = data['id5']['ref'] %}
               {% set stepsDetail        = data['id5']['details'] %}
@@ -1475,12 +1475,12 @@
               {% set stepsExpected      = data['id5']['any'] %}
               {% set stepsLimits        = data['id5']['limits'] %}
               {% set likelyStepsEffects = data['id5']['likely'] %}
-              {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-              {% set stepsReuse         = data['id5']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id5']['endpoints'] %}
+              {% set stepsReuse         = data['id5']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 6) and (data['id6']['protocol'] == 3)%}
               {% set stepsReference     = data['id6']['ref'] %}
               {% set stepsDetail        = data['id6']['details'] %}
@@ -1488,12 +1488,12 @@
               {% set stepsExpected      = data['id6']['any'] %}
               {% set stepsLimits        = data['id6']['limits'] %}
               {% set likelyStepsEffects = data['id6']['likely'] %}
-              {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-              {% set stepsReuse         = data['id6']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id6']['endpoints'] %}
+              {% set stepsReuse         = data['id6']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 7) and (data['id7']['protocol'] == 3)%}
               {% set stepsReference     = data['id7']['ref'] %}
               {% set stepsDetail        = data['id7']['details'] %}
@@ -1501,12 +1501,12 @@
               {% set stepsExpected      = data['id7']['any'] %}
               {% set stepsLimits        = data['id7']['limits'] %}
               {% set likelyStepsEffects = data['id7']['likely'] %}
-              {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-              {% set stepsReuse         = data['id7']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id7']['endpoints'] %}
+              {% set stepsReuse         = data['id7']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 8) and (data['id8']['protocol'] == 3)%}
               {% set stepsReference     = data['id8']['ref'] %}
               {% set stepsDetail        = data['id8']['details'] %}
@@ -1514,12 +1514,12 @@
               {% set stepsExpected      = data['id8']['any'] %}
               {% set stepsLimits        = data['id8']['limits'] %}
               {% set likelyStepsEffects = data['id8']['likely'] %}
-              {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-              {% set stepsReuse         = data['id8']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id8']['endpoints'] %}
+              {% set stepsReuse         = data['id8']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 9) and (data['id9']['protocol'] == 3)%}
               {% set stepsReference     = data['id9']['ref'] %}
               {% set stepsDetail        = data['id9']['details'] %}
@@ -1527,12 +1527,12 @@
               {% set stepsExpected      = data['id9']['any'] %}
               {% set stepsLimits        = data['id9']['limits'] %}
               {% set likelyStepsEffects = data['id9']['likely'] %}
-              {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-              {% set stepsReuse         = data['id9']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id9']['endpoints'] %}
+              {% set stepsReuse         = data['id9']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% if (data["stepId"] > 10) and (data['id10']['protocol'] == 3)%}
               {% set stepsReference     = data['id10']['ref'] %}
               {% set stepsDetail        = data['id10']['details'] %}
@@ -1540,12 +1540,12 @@
               {% set stepsExpected      = data['id10']['any'] %}
               {% set stepsLimits        = data['id10']['limits'] %}
               {% set likelyStepsEffects = data['id10']['likely'] %}
-              {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-              {% set stepsReuse         = data['id10']['reuse'] %}    
-  
-              {% include "includes/steps-data.html" %}                
+              {% set stepsEndpoints     = data['id10']['endpoints'] %}
+              {% set stepsReuse         = data['id10']['reuse'] %}
+
+              {% include "includes/steps-data.html" %}
             {% endif %}
-  
+
             {% for item in data['p3reuse'] %}
               {% if item == 1%}
                 {% set stepsReference     = data['id1']['ref'] %}
@@ -1554,10 +1554,10 @@
                 {% set stepsExpected      = data['id1']['any'] %}
                 {% set stepsLimits        = data['id1']['limits'] %}
                 {% set likelyStepsEffects = data['id1']['likely'] %}
-                {% set stepsEndpoints     = data['id1']['endpoints'] %}    
-                {% set stepsReuse         = data['id1']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id1']['endpoints'] %}
+                {% set stepsReuse         = data['id1']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
               {% if item == 2%}
                 {% set stepsReference     = data['id2']['ref'] %}
@@ -1566,12 +1566,12 @@
                 {% set stepsExpected      = data['id2']['any'] %}
                 {% set stepsLimits        = data['id2']['limits'] %}
                 {% set likelyStepsEffects = data['id2']['likely'] %}
-                {% set stepsEndpoints     = data['id2']['endpoints'] %}    
-                {% set stepsReuse         = data['id2']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id2']['endpoints'] %}
+                {% set stepsReuse         = data['id2']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-  
+
               {% if item == 3%}
                 {% set stepsReference     = data['id3']['ref'] %}
                 {% set stepsDetail        = data['id3']['details'] %}
@@ -1579,12 +1579,12 @@
                 {% set stepsExpected      = data['id3']['any'] %}
                 {% set stepsLimits        = data['id3']['limits'] %}
                 {% set likelyStepsEffects = data['id3']['likely'] %}
-                {% set stepsEndpoints     = data['id3']['endpoints'] %}    
-                {% set stepsReuse         = data['id3']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id3']['endpoints'] %}
+                {% set stepsReuse         = data['id3']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 4%}
                 {% set stepsReference     = data['id4']['ref'] %}
                 {% set stepsDetail        = data['id4']['details'] %}
@@ -1592,12 +1592,12 @@
                 {% set stepsExpected      = data['id4']['any'] %}
                 {% set stepsLimits        = data['id4']['limits'] %}
                 {% set likelyStepsEffects = data['id4']['likely'] %}
-                {% set stepsEndpoints     = data['id4']['endpoints'] %}    
-                {% set stepsReuse         = data['id4']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id4']['endpoints'] %}
+                {% set stepsReuse         = data['id4']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 5%}
                 {% set stepsReference     = data['id5']['ref'] %}
                 {% set stepsDetail        = data['id5']['details'] %}
@@ -1605,12 +1605,12 @@
                 {% set stepsExpected      = data['id5']['any'] %}
                 {% set stepsLimits        = data['id5']['limits'] %}
                 {% set likelyStepsEffects = data['id5']['likely'] %}
-                {% set stepsEndpoints     = data['id5']['endpoints'] %}    
-                {% set stepsReuse         = data['id5']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id5']['endpoints'] %}
+                {% set stepsReuse         = data['id5']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 6%}
                 {% set stepsReference     = data['id6']['ref'] %}
                 {% set stepsDetail        = data['id6']['details'] %}
@@ -1618,12 +1618,12 @@
                 {% set stepsExpected      = data['id6']['any'] %}
                 {% set stepsLimits        = data['id6']['limits'] %}
                 {% set likelyStepsEffects = data['id6']['likely'] %}
-                {% set stepsEndpoints     = data['id6']['endpoints'] %}    
-                {% set stepsReuse         = data['id6']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id6']['endpoints'] %}
+                {% set stepsReuse         = data['id6']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 7%}
                 {% set stepsReference     = data['id7']['ref'] %}
                 {% set stepsDetail        = data['id7']['details'] %}
@@ -1631,12 +1631,12 @@
                 {% set stepsExpected      = data['id7']['any'] %}
                 {% set stepsLimits        = data['id7']['limits'] %}
                 {% set likelyStepsEffects = data['id7']['likely'] %}
-                {% set stepsEndpoints     = data['id7']['endpoints'] %}    
-                {% set stepsReuse         = data['id7']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id7']['endpoints'] %}
+                {% set stepsReuse         = data['id7']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 8%}
                 {% set stepsReference     = data['id8']['ref'] %}
                 {% set stepsDetail        = data['id8']['details'] %}
@@ -1644,12 +1644,12 @@
                 {% set stepsExpected      = data['id8']['any'] %}
                 {% set stepsLimits        = data['id8']['limits'] %}
                 {% set likelyStepsEffects = data['id8']['likely'] %}
-                {% set stepsEndpoints     = data['id8']['endpoints'] %}    
-                {% set stepsReuse         = data['id8']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id8']['endpoints'] %}
+                {% set stepsReuse         = data['id8']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 9%}
                 {% set stepsReference     = data['id9']['ref'] %}
                 {% set stepsDetail        = data['id9']['details'] %}
@@ -1657,12 +1657,12 @@
                 {% set stepsExpected      = data['id9']['any'] %}
                 {% set stepsLimits        = data['id9']['limits'] %}
                 {% set likelyStepsEffects = data['id9']['likely'] %}
-                {% set stepsEndpoints     = data['id9']['endpoints'] %}    
-                {% set stepsReuse         = data['id9']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id9']['endpoints'] %}
+                {% set stepsReuse         = data['id9']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
-              
+
               {% if item == 10%}
                 {% set stepsReference     = data['id10']['ref'] %}
                 {% set stepsDetail        = data['id10']['details'] %}
@@ -1670,14 +1670,14 @@
                 {% set stepsExpected      = data['id10']['any'] %}
                 {% set stepsLimits        = data['id10']['limits'] %}
                 {% set likelyStepsEffects = data['id10']['likely'] %}
-                {% set stepsEndpoints     = data['id10']['endpoints'] %}    
-                {% set stepsReuse         = data['id10']['reuse'] %}    
-  
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints     = data['id10']['endpoints'] %}
+                {% set stepsReuse         = data['id10']['reuse'] %}
+
+                {% include "includes/steps-data.html" %}
               {% endif %}
             {% endfor %}
-  
-              
+
+
               <div class="comment-block">
                 <div class="writeComment hide">
                   <h2 class="govuk-heading-m"></h2>
@@ -1687,7 +1687,7 @@
                         Add step
                       </label>
                       <span class="govuk-hint"></span>
-                      <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="setup-nmbas-no" name="setup-nmbas" type="radio" value="false" data-aria-controls="conditional-option-3">
                           <label for="setup-nmbas" class="govuk-label govuk-radios__label">Create a new step
@@ -1695,7 +1695,7 @@
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-3">
                           <form action="protocols#p3-steps-anchor" method="post">
-                  
+
                           <div class="govuk-form-group">
                             <label class="govuk-label govuk-label--s" for="id{{data['stepId']}}[details]">
                               Describe the procedures that will be carried out during this step.
@@ -1711,43 +1711,43 @@
                             <div id="id{{data['stepId']}}[ref]-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                             <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="id{{data['stepId']}}[ref]" name="id{{data['stepId']}}[ref]" aria-describedby="id{{data['stepId']}}[ref]-hint"></input>
                           </div>
-                          
+
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-3" name="id{{data['stepId']}}[optional]" type="radio" value="Yes">
                                   <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-3">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="id{{data['stepId']}}[optional]-conditional-4" name="id{{data['stepId']}}[optional]" type="radio" value="No">
                                   <label class="govuk-label govuk-radios__label" for="id{{data['stepId']}}[optional]-conditional-4">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
                           </div>
-                          
+
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[any]-hint">
                               <label class="govuk-label--s" for="">
                                 Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                               </label>
                               <div id="id{{data['stepId']}}[any]-hint" class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</div>
-                          
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[any]" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                   <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-5">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-5">
                                   <div class="govuk-form-group">
@@ -1776,25 +1776,25 @@
                                   <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[any]" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-6">
                                   <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-6">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
                           </div>
-                          
+
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="id{{data['stepId']}}[reuse]-hint">
                               <label class="govuk-label--s" for="">
                                 Do you want to be able to use this step on other protocols?
                               </label>
                               <span class="govuk-hint"></span>
-                          
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-5" name="id{{data['stepId']}}[reuse]" type="radio" value="Yes" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                                   <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-5">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reuse-{{stepNumber}}-effects-conditional-5">
                                 </div> -->
@@ -1802,16 +1802,16 @@
                                   <input class="govuk-radios__input" id="reuse-{{stepNumber}}-effects-conditional-6" name="id{{data['stepId']}}[reuse]" type="radio" value="No" data-aria-controls="conditional-reuse-{{stepNumber}}-effects-conditional-6">
                                   <label class="govuk-label govuk-radios__label" for="reuse-{{stepNumber}}-effects-conditional-6">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
-  
+
                               </div>
                             </fieldset>
                           </div>
-              
+
                           {% set stepId = data['stepId']|int %}
                           {% set nextStep = stepId + 1 %}
-              
+
                           {% set stepCounter = data['stepId'] %}
                           {% set addStep = stepCounter + 1 %}
                           <div class="govuk-form-group">
@@ -1820,7 +1820,7 @@
                             <button class="govuk-button">Save</button>
                           </div>
                         </form>
-                      
+
                       </div>
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="setup-nmbas-yes" name="setup-nmbas" type="radio" value="true" data-aria-controls="conditional-option-4">
@@ -1934,23 +1934,23 @@
                   <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
                 </div>
               </div>
-  
-    
-    
+
+
+
             </div>
-    
+
             <button class="accordion">Fate of animals</button>
             <div class="panel"></div>
-    
+
             <button class="accordion">Animal experience</button>
             <div class="panel"></div>
-    
+
             <button class="accordion">Experimental design</button>
             <div class="panel"></div>
-    
+
             <button class="accordion">Protocol justification</button>
             <div class="panel"></div>
-    
+
           </div>
       </div>
       </div>
@@ -1965,7 +1965,7 @@
       <button>Go!</button>
     </form>
 
-    
+
   </div>
 
 <style type="text/css">

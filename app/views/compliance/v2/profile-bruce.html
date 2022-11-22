@@ -9,7 +9,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
       {% set flagStatus = data['flag-status'] %}
       {% set entityType = 'Person is' %}
       {% include "includes/compliance/flag.html" %}
@@ -17,7 +17,7 @@
       <h1 class="govuk-heading-l">
         Bruce Banner
       </h1>
-      
+
       <p>
         <strong>Email:</strong></br>
         bruce-banner@university-of-croydon.edu.uk
@@ -36,7 +36,7 @@
       </p>
 
       <h3 class="govuk-heading-m">Projects</h3>
-      <div class="govuk-tabs" data-module="tabs">
+      <div class="govuk-tabs" data-module="govuk-tabs">
         <ul class="govuk-tabs__list">
           <li class="govuk-tabs__list-item">
             <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#tasks">
@@ -53,14 +53,14 @@
             </a>
           </li>
         </ul>
-  
+
         <section class="govuk-tabs__panel" id="tasks" style="border:none;">
           No projects
         </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="establishments" style="border:none;"></section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="people" style="border:none;"></section>
       </div>
-      
+
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Roles at this establishment</h3>
@@ -146,7 +146,7 @@
       </table>
 
 
-      
+
   </div>
 </div>
 

@@ -8,7 +8,7 @@
 {% block content %}
 <script language="JavaScript" type="text/javascript" src="/public/javascripts/jquery-1.2.6.min.js"></script>
 <script type="text/javascript">
-  
+
 $(document).ready(function() {
   $('[data-toggle="toggle"]').change(function(){
     $(this).prev().toggleClass("selected");
@@ -35,15 +35,15 @@ $(document).ready(function() {
         <h2 class="govuk-heading-m">Search</h2>
         <p>
           <a href="search/establishments" class="active">Establishments</a>
-           | 
+           |
           <a href="search/people" class="">People</a>
-           | 
+           |
           <a href="search/projects" class="">Projects</a>
         </p>
 
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            
+
               <div class="govuk-form-group search-box">
                 <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
                 <button style="height: 40px; width: 40px;background-color: black; display: inline-block;position: absolute; border: solid 3px black;"></button>
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
       <h3 class="govuk-heading-s">Tasks</h3>
 
-      <div class="govuk-tabs" data-module="tabs">
+      <div class="govuk-tabs" data-module="govuk-tabs">
         <h2 class="govuk-tabs__title">
           Contents
         </h2>
@@ -105,12 +105,12 @@ $(document).ready(function() {
                 <tr class="govuk-table__row">
 
                   <td class="govuk-table__cell">
-                  
+
                     <label for="row1" class="row-toggle"><span class="row-toggle-copy">23 July 2019</span></label>
-                  
+
                     <input type="checkbox" name="row1" id="row1" data-toggle="toggle">
                   </td>
-                  
+
                   <td class="govuk-table__cell">University of Croydon
 
                   </td>
@@ -135,7 +135,7 @@ $(document).ready(function() {
 
               {% if data['remove'] != 'pil' %}
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">  
+                  <td class="govuk-table__cell">
                   <label for="row2" class="row-toggle"><span class="row-toggle-copy">22 July 2019</span></label>
                   <input type="checkbox" name="row2" id="row2" data-toggle="toggle">
                   </td>
@@ -211,7 +211,7 @@ $(document).ready(function() {
 
           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
         </section>
-        
+
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="outstanding" style="border:none;">
           <table class="govuk-table">
             <thead class="govuk-table__head">
@@ -437,7 +437,7 @@ $(document).ready(function() {
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
             </ul>
-          </nav>          
+          </nav>
         </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress" style="border:none;">
           <table class="govuk-table">
@@ -526,9 +526,9 @@ $(document).ready(function() {
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
             </ul>
-          </nav>          
+          </nav>
         </section>
-        
+
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" style="border:none;">
           <table class="govuk-table">
             <thead class="govuk-table__head">
@@ -617,7 +617,7 @@ $(document).ready(function() {
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
             </ul>
-          </nav>  
+          </nav>
         </section>
 
       </div>

@@ -8,7 +8,7 @@
 {% block content %}
   {% set row = '1' %}
 
-<script> 
+<script>
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -21,21 +21,21 @@ function download(filename, text) {
 
     document.body.removeChild(element);
 }
-  window.onload = function exampleFunction() { 
-      console.log('The Script will load now.'); 
+  window.onload = function exampleFunction() {
+      console.log('The Script will load now.');
       var text = 'adfdsadfsa';
       var filename = "RoPs_2021_03032021.csv";
-    
+
     download(filename, text);
 
-  } 
-</script> 
+  }
+</script>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">All downloads
       </span>
-      
+
       <h1 class="govuk-heading-l">Returns of procedures</h1>
     </div>
   </div>
@@ -49,31 +49,31 @@ function download(filename, text) {
           <option value="updated">1 January 2020 to 31 December 2020</option>
         </select> -->
       </p>
-    </div>  
+    </div>
   </div>
 
   <style>
-    
+
   </style>
   <div class="govuk-grid-row">
     <div class="big-numbers">
       <div class="govuk-grid-column-one-third">
         <span class="number">3,627</span>
         <span class="label">returns due in 2021</span>
-      </div>  
+      </div>
       <div class="govuk-grid-column-one-third">
         <span class="number">28</span>
         <span class="label">returns submitted</span>
-      </div>  
+      </div>
       <div class="govuk-grid-column-one-third">
         <span class="number">3,599</span>
         <span class="label">returns outstanding</span>
-      </div>  
+      </div>
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <div class="govuk-tabs" data-module="tabs">
+      <div class="govuk-tabs" data-module="govuk-tabs">
         <h2 class="govuk-tabs__title">
           Contents
         </h2>
@@ -93,7 +93,7 @@ function download(filename, text) {
               Download returns
             </a>
           </li>
-        
+
         </ul>
 
         <section class="govuk-tabs__panel" id="incomplete" style="border:none;">
@@ -118,9 +118,9 @@ function download(filename, text) {
             <dt>Returns overdue</dt>
             <dd>0</dd>
           </dl>
-         
-         
-        </section>      
+
+
+        </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complete" style="border:none;">
           <h2 class="govuk-heading-m">Download returns</h2>
           <h3 class="govuk-heading-s">Changes since last download
@@ -151,7 +151,7 @@ function download(filename, text) {
           </table>
         </section>
       </div>
-    </div>  
+    </div>
   </div>
 <style>
 </style>

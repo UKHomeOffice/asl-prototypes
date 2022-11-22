@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -30,11 +30,11 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="12-referrals">Referrals</a></li>
         <li class="selected"><a href="10-hba">Harm-benefit analysis</a></li>
-         
+
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -43,7 +43,7 @@
 
         <h3 class="govuk-heading-s">Analysis of likelihood of success</h3>
         <p>Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.</p>
-                
+
         <h3 class="govuk-heading-s">Analysis of expected benefits</h3>
         <p>1800 mice will have inflammation induced over the course of an hour to several days. Many of these inflammatory models will not cause ongoing pain but will make the animal more sensitive to thermal or mechanical stimuli. Inflammatory models causing ongoing pain will be brief; no more than an hour. 1800 mice will be subject to surgery to cause neuropathic pain for a number of weeks. This is manifest by compromisation of a hind limb and ongoing discomfort, potentially reaching a high-moderate level.</p>
 
@@ -63,19 +63,19 @@
               Is this harm beneift analysis still accurate?
             </label>
             <span class="govuk-hint"></span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-yes" name="hba" type="radio" value="yes" data-aria-controls="conditional-yes" {% if assessOutcome == 'met' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">Yes</label>
               </div>
-             
+
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-no" name="hba" type="radio" value="no" data-aria-controls="conditional-no" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">No</label>
-                
+
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no">
-                
+
 
         <h3 class="govuk-heading-m">Analyse the likelihood of success</h3>
         <details class="govuk-details" data-module="govuk-details">
@@ -113,7 +113,7 @@
           </div>
         </details>
 
-        
+
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of likelihood of success
@@ -122,13 +122,13 @@
           <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="6" aria-describedby="comments-10-hint">Full funding will be provided by the company. My view is that there is a strong likelihood that significant progress will be made to assess suitability of repurposing existing company assets to make progress to meet the undoubted clinical need. It is likely that progress will also be made on developing new assets.</textarea>
         </div>
 
-        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">Analyse the expected benefits</h3>
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Benefits to consider 
+              Benefits to consider
             </span>
           </summary>
           <div class="govuk-details__text">
@@ -153,17 +153,17 @@
               </li>
             </ul>
           </div>
-          
+
         </details>
 
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of expected benefits
             </label>
-            <span id="comments-10-hint" class="govuk-hint"></span> 
+            <span id="comments-10-hint" class="govuk-hint"></span>
             <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="8" aria-describedby="comments-10-hint">1800 mice will have inflammation induced over the course of an hour to several days. Many of these inflammatory models will not cause ongoing pain but will make the animal more sensitive to thermal or mechanical stimuli. Inflammatory models causing ongoing pain will be brief; no more than an hour. 1800 mice will be subject to surgery to cause neuropathic pain for a number of weeks. This is manifest by compromisation of a hind limb and ongoing discomfort, potentially reaching a high-moderate level.</textarea>
           </div>
-        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">Analyse the nature of the harms
         </h3>
@@ -180,7 +180,7 @@
                 contingent harms, such as environmental harms
               </li>
               <li>
-                project-related harms, including: 
+                project-related harms, including:
                 <ul class="govuk-list govuk-list--bullet">
                   <li>
                     the severity, frequency and duration of procedures
@@ -196,7 +196,7 @@
                   </li>
                 </ul>
               </li>
-              
+
               <li>
                 cumulative effects
               </li>
@@ -214,7 +214,7 @@
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of expected harms
            </label>
-           <span id="comments-10-hint" class="govuk-hint"></span> 
+           <span id="comments-10-hint" class="govuk-hint"></span>
            <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="12" aria-describedby="comments-10-hint">As the purpose of this work is to identify novel analgesic therapies, it is inevitable that animals will experience pain.
 
 A total of 1300 mice are requested. Mice will be subjected to infrequent dosing by a variety of enteral or parenteral routes. Some mice will have infrequent blood samples. Some mice will be subject to non-invasive imaging under general anaesthesia. These manipulations should cause no more than transient pain or distress. Mice will be subject to behavioural testing to identify analgesic properties. In general these testing methods will cause no more than transient pain and distress as the animal is able to immediately escape the painful stimulus. Tis testing should not cause more than mild pain.</textarea>
@@ -230,7 +230,7 @@ A total of 1300 mice are requested. Mice will be subjected to infrequent dosing 
               Do the potential benefits justify the harms?
             </label>
             <span class="govuk-hint"></span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-yes" name="hba" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">Yes</label>
@@ -247,7 +247,7 @@ A total of 1300 mice are requested. Mice will be subjected to infrequent dosing 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-no" name="hba" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">No</label>
-                
+
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
                 <div class="govuk-form-group">
@@ -268,7 +268,7 @@ A total of 1300 mice are requested. Mice will be subjected to infrequent dosing 
 
 
         <form action="assessment-overview" method="post">
-        
+
         {% set assessSection = 'hba' %}
 
         {% include "includes/assessment-complete.html" %}

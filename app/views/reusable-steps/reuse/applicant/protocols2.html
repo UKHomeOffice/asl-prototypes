@@ -23,29 +23,29 @@
 Step ID: {{data['stepId']}}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      {% include "includes/licence-header-ppl-application.html" %}                
+      {% include "includes/licence-header-ppl-application.html" %}
     </div>
   </div>
-  
+
   <div class="govuk-grid-row">
       <h1 class="govuk-heading-l">Protocols</h1>
 
-      
+
       <p>
         <a href="#">View summary table</a>
       </p>
-        
+
       <h2 class="govuk-heading-m">General constraints</h2>
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-     
+
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
         Induction of liver tumour growth
 
         <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
@@ -71,8 +71,8 @@ Step ID: {{data['stepId']}}
           </li>
         </ul>
       </div>
-    </details>   
-    
+    </details>
+
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-in-progress">
         <h3 class="govuk-heading-m">
@@ -103,9 +103,9 @@ Step ID: {{data['stepId']}}
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
+
         <button class="accordion">Protocol details</button>
         <div class="panel"></div>
 
@@ -132,9 +132,9 @@ Step ID: {{data['stepId']}}
                 {% set stepsExpected = data['steps-expected-1']%}
                 {% set stepsLimits = data['steps-limits-1']%}
                 {% set likelyStepsEffects = data['likely-steps-effects-1']%}
-                {% set stepsEndpoints = data['steps-endpoints-1']%}   
+                {% set stepsEndpoints = data['steps-endpoints-1']%}
 
-                {% include "includes/steps-data.html" %}                
+                {% include "includes/steps-data.html" %}
               {% endif %}
             {% endif %}
             {% if stepRef == '2' %}
@@ -145,9 +145,9 @@ Step ID: {{data['stepId']}}
                 {% set stepsExpected = data['steps-expected-2']%}
                 {% set stepsLimits = data['steps-limits-2']%}
                 {% set likelyStepsEffects = data['likely-steps-effects-2']%}
-                {% set stepsEndpoints = data['steps-endpoints-2']%}   
+                {% set stepsEndpoints = data['steps-endpoints-2']%}
 
-                {% include "includes/steps-data.html" %}                
+                {% include "includes/steps-data.html" %}
             {% endif %}
             {% if stepRef == '3' %}
               {% if data['steps-reference-3'].length > 1 %}
@@ -158,9 +158,9 @@ Step ID: {{data['stepId']}}
                 {% set stepsExpected = data['steps-expected-3']%}
                 {% set stepsLimits = data['steps-limits-3']%}
                 {% set likelyStepsEffects = data['likely-steps-effects-3']%}
-                {% set stepsEndpoints = data['steps-endpoints-3']%}   
+                {% set stepsEndpoints = data['steps-endpoints-3']%}
 
-                {% include "includes/steps-data.html" %}                
+                {% include "includes/steps-data.html" %}
               {% endif %}
             {% endif %}
             {% if stepRef == '4' %}
@@ -172,9 +172,9 @@ Step ID: {{data['stepId']}}
                 {% set stepsExpected = data['steps-expected-4']%}
                 {% set stepsLimits = data['steps-limits-4']%}
                 {% set likelyStepsEffects = data['likely-steps-effects-4']%}
-                {% set stepsEndpoints = data['steps-endpoints-4']%}   
+                {% set stepsEndpoints = data['steps-endpoints-4']%}
 
-                {% include "includes/steps-data.html" %}                
+                {% include "includes/steps-data.html" %}
               {% endif %}
             {% endif %}
             {% if stepRef == '5' %}
@@ -186,34 +186,34 @@ Step ID: {{data['stepId']}}
                 {% set stepsExpected = data['steps-expected-5']%}
                 {% set stepsLimits = data['steps-limits-5']%}
                 {% set likelyStepsEffects = data['likely-steps-effects-5']%}
-                {% set stepsEndpoints = data['steps-endpoints-5']%}   
-                
-                {% include "includes/steps-data.html" %}                
+                {% set stepsEndpoints = data['steps-endpoints-5']%}
+
+                {% include "includes/steps-data.html" %}
                 {% endif %}
                 {% endif %}
-                
+
                 {% endfor %}
-                
-                
+
+
                 StepID: {{data['stepId']}}
                 <div class="comment-block">
                   <div class="writeComment hide">
-                    
-                    {% set stepNumber = data['stepNumber']%}   
+
+                    {% set stepNumber = data['stepNumber']%}
               <form action="protocols#steps" method="post">
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="add-steps-{{stepNumber}}-hint">        
+                <fieldset class="govuk-fieldset" aria-describedby="add-steps-{{stepNumber}}-hint">
                   <label class="govuk-label--s" for="">
                     What do you want to do?
                   </label>
                   <div id="add-steps-{{stepNumber}}-hint" class="govuk-hint"></div>
-              
-                  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="add-steps-{{stepNumber}}-conditional-3" name="add-steps-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-add-steps-{{stepNumber}}-conditional-3">
                       <label class="govuk-label govuk-radios__label" for="add-steps-{{stepNumber}}-conditional-3">
                         Create new step
-                      </label> 
+                      </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-add-steps-{{stepNumber}}-conditional-3">
                         <input type="hidden" name="step-id" value="{{stepId}}">
@@ -224,7 +224,7 @@ Step ID: {{data['stepId']}}
                           <div id="steps-reference-{{stepNumber}}'-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                           <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="steps-reference-{{stepNumber}}" name="steps-reference-{{stepNumber}}" aria-describedby="steps-reference-{{stepNumber}}-hint"></input>
                         </div>
-                
+
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-label--s" for="steps-detail-{{stepNumber}}">
                             Describe the procedures that will be carried out during this step.
@@ -232,42 +232,42 @@ Step ID: {{data['stepId']}}
                           <div id="steps-detail-{{stepNumber}}-hint" class="govuk-hint"></div>
                           <textarea class="govuk-textarea" id="steps-detail-{{stepNumber}}" name="steps-detail-{{stepNumber}}" rows="5" aria-describedby="steps-detail-{{stepNumber}}-hint"></textarea>
                         </div>
-                        
+
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="steps-optional-{{stepNumber}}-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="steps-optional-{{stepNumber}}-hint">
                             <label class="govuk-label--s" for="">
                               Is this step optional?<br><br>
                             </label>
-                            
-                            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="steps-optional-{{stepNumber}}-conditional-3" name="steps-optional-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-steps-optional-{{stepNumber}}-conditional-3">
                                 <label class="govuk-label govuk-radios__label" for="steps-optional-{{stepNumber}}-conditional-3">
                                   Yes
-                                </label> 
+                                </label>
                               </div>
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="steps-optional-{{stepNumber}}-conditional-4" name="steps-optional-{{stepNumber}}" type="radio" value="No" data-aria-controls="conditional-steps-optional-{{stepNumber}}-conditional-4">
                                 <label class="govuk-label govuk-radios__label" for="steps-optional-{{stepNumber}}-conditional-4">
                                   No
-                                </label> 
+                                </label>
                               </div>
                             </div>
                           </fieldset>
                         </div>
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-{{stepNumber}}-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-{{stepNumber}}-hint">
                             <label class="govuk-label--s" for="">
                               Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                             </label>
                             <div id="adverse-effects-{{stepNumber}}-hint" class="govuk-hint"></div>
-                        
-                            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-3" name="steps-expected-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-3">
                                 <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-3">
                                   Yes
-                                </label> 
+                                </label>
                               </div>
                               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-3">
                                 <div class="govuk-form-group">
@@ -296,35 +296,35 @@ Step ID: {{data['stepId']}}
                                 <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-4" name="steps-expected-{{stepNumber}}-effects" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-4">
                                 <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-4">
                                   No
-                                </label> 
+                                </label>
                               </div>
                             </div>
                           </fieldset>
                         </div>
                         <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">        
+                          <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">
                             <label class="govuk-label--s" for="">
                               Reuse this step in other protocols?<br><br>
                             </label>
-                            
-                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+
+                            <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                               <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="steps-reuse-{{data['stepId']}}-conditional-3" name="reuse[p1][{{stepId}}]" type="radio" value="true" data-aria-controls="conditional-steps-reuse-{{data['stepId']}}-conditional-3">
                                 <label class="govuk-label govuk-checkboxes__label" for="steps-reuse-{{data['stepId']}}-conditional-3">
                                   Reuse this step in other protocols
-                                </label> 
+                                </label>
                               </div>
                             </div>
                           </fieldset>
                         </div>
                         {% set stepId = data['stepId'] %}
-                       
+
                         {% set stepNumber = data['stepNumber'] | int %}
                         {% set nextStepNumber = stepNumber + 1 %}
                         NEXT NUM{{stepNumber}}
                         {% set nextStepId = stepId + nextStepNumber %}
                         NEXT ID{{nextStepId}}
-                        
+
 
 
                         <div class="govuk-form-group">
@@ -342,21 +342,21 @@ Step ID: {{data['stepId']}}
                       <input class="govuk-radios__input" id="add-steps-{{data['stepId']}}-conditional-4" name="add-steps-{{data['stepId']}}" type="radio" value="reuse" data-aria-controls="conditional-add-steps-{{data['stepId']}}-conditional-4">
                       <label class="govuk-label govuk-radios__label" for="add-steps-{{data['stepId']}}-conditional-4">
                         Reuse existing steps
-                      </label> 
+                      </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-add-steps-{{data['stepId']}}-conditional-4">
                       <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">        
+                        <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">
                           <label class="govuk-label--s" for="">
                             Select step to reuse<br><br>
                           </label>
 
-                          
 
-                          
-                          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                             {% for item in data['stepId'] %}
-                          
+
                           {% set stepRef = item %}
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="steps-reuse-{{item}}-conditional-3" name="steps-reuse-{{item}}" type="radio" value="step-1" data-aria-controls="conditional-steps-reuse-{{item}}-conditional-3">
@@ -374,7 +374,7 @@ Step ID: {{data['stepId']}}
                                 {% elif item == '6' %}
                                   {{data['steps-reference-6']}}
                                 {% endif %}
-                              </label> 
+                              </label>
                             </div>
                           {% endfor %}
                           </div>
@@ -391,16 +391,16 @@ Step ID: {{data['stepId']}}
                   </div>
                 </fieldset>
               </div>
-              
+
             </div>
 
             <div class="initiateComment" >
               <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
             </div>
-            
-          
-          
-            
+
+
+
+
           </div>
 
           <div id="secondProtocol" class="protocol-container">
@@ -433,118 +433,118 @@ Step ID: {{data['stepId']}}
                   </tr>
                 </tbody>
               </table>
-            </div>  
+            </div>
             <div id="" class="protocol-content ">
-              
+
               <button class="accordion">Protocol details</button>
               <div class="panel"></div>
-      
+
               <button class="accordion">Animals used in this protocol</button>
               <div class="panel"></div>
-      
+
               <button class="accordion">Genetically altered animals (GAA)</button>
               <div class="panel"></div>
-      
-      
+
+
               <button  id="steps" class="accordion active">Steps</button>
               <div class="panel" style="display: block;">
                 {{data['stepId']}}
-      
+
                 {% for item in data['stepId'] %}
 
                   {% set stepRef = item %}
                   {{item}}
                   {% if stepRef == '1' %}
                     {% if data['steps-reference-1'].length > 1 %}
-      
+
                       {% set stepsReference = data['steps-reference-1']%}
                       {% set stepsDetail = data['steps-detail-1']%}
                       {% set stepsOptional = data['steps-optional-1']%}
                       {% set stepsExpected = data['steps-expected-1']%}
                       {% set stepsLimits = data['steps-limits-1']%}
                       {% set likelyStepsEffects = data['likely-steps-effects-1']%}
-                      {% set stepsEndpoints = data['steps-endpoints-1']%}   
-      
-                      {% include "includes/steps-data.html" %}                
+                      {% set stepsEndpoints = data['steps-endpoints-1']%}
+
+                      {% include "includes/steps-data.html" %}
                     {% endif %}
                   {% endif %}
                   {% if stepRef == '2' %}
-      
+
                       {% set stepsReference = data['steps-reference-2']%}
                       {% set stepsDetail = data['steps-detail-2']%}
                       {% set stepsOptional = data['steps-optional-2']%}
                       {% set stepsExpected = data['steps-expected-2']%}
                       {% set stepsLimits = data['steps-limits-2']%}
                       {% set likelyStepsEffects = data['likely-steps-effects-2']%}
-                      {% set stepsEndpoints = data['steps-endpoints-2']%}   
-      
-                      {% include "includes/steps-data.html" %}                
+                      {% set stepsEndpoints = data['steps-endpoints-2']%}
+
+                      {% include "includes/steps-data.html" %}
                   {% endif %}
                   {% if stepRef == '3' %}
                     {% if data['steps-reference-3'].length > 1 %}
-      
+
                       {% set stepsReference = data['steps-reference-3']%}
                       {% set stepsDetail = data['steps-detail-3']%}
                       {% set stepsOptional = data['steps-optional-3']%}
                       {% set stepsExpected = data['steps-expected-3']%}
                       {% set stepsLimits = data['steps-limits-3']%}
                       {% set likelyStepsEffects = data['likely-steps-effects-3']%}
-                      {% set stepsEndpoints = data['steps-endpoints-3']%}   
-      
-                      {% include "includes/steps-data.html" %}                
+                      {% set stepsEndpoints = data['steps-endpoints-3']%}
+
+                      {% include "includes/steps-data.html" %}
                     {% endif %}
                   {% endif %}
                   {% if stepRef == '4' %}
                     {% if data['steps-reference-4'].length > 1 %}
-      
+
                       {% set stepsReference = data['steps-reference-4']%}
                       {% set stepsDetail = data['steps-detail-4']%}
                       {% set stepsOptional = data['steps-optional-4']%}
                       {% set stepsExpected = data['steps-expected-4']%}
                       {% set stepsLimits = data['steps-limits-4']%}
                       {% set likelyStepsEffects = data['likely-steps-effects-4']%}
-                      {% set stepsEndpoints = data['steps-endpoints-4']%}   
-      
-                      {% include "includes/steps-data.html" %}                
+                      {% set stepsEndpoints = data['steps-endpoints-4']%}
+
+                      {% include "includes/steps-data.html" %}
                     {% endif %}
                   {% endif %}
                   {% if stepRef == '5' %}
                     {% if data['steps-reference-5'].length > 1 %}
-      
+
                       {% set stepsReference = data['steps-reference-5']%}
                       {% set stepsDetail = data['steps-detail-5']%}
                       {% set stepsOptional = data['steps-optional-5']%}
                       {% set stepsExpected = data['steps-expected-5']%}
                       {% set stepsLimits = data['steps-limits-5']%}
                       {% set likelyStepsEffects = data['likely-steps-effects-5']%}
-                      {% set stepsEndpoints = data['steps-endpoints-5']%}   
-                      
-                      {% include "includes/steps-data.html" %}                
+                      {% set stepsEndpoints = data['steps-endpoints-5']%}
+
+                      {% include "includes/steps-data.html" %}
                       {% endif %}
                       {% endif %}
-                      
+
                       {% endfor %}
-                      
-                      
+
+
                       StepID: {{data['stepId']}}
                       <div class="comment-block">
                         <div class="writeComment hide">
-                          
-                          {% set stepNumber = data['stepNumber']%}   
+
+                          {% set stepNumber = data['stepNumber']%}
                     <form action="protocols#steps" method="post">
                     <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="add-steps-{{stepNumber}}-hint">        
+                      <fieldset class="govuk-fieldset" aria-describedby="add-steps-{{stepNumber}}-hint">
                         <label class="govuk-label--s" for="">
                           What do you want to do?
                         </label>
                         <div id="add-steps-{{stepNumber}}-hint" class="govuk-hint"></div>
-                    
-                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="add-steps-{{stepNumber}}-conditional-3" name="add-steps-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-add-steps-{{stepNumber}}-conditional-3">
                             <label class="govuk-label govuk-radios__label" for="add-steps-{{stepNumber}}-conditional-3">
                               Create new step
-                            </label> 
+                            </label>
                           </div>
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-add-steps-{{stepNumber}}-conditional-3">
                               <input type="hidden" name="step-id" value="{{stepId}}">
@@ -555,7 +555,7 @@ Step ID: {{data['stepId']}}
                                 <div id="steps-reference-{{stepNumber}}'-hint" class="govuk-hint">Provide a short reference for this step, e.g. 'Blood sampling' or 'Transgene induction'</div>
                                 <input class="govuk-input  govuk-!-width-two-thirds" type='text' id="steps-reference-{{stepNumber}}" name="steps-reference-{{stepNumber}}" aria-describedby="steps-reference-{{stepNumber}}-hint"></input>
                               </div>
-                      
+
                               <div class="govuk-form-group">
                                 <label class="govuk-label govuk-label--s" for="steps-detail-{{stepNumber}}">
                                   Describe the procedures that will be carried out during this step.
@@ -563,42 +563,42 @@ Step ID: {{data['stepId']}}
                                 <div id="steps-detail-{{stepNumber}}-hint" class="govuk-hint"></div>
                                 <textarea class="govuk-textarea" id="steps-detail-{{stepNumber}}" name="steps-detail-{{stepNumber}}" rows="5" aria-describedby="steps-detail-{{stepNumber}}-hint"></textarea>
                               </div>
-                              
+
                               <div class="govuk-form-group">
-                                <fieldset class="govuk-fieldset" aria-describedby="steps-optional-{{stepNumber}}-hint">        
+                                <fieldset class="govuk-fieldset" aria-describedby="steps-optional-{{stepNumber}}-hint">
                                   <label class="govuk-label--s" for="">
                                     Is this step optional?<br><br>
                                   </label>
-                                  
-                                  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                     <div class="govuk-radios__item">
                                       <input class="govuk-radios__input" id="steps-optional-{{stepNumber}}-conditional-3" name="steps-optional-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-steps-optional-{{stepNumber}}-conditional-3">
                                       <label class="govuk-label govuk-radios__label" for="steps-optional-{{stepNumber}}-conditional-3">
                                         Yes
-                                      </label> 
+                                      </label>
                                     </div>
                                     <div class="govuk-radios__item">
                                       <input class="govuk-radios__input" id="steps-optional-{{stepNumber}}-conditional-4" name="steps-optional-{{stepNumber}}" type="radio" value="No" data-aria-controls="conditional-steps-optional-{{stepNumber}}-conditional-4">
                                       <label class="govuk-label govuk-radios__label" for="steps-optional-{{stepNumber}}-conditional-4">
                                         No
-                                      </label> 
+                                      </label>
                                     </div>
                                   </div>
                                 </fieldset>
                               </div>
                               <div class="govuk-form-group">
-                                <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-{{stepNumber}}-hint">        
+                                <fieldset class="govuk-fieldset" aria-describedby="adverse-effects-{{stepNumber}}-hint">
                                   <label class="govuk-label--s" for="">
                                     Do you expect this step to have adverse effects for the animals that are more than mild and transient?
                                   </label>
                                   <div id="adverse-effects-{{stepNumber}}-hint" class="govuk-hint"></div>
-                              
-                                  <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+                                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                     <div class="govuk-radios__item">
                                       <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-3" name="steps-expected-{{stepNumber}}" type="radio" value="Yes" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-3">
                                       <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-3">
                                         Yes
-                                      </label> 
+                                      </label>
                                     </div>
                                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-steps-expected-{{stepNumber}}-effects-conditional-3">
                                       <div class="govuk-form-group">
@@ -627,37 +627,37 @@ Step ID: {{data['stepId']}}
                                       <input class="govuk-radios__input" id="steps-expected-{{stepNumber}}-effects-conditional-4" name="steps-expected-{{stepNumber}}-effects" type="radio" value="No" data-aria-controls="conditional-steps-expected-{{stepNumber}}-effects-conditional-4">
                                       <label class="govuk-label govuk-radios__label" for="steps-expected-{{stepNumber}}-effects-conditional-4">
                                         No
-                                      </label> 
+                                      </label>
                                     </div>
                                   </div>
                                 </fieldset>
                               </div>
                               <div class="govuk-form-group">
-                                <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">        
+                                <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">
                                   <label class="govuk-label--s" for="">
                                     Reuse this step in other protocols?<br><br>
                                   </label>
-                                  
-                                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+
+                                  <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
                                       <input class="govuk-checkboxes__input" id="steps-reuse-{{data['stepId']}}-conditional-3" name="steps-reuse-{{data['stepId']}}" type="radio" value="true" data-aria-controls="conditional-steps-reuse-{{data['stepId']}}-conditional-3">
                                       <label class="govuk-label govuk-checkboxes__label" for="steps-reuse-{{data['stepId']}}-conditional-3">
                                         Reuse this step in other protocols
-                                      </label> 
+                                      </label>
                                     </div>
                                   </div>
                                 </fieldset>
                               </div>
                               {% set stepId = data['stepId'] %}
-                             
+
                               {% set stepNumber = data['stepNumber'] | int %}
                               {% set nextStepNumber = stepNumber + 1 %}
                               NEXT NUM{{stepNumber}}
                               {% set nextStepId = stepId + nextStepNumber %}
                               NEXT ID{{nextStepId}}
-                              
-      
-      
+
+
+
                               <div class="govuk-form-group">
                                 <input type="hidden" name="stepId" value="{{nextStepId}}">
                                 <input type="hidden" name="stepNumber" value="{{nextStepNumber}}">
@@ -666,28 +666,28 @@ Step ID: {{data['stepId']}}
                               </div>
                             </form>
                           </div>
-      
+
                           <div class="govuk-radios__item">
                             <form action="protocols#steps" method="post">
-      
+
                             <input class="govuk-radios__input" id="add-steps-{{data['stepId']}}-conditional-4" name="add-steps-{{data['stepId']}}" type="radio" value="reuse" data-aria-controls="conditional-add-steps-{{data['stepId']}}-conditional-4">
                             <label class="govuk-label govuk-radios__label" for="add-steps-{{data['stepId']}}-conditional-4">
                               Reuse existing steps
-                            </label> 
+                            </label>
                           </div>
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-add-steps-{{data['stepId']}}-conditional-4">
                             <div class="govuk-form-group">
-                              <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">        
+                              <fieldset class="govuk-fieldset" aria-describedby="steps-reuse-{{data['stepId']}}-hint">
                                 <label class="govuk-label--s" for="">
                                   Select step to reuse<br><br>
                                 </label>
-      
-                                
-      
-                                
-                                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+
+
+
+                                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                   {% for item in data['stepId'] %}
-                                
+
                                 {% set stepRef = item %}
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="steps-reuse-{{item}}-conditional-3" name="steps-reuse-{{item}}" type="radio" value="step-1" data-aria-controls="conditional-steps-reuse-{{item}}-conditional-3">
@@ -705,7 +705,7 @@ Step ID: {{data['stepId']}}
                                       {% elif item == '6' %}
                                         {{data['steps-reference-6']}}
                                       {% endif %}
-                                    </label> 
+                                    </label>
                                   </div>
                                 {% endfor %}
                                 </div>
@@ -718,18 +718,18 @@ Step ID: {{data['stepId']}}
                             </div>
                           </div>
                         </form>
-      
+
                         </div>
                       </fieldset>
                     </div>
-                    
+
                   </div>
-      
+
                   <div class="initiateComment" >
                     <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
-                  </div>  
+                  </div>
                 </div>
-            
+
         </div>
 
         <button class="accordion">Fate of animals</button>
@@ -752,7 +752,7 @@ Step ID: {{data['stepId']}}
       <button>Go!</button>
     </form>
 
-    
+
   </div>
 
 <style type="text/css">

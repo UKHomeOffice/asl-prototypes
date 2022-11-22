@@ -5,7 +5,7 @@
     <dd>University of Croydon</dd>
     <dt><strong>Person</strong></dt>
     <dd>
-      {% if user === '3' %}  
+      {% if user === '3' %}
         {{data['subject-3-name']}}
       {% elif user === '2' %}
         {{data['subject-2-name']}}
@@ -15,22 +15,22 @@
       &ensp;<a href="#">Edit</a>
     </dd>
     <dt><strong>Roles</strong></dt>
-      <dd>  
-        {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}  
+      <dd>
+        {% if ((data['subject-1-name'] === 'Bruce Banner') and (user === '1')) or ((data['subject-2-name'] === 'Bruce Banner') and (user === '2')) or ((data['subject-3-name'] === 'Bruce Banner') and (user === '3')) %}
           <ul class="govuk-list govuk-list--bullet no-margin-top">
             <li>PEL holder: XCC09J64D</li>
-          </ul>  
-        {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}  
+          </ul>
+        {% elif ((data['subject-1-name'] === 'Jane McGregor') and (user === '1')) or ((data['subject-2-name'] === 'Jane McGregor') and (user === '2')) or ((data['subject-3-name'] === 'Jane McGregor') and (user === '3')) %}
         <ul class="govuk-list govuk-list--bullet no-margin-top  no-margin-bottom">
           <li>PIL holder: 932131</li>
           <li>PPL holder: PP372383</li>
           <li>PPL holder: PP783242</li>
           <li>NIO</li>
-        </ul>  
-        {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}  
+        </ul>
+        {% elif ((data['subject-1-name'] === 'Patel Williams') and (user === '1')) or ((data['subject-2-name'] === 'Patel Williams') and (user === '2')) or ((data['subject-3-name'] === 'Patel Williams') and (user === '3')) %}
         <ul class="govuk-list govuk-list--bullet no-margin-top  no-margin-bottom">
           <li>PIL holder: 213213</li>
-        </ul>  
+        </ul>
         {% endif %}
       </dd>
   </dl>
@@ -44,9 +44,9 @@
             Select status for enforcement flag
           </label>
           <span class="govuk-hint"></span>
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="subject-{{user}}-status-ongoing" name="subject-{{user}}-status" type="radio" value="ongoing" data-aria-controls="subject-{{user}}-conditional-option-1" 
+              <input class="govuk-radios__input" id="subject-{{user}}-status-ongoing" name="subject-{{user}}-status" type="radio" value="ongoing" data-aria-controls="subject-{{user}}-conditional-option-1"
               {% if (data['subject-1-status'] === 'ongoing') and (user === '1') %}
                 checked
               {% elif (data['subject-2-status'] === 'ongoing') and (user === '2') %}
@@ -59,12 +59,12 @@
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-1">
-              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
                   Apply flags to
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
-                </legend> 
-                
+                </legend>
+
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
                 <div class="govuk-checkboxes__item">
@@ -122,7 +122,7 @@
                     <span class="govuk-hint">
                       The flag will appear on: 
                       <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
-                        <li>amend, revoke or transfer the licence to a new establishment</li> 
+                        <li>amend, revoke or transfer the licence to a new establishment</li>
                         <li>transfer the licence to another person</li>
                       </ul>
                     </span>
@@ -225,12 +225,12 @@
             </div>
 
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="subject-{{user}}-conditional-option-2">
-              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                 <legend class="govuk-fieldset__legend govuk-label--s">
                   Apply flag to:
                   <span class="govuk-hint no-margin-bottom">Select all that apply</span>
                   <span class="govuk-hint no-margin-bottom">Flag will remain in place for 5 years</span>
-                </legend> 
+                </legend>
                 {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
                 )%}
                 <div class="govuk-checkboxes__item">
@@ -263,7 +263,7 @@
                     <span class="govuk-hint">
                       The flag will appear on: 
                       <ul class="govuk-list govuk-list--bullet secondary-text no-margin-bottom">
-                        <li>amend, revoke or transfer the licence to a new establishment</li> 
+                        <li>amend, revoke or transfer the licence to a new establishment</li>
                         <li>transfer the licence to another person</li>
                       </ul>
                     </span>
@@ -374,7 +374,7 @@
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="remedial-one-hint">
                   <label class="govuk-label govuk-label--s" for="gaa">
-                    Select remedial action taken    
+                    Select remedial action taken
                   </label>
                   <span class="govuk-hint"></span>
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -407,7 +407,7 @@
                       <label class="govuk-label govuk-checkboxes__label" for="subject-{{user}}-remedial-6">Other</label>
                     </div>
                   </div>
-              
+
                 </fieldset>
               </div>
             </div>
