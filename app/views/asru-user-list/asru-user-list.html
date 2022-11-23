@@ -18,13 +18,13 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        
+
           <h2 class="govuk-heading-m"></h2>
-          <div class="govuk-tabs" data-module="tabs">
+          <div class="govuk-tabs" data-module="govuk-tabs">
             <h2 class="govuk-tabs__title">
               Contents
             </h2>
-    
+
             <ul class="govuk-tabs__list">
               <li class="govuk-tabs__list-item">
                 <a class="govuk-tabs__tab" href="#xxx">
@@ -37,9 +37,9 @@
                 </a>
               </li>
             </ul>
-  
+
             <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="xxx" style="border:none;">
-           
+
           <div class="govuk-form-group search-box">
             <label for="" class="govuk-label">Search by name, email or role</label>
             <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
@@ -123,10 +123,10 @@
           </table>
 
           {% include "includes/pagination.html" %}
-        </section>      
+        </section>
         <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="yyy" style="border:none;">
-         
-           
+
+
           <div class="govuk-form-group search-box">
             <label for="" class="govuk-label">Search by name or role</label>
             <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 60%; margin-right: 0px">
@@ -190,7 +190,7 @@
           </table>
 
           {% include "includes/pagination.html" %}
-        
+
         </section>
       </div>
       </div>
@@ -198,5 +198,5 @@
 
 
     </div>
-   
+
 {% endblock %}

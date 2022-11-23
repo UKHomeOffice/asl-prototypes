@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -35,11 +35,11 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li class='selected'><a href="12-referrals">Referrals</a></li> 
+        <li class='selected'><a href="12-referrals">Referrals</a></li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-         
+
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -53,8 +53,8 @@
               Select any referrals made:
             </h2>
           </legend>
-          <div class="govuk-checkboxes" data-module="checkboxes">
-            
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
               <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
@@ -98,7 +98,7 @@
             <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-phone">
-                  Summary of external review 
+                  Summary of external review
                   <span class="govuk-hint">Include the name of the body or individual who carried out the review</span>
                 </label>
                 <textarea class="govuk-textarea" id="contact-by-phone" name="contact-by-phone" rows="5" aria-describedby="contact-by-phone-hint"></textarea>
@@ -120,7 +120,7 @@
               Additional referrals:
             </h2>
           </legend>
-          <div class="govuk-checkboxes" data-module="checkboxes">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
@@ -134,7 +134,7 @@
           </div>
         </fieldset>
       </div>
-  
+
       <!-- <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add a referral</a> -->
 
       <form action="assessment-overview" method="POST">
@@ -143,7 +143,7 @@
         {% set sectionComplete = 'yes' %}
       {% set assessOutcome = 'met' %}
       {% include "includes/assessment-complete.html" %}
-      
+
       </form>
 
     </div>

@@ -23,24 +23,24 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% include "includes/licence-header-ppl-application.html" %}
-      {% include "includes/list-of-sections.html" %}               
-   
-      <h1 class="govuk-heading-l">Protocols</h1>   
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Protocols</h1>
       <p>
         <a href="#">View summary table</a>
       </p>
-        
+
       <h2 class="govuk-heading-m">General constraints</h2>
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-     
+
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
         Induction of liver tumour growth
 
           <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
@@ -66,8 +66,8 @@
             </li>
           </ul>
         </div>
-      </details>   
-    
+      </details>
+
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-in-progress">
         <h3 class="govuk-heading-m">
@@ -98,9 +98,9 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
+
         <button class="accordion">Protocol details</button>
         <div class="panel"></div>
 
@@ -189,13 +189,13 @@
               </tr>
               {% endif %}
             {% endfor %}
-                              
+
             </tbody>
           </table>
 
           <div class="comment-block">
             <div class="writeComment hide">
-              
+
               <form action="protocols#p1-steps-anchor" method="POST">
 
                 <div class="govuk-form-group">
@@ -204,32 +204,32 @@
                       Select the steps that will be used in this protocol.
                     </legend>
                     <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="checkboxes">
+                    <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                       {% if data['stepId'] > 1 %}
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="no1[selection]-1" name="no1[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-1">
                             {{data['id1']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-1" name="p1[optional1]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-1">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-2" name="p1[optional1]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-2">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -248,26 +248,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-2" name="no1[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-2">
                             {{data['id2']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-3" name="p1[optional2]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-3">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-4" name="p1[optional2]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-4">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -286,26 +286,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-3" name="no1[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-3">
                             {{data['id3']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-5" name="p1[optional3]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-5">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-6" name="p1[optional3]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-6">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -324,26 +324,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-4" name="no1[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-4">
                             {{data['id4']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-7" name="p1[optional4]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-7">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-8" name="p1[optional4]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-8">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -362,26 +362,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-5" name="no1[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-5">
                             {{data['id5']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-9" name="p1[optional5]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-9">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-10" name="p1[optional5]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-10">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -400,26 +400,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-6" name="no1[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-6">
                             {{data['id6']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-11" name="p1[optional6]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-11">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-12" name="p1[optional6]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-12">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -438,26 +438,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-7" name="no1[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-7">
                             {{data['id7']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-13" name="p1[optional7]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-13">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-14" name="p1[optional7]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-14">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -476,26 +476,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-8" name="no1[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-8">
                             {{data['id8']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-15" name="p1[optional8]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-15">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-16" name="p1[optional8]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-16">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -514,26 +514,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-9" name="no1[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-9">
                             {{data['id9']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-17" name="p1[optional9]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-17">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-18" name="p1[optional9]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-18">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -552,26 +552,26 @@
                           <input class="govuk-checkboxes__input" id="no1[selection]-10" name="no1[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
                           <label class="govuk-label govuk-checkboxes__label" for="no1[selection]-10">
                             {{data['id10']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no1[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-19" name="p1[optional10]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-19">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no1[optional]-conditional-20" name="p1[optional10]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no1[optional]-conditional-20">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -691,7 +691,7 @@
               </div>
               <p><a href="steps">Edit steps in steps library</a></p>
             {% endif %}
-          </div>  
+          </div>
         </div>
 
         <button class="accordion">Fate of animals</button>
@@ -741,9 +741,9 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
+
         <button class="accordion">Protocol details</button>
         <div class="panel"></div>
 
@@ -834,7 +834,7 @@
               </tr>
               {% endif %}
             {% endfor %}
-                              
+
             </tbody>
           </table>
           <div class="comment-block">
@@ -846,32 +846,32 @@
                       <h1 class="govuk-fieldset__heading">Select the steps that will be used in this protocol. </h1>
                     </legend>
                     <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
-                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="checkboxes">
+                    <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                       {% if data['stepId'] > 1 %}
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="no2[selection]-1" name="no2[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-1">
                             {{data['id1']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-1" name="p2[optional1]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-1">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-2" name="p2[optional1]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-2">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -890,26 +890,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-2" name="no2[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-2">
                             {{data['id2']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-3" name="p2[optional2]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-3">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-4" name="p2[optional2]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-4">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -928,26 +928,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-3" name="no2[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-3">
                             {{data['id3']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-5" name="p2[optional3]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-5">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-6" name="p2[optional3]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-6">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -966,26 +966,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-4" name="no2[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-4">
                             {{data['id4']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-7" name="p2[optional4]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-7">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-8" name="p2[optional4]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-8">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1004,26 +1004,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-5" name="no2[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-5">
                             {{data['id5']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-9" name="p2[optional5]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-9">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-10" name="p2[optional5]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-10">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1042,26 +1042,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-6" name="no2[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-6">
                             {{data['id6']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-11" name="p2[optional6]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-11">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-12" name="p2[optional6]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-12">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1080,26 +1080,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-7" name="no2[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-7">
                             {{data['id7']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-13" name="p2[optional7]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-13">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-14" name="p2[optional7]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-14">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1118,26 +1118,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-8" name="no2[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-8">
                             {{data['id8']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-15" name="p2[optional8]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-15">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-16" name="p2[optional8]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-16">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1156,26 +1156,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-9" name="no2[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-9">
                             {{data['id9']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-17" name="p2[optional9]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-17">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-18" name="p2[optional9]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-18">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1194,26 +1194,26 @@
                           <input class="govuk-checkboxes__input" id="no2[selection]-10" name="no2[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
                           <label class="govuk-label govuk-checkboxes__label" for="no2[selection]-10">
                             {{data['id10']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no2[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-19" name="p2[optional10]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-19">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no2[optional]-conditional-20" name="p2[optional10]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no2[optional]-conditional-20">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1235,7 +1235,7 @@
                     <input type="hidden" name="p2StepNo" value={{nextP2Step}}>
                     <button class="govuk-button">Add step</button>
                   </div>
-                  
+
                 </form>
               </div>
             </div>
@@ -1253,7 +1253,7 @@
                 </div>
                 <p><a href="steps">Edit steps in steps library</a></p>
               {% endif %}
-          </div>  
+          </div>
         </div>
 
         <button class="accordion">Fate of animals</button>
@@ -1305,26 +1305,26 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div id="" class="protocol-content ">
-          
+
           <button class="accordion">Protocol details</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Animals used in this protocol</button>
           <div class="panel"></div>
-  
+
           <button id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
           <div class="panel"></div>
-  
-  
+
+
           <button  id="steps-p3" class="accordion active">Protocol steps</button>
           <div class="panel" style="display: block;">
-  
+
             <p></p>
             <table class="govuk-table">
               <tbody class="govuk-table__body">
-  
+
               {% for item in data['no3']['selection'] %}
                 {% if item == 1 %}
                 <tr class="govuk-table__row">
@@ -1398,7 +1398,7 @@
                 </tr>
                 {% endif %}
               {% endfor %}
-                                
+
               </tbody>
             </table>
             <div class="comment-block">
@@ -1410,32 +1410,32 @@
                         <h1 class="govuk-fieldset__heading">Select the steps that will be used in this protocol. </h1>
                       </legend>
                       <div id="step-hint" class="govuk-hint">If relevant you’ll be able to order them chronologically later.</div>
-                      <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="checkboxes">
+                      <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--conditional" data-module="govuk-checkboxes">
                         {% if data['stepId'] > 1 %}
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="no3[selection]-1" name="no3[selection]" type="checkbox" value="1" data-aria-controls="optional-conditional-1">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-1">
                             {{data['id1']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-1">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-1" name="p3[optional1]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-1">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-2" name="p3[optional1]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-2">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1454,26 +1454,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-2" name="no3[selection]-2" type="checkbox" value="2" data-aria-controls="optional-conditional-2">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-2">
                             {{data['id2']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-2">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-3" name="p3[optional2]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-3">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-4" name="p3[optional2]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-4">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1492,26 +1492,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-3" name="no3[selection]" type="checkbox" value="3" data-aria-controls="optional-conditional-3">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-3">
                             {{data['id3']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-3">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-5" name="p3[optional3]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-5">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-6" name="p3[optional3]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-6">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1530,26 +1530,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-4" name="no3[selection]" type="checkbox" value="4" data-aria-controls="optional-conditional-4">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-4">
                             {{data['id4']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-4">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-7" name="p3[optional4]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-7">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-8" name="p3[optional4]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-8">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1568,26 +1568,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-5" name="no3[selection]" type="checkbox" value="5" data-aria-controls="optional-conditional-5">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-5">
                             {{data['id5']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-5">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-9" name="p3[optional5]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-9">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-10" name="p3[optional5]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-10">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1606,26 +1606,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-6" name="no3[selection]" type="checkbox" value="6" data-aria-controls="optional-conditional-6">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-6">
                             {{data['id6']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-6">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-11" name="p3[optional6]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-11">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-12" name="p3[optional6]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-12">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1644,26 +1644,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-7" name="no3[selection]" type="checkbox" value="7" data-aria-controls="optional-conditional-7">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-7">
                             {{data['id7']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-7">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-13" name="p3[optional7]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-13">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-14" name="p3[optional7]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-14">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1682,26 +1682,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-8" name="no3[selection]" type="checkbox" value="8" data-aria-controls="optional-conditional-8">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-8">
                             {{data['id8']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-8">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-15" name="p3[optional8]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-15">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-16" name="p3[optional8]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-16">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1720,26 +1720,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-9" name="no3[selection]" type="checkbox" value="9" data-aria-controls="optional-conditional-9">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-9">
                             {{data['id9']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-9">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-17" name="p3[optional9]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-17">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-18" name="p3[optional9]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-18">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1758,26 +1758,26 @@
                           <input class="govuk-checkboxes__input" id="no3[selection]-10" name="no3[selection]" type="checkbox" value="10" data-aria-controls="optional-conditional-10">
                           <label class="govuk-label govuk-checkboxes__label" for="no3[selection]-10">
                             {{data['id10']['ref']}}
-                          </label> 
+                          </label>
                         </div>
                         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="optional-conditional-10">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">        
+                            <fieldset class="govuk-fieldset" aria-describedby="no3[optional]-hint">
                               <label class="govuk-label--s" for="">
                                 Is this step optional?<br><br>
                               </label>
-                              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-19" name="p3[optional10]" type="radio" value="(optional)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-19">
                                     Yes
-                                  </label> 
+                                  </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                   <input class="govuk-radios__input" id="no3[optional]-conditional-20" name="p3[optional10]" type="radio" value="(mandatory)">
                                   <label class="govuk-label govuk-radios__label" for="no3[optional]-conditional-20">
                                     No
-                                  </label> 
+                                  </label>
                                 </div>
                               </div>
                             </fieldset>
@@ -1800,7 +1800,7 @@
                       <button class="govuk-button">Add step</button>
                     </div>
                   </form>
-                </div>  
+                </div>
               </div>
               {% if data['stepId'] == undefined %}
               <span class="govuk-hint">No steps have been created in the steps libary.</span>
@@ -1816,18 +1816,18 @@
                 </div>
                 <p><a href="steps">Edit steps in steps library</a></p>
               {% endif %}
-            </div>  
+            </div>
           </div>
-  
+
           <button class="accordion">Fate of animals</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Animal experience</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Experimental design</button>
           <div class="panel"></div>
-  
+
           <button class="accordion">Protocol justification</button>
           <div class="panel"></div>
           <br>

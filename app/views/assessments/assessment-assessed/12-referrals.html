@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -33,23 +33,23 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
  reporting condition</a></li>
 </li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-        
 
-       
 
-        <li class='selected'><a href="12-referrals">Referrals</a></li> 
+
+
+        <li class='selected'><a href="12-referrals">Referrals</a></li>
 
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">Referrals</h1>
-      
+
 
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
@@ -63,8 +63,8 @@
             </div>
             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
           </div>
-          
-          
+
+
         </div>
       </div>
 
@@ -75,8 +75,8 @@
               Select any referrals you have made
             </h2>
           </legend>
-          <div class="govuk-checkboxes" data-module="checkboxes">
-            
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1" checked>
               <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
@@ -133,14 +133,14 @@
           </div>
         </fieldset>
       </div>
-  
+
       <!-- <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add a referral</a> -->
 
       <form action="assessment-overview" method="POST">
-      
+
         {% set sectionComplete = 'yes' %}
         {% include "includes/assessment-complete.html" %}
-      
+
       </form>
 
     </div>

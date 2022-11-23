@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
   {% set assessOutcome = 'met' %}
@@ -35,9 +35,9 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="12-referrals">Referrals</a></li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
         <li class='selected'><a href="13-decision">Declaration</a></li>
       </ul>
@@ -51,7 +51,7 @@
           I am clear about what the applicant is applying to do and understand the application. I have considered all relevant matters and assessed the likely benefit (potential benefit, likelihood of producing satisfactory results, suitability of applicant) and expected severity of the work described in the application.
         </p>
         <p>
-          The expected harm to protected animals in terms of pain, suffering, distress and lasting harm is justified by the expected outcome, taking account of ethical considerations, the likelihood of producing satisfactory results and the expected benefit to humans, animals or the environment. 
+          The expected harm to protected animals in terms of pain, suffering, distress and lasting harm is justified by the expected outcome, taking account of ethical considerations, the likelihood of producing satisfactory results and the expected benefit to humans, animals or the environment.
         </p>
         <p>
           A licence granted on the terms above will satisfy the relevant criteria of the Animals (Scientific Procedures) Act 1986.
@@ -63,14 +63,14 @@
               I am clear about what the applicant is applying to do and understand the application. I have considered all relevant matters and assessed the likely benefit (potential benefit, likelihood of producing satisfactory results, suitability of applicant) and expected severity of the work described in the application.
             </p>
             <p>
-              The expected harm to protected animals in terms of pain, suffering, distress and lasting harm is justified by the expected outcome, taking account of ethical considerations, the likelihood of producing satisfactory results and the expected benefit to humans, animals or the environment. 
+              The expected harm to protected animals in terms of pain, suffering, distress and lasting harm is justified by the expected outcome, taking account of ethical considerations, the likelihood of producing satisfactory results and the expected benefit to humans, animals or the environment.
             </p>
             <p>
               A licence granted on the terms above will satisfy the relevant criteria of the Animals (Scientific Procedures) Act 1986.
             </p>
           </label>
           <span class="govuk-hint"></span>
-          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="decision-yes" name="decision" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
               <label for="decision" class="govuk-label govuk-radios__label">Yes</label>
@@ -79,17 +79,17 @@
               <input class="govuk-radios__input" id="decision-no" name="decision" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
               <label for="decision" class="govuk-label govuk-radios__label">No</label>
             </div>
-            
+
           </div>
         </fieldset>
       </div>
-  
+
       <!-- <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add a referral</a> -->
 
       {% set assessSection = 'decision' %}
       {% include "includes/assessment-complete.html" %}
 
-      
+
       </form>
 
     </div>

@@ -29,10 +29,10 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reportinging</a>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-          <li><a href="12-referrals">Referrals</a></li> 
+          <li><a href="12-referrals">Referrals</a></li>
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -66,7 +66,7 @@
                 </li>
               </ul>
               <li>
-                Any movement of animals between establishments, or significant movement within an establishment, is justified and clearly described to minimise adverse impacts on animal welfare and scientific outcomes. 
+                Any movement of animals between establishments, or significant movement within an establishment, is justified and clearly described to minimise adverse impacts on animal welfare and scientific outcomes.
               </li>
               <li>
                 [Dynamic if user answers ‘Yes’ to “Will any part of your project be carried out in any places other than a licensed establishment (POLEs)?”] The location of every POLE is adequately specified.
@@ -90,7 +90,7 @@
         </div>
 
        <a href='#' class="govuk-button govuk-button--secondary">Add more additional conditions</a> -->
-       
+
         <!-- <div class="govuk-form-group">
           <div class="govuk-checkboxes govuk-checkboxes--small">
             <div class="govuk-checkboxes__item">
@@ -110,7 +110,7 @@
             </div>
           </div>
         </div> -->
-        
+
 
         <hr class=" govuk-section-break--l govuk-section-break--visible">
 <h2 class="govuk-heading-m">Section assessment</h2>
@@ -133,7 +133,7 @@
       Does this application meet the standards for project location?
     </label>
     <span class="govuk-hint"></span>
-    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="{{ assessSection }}-yes" name="{{ assessSection }}" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
         <label for="{{ assessSection }}" class="govuk-label govuk-radios__label">Yes</label>
@@ -167,19 +167,19 @@
     </div>
   </fieldset>
 </div>
-       
+
         <hr class=" govuk-section-break--l govuk-section-break--visible">
       <h2 class="govuk-heading-m">Add condition or authorisation</h2>
 <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
       <div class="govuk-inset-text condition">
         <h3 class="govuk-heading-s">POLES<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
-          
+
           <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are started.</p>
           </div>
         <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
         <br>
         <br>
-      
+
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
           <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -266,7 +266,7 @@
 
         {% include "includes/assessment-complete.html" %}
 
-      
+
       </form>
     </div>
   </div>

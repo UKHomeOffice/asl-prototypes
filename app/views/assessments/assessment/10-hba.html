@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -29,17 +29,17 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="12-referrals">Referrals</a></li>
         <li class="selected"><a href="10-hba">Harm-benefit analysis</a></li>
-         
+
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Harm-benefit analysis</h1>
       <form action="assessment-overview" method="post">
-            
+
 
         <h3 class="govuk-heading-m">Analyse the likelihood of success</h3>
         <details class="govuk-details" data-module="govuk-details">
@@ -77,7 +77,7 @@
           </div>
         </details>
 
-        
+
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of likelihood of success
@@ -86,13 +86,13 @@
           <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
         </div>
 
-        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">Analyse the expected benefits</h3>
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Benefits to consider 
+              Benefits to consider
             </span>
           </summary>
           <div class="govuk-details__text">
@@ -117,17 +117,17 @@
               </li>
             </ul>
           </div>
-          
+
         </details>
 
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of expected benefits
             </label>
-            <span id="comments-10-hint" class="govuk-hint"></span> 
+            <span id="comments-10-hint" class="govuk-hint"></span>
             <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
           </div>
-        <hr class=" govuk-section-break--l govuk-section-break--visible">    
+        <hr class=" govuk-section-break--l govuk-section-break--visible">
 
         <h3 class="govuk-heading-m">Analyse the nature of the harms
         </h3>
@@ -144,7 +144,7 @@
                 contingent harms, such as environmental harms
               </li>
               <li>
-                project-related harms, including: 
+                project-related harms, including:
                 <ul class="govuk-list govuk-list--bullet">
                   <li>
                     the severity, frequency and duration of procedures
@@ -160,7 +160,7 @@
                   </li>
                 </ul>
               </li>
-              
+
               <li>
                 cumulative effects
               </li>
@@ -178,7 +178,7 @@
           <label class="govuk-label govuk-label--s" for="comments-10">
             Analysis of expected harms
            </label>
-           <span id="comments-10-hint" class="govuk-hint"></span> 
+           <span id="comments-10-hint" class="govuk-hint"></span>
            <textarea class="govuk-textarea" id="comments-10" name="comments-10" rows="5" aria-describedby="comments-10-hint"></textarea>
          </div>
 
@@ -192,7 +192,7 @@
               Do the potential benefits justify the harms?
             </label>
             <span class="govuk-hint"></span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-yes" name="hba" type="radio" value="yes" data-aria-controls="conditional-option-1" {% if assessOutcome == 'met' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">Yes</label>
@@ -209,7 +209,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="hba-no" name="hba" type="radio" value="no" data-aria-controls="conditional-option-2" {% if assessOutcome == 'unmet' %}Checked{% endif %}>
                 <label for="hba" class="govuk-label govuk-radios__label">No</label>
-                
+
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-option-2">
                 <div class="govuk-form-group">
@@ -225,7 +225,7 @@
         </div>
 
         <form action="assessment-overview" method="post">
-        
+
         {% set assessSection = 'hba' %}
 
         {% include "includes/assessment-complete.html" %}
