@@ -1,0 +1,206 @@
+
+{% extends "layout_conditions.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/conditions_header_banner.html" %}
+  </div>
+</div> 
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <dl class="govuk-body">
+      <dt>Licence number</dt>
+      <dd>I88783310</dd>
+      <dt>Establishment</dt>
+      <dd>University of Croydon</dd>
+      <dt>Issue date</dt>
+      <dd>28 September 2021</dd>
+      <dt>Last amended</dt>
+      <dd>27 January 2022</dd>
+      <dt>Next review date</dt>
+      <dd>28 September 2026</dd>
+      <dt>Animal types</dt>
+      <dd>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Mice</li>
+          <li>Zebra fish</li>
+          <li>Xenopus</li>
+        </ul>
+      </dd>
+      <dt>Procedures</dt>
+      <dd>
+        <p><strong>Categories</strong>:</p>
+        <p><strong>A</strong>: Minor / minimally invasive procedures not requiring sedation, analgesia or general anaesthesia.</p>
+        <p><strong>B</strong>: Minor / minimally invasive procedures involving sedation, analgesia or brief general anaesthesia. Plus surgical procedures conducted under brief non-recovery general anaesthesia.</p>
+        <p><strong>C</strong>: Surgical procedures involving general anaesthesia. Plus - administration and maintenance of balanced or
+        prolonged general anaesthesia.</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m" style="margin-bottom: 0px;">Conditions </h2>
+      <br>
+      <span>All standard conditions of project licences apply. <a href="page_12.html" style="color: #005ea5;">Manage conditions</a></span>
+      <br><br>
+      <span><a href="#0" class="govuk-button govuk-button--secondary">Add additional condition</a></span>
+      
+      <br>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" width="350">Summary</th>
+            <th scope="col" class="govuk-table__header" width="600">Description</th>
+            <th scope="col" class="govuk-table__header" width="120">Reminder</th>
+            <th scope="col" class="govuk-table__header" width="80" style="text-align: right;">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Unauthorised work over weekends</td>
+            <td class="govuk-table__cell">This person is not allowed to conduct work on the weekend unless the person has authorisation from the establisment adminsitator and project manager.</td>
+            <td class="govuk-table__cell">28/11/22</td>
+            <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Restricted collaboration</td>
+            <td class="govuk-table__cell">This person cannot share any work related to the research with any person or organisation.</td>
+            <td class="govuk-table__cell" >28/11/22</td>
+            <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">This is a test</td>
+            <td class="govuk-table__cell">I'm testing so I will change this condition later.</td>
+            <td class="govuk-table__cell" >28/11/22</td>
+            <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Limited number of visitors</td>
+            <td class="govuk-table__cell">This person cannot have more than 1 visitor when working in the premises.</td>
+            <td class="govuk-table__cell" >28/11/22</td>
+            <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 – 4 of 4 results</div>
+        <ul class="pagination">
+          <li class="pagination__item" style="color: #999999;"><span aria-hidden="true" role="presentation">«</span> Previous &nbsp;&nbsp;</li>
+          <li class="pagination__item"><strong>1</strong></li>
+          <li class="pagination__item" style="color: #999999;">&nbsp;&nbsp; Next <span aria-hidden="true" role="presentation">»</span></a></li>
+        </ul>
+      </nav>
+
+      <br>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Amend or transfer licence</h2>
+      <p>You can amend or transfer this licence.</p>
+      <a href="ppl-index" class="govuk-button govuk-button--secondary">Amend licence</a>
+      <!--
+      <a href="review-pil-app-public-edit" class="secondary-link">or change licence holder</a>
+      -->
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Revoke licence</h2>
+      <p>Cancel this licence if it is no longer needed. If the licence includes category E, this can be removed by viewing the relevant training course.</p>
+      <a href="review-pil-app-public-edit" class="govuk-button govuk-button--warning">Revoke licence</a>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h2 class="govuk-heading-m">Related tasks</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col"><a href="#0">Last amended</a></th>
+            <th class="govuk-table__header" scope="col">Establishment </th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col"><a href="#0">Deadline (closest)</a></th>
+            <th class="govuk-table__header" scope="col">Assigned to</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">27 Jan 2022  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell"><a href="pil-task-review-complete">PEL amendment</a><br>Juliana Akinyooye</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">No deadline</td>
+            <td class="govuk-table__cell">Juliana Akinyooye <br><a href="pil-task-review-complete"><a href="#0">Assign to me</a></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">27 Jan 2022  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell"><a href="pil-task-review-complete">PEL amendment</a><br>Juliana Akinyooye</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">No deadline</td>
+            <td class="govuk-table__cell">Juliana Akinyooye <br><a href="pil-task-review-complete"><a href="#0">Assign to me</a></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Sep 2022  </td>
+            <td class="govuk-table__cell">University of Croydon</td>
+            <td class="govuk-table__cell"><a href="pil-task-review-complete">PEL amendment</a><br>Juliana Akinyooye</td>
+            <td class="govuk-table__cell"><span class="badge badge-blue">Approved</span></td>
+            <td class="govuk-table__cell">No deadline</td>
+            <td class="govuk-table__cell">Juliana Akinyooye <br><a href="pil-task-review-complete"><a href="#0">Assign to me</a></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 – 3 of 3 results</div>
+        <ul class="pagination">
+          <li class="pagination__item" style="color: #999999;"><span aria-hidden="true" role="presentation">«</span> Previous &nbsp;&nbsp;</li>
+          <li class="pagination__item"><strong>1</strong></li>
+          <li class="pagination__item" style="color: #999999;">&nbsp;&nbsp; Next <span aria-hidden="true" role="presentation">»</span></a></li>
+        </ul>
+      </nav>
+
+      <br><br>
+
+      <!--
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 – 3 of 3 results</div>
+        <ul class="pagination">
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">»</span></a></li>
+        </ul>
+      </nav>
+      -->
+
+    </div>
+</div>
+
+
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    padding-bottom: 30px;
+    width: 25%;
+  }
+
+  .download-header {
+    background-color: white;
+    border-bottom: 4px solid #005ea5;
+    margin-bottom: 30px;
+    padding: 15px;
+    position: relative;
+}
+</style>
+
+    
+
+{% endblock %}
