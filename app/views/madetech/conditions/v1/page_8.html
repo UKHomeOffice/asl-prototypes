@@ -1,0 +1,113 @@
+
+{% extends "layout_conditions_back.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+          
+    <h1 class="govuk-heading-l"><strong>Condition details</strong></h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail"><strong>Describe the condition</strong></label>
+      <div id="more-detail-hint" class="govuk-hint">
+        Do not include personal information.
+      </div>
+      <textarea class="govuk-textarea" rows="5" aria-describedby="more-detail-hint">This person is not allowed to conduct work on the weekends.</textarea>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+        <!-- Provosional code -->
+
+        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="contact">
+            <strong>Set a reminder for deadlines associated with this condition</strong>
+          </label>
+        </div>
+
+        <div style="margin-left: 10px;padding-left: 33px;border-left: 4px solid #b1b4b6;">
+          <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+          <div class="govuk-body">
+            Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a remainder when the deadline has passed.
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+              <div id="passport-issued-hint" class="govuk-hint">
+                For example, 27 3 2007
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="19">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="4">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2023">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <br><br>
+
+        <a href="#0"><button class="govuk-button">Update</button></a> &nbsp;
+        <a href="page_9.html"><button class="govuk-button govuk-button--warning">Remove</button></a> 
+        <a href="page_7.html" class="secondary-link">Cancel and return</a>
+
+
+        <!-- End provosional code -->
+
+        <!--
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-checkboxes__label" for="contact">
+              Set a remainder for deadlines associated with this condition
+            </label>
+          </div>
+          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">Details</label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+            </div>
+          </div>
+        </div>
+        -->
+
+      </fieldset>
+    </div>
+
+  </div>
+
+</div>
+
+
+    
+
+{% endblock %}

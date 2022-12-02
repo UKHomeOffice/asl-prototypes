@@ -1,0 +1,56 @@
+
+{% extends "layout_conditions_back.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+          
+    <h1 class="govuk-heading-l"><strong>Update additional condition</strong></h1>
+
+    <div class="govuk-form-group">
+
+      <strong>Current condition details</strong>
+      
+      <div class="govuk-inset-text condition" style="padding-left: 20px;margin-bottom: 20px;margin-top: 15px;">
+        <div class="govuk-form-group" style="margin-bottom:10px;">
+          <strong>This is a test </strong>
+          <br>
+          <label class="govuk-label" for="contact-by-email">
+            I'm testing so I will change this condition later.
+          </label>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px;margin-bottom: 40px;">
+        <br>
+        <strong>New summary</strong>
+        <br>
+        <div class="govuk-form-group" style="margin-top:10px;">
+          <input class="govuk-input" id="event-name" name="event-name" type="text" value="This is a test ">
+        </div>
+        <strong>New description</strong>
+        <br>
+        <div class="govuk-form-group" style="margin-top:10px;">
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">I'm testing so I will change this condition later.</textarea>
+        </div>
+      </div>
+
+      <a href="page_14.html"><button class="govuk-button">Update</button></a>
+      <a href="#0" class="secondary-link" style="color: #005ea5;">Cancel and return</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+    
+
+{% endblock %}

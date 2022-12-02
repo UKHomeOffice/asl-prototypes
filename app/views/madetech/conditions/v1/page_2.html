@@ -1,0 +1,88 @@
+
+{% extends "layout_conditions_back.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+          
+    <h1 class="govuk-heading-l"><strong>Condition details</strong></h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail"><strong>Describe the condition</strong></label>
+      <div id="more-detail-hint" class="govuk-hint">
+        Do not include personal information.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-checkboxes__label" for="contact">
+              Set a remainder for deadlines associated with this condition
+            </label>
+          </div>
+          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+            <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+          <div class="govuk-body">
+            Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a remainder when the deadline has passed.
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+              <div id="passport-issued-hint" class="govuk-hint">
+                For example, 27 3 2007
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <a href="page_3.html"><button class="govuk-button">Save condition</button></a>
+    <a href="page_1.html" class="secondary-link">Cancel and return</a>
+
+  </div>
+
+</div>
+
+
+    
+
+{% endblock %}
