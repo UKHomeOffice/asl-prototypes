@@ -13,8 +13,8 @@
       <h1 class="govuk-heading-xl">
         Create new course
       </h1>
-        
-        <form action="confirm-course-details" autocomplete="off">        
+
+        <form action="confirm-course-details" autocomplete="off">
         <div class="govuk-form-group">
           <label class="govuk-label--s" for="course-name">
             Course title
@@ -69,7 +69,7 @@
               Animals to be used
             </label>
             <span class="govuk-hint"></span>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Small animals
@@ -130,7 +130,7 @@
               </fieldset>
               </div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Large animals
@@ -138,7 +138,7 @@
               </summary>
               <div class="govuk-details__text"></div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Fish, reptiles and aquatic species
@@ -146,7 +146,7 @@
               </summary>
               <div class="govuk-details__text"></div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Birds
@@ -154,7 +154,7 @@
               </summary>
               <div class="govuk-details__text"></div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Cats, dogs and equidae
@@ -162,7 +162,7 @@
               </summary>
               <div class="govuk-details__text"></div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Non-human primates
@@ -170,7 +170,7 @@
               </summary>
               <div class="govuk-details__text"></div>
             </details>
-            <details class="govuk-details" data-module="govuk-details">
+            <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Other
@@ -188,12 +188,12 @@
                 {% include "includes/typeahead-ppls.html" %}
               </div>
           </fieldset>
-          <button class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
+          <button data-module="govuk-button" class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
         </div>
       </form>
     </div>
   </div>
 
- 
+
 
 {% endblock %}

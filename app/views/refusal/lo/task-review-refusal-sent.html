@@ -28,9 +28,9 @@
         <a href="#procedures" class="">What do you want to do?</a>
       </nav>&nbsp;
     </div>
-    
 
-    
+
+
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Status</h2>
       <p>
@@ -64,49 +64,49 @@
         <p>Under <a href="#">Section 12(3)</a> of the Act, you have the right to make representations in writing or in person against the Secretary of State’s proposal to refuse your application for a licence. Should you wish to make representations to a person appointed by the Secretary of State, you must respond to this notice by <span class="date-28-days"></span>. You may give notice of your intention to make representations by contacting your SPoC or emailing aspa.london@homeoffice.gov.uk.</p>
         <p>Please refer to Appendix E of the Guidance on the Operation of the Act for <a href="https://www.gov.uk/guidance/guidance-on-the-operation-of-the-animals-scientific-procedures-act-1986">details on the process of making representations</a>.</p>
         <p>Yours sincerely, </p>
-        <p>Stirling Archer</p> 
-      </div>  
-      <!-- <p><strong>Standards not met:</strong> </p>      
+        <p>Stirling Archer</p>
+      </div>
+      <!-- <p><strong>Standards not met:</strong> </p>
       <div class="govuk-inset-text">
         {{data["refusal-list"]}}
       </div>   -->
-      <p><strong>Licensing Officer remarked:</strong></p>      
+      <p><strong>Licensing Officer remarked:</strong></p>
       <div class="govuk-inset-text">
      {% if data["lo-comment"].length > 1 %}
         {{data["lo-comment"]}}
       {% else %}
         I am refusing this application at the recommendation of the Inspector
       {% endif %}
-      </div>  
+      </div>
       <p></p>
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show previous activity
           </span>
         </summary>
-        <div class="govuk-details__text"> 
+        <div class="govuk-details__text">
           <p>
             <strong>Recommendation made by inspector:</strong> <a href="#">Inspector Morse</a>
             <span class='float-right'><span class="date-today"></span></span>
           </p>
           <p><strong>Recommendation:</strong> Refuse</p>
-          <p><strong>Reason for refusal:</strong> </p>      
+          <p><strong>Reason for refusal:</strong> </p>
           <div class="govuk-inset-text">
             {% if data["refusal-summary"].length > 1 %}
               {{data["refusal-summary"]}}
             {% else %}
               The use of NHPs is not justified and the applicant refuses to use an alternative
             {% endif %}
-          </div>  
-          <p><strong>Inspector Morse remarked:</strong></p>      
+          </div>
+          <p><strong>Inspector Morse remarked:</strong></p>
           <div class="govuk-inset-text">
             {% if data["inspector-comment"].length > 1 %}
               {{data["inspector-comment"]}}
             {% else %}
               Please action this recommendation
             {% endif %}
-          </div> 
+          </div>
            <hr>
           <p>
             <strong>Endorsed on behalf of the PEL holder by:</strong> <a href="#">Bruce Banner</a>
@@ -116,10 +116,10 @@
         </div>
       </details>
       <hr class=" govuk-section-break--l govuk-section-break--visible">
-     
+
       <h2 class="govuk-heading-m">PPL holder</h2>
       <p><a href="#">Bruce Banner</a></p>
-      
+
       <hr class=" govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-m">Latest submission</h2>
@@ -141,7 +141,7 @@
       </ul>
       <p>This is the application that has been submitted for approval.</p>
       <a href="application/ppl-index" class="govuk-button govuk-button--secondary">View latest submission</a>
-      
+
     </div>
   </div>
 

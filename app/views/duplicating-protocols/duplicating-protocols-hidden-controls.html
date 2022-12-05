@@ -11,12 +11,12 @@
   function DuplicateProtocol() {
     var itm = event.target.parentNode.parentNode.parentNode
         itmName = event.target.parentNode.parentNode.parentNode.getElementsByClassName("protocol-title")[0].innerHTML
-        itmCopyName = itmName + " (copy)" 
+        itmCopyName = itmName + " (copy)"
         cln = itm.cloneNode(true);
 
     event.preventDefault();
     cln.getElementsByClassName("protocol-title")[0].innerHTML = itmName + " (Copy)"
-    itm.insertAdjacentElement('afterend', cln); 
+    itm.insertAdjacentElement('afterend', cln);
   }
 
   function RemoveProtocol() {
@@ -32,7 +32,7 @@
 
     event.preventDefault();
     console.log(itm.previousElementSibling)
-    itm.previousElementSibling.insertAdjacentElement('beforeBegin', itm); 
+    itm.previousElementSibling.insertAdjacentElement('beforeBegin', itm);
 
   }
 
@@ -41,7 +41,7 @@
 
     event.preventDefault();
     console.log(itm.previousElementSibling)
-    itm.nextElementSibling.insertAdjacentElement('afterend', itm); 
+    itm.nextElementSibling.insertAdjacentElement('afterend', itm);
 
   }
 
@@ -72,10 +72,10 @@
 
       <p>Please enter the details of the protocols that make up this project.</p>
 
-      <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+      <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add another protocol</button>
 
 
-      <div id="first-protocol" class="protocol-container"> 
+      <div id="first-protocol" class="protocol-container">
         <div class="protocol-header-complete">
           <h3 class="govuk-heading-m protocol-toggle">
             The first protocol
@@ -102,10 +102,10 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
       </div>
 
-      <div id="first-protocol" class="protocol-container"> 
+      <div id="first-protocol" class="protocol-container">
         <div class="protocol-header-complete">
           <h3 class="govuk-heading-m protocol-toggle">
             The first protocol
@@ -133,12 +133,12 @@
             </tbody>
           </table>
           <p class="protocol-controls">
-            Reorder: 
+            Reorder:
               <span class="hod-chevron-up side-space icon-small" style="margin-right: 0px;"></span>
             <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">
               Up
-            </a> 
-            or 
+            </a>
+            or
               <span class="hod-chevron-down side-space icon-small" style="margin-right: 0px;"></span>
             <a href="#" onclick="MoveProtocolDown();" style="border-right: 1px solid white">
               Down
@@ -146,13 +146,13 @@
               <span class="hod-cross side-space icon-small" style="margin-right: 0px;"></span>
             <a href="#" onclick="RemoveProtocol();" style="border-right: 1px solid white">
               Remove
-            </a> 
+            </a>
               <span class="hod-file-empty side-space icon-small" style="margin-right: 0px;"></span>
             <a href="#" onclick="DuplicateProtocol();">
               Make a duplicate
             </a>
           </p>
-        </div>  
+        </div>
       </div>
 
       <div id="secondProtocol" class="protocol-container">
@@ -182,7 +182,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div class="protocol-content">
           <table class="govuk-table">
@@ -240,8 +240,8 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <div class="protocol-controls">
             <a href="#" onclick="RemoveProtocol();">Remove this protocol</a>
@@ -279,7 +279,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div class="protocol-content">
           <table class="govuk-table">
@@ -337,8 +337,8 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <div class="protocol-controls">
             <a href="#" onclick="RemoveProtocol();">Remove this protocol</a>
@@ -377,7 +377,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div class="protocol-content">
           <table class="govuk-table">
@@ -435,13 +435,13 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <p class="protocol-controls">
-            Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
+            Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a>
             or <a href="#" onclick="MoveProtocolDown();">Down</a>
-            <a href="#" onclick="RemoveProtocol();">Remove</a> 
+            <a href="#" onclick="RemoveProtocol();">Remove</a>
             <a href="#" onclick="DuplicateProtocol();">Make a duplicate</a>
           </p>
         </div>
@@ -475,7 +475,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div class="protocol-content">
           <table class="govuk-table">
@@ -533,13 +533,13 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <p class="protocol-controls">
-                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a> 
+                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a>
                 or <a href="#" onclick="MoveProtocolDown();">Move down</a>
-                <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+                <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
                 <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
               </p>
         </div>
@@ -572,7 +572,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -619,14 +619,14 @@
 
           <div class="declaration-panel-grey">
               <h3 class="govuk-heading-m">Protocol status: Completed</h3>
-              <button class="govuk-button govuk-button--secondary" style="border:1px solid grey">Mark as incomplete</button>
+              <button data-module="govuk-button" class="govuk-button govuk-button--secondary" style="border:1px solid grey">Mark as incomplete</button>
               <p class="protocol-controls">
-                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a> 
+                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a>
                 or <a href="#" onclick="MoveProtocolDown();">Move down</a>
-                <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+                <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
                 <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
               </p>
-          </div>  
+          </div>
           <br>
         </div>
       </div>
@@ -658,7 +658,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -705,14 +705,14 @@
 
           <div class="declaration-panel-grey">
               <h3 class="govuk-heading-m">Protocol status: In progress</h3>
-              <button class="govuk-button">Mark as complete</button>
+              <button data-module="govuk-button" class="govuk-button">Mark as complete</button>
               <p class="protocol-controls">
-                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a> 
+                Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a>
                 or <a href="#" onclick="MoveProtocolDown();">Move down</a>
-                <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+                <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
                 <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
               </p>
-          </div>  
+          </div>
           <br>
         </div>
       </div>
@@ -744,7 +744,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -792,9 +792,9 @@
           <div class="declaration-panel-grey">
               <h3 class="govuk-heading-m">Protocol status
                 <div class="govuk-body float-right protocol-controls">
-                  Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a> 
+                  Reorder: <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Move up</a>
                   or <a href="#" onclick="MoveProtocolDown();">Move down</a>
-                  <a href="#" onclick="RemoveProtocol();">Remove</a> 
+                  <a href="#" onclick="RemoveProtocol();">Remove</a>
                   <a href="#" onclick="DuplicateProtocol();">Make a copy</a>
                 </div>
               </h3>
@@ -810,8 +810,8 @@
                   </div>
                 </fieldset>
               </div>
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
         </div>
       </div>
@@ -843,7 +843,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -900,18 +900,18 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
               <div class="protocol-controls">
                 <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
                 <a href="#" onclick="DuplicateProtocol();">Make a copy of this protocol</a>
                 <a href="#" onclick="MoveProtocolUp();">Move up</a>
                 <a href="#" onclick="MoveProtocolDown();">Move down</a>
               </div>
-          </div>  
+          </div>
           <br>
         </div>
       </div>
-      
+
       <div class="protocol-container">
         <div class="protocol-header-in-progress">
           <h3 class="govuk-heading-m protocol-toggle">
@@ -938,7 +938,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
       </div>
 
       <div class="protocol-container">
@@ -968,7 +968,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -1026,10 +1026,10 @@
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
-          <details class="govuk-details" data-module="govuk-details">
+          <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 Edit this protocol
@@ -1075,7 +1075,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -1133,8 +1133,8 @@
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <div class="">
             <a href="#" onclick="RemoveProtocol();" style="margin-bottom:0px;" class="govuk-button  govuk-button--warning">
@@ -1185,7 +1185,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -1242,8 +1242,8 @@
                   </div>
                 </div>
               </fieldset>
-            </div>            
-            <button class="govuk-button">Continue</button>
+            </div>
+            <button data-module="govuk-button" class="govuk-button">Continue</button>
 
             <h3 class="govuk-heading-s">Edit protocol</h3>
             <div class="">
@@ -1252,7 +1252,7 @@
               <a href="#" onclick="MoveProtocolUp();" style="margin-bottom:0px;" class="govuk-button govuk-button--secondary">Move up</a> &thinsp;
               <a href="#" onclick="MoveProtocolDown();" style="margin-bottom:0px;" class="govuk-button govuk-button--secondary">Move down</a> &thinsp;
             </div>
-          </div>  
+          </div>
           <br>
       </div>
       <div class="protocol-container">
@@ -1282,7 +1282,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -1340,8 +1340,8 @@
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
           <div class="">
             <a href="#" onclick="RemoveProtocol();" style="margin-bottom:0px;" class="govuk-button  govuk-button--warning">Remove protocol</a>  &thinsp;
@@ -1352,7 +1352,7 @@
         </div>
       </div>
 
-      <div class="protocol-container">  
+      <div class="protocol-container">
         <div class="protocol-header-in-progress">
           <h3 class="govuk-heading-m protocol-toggle selected">
             <span class="protocol-title"><a href="#">The Fourth protocol</a></span>
@@ -1379,10 +1379,10 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div class="protocol-content">
-          
+
           <table class="govuk-table">
             <tbody class="govuk-table__body">
               <thead class="govuk-table__head">
@@ -1439,10 +1439,10 @@
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
-          <details class="govuk-details" data-module="govuk-details">
+          <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 Edit this protocol
@@ -1471,15 +1471,15 @@
             </label>
             <input class="govuk-input" id="protocol-name" name="protocol-name" type="text">
           </div>
-          <button class="govuk-button">Continue</button>
-        </div>  
+          <button data-module="govuk-button" class="govuk-button">Continue</button>
+        </div>
       </div>
 
       <p>
-        <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+        <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add another protocol</button>
       </p>
       <p>
-        <button class="govuk-button">Continue</button>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>
         <span class="secondary-link"><a href="#">List of sections</a></span>
       </p>
 

@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
- 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% if data['rowEditing'] > 0 %}
@@ -16,8 +16,8 @@
 
       {% include "includes/status-banner-draft-rops.html" %}
       {% include "includes/licence-header-rops-research.html" %}
-      
-      
+
+
       <h2 class="govuk-heading-m">Change set up details</h2>
       <p>View and change details used to set up this return, such as purposes or place of birth.</p>
       <p><a href="setup-complete">Change set up details</a></p>
@@ -29,7 +29,7 @@
         <a href="javascript:void()">View table in full screen</a>&emsp;
       </span>
       <div id="fateComparison" class="modal modal-dialoge container" style="z-index: 10;">
-      
+
         <!-- Modal content -->
         <div class="modal-content modal-content-table" >
           <div class="diff-window">
@@ -37,17 +37,17 @@
               <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
                 Procedures
                 <span class="govuk-body"><a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a></span>
-              </h2>  
+              </h2>
             </div>
             <div class="diff-window-body" style="background-color: #f3f3f3;">
-              
+
               <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-                <div class="fullscreen-scrollable-table" >          
-        
+                <div class="fullscreen-scrollable-table" >
+
                   <table class="govuk-table  table-background" style="font-size: 14px; margin: 0 auto;" >
                     <caption class="govuk-table__caption"> </caption>
                     <thead class="govuk-table__head">
-                      
+
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -169,20 +169,20 @@
                     </tbody>
                   </table>
                 </div>
-               
+
               </div>
             </div>
           </div>
         </div>
-      
+
       </div>
       <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-        <div class="fullscreen-scrollable-table">          
+        <div class="fullscreen-scrollable-table">
 
           <table class="govuk-table  table-background" style="font-size: 14px;">
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -304,9 +304,9 @@
             </tbody>
           </table>
         </div>
-       
+
       </div>
-      
+
       <hr>
       <form action="submit-comment" method="post">
         <h2 class="govuk-heading-m">Submit return</h2>
@@ -316,7 +316,7 @@
       {% if data['rowCount'] is not number %}
         <form action="rops-empty" method="POST">
           <input type="hidden" name="rowCount" value="0">
-          <button class="float-right">Reset</button>
+          <button data-module="govuk-button" class="float-right">Reset</button>
         </form>
       {% endif %}
       <style>
@@ -340,10 +340,10 @@
           overflow-y: hidden;
         }
 
-     
+
       </style>
-      
-  </div>  
+
+  </div>
 </div>
 
 <style>

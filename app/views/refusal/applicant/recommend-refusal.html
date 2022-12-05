@@ -11,26 +11,26 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
+
       <span class="govuk-caption-xl">PPL application</span>
       <h1 class="govuk-heading-xl">
         Notify of the intent to refuse
       </h1>
-      
+
       <h2 class="govuk-heading-m">Review reasons provided by the inspector</h2>
       <p>You need to review the reasons provided to the inspector and ensure they are publishable.</p>
       <p>These reasons will be provided to the applicant in a section 12 notice and on the returned task</p>
       <form action="recommend-comment" method="post">
-        <h3 class="govuk-heading-s">PPL standards not met</h3>  
+        <h3 class="govuk-heading-s">PPL standards not met</h3>
         <p>
           {% if data["refusal-list"].length > 1 %}
             {{data["refusal-list"]}}
           {% else %}
-            PPLA3.2.2 Non-endangered NHPs 
+            PPLA3.2.2 Non-endangered NHPs
           {% endif %}
         </p>
         <p><a href="#">Edit</a></p>
-        <h3 class="govuk-heading-s">Summary of the reason ofdafadfa refusal</h3>  
+        <h3 class="govuk-heading-s">Summary of the reason ofdafadfa refusal</h3>
         <p>
           {% if data["refusal-summary"].length > 1 %}
             {{data["refusal-summary"]}}
@@ -57,15 +57,15 @@
           <h2 class="govuk-heading-m">Submit refusal</h2>
           <p>If the reasons are complete and correct, submitting the refusal will return the task and send the PEL holder a section 12 letter.</p>
           <p>
-            <button class="govuk-button">Continue</button>
+            <button data-module="govuk-button" class="govuk-button">Continue</button>
             <a class="secondary-link" href="#">Cancel</a>
           </p>
-    
+
       </form>
-        
 
 
-    
+
+
     </div>
   </div>
 

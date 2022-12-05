@@ -39,7 +39,7 @@
 <!--       <p><strong>Submitted by:</strong> <a href="#">Bruce Banner</a></p>
       <p>{{data["pelhb-comment"]}}</p>
 
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show previous activity
@@ -64,18 +64,18 @@
             <span class="date">17 July 2019</span>
           </p>
           <p><strong>Submitted by:</strong> <a href="#">Michael Thomas</a></p>
-          
+
         </div>
       </details> -->
 <hr class=" govuk-section-break--l govuk-section-break--visible">
 
-     
+
       <h2 class="govuk-heading-m">Licence holder</h2>
       <p><a href="#">John Smith</a></p>
 
       <h3 class="govuk-heading-s">Applicant over 18?</h3>
       <p>Yes</p>
-      
+
       <hr class=" govuk-section-break--l govuk-section-break--visible">
 
       <h3 class="govuk-heading-m">Procedures</h3>
@@ -105,7 +105,7 @@
       <hr class=" govuk-section-break--xl govuk-section-break--visible">
 
       <h2 class="govuk-heading-m">What do you want to do?</h2>
-      
+
         <form action="mark-reviewed-comment">
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -113,24 +113,24 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="where-do-you-live-1" name="review-action" type="radio" value="renew">
                   <label for="review-action" class="govuk-label govuk-radios__label">Mark licence as reviewed</label>
-                  <span class="govuk-hint">This will resolve the licences 5 year review.</span> 
+                  <span class="govuk-hint">This will resolve the licences 5 year review.</span>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="review-action-1" name="review-action" type="radio" value="amend">
                   <label for="review-action" class="govuk-label govuk-radios__label">Amend licence</label>
-                  <span class="govuk-hint">This will create an amendment task for this licence. The 5 year review will only be resolved once the amendment is granted.</span> 
+                  <span class="govuk-hint">This will create an amendment task for this licence. The 5 year review will only be resolved once the amendment is granted.</span>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="review-action-1" name="review-action" type="radio" value="revoke">
                   <label for="review-action" class="govuk-label govuk-radios__label">Revoke licence</label>
-                  <span class="govuk-hint">This will create a revocation task for this licence. The 5 year review will only be resolved once the revocation is granted.</span> 
+                  <span class="govuk-hint">This will create a revocation task for this licence. The 5 year review will only be resolved once the revocation is granted.</span>
                 </div>
               </div>
             </fieldset>
           </div>
 
 
-          <button class="govuk-button">Continue</button>
+          <button data-module="govuk-button" class="govuk-button">Continue</button>
         </form>
     </div>
   </div>

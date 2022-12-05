@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
       <ul class="protocol-nav">
@@ -41,7 +41,7 @@
 
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l">Establishments</h2>
-      
+
 
       <!--  -->
 
@@ -53,7 +53,7 @@
           The project licence holder has requested amendment to transfer this licence to another establishmet.
         </p>
       </div>
-      <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+      <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     {% if data['add-establishments'].length > 1 %}
@@ -62,7 +62,7 @@
         <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
       {% endif %}
       <p>{{data["add-establishments"]}}</p>
-      <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+      <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     {% endif %}
 
@@ -75,15 +75,15 @@
             <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           {% endif %}
           <p>{{data["est1-name"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        
+
           <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
           {% if data['est1-reason'] != "Because my other establishment doesn't have the correct facilities" %}
             <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           {% endif %}
           <p>{{data["est1-reason"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
@@ -92,7 +92,7 @@
             <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           {% endif %}
           <p>{{data["est1-who"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
         </div>
       </div>
@@ -105,20 +105,20 @@
           <h2 class="govuk-heading-s">Establishment name</h2>
           <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           <p>{{data["est2-name"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        
+
           <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
           <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           <p>{{data["est2-reason"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
           <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
           <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
           <p>{{data["est2-who"]}}</p>
-          <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+          <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
         </div>
       </div>
@@ -131,7 +131,7 @@
       {% endif %}
       <p>Please read the Code of Practice for the housing and care of animals bred, supplied, or used for scientific purposes before you answer.</p>
       <p>{{data["est-care"]}}</p>
-      <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+      <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     {% endif %}
 
@@ -139,7 +139,7 @@
       <h2 class="govuk-heading-s">If any establishment does not meet these requirements, or if any type of animal you're using is not listed in the Code of Practice, explain how you will ensure that housing, husbandry, and care conditions are appropriate for your project.</h2>
       <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
       <p>{{data["est-care-2"]}}</p>
-      <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+      <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     {% endif %}
 

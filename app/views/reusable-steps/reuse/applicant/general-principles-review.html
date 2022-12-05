@@ -18,31 +18,31 @@
           <span style="font-size: 18px;font-weight:bold;">Please review your answers for:</span >
         </div>
         <h1 class="govuk-panel__title">General principles</h1>
-      </div>    
+      </div>
 
 
       <h3 class="govuk-heading-s">Unnecessary duplication of work must be avoided. Under what circumstances would you knowingly duplicate work?</h3>
       <p>{{data['general-duplicate']}}</p>
       <p><a href="#">Edit</a></p>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-      
+
       <h3 class="govuk-heading-s">Will all of your protocols or experiments use animals of both sexes?</h3>
       <p>{{data['general-both']}}</p>
       <p><a href="#">Edit</a></p>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-      
+
       {% if data['general-both'] == 'No' %}
       <h3 class="govuk-heading-s">Why will you use animals of a single sex in some protocols or experiments?</h3>
       <p>{{data['general-why']}}</p>
       <p><a href="#">Edit</a></p>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
       {% endif %}
-      
+
       {% include "includes/mark-section-complete.html" %}
       <br>
       <form action="ppl-index" method='POST'>
         <input type="hidden" name="general-complete" value="true">
-        <button class="govuk-button">Continue</button>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>
       </form>
       <span class=""><a href="#">List of sections</a></span>
   </div>

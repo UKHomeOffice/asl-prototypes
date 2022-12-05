@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
       <ul class="protocol-nav">
@@ -68,11 +68,11 @@
 
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l">Protocols</h2>
-      
+
 
       <!--  -->
 
-  
+
 <div id="first-protocol" class="protocol-container">
       <span class="badge changed govuk-body">Changed</span>
 
@@ -102,7 +102,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div id='protocol-content' class="protocol-content hide">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -130,7 +130,7 @@
                  {{data['protocols-1']}}
 
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
                 <div class="govuk-form-group">
                   <div class="govuk-radios">
@@ -142,7 +142,7 @@
                     {{data['protocols-2']}}
                   </div>
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
                 <div class="govuk-form-group">
                   <label class="govuk-label--s" for="protocols-3-additional-1">What proportion of animals will experience this severity?</label>
@@ -152,7 +152,7 @@
                   <span id="holding-hint" class="govuk-hint"></span>
                   {{data["protocols-3"]}}
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
                 <div class="govuk-form-group">
                   <label class="govuk-label--s" for="protocols-4-additional-1">Why are you proposing this severity category?</label>
@@ -162,7 +162,7 @@
                   <span id="holding-hint" class="govuk-hint"></span>
                   {{data["protocols-4"]}}
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -177,9 +177,9 @@
                     </span>
                     {{data["protocols-5"]}}
                   </fieldset>
-                  
+
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
                 <div class="govuk-form-group">
                   <label class="govuk-label--s" for="protocols-6-additional-1">What outputs are expected to arise from this protocol?</label>
@@ -189,7 +189,7 @@
                   <span id="holding-hint" class="govuk-hint">For example, test results, phenotypic information, or products.</span>
                   {{data["protocols-6"]}}
                 </div>
-                <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+                <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
 
 
                 </td>
@@ -226,15 +226,15 @@
             </tbody>
           </table>
 
-          
+
           <br>
            <p class="protocol-controls">
-            Reorder: 
-            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
-            or 
+            Reorder:
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a>
+            or
             <a href="#" onclick="MoveProtocolDown();">Down</a>
             <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
-            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
           </p>
         </div>
       </div>
@@ -242,12 +242,12 @@
 
 
 
-  
+
     {% if data['poles-question-10'].length > 1 %}
       <h2 class="govuk-heading-s">What arrangements will be made to assure an animal's welfare during transport, particularly if they are being moved after the start of regulated procedures?</h2>
       <p><span class="badge changed govuk-body">Changed</span> &emsp;<span class="hod-file-empty side-space icon-small"></span><a href="#">See what's changed</a></p>
       <p>{{data["poles-question-10"]}}</p>
-      <p><button class="govuk-button govuk-button--secondary">Comment</button></p>
+      <p><button data-module="govuk-button" class="govuk-button govuk-button--secondary">Comment</button></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     {% endif %}
 

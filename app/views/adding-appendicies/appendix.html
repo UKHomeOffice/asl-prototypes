@@ -12,12 +12,12 @@
   function DuplicateProtocol() {
     var itm = event.target.parentNode.parentNode.parentNode
         itmName = event.target.parentNode.parentNode.parentNode.getElementsByClassName("protocol-title")[0].innerHTML
-        itmCopyName = itmName + " (copy)" 
+        itmCopyName = itmName + " (copy)"
         cln = itm.cloneNode(true);
 
     event.preventDefault();
     cln.getElementsByClassName("protocol-title")[0].innerHTML = itmName + " (Copy)"
-    itm.insertAdjacentElement('afterend', cln); 
+    itm.insertAdjacentElement('afterend', cln);
   }
 
   function RemoveProtocol() {
@@ -35,7 +35,7 @@
     cln.classList.remove("hide");
     document.getElementById("appendixList").appendChild(cln);
     event.preventDefault();
-   
+
   }
 
 
@@ -59,7 +59,7 @@
         <div class="protocol-header-in-progress">
           <h3 class="govuk-heading-m">
             Appendix
-            <a href="#" class="govuk-body float-right" onclick="RemoveProtocol();">Remove apendix</a> 
+            <a href="#" class="govuk-body float-right" onclick="RemoveProtocol();">Remove apendix</a>
           </h3>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--s" for="event-name">
@@ -77,11 +77,11 @@
       </div>
 
       <div id="appendixList"></div>
-      
-      <a href="#" class="govuk-button govuk-button--secondary" onclick="AddProtocol();">Add apendix</a> 
+
+      <a href="#" class="govuk-button govuk-button--secondary" onclick="AddProtocol();">Add apendix</a>
 
       <p>
-        <button class="govuk-button">Continue</button>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>
         <span class="secondary-link"><a href="#">List of sections</a></span>
       </p>
 

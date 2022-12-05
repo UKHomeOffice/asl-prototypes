@@ -14,14 +14,14 @@
       {% include "includes/list-of-sections.html" %}
     </div>
   </div>
-  
-  
-  
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l">Introductory details</h1>
       {% include "includes/nts-warning-small.html" %}
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Change answers in this section
@@ -35,12 +35,12 @@
         </div>
       </details>
       <h2 class="govuk-heading-s">
-        Project duration 
+        Project duration
       </h2>
       <p>
         5 years 0 Months
       </p>
-      
+
       <h2 class="govuk-heading-s">
         Project purpose
       </h2>
@@ -60,7 +60,7 @@
         Key words
       </h2>
       <p>
-        Mental illness, Central Nervous System, Mood disorders      
+        Mental illness, Central Nervous System, Mood disorders
       </p>
       <table class="govuk-table">
         <caption class="govuk-table__caption">Animal types and life stages</caption>
@@ -82,7 +82,7 @@
         </tbody>
       </table>
       <form action="nts-intro-review" method="post">
-        <button class="govuk-button">Continue</button><a href="#" class="secondary-link">List of sections</a>
+        <button data-module="govuk-button" class="govuk-button">Continue</button><a href="#" class="secondary-link">List of sections</a>
       </form>
     </div>
   </div>

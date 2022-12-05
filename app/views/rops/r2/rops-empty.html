@@ -37,10 +37,10 @@
     {% if data['rowCount'] != 0 %}
     {% include "includes/toaster.html" %}
     {% endif %}
-    
+
     {% include "includes/status-banner-draft-rops.html" %}
     {% include "includes/licence-header-rops-research.html" %}
-    
+
       <h2 class="govuk-heading-m">Change set up details</h2>
       <p>View and change details used to set up this return, such as purposes or place of birth.</p>
       <p><a href="setup-complete">Change set up details</a></p>
@@ -52,7 +52,7 @@
         <a href="javascript:void()">View table in full screen</a>&emsp;
       </span>
       <div id="fateComparison" class="modal modal-dialoge container" style="z-index: 10;">
-      
+
         <!-- Modal content -->
         <div class="modal-content modal-content-table" >
           <div class="diff-window">
@@ -60,18 +60,18 @@
               <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
                 Procedures
                 <span class="govuk-body"><a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a></span>
-              </h2>  
+              </h2>
             </div>
             <div class="diff-window-body" style="background-color: #f3f3f3;">
-              
+
               <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-                <div class="fullscreen-scrollable-table" >          
-        
+                <div class="fullscreen-scrollable-table" >
+
                   <table class="govuk-table  table-background" style="font-size: 14px; margin: 0 auto;" >
-                  
+
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -154,7 +154,7 @@
                         {{data['row-1']['procedure-no'][3]}}
                       {% elif item  === 'Severe' %}
                         {{data['row-1']['procedure-no'][4]}}
-                      {% endif %} 
+                      {% endif %}
                     </td>
                     <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
                   </tr>
@@ -162,7 +162,7 @@
                   {% set tableRows = data['row-1']['severity'].length %}
               {% endif %}
 
-      
+
               {% if data['row-2']['severity'].length > 5 %}
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">{{tableRows + 1}}</td>
@@ -214,7 +214,7 @@
                       <td class="govuk-table__cell">–</td>
                     {% endif %}
                     <td class="govuk-table__cell">{{item}}</td>
-                    <td class="govuk-table__cell"> 
+                    <td class="govuk-table__cell">
                     {% if item === 'Sub-threshold' %}
                       {{data['row-2']['procedure-no'][0]}}
                     {% elif item  === 'Non-recovery' %}
@@ -361,7 +361,7 @@
                       {{data['row-4']['procedure-no'][3]}}
                     {% elif item  === 'Severe' %}
                       {{data['row-4']['procedure-no'][4]}}
-                    {% endif %} 
+                    {% endif %}
                     </td>
                     <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
                   </tr>
@@ -369,25 +369,25 @@
                   {% set tableRows = data['row-4']['severity'].length %}
               {% endif %}
             </tbody>
-          
+
                   </table>
                 </div>
-               
+
               </div>
             </div>
           </div>
         </div>
-      
+
       </div>
       {% set tableRows = 0 %}
 
-      
+
       <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
         <div class="fullscreen-scrollable-table">
           <table class="govuk-table  table-background" style="font-size: 14px;">
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -470,7 +470,7 @@
                         {{data['row-1']['procedure-no'][3]}}
                       {% elif item  === 'Severe' %}
                         {{data['row-1']['procedure-no'][4]}}
-                      {% endif %} 
+                      {% endif %}
                     </td>
                     <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
                   </tr>
@@ -478,7 +478,7 @@
                   {% set tableRows = data['row-1']['severity'].length %}
               {% endif %}
 
-      
+
               {% if data['row-2']['severity'].length > 5 %}
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">{{tableRows + 1}}</td>
@@ -530,7 +530,7 @@
                       <td class="govuk-table__cell">–</td>
                     {% endif %}
                     <td class="govuk-table__cell">{{item}}</td>
-                    <td class="govuk-table__cell"> 
+                    <td class="govuk-table__cell">
                     {% if item === 'Sub-threshold' %}
                       {{data['row-2']['procedure-no'][0]}}
                     {% elif item  === 'Non-recovery' %}
@@ -677,7 +677,7 @@
                       {{data['row-4']['procedure-no'][3]}}
                     {% elif item  === 'Severe' %}
                       {{data['row-4']['procedure-no'][4]}}
-                    {% endif %} 
+                    {% endif %}
                     </td>
                     <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
                   </tr>
@@ -686,9 +686,9 @@
               {% endif %}
             </tbody>
           </table>
-         
+
           <br>
-         
+
         </div>
       </div>
 
@@ -701,7 +701,7 @@
       {% if data['rowCount'] is not number %}
         <form action="rops-empty" method="POST">
           <input type="hidden" name="rowCount" value="0">
-          <button class="float-right">Reset</button>
+          <button data-module="govuk-button" class="float-right">Reset</button>
         </form>
       {% endif %}
       <style>
@@ -725,10 +725,10 @@
           overflow-y: hidden;
         }
 
-     
+
       </style>
-      
-  </div>  
+
+  </div>
 </div>
 
 <style>

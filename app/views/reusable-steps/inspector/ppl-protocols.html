@@ -26,7 +26,7 @@
       $(button).text($(button).text() == 'Close' ? 'Open' : 'Close');
       $(stepContainer).toggleClass("hide")
       console.log("hello")
-    }; 
+    };
 
     function toggleAllSteps() {
       $( ".stepContainer").toggleClass("hide")
@@ -36,13 +36,13 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      {% include "includes/licence-header-ppl-application.html" %}                
+      {% include "includes/licence-header-ppl-application.html" %}
     </div>
   </div>
-  
+
   <div class="govuk-grid-row">
-      {% include "includes/ppl-application-sidebar-steps.html" %}                
-      
+      {% include "includes/ppl-application-sidebar-steps.html" %}
+
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Protocols</h1>
 
@@ -50,18 +50,18 @@
       <p>
         <a href="#">View summary table</a>
       </p>
-        
+
       <h2 class="govuk-heading-m">General constraints</h2>
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-     
-      <details class="govuk-details" data-module="govuk-details">
+
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
         XXXX
 
         <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
@@ -87,8 +87,8 @@
           </li>
         </ul>
       </div>
-    </details>   
-    
+    </details>
+
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-complete">
         <h3 class="govuk-heading-m">
@@ -119,52 +119,52 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div class="protocol-content hide">
-        
-        <button class="accordion">Protocol details</button>
+
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel">
-          
+
           <h3 class="govuk-heading-s">
             Briefly describe the purposes of this protocol
           </h3>
           <p class="govuk-hint">
-            Ensure that you state any relevant regulatory 
+            Ensure that you state any relevant regulatory
           </p>guidelines.
-          
+
           <p>
             To optionally induce seizures and then to optionally use imaging, physiological recordings and behavioural testing of transduced, GA, wild type and control rodents to study the effects of the seizures on different types of neural cell in vivo.
           </p>
-          
-          
+
+
           <h3 class="govuk-heading-s">
             Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
           </h3>
           <p>
             Severe
           </p>
-          
+
           <h3 class="govuk-heading-s">
             What proportion of animals will experience this severity?
           </h3>
           <p>
             75% of animals will have status epilepticus induced as well as cranial surgery this combination of procedures would be classed as severe. The remaining 25% of animals will be in control groups, which would be classed as moderate.
           </p>
-          
+
           <h3 class="govuk-heading-s">
             Why are you proposing this severity category?
           </h3>
           <p>
             The recovery surgery for in vivo imaging itself is classified as moderate in our current project licence. However we propose to combine this with induction of status epilepticus. Given the additional burden on the animal we now classify this protocol as severe.
           </p>
-          
+
           <h3 class="govuk-heading-s">
             Locations where this protocol can be carried out
           </h3>
           <p class="govuk-hint">
             Select all that apply.
           </p>
-          
+
           <p>
             University of Croydon
           </p>
@@ -174,17 +174,17 @@
           <p class="govuk-hint">
             Select all that apply.
           </p>
-          
+
           <p>
             Identifying the brainstem circuits affected by acute and chronic seizures
           </p>
           <p>
-            The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures          
+            The role of microglia in altering the activity of key cardiorespiratory neurons affected by acute and chronic seizures
           </p>
 
         </div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Mice
@@ -239,7 +239,7 @@
           <h3 class="govuk-heading-s">
             What is the maximum number of animals that will be used on this protocol?
           </h3>
-          
+
           <p>
             300
           </p>
@@ -255,7 +255,7 @@
           </p>
         </div>
 
-        <button class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Will this protocol use any genetically altered animals?
@@ -274,19 +274,19 @@
             <li>
               Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
             </li>
-            
+
             <li>
               Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
             </li>
-            
+
             <li>
               Particular genes deleted or knocked in to analyze their function
             </li>
-            
+
             <li>
               Floxed alleles of interest for subsequent conditional deletion for analysis of function
             </li>
-            
+
             <li>
               Other modifications that enable specific and conditional targeting/expression of genes and constructs
             </li>
@@ -300,15 +300,15 @@
           </p>
         </div>
 
-        <button class="accordion">Steps</button>
+        <button data-module="govuk-button" class="accordion">Steps</button>
         <div class="panel">
           <section class="step completed">
             <div class="stepToggle">
               <h2 class="govuk-heading-s">
                 Step: <span class="quick-ref">Creation of genetically altered embryos</span>
-                <button class="stepToggleButton float-right" onClick='toggleStep(this)'>Open</button>
+                <button data-module="govuk-button" class="stepToggleButton float-right" onClick='toggleStep(this)'>Open</button>
               </h2>
-              
+
             </div>
             <div class="stepContainer hide">
               <div class="review step-descritpion">
@@ -329,7 +329,7 @@
           </section>
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
           	What will happen to animals at the end of this protocol?​
@@ -350,9 +350,9 @@
           </div>
         </div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel">
-                    
+
           <h3 class="govuk-heading-s">
             Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
           </h3>
@@ -415,9 +415,9 @@
 
         </div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel">
-          
+
           <h3 class="govuk-heading-s">
             What outputs are expected to arise from this protocol?
           </h3>
@@ -463,7 +463,7 @@
             Where relevant, explain how and when pilot studies will be used.
           </h3>
           <p>
-            The KA induced SE model (via hippocampal cannula) is well studied and used in many labs. Dr Smith has used this model and there is no need for further pilot work to validate this model. We shall however perform pilot work to ensure that combination of this method with the in vivo imaging method does not cause unnecessary suffering. 
+            The KA induced SE model (via hippocampal cannula) is well studied and used in many labs. Dr Smith has used this model and there is no need for further pilot work to validate this model. We shall however perform pilot work to ensure that combination of this method with the in vivo imaging method does not cause unnecessary suffering.
           </p>
 
           <p>
@@ -514,11 +514,11 @@
             How will experiments and data analysis be randomised and blinded?
           </h3>
           <p class="govuk-hint">
-            Animals will be randomised to different groups by standard means. 
+            Animals will be randomised to different groups by standard means.
           </p>
 
           <p>
-            Blinding will not be possible in Aim 1 as this will record neuronal activity from different nuclei and it will be obvious what these nuclei are from inspection of the images. 
+            Blinding will not be possible in Aim 1 as this will record neuronal activity from different nuclei and it will be obvious what these nuclei are from inspection of the images.
           </p>
 
           <p>
@@ -587,7 +587,7 @@
 
         </div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Why is each type of animal, experimental model, and/or method selected for this protocol:
@@ -596,7 +596,7 @@
             a) the most appropriate scientific approach?​
           </h3>
           <p>
-            We have determined a detailed methodology for in vivo imaging of brainstem nuclei that enables us to image activity in mice in the awake non-anesthetized state. As anaesthesia alters neural activity and will change the way that seizures may affect the brainstem nuclei, and indeed alter the operation of those nuclei themselves we need to perform this on mice in the awake state. 
+            We have determined a detailed methodology for in vivo imaging of brainstem nuclei that enables us to image activity in mice in the awake non-anesthetized state. As anaesthesia alters neural activity and will change the way that seizures may affect the brainstem nuclei, and indeed alter the operation of those nuclei themselves we need to perform this on mice in the awake state.
           </p>
 
           <p>
@@ -604,15 +604,15 @@
           </p>
 
           <p>
-            We have considered the Pilocarpine model. This has the following disadvantages: 1) mortality rate is high to the detriment of animal welfare; and 2) pilocarpine must be injected peripherally and therefore there is no specificity in the brain structures affected, therefore there will be greater variability in the study and underlying mechanisms. Which in turn will mean a greater use of animals. 
+            We have considered the Pilocarpine model. This has the following disadvantages: 1) mortality rate is high to the detriment of animal welfare; and 2) pilocarpine must be injected peripherally and therefore there is no specificity in the brain structures affected, therefore there will be greater variability in the study and underlying mechanisms. Which in turn will mean a greater use of animals.
           </p>
 
           <p>
-            We have also considered the electroconvulsive seizure model (via implanted electrodes) -quite apart from the welfare issues, this model is incompatible with our recording methods. 
+            We have also considered the electroconvulsive seizure model (via implanted electrodes) -quite apart from the welfare issues, this model is incompatible with our recording methods.
           </p>
 
           <p>
-            Other models include pentylene tetrazole (PTZ) model and similar models only induce acute seizures and not chronic seizures and therefore will not allow us to tackle the key scientific questions as to why chronic seizures recruit additional mechanisms compared to acute seizures. 
+            Other models include pentylene tetrazole (PTZ) model and similar models only induce acute seizures and not chronic seizures and therefore will not allow us to tackle the key scientific questions as to why chronic seizures recruit additional mechanisms compared to acute seizures.
           </p>
 
           <p>
@@ -623,7 +623,7 @@
             b) the most refined for the purpose?
           </h3>
           <p>
-            We have considerably refined our surgical methods for performing the in vivo imaging. The incidence of unexpected adverse effects is now very low. 
+            We have considerably refined our surgical methods for performing the in vivo imaging. The incidence of unexpected adverse effects is now very low.
           </p>
 
           <p>
@@ -639,7 +639,7 @@
           </p>
 
           <p>
-            We distinguish status epilepticus from electrographic seizures and behavioural seizures. 
+            We distinguish status epilepticus from electrographic seizures and behavioural seizures.
           </p>
 
           <p>
@@ -689,11 +689,11 @@
             Why scientifically do the animals need to suffer to this degree?
           </h3>
           <p>
-            Our experience is that the surgical procedures themselves cause minimal suffering following recovery from them. 
+            Our experience is that the surgical procedures themselves cause minimal suffering following recovery from them.
           </p>
 
           <p>
-            As we wish to study how seizure activity alters the functioning of brainstem cardiorespiratory nuclei, we have no option but to induce seizure activity. 
+            As we wish to study how seizure activity alters the functioning of brainstem cardiorespiratory nuclei, we have no option but to induce seizure activity.
           </p>
 
           <h3 class="govuk-heading-s">
@@ -749,7 +749,7 @@
           </p>
 
           <p>
-            Based on the previous literature, microglia will be pharmacologically preconditioned in mice with a low dose (0.5-1.0 mg/kg i.p.) of LPS (E. coli) for 4 days before or after induction of status epilepticus (Burguillos, M.A., et al., 2011; Chen, Z., et al., 2012; Dmowska, M., et al., 2010; Eslami, M., et al., 2015). 
+            Based on the previous literature, microglia will be pharmacologically preconditioned in mice with a low dose (0.5-1.0 mg/kg i.p.) of LPS (E. coli) for 4 days before or after induction of status epilepticus (Burguillos, M.A., et al., 2011; Chen, Z., et al., 2012; Dmowska, M., et al., 2010; Eslami, M., et al., 2015).
           </p>
 
           <p>
@@ -798,43 +798,43 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div class="protocol-content hide">
-        
-        <button class="accordion">Protocol details</button>
+
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel">
-          
+
           <h3 class="govuk-heading-s">
             Briefly describe the purposes of this protocol
           </h3>
           <p class="govuk-hint">
-            Ensure that you state any relevant regulatory 
+            Ensure that you state any relevant regulatory
             guidelines.</p>
-          
+
           <p>To produce, maintain and provide genetically altered mice.</p>
-          
-          
+
+
           <h3 class="govuk-heading-s">
             Given the controls and limitations in place, what is the highest severity that an animal could experience in this protocol?
           </h3>
           <p>
             Mild
           </p>
-          
+
           <h3 class="govuk-heading-s">
             What proportion of animals will experience this severity?
           </h3>
           <p>
             All animals – we expect the phenotype to be sub-threshold
           </p>
-          
+
           <h3 class="govuk-heading-s">
             Why are you proposing this severity category?
           </h3>
           <p>
             Animals are not expected to show harmful phenotypes that are more than minor or transient.
           </p>
-          
+
           <h3 class="govuk-heading-s">
             Locations where this protocol can be carried out
           </h3>
@@ -850,7 +850,7 @@
           <p class="govuk-hint">
             Select all that apply.
           </p>
-          
+
           <ul class="govuk-list govuk-list--bullet">
             <li>
               ATP release during hypoxic-ischaemic neonatal brain injury
@@ -871,7 +871,7 @@
 
         </div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Mice
@@ -944,7 +944,7 @@
           </p>
         </div>
 
-        <button class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Will this protocol use any genetically altered animals?
@@ -963,19 +963,19 @@
             <li>
               Cre transgenes in particular subpopulations of neural cells to enable specific targeting of these neurons
             </li>
-            
+
             <li>
               Ca2+ reporters in specific neural cell subpopulations to enable recording of their activity
             </li>
-            
+
             <li>
               Particular genes deleted or knocked in to analyze their function
             </li>
-            
+
             <li>
               Floxed alleles of interest for subsequent conditional deletion for analysis of function
             </li>
-            
+
             <li>
               Other modifications that enable specific and conditional targeting/expression of genes and constructs
             </li>
@@ -989,14 +989,14 @@
           </p>
         </div>
 
-        <button class="accordion">Steps</button>
+        <button data-module="govuk-button" class="accordion">Steps</button>
         <div class="panel">
           <ul class="govuk-list">
             <li>Step 1: <a href="#">Generation of genetically altered embryos</a></li>
           </ul>
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
           	What will happen to animals at the end of this protocol?​
@@ -1031,9 +1031,9 @@
           </p>
         </div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel">
-                    
+
           <h3 class="govuk-heading-s">
             Summarise the typical experience or end-to-end scenario for an animal being used in this protocol.
           </h3>
@@ -1056,9 +1056,9 @@
           </p>
         </div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel">
-          
+
           <h3 class="govuk-heading-s">
             What outputs are expected to arise from this protocol?
           </h3>
@@ -1078,7 +1078,7 @@
           </p>
         </div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel">
           <h3 class="govuk-heading-s">
             Why is each type of animal, experimental model, and/or method selected for this protocol:
@@ -1125,7 +1125,7 @@
             No
           </p>
         </div>
-        
+
       </div>
       {% set previousPage = '#' %}
       {% set previousPageTitle = 'POLEs' %}
@@ -1134,7 +1134,7 @@
       {% include "includes/application-footer-nav.html" %}
     </div>
 
-    
+
 
     </div>
   </div>

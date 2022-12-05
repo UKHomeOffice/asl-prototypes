@@ -19,15 +19,15 @@
         <p>
           <dl class="govuk-body">
             <dt>Course name</dt>
-            <dd>{{ data['course-name'] }}</dd> 
+            <dd>{{ data['course-name'] }}</dd>
             <dt>Project licence number</dt>
             <dd>{{ data['ppl-number'] }}</dd>
             <dt>Project licence title</dt>
             <dd>Training in microvascular surgery</dd>
             <dt>Course start date</dt>
             <dd>{{ data['course-start-date-day'] }} / {{ data['course-start-date-month'] }} / {{ data['course-start-date-year'] }}</dd>
-             
-            
+
+
 
             <dt>Animals to be used</dt>
             <dd>{{ data['animal-types'] }}</dd>
@@ -51,7 +51,7 @@
           <span class="govuk-hint"></span>
           <input class="govuk-input" id="surname" name="surname" type="text">
         </div>
-        
+
         <div class="govuk-form-group">
           <label class="govuk-label--s" for="email">
             Email
@@ -59,7 +59,7 @@
           <span class="govuk-hint"></span>
           <input class="govuk-input" id="email" name="email" type="text">
         </div>
-        
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" role="group" aria-describedby="users-dob-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -96,16 +96,16 @@
                 </div>
               </div>
             </fieldset>
-          </div> 
+          </div>
           <div class="govuk-form-group">
             <label class="govuk-label--s" for="personal-statement">
               Training need
             </label>
-            <span id="personal-statement-hint" class="govuk-hint">Include details about the participant’s organisation, job title, specialism and grade (for example, trainee doctor or registrar). Explain how their career will benefit from training.  
+            <span id="personal-statement-hint" class="govuk-hint">Include details about the participant’s organisation, job title, specialism and grade (for example, trainee doctor or registrar). Explain how their career will benefit from training.
             </span>
             <textarea class="govuk-textarea" id="personal-statement" name="personal-statement" rows="5" aria-describedby="more-detail-hint"></textarea>
-          </div>       
-          <button class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
+          </div>
+          <button data-module="govuk-button" class="govuk-button">Continue</button><a href="javascript:history.go(-1)" class="secondary-link">Cancel</a>
       </form>
     </div>
   </div>

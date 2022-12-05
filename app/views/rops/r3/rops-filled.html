@@ -15,7 +15,7 @@
       <h2 class="govuk-heading-m">Return details</h2>
       <p>View and edit details about this return, including information used to customise procedures. </p>
       <p><a href="setup-complete">Show return details</a></p>
-      
+
       <h2 class="govuk-heading-m">Procedures</h2>
       <p>Add details for procedures completed in 2021 using a form customised to this project.</p>
       <a href="add-procedure.html" class="govuk-button">Add procedure</a>
@@ -24,7 +24,7 @@
           <table class="govuk-table  table-background" style="font-size: 14px;">
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -41,8 +41,8 @@
                 <th scope="col" class="govuk-table__header">Comment for Home Office</th>
                 <th scope="col" class="govuk-table__header">Edit</th>
               </tr>
-              
-              
+
+
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">1</td>
                 <td class="govuk-table__cell">Mice</td>
@@ -57,8 +57,8 @@
                 <td class="govuk-table__cell">-</td>
                 <td class="govuk-table__cell"><a href="add-procedure-1">Edit</a></td>
               </tr>
-              
-              
+
+
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">2</td>
                 <td class="govuk-table__cell">Mice</td>
@@ -73,8 +73,8 @@
                 <td class="govuk-table__cell">-</td>
                 <td class="govuk-table__cell"><a href="add-procedure-2">Edit</a></td>
               </tr>
-              
-              
+
+
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">3</td>
                 <td class="govuk-table__cell">Mice</td>
@@ -103,7 +103,7 @@
       {% if data['rowCount'] is not number %}
         <form action="rops-empty" method="POST">
           <input type="hidden" name="rowCount" value="0">
-          <button class="float-right">Reset</button>
+          <button data-module="govuk-button" class="float-right">Reset</button>
         </form>
       {% endif %}
       <style>
@@ -127,10 +127,10 @@
           overflow-y: hidden;
         }
 
-     
+
       </style>
-      
-  </div>  
+
+  </div>
 </div>
 
 <style>

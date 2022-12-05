@@ -19,13 +19,13 @@
         </div>
         <h1 class="govuk-panel__title">Steps</h1>
       </div>
-      
+
       {% if previousStep > 0 %}
       <section class="step completed">
         <h3 class="govuk-heading-s">
           Step 1: {{data['steps-reference-1']}}
-          <span class="light smaller"> 
-            
+          <span class="light smaller">
+
           </span>
         </h3>
         <div class="review">
@@ -65,8 +65,8 @@
     <section class="step completed">
       <h3 class="govuk-heading-s">
         Step 2: {{data['steps-reference-2']}}
-        <span class="light smaller"> 
-          
+        <span class="light smaller">
+
         </span>
       </h3>
       <div class="review">
@@ -106,8 +106,8 @@
     <section class="step completed">
       <h3 class="govuk-heading-s">
         Step 3: {{data['steps-reference-3']}}
-        <span class="light smaller"> 
-          
+        <span class="light smaller">
+
         </span>
       </h3>
       <div class="review">
@@ -143,12 +143,12 @@
       {% endif %}
     </section>
   {% endif %}
-        
+
       {% include "includes/mark-section-complete.html" %}
       <br>
       <form action="ppl-index" method='POST'>
         <input type="hidden" name="steps-complete" value="true">
-        <button class="govuk-button">Continue</button>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>
       </form>
       <span class=""><a href="#">List of sections</a></span>
   </div>

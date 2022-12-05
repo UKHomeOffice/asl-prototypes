@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
- 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% if data['rowEditing'] > 0 %}
@@ -16,18 +16,18 @@
 
       {% include "includes/status-banner-draft-rops.html" %}
       {% include "includes/licence-header-rops-research.html" %}
-      
-      
+
+
       <h2 class="govuk-heading-m">Change set up details</h2>
       <p>View and edit details used to set up this return.</p>
-<details class="govuk-details" data-module="govuk-details">
+<details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show set up details
           </span>
         </summary>
         <div class="govuk-details__text">
-          
+
           <h3 class="govuk-heading-m">General details <span class="govuk-body float-right"><a href="setup-any">Edit general details section</a></span></h3>
           <dl>
             <dt>
@@ -67,10 +67,10 @@
               No
             </dd>
           </dl>
-    
-    
+
+
           <hr class=" govuk-section-break--l govuk-section-break--visible">
-          
+
           <h3 class="govuk-heading-m">Animals  <span class="govuk-body float-right"><a href="setup-animals">Edit animals section</a></span></h3>
           <dl>
             <dt>
@@ -107,16 +107,16 @@
               Yes
             </dd>
           </dl>
-    
+
           <hr class=" govuk-section-break--l govuk-section-break--visible">
-          
+
           <h3 class="govuk-heading-m">Purposes <span class="govuk-body float-right"><a href="edit-purpose">Edit purposes section</a></span></h3>
           <dl>
             <!-- <dt>
               Purpose 1
             </dt>
             <dd>
-              Basic research 
+              Basic research
             </dd>
             <dt>
               Sub-purpose 1
@@ -157,7 +157,7 @@
               Yes
             </dd>
           </dl>
-          
+
         </div>
       </details>
       <h2 class="govuk-heading-m">Procedures</h2>
@@ -168,7 +168,7 @@
         <a href="javascript:void()">View table in full screen</a>&emsp;
       </span>
       <div id="fateComparison" class="modal modal-dialoge container" style="z-index: 10;">
-      
+
         <!-- Modal content -->
         <div class="modal-content modal-content-table" >
           <div class="diff-window">
@@ -176,17 +176,17 @@
               <h2 class="govuk-heading-l" style="margin-bottom: 0px;">
                 Procedures
                 <span class="govuk-body"><a href="javascript:void()" id="closeModal" class="float-right closeModal ">Close</a></span>
-              </h2>  
+              </h2>
             </div>
             <div class="diff-window-body" style="background-color: #f3f3f3;">
-              
+
               <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-                <div class="fullscreen-scrollable-table" >          
-        
+                <div class="fullscreen-scrollable-table" >
+
                   <table class="govuk-table  table-background" style="font-size: 14px; margin: 0 auto;" >
                     <caption class="govuk-table__caption"> </caption>
                     <thead class="govuk-table__head">
-                      
+
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -308,20 +308,20 @@
                     </tbody>
                   </table>
                 </div>
-               
+
               </div>
             </div>
           </div>
         </div>
-      
+
       </div>
       <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-        <div class="fullscreen-scrollable-table">          
+        <div class="fullscreen-scrollable-table">
 
           <table class="govuk-table  table-background" style="font-size: 14px;">
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -443,9 +443,9 @@
             </tbody>
           </table>
         </div>
-       
+
       </div>
-      
+
       <hr>
       <form action="submit-comment" method="post">
         <h2 class="govuk-heading-m">Submit return</h2>
@@ -455,7 +455,7 @@
       {% if data['rowCount'] is not number %}
         <form action="rops-empty" method="POST">
           <input type="hidden" name="rowCount" value="0">
-          <button class="float-right">Reset</button>
+          <button data-module="govuk-button" class="float-right">Reset</button>
         </form>
       {% endif %}
       <style>
@@ -479,10 +479,10 @@
           overflow-y: hidden;
         }
 
-     
+
       </style>
-      
-  </div>  
+
+  </div>
 </div>
 
 <style>

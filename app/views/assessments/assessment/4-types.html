@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -34,10 +34,10 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li class="selected"><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
-        <li><a href="10-hba">Harm-benefit analysis</a></li>         
+        <li><a href="12-referrals">Referrals</a></li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -45,7 +45,7 @@
 
       <form action="assessment-overview" method="post">
 
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show standards for use of animals
@@ -58,13 +58,13 @@
             	The animals’ origins are justified and relevant to the project.
             </li>
             <li>
-              Schedule 2 species are purpose bred, or there is a scientific justification for using Schedule 2 species that aren't purpose bred. 
+              Schedule 2 species are purpose bred, or there is a scientific justification for using Schedule 2 species that aren't purpose bred.
             </li>
             <li>
-              Non-Schedule 2 species are from a source that can supply animals of a sufficient quality to produce satisfactory outputs. 
+              Non-Schedule 2 species are from a source that can supply animals of a sufficient quality to produce satisfactory outputs.
             </li>
             <li>
-              Stray animals will not be used. 
+              Stray animals will not be used.
             </li>
             <li>
               There is adequate competence to undertake decision-making about the health and welfare of animals kept alive
@@ -72,7 +72,7 @@
           </ul>
           [Lots more dynamic content depending on animal type]
           <!-- <h3 class="govuk-heading-s">
-            Cats, dogs & equidae 
+            Cats, dogs & equidae
           </h3>
           are used where the programme of work can be achieved only by the use of:
           <ul class="govuk-list govuk-list--bullet">
@@ -80,7 +80,7 @@
               cats, dogs or equidae; or
             </li>
             <li>
-              other species which it is not practicable to obtain 
+              other species which it is not practicable to obtain
             </li>
           </ul>
 
@@ -90,14 +90,14 @@
           are used only if:
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              There is scientific justification that the purpose of the project cannot be achieved without using non-endangered primates; AND 
+              There is scientific justification that the purpose of the project cannot be achieved without using non-endangered primates; AND
             </li>
             <li>
               The project is for one of the following permitted purposes:
             </li>
-            translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+            translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man;
             <li>
-              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man;
             </li>
             basic research;
             <li>
@@ -111,16 +111,16 @@
           are used only if:
           <ul class="govuk-list govuk-list--bullet">
             <li>
-              There is scientific justification that the work cannot be achieved without using endangered primates; AND 
+              There is scientific justification that the work cannot be achieved without using endangered primates; AND
             </li>
             <li>
               The project is for one of the following permitted purposes:
             </li>
             <li>
-              translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+              translational or applied research for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man;
             </li>
             <li>
-              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man; 
+              the development, manufacture or testing of the quality, effectiveness and safety of drugs for the avoidance, prevention, diagnosis or treatment of debilitating or potentially life-threatening clinical conditions or their effects in man;
             </li>
             <li>
               research aimed at preserving the species of primate being used.
@@ -128,7 +128,7 @@
           </ul>
 
           <h3 class="govuk-heading-s">
-            Marmosets 
+            Marmosets
           </h3>
           <ul class="govuk-list govuk-list--bullet">
             <li>
@@ -138,7 +138,7 @@
 
 
           <h3 class="govuk-heading-s">
-            Endangered animals (not NHPs) 
+            Endangered animals (not NHPs)
           </h3>
           <ul class="govuk-list govuk-list--bullet">
             are used only if:
@@ -157,7 +157,7 @@
               the assessment, detection, regulation or modification of physiological conditions in man; or
             </li>
             <li>
-              the improvement of the welfare of animals reared for production purposes; 
+              the improvement of the welfare of animals reared for production purposes;
             </li>
             <li>
               research aimed at preserving the species of animal used
@@ -165,7 +165,7 @@
           </ul>
 
           <h3 class="govuk-heading-s">
-            Animals taken from the wild 
+            Animals taken from the wild
           </h3>
           <ul class="govuk-list govuk-list--bullet">
             <li>
@@ -189,12 +189,12 @@
 
         </div>
     </details>
-    
-   
+
+
         {% set assessSection = 'types' %}
         {% set assessSectionTitle = 'use of animals' %}
         {% include "includes/assessment-met.html" %}
-        
+
         <hr class=" govuk-section-break--l govuk-section-break--visible">
       <h2 class="govuk-heading-m">Add condition or authorisation</h2>
       <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
@@ -272,13 +272,13 @@
       </div>
       <br>
       <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
-    <br>  
+    <br>
 
       {% include "includes/assessment-complete.html" %}
 
-  
-      
-      
+
+
+
       </form>
 
 

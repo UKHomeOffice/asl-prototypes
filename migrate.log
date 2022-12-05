@@ -1,0 +1,6 @@
+2022-12-05T10:33:17.540Z
+cwd: /Users/user/Documents/Work/aspel/asl-prototypes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/user/.nvm/versions/node/v18.12.1/bin/node /Users/user/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]

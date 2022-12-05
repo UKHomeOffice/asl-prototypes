@@ -41,8 +41,8 @@
       <p>
       	Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.
       </p>
-      
-      <details class="govuk-details" data-module="govuk-details">
+
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
@@ -52,17 +52,17 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid ab voluptas suscipit porro illum aliquam, dolores velit voluptatum at accusamus, iste dignissimos dolor, voluptate quas illo vel natus sit?
         </div>
       </details>
-      
+
       <h2 class="govuk-heading-m">
         Protocol details
       </h2>
 
       <p>Please enter the details of the protocols that make up this project.</p>
 
-      <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+      <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add another protocol</button>
 
 
-      <div id="first-protocol" class="protocol-container"> 
+      <div id="first-protocol" class="protocol-container">
         <div class="protocol-header-complete">
           <h3 class="govuk-heading-m">
             <label for="option1" class="row-toggle protocol-title"><span class="row-toggle-copy">1: The first protocol</span></label>
@@ -89,7 +89,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div class="protocol-content hide">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -146,16 +146,16 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
            <p class="protocol-controls">
-            Reorder: 
-            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
-            or 
+            Reorder:
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a>
+            or
             <a href="#" onclick="MoveProtocolDown();">Down</a>
             <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
-            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
           </p>
         </div>
       </div>
@@ -192,7 +192,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
 
         <div id="protocol-amend-content" class="protocol-content hide">
           <table class="govuk-table">
@@ -390,20 +390,20 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button" id="protocol-continue">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button" id="protocol-continue">Continue</button>
+          </div>
           <br>
            <p class="protocol-controls">
-            Reorder: 
-            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
-            or 
+            Reorder:
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a>
+            or
             <a href="#" onclick="MoveProtocolDown();">Down</a>
             <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
-            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
           </p>
         </div>
       </div>
-      
+
 
       <div class="protocol-container">
         <div class="protocol-header-complete">
@@ -413,7 +413,7 @@
             <span class='protocol-title-link'><a href="#">Edit title</a></span>
             <span class="float-right badge">COMPLETE</span>
           </h3>
-          
+
           <p><strong>Severity category: Mild</strong></p>
 
           <table class="govuk-table">
@@ -434,7 +434,7 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
       <div class="protocol-content hide">
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -491,26 +491,26 @@
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-              <button class="govuk-button">Continue</button>
-          </div>  
+              <button data-module="govuk-button" class="govuk-button">Continue</button>
+          </div>
           <br>
            <p class="protocol-controls">
-            Reorder: 
-            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a> 
-            or 
+            Reorder:
+            <a href="#" onclick="MoveProtocolUp();" style="border-right: none; padding-right: 0px; margin-right: 0.25em;">Up</a>
+            or
             <a href="#" onclick="MoveProtocolDown();">Down</a>
             <a href="#" onclick="DuplicateProtocol();">Duplicate protocol</a>
-            <a href="#" onclick="RemoveProtocol();">Remove protocol</a> 
+            <a href="#" onclick="RemoveProtocol();">Remove protocol</a>
           </p>
         </div>
       </div>
 
       <p>
-        <button class="govuk-button govuk-button--secondary">Add another protocol</button>
+        <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add another protocol</button>
       </p>
       <p>
         <form action="ppl-protocols-review" method="post">
-          <button class="govuk-button">Continue</button>
+          <button data-module="govuk-button" class="govuk-button">Continue</button>
           <span class="secondary-link"><a href="#">List of sections</a></span>
         </form>
       </p>

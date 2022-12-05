@@ -30,10 +30,10 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
-        <li><a href="10-hba">Harm-benefit analysis</a></li>         
+        <li><a href="12-referrals">Referrals</a></li>
+        <li><a href="10-hba">Harm-benefit analysis</a></li>
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -41,7 +41,7 @@
 
       <form action="assessment-overview" method="post">
 
-        <details class="govuk-details" data-module="govuk-details">
+        <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
               Show standards for project location
@@ -70,7 +70,7 @@
             </ul>
           </div>
         </details>
-        
+
         {% set assessSection = 'places' %}
         {% set assessSectionTitle = 'project location' %}
         {% include "includes/assessment-met.html" %}
@@ -83,13 +83,13 @@
 
       <!-- <div class="govuk-inset-text condition">
         <h3 class="govuk-heading-s">POLES<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
-          
+
         <p>The assigned inspector must be notified before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that the inspector may be present if she or he wishes. The minimum period of notice to be given, the information to be provided and the means of notification must be agreed in writing with the Inspector at least 7 days before regulated procedures at a POLE are started.</p>
         <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
       </div>
         <br> -->
      <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
-      
+
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
           <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -194,7 +194,7 @@
 
         {% include "includes/assessment-complete.html" %}
 
-      
+
       </form>
     </div>
   </div>

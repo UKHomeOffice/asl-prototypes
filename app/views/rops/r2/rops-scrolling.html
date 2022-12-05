@@ -23,18 +23,18 @@
       <h2 class="govuk-heading-m">Change set up details</h2>
       <p>Change purposes, animals types and other details about this return.</p>
       <p><a href="setup-complete">View and edit set up details</a></p>
-      
+
       <h2 class="govuk-heading-m">Procedures</h2>
       <p>Add procedures completed in 2021.</p>
       <a href="add-procedure.html" class="govuk-button">Add procedure</a>
-    
+
       <!-- <div class="fullscreen-content customized-scrollbar " data-module="scrolling-tables">
-        <div class="fullscreen-scrollable-table">          
+        <div class="fullscreen-scrollable-table">
 
           <table class="govuk-table  table-background" style="font-size: 14px; display: inline-block;" >
             <caption class="govuk-table__caption"> </caption>
             <thead class="govuk-table__head">
-              
+
             </thead>
             <tbody class="govuk-table__body" style=" display: inline-block;">
               <tr class="govuk-table__row">
@@ -156,12 +156,12 @@
             </tbody>
           </table>
         </div>
-       
+
       </div> -->
       <div class="zui-wrapper">
         <div class="zui-scroller">
             <table class="zui-table govuk-table">
-                
+
                 <tbody>
                     <tr class="govuk-table__row">
                       <th scope="col" class="govuk-table__header">No.</th>
@@ -292,7 +292,7 @@
       {% if data['rowCount'] is not number %}
         <form action="rops-empty" method="POST">
           <input type="hidden" name="rowCount" value="0">
-          <button class="float-right">Reset</button>
+          <button data-module="govuk-button" class="float-right">Reset</button>
         </form>
       {% endif %}
       <style>
@@ -316,10 +316,10 @@
           overflow-y: hidden;
         }
 
-     
+
       </style>
-      
-  </div>  
+
+  </div>
 </div>
 
 <style>

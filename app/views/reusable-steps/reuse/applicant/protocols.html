@@ -35,7 +35,7 @@
 
     <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
 
-    <details class="govuk-details" data-module="govuk-details">
+    <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           Show general constraints
@@ -102,17 +102,17 @@
       </div>
       <div id="" class="protocol-content ">
 
-        <button class="accordion">Protocol details</button>
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel"></div>
 
-        <button id="p1-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" id="p1-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel"></div>
 
 
-        <button  id="steps-p1" class="accordion active">Protocol steps</button>
+        <button data-module="govuk-button"  id="steps-p1" class="accordion active">Protocol steps</button>
         <div class="panel" style="display: block;">
 
           <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
@@ -510,7 +510,7 @@
                     <div class="govuk-form-group">
                       <input type="hidden" name="stepId" value="{{nextStep}}">
                       <input type="hidden" name="id{{data['stepId']}}[protocol]" value="1">
-                      <button class="govuk-button">Save</button>
+                      <button data-module="govuk-button" class="govuk-button">Save</button>
                     </div>
                   </form>
 
@@ -649,7 +649,7 @@
                             <div class="govuk-form-group">
                               <input type="hidden" name="stepId" value="{{nextStep}}">
                               <input type="hidden" name="id{{data['stepId']}}[protocol]" value="1">
-                              <button class="govuk-button">Save</button>
+                              <button data-module="govuk-button" class="govuk-button">Save</button>
                             </div>
                           </form>
 
@@ -754,7 +754,7 @@
                             <br>
                             <div class="govuk-form-group">
                               <input type="hidden" name="p1StepNo" value={{nextp1Step}}>
-                              <button class="govuk-button">Add step to protocol</button>
+                              <button data-module="govuk-button" class="govuk-button">Add step to protocol</button>
                             </div>
                           </div>
                         </form>
@@ -773,16 +773,16 @@
 
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel"></div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel"></div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel"></div>
 
       </div>
@@ -822,17 +822,17 @@
         </div>
         <div id="" class="protocol-content ">
 
-          <button class="accordion">Protocol details</button>
+          <button data-module="govuk-button" class="accordion">Protocol details</button>
           <div class="panel"></div>
 
-          <button class="accordion">Animals used in this protocol</button>
+          <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
           <div class="panel"></div>
 
-          <button id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+          <button data-module="govuk-button" id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
           <div class="panel"></div>
 
 
-          <button  id="p2" class="accordion active">Protocol steps</button>
+          <button data-module="govuk-button"  id="p2" class="accordion active">Protocol steps</button>
           <div class="panel" style="display: block;">
             <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
 
@@ -1235,7 +1235,7 @@
                         <div class="govuk-form-group">
                           <input type="hidden" name="stepId" value="{{nextStep}}">
                           <input type="hidden" name="id{{data['stepId']}}[protocol]" value="2">
-                          <button class="govuk-button">Save</button>
+                          <button data-module="govuk-button" class="govuk-button">Save</button>
                         </div>
                       </form>
 
@@ -1340,7 +1340,7 @@
                           <br>
                           <div class="govuk-form-group">
                             <input type="hidden" name="p2StepNo" value={{nextP2Step}}>
-                            <button class="govuk-button">Add step to protocol</button>
+                            <button data-module="govuk-button" class="govuk-button">Add step to protocol</button>
                           </div>
                         </form>
                       </div>
@@ -1357,16 +1357,16 @@
 
           </div>
 
-          <button class="accordion">Fate of animals</button>
+          <button data-module="govuk-button" class="accordion">Fate of animals</button>
           <div class="panel"></div>
 
-          <button class="accordion">Animal experience</button>
+          <button data-module="govuk-button" class="accordion">Animal experience</button>
           <div class="panel"></div>
 
-          <button class="accordion">Experimental design</button>
+          <button data-module="govuk-button" class="accordion">Experimental design</button>
           <div class="panel"></div>
 
-          <button class="accordion">Protocol justification</button>
+          <button data-module="govuk-button" class="accordion">Protocol justification</button>
           <div class="panel"></div>
 
         </div>
@@ -1404,17 +1404,17 @@
           </div>
           <div id="" class="protocol-content ">
 
-            <button class="accordion">Protocol details</button>
+            <button data-module="govuk-button" class="accordion">Protocol details</button>
             <div class="panel"></div>
 
-            <button class="accordion">Animals used in this protocol</button>
+            <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
             <div class="panel"></div>
 
-            <button id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+            <button data-module="govuk-button" id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
             <div class="panel"></div>
 
 
-            <button  id="p3" class="accordion active">Protocol steps</button>
+            <button data-module="govuk-button"  id="p3" class="accordion active">Protocol steps</button>
             <div class="panel" style="display: block;">
               <p>A step can be a single procedure or a combination of procedures to achieve an outcome. You will be able to reorder your steps at any time before you send your application to the Home Office, but they should be broadly chronological, with the final step being a method of killing or the last regulated procedure.</p>
 
@@ -1817,7 +1817,7 @@
                           <div class="govuk-form-group">
                             <input type="hidden" name="stepId" value="{{nextStep}}">
                             <input type="hidden" name="id{{data['stepId']}}[protocol]" value="3">
-                            <button class="govuk-button">Save</button>
+                            <button data-module="govuk-button" class="govuk-button">Save</button>
                           </div>
                         </form>
 
@@ -1922,7 +1922,7 @@
                             <br>
                             <div class="govuk-form-group">
                               <input type="hidden" name="p3StepNo" value={{nextP3Step}}>
-                              <button class="govuk-button">Add step to protocol</button>
+                              <button data-module="govuk-button" class="govuk-button">Add step to protocol</button>
                             </div>
                           </form>
                         </div>
@@ -1939,16 +1939,16 @@
 
             </div>
 
-            <button class="accordion">Fate of animals</button>
+            <button data-module="govuk-button" class="accordion">Fate of animals</button>
             <div class="panel"></div>
 
-            <button class="accordion">Animal experience</button>
+            <button data-module="govuk-button" class="accordion">Animal experience</button>
             <div class="panel"></div>
 
-            <button class="accordion">Experimental design</button>
+            <button data-module="govuk-button" class="accordion">Experimental design</button>
             <div class="panel"></div>
 
-            <button class="accordion">Protocol justification</button>
+            <button data-module="govuk-button" class="accordion">Protocol justification</button>
             <div class="panel"></div>
 
           </div>
@@ -1962,7 +1962,7 @@
       <input type="hidden" name="p1StepNo" value="1">
       <input type="hidden" name="p2StepNo" value="1">
       <input type="hidden" name="p3StepNo" value="1">
-      <button>Go!</button>
+      <button data-module="govuk-button" >Go!</button>
     </form>
 
 
