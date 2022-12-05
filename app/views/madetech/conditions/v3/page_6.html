@@ -7,6 +7,12 @@
 
 {% block content %}
 
+<div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
+  <strong>
+    <p style="margin-bottom: 0px;"><strong>2 conditions added successfully to licence PP6807005. </strong></p>
+  </strong>
+</div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     {% include "includes/project_licence_banner.html" %}
@@ -22,13 +28,13 @@
   <nav class="govuk-tabs">
     <style type="text/css">.active:after { content: "";}</style>
     <ul>
-      <li class="active">
-        <a href="#standard">
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
           <span>Project activity</span>
         </a>
       </li>
-      <li class="">
-        <a href="#0" style="color: #005ea5;">
+      <li class="active">
+        <a href="#standard">
           <span>Manage licence</span>
         </a>
       </li>
@@ -53,57 +59,22 @@
   <div class="govuk-grid-column-two-third">
 
     <div>
-      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:50px;">Licence details</h2>
-      <p>
-        <span><strong>Licence holder</strong></span>
-        <span style="padding-right: 120px;"></span>
-        <span><a href="#0" style="color: #005ea5;">Bruce Banner</a></span>
-      </p>
-      <p>
-        <span><strong>Primary establishment</strong></span>
-        <span style="padding-right: 50px;"></span>
-        <span>University of Croydon</span>
-      </p>
-      <p>
-        <span><strong>Licence number</strong></span>
-        <span style="padding-right: 108px;"></span>
-        <span>PP6807005</span>
-      </p>
-      <p>
-        <span><strong>Date granted</strong></span>
-        <span style="padding-right: 134px;"></span>
-        <span>18 November 2022</span>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Change</a>
-      </p>
-      <p>
-        <span><strong>Last amended</strong></span>
-        <span style="padding-right: 124px;"></span>
-        <span>30 November 2022</span>
-      </p>
-      <p>
-        <span><strong>Expiry date</strong></span>
-        <span style="padding-right: 148px;"></span>
-        <span>18 May 2025</span>
-      </p>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:50px;">Amendment in progress</h2>
+      <p><span>An amendment to this licence has been submitted and is being reviewed. You can either view the details of this task, or recall the amendment.</span></p>
+      <span><a href="#0" class="govuk-button govuk-button--secondary">View task</a></span>
     </div>
 
-    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 40px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
 
     <div>
-      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Licence</h2>
-      <p><span><a href="#0" style="color: #005ea5;">View licence</a></span></p>
-      <p><span><a href="#0" style="color: #005ea5;">Download licence (PDF)</a></span></p>
-      <p style="margin-bottom:10px;"><span><strong>Other documents:</strong></span></p>
-      <p><span>&#x2022; <a href="#0" style="color: #005ea5;">Non-technical summary</a></span></p>
-    </div>
-
-    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 40px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
-
-    <div>
-      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Conditions</h2>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Manage conditions</h2>
       <span>All standard conditions of project licences apply. <a href="https://www.gov.uk/government/publications/project-establishment-licence/project-establishment-licence" target="_blank" style="color: #005ea5;">View standard conditions</a></span>
       <br><br>
+      <span><strong>Additional conditions</strong></span>
+      <!--
       <span style="margin-bottom:20px;"><a href="page_2.html" class="govuk-button govuk-button--secondary">Add more additional conditions</a></span>
-      <div style="width: 900px;">
+      -->
+      <div style="width: 900px;margin-top: 25px;">
         <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
           <p style="margin-bottom:5px;"><strong>Retrospective assessment</strong></p>
           <p style="margin-bottom:5px;">
@@ -143,55 +114,33 @@
           <p><a href="page_7.html#" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
         </div>
       </div>
+      <span style="margin-bottom:0px;"><a href="page_2.html" class="govuk-button govuk-button--secondary">Add conditions</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:20px;">Guest access</h2>
+      <p><span>Allow colleagues to view this project. Administrators and other staff with oversight of this project will have access by default.</span></p>
+      <span><a href="#0" style="color: #005ea5;">Grant access</a></span>
     </div>
 
     <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 40px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
 
     <div>
-      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Current activity</h2>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Last changed</th>
-            <th class="govuk-table__header" scope="col">Establishment </th>
-            <th class="govuk-table__header" scope="col">Type</th>
-            <th class="govuk-table__header" scope="col">Status</th>
-            <th class="govuk-table__header" scope="col">Deadline</th>
-            <th class="govuk-table__header" scope="col">Assigned to</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align: middle;">27 Jan 2022  </td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">University of Croydon</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><a href="#0" style="color: #005ea5;">PEL amendment</a><br>Juliana Akinyooye</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><span class="badge badge-blue">Approved</span></td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">No deadline</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">Juliana Akinyooye <br><a href="#0" style="color: #005ea5;">Assign to me</a></a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align: middle;">14 Nov 2021  </td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">University of Croydon</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><a href="#0" style="color: #005ea5;">PEL amendment</a><br>Juliana Akinyooye</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><span class="badge badge-grey">Awaiting decision</span></td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">No deadline</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">Juliana Akinyooye <br><a href="#0" style="color: #005ea5;">Assign to me</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align: middle;">08 Sep 2021  </td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">University of Croydon</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><a href="#0" style="color: #005ea5;">Remove name</a><br>Juliana Akinyooye</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><span class="badge badge-blue">Approved</span></td>
-            <td class="govuk-table__cell" style="vertical-align: middle;">No deadline</td>
-            <td class="govuk-table__cell" style="vertical-align: middle;"><em>Unassigned</em><br><a href="#0" style="color: #005ea5;">Assign to me</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:30px;">Suspend licence</h2>
+      <p><span>Suspend this licence if regulated procedures should not be authorised to be carried out under this licence.</span></p>
+      <span><a href="#0" class="govuk-button button-suspend" style="background-color: #E3733B;">Suspend licence</a></span>
     </div>
+
+    <br>
+
 
   </div>
 
 </div>
+
+  
 
   
 
