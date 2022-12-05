@@ -1,3 +1,6 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+
 {% extends "govuk/template.njk" %}
 
 {% from "govuk/components/back-link/macro.njk"     import govukBackLink %}
@@ -25,20 +28,9 @@
 
 {% block head %}
   {% include "includes/head.html" %}
-  {% if doNotTrackEnabled == false and promoMode == 'true' and gtmId %}
-    {% include "includes/tracking_head.html" %}
-  {% endif %}
-{% endblock %}
-
-
-{% block bodyStart %}
-  {% if doNotTrackEnabled == false and promoMode == 'true' and gtmId %}
-    {% include "includes/tracking_body.html" %}
-  {% endif %}
 {% endblock %}
 
 {% block header %}
-  {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
     serviceName: serviceName,
@@ -53,9 +45,9 @@
       },
       {
         href: "/docs/tutorials-and-examples",
-        text: "Tutorials and examples",
+        text: "Tutorials and templates",
         attributes: {
-          "data-tutorials": "Tutorials and examples"
+          "data-tutorials": "Tutorials and templates"
         }
       },
       {
@@ -69,6 +61,8 @@
   }) }}
 {% endblock %}
 
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
 {% block footer %}
   {{ govukFooter({
     meta: {
@@ -76,6 +70,10 @@
         {
           href: "/prototype-admin/clear-data",
           text: "Clear data"
+        },
+        {
+          href: "/docs/accessibility",
+          text: "Accessibility"
         },
         {
           href: "/docs/cookies",
