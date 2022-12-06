@@ -1,39 +1,13 @@
-const express = require('express')
-const app = express()
-const router = express.Router()
-// const moment = require('moment');
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/routes
+//
 
-// router.use(function (req, res, next) {
-//   console.log(moment().format("D MMMM YYYY "))
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
 
-//   next()
-// })
-// // Route index page
-// router.get('/', function (req, res) {
-  
+// Add your routes here
 
-// GET LIST OF FILES
-// //requiring path and fs modules
-// const path = require('path');
-// const fs = require('fs');
-// //joining path of directory 
-// const directoryPath = path.join(__dirname, 'views');
-// //passsing directoryPath and callback function
-// fs.readdir(directoryPath, function (err, files) {
-//     //handling error
-//     if (err) {
-//         return console.log('Unable to scan directory: ' + err);
-//     } 
-//     //listing all files using forEach
-//     files.forEach(function (file) {
-//         // Do whatever you want to do with the file
-//         console.log(file); 
-//     });
-// });
-
-
-//   res.render('index')
-// })
 
 // Add your routes here - above the module.exports line
 
@@ -386,7 +360,7 @@ router.post('/training-exemptions/evidence-select/ppl/training-confirm', functio
 
 
 router.post('/training-exemptions/evidence-select/training-cert-details', function (req, res) {
-  
+
   let evidence = req.session.data['evidence']
 
   if (evidence == 'exemption') {
