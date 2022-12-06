@@ -2,7 +2,9 @@
 
 This is a collection of HTML prototypes for user research and templates of common pages and patterns in the Animals in scientific procedures e-licensing (ASPeL) service.
 
-It was orginially created from an previous version of the Home Office prototype kit (the latest version of which is available at https://design.homeoffice.gov.uk/get-started/start-prototype). 
+It was originally created from a previous version of the Home Office prototype kit (the latest version of which is available at https://design.homeoffice.gov.uk/get-started/start-prototype). 
+
+The prototype is hosted on Render, you can find it [here](https://asl-prototypes.onrender.com/)
 
 ## Requirements
 
@@ -24,4 +26,4 @@ The prototype will then be visible on [http://localhost:3000](http://localhost:3
 
 ## Notes
 
-The prototype authentication typically needs to be disabled when testing with users on POISE machines. The relevant code to be disabled is flagged in a comment in the server.js file.
+The prototype authentication typically needs to be disabled when testing with users on POISE machines. You can do this by editing the environment variable `USE_AUTH` via Render, or within the config file in `apps/config.js` with the `useAuth` setting.
