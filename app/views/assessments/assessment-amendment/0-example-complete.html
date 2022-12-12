@@ -28,11 +28,11 @@
           <li><a href="6-3rs">Replacement, reduction & refinement</a></li>
           <li><a href="7-nts"> Non-technical summary: general</a></li>
           <li><li><a href="11-reporting"> Other conditions and authorisations</a></li>
- 
-          <li><a href="10-hba">Harm-benefit analysis</a></li>
-          
 
-         
+          <li><a href="10-hba">Harm-benefit analysis</a></li>
+
+
+
 
           <li><a href="12-referrals">Referrals</a></li>
         </ul>
@@ -43,15 +43,15 @@
 
       <form action="assessment-overview" method="post">
 
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show standards for example section
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
           <ul class="govuk-list govuk-list--bullet">
-            
+
             <li>
             	[Section standard 1]
             </li>
@@ -64,13 +64,13 @@
           </ul>
         </div>
       </details>
-      
+
       <hr class=" govuk-section-break--l govuk-section-break--visible">
       <h2 class="govuk-heading-m">Add condition or authorisation</h2>
 <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
       <div class="govuk-inset-text condition">
         <h3 class="govuk-heading-s">Auto-added condition requiring editing<span class="govuk-hint">Automatically selected basedselected basedselected basedselected basedselected based on applicant's responses.</span></h3>
-          
+
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eius rem iusto assumenda earum repellat, vero qui error alias odit voluptates  blanditiis aliquam doloremque officia quibusdam exercitationem. Officia, accusamus explicabo:<br>
             • Condition 1<br>
             • Condition 2</p>
@@ -78,10 +78,10 @@
         <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
         <br>
         <br>
-        
+
       <div class="govuk-inset-text condition">
         <h3 class="govuk-heading-s">Condition added by the inspector</h3>
-          
+
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eius rem iusto assumenda earum repellat, vero qui error alias odit voluptates  blanditiis aliquam doloremque officia quibusdam exercitationem. Officia, accusamus explicabo:<br>
             • Condition 1<br>
             • Condition 2</p>
@@ -89,7 +89,7 @@
         <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
         <br>
         <br>
-      
+
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
           <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -107,7 +107,7 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="condition" name="condition" type="checkbox" value="2">
               <label class="govuk-label--s govuk-checkboxes__label" for="condition">
-                 Write new 
+                 Write new
               </label>
             </div>
           </div>
@@ -123,11 +123,11 @@
       {% set reason = 'This is a new area of work for the establishment. The applicant has suitable expertise in the proposed models and methods and plans to provide training for PILh himself. There is strong oversight by the NVSs so I have confidence that technical competence will be developed.' %}
 
       {% include "includes/assessment-met.html" %}
-      
-      
+
+
       {% set assess = 'example section' %}
       {% include "includes/assessment-complete.html" %}
-  
+
     </form>
 
     </div>

@@ -23,24 +23,24 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% include "includes/licence-header-ppl-application.html" %}
-      {% include "includes/list-of-sections.html" %}               
-   
-      <h1 class="govuk-heading-l">Protocols</h1>   
+      {% include "includes/list-of-sections.html" %}
+
+      <h1 class="govuk-heading-l">Protocols</h1>
       <p>
         <a href="#">View summary table</a>
       </p>
-        
+
       <h2 class="govuk-heading-m">General constraints</h2>
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-     
-      <details class="govuk-details" data-module="govuk-details">
+
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
         Induction of liver tumour growth
 
         <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
@@ -66,8 +66,8 @@
           </li>
         </ul>
       </div>
-      </details>   
-    
+      </details>
+
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-in-progress">
         <h3 class="govuk-heading-m">
@@ -98,27 +98,27 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
-        <button class="accordion">Protocol details</button>
+
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel"></div>
 
-        <button id="p1-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" id="p1-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel"></div>
 
 
-        <button  id="steps" class="accordion active">Steps</button>
+        <button data-module="govuk-button"  id="steps" class="accordion active">Steps</button>
         <div class="panel" style="display: block;">
 
           <h3 class="govuk-heading-m">Protocol steps</h3>
           <ul class="govuk-list govuk-list--bullet">
             {% if data['p1StepNo'] > 1 %}
             <li>
-              Step 1: 
+              Step 1:
               {% if data['no1']['selection'] == 1 %}
                 <a href="steps#id1">{{data['id1']['ref']}}</a>
               {% elif data['no1']['selection'] == 2 %}
@@ -129,7 +129,7 @@
               </a>
             </li>
             {% endif %}
-            
+
             {% if data['p1StepNo'] > 2 %}
             <li>
               Step 2: <a href="#">
@@ -143,7 +143,7 @@
               </a>
             </li>
             {% endif %}
-            
+
             {% if data['p1StepNo'] > 3 %}
             <li>
               Step 3: <a href="#">
@@ -157,8 +157,8 @@
               </a>
             </li>
             {% endif %}
-            
-            
+
+
           </ul>
           <div class="comment-block">
             <div class="writeComment hide">
@@ -200,7 +200,7 @@
                   {% set nextP1Step = p1StepNo + 1 %}
                   <div class="govuk-form-group">
                     <input type="hidden" name="p1StepNo" value={{nextP1Step}}>
-                    <button class="govuk-button">Add steps to protocol</button>
+                    <button data-module="govuk-button" class="govuk-button">Add steps to protocol</button>
                   </div>
                 </form>
               </div>
@@ -209,19 +209,19 @@
               <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
             </div>
             <p><a href="steps">Mange steps in steps library</a></p>
-          </div>  
+          </div>
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel"></div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel"></div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel"></div>
         <br>
         <br>
@@ -259,27 +259,27 @@
             </tr>
           </tbody>
         </table>
-      </div>  
+      </div>
       <div id="" class="protocol-content ">
-        
-        <button class="accordion">Protocol details</button>
+
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel"></div>
 
-        <button id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" id="p2-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel"></div>
 
 
-        <button  id="steps" class="accordion active">Steps</button>
+        <button data-module="govuk-button"  id="steps" class="accordion active">Steps</button>
         <div class="panel" style="display: block;">
 
           <h3 class="govuk-heading-m">Protocol steps</h3>
           <ul class="govuk-list govuk-list--bullet">
             {% if data['p2StepNo'] > 1 %}
             <li>
-              Step 1: 
+              Step 1:
               {% if data['no1']['selection'] == 1 %}
                 <a href="steps#id1">{{data['id1']['ref']}}</a>
               {% elif data['no1']['selection'] == 2 %}
@@ -290,7 +290,7 @@
               </a>
             </li>
             {% endif %}
-            
+
             {% if data['p1StepNo'] > 2 %}
             <li>
               Step 2: <a href="#">
@@ -304,7 +304,7 @@
               </a>
             </li>
             {% endif %}
-            
+
             {% if data['p1StepNo'] > 3 %}
             <li>
               Step 3: <a href="#">
@@ -318,8 +318,8 @@
               </a>
             </li>
             {% endif %}
-            
-            
+
+
           </ul>
           <div class="comment-block">
             <div class="writeComment hide">
@@ -361,9 +361,9 @@
                   {% set nextP2Step = p2StepNo + 1 %}
                   <div class="govuk-form-group">
                     <input type="hidden" name="p2StepNo" value={{nextP2Step}}>
-                    <button class="govuk-button">Add step</button>
+                    <button data-module="govuk-button" class="govuk-button">Add step</button>
                   </div>
-                  
+
                 </form>
               </div>
             </div>
@@ -371,19 +371,19 @@
               <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
             </div>
             <p><a href="steps">Mange steps in steps library</a></p>
-          </div>  
+          </div>
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel"></div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel"></div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel"></div>
         <br>
         <br>
@@ -423,27 +423,27 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+        </div>
         <div id="" class="protocol-content ">
-          
-          <button class="accordion">Protocol details</button>
+
+          <button data-module="govuk-button" class="accordion">Protocol details</button>
           <div class="panel"></div>
-  
-          <button class="accordion">Animals used in this protocol</button>
+
+          <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
           <div class="panel"></div>
-  
-          <button id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
+
+          <button data-module="govuk-button" id="p3-steps-anchor" class="accordion">Genetically altered animals (GAA)</button>
           <div class="panel"></div>
-  
-  
-          <button  id="steps" class="accordion active">Steps</button>
+
+
+          <button data-module="govuk-button"  id="steps" class="accordion active">Steps</button>
           <div class="panel" style="display: block;">
-  
+
             <h3 class="govuk-heading-m">Protocol steps</h3>
             <ul class="govuk-list govuk-list--bullet">
               {% if data['p3StepNo'] > 1 %}
               <li>
-                Step 1: 
+                Step 1:
                 {% if data['no1']['selection'] == 1 %}
                   <a href="steps#id1">{{data['id1']['ref']}}</a>
                 {% elif data['no1']['selection'] == 2 %}
@@ -454,7 +454,7 @@
                 </a>
               </li>
               {% endif %}
-              
+
               {% if data['p1StepNo'] > 2 %}
               <li>
                 Step 2: <a href="#">
@@ -468,7 +468,7 @@
                 </a>
               </li>
               {% endif %}
-              
+
               {% if data['p1StepNo'] > 3 %}
               <li>
                 Step 3: <a href="#">
@@ -482,8 +482,8 @@
                 </a>
               </li>
               {% endif %}
-              
-              
+
+
             </ul>
             <div class="comment-block">
               <div class="writeComment hide">
@@ -525,29 +525,29 @@
                     {% set nextP3Step = p3StepNo + 1 %}
                     <div class="govuk-form-group">
                       <input type="hidden" name="p3StepNo" value={{nextP3Step}}>
-                      <button class="govuk-button">Add step</button>
+                      <button data-module="govuk-button" class="govuk-button">Add step</button>
                     </div>
                   </form>
                 </div>
-                
+
               </div>
               <div class="initiateComment" >
                 <a onClick='initiateComment(this)' class="govuk-button govuk-button--secondary">Add step</a>
               </div>
               <p><a href="steps">Mange steps in steps library</a></p>
-            </div>  
+            </div>
           </div>
-  
-          <button class="accordion">Fate of animals</button>
+
+          <button data-module="govuk-button" class="accordion">Fate of animals</button>
           <div class="panel"></div>
-  
-          <button class="accordion">Animal experience</button>
+
+          <button data-module="govuk-button" class="accordion">Animal experience</button>
           <div class="panel"></div>
-  
-          <button class="accordion">Experimental design</button>
+
+          <button data-module="govuk-button" class="accordion">Experimental design</button>
           <div class="panel"></div>
-  
-          <button class="accordion">Protocol justification</button>
+
+          <button data-module="govuk-button" class="accordion">Protocol justification</button>
           <div class="panel"></div>
           <br>
           <br>
@@ -560,7 +560,7 @@
       <input type="hidden" name="p1StepNo" value="1">
       <input type="hidden" name="p2StepNo" value="1">
       <input type="hidden" name="p3StepNo" value="1">
-      <button>Reset</button>
+      <button data-module="govuk-button" >Reset</button>
     </form>
 
     </div>

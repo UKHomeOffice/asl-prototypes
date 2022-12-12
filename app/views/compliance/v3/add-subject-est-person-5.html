@@ -11,7 +11,7 @@
   {% set toasterContent = 'Enforcement flags saved' %}
   {% include "includes/toaster.html" %}
   {% endif %}
-  
+
   {% set 'subject-1-name' = 'Jane McGregor' %}
   {% set user = '1' %}
 
@@ -48,20 +48,20 @@
       </p>
       <h3 class="govuk-heading-m">Enforcement flag</h2>
         <h3 class="govuk-heading-s">Enforcement flag status</h2>
-      
+
           <div class="notification-banner notification-banner--open" style="padding: 0px 10px">
-    
+
             <div class="govuk-warning-text" style="margin-bottom: 0px;">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <span class="govuk-warning-text__text">
                 <strong>This subject is related to open enforcement case 21102</strong>
               </span>
             </div>
-    
+
           </div>
-          
+
         <h3 class="govuk-heading-s">Flag applied to</h2>
-    
+
         <ul class="govuk-list govuk-list--bullet">
           {% if ((user === '1') and (data['subject-1-name'] === 'Jane McGregor')or(user === '2') and (data['subject-2-name'] === 'Jane McGregor')or(user === '3') and (data['subject-3-name'] === 'Jane McGregor')
           )%}
@@ -94,10 +94,10 @@
           </li>
           {% endif %}
         </ul>
-    
+
         <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="add-subject-1-details?user-{{user}}-status=edit&toaster=false#subject-{{user}}">Edit enforcement flag</a></p>
-    
-        
+
+
       </div>
     <br>
     <div class="declaration-panel-grey">
@@ -116,7 +116,7 @@
         <input type="hidden" name="user-1-status" value='edit'>
         <input type="hidden" name="subject-1-name" value='Jane McGregor'>
         <input type="hidden" name="toaster" value='false'>
-        <button class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
       </form>
     </div>
     <br>

@@ -39,7 +39,7 @@ Step ID: {{data['stepId']}}
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
 
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
@@ -106,17 +106,17 @@ Step ID: {{data['stepId']}}
       </div>
       <div id="" class="protocol-content ">
 
-        <button class="accordion">Protocol details</button>
+        <button data-module="govuk-button" class="accordion">Protocol details</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animals used in this protocol</button>
+        <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
         <div class="panel"></div>
 
-        <button class="accordion">Genetically altered animals (GAA)</button>
+        <button data-module="govuk-button" class="accordion">Genetically altered animals (GAA)</button>
         <div class="panel"></div>
 
 
-        <button  id="steps" class="accordion active">Steps</button>
+        <button data-module="govuk-button"  id="steps" class="accordion active">Steps</button>
         <div class="panel" style="display: block;">
           {{data['stepId']}}
           {% for item in data['stepId'] %}
@@ -331,7 +331,7 @@ Step ID: {{data['stepId']}}
                           <input type="hidden" name="stepId" value="{{nextStepId}}">
                           <input type="hidden" name="stepNumber" value="{{nextStepNumber}}">
                           <input type="hidden" name="protocol" value="1">
-                          <button class="govuk-button">Save step</button>
+                          <button data-module="govuk-button" class="govuk-button">Save step</button>
                         </div>
                       </form>
                     </div>
@@ -383,7 +383,7 @@ Step ID: {{data['stepId']}}
                       <!-- {% set stepId = data['stepId'] | int %} -->
                       <div class="govuk-form-group">
                         <!-- <input type="hidden" name="stepId" value="{{nextStep}}"> -->
-                        <button class="govuk-button">Save step</button>
+                        <button data-module="govuk-button" class="govuk-button">Save step</button>
                       </div>
                     </div>
                   </form>
@@ -436,17 +436,17 @@ Step ID: {{data['stepId']}}
             </div>
             <div id="" class="protocol-content ">
 
-              <button class="accordion">Protocol details</button>
+              <button data-module="govuk-button" class="accordion">Protocol details</button>
               <div class="panel"></div>
 
-              <button class="accordion">Animals used in this protocol</button>
+              <button data-module="govuk-button" class="accordion">Animals used in this protocol</button>
               <div class="panel"></div>
 
-              <button class="accordion">Genetically altered animals (GAA)</button>
+              <button data-module="govuk-button" class="accordion">Genetically altered animals (GAA)</button>
               <div class="panel"></div>
 
 
-              <button  id="steps" class="accordion active">Steps</button>
+              <button data-module="govuk-button"  id="steps" class="accordion active">Steps</button>
               <div class="panel" style="display: block;">
                 {{data['stepId']}}
 
@@ -662,7 +662,7 @@ Step ID: {{data['stepId']}}
                                 <input type="hidden" name="stepId" value="{{nextStepId}}">
                                 <input type="hidden" name="stepNumber" value="{{nextStepNumber}}">
                                 <input type="hidden" name="protocol" value="2">
-                                <button class="govuk-button">Save step</button>
+                                <button data-module="govuk-button" class="govuk-button">Save step</button>
                               </div>
                             </form>
                           </div>
@@ -714,7 +714,7 @@ Step ID: {{data['stepId']}}
                             <!-- {% set stepId = data['stepId'] | int %} -->
                             <div class="govuk-form-group">
                               <!-- <input type="hidden" name="stepId" value="{{nextStep}}"> -->
-                              <button class="govuk-button">Save step</button>
+                              <button data-module="govuk-button" class="govuk-button">Save step</button>
                             </div>
                           </div>
                         </form>
@@ -732,16 +732,16 @@ Step ID: {{data['stepId']}}
 
         </div>
 
-        <button class="accordion">Fate of animals</button>
+        <button data-module="govuk-button" class="accordion">Fate of animals</button>
         <div class="panel"></div>
 
-        <button class="accordion">Animal experience</button>
+        <button data-module="govuk-button" class="accordion">Animal experience</button>
         <div class="panel"></div>
 
-        <button class="accordion">Experimental design</button>
+        <button data-module="govuk-button" class="accordion">Experimental design</button>
         <div class="panel"></div>
 
-        <button class="accordion">Protocol justification</button>
+        <button data-module="govuk-button" class="accordion">Protocol justification</button>
         <div class="panel"></div>
 
       </div>
@@ -749,7 +749,7 @@ Step ID: {{data['stepId']}}
     <form action="protocols" method="post">
       <input type="hidden" name="stepId" value="1">
       <input type="hidden" name="stepNumber" value="1">
-      <button>Go!</button>
+      <button data-module="govuk-button" >Go!</button>
     </form>
 
 

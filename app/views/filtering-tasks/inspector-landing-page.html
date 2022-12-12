@@ -34,7 +34,7 @@
 
             <div class="govuk-form-group search-box">
               <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
-              <button style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>ss="hod-search side-space icon-small" style="color: white;"></span></button>
+              <button data-module="govuk-button" style="height: 40px; width: 40px;background-color: black;display: inline-block;position: absolute; border: solid 3px black;"><span class="hod-search side-space icon-small" style="color: white;"></span></button>ss="hod-search side-space icon-small" style="color: white;"></span></button>
               </div>
             </form>
           </div>
@@ -55,8 +55,8 @@
         </h2>
 
         <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#outstanding">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#outstanding">
               Outstanding
             </a>
           </li>
@@ -73,7 +73,7 @@
         </ul>
 
 
-      <details class="govuk-details" style="margin-bottom: 0px; margin-top: 30px;">
+      <details data-module="govuk-details"  class="govuk-details" style="margin-bottom: 0px; margin-top: 30px;">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text" style="font-size: 24px; font-weight: bold; ">
             Filter tasks
@@ -84,7 +84,7 @@
           <div class="filters govuk-grid-row">
             <div class="govuk-grid-column-one-quarter">
               <div class="app-c-option-select js-collapsible">
-                <button class="js-container-head" type="button" aria-expanded="true" aria-controls="site-options">
+                <button data-module="govuk-button" class="js-container-head" type="button" aria-expanded="true" aria-controls="site-options">
                   <div class="option-select-label" id="site-label">Establishment</div>
                   <div class="js-selected-counter"></div>
                 </button>
@@ -132,7 +132,7 @@
   </div>
   <div class="govuk-grid-column-one-quarter">
       <div class="app-c-option-select js-collapsible">
-          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="suitability-options">
+          <button data-module="govuk-button" class="js-container-head" type="button" aria-expanded="true" aria-controls="suitability-options">
               <div class="option-select-label" id="suitability-label">Licence</div>
               <div class="js-selected-counter"></div>
           </button>
@@ -172,7 +172,7 @@
   </div>
   <div class="govuk-grid-column-one-quarter">
       <div class="app-c-option-select js-collapsible">
-          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
+          <button data-module="govuk-button" class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
               <div class="option-select-label" id="holding-label">Type</div>
               <div class="js-selected-counter"></div>
           </button>
@@ -222,7 +222,7 @@
 
   <div class="govuk-grid-column-one-quarter">
       <div class="app-c-option-select js-collapsible">
-          <button class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
+          <button data-module="govuk-button" class="js-container-head" type="button" aria-expanded="true" aria-controls="holding-options">
               <div class="option-select-label" id="holding-label">Status</div>
               <div class="js-selected-counter"></div>
           </button>

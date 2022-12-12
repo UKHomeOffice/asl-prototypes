@@ -1,3 +1,4 @@
+{%- set assetPath = '/govuk/assets' -%}
 {% extends "govuk/template.njk" %}
 
 {% from "govuk/components/back-link/macro.njk"     import govukBackLink %}
@@ -34,7 +35,6 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/cookie-banner.html" %}
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
 
   <header>
@@ -80,6 +80,7 @@
 
 {% endblock %}
 
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 {% if useAutoStoreData %}
   {% block footer %}
 
@@ -128,7 +129,7 @@
           </ul>
           <br>
           <form action="/prototype-admin/clear-data" method="post">
-            <button class="link-secondary">Clear data</button>
+            <button data-module="govuk-button" class="link-secondary">Clear data</button>
           </form>
         </div>
         <!--
@@ -136,7 +137,7 @@
 
           <p>A Home Office Digital, Data and Technology service</p>
           <form action="/prototype-admin/clear-data" method="post">
-            <button class="link-secondary">Clear data</button>
+            <button data-module="govuk-button" class="link-secondary">Clear data</button>
           </form>
         </div>
         <div class="footer-menu">

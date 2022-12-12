@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment-complete.html" %}
 
-                
+
     </div>
   </div>
 
@@ -33,12 +33,12 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><li><a href="11-reporting">Additional conditions
 </a></li>
 </li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-        
+
 
         <li class="selected"><a href="9-additional-conditions">Further additional conditions</a></li>
         <li><a href="12-referrals">Referrals</a></li>
@@ -47,14 +47,14 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">Further additional conditions</h1>
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             View existing conditions
           </span>
         </summary>
         <div class="govuk-details__text">
-            
+
           <h2 class="govuk-heading-m">Additional condition 1</h2>
           <div class="govuk-inset-text">
             <h3 class="govuk-heading-s">
@@ -87,7 +87,7 @@
             <p><a href="#">Edit</a> | <a href="#">Remove</a></p>
           </div>
 
-        
+
         </div>
       </details>
 
@@ -121,7 +121,7 @@
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
             <label class="govuk-label--s govuk-checkboxes__label" for="organisation">
-               Write new 
+               Write new
             </label>
           </div>
         </div>
@@ -141,7 +141,7 @@
         <textarea class="govuk-textarea" id="comments-9" name="comments-9" rows="5" aria-describedby="comments-9-hint"></textarea>
       </div>
 
-      <hr class=" govuk-section-break--l govuk-section-break--visible">    
+      <hr class=" govuk-section-break--l govuk-section-break--visible">
       <div class="declaration-panel-grey">
         <h3 class="govuk-heading-m">Mark this section as complete</h3>
         <p>You can still edit this section later, but you will be unable make a recommendation for this application until all sections are marked as complete.</p>
@@ -156,13 +156,13 @@
               </div>
             </div>
           </fieldset>
-        </div>  
-      </div> 
+        </div>
+      </div>
         <br>
         {% set sectionComplete = 'yes' %}
         {% include "includes/assessment-complete.html" %}
-      
-    </form>        
+
+    </form>
 
 
     </div>
@@ -174,6 +174,6 @@
 border-left: 10px solid #8F23B3;
 }
 
- 
+
 </style>
 {% endblock %}

@@ -28,9 +28,9 @@
         <a href="#procedures" class="">What do you want to do?</a>
       </nav>&nbsp;
     </div>
-    
 
-    
+
+
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Status</h2>
       <p>
@@ -40,13 +40,13 @@
       <strong>
         <h3 class="govuk-heading-s">Deadline for decision: 30 March 2021</h3>
       </strong>
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Extend deadline
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
           XXX
         </div>
       </details>
@@ -56,32 +56,32 @@
         <strong>Recommendation made by inspector:</strong> <a href="#">Inspector Morse</a>
         <span class='float-right'><span class="date-today"></span></span>
       </p>
-      <p><strong>Recommendation:</strong> Refuse</p> 
-      <p><strong>Reason for refusal:</strong> </p>      
+      <p><strong>Recommendation:</strong> Refuse</p>
+      <p><strong>Reason for refusal:</strong> </p>
       <div class="govuk-inset-text">
         {% if data["refusal-summary"].length > 1 %}
           {{data["refusal-summary"]}}
         {% else %}
           The use of NHPs is not justified and the applicant refuses to use an alternative
         {% endif %}
-      </div>  
-      <p><strong>Inspector Morse remarked:</strong></p>      
+      </div>
+      <p><strong>Inspector Morse remarked:</strong></p>
       <div class="govuk-inset-text">
         {% if data["inspector-comment"].length > 1 %}
           {{data["inspector-comment"]}}
         {% else %}
           Please action this recommendation
         {% endif %}
-      </div> 
+      </div>
 
       <p></p>
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show previous activity
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
           <p>
             <strong>Endorsed on behalf of the PEL holder by:</strong> <a href="#">Bruce Banner</a>
             <span class='float-right'><span class="date-today"></span></span>
@@ -90,10 +90,10 @@
         </div>
       </details>
       <hr class=" govuk-section-break--l govuk-section-break--visible">
-     
+
       <h2 class="govuk-heading-m">PPL holder</h2>
       <p><a href="#">Bruce Banner</a></p>
-      
+
       <hr class=" govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-m">Latest submission</h2>
@@ -119,37 +119,37 @@
       <hr class=" govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-m">What do you want to do?</h2>
-      
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="recommendation-1" name="recommendation" type="radio" value="england">
               <label for="recommendation-1" class="govuk-label govuk-radios__label">Return to applicant</label>
-              <span class="govuk-hint">The application will be returned to the applicant with your comments.</span> 
+              <span class="govuk-hint">The application will be returned to the applicant with your comments.</span>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="recommendation-2" name="recommendation" type="radio" value="england">
               <label for="recommendation-2" class="govuk-label govuk-radios__label">Refer to inspector</label>
-              <span class="govuk-hint">The application will be sent to an inspector for asessment.</span> 
+              <span class="govuk-hint">The application will be sent to an inspector for asessment.</span>
             </div>
             <!-- <p>You can't recommend an applciation for approval until all sections of the assessment have been answered</p> -->
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="recommendation-3" name="recommendation" type="radio" value="england">
               <label for="recommendation-3" class="govuk-label govuk-radios__label">Refuse licence</label>
-              <span class="govuk-hint">The applicant will be sent a refusal notice and will have 28 days to respond.</span> 
+              <span class="govuk-hint">The applicant will be sent a refusal notice and will have 28 days to respond.</span>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="recommendation-4" name="recommendation" type="radio" value="england">
               <label for="recommendation-4" class="govuk-label govuk-radios__label">Grant licence</label>
-              <span class="govuk-hint">A new licence will be granted.</span> 
+              <span class="govuk-hint">A new licence will be granted.</span>
             </div>
           </div>
         </fieldset>
       </div>
 
       <a href="review-notice" class="govuk-button">Continue</a>
-      
+
     </div>
   </div>
 

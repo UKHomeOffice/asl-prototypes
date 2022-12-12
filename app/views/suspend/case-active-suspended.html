@@ -35,20 +35,20 @@
           &ensp;<a href="#">Edit</a>
         </dd>
         <dt><strong>Roles</strong></dt>
-          <dd>  
+          <dd>
             <ul class="govuk-list govuk-list--bullet no-margin-top  no-margin-bottom">
               <li>PIL holder: 932131</li>
               <li>PPL holder: PP372383</li>
-            </ul>  
+            </ul>
           </dd>
       </dl>
       <h3 class="govuk-heading-m">Enforcement flag</h2>
       <h3 class="govuk-heading-s">Enforcement flag status</h2>
-        
+
         <div class="notification-banner notification-banner--ongoing %}
-        
+
         {{data['subject-1-status']}}" style="padding: 0px 10px">
-  
+
           <div class="govuk-warning-text" style="margin-bottom: 0px;">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <span class="govuk-warning-text__text">
@@ -56,15 +56,15 @@
             </strong>
             </span>
           </div>
-  
+
         </div>
-        
+
       <h3 class="govuk-heading-s">Flag applied to</h2>
-  
+
       <ul class="govuk-list govuk-list--bullet">
         <li>
           Shaun Jones's <a href="#">profile and related tasks</a>
-          <details class="govuk-details" data-module="govuk-details">
+          <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 Profile tasks to be flagged
@@ -84,7 +84,7 @@
           </details>
         </li>
         <li>Shaun Jones's <a href="pil/pil-suspended">personal licence KW-740222</a>&emsp;<span class="badge badge-red">SUSPENDED</span>
-          <details class="govuk-details" data-module="govuk-details">
+          <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 Personal licence tasks to be flagged
@@ -102,11 +102,11 @@
           </details>
         </li>
       </ul>
-  
+
       <p><a class="govuk-button govuk-button--secondary no-margin-bottom" href="add-subject-1-details?user-{{user}}-status=edit&toaster=false#subject-{{user}}">Edit enforcement flag</a></p>
-  
+
   </div>
-  
+
     <br>
     <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
     <a href="all-cases-suspended" class="">View all enforcement cases</a>

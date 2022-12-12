@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment.html" %}
 
-                
+
     </div>
   </div>
 
@@ -37,22 +37,22 @@
         <li><a href="4-types">Use of animals</a></li>
         <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="12-referrals">Referrals</a></li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-         
+
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Non-technical summary: 3Rs</h1>
-      
+
       <form action="assessment-overview" method="post">
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show standards for replacement, reduction & refinement
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
           <ul class="govuk-list govuk-list--bullet">
             <li>
               Reasonable steps have been taken to find alternatives, for example NC3Rs or Norecopa.
@@ -87,7 +87,7 @@
       <hr class=" govuk-section-break--l govuk-section-break--visible">
       <h2 class="govuk-heading-m">Add condition or authorisation</h2>
       <p><span class="govuk-hint"><em>None automatically selected based on applicant’s responses</em></span></p>
-      
+
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
           <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -115,7 +115,7 @@
       <br>
       {% include "includes/assessment-complete.html" %}
 
-    
+
       </form>
 
     </div>

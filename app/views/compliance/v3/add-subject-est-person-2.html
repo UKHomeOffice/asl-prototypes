@@ -43,11 +43,11 @@
         <input type="hidden" name="user-1-status" value='edit'>
         <input type="hidden" name="subject-1-name" value='Jane McGregor'>
         <input type="hidden" name="toaster" value='false'>
-        <button class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
+        <button data-module="govuk-button" class="govuk-button">Continue</button>&ensp;<span class="secondary-link"><a href="javascript:history.back()">Cancel</a></span>
       </form>
     </div>
-    
-  
+
+
     <br>
     <p><a class="govuk-button" href="add-subject-1-details?user-{{user | int +1 }}-added=true#subject-{{user | int +1 }}">Add another person</a></p>
     <a href="all-cases" class="">View all enforcement cases</a>

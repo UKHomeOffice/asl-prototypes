@@ -7,17 +7,17 @@
     <textarea class="EditBox govuk-textarea " id="more-detail" name="refusal-summary" rows="5" aria-describedby="more-detail-hint">{% if data["refusal-summary"].length > 1 %}
 {{data["refusal-summary"]}}{% else %}The use of NHPs is not justified and the applicant refuses to use an alternative{% endif %}
     </textarea>
-    <button onClick='saveEdit(this)' class="saveEditButton govuk-button govuk-button--secondary">Save changes</button> <a class="secondary-link" href="javascript:void(0)">Cancel</a>
+    <button data-module="govuk-button" onClick='saveEdit(this)' class="saveEditButton govuk-button govuk-button--secondary">Save changes</button> <a class="secondary-link" href="javascript:void(0)">Cancel</a>
   </form>
   </div>
   <div class="addedEdit  hide">
     <div class="">
-    </div>  
+    </div>
     <div class="Edit-content">
       <p></p>
     </div>
-  </div> 
-  <div class="initiateEdit" >
-    <button onClick='initiateEdit(this)' class="govuk-button govuk-button--secondary">Edit</button>
   </div>
-</div>  
+  <div class="initiateEdit" >
+    <button data-module="govuk-button" onClick='initiateEdit(this)' class="govuk-button govuk-button--secondary">Edit</button>
+  </div>
+</div>

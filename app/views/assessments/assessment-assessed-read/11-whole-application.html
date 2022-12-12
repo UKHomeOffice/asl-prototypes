@@ -1,4 +1,4 @@
-  
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -9,11 +9,11 @@
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
 
       {% include "includes/licence-header-assessment-complete.html" %}
 
-                
+
     </div>
   </div>
 
@@ -33,29 +33,29 @@
         <li><a href="3-programme">Project plan</a></li>
         <li><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li class='selected'><a href="11-reporting
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-        
 
-       
 
-        <li><a href="12-referrals">Referrals</a></li> 
+
+
+        <li><a href="12-referrals">Referrals</a></li>
 
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">General application</h1>
-      
+
       <form action="assessment-overview" method="post">
-      <details class="govuk-details" data-module="govuk-details">
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show standards for the application as a whole
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
           <ul class="govuk-list govuk-list--bullet">
             <li>
               There are no real or perceived conflicts of interest.
@@ -75,14 +75,14 @@
 
       <h3 class="govuk-heading-s">Notes (optional)</h3>
       <p><em>No answer provided</em></p>
-      
+
       {% include "includes/assessment-footer-nav.html" %}
 
-      
-      
+
+
       </form>
 
-    
+
     </div>
   </div>
 

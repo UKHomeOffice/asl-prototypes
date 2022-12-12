@@ -20,7 +20,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      {% include "includes/licence-header-assessment.html" %}                
+      {% include "includes/licence-header-assessment.html" %}
     </div>
   </div>
 
@@ -37,11 +37,11 @@
         <li><a href="3-programme">Project plan</a></li>
         <li class="selected"><a href="5-models">Protocols</a></li>
         <li><a href="4-types">Use of animals</a></li>
-        <li><a href="5a-end-of">Other considerations</a></li> 
+        <li><a href="5a-end-of">Other considerations</a></li>
         <li><a href="11-reporting"> Other conditions and authorisations</a></li>
-        <li><a href="12-referrals">Referrals</a></li> 
+        <li><a href="12-referrals">Referrals</a></li>
         <li><a href="10-hba">Harm-benefit analysis</a></li>
-         
+
       </ul>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -52,19 +52,19 @@
       <!-- <body></body>
          <div class="input_fields_container_part">
            <div><input type="text" name="tags">
-                <button class="btn btn-sm btn-primary add_more_button">Add More Fields</button>
+                <button data-module="govuk-button" class="btn btn-sm btn-primary add_more_button">Add More Fields</button>
            </div>
          </div> -->
-    
-     
-     
-      <details class="govuk-details" data-module="govuk-details">
+
+
+
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show standards for protocols
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
         <ul class="govuk-list govuk-list--bullet">
           <li>
             The procedures are appropriately specified, justified and relevant to the project.
@@ -85,11 +85,11 @@
             The use of humane endpoints is justified and relevant.
           </li>
           <li>
-            The experimental or observational strategy and statistical design to minimise numbers, harms and environmental impacts are appropriate and adequate. 
+            The experimental or observational strategy and statistical design to minimise numbers, harms and environmental impacts are appropriate and adequate.
             <br><span class="govuk-hint">Information relevant to this standard may also be found in project plan</span>
           </li>
           <li>
-            Any form of animal suffering, from birth to death, is justified and relevant. 
+            Any form of animal suffering, from birth to death, is justified and relevant.
             <br><span class="govuk-hint">Information relevant to this standard may also be found in project location, use of animals and other considerations</span>
           </li>
           <li>
@@ -124,7 +124,7 @@
           </li>
         </ul>
       </div>
-    </details>   
+    </details>
 
       {% set amendment = 'true' %}
       {% set assessOutcome = 'met' %}
@@ -136,10 +136,10 @@
 
       <hr class=" govuk-section-break--l govuk-section-break--visible">
 
-    
+
     <h2 class="govuk-heading-m">Authorisations and conditions</h2>
-    
-    
+
+
     <span class="badge badge-condition">1 Authorisation</span>
     <div id="firstProtocol" class="protocol-container">
       <div class="protocol-header-complete">
@@ -148,14 +148,14 @@
             <span class="row-toggle-copy">1: Viral transduction, imaging, seizure induction and physiological monitoring</span></label>
           <input type="checkbox" name="option1" id="option1" data-toggle="toggle">
         </h3>
-        
+
         <p><strong>Authorisations</strong></p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Continued use onto a protocol</li>
         </ul>
-      </div>  
+      </div>
       <div class="protocol-content hide">
-        
+
       <h2 class="govuk-heading-m">Add condition or authorisation</h2>
       <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
       <div class="cond-read-view">
@@ -172,17 +172,17 @@
             <textarea class="cond-text-edit govuk-textarea " id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
           </div>
           <div class="edit-buttons">
-            <button  onclick="editCondition(this)" class="condEdit link-button">Edit</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Remove</a>
+            <button data-module="govuk-button"  onclick="editCondition(this)" class="condEdit link-button">Edit</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Remove</a>
           </div>
           <div class="save-buttons hide">
-            <button onClick="saveCondition(this)" class="condSave govuk-button">Save</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Cancel</a>
+            <button data-module="govuk-button" onClick="saveCondition(this)" class="condSave govuk-button">Save</button>&ensp;|&ensp;<a class="cond-remove" href="javascript:void(0)">Cancel</a>
           </div>
         </div>
       </div>
       <!-- Editable condition -->
 
    <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
-          
+
       <div id="conditions-options" style="display: none;">
         <div class="govuk-form-group">
           <!-- <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -216,7 +216,7 @@
       <br>
       <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
       <br>
-    
+
       </div>
     </div>
     <span class="badge badge-condition">4 Authorisations</span>
@@ -234,15 +234,15 @@
           <li>Continued use off a protocol on to another protocol in this project</li>
           <li>Continued use off protocol on to another project</li>
         </ul>
-      </div>  
+      </div>
 
-      <div class="protocol-content hide">  
+      <div class="protocol-content hide">
         <h2 class="govuk-heading-m">Add condition or authorisation</h2>
         {% include "includes/change-comparison.html" %}
 
         <!--  <h3 class="govuk-heading-s">Suggested based on applicant's resonses</h3> -->
         <div class="govuk-inset-text condition">
-          <h3 class="govuk-heading-s">Rehoming<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>    
+          <h3 class="govuk-heading-s">Rehoming<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
           <p>&#60;&#60;&#60;INSERT animal type(s) HERE&#62;&#62;&#62; may be rehomed at the end of a series of regulated procedures provided that the following actions have been taken:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>
@@ -272,7 +272,7 @@
         <div class="govuk-inset-text condition">
           <h3 class="govuk-heading-s">Continued use onto a protocol<span class="govuk-hint">Automatically selected based on applicant's responses.</span></h3>
           <p>Mice used on this protocol may be obtained from protocol 1 of this project, or from other projects with authority to supply animals of a type authorised in this project.<br>
-            
+
           <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
         </div>
 
@@ -288,7 +288,7 @@
           <span><a href="#">Edit</a>&ensp;|&ensp;<a href="#">Remove</a></span>
         </div>
      <!-- <h3 class="govuk-heading-s">Blurb about adding more conditions or authorisations</h3> -->
-            
+
         <div id="conditions-options" style="display: none;">
           <div class="govuk-form-group">
             <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -322,21 +322,21 @@
         <br>
         <a class="govuk-button govuk-button--secondary" id="conditions-button" onclick="toggleConditions()">Add condition or authorisation</a>
         <br>
-      
-        
+
+
       </div>
     </div>
-    
+
 
     <form action="assessment-overview" method="POST">
 
-    
+
       {% include "includes/assessment-complete.html" %}
 
-  
+
     </form>
-      
-      
+
+
 
 
     </div>

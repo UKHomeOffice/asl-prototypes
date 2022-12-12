@@ -1,0 +1,100 @@
+2022-12-05T10:33:17.540Z
+cwd: /Users/user/Documents/Work/aspel/asl-prototypes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/user/.nvm/versions/node/v18.12.1/bin/node /Users/user/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
+2022-12-05T15:29:53.628Z
+cwd: /Users/user/Documents/Work/aspel/asl-prototypes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/user/.nvm/versions/node/v18.12.1/bin/node /Users/user/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
+2022-12-05T15:41:17.619Z
+cwd: /Users/user/Documents/Work/aspel/asl-prototypes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/user/.nvm/versions/node/v18.12.1/bin/node /Users/user/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Succeeded [Check migration is being applied to a pre v13 prototype]
+2022-12-05T15:41:28.683Z
+cwd: /Users/user/Documents/Work/aspel/asl-prototypes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/user/.nvm/versions/node/v18.12.1/bin/node /Users/user/Documents/Work/aspel/asl-prototypes/node_modules/.bin/govuk-prototype-kit migrate -- /Users/user/Documents/Work/aspel/asl-prototypes
+Started [Migrate config.js to config.json]
+Started [Update application SCSS file]
+Started [Deleted files that are no longer needed]
+Started [Deleted directories that are no longer needed]
+Started [Delete /Users/user/Documents/Work/aspel/asl-prototypes/listen-on-port.js]
+Started [Delete /Users/user/Documents/Work/aspel/asl-prototypes/server.js]
+Started [Delete /Users/user/Documents/Work/aspel/asl-prototypes/start.js]
+Started [Delete /Users/user/Documents/Work/aspel/asl-prototypes/VERSION.txt]
+Started [Delete /Users/user/Documents/Work/aspel/asl-prototypes/Procfile]
+Started [Remove unused directory lib]
+Started [Remove unused directory docs]
+Started [Remove unused directory public]
+Succeeded [Migrate config.js to config.json]
+Started [Overwrite app/assets/javascripts/application.js]
+Started [Overwrite app/filters.js]
+Started [Overwrite app/views/layout.html]
+Succeeded [Delete /Users/user/Documents/Work/aspel/asl-prototypes/server.js]
+Succeeded [Delete /Users/user/Documents/Work/aspel/asl-prototypes/listen-on-port.js]
+Succeeded [Delete /Users/user/Documents/Work/aspel/asl-prototypes/Procfile]
+Succeeded [Delete /Users/user/Documents/Work/aspel/asl-prototypes/start.js]
+Succeeded [Delete /Users/user/Documents/Work/aspel/asl-prototypes/VERSION.txt]
+copying from [/Users/user/Documents/Work/aspel/asl-prototypes/node_modules/govuk-prototype-kit/prototype-starter/app/assets/javascripts/application.js] to [/Users/user/Documents/Work/aspel/asl-prototypes/app/assets/javascripts/application.js]
+copying from [/Users/user/Documents/Work/aspel/asl-prototypes/node_modules/govuk-prototype-kit/prototype-starter/app/filters.js] to [/Users/user/Documents/Work/aspel/asl-prototypes/app/filters.js]
+Failed [Overwrite app/views/layout.html]
+Started [Delete app/assets/images/separator-2x.png]
+Started [Delete app/assets/images/separator.png]
+Started [Delete app/assets/images/unbranded.ico]
+Started [Delete app/assets/javascripts/auto-store-data.js]
+Started [Delete app/assets/javascripts/jquery-1.11.3.js]
+Started [Delete app/assets/sass/unbranded.scss]
+Started [Delete app/views/includes/breadcrumb_examples.html]
+Started [Delete app/views/includes/cookie-banner.html]
+Started [Delete app/assets/sass/patterns/_contents-list.scss]
+Started [Delete app/assets/sass/patterns/_check-your-answers.scss]
+Started [Delete app/assets/sass/patterns/_pagination.scss]
+Started [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Started [Delete app/views/layout_unbranded.html]
+Started [Delete app/assets/sass/patterns/_related-items.scss]
+Started [Delete app/assets/sass/patterns/_step-by-step-navigation.scss]
+Started [Delete app/assets/sass/patterns/_task-list.scss]
+Succeeded [Deleted files that are no longer needed]
+Failed [Delete app/assets/sass/unbranded.scss]
+Failed [Delete app/assets/sass/patterns/_check-your-answers.scss]
+Failed [Delete app/assets/sass/patterns/_step-by-step-navigation.scss]
+Found [// Add your routes here - above the module.exports line] in [/Users/user/Documents/Work/aspel/asl-prototypes/app/routes.js, replacing
+Keeping these lines from old file
+Could not found [// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you] in [/Users/user/Documents/Work/aspel/asl-prototypes/app/assets/sass/application.scss, aborting
+Failed [Update application SCSS file]
+Succeeded [Delete app/assets/javascripts/auto-store-data.js]
+Succeeded [Delete app/assets/images/unbranded.ico]
+Succeeded [Delete app/assets/javascripts/jquery-1.11.3.js]
+Succeeded [Delete app/assets/images/separator-2x.png]
+Succeeded [Delete app/assets/images/separator.png]
+Succeeded [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Succeeded [Delete app/assets/sass/patterns/_contents-list.scss]
+Succeeded [Delete app/assets/sass/patterns/_pagination.scss]
+Succeeded [Delete app/assets/sass/patterns/_related-items.scss]
+Succeeded [Delete app/views/layout_unbranded.html]
+Succeeded [Delete app/assets/sass/patterns/_task-list.scss]
+Succeeded [Delete app/views/includes/breadcrumb_examples.html]
+Succeeded [Delete app/views/includes/cookie-banner.html]
+// ,// For guidance on how to create routes see:,// https://prototype-kit.service.gov.uk/docs/routes,// ,,const govukPrototypeKit = require('govuk-prototype-kit'),const router = govukPrototypeKit.requests.setupRouter(),,// Add your routes here,,,// PPLh responding to returned RoP,router.post('/rops/r3/pplh-returned/rops-correcting', function (req, res) {,,  let whatToDo = req.session.data['what-to-do'],,  if (whatToDo == 'resubmit') {,    res.redirect('/rops/r3/pplh-returned/rops-submit-comment'),  } else {,    res.redirect('/rops/r3/pplh-returned/rops-correcting'),  },}),,// Regulatory protoype,router.post('/rops/r3/regulatory/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r3/regulatory/nil-return'),  } else {,    res.redirect('/rops/r3/regulatory/setup-protected'),  },}),,router.post('/rops/r3/regulatory/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r3/regulatory/nil-return'),  } else {,    res.redirect('/rops/r3/regulatory/setup-endangered'),  },}),,router.post('/rops/r3/regulatory/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r3/regulatory/nil-return'),  } else {,    res.redirect('/rops/r3/regulatory/setup-protected'),  },}),,router.post('/rops/r3/regulatory/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r3/regulatory/nil-return'),  } else {,    res.redirect('/rops/r3/regulatory/setup-endangered'),  },}),,router.post('/rops/r3/regulatory/setup-animals-breed', function (req, res) {,,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'hamsters') {,    res.redirect('/rops/r3/regulatory/setup-reuse'),  } else {,    res.redirect('/rops/r3/regulatory/setup-animals-breed'),  },}),,router.post('/rops/r3/regulatory/setup-reuse-nhps', function (req, res) {,// need to fix this,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'rhesus-macaques') {,    res.redirect('/rops/r3/regulatory/setup-reuse-birthplace'),  } else {,    res.redirect('/rops/r3/regulatory/setup-reuse-nhps'),  },}),,,// ROPS,var rowNumber = 1,,router.post('/rops/r3/rops-added-1', function (req, res) {,  var newNumber = rowNumber += 1,  console.log(newNumber),  res.render('rops/rops-added-1');,});,,// router.get('/rops/r3/add-procedure-auto', function (req, res) {,//   var newNumber = rowNumber,//   res.render('rops/add-procedure-auto', { row: newNumber});,// });,,router.post('/rops/r3/submit-comment', function (req, res) {,  return newNumber = 0;,  res.render('rops/submit-comment',{ rowNumer: '0'} );,});,,router.post('/rops/r3/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r3/nil-return'),  } else {,    res.redirect('/rops/r3/setup-protected'),  },}),,router.post('/rops/r3/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r3/nil-return'),  } else {,    res.redirect('/rops/r3/setup-endangered'),  },}),,router.post('/rops/r3/setup-animals-breed', function (req, res) {,,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'hamsters') {,    res.redirect('/rops/r3/setup-reuse'),  } else {,    res.redirect('/rops/r3/setup-animals-breed'),  },}),,router.post('/rops/r3/setup-reuse-nhps', function (req, res) {,// need to fix this,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'rhesus-macaques') {,    res.redirect('/rops/r3/setup-reuse-birthplace'),  } else {,    res.redirect('/rops/r3/setup-reuse-nhps'),  },}),,////////////////////////////////////////////////////////////////////////////////,////////////////////////////////////////////////////////////////////////////////,,router.post('/rops/r2/pplh-returned/rops-correcting', function (req, res) {,,  let whatToDo = req.session.data['what-to-do'],,  if (whatToDo == 'resubmit') {,    res.redirect('/rops/r2/pplh-returned/rops-submit-comment'),  } else {,    res.redirect('/rops/r2/pplh-returned/rops-correcting'),  },}),,// Regulatory protoype,router.post('/rops/r2/regulatory/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r2/regulatory/nil-return'),  } else {,    res.redirect('/rops/r2/regulatory/setup-protected'),  },}),,router.post('/rops/r2/regulatory/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r2/regulatory/nil-return'),  } else {,    res.redirect('/rops/r2/regulatory/setup-endangered'),  },}),,router.post('/rops/r2/regulatory/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r2/regulatory/nil-return'),  } else {,    res.redirect('/rops/r2/regulatory/setup-protected'),  },}),,router.post('/rops/r2/regulatory/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r2/regulatory/nil-return'),  } else {,    res.redirect('/rops/r2/regulatory/setup-endangered'),  },}),,router.post('/rops/r2/regulatory/setup-animals-breed', function (req, res) {,,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'hamsters') {,    res.redirect('/rops/r2/regulatory/setup-reuse'),  } else {,    res.redirect('/rops/r2/regulatory/setup-animals-breed'),  },}),,router.post('/rops/r2/regulatory/setup-reuse-nhps', function (req, res) {,// need to fix this,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'rhesus-macaques') {,    res.redirect('/rops/r2/regulatory/setup-reuse-birthplace'),  } else {,    res.redirect('/rops/r2/regulatory/setup-reuse-nhps'),  },}),,,// ROPS,var rowNumber = 1,,router.post('/rops/r2/rops-added-1', function (req, res) {,  var newNumber = rowNumber += 1,  console.log(newNumber),  res.render('rops/rops-added-1');,});,,// router.get('/rops/r2/add-procedure-auto', function (req, res) {,//   var newNumber = rowNumber,//   res.render('rops/add-procedure-auto', { row: newNumber});,// });,,router.post('/rops/r2/submit-comment', function (req, res) {,  return newNumber = 0;,  res.render('rops/submit-comment',{ rowNumer: '0'} );,});,,router.post('/rops/r2/setup-protected', function (req, res) {,,  let setupAny = req.session.data['setup-any'],,  if (setupAny == 'No') {,    res.redirect('/rops/r2/nil-return'),  } else {,    res.redirect('/rops/r2/setup-protected'),  },}),,router.post('/rops/r2/setup-endangered', function (req, res) {,,  let setupProtected = req.session.data['setup-protected'],,  if (setupProtected == 'Yes') {,    res.redirect('/rops/r2/nil-return'),  } else {,    res.redirect('/rops/r2/setup-endangered'),  },}),,router.post('/rops/r2/setup-animals-breed', function (req, res) {,,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'hamsters') {,    res.redirect('/rops/r2/setup-reuse'),  } else {,    res.redirect('/rops/r2/setup-animals-breed'),  },}),,router.post('/rops/r2/setup-reuse-nhps', function (req, res) {,// need to fix this,  let animalType = req.session.data['animal-types'],,  if (animalType !== 'rhesus-macaques') {,    res.redirect('/rops/r2/setup-reuse-birthplace'),  } else {,    res.redirect('/rops/r2/setup-reuse-nhps'),  },}),,,,// TRAINING,,router.post('/training-exemptions/ur/ppl/training-confirm', function (req, res) {,,  let training = req.session.data['training-correct'],,  if (training == 'yes') {,    res.redirect('/training-exemptions/ur/add-cert-ppl/profile-ppl-add'),  } else {,    res.redirect('/training-exemptions/ur/ppl/training-confirm'),  },}),,router.post('/training-exemptions/ur/add-cert-1/training-cert-details', function (req, res) {,,  let evidence = req.session.data['evidence'],,  if (evidence == 'cert') {,    res.redirect('/training-exemptions/ur/add-cert-1/training-cert-details'),  } else {,    res.redirect('/training-exemptions/ur/add-cert-1/training-exemption-details'),  },}),,router.post('/training-exemptions/ur/pil/pil-training-handover', function (req, res) {,,  let evidence = req.session.data['trainig-confirm'],,  if (evidence == 'no') {,    res.redirect('/training-exemptions/ur/pil/pil-app'),  } else {,    res.redirect('/training-exemptions/ur/add-cert-1/profile-empty'),  },}),,router.post('/training-exemptions/evidence-select/pil/pil-training-handover', function (req, res) {,,  let evidence = req.session.data['trainig-confirm'],,  if (evidence == 'yes') {,    res.redirect('/training-exemptions/evidence-select/pil/pil-edit-done'),  } else {,    res.redirect('/training-exemptions/evidence-select/pil/pil-training-handover'),  },}),,router.post('/training-exemptions/evidence-select/ppl/training-confirm', function (req, res) {,,  let evidence = req.session.data['training-correct'],,  if (evidence == 'no') {,    res.redirect('/training-exemptions/evidence-select/ppl/training-edit'),  } else {,    res.redirect('/training-exemptions/evidence-select/ppl/training-confirm'),  },}),,,router.post('/training-exemptions/evidence-select/training-cert-details', function (req, res) {,  ,  let evidence = req.session.data['evidence'],,  if (evidence == 'exemption') {,    res.redirect('/training-exemptions/evidence-select/training-exemption-details'),  } else {,    res.redirect('/training-exemptions/evidence-select/training-cert-details'),  },}),,,router.post('/edit-returns/sop/external/edit-return-action', function (req, res) {,  // Get the answer from session data,  // The name between the quotes is the same as the 'name' attribute on the input elements,  // However in JavaScript we can't use hyphens in variable names,,  let whatToDo = req.session.data['what-to-do'],,  if (whatToDo === 'respond') {,    res.redirect('/edit-returns/sop/external/comment'),  } else if (whatToDo === 'delete') {,    res.redirect('/edit-returns/sop/external/withdraw'),  } else {,    res.redirect('/edit-returns/sop/external/edit-area'),  },}),,,// PPL transfer,,// No additional establishments,,router.post('/transfer-ppl/final-no24/ppl-establishments-2', function (req, res) {,,  let establishments = req.session.data['add-establishments'],,  if (establishments === 'No') {,    res.redirect('/transfer-ppl/final-no24/ppl-establishments-review'),  } else {,    res.redirect('/transfer-ppl/final-no24/ppl-establishments-2'),  },}),,,,// No poles routing,router.post('/transfer-ppl/final-no24/ppl-poles-2', function (req, res) {,,  let poles = req.session.data['poles'],,  if (poles === 'No') {,    res.redirect('/transfer-ppl/final-no24/ppl-poles-review'),  } else {,    res.redirect('/transfer-ppl/final-no24/ppl-poles-2'),  },}),,// 5 yeare review routing,router.post('/5-year-review/mark-reviewed-comment', function (req, res) {,,  let action = req.session.data['review-action'],,  if (action === 'amend') {,    res.redirect('/5-year-review/pil-amend'),  } else if (action === 'revoke') {,    res.redirect('/5-year-review/pil-revoke'),  } else {,    res.redirect('/5-year-review/mark-reviewed-comment'),  },}),,,router.get('/compliance/v2/add-subject-1-details', function(req, res) {,  res.render('compliance/v2/add-subject-1-details', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v2/all-cases', 'breadcrumb2' : 'Manage cases' });,});,,router.get('/compliance/v2/add-case', function(req, res) {,  res.render('compliance/v2/add-case', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v2/all-cases', 'breadcrumb2' : 'Add case' });,});,,router.get('/compliance/v2/all-cases', function(req, res) {,  res.render('compliance/v2/all-cases', { 'breadcrumb1' : 'Enforcement cases' });,});,,,router.get('/compliance/v3/add-subject-1-details', function(req, res) {,  res.render('compliance/v3/add-subject-1-details', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v3/all-cases', 'breadcrumb2' : 'Manage cases' });,});,,router.get('/compliance/v3/add-case', function(req, res) {,  res.render('compliance/v3/add-case', { 'breadcrumb1' : 'Enforcement cases', 'breadcrumb1url' : '/compliance/v3/all-cases', 'breadcrumb2' : 'Add case' });,});,,router.get('/compliance/v3/all-cases', function(req, res) {,  res.render('compliance/v3/all-cases', { 'breadcrumb1' : 'Enforcement cases' });,});,,,router.get('/prototypes', function(req, res) {,  res.render('prototypes', { 'breadcrumb1' : 'Design prototypes'});,});,,router.get('/components', function(req, res) {,  res.render('components', { 'breadcrumb1' : 'Example design components'});,});,,router.get('/templates', function(req, res) {,  res.render('templates', { 'breadcrumb1' : 'Page templates'});,});,,,module.exports = router
+Found [module.exports = router;,module.exports = router] in [/Users/user/Documents/Work/aspel/asl-prototypes/app/routes.js, removing
+Succeeded [Remove unused directory lib]
+Succeeded [Update routes file]
+Succeeded [Overwrite app/filters.js]
+Succeeded [Overwrite app/assets/javascripts/application.js]
+Succeeded [Remove unused directory public]
+Succeeded [Remove unused directory docs]
+Succeeded [Deleted directories that are no longer needed]
+Started [Remove old pattern includes from application SCSS file]
+Succeeded [Remove old pattern includes from application SCSS file]
+Started [Remove empty directory /app/assets/images]
+Started [Remove empty directory /app/assets/sass/patterns]
+Started [Remove empty directory /app/views/includes]
+Skipped deleting /app/assets/images
+Skipped deleting /app/assets/sass/patterns
+Skipped deleting /app/views/includes

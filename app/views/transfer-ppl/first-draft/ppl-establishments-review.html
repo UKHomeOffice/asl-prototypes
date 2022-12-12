@@ -39,7 +39,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
     {% if data['add-establishments'].length > 1 %}
       <h2 class="govuk-heading-s">What is the primary establishment for this licence?</h2>
       {% if data['est-primary'] == 'Marvell Pharmaceuticals' %}
@@ -71,7 +71,7 @@
           <p>{{data["est1-name"]}}</p>
           <p><a href="#">Edit</a></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        
+
           <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
           {% if data['est1-reason'] != "Marvell Pharma doesn't have the MRI machine that we require for this work" %}
             <p><span class="badge changed govuk-body">Changed</span></p>
@@ -101,7 +101,7 @@
           <p>{{data["est2-name"]}}</p>
           <p><a href="#">Edit</a></p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        
+
           <h2 class="govuk-heading-s">Will your project use any additional establishments?</h2>
           <p><span class="badge changed govuk-body">Changed</span></p>
           <p>{{data["est2-reason"]}}</p>
@@ -153,9 +153,9 @@
                 </div>
               </div>
             </fieldset>
-          </div>          
+          </div>
 
-          <button class="govuk-button">Continue</button>
+          <button data-module="govuk-button" class="govuk-button">Continue</button>
         </form>
       </div>
     </div>

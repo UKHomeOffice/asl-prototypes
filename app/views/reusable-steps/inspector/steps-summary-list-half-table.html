@@ -17,7 +17,7 @@
       $(button).text($(button).text() == 'Close' ? 'Open' : 'Close');
       $(stepContainer).toggleClass("hide")
       console.log("hello")
-    }; 
+    };
 
     function toggleAllSteps() {
       $( ".stepContainer").toggleClass("hide")
@@ -26,11 +26,11 @@
 
 </script>
 <style>
-  
+
 </style>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      {% include "includes/licence-header-ppl-application.html" %}                
+      {% include "includes/licence-header-ppl-application.html" %}
 
       <h1 class="govuk-heading-l">List of unique steps</h1>
 
@@ -38,14 +38,14 @@
       <h2 class="govuk-heading-m">General constraints</h2>
 
       <p>Please note, constraints on procedures involving anaesthesia, surgery, substance administration and withdrawal of fluids apply to all protocols.</p>
-     
-      <details class="govuk-details" data-module="govuk-details">
+
+      <details data-module="govuk-details"  class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Show general constraints
           </span>
         </summary>
-        <div class="govuk-details__text">  
+        <div class="govuk-details__text">
 
         <h3 class="govuk-heading-s">Licences for work that needs to satisfy regulatory guidelines</h3>
         <span class="govuk-hint">Information relevant to these standards may also be found in the project plan</span>
@@ -70,7 +70,7 @@
           </li>
         </ul>
       </div>
-    </details>   
+    </details>
 
     <a class="float-right" href="#">Open all steps</a><br><br>
       <h1 class="govuk-heading-l">Steps</h1>
@@ -79,9 +79,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Creation of genetically altered embryos</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
 
           <div class="stepContainer hide">
@@ -102,9 +102,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Tissue sampling for genetic analysis</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -130,9 +130,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals will be killed</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -162,9 +162,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Long term maintenance</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -216,9 +216,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of substances to enhance transgenic effect</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -244,9 +244,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Behavioural testing</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -266,9 +266,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Imaging using various modalities</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -331,7 +331,7 @@
               <div class="review humane-endpoints">
                 <h3 class="govuk-heading-s">What are the humane endpoints for this step?</h3>
                 <span class="govuk-hint">None other than adherence to general constraints of all PPL  and the overall humane end points for this protocol.</span>
-              
+
               </div>
             </td>
             </tr>
@@ -344,9 +344,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals will be killed - v2</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -373,9 +373,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of virus or tumour cell </span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -430,9 +430,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of known chemical agents to induce lung injury</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -498,9 +498,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of transgene inducing or deleting agents - v1</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -559,9 +559,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development - v1</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -622,9 +622,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Blood sampling</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -644,9 +644,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Imaging of tissues</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -655,21 +655,21 @@
               <p>Imaging of tissues involving the following optional regulated procedures: </p>
 
               <p>a. In the case of 18FDG-PET/CT, animals may be fasted overnight (max 14 hours), with free access to water. 18FDG is a glucose analogue and fasting is required as a standard to control for glucose metabolism prior to imaging (AA).</p>
-              
+
               <p>b. Animals will be placed under general anaesthesia generally use gaseous anaesthetic, for example isoflurane (AB).</p>
-              
+
               <p>c. Animals may have an area of hair shaved using an electric small animal shaver AND/OR hair removal cream prior to ultrasound, photoacoustic or optical imaging (AB, AC).</p>
-              
+
               <p>d. Animals will receive an injection of labelling or contrast agents via intraperitoneal (AA/AB/AC) or intradermal (AB/AC) or intravenous injection prior to scanning (AA/AB/AC), or via a temporary indwelling cannula implanted intravenously (AB/AC). Commercially available imaging agents will be used that have a safe history of usage, biologically neutral agents (quantum dots), or antibodies. These are not expected to have an adverse biological effect.</p>
-              
+
               <p>e. Animals may be scanned using dedicated preclinical imaging platforms (AB):</p>
-              
+
               <p>MRI, Micro-CT, SPECT/CT, PET/CT, Ultrasound, Photoacoustics, Optical</p>
-              
+
               <p>Restraint may be used to minimize movement (without affecting respiration) to improve image quality especially in MRI which is extremely motion sensitive. Animals will be monitored (may include ECG via electrodes) for the maintenance of physical stability (temp, respiration etc.).</p>
-              
+
               <p>f. Blood samples by venipuncture via one of the following routes - tail vein or saphenous vein may be done after injection of nuclear tracers (AA, AB). No more than 10% circulating blood volume will be removed within a 24 hour time period and no more than 15% of the blood volume in any 28 days.  </p>
-              
+
               <p>NB. Blood samples will generally be taken at the same time points as the imaging sessions (under the same anaesthesia) and will be used to assess the concentration (% injected dose) of radioactivity in the blood. </p>
             </div>
             <div class="review expect-effects">
@@ -718,9 +718,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Repeated Imaging</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -771,9 +771,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals with known intestinal tumour phenotypes will be used</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -782,15 +782,15 @@
               <p>Animals with known intestinal tumour phenotypes will be used, including APCMin mutant mice and related strains. </p>
 
               <p>Alternatively, administration of a tissue damaging agent (eg DSS) and/or a mutagen (eg AOM) or selective cell ablation agent (eg Diphtheria toxin) or control in combination or alone to affect a colitis-associated cancer model, by the following routes: </p>
-              
+
               <p>a.	Addition to diet or drinking water (AA);</p>
-              
+
               <p>b.	Oral gavage (AA)</p>
-              
+
               <p>c.	Subcutaneous (AA/AB)</p>
-              
+
               <p>d.    Intra-peritoneal (AA/AB)</p>
-              
+
               <p>e.    Intra-venous injection (AA/AB).</p>
             </div>
             <div class="review expect-effects">
@@ -843,9 +843,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -854,13 +854,13 @@
               <p>Administration of agents that ameliorate tumour development and/ or control substances alone or in combination, continuously (in diet or water) or intermittently by one or more of the following routes: </p>
 
               <p>a. Addition to diet or drinking water (AA);</p>
-              
+
               <p>b. Oral gavage (AA)</p>
-              
+
               <p>c. Subcutaneous (AA/AB)</p>
-              
+
               <p>d. Intra-peritoneal (AA/AB)</p>
-              
+
               <p>e. Intra-venous injection (AA/AB).</p>
             </div>
             <div class="review expect-effects">
@@ -909,9 +909,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals will be killed - v3</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -920,11 +920,11 @@
               <p>Animals will be killed via 1 of the following routes</p>
 
               <p>• Cardiac puncture followed by killing via a Schedule 1 method (AC)</p>
-              
+
               <p>• Overdose of pentobarbital for terminal perfuse fixation/exanguination (AC)</p>
-              
+
               <p>• A Schedule 1 method (AA, AC)</p>
-              
+
               <p>• Intravital microscopy imaging requiring surgical exposure of tissues, to be carried out once only under general anaesthesia and animals will be killed before recovering consciousness (AC).</p>
             </div>
             <div class="review expect-effects">
@@ -941,9 +941,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals with known pancreatic tumour phenotypes will be used</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -952,15 +952,15 @@
               <p>Animals with known pancreatic tumour phenotypes will be used, including KPC mutant mice and related strains. </p>
 
               <p>Alternatively or combined with administration of cell suspension or agents that induce tissue damage or cancer and/ or control substances alone or in combination, continuously (in diet or water) or intermittently by one or more of the following routes: </p>
-              
+
               <p>a.	Addition to diet or drinking water (AA);</p>
-              
+
               <p>b.	Oral gavage (AA);</p>
-              
+
               <p>c.	Subcutaneous, intra-peritoneal or intra-venous injection (AA/AB);</p>
-              
+
               <p>d.	Intrapancreatic injection following exposure through laparotomy (AB – once only). </p>
-              
+
               <p>e.	Intrapancreatic injection under an ultrasound guidance (AB). </p>
             </div>
             <div class="review expect-effects">
@@ -1016,9 +1016,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Intra-peritoneal injection of caerulein (AA) to induce pancreatitis</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1068,9 +1068,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of transgene inducing or deleting agents - 2</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1079,13 +1079,13 @@
               <p>Administration of transgene inducing or deleting agents, labelling agents or control substances alone or in combination, continuously (in diet or water) or intermittently by one or more of the following routes: </p>
 
               <p>a. Addition to diet or drinking water (AA);</p>
-              
+
               <p>b. Oral gavage (AA)</p>
-              
+
               <p>c. Subcutaneous (AA/AB)</p>
-              
+
               <p>d. Intra-peritoneal (AA/AB)</p>
-              
+
               <p>e. Intra-venous injection (AA/AB).</p>
             </div>
             <div class="review expect-effects">
@@ -1129,9 +1129,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development - v3</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1172,7 +1172,7 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Substances administered for purposes of cancer therapeutics will be known molecules described in scientific literature and often clinically proven eg Cisplatin and will have been tested by us or other researchers to determine the optimal dose. </p>
                 <p>The majority of administrations will be made using oral delivery, subcutaneous or intraperitoneal injection routes at volumes and frequencies that by themselves will result in no more than transient discomfort and no lasting harm.</p>
-              
+
                 <p>Body weight will be monitored twice a week or serious clinical signs such as marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked.          </p>
               </div>
             </td>
@@ -1182,7 +1182,7 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 <p>If the animals exhibit signs of severe pancreatic damage, such as massive abdominal swelling or marked abdominal distension (ascites), they will be culled immediately. </p>
                 <p>In addition, any animal exhibiting more general signs of distress marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked, persistent diarrhoea or dyspnoea will be culled. </p>
-              
+
                 <p>Body weight will be monitored twice a week and any mice showing a 10% weight loss (compared with baseline) will be monitored daily. If they experience 15% loss (in total) over 48 hours, they will be humanely killed.</p>
               </div>
             </td>
@@ -1197,9 +1197,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Identify tumour heterogeneity</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1256,9 +1256,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Pancreatic Duct Ligation</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1267,9 +1267,9 @@
               <p>Pancreatic Duct Ligation following surgical exposure through laparotomy (AB – once only).</p>
 
               <p>OR</p>
-              
+
               <p>Full or partial pancreatectomy following surgical exposure through laparotomy (AB – once only).</p>
-              
+
               <p>Animals will receive peri- and postoperative analgesia and all surgical procedures will be carried out in accordance with the principles set out in the LASA Guiding Principles for Preparing and Undertaking Aseptic Surgery.</p>
             </div>
             <div class="review expect-effects">
@@ -1307,11 +1307,11 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 If the animals exhibit signs of severe pancreatic damage, such as abdominal distension, persistently laboured respiration, they will be culled immediately.
                 In addition, any animal exhibiting more general signs of distress, marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked, persistent diarrhoea or dyspnoea will be culled.
-              
+
                 Body weight will be monitored twice a week and any mice showing a 10% weight loss (compared with baseline) will be monitored daily. If they experience 15% loss (in total) over 48 hours, they will be humanely killed.
-              
+
                 The animals will be killed at the end of the experimental procedure when the scientific objective has been achieved. Humane endpoint is after 12 months (full regeneration and remodelling of the pancreas) or earlier (intermediate time points of tissue remodelling).
-              
+
                 In the event of intra-operative or post-operative complications, the animal will be culled, unless in consultation with the NVS such complications can be promptly rectified using minor interventions.
               </div>
             </td>
@@ -1320,14 +1320,14 @@
             </table>
           </div>
         </section>
-        
+
         <section class="step completed">
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that induce tissue damage</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1336,13 +1336,13 @@
               <p>Administration of agents that induce tissue damage (e.g diphtheria toxin) or cancer and/ or control substances alone or in combination, continuously (in diet or water) or intermittently by one or more of the following routes: </p>
 
               <p>a. Addition to diet or drinking water (AA);</p>
-              
+
               <p>b. Oral gavage (AA)</p>
-              
+
               <p>c. Subcutaneous (AA/AB)</p>
-              
+
               <p>d. Intra-peritoneal (AA/AB)</p>
-              
+
               <p>e. Intra-venous injection (AA/AB)</p>
             </div>
             <div class="review expect-effects">
@@ -1359,7 +1359,7 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Substances administered to induce pancreatic injury may cause subtle non-specific signs of loss of condition, such as mild reduction in activity and weight loss of less than 10%.</p>
                 <p>Any mice receiving repeated oral gavage could possibly be miss-dosed (immediate dyspnoea) or damage could occur to the oesophagus.</p>
-              
+
                 <p>Administration will result in the growth of pancreatic tumours depending on the transgene and drug combination. Clinical signs of pancreatic cancer include marked abdominal distension, inactivity, piloerection, persistently hunched posture, unresponsive behaviour and weight loss.          </p>
               </div>
             </td>
@@ -1369,11 +1369,11 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Substances administered for purposes of pancreatic injury will be known compounds described in scientific literature and safe dose levels determined in advance. However, if mouse shows signs of distress after substance administration, all subsequent dosing will be stopped and the dose and frequency of the substance will be reviewed.</p>
                 <p>All animals will be weighed weekly and checked daily for persistent signs of ill health such as laboured breathing, hunched posture and unresponsive behaviour daily (see example clinical observation and score sheet). </p>
-              
+
                 <p>Any mice receiving repeated oral gavage, will be monitored for signs of miss-dosing or damage to   the oesophagus such as blood on the canula, hunched back or piloerection. </p>
-              
+
                 <p>Clinical signs of tumour growth coupled with whole body imaging will be used to detect and visualise cancer development and will be monitored following NCRI guidelines. Mice will be culled when the experimental postulation is evidenced and scientifically validated in an accurate manner according to guidelines that minimise the suffering to the animals. </p>
-              
+
                 <p>In addition, we will utilise the humane endpoints to ensure that the adverse effects are limited. </p>
               </div>
             </td>
@@ -1383,7 +1383,7 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 If the animals exhibit signs of severe pancreatic damage, such as massive abdominal swelling or marked abdominal distension (ascites), they will be culled immediately.
                 In addition, any animal exhibiting more general signs of distress marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked, persistent diarrhoea or dyspnoea will be culled.
-              
+
                 Body weight will be monitored twice a week and any mice showing a 10% weight loss (compared with baseline) will be monitored daily. If they experience 15% loss (in total) over 48 hours, they will be humanely killed.
               </div>
             </td>
@@ -1399,9 +1399,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals with known mammary tumour phenotypes will be used</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1410,31 +1410,31 @@
               <p>Animals with known mammary tumour phenotypes will be used, including MMTV-PyMT mice and related strains. </p>
 
               <p>Or</p>
-              
+
               <p>Administration of agents that induce tissue damage or cancer such as DMBA, other carcinogens and hormones and/ or control substances alone or in combination, continuously (in diet or water) or intermittently by one or more of the following routes: </p>
-              
+
               <p>a.	Addition to diet or drinking water (AA);</p>
-              
+
               <p>b.	Oral gavage (AA);</p>
-              
+
               <p>c.	Subcutaneous (AA/AB);</p>
-              
+
               <p>d.	intra-peritoneal (AA/AB), </p>
-              
+
               <p>e.	intra-venous (AA/AB),</p>
-              
+
               <p>f.	intraductal injection will be performed to induce tumorigenesis in mammary epithelium (AB)</p>
-              
+
               <p>Or</p>
-              
+
               <p>Administration of mouse or human cancer cells by one or more of the following routes: </p>
-              
+
               <p>a.	Subcutaneous or a mammary fat pad (AA/AB). Hair may be removed prior to injection. Mice will receive an injection of tumour cell suspension, either unilaterally or bilaterally. Substances such as Matrigel will be used to assist tumour growth. </p>
-              
+
               <p>b.	intra-peritoneal (AA/AB) </p>
-              
+
               <p>c.	intra-venous (AA/AB) </p>
-              
+
               <p>d.	intraductal injection will be performed to induce tumorigenesis in mammary epithelium (AB)</p>
             </div>
             <div class="review expect-effects">
@@ -1451,11 +1451,11 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Administration of agents that induce tissue damage or cancer: Mutagens such as medroxyprogesterone acetate (MPA) and dimethylbenz[a]anthracene (DMBA) will induce changes in the DNA and will subsequently result in tumour formation, however the injection of mutagen does not produce any significant effects to the animals. Agents that induce tissue damage may lead to weight loss. This weight loss is transient and typically animals recover within a week after cessation of treatment. </p>
                 <p>Anaesthesia: adherence to recommended anaesthesia methods should prevent fatalities, but they could occur as there are some differences in the susceptibility of all normal, mutant, and transgenic rodent strains. </p>
-              
+
                 <p>Oral gavage: Any mice receiving repeated oral gavage could possibly be miss-dosed (immediate dyspnoea) or damage could occur to the oesophagus.</p>
-              
+
                 <p>Mammary tumour: Large tumours at mammary gland may affect normal movement or become ulcerated. Tumours may possess a potential to spread to multiple sites (common tropism to lung, liver, bone and brain). </p>
-              
+
               </div>
             </td>
             <td class="govuk-table__cell">
@@ -1464,17 +1464,17 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Anaesthesia: Peri and post-procedure maintenance of body temperature by appropriate thermostatically controlled incubators or by other heat sources will occur. During anaesthesia and recovery animals will be kept under constant observation until they regain their righting reflex and will then be monitored at regular intervals (every 15 minutes) until they have fully returned to normal.  Animals will not be re-anaesthetised unless fully recovered.</p>
                 <p>Administration of substance: If animals show evidence of abdominal pain on i/p injection then injections will be stopped. Mice will be monitored daily and any animal showing pain related behaviours, including writhing or abdominal pressing will be killed. If these problems occur in a number of mice, the dose and frequency of the substance will be reviewed. </p>
-              
+
                 <p>Oral gavage: Oral administrations will be monitored for signs of miss-dosing or damage to  the oesophagus such as blood on the canula, hunched back or piloerection. </p>
-              
+
                 <p>Mammary tumour: Mice are closely monitored for health state and tumour size, particularly in relation to the position in the body: for instance tumour close to the neck or the genitals are allowed to develop less compared to tumours on the flank.</p>
-              
+
                 <p>When monitoring tumour growth, the size of superficial tumours will be regularly assessed using callipers. For a mouse carrying a single tumour, the mean diameter will generally not exceed 1.5 cm and 1.8 cm for metastatic or therapeutic study. Where multiple tumours are in evidence, the mean diameter of the largest tumour should not exceed 15 mm provided that there are no additional adverse welfare consequences for the animal.</p>
-              
+
                 <p>All animals will be weighed weekly and monitored daily for signs of ill health and assessed for clinical  signs that necessitate intervention (see example clinical observation and score sheet). </p>
-              
+
                 <p>Clinical signs of tumour growth coupled with whole body imaging will be used to detect and visualise cancer development and will be monitored following NCRI guidelines. Mice will be culled when the experimental postulation is evidenced and scientifically validated in an accurate manner according to guidelines that minimise the suffering to the animals.</p>
-              
+
                 <p>In addition, we will utilise the humane endpoints to ensure that the adverse effects are limited. </p>
               </div>
             </td>
@@ -1484,7 +1484,7 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 <p>Mice bearing tumours over above dimension or if tumours at any point interfere with normal movement or become ulcerated, the animal will be humanely killed by a schedule 1 method.</p>
                 <p>Any  animal with obvious miss-dosing following gavage administration would be immediately euthanised.</p>
-              
+
                 <p>Body weight will be monitored twice a week and any mice showing a 10% weight loss (compared with baseline) will be monitored daily. If they experience 15% loss (in total) over 48 hours, they will be humanely killed.</p>
               </div>
             </td>
@@ -1497,9 +1497,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of transgene inducing or deleting agents - v3</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1559,9 +1559,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development - v4</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1616,14 +1616,14 @@
             </table>
           </div>
         </section>
-        
+
         <section class="step completed">
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Surgical resection of primary mammary tumour</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1645,11 +1645,11 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Post-operative pain as a result of the surgical procedure.</p>
                 <p>Anaesthesia: adherence to recommended anaesthesia methods should prevent fatalities, but they could occur as there are some differences in the susceptibility of all normal, mutant, and transgenic rodent strains. </p>
-              
+
                 <p>Hair removal: may cause skin irritation. </p>
-              
+
                 <p>Skin incisions: require wound closure which can breakdown requiring re-closure. There is also a low possibility of wound infection or herniation. </p>
-              
+
                 <p>Excessive bleeding can occur during the surgical resection of tumour.</p>
               </div>
             </td>
@@ -1659,11 +1659,11 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Animals will receive peri- and postoperative analgesia and all surgical procedures will be carried out in accordance with the principles set out in the LASA Guiding Principles for Preparing and Undertaking Aseptic Surgery (2010).</p>
                 <p>Anaesthesia: Peri and post-operative maintenance of body temperature by appropriate thermostatically controlled incubators or by other heat sources will occur. During anaesthesia and recovery animals will be kept under constant observation until they regain their righting reflex and will then be monitored at regular intervals (every 15 minutes) until they have fully returned to normal.  Animals will not be re-anaesthetised unless fully recovered. Animals will receive appropriate analgesia during and after surgery.</p>
-              
+
                 <p>Hair removal: Small animal clippers will be cleaned between each use.</p>
-              
+
                 <p>Skin incisions:  Wounds will be checked daily after surgery for signs of infection such as persistent bleeding, dehiscence or herniation. Incisions maybe re-sutured once in the event of suture breakdown, provided that the wound show no signs of infection or inflammation. </p>
-              
+
                 <p>Bleeding: Careful dissection will be carried out to prevent extensive tissue damage. Gentle pressure using sterile gauze will be applied to stop minor bleeding. Diathermy will also be used to cauterize blood vessels to prevent excessive bleeding.          </p>
               </div>
             </td>
@@ -1673,7 +1673,7 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 <p>If wound bleeding or dehiscence persists or there is evidence of herniation the animal will be immediately killed. </p>
                 <p>In the event of post-operative complications, animals will be killed unless, in the opinion of the NVS, such complications can be remedied promptly and successfully using no more than minor interventions. </p>
-              
+
                 <p>Animals which show signs of more severe effects such as body weight loss of 10% over a 24hr period or loss of 15% of body weight (compared to baseline weights) that persists for 48hrs or serious clinical signs such as marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked will be immediately killed.</p>
               </div>
             </td>
@@ -1689,9 +1689,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Injection of tumour cells subcutaneously</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1700,8 +1700,8 @@
               <p>Injection of tumour cells subcutaneously (AA).</p>
 
               <p>Animals will receive an injection of cell suspension either unilaterally or bilaterally. </p>
-              
-              <p>Substances such as matrigel will be used to assist tumour growth.</p>          
+
+              <p>Substances such as matrigel will be used to assist tumour growth.</p>
             </div>
             <div class="review expect-effects">
               <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
@@ -1717,9 +1717,9 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>In the majority of cases, the tumour will be formed at the injection site.  </p>
                 <p>No serious adverse effects are anticipated from subcutaneous tumour implantation. However, large tumours may affect normal movement or become ulcerated. Tumours may possess a potential to spread to multiple sites such as lungs, and liver.</p>
-              
+
                 <p>Clinical signs of lung metastasis include laboured breathing, inactivity, piloerection, persistently hunched posture, unresponsive behaviour and weight loss.</p>
-              
+
                 <p>Clinical signs of liver metastasis include enlarged abdomen and development of ascites. </p>
               </div>
             </td>
@@ -1729,9 +1729,9 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>All animals will be monitored daily for signs of ill health and assessed for clinical  signs that necessitate intervention (see example clinical observation and score sheet). </p>
                 <p>When monitoring tumour growth, the size of superficial tumours will regularly assessed using callipers. A single tumour or a sum of bilateral tumours will not normally exceed the mean diameter of 1.5 cm or 1.8 cm if a therapeutic or metastatic study.  </p>
-              
+
                 <p>Clinical signs of tumour growth coupled with whole body imaging will be used to detect and visualise cancer development and will be monitored following NCRI guidelines. Mice will be culled when the experimental postulation is evidenced and scientifically validated in an accurate manner according to guidelines that minimise the suffering to the animals. </p>
-              
+
                 <p>In addition, we will utilise the humane endpoints to ensure that the adverse effects are limited. </p>
               </div>
             </td>
@@ -1753,9 +1753,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development - v5</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1821,9 +1821,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of cells intravenously</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1845,13 +1845,13 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Administration of cells intravenously may cause embolism</p>
                 <p>Mice undergoing this procedure are anticipated to form tumours mainly in the lung and potentially in liver, bone and brain. Clinical signs of lung tumour include laboured breathing, inactivity, piloerection, persistently hunched posture, unresponsive behaviour and weight loss.</p>
-              
+
                 <p>Clinical signs of liver metastasis include enlarged abdomen and development of ascites.</p>
-              
+
                 <p>Clinical signs of bone metastasis include impaired movement and hind limb paralysis.</p>
-              
+
                 <p>Clinical signs of brain metastasis include seizure, motor problems, circling, head tilt, reduced activity, altered behaviour.</p>
-              
+
                 <p>Anaesthesia: adherence to recommended anaesthesia methods should prevent fatalities, but they could occur as there are some differences in the susceptibility of all normal, mutant, and transgenic rodent strains. </p>
               </div>
             </td>
@@ -1861,9 +1861,9 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Anaesthesia: Peri and post-procedure maintenance of body temperature by appropriate thermostatically controlled incubators or by other heat sources will occur. During anaesthesia and recovery animals will be kept under constant observation until they regain their righting reflex and will then be monitored at regular intervals (every 15 minutes) until they have fully returned to normal.  Animals will not be re-anaesthetised unless fully recovered.  </p>
                 <p>All animals will be monitored daily for signs of ill health and assessed for clinical  signs that necessitate intervention (see example clinical observation and score sheet). </p>
-              
+
                 <p>Clinical signs of tumour growth coupled with whole body imaging will be used to detect and visualise cancer development and will be monitored following NCRI guidelines. Mice will be culled when the experimental postulation is evidenced and scientifically validated in an accurate manner according to guidelines that minimise the suffering to the animals. </p>
-              
+
                 <p>In addition, we will utilise the humane endpoints to ensure that the adverse effects are limited. </p>
               </div>
             </td>
@@ -1873,9 +1873,9 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 <p>If the animals exhibit signs of severe lung damage, such as persistently laboured respiration (dyspnoea) they will be culled immediately. </p>
                 <p>If the animals exhibit severe clinical signs of liver metastasis (development of ascites), bone metastasis (hind limb paralysis) and brain metastasis (seizure), they will be humanely killed.</p>
-              
+
                 <p>In addition, any animal exhibiting more general signs of distress, marked piloerection, persistently hunched posture and prolonged episodes of subdued behaviour even if provoked, persistent diarrhoea or dyspnoea will be culled. </p>
-              
+
                 <p>Body weight will be monitored twice a week and any mice showing a 10% weight loss (compared with baseline) will be monitored daily. If they experience 15% loss (in total) over 48 hours, they will be humanely killed.</p>
               </div>
             </td>
@@ -1890,9 +1890,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Administration of agents that ameliorate tumour development</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1955,9 +1955,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Test agents alone or in combination</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -1966,24 +1966,24 @@
               <p>Test agents alone or in combination will be administered to mice.</p>
 
               <p>Total number of administrations or volumes will not exceed those stated in the Table below.</p>
-              
+
               <p>a. The following routes may be used as appropriate. </p>
-              
+
                     <p>i. Orally in the drinking water or addition to diet (AA) </p>
-              
+
                   <p>ii. Oral gavage (AA) </p>
-              
-                  <p>iii. Subcutaneously (AA)</p> 
-              
+
+                  <p>iii. Subcutaneously (AA)</p>
+
                   <p>iv. Intraperitoneal (AA) </p>
-              
+
                   <p>v. Intravenous (AA/AB) </p>
-              
-                  <p>vi. Intratumoral injection (AB).</p>  
-              
+
+                  <p>vi. Intratumoral injection (AB).</p>
+
               <p>b. A maximum of 3 dose level groups each with a maximum of 3 animals, plus a control group may be used. </p>
-              
-              <p>c. If the desired dose level is not reached, the experiment will be repeated in a different cohort of animals using increments or decrements of the starting doses. </p>          
+
+              <p>c. If the desired dose level is not reached, the experiment will be repeated in a different cohort of animals using increments or decrements of the starting doses. </p>
             </div>
             <div class="review expect-effects">
               <h3 class="govuk-heading-s">Do you expect this step to have adverse effects for the animals that are more than mild and transient?</h3>
@@ -2007,11 +2007,11 @@
                 <span class="govuk-hint">If adverse effects can't be prevented, how will you attempt to ameliorate their initial signs?</span>
                 <p>Animals will be dosed early during the day so that any acute adverse effects can be monitored during the working day and evidence of recovery from any adverse effects established. </p>
                 <p>Athymic animals are prone to hypothermia after drug administration so they will be placed on a heat pad to aid recovery. </p>
-              
+
                 <p>Animals will be weighed at the start of dosing and then at least twice weekly.</p>
-              
+
                 <p>Animal distress will be minimised by close monitoring for acute effects in the first hours after administration, twice daily monitoring throughout the first 4 days of drug administration and thereafter by daily inspection. </p>
-              
+
                 <p>Animals will be closely monitored in the immediate post-dosing period and an acute toxicity observation chart will be used - see below</p>
               </div>
             </td>
@@ -2021,9 +2021,9 @@
                 <span class="govuk-hint">This would be the point at which you would kill the animal to prevent further suffering.</span>
                 <p>Animals that do not recover from severe symptoms within 10 minutes or moderate symptoms within 30 minutes will be killed by a Schedule 1 method. </p>
                 <p>Animals will be immediately killed by a Schedule 1 method or approved method in the PPL when any one of the following clinical signs of ill-health occur: </p>
-              
+
                 <p>Unable to maintain an upright position or move, evidence of pain not ameliorated by analgesia, loss of consciousness, loss of blood from any orifice, 20% body weight loss maintained for no more than 72 hrs based on an animal's pre-study weight, diarrhoea or lethargy involving failure to satisfy its hunger or thirst.  </p>
-              
+
               </div>
             </td>
             </tr>
@@ -2036,9 +2036,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Blood sampling - v2</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -2058,9 +2058,9 @@
           <div class="stepToggle">
             <h2 class="govuk-heading-s">
               Step: <span class="quick-ref">Animals will be killed - v4</span>
-              <button class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
+              <button data-module="govuk-button" class="button float-right link-button" onClick='toggleStep(this)'>Open</button>
             </h2>
-            
+
           </div>
           <div class="stepContainer hide">
             <div class="review step-descritpion">
@@ -2069,9 +2069,9 @@
               <p>At any stage animals will be killed by: </p>
 
               <p>a) A schedule 1 method or </p>
-              
+
               <p>b) Exsanguination followed by Schedule 1 method, or </p>
-              
+
               <p>c) Perfusion fixation (AC) </p>
             </div>
             <div class="review expect-effects">
@@ -2079,9 +2079,9 @@
               <span class="govuk-hint">Do not list uncommon or unlikely adverse effects, or effects from procedures that will cause no more than transient discomfort and no lasting harm. For example, an intravenous injection of a small volume of an innocuous substance.</span>
               <p>No</p>
             </div>
-            
+
           </div>
-        
+
         </section>
       </div>
 
@@ -2092,7 +2092,7 @@
       {% include "includes/application-footer-nav.html" %}
     </div>
 
-    
+
 
     </div>
   </div>
