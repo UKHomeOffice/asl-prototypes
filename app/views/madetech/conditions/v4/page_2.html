@@ -1,214 +1,56 @@
 
-{% extends "layout_tasks.html" %}
+{% extends "layout_manage_conditions.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-xl">
-      Hello Inspector
-    </h1>
-  </div>
-</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <!--
-
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <h2 class="govuk-tabs__title">
-        Contents
-      </h2>
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#tasks">
-            Tasks
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#establishments">
-            Establishments
-          </a>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#people">
-            People
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#projects">
-            Projects
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <br>
-
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <nav class="govuk-tabs">
-        <ul>
-          <li class="active">
-            <a href="/">Tasks</a>
-          </li>
-          <li class="">
-            <a href="#0">Establishments</a>
-          </li>
-          <li class="">
-            <a href="#0">People</a>
-          </li>
-          <li class="">
-            <a href="#0">Projects</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <br>
-
-    -->
-
-    <nav class="govuk-tabs">
-      <style type="text/css">.active:after { content: "";}</style>
-      <ul>
-        <li class="active">
-          <a href="#0">
-            <span>Tasks</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>Establishments</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>People</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>Projects</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div>
-
-      <h3 class="govuk-heading-m">Tasks</h3>
-
-      <p><a href="#0" style="color: #005ea5;">Search all tasks</a></p>
-
-      <p>Filter results:</p>
-
-      <p>By status:
-        <span style="padding-right: 82px;"></span>
-        <strong>My tasks</strong>&emsp;
-        <a href="#0" style="color: #005ea5;">Outstanding</a>&emsp;
-        <a href="#0" style="color: #005ea5;">In progress</a>&emsp;
-        <a href="#0" style="color: #005ea5;">Completed</a>
-      </p>
-
-      <p>By category:
-        <span style="padding-right: 60px;"></span>
-        <strong>All</strong>&emsp;
-        <a href="#0" style="color: #005ea5;">PIL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">PPL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">PEL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">Profile</a>
-      </p>
-
-      <p><strong>All 5 tasks</strong></p>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col" width="150">Last changed</th>
-            <th class="govuk-table__header" scope="col" width="300">Establishment </th>
-            <th class="govuk-table__header" scope="col" width="200">Type</th>
-            <th class="govuk-table__header" scope="col">Status</th>
-            <th class="govuk-table__header" scope="col" width="120">Deadline</th>
-            <th class="govuk-table__header" scope="col" width="100">Assigned to</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">6 Aug 2022</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">University of Croydon</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="page_33.html" style="color: #005ea5;">PPL application</a><br>
-              Bruce Banner
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">Royal Westhamptonshire University</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">PPL transfer</a><br>
-              Stuart Wood
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">Royal Westhamptonshire University</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"> 
-              <a href="task-review"><a href="#0" style="color: #005ea5;">Remove name</a><br>
-              Stuart Wood
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">The University of Training and Planing</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">PPL revoke</a><br>
-              Maartin Allcock
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">The University of Training and Planing</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">Add name</a><br>
-              Maartin Allcock
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span style="color: #b10e1e;">Overdue<br>(statutory)</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-        </tbody>
-      </table>
-        
-      <nav role="navigation" aria-label="Pagination">
-        <div class="pagination__summary">Showing 1 – 5 of 5 results</div>
-        <ul class="pagination">
-          <li class="pagination__item" style="color: #999999;"><span aria-hidden="true" role="presentation">«</span> Previous &nbsp;&nbsp;</li>
-          <li class="pagination__item"><strong>1</strong></li>
-          <li class="pagination__item" style="color: #999999;">&nbsp;&nbsp; Next <span aria-hidden="true" role="presentation">»</span></a></li>
-        </ul>
-      </nav>
-
-    </div>
-
+    {% include "includes/project_licence_banner.html" %}
   </div>
+</div> 
+
+<div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+
+  <h1 class="govuk-heading-xl" style="margin-bottom:30px;">Manage conditions</h1>
+
+  <p>All standard conditions of project licences apply. <a href="https://www.gov.uk/government/publications/project-establishment-licence/project-establishment-licence" target="_blank" style="color: #005ea5;">View standard conditions</a></p>
+
+  <p class="govuk-heading-m" style="margin-top:20px;margin-bottom:0px;"><strong>Additional conditions</strong></p>
+  <!--
+  <span style="margin-bottom:20px;"><a href="page_2.html" class="govuk-button govuk-button--secondary">Add more additional conditions</a></span>
+  -->
+  <div style="width: 900px;margin-top: 25px;">
+    <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+      <p style="margin-bottom:5px;"><strong>Retrospective assessment</strong></p>
+      <p style="margin-bottom:5px;">
+        The Secretary of State has determined that a retrospective assessment of this licence is required, and should be submitted within 6 months of the licence's revocation date.
+      </p>
+      <p style="margin-bottom:5px;color: #70777b;">Reminder: 28/11/23</p>
+      <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+    </div>
+  </div>
+  <div style="width: 900px;">
+    <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+      <p style="margin-bottom:5px;"><strong>Reporting requirement</strong></p>
+      <p style="margin-bottom:5px;">
+        A report in writing to ASRUEnforcement@homeoffice.gov.uk on the project shall be made by Inspector Morse or after 10 animals have been used or the 1 Feb 2023 whichever is the sooner. The report shall contain an explanation.
+      </p>
+      <p style="margin-bottom:5px;color: #70777b;">Reminder: 11/09/23</p>
+      <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+    </div>
+  </div>
+
+  <div style="margin-bottom:30px;margin-top:30px;">
+    <span><a href="page_2a.html" class="govuk-button govuk-button--secondary">Add conditions</a></span>
+  </div>
+
 </div>
 
+  
 
 
 
@@ -257,7 +99,20 @@ dt {
   cursor: default;
 }
 
+.govuk-checkboxes__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+}
+
 </style>
 
+    
 
 {% endblock %}
