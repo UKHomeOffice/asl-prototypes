@@ -1,0 +1,275 @@
+
+{% extends "layout_conditions_project.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
+  <strong>
+    <p style="margin-bottom: 0px;"><strong>2 conditions added successfully to licence PP6807005. </strong></p>
+  </strong>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/project_licence_banner.html" %}
+  </div>
+</div> 
+
+<div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+
+  <!--
+  <h1 class="govuk-heading-xl" style="margin-bottom:30px;padding-left: 15px;">Conditions</h1>
+  -->
+
+  <nav class="govuk-tabs">
+    <style type="text/css">.active:after { content: "";}</style>
+    <ul>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Project activity</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="#standard">
+          <span>Manage licence</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Reporting</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>History</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Downloads</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="govuk-grid-column-two-third">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:50px;">Amendment in progress</h2>
+      <p><span>An amendment to this licence has been submitted and is being reviewed. You can either view the details of this task, or recall the amendment.</span></p>
+      <span><a href="#0" class="govuk-button govuk-button--secondary">View task</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Manage conditions</h2>
+      <span>All standard conditions of project licences apply. <a href="https://www.gov.uk/government/publications/project-establishment-licence/project-establishment-licence" target="_blank" style="color: #005ea5;">View standard conditions</a></span>
+      <br><br>
+      <span><strong>Additional conditions</strong></span>
+      <!--
+      <span style="margin-bottom:20px;"><a href="page_2.html" class="govuk-button govuk-button--secondary">Add more additional conditions</a></span>
+      -->
+      <div style="width: 900px;margin-top: 25px;">
+        <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+          <p style="margin-bottom:5px;"><strong>Retrospective assessment</strong></p>
+          <p style="margin-bottom:5px;">
+            The Secretary of State has determined that a retrospective assessment of this licence is required, and should be submitted within 6 months of the licence's revocation date.
+          </p>
+          <p style="margin-bottom:5px;color: #70777b;">Reminder: 28/11/23</p>
+          <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+        </div>
+      </div>
+      <div style="width: 900px;">
+        <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+          <p style="margin-bottom:5px;"><strong>Reporting requirement</strong></p>
+          <p style="margin-bottom:5px;">
+            A report in writing to ASRUEnforcement@homeoffice.gov.uk on the project shall be made by Inspector Morse or after 10 animals have been used or the 1 Feb 2023 whichever is the sooner. The report shall contain an explanation.
+          </p>
+          <p style="margin-bottom:5px;color: #70777b;">Reminder: 11/09/23</p>
+          <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+        </div>
+      </div>
+      <div style="width: 900px;">
+        <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+          <p style="margin-bottom:5px;"><strong>Regulatory toxicology</strong></p>
+          <p style="margin-bottom:5px;">
+            Where studies are requested in order to meet regulatory requirements, they will be performed in compliance with relevant UK and EU legislative bodies including the European Medicines Agency (EMA), European Chemicals Agency (ECHA), the Medicines and Healthcare Products Regulatory Agency (MHRA), Health and Safety Executive (HSE) and the Veterinary Medicines Directorate (VMD) in the UK. The guidance given in the various guidelines of the International Conference of Harmonisation (ICH) and The Organisation for Economic Co-operation and Development (OECD) are followed in the design of safety evaluation programmes and studies.
+          </p>
+          <p style="margin-bottom:5px;color: #70777b;">Reminder: 19/02/23</p>
+          <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+        </div>
+      </div>
+      <div style="width: 900px;">
+        <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+          <p style="margin-bottom:5px;"><strong>Antibody generation</strong></p>
+          <p style="margin-bottom:5px;">
+            Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed. New text here.
+          </p>
+          <p style="margin-bottom:5px;color: #70777b;">Reminder: 07/06/23</p>
+          <p><a href="page_7.html#" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+        </div>
+      </div>
+      <div style="width: 900px;">
+        <div style="border-left: 8px solid #8f23b3;padding-left: 15px;margin-bottom: 30px;">
+          <p style="margin-bottom:5px;"><strong>Antibody generation</strong></p>
+          <!--
+          <p style="margin-bottom:5px;">
+            Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed. New text here.
+          </p>
+          <p style="margin-bottom:5px;color: #70777b;">Reminder: 07/06/23</p>
+          <p><a href="#0" style="color: #005ea5;">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#0" style="color: #005ea5;">Remove</a></p>
+          -->
+
+          <div class="govuk-form-group" style="margin-bottom:20px;">
+            <div id="more-detail-hint" class="govuk-hint">
+              You are now editing the description of this condition.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint" style="margin-bottom:20px;width: 700px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed. New text here.
+            </textarea>
+          </div>
+
+          <div class="govuk-form-group" style="margin-bottom: 10px;">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="orange" name="contact" type="checkbox" value="email" data-aria-controls="conditional-orange" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="orange">
+                    Set a reminder for deadlines associated with this condition
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-orange">
+                  <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+                  <div class="govuk-body">
+                    Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a reminder when the deadline has passed.
+                  </div>
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+                      <div id="passport-issued-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="07">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="06">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2023">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <span><a href="page_9.html" class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;">Save changes</a></span>
+          &nbsp;
+          <!--
+          <span><a href="#0" class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;">Save as new</a></span>
+          &nbsp;
+          -->
+          <span><a href="page_6.html" class="secondary-link" style="color: #005ea5;">Cancel editing</a></span>
+        </div>
+      <span style="margin-bottom:0px;"><a href="#0" class="govuk-button govuk-button--secondary">Add conditions</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:20px;">Guest access</h2>
+      <p><span>Allow colleagues to view this project. Administrators and other staff with oversight of this project will have access by default.</span></p>
+      <span><a href="#0" style="color: #005ea5;">Grant access</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 40px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:30px;">Suspend licence</h2>
+      <p><span>Suspend this licence if regulated procedures should not be authorised to be carried out under this licence.</span></p>
+      <span><a href="#0" class="govuk-button button-suspend" style="background-color: #E3733B;">Suspend licence</a></span>
+    </div>
+
+    <br>
+
+
+  </div>
+
+</div>
+
+  
+
+  
+
+
+<style type="text/css">
+
+dt {
+  font-weight: bold;
+  padding-bottom: 30px;
+  width: 25%;
+}
+
+.download-header {
+  background-color: white;
+  border-bottom: 4px solid #005ea5;
+  margin-bottom: 30px;
+  padding: 15px;
+  position: relative;
+}
+
+
+.govuk-tabs ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border-bottom: 2px solid #bfc1c3;
+  list-style: none;
+}
+.govuk-tabs ul li {
+  display: inline-block;
+}
+.govuk-tabs ul li a, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li h3, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li .title, .govuk-tabs ul li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li .govuk-button.link, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li legend:visited {
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -2px;
+  padding: 0 30px;
+}
+.govuk-tabs ul li.active a, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li.active h3, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li.active .title, .govuk-tabs ul li.active #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li.active .govuk-button.link, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li.active legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active legend:visited {
+  border: solid 2px #bfc1c3;
+  border-bottom: none;
+  padding-bottom: 2px;
+  color: #0b0c0c;
+  text-decoration: none;
+  pointer-events: none;
+  background-color: #f3f3f3;
+  cursor: default;
+}
+
+</style>
+
+    
+
+{% endblock %}

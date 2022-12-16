@@ -1,0 +1,273 @@
+
+
+{% extends "layout_task.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="padding-top: 0px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!--
+    <span class="govuk-caption-xl">PPL application</span>
+    -->
+    <h1 class="govuk-heading-xl" style="margin-bottom:30px;">Project licence application</h1>
+    <!--
+    <h3 class="govuk-heading-s">How to cure heartache</h3>
+    -->
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+    <nav class="sticky-nav" style="position: static; top: 0px; width: 360px;">
+      <style type="text/css">.active:after { content: "";}</style>
+      <a href="#0" class="active" style="color: #fff;">Details</a>
+      <a href="#0" class="" style="color: #005ea5;">Status</a>
+      <a href="#0" class="" style="color: #005ea5;">Latest activity</a>
+      <a href="#0" class="" style="color: #005ea5;">Latest submission</a>
+      <a href="#0" class="" style="color: #005ea5;">Task assignment</a>
+      <a href="#0" class="" style="color: #005ea5;">What do you want to do?</a>
+    </nav>&nbsp;
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <div id="details">
+
+      <div>
+        <p class="govuk-heading-m">Details</p>
+        <p>
+          <span><strong>Project title</strong></span>
+          <span style="padding-right: 350px;"></span>
+          <span><a href="#0" style="color: #005ea5;">Researching animals panic attacks</a></span>
+        </p>
+        <p>
+          <span><strong>Applicant</strong></span>
+          <span style="padding-right: 368px;"></span>
+          <span><a href="#0" style="color: #005ea5;">Lucille Haynes</a></span>
+        </p>
+        <p>
+          <span><strong>Establishment</strong></span>
+          <span style="padding-right: 326px;"></span>
+          <span><a href="#0" style="color: #005ea5;">University of Croydon</a></span>
+        </p>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m">Status</p>
+        <p>
+          <span class="badge" style="background:#6F777B;">Awaiting decision</span>
+          <span class="date"><strong>Currently with:</strong> Home Office inspector</span>
+        </p>
+        <p class="govuk-heading-m">Process by: 25 June 2020</p>
+        <p>
+          <span><strong>Extended deadline for decision:</strong></span>
+          <span style="padding-right: 180px;"></span>
+          <span>14 June 2022</span>
+        </p>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m">Latest activity</p>
+        <p>
+          <span><strong>Deadline for decision extended by:</strong> <a href="#0" style="color: #005ea5;">Inspector Morse</a></span>
+          <span style="padding-right: 180px;"></span>
+          <span>25 June 2022</span>
+        </p>
+        <p class="govuk-body" style="margin-bottom: 10px;">Inspector Morse remarked:</p>
+        <div class="govuk-inset-text" style="margin-top: 0px;">
+          I extended the deadline for decision due some constraints in the documentation.
+        </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show previous activity
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Information not avalibale at the moment.
+          </div>
+        </details>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m">Latest submission</p>
+        <p>
+          <span><strong>PEL holder endorsement:</strong></span>
+          <span style="padding-right: 240px;"></span>
+          <span>Yes</span>
+        </p>
+        <p>
+          <span><strong>Inspector confirmed ready:</strong></span>
+          <span style="padding-right: 222px;"></span>
+          <span>Yes</span>
+        </p>
+        <p>
+          <span><strong>AWERB review date:</strong></span>
+          <span style="padding-right: 282px;"></span>
+          <span>22062019</span>
+        </p>
+        <p><span>This is the application that has been submitted for approval.</span></p>
+        <span><a href="#0" class="govuk-button govuk-button--secondary">View latest submission</a></span>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 20px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m">Task assigment</p>
+        <p><span><em>Unassigned</em></span></p>
+        <p><span><a href="#0" style="color: #005ea5;">Assign to me</a></span></p>
+        <p><span>Assign to:</span></p>
+        <select class="govuk-select" id="assignedTo" name="assignedTo" style="width:700px;"><option value="">Select...</option><option>Unassigned</option><option value="48d23f3f-bdfb-4699-88f9-2820807d5275">Richard Aikens</option><option value="153b3d33-f46f-47e1-9574-13c4858eb9b6">Rupert Allen</option><option value="d9fcc1b6-9803-4730-8c22-c6a34234c545">Sterling Archer</option><option value="5b51f4f9-5863-46d2-8bcd-cbadd6bf10e6">Lee Censing</option><option value="6822d784-627d-4df1-bb95-0d4ce8e1605d">Columbo Columbo</option><option value="808fd100-eca2-4b60-9b0e-0c89d3cab89b">Aspasia Dellaporta</option><option value="dbd1b666-f3f5-4140-a83e-30fddb842159">Wilfred Dickson</option><option value="6f96c13a-6921-40f9-adba-b1e66a762c59">Jerry Garcia</option><option value="dc7acb3e-2e5b-43f8-b13c-c80a1fe389ab">Stephen Gordon</option><option value="3035d1d2-bdac-4c58-af0a-06f4e1757403">Helen Jarvis</option><option value="b4bd4746-59cb-4d2d-93ff-5405408b239e">Phil Lesh</option><option value="b50cf8e0-3b0c-4c7b-ada6-a38eb7d303da">Lord Missrool</option><option value="696653ef-f167-4ca9-a114-1de8f525982e">Test Permission</option><option value="75600e11-188a-4f3d-8e6b-23fb61496497">Porfiry Petrovich</option><option value="9c9c1d1c-9040-4750-ac59-3454e8b20cfb">Asru Ropper</option><option value="2efb2869-993f-467c-9d15-1ebc42f847d6">Benjamin Stevens</option><option value="a753c182-25a8-4b7d-986f-a4f748f93164">Asru Super</option><option value="43c3c966-35f7-49ec-8eaf-e9e1d9223528">Asru Support</option><option value="557941ca-7ec3-473a-948a-fbe22e2ae07b">New Support</option><option value="df59cc69-2030-48a3-929b-45f11f7349b9">Michael Thomas</option><option value="8b16e220-496f-46be-aec2-d0246dbeaed4">Admin User</option><option value="8bb67c66-0c82-441e-92ec-eb58fe3721c4">Asru User</option><option value="be54f8a6-4d1a-43b1-8778-63c2e44e31f8">Bob Weir</option><option value="08593e7b-bd12-41b2-832d-42b8b5b9beac">Martin Whiting</option></select>
+        <span style="padding-left: 25px;"><a href="#0" style="color: #005ea5;">Assign</a></span>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 60px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m">Upload project licence (PPL) assessment</p>
+        <p>
+          <span style="padding-right: 10px;"><strong>PPL assessment: </strong><!-- &nbsp;<span class="badge" style="background:#6F777B;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">ATTACHED</span>--><span style="padding-left: 10px;"><a href="#0" style="color: #005ea5;">Assessment_reviewed_morse_jul_22.pdf</a></span></span> 
+        </p>
+        <p style="margin-bottom: 10px;"><strong>Update file</strong></p>
+        <div class="govuk-form-group" style="padding-bottom: 10px;margin-bottom: 10px;border-left: 4px solid #b1b4b6;padding-left: 15px;">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+      </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
+
+      <div>
+        <p class="govuk-heading-m" style="margin-bottom:30px;">What do you want to do?</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <!--
+            <div id="contact-hint" class="govuk-hint">
+              Select one option.
+            </div>
+            -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Grant licence
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  A new licence will be granted.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Notify of intention to refuse
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The applicant will be sent a notice with 28 days to respond.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Return to applicant
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The application will be returned to the applicant with your comments.
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <a href="page_37b.html"><button class="govuk-button">Confirm and continue</button></a>
+
+      <br><br>
+
+    </div>
+  </div>
+
+</div>
+
+<style type="text/css">
+.govuk-radios__item label {
+  font-weight: bold;
+}
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .date {
+      float: right;
+    }
+dl {
+  width: 100%;
+}
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+</style>
+
+<script type="text/javascript">
+  var search = document.querySelector('#search');
+var results = document.querySelector('#searchresults');
+var templateContent = document.querySelector('#resultstemplate').content;
+search.addEventListener('keyup', function handler(event) {
+    while (results.children.length) results.removeChild(results.firstChild);
+    var inputVal = new RegExp(search.value.trim(), 'i');
+    var set = Array.prototype.reduce.call(templateContent.cloneNode(true).children, function searchFilter(frag, item, i) {
+        if (inputVal.test(item.textContent) && frag.children.length < 6) frag.appendChild(item);
+        return frag;
+    }, document.createDocumentFragment());
+    results.appendChild(set);
+});
+</script>
+{% endblock %}

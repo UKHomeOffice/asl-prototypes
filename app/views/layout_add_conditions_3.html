@@ -1,0 +1,157 @@
+{% extends "govuk/template.njk" %}
+
+{% from "govuk/components/back-link/macro.njk"     import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk"        import govukButton %}
+{% from "govuk/components/checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "govuk/components/date-input/macro.njk"    import govukDateInput %}
+{% from "govuk/components/details/macro.njk"       import govukDetails %}
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk"      import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk"   import govukFileUpload %}
+{% from "govuk/components/input/macro.njk"         import govukInput %}
+{% from "govuk/components/label/macro.njk"         import govukLabel %}
+{% from "govuk/components/panel/macro.njk"         import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk"        import govukRadios %}
+{% from "govuk/components/select/macro.njk"        import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk"     import govukSkipLink %}
+{% from "govuk/components/table/macro.njk"         import govukTable %}
+{% from "govuk/components/tabs/macro.njk"          import govukTabs %}
+{% from "govuk/components/tag/macro.njk"           import govukTag %}
+{% from "govuk/components/textarea/macro.njk"      import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk"  import govukWarningText %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% set bodyClasses = "ho-body" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+  <header>
+    <div class="wrapper-header">
+      <div class="header-logo">
+        {% include "includes/home-office-logo.html" %}
+      </div>
+      <div class="header-title">
+        <a href="/" class="header-name">Research and testing using animals</a>
+      </div>
+    <div class="sign-in-options"><a href="#0" style="color: #005ea5;">Bruce Banner</a> | Sign out</div>
+    </div>
+  </header>
+
+  <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <a href="../../../madetech/madetech_index.html"><strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong></a>
+        <span class="govuk-phase-banner__text">
+         This is a new service - your <a href="#0" style="color: #005ea5;">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item"><a href="#0" style="color: #005ea5;">Home</a></li>
+        <li class="govuk-breadcrumbs__list-item"><a href="#0" style="color: #005ea5;">University of Croydon</a></li>
+        <li class="govuk-breadcrumbs__list-item"><a href="#0" style="color: #005ea5;">Projects</a></li>
+        <li class="govuk-breadcrumbs__list-item"><a href="page_1.html" style="color: #005ea5;">Vital Research into Virology</a></li>
+        <li class="govuk-breadcrumbs__list-item"><a href="page_2b.html" style="color: #005ea5;">Manage conditions</a></li>
+        <li class="govuk-breadcrumbs__list-item">Add additional conditions</li>
+      </ol>
+    </div>
+  </div>
+
+<style type="text/css">
+
+</style>
+
+{% endblock %}
+
+{% if useAutoStoreData %}
+  {% block footer %}
+    
+  <style>
+
+  </style>
+
+  <footer>
+      <div class="wrapper-footer">
+        <div class="footer-section">
+          <h3 class="govuk-heading-s">Reporting</h3>
+          <ul class="govuk-list">
+            <li>
+              <a href="#">Data and performance</a>
+            </li>
+            <li>
+              <a href="#">Licence fees</a>
+            </li>
+            <li>
+              <a href="#">Downloads</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="govuk-heading-s">ASRU</h3>
+          <ul class="govuk-list">
+            <li>
+              <a href="#">Staff directory</a>
+            </li>
+            <li>
+              <a href="all-cases">Enforcement cases</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <ul class="default-links">
+            <li>
+              <a href="#">© Crown copyright</a>
+            </li>
+            <li>
+              <a href="#">Privacy notice</a>
+            </li>
+            <li>
+              <a href="#">Accessibility statement</a>
+            </li>
+            
+          </ul>
+          <br>
+          <form action="/prototype-admin/clear-data" method="post">
+            <button class="link-secondary">Clear data</button>
+          </form>
+        </div>
+        <!-- 
+        <div class="footer-message">
+          
+          <p>A Home Office Digital, Data and Technology service</p>
+          <form action="/prototype-admin/clear-data" method="post">
+            <button class="link-secondary">Clear data</button>
+          </form>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#0">Feedback</a></li>
+            <li><a href="#0">Help</a></li>
+            <li><a href="#0">GOV.UK home</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </footer>
+  {% endblock %}
+{% endif %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
