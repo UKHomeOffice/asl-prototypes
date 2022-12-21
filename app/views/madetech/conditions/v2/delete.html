@@ -1,0 +1,308 @@
+
+{% extends "layout_conditions.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/conditions_header_banner.html" %}
+  </div>
+</div> 
+
+<div class="govuk-grid-row">
+
+  <!--
+
+  <div class="govuk-grid-column-one-third">
+    <nav class="sidebar-nav section-nav">
+      <a href="#0
+      </a>
+      <a href="#0" aria-current="page" class="active">
+        <h3>Conditions</h3>
+      </a>
+      <a href="#0">
+        <h3>Authorisations</h3>
+      </a>
+      <a href="#0
+      </a>
+      <a href="#0">
+        <h3>Protocols</h3>
+      </a>
+      <a href="#0">
+        <h3>Animals taken from the wild</h3>
+      </a>
+    </nav>
+    <span>&nbsp;</span>
+  </div>
+
+  -->
+
+  <!--
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="">
+      <h1>Conditions</h1>
+      <div class="granted-condition">
+        <p>All <a href="https://www.gov.uk/government/publications/project-establishment-licence/project-establishment-licence" target="_blank" rel="noopener noreferrer">standard conditions of project licences</a> apply.<br><span class="grey">Opens in a new window.</span></p>
+        <h2>Additional conditions</h2>
+        <div class="grey">
+          <p>These additional conditions apply to the project as a whole.</p>
+          <p>Additional conditions that are specific to a set of procedures can be found in each protocol.</p>
+        </div>
+        <div class="conditions">
+          <div class="wild">
+            <h2>Additional condition 1</h2>
+            <div class="condition">
+              <h3>Animals taken from the wild</h3>
+              <div class="condition-text">
+                <p>Standard condition 13(b) of this licence shall not apply in cases when &lt;&lt;&lt;INSERT animal type(s) HERE&gt;&gt;&gt; bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feral">
+            <h2>Additional condition 2</h2>
+            <div class="condition">
+              <h3>Feral animals</h3>
+              <div class="condition-text">
+                <p>Standard condition 13(a) of this licence shall not apply in cases when &lt;&lt;&lt;INSERT animal type(s) HERE&gt;&gt;&gt; bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="poles">
+            <h2>Additional condition 3</h2>
+            <div class="condition">
+              <h3>POLEs</h3>
+              <div class="condition-text">
+                <p>ASRU must be notified via ASRUPoleNotification@homeoffice.gov.uk before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that an inspector may be present if ASRU wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with ASRU at least 7 days before regulated procedures at a POLE are due to start.</p>
+              </div>
+            </div>
+          </div>
+          <div class="non-purpose-bred-sched-2">
+            <h2>Additional condition 4</h2>
+            <div class="condition">
+              <h3>Non purpose bred schedule 2 animals</h3>
+              <div class="condition-text">
+                <p>Standard condition 13(d) of this licence shall not apply in cases when the relevant animals bred for use in procedures are not suitable for the purpose of the programme of work as justified in the project licence application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-of-practice">
+            <h2>Additional condition 5</h2>
+            <div class="condition">
+              <h3>Establishment licences not meeting Code of Practice</h3>
+              <div class="condition-text">
+                <p>If an establishment does not meet the requirements laid out in the Code of Practice for the housing and care of animals bred, supplied, or used for scentific purposes, the following conditions apply:</p>
+                <ul>
+                  <li>&lt;&lt;&lt;INSERT conditions HERE&gt;&gt;&gt;</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      -->
+
+      <h1 class="govuk-heading-xl" style="margin-bottom:30px;padding-left: 15px;">Conditions</h1>
+
+      <nav class="govuk-tabs" style="padding-left: 15px;">
+        <style type="text/css">.active:after { content: "";}</style>
+        <ul>
+          <li class="">
+            <a href="page_12.html" style="color: #005ea5;">
+              <span>Standard conditions</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#additional">
+              <span>Additional conditions</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="govuk-grid-column-two-third" style="padding-left: 15px;">
+
+        <div class="granted-condition">
+          <h2 class="govuk-heading-m" style="margin-bottom: 30px;margin-top:50px;">Addtional conditions</h2>
+        </div>
+
+        <div class="grey">
+            <p style="margin-bottom: 30px;">These additional conditions apply to the project as a whole.<br>Additional conditions that are specific to a set of procedures can be found in each protocol.</p>
+          </div>
+        </div>
+
+        <div style="padding-left: 15px;">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" width="350">Summary</th>
+                <th scope="col" class="govuk-table__header" width="600">Description</th>
+                <th scope="col" class="govuk-table__header" width="120">Date</th>
+                <th scope="col" class="govuk-table__header" width="80" style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Unauthorised work over weekends</td>
+                <td class="govuk-table__cell">This person is not allowed to conduct work on the weekend unless the person has authorisation from the establisment adminsitator and project manager.</td>
+                <td class="govuk-table__cell">28/11/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Restricted collaboration</td>
+                <td class="govuk-table__cell">This person cannot share any work related to the research with any person or organisation.</td>
+                <td class="govuk-table__cell" >28/11/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">This is a test</td>
+                <td class="govuk-table__cell">I'm testing so I will change this condition later.</td>
+                <td class="govuk-table__cell" >28/11/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="page_13.html" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <!--
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Lab food restrictions</td>
+                <td class="govuk-table__cell">This person is not allowed to eat anything at all in the lab.</td>
+                <td class="govuk-table__cell" >28/11/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="page_13.html" style="color: #005ea5;">Update</a></td>
+              </tr>
+              -->
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Limited number of visitors</td>
+                <td class="govuk-table__cell">This person cannot have more than 1 visitor when working in the premises.</td>
+                <td class="govuk-table__cell" >28/11/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Animals taken from the wild</td>
+                <td class="govuk-table__cell">Standard condition 13(b) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</td>
+                <td class="govuk-table__cell" >14/10/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Feral animals</td>
+                <td class="govuk-table__cell">Standard condition 13(a) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</td>
+                <td class="govuk-table__cell" >06/10/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">POLEs</td>
+                <td class="govuk-table__cell">ASRU must be notified via ASRUPoleNotification@homeoffice.gov.uk before starting any procedures at a place other than a licensed establishment (POLE) authorised under this licence, in order that an inspector may be present if ASRU wishes. The minimum period of notice to be given, the information to be provided, and the means of notification must be agreed in writing with ASRU at least 7 days before regulated procedures at a POLE are due to start.</td>
+                <td class="govuk-table__cell" >27/09/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Non purpose bred schedule 2 animals</td>
+                <td class="govuk-table__cell">Standard condition 13(d) of this licence shall not apply in cases when the relevant animals bred for use in procedures are not suitable for the purpose of the programme of work as justified in the project licence application.</td>
+                <td class="govuk-table__cell" >14/09/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Establishment licences not meeting Code of Practice</td>
+                <td class="govuk-table__cell">If an establishment does not meet the requirements laid out in the Code of Practice for the housing and care of animals bred, supplied, or used for scentific purposes, the following conditions apply.</td>
+                <td class="govuk-table__cell" >07/09/22</td>
+                <td class="govuk-table__cell" style="text-align: right;"><a href="#0" style="color: #005ea5;">Update</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav role="navigation" aria-label="Pagination">
+          <div class="pagination__summary">Showing 1 – 8 of 8 results</div>
+          <ul class="pagination">
+            <li class="pagination__item" style="color: #999999;"><span aria-hidden="true" role="presentation">«</span> Previous &nbsp;&nbsp;</li>
+            <li class="pagination__item"><strong>1</strong></li>
+            <li class="pagination__item" style="color: #999999;">&nbsp;&nbsp; Next <span aria-hidden="true" role="presentation">»</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+
+      <!--
+      <nav class="section-nav">
+        <a class="step-link previous" href="#0">
+          <h3>Previous</h3>
+          <span>Project summary</span>
+        </a>
+        <a class="step-link next" href="#0">
+          <h3>Next</h3>
+          <span>Authorisations</span>
+        </a>
+        <hr>
+      </nav>
+      -->
+
+      <br><br><br><br>
+
+    </div>
+  </div>
+</div>
+
+  
+
+
+<style type="text/css">
+
+dt {
+  font-weight: bold;
+  padding-bottom: 30px;
+  width: 25%;
+}
+
+.download-header {
+  background-color: white;
+  border-bottom: 4px solid #005ea5;
+  margin-bottom: 30px;
+  padding: 15px;
+  position: relative;
+}
+
+
+.govuk-tabs ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border-bottom: 2px solid #bfc1c3;
+  list-style: none;
+}
+.govuk-tabs ul li {
+  display: inline-block;
+}
+.govuk-tabs ul li a, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li h3, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li .title, .govuk-tabs ul li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li .govuk-button.link, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li legend:visited {
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -2px;
+  padding: 0 30px;
+}
+.govuk-tabs ul li.active a, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li.active h3, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li.active .title, .govuk-tabs ul li.active #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li.active .govuk-button.link, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li.active legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active legend:visited {
+  border: solid 2px #bfc1c3;
+  border-bottom: none;
+  padding-bottom: 2px;
+  color: #0b0c0c;
+  text-decoration: none;
+  pointer-events: none;
+  background-color: #f3f3f3;
+  cursor: default;
+}
+
+main, .heading-section, .heading-xlarge, .heading-large, .heading-medium, .heading-small, .lede, .navbar, table td, .navbar .navbar__list-items li a, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .navbar .navbar__list-items li h3, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .navbar .navbar__list-items li h2, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .navbar .navbar__list-items li h2, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .navbar .navbar__list-items li legend, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .navbar .navbar__list-items li legend, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .navbar .navbar__list-items li legend, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .navbar .navbar__list-items li legend, .navbar .navbar__list-items li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .navbar .navbar__list-items li .title, .navbar .navbar__list-items li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .navbar .navbar__list-items li .govuk-button.link, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link h3:visited, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li h3:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .navbar .navbar__list-items li h2:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .navbar .navbar__list-items li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .navbar .navbar__list-items li legend:visited {
+  font-family: "Inter UI", sans-serif;
+  line-height: 1.45 !important;
+}
+
+main, table td, .navbar .navbar__list-items li a, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .navbar .navbar__list-items li h3, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .navbar .navbar__list-items li h2, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .navbar .navbar__list-items li h2, .navbar .navbar__list-items li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .navbar .navbar__list-items li legend, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .navbar .navbar__list-items li legend, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .navbar .navbar__list-items li legend, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .navbar .navbar__list-items li legend, .navbar .navbar__list-items li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .navbar .navbar__list-items li .title, .navbar .navbar__list-items li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .navbar .navbar__list-items li .govuk-button.link, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link h3:visited, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .navbar .navbar__list-items li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .navbar .navbar__list-items li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .navbar .navbar__list-items li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li h3:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .navbar .navbar__list-items li h2:visited, #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .navbar .navbar__list-items li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .navbar .navbar__list-items li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .navbar .navbar__list-items li legend:visited {
+  font-size: 18px;
+}
+
+</style>
+
+    
+
+{% endblock %}

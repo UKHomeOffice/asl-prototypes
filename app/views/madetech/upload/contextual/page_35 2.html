@@ -8,6 +8,20 @@
 
 {% block content %}
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#error">To grant a licence, upload the project licence (PPL) assessment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <div class="govuk-grid-row" style="padding-top: 0px;">
   <div class="govuk-grid-column-two-thirds">
@@ -33,7 +47,7 @@
       <a href="#0" class="" style="color: #005ea5;">Latest activity</a>
       <a href="#0" class="" style="color: #005ea5;">Latest submission</a>
       <a href="#0" class="" style="color: #005ea5;">Task assignment</a>
-      <a href="#0" class="" style="color: #005ea5;">Task actions</a>
+      <a href="#0" class="" style="color: #005ea5;">What do you want to do?</a>
     </nav>&nbsp;
   </div>
 
@@ -123,7 +137,7 @@
         <span><a href="#0" class="govuk-button govuk-button--secondary">View latest submission</a></span>
       </div>
 
-      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 20px; margin-bottom: 40px;">
 
       <div>
         <p class="govuk-heading-m">Task assigment</p>
@@ -134,73 +148,77 @@
         <span style="padding-left: 25px;"><a href="#0" style="color: #005ea5;">Assign</a></span>
       </div>
 
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 60px; margin-bottom: 40px;">
+
+      <div class="govuk-form-group govuk-form-group--error" id="error" style="border-left: 5px solid #d4351c;">
+        <p class="govuk-heading-m">Upload project licence (PPL) assessment</p>
+        <p>
+          <span style="padding-right: 10px;"><strong>PPL assessment: </strong></span> 
+          <span class="badge rejected" style="background: #6F777B;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">NO FILE ATTACHED</span>
+        </p>
+        <!--
+        <div class="govuk-warning-text" style="padding-top: 10px;margin-bottom: 10px;">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You must to upload the PPL assessment to grant a licence. 
+          </strong>
+        </div>
+        -->
+        <p style="color: #d4351c;"><strong>To grant a licence, upload the project licence (PPL) assessment</strong></p>
+        <div class="govuk-form-group" style="padding-bottom: 10px;">
+          <label class="govuk-label" for="file-upload-1">
+            <strong>Upload a file</strong>
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" style="border: 2px solid #d4351c;">
+        </div>
+      </div>
+
       <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 2px solid #6f777b; margin-top: 40px; margin-bottom: 40px;">
 
       <div>
-        <p class="govuk-heading-m">Task actions</p>
-        <p><span><strong>Part 1: Upload project licence (PPL) assessment</strong></span></p>
-        <div class="govuk-inset-text">
-          You must to upload the assessment before grant licence. <br>Grant licence option will remain disable until the upload is completed.
-        </div>
+        <p class="govuk-heading-m" style="margin-bottom:30px;">What do you want to do?</p>
         <div class="govuk-form-group">
-          <label class="govuk-label" for="file-upload-1">
-            Upload a file
-          </label>
-          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-        </div>
-        <p><span><strong>Part 2: Select what do you want to do</strong></span></p>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <div class="govuk-radios govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radio1" name="changed-name" type="radio" value="month" id="myAns" disabled>
-                    <label class="govuk-label govuk-radios__label" for="changed-name">
-                      Grant licence
-                    </label>
-                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                      A new licence will be granted.
-                    </div>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radio2" name="changed-name" type="radio" value="year">
-                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                      Notify of intention to refuse
-                    </label>
-                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                      The applicant will be sent a notice with 28 days to respond.
-                    </div>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radio3" name="changed-name" type="radio" value="year">
-                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                      Contact applicant
-                    </label>
-                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                      The application will be returned to the applicant with your comments.
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <!--
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Save for future references
-                </label>
-              </div>
+            <div id="contact-hint" class="govuk-hint">
+              Select one option.
             </div>
             -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Grant licence
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  A new licence will be granted.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Notify of intention to refuse
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The applicant will be sent a notice with 28 days to respond.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Return to applicant
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The application will be returned to the applicant with your comments.
+                </div>
+              </div>
+            </div>
           </fieldset>
         </div>
       </div>
 
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+      <a href="page_36.html"><button class="govuk-button">Confirm and continue</button></a>
 
       <br><br>
 
@@ -209,29 +227,22 @@
 
 </div>
 
-
 <style type="text/css">
-
 .govuk-radios__item label {
   font-weight: bold;
 }
-
 .govuk-radios__item .govuk-hint {
   padding-left: 15px;
 }
-
-
     .sticky-nav a{
       display: block;
       padding: 15px;
       text-decoration: none;
     }
-
    .active{
       color: #fff;
       background-color: #005ea5;
     }
-
     .badge {
       padding: 3px 6px;
       background: #999;
@@ -239,17 +250,12 @@
       text-transform: uppercase;
       font-weight: bold;
     }
-
     .date {
       float: right;
     }
-
-
-
 dl {
   width: 100%;
 }
-
 dt {
   font-weight: normal;
   clear: left;
@@ -265,15 +271,13 @@ dd {
   /*font-weight: 400;*/
   /*background-color: red;*/
 }
-
   .highlight {
     border-bottom: 3px solid #ffbf47;
     margin-right: 1px;
     background-color: #fff2d3;
     padding: 2px 0px 0px;
 }
-
-  </style>
+</style>
 
 <script type="text/javascript">
   var search = document.querySelector('#search');

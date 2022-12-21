@@ -1,5 +1,5 @@
 
-{% extends "layout_add_conditions.html" %}
+{% extends "layout_add_conditions_2.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -50,9 +50,9 @@
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
-              <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="" checked>
+                  <input class="govuk-checkboxes__input" id="apple" name="" type="checkbox" value="" data-aria-controls="conditional-apple" checked>
                   <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
                 </div>
               </div>
@@ -60,10 +60,145 @@
             <td class="govuk-table__cell">
               <p style="margin-bottom:5px;margin-top:10px;"><strong>Regulatory toxicology</strong></p>
               <p style="margin-bottom:5px;">Where studies are requested in order to meet regulatory requirements, they will be performed in compliance with relevant UK and EU legislative bodies including the European Medicines Agency (EMA), European Chemicals Agency (ECHA), the Medicines and Healthcare Products Regulatory Agency (MHRA), Health and Safety Executive (HSE) and the Veterinary Medicines Directorate (VMD) in the UK. The guidance given in the various guidelines of the International Conference of Harmonisation (ICH) and The Organisation for Economic Co-operation and Development (OECD) are followed in the design of safety evaluation programmes and studies.</p>
-              <p style="margin-bottom:5px;color: #70777b;">Reminder: 19/02/23</p>
               <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-apple" style="margin-left: 0px;padding-left: 0px;border-left: 0px solid #bfc1c3;">
+                <div class="govuk-form-group" style="margin-bottom: 10px;">
+                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="orange" name="contact" type="checkbox" value="email" data-aria-controls="conditional-orange" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="orange">
+                          Set a reminder for deadlines associated with this condition
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-orange">
+                        <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+                        <div class="govuk-body">
+                          Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a reminder when the deadline has passed.
+                        </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                            <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+                            <div id="passport-issued-hint" class="govuk-hint">
+                              For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="passport-issued">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="19">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="02">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2023">
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
             </td>
           </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="sugar" name="" type="checkbox" value="" data-aria-controls="conditional-sugar">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Antibody generation</strong></p>
+              
+              <div class="govuk-form-group" style="margin-bottom:20px;">
+                <div id="more-detail-hint" class="govuk-hint">
+                  You are now editing the description of this condition.
+                </div>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint" style="margin-bottom:20px;width: 700px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed.
+                </textarea>
+              </div>
+              <span><a href="page_4.html" class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;">Save changes</a></span>
+              <span><a href="#0" class="secondary-link" style="color: #005ea5;">Cancel editing</a></span>
+
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-sugar" style="margin-left: 0px;padding-left: 0px;border-left: 0px solid #bfc1c3;">
+                <div class="govuk-form-group" style="margin-bottom: 10px;">
+                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="salt" name="contact" type="checkbox" value="email" data-aria-controls="conditional-salt">
+                        <label class="govuk-label govuk-checkboxes__label" for="salt">
+                          Set a reminder for deadlines associated with this condition
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-salt">
+                        <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+                        <div class="govuk-body">
+                          Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a reminder when the deadline has passed.
+                        </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                            <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+                            <div id="passport-issued-hint" class="govuk-hint">
+                              For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="passport-issued">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+          <!--
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
               <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -75,11 +210,11 @@
             </td>
             <td class="govuk-table__cell">
               <p style="margin-bottom:5px;margin-top:10px;"><strong>Antibody generation</strong></p>
-              <p style="margin-bottom:5px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed. New text here.</p>
-              <p style="margin-bottom:5px;color: #70777b;">Reminder: 07/06/23</p>
-              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+              <p style="margin-bottom:5px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed.</p>
+              <p style="margin-bottom:10px;"><a href="page_3.html" style="color: #005ea5;">Edit</a></p>
             </td>
           </tr>
+          -->
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
               <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -270,7 +405,8 @@
 
   
 
-  
+
+
 
 <style type="text/css">
 
