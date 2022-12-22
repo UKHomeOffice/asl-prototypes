@@ -44,77 +44,90 @@
       </li>
       <li class="active">
         <a href="page_2.html" style="color: #005ea5;">
-          <span>Documents</span>
+          <span>Manage documents</span>
         </a>
       </li>
     </ul>
   </nav>
 
-  <div class="govuk-width-container" style="padding-right: 15px;">
-  <main class="govuk-main-wrapper" style="padding-top: 20px;">
-    <div class="govuk-grid-row">
 
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m" style="margin-bottom: 10px;margin-top:0px;">Licence </h2>
-        <p>Licence granted 16 June 2021</p>
-        <br>
-        <p>
-          <strong>Licence</strong>
-          <br>
-          <a href="#0">Download licence (PDF)</a>
-        </p>
-        <br>
-        <p>
-          <strong>Licence application</strong>
-          <br>
-          <a href="#0">Download application (DOCX)</a>
-          <br>
-          <a href="#0">Download application (PDF)</a>
-        </p>
-        <br>
-        <p>
-          <strong>Protocol steps</strong>
-          <br>
-          Download a table of protocol steps, adverse effects, controls and limitations, and humane endpoints.
-          <br>
-          <a href="#0">Download protocol steps (PDF)</a>
-        </p>
-        <br>
-        <p>
-          <strong>Non-technical summary</strong>
-          <br>
-          <a href="#0">Non-technical summary (PDF)</a>
-        </p>
-        <br>
-        <p>
-          <strong>Template</strong>
-          Download a copy of the data that can be uploaded to use as a template for similar projects.
-          <br>
-          <a href="#0">Download template (PPL)</a>
-        </p>
-      </div>
+  <div class="govuk-grid-column-full">
 
-      <div class="govuk-grid-column-one-third" style="background: #ffffff;border: 1px solid #6f777b;padding: 20px;">
-        <h2 class="govuk-heading-m">Upload documents</h2>
-        <!--<p class="govuk-body">This is a paragraph inside a one-third wide column</p>-->
-        <div class="govuk-form-group" style="margin-bottom: 20px;">
-          <label class="govuk-label" for="file-upload-1">
-            Upload a file
-          </label>
-          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-        </div>
-        <div class="govuk-button-group" style="margin-bottom: 0px;">
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <a class="govuk-link" href="#">Cancel</a>
-        </div>
-      </div>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 20px;">Manage documents</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="320">Document</th>
+          <th scope="col" class="govuk-table__header" width="180">Upload date</th>
+          <th scope="col" class="govuk-table__header" width="280">Upload by</th>
+          <th scope="col" class="govuk-table__header" width="210"> </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="200"> </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">License</a></td>
+          <td class="govuk-table__cell">16 Jun 21</td>
+          <td class="govuk-table__cell">Peter Smith</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">License application</a></td>
+          <td class="govuk-table__cell">26 May 21</td>
+          <td class="govuk-table__cell">Anne-marie Coward</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0">Download DOCX</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Protocol steps</a></td>
+          <td class="govuk-table__cell">07 Jun 21</td>
+          <td class="govuk-table__cell">Jamie Johnson</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Non-technical summary</a></td>
+          <td class="govuk-table__cell">12 Jun 21</td>
+          <td class="govuk-table__cell">Jamie Johnson</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
 
-      <br><br><br>
-
+    <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="review-pil-app-public-edit" class="govuk-button">Upload new document</a> 
+        <span style="padding-right: 20px;"></span>
+        <a class="govuk-button govuk-button--secondary" style="height: 39px;">Download template (PPL)</a>
     </div>
-  </main>
+
+
+<!--
+
+    <div class="govuk-button-group" style="margin-bottom: 0px;">
+      <button class="govuk-button" data-module="govuk-button">
+        Upload new document
+      </button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Download template (PPL)
+      </button>
+    </div>
+
+  -->
+
+    <br><br><br><br><br>
+
 </div>
 
 
