@@ -44,7 +44,7 @@
       </li>
       <li class="active">
         <a href="page_2.html" style="color: #005ea5;">
-          <span>Manage documents</span>
+          <span>Manage document</span>
         </a>
       </li>
     </ul>
@@ -53,65 +53,23 @@
 
   <div class="govuk-grid-column-full" style="padding-left: 0px;padding-right: 0px;">
 
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 20px;">Manage documents</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="320">Document</th>
-          <th scope="col" class="govuk-table__header" width="180">Upload date</th>
-          <th scope="col" class="govuk-table__header" width="280">Upload by</th>
-          <th scope="col" class="govuk-table__header" width="210"> </th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="200"> </th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#0">License</a></td>
-          <td class="govuk-table__cell">16 Jun 21</td>
-          <td class="govuk-table__cell">Peter Smith</td>
-          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#0">License application</a></td>
-          <td class="govuk-table__cell">26 May 21</td>
-          <td class="govuk-table__cell">Anne-marie Coward</td>
-          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0">Download DOCX</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#0">Protocol steps</a></td>
-          <td class="govuk-table__cell">07 Jun 21</td>
-          <td class="govuk-table__cell">Jamie Johnson</td>
-          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#0">Non-technical summary</a></td>
-          <td class="govuk-table__cell">12 Jun 21</td>
-          <td class="govuk-table__cell">Jamie Johnson</td>
-          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
-        </tr>
-      </tbody>
+    <table class="govuk-table" style="margin-bottom: 10px;">
+      <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 10px;">Upload document</caption>
     </table>
 
-    <div style="display:inline-block; height: 40px; vertical-align: middle;">
-        <a href="#0" class="govuk-button">Upload new document</a> 
-        <span style="padding-right: 20px;"></span>
-        <a class="govuk-button govuk-button--secondary" style="height: 39px;">Download template (PPL)</a>
+    <!--<p class="govuk-body">This is a paragraph inside a one-third wide column</p>-->
+    <div class="govuk-form-group" style="margin-bottom: 20px;">
+      <!--
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
+      -->
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     </div>
-
+    <div class="govuk-button-group" style="margin-bottom: 0px;">
+      <a href="page_6.html" class="govuk-button">Upload</a>
+      <a class="govuk-link" href="#">Cancel upload</a>
+    </div>
 
 <!--
 
