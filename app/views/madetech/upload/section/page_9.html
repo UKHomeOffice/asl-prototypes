@@ -1,5 +1,5 @@
 
-{% extends "layout_tasks.html" %}
+{% extends "layout_conditions_project.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -9,204 +9,204 @@
 
 <div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
   <strong>
-    <p style="margin-bottom: 0px;"><strong>Granted licence PP6807009 successfully. </strong></p>
+    <p style="margin-bottom: 0px;"><strong>A new supporting document has been added successfully to licence PP6807005. </strong></p>
   </strong>
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-xl">
-      Hello Inspector
-    </h1>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <!--
-
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <h2 class="govuk-tabs__title">
-        Contents
-      </h2>
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#tasks">
-            Tasks
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#establishments">
-            Establishments
-          </a>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#people">
-            People
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#projects">
-            Projects
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <br>
-
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <nav class="govuk-tabs">
-        <ul>
-          <li class="active">
-            <a href="/">Tasks</a>
-          </li>
-          <li class="">
-            <a href="#0">Establishments</a>
-          </li>
-          <li class="">
-            <a href="#0">People</a>
-          </li>
-          <li class="">
-            <a href="#0">Projects</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <br>
-
-    -->
-
-    <nav class="govuk-tabs">
-      <style type="text/css">.active:after { content: "";}</style>
-      <ul>
-        <li class="active">
-          <a href="#0">
-            <span>Tasks</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>Establishments</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>People</span>
-          </a>
-        </li>
-        <li class="">
-          <a href="#0" style="color: #005ea5;">
-            <span>Projects</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div>
-
-      <h3 class="govuk-heading-m">Tasks</h3>
-
-      <p><a href="#0" style="color: #005ea5;">Search all tasks</a></p>
-
-      <p>Filter results:</p>
-
-      <p>By status:
-        <span style="padding-right: 82px;"></span>
-        <strong>My tasks</strong>&emsp;
-        <a href="#0" style="color: #005ea5;">Outstanding</a>&emsp;
-        <a href="#0" style="color: #005ea5;">In progress</a>&emsp;
-        <a href="#0" style="color: #005ea5;">Completed</a>
-      </p>
-
-      <p>By category:
-        <span style="padding-right: 60px;"></span>
-        <strong>All</strong>&emsp;
-        <a href="#0" style="color: #005ea5;">PIL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">PPL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">PEL</a>&emsp;
-        <a href="#0" style="color: #005ea5;">Profile</a>
-      </p>
-
-      <p><strong>All 5 tasks</strong></p>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col" width="150">Last changed</th>
-            <th class="govuk-table__header" scope="col" width="300">Establishment </th>
-            <th class="govuk-table__header" scope="col" width="200">Type</th>
-            <th class="govuk-table__header" scope="col">Status</th>
-            <th class="govuk-table__header" scope="col" width="120">Deadline</th>
-            <th class="govuk-table__header" scope="col" width="100">Assigned to</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">Royal Westhamptonshire University</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">PPL transfer</a><br>
-              Stuart Wood
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">Royal Westhamptonshire University</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"> 
-              <a href="task-review"><a href="#0" style="color: #005ea5;">Remove name</a><br>
-              Stuart Wood
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">The University of Training and Planing</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">PPL revoke</a><br>
-              Maartin Allcock
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="govuk-hint">No dealline</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" style="vertical-align:middle;">4 Aug 2021</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">The University of Training and Planing</td>
-            <td class="govuk-table__cell" style="vertical-align:middle;">
-              <a href="task-review"><a href="#0" style="color: #005ea5;">Add name</a><br>
-              Maartin Allcock
-            </td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span class="badge">AWAITING DECISION</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><span style="color: #b10e1e;">Overdue<br>(statutory)</span></td>
-            <td class="govuk-table__cell" style="vertical-align:middle;"><a href="#0" style="color: #005ea5;">Inspector Morse</a></td>
-          </tr>
-        </tbody>
-      </table>
-        
-      <nav role="navigation" aria-label="Pagination">
-        <div class="pagination__summary">Showing 1 – 5 of 5 results</div>
-        <ul class="pagination">
-          <li class="pagination__item" style="color: #999999;"><span aria-hidden="true" role="presentation">«</span> Previous &nbsp;&nbsp;</li>
-          <li class="pagination__item"><strong>1</strong></li>
-          <li class="pagination__item" style="color: #999999;">&nbsp;&nbsp; Next <span aria-hidden="true" role="presentation">»</span></a></li>
-        </ul>
-      </nav>
-
-    </div>
-
+    {% include "includes/project_licence_banner.html" %}
   </div>
+</div> 
+
+<div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+
+  <!--
+  <h1 class="govuk-heading-xl" style="margin-bottom:30px;padding-left: 15px;">Conditions</h1>
+  -->
+
+  <nav class="govuk-tabs">
+    <style type="text/css">.active:after { content: "";}</style>
+    <ul>
+      <li class="">
+        <a href="#standard">
+          <span>Project activity</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Manage licence</span> 
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Reporting</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>History</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="page_2.html" style="color: #005ea5;">
+          <span>Manage documents</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="govuk-grid-column-full" style="padding-left: 0px;padding-right: 0px;">
+
+    <br>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 10px;">Licence documents</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="400">Document</th>
+          <th scope="col" class="govuk-table__header" width="680">Created on</th>
+          <th scope="col" class="govuk-table__header" width="180"> </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="180"> </th>
+          <!--
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
+          -->
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">License</a></td>
+          <td class="govuk-table__cell">16 Jun 21</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <!--
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+          -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">License application</a></td>
+          <td class="govuk-table__cell">26 May 21</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0">Download DOCX</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <!--
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+          -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Protocol steps</a></td>
+          <td class="govuk-table__cell">07 Jun 21</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <!--
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+          -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Non-technical summary</a></td>
+          <td class="govuk-table__cell">12 Jun 21</td>
+          <td class="govuk-table__cell" style="text-align: right;padding-right: 0px;"><a href="#0"> </a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <!--
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+          -->
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m" style="margin-bottom: 10px;">Other supporting documents</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" width="400">Document</th>
+          <th scope="col" class="govuk-table__header" width="400">Category</th>
+          <th scope="col" class="govuk-table__header" width="180">Uploaded on</th>
+          <th scope="col" class="govuk-table__header" width="220">Uploaded by</th>
+          <th scope="col" class="govuk-table__header" width="180"> </th>
+          <!--
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="90"> </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" width="70"> </th>
+          -->
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="page_10.html">Application assessment</a></td>
+          <td class="govuk-table__cell">Licence application assessment</td>
+          <td class="govuk-table__cell">15 Jun 21</td>
+          <td class="govuk-table__cell">Peter Smith</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+          <!--
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Update</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Remove</a></td>
+          -->
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Internal notes for application</a></td>
+          <td class="govuk-table__cell">Notes</td>
+          <td class="govuk-table__cell">11 Jul 21</td>
+          <td class="govuk-table__cell">Charles Summers</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Lab 2</a></td>
+          <td class="govuk-table__cell">Photos</td>
+          <td class="govuk-table__cell">14 Jun 21</td>
+          <td class="govuk-table__cell">Sonia Jumper</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Lab 1</a></td>
+          <td class="govuk-table__cell">Photos</td>
+          <td class="govuk-table__cell">14 Jun 21</td>
+          <td class="govuk-table__cell">Sonia Jumper</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#0">Floorplans of lab A</a></td>
+          <td class="govuk-table__cell">Premises floor plans</td>
+          <td class="govuk-table__cell">13 Jun 21</td>
+          <td class="govuk-table__cell">Luisa Carreno</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Download PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display:inline-block; height: 40px; vertical-align: middle;">
+        <a href="#0" class="govuk-button">Upload document</a> 
+        <span style="padding-right: 20px;"></span>
+        <a class="govuk-button govuk-button--secondary" style="height: 39px;">Download PPL template</a>
+    </div>
+
+
+<!--
+
+    <div class="govuk-button-group" style="margin-bottom: 0px;">
+      <button class="govuk-button" data-module="govuk-button">
+        Upload new document
+      </button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Download template (PPL)
+      </button>
+    </div>
+
+  -->
+
+    <br><br><br><br><br>
+
 </div>
 
 
 
+
+
+</div>
+
+  
+
+  
 
 
 <style type="text/css">
@@ -255,5 +255,6 @@ dt {
 
 </style>
 
+    
 
 {% endblock %}
