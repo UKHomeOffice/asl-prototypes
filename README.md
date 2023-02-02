@@ -4,7 +4,7 @@ This is a collection of HTML prototypes for user research and templates of commo
 
 It was originally created from a previous version of the Home Office prototype kit (the latest version of which is available at https://design.homeoffice.gov.uk/get-started/start-prototype). 
 
-The prototype is hosted on Render, you can find it [here](https://asl-prototypes.onrender.com/)
+The prototype is hosted on Heroku, you can find it [here](https://asl-prototypes.herokuapp.com/)
 
 ## Requirements
 
