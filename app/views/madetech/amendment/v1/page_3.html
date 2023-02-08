@@ -1,0 +1,463 @@
+
+{% extends "layout_manage_conditions_2.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/project_licence_banner.html" %}
+  </div>
+</div> 
+
+<div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+
+  <h1 class="govuk-heading-xl" style="margin-bottom:20px;">Add conditions</h1>
+
+  <!--
+  <div class="govuk-inset-text" style="margin-bottom:10px;margin-top: 10px;">
+    Select as many additional conditions you want to add to the project.
+    <br>
+    You can also edit any of the additional coditions and save it as new additonal condition.
+  </div>
+  -->
+
+  <p>Select all conditions you want to add.</p>
+
+  <!--
+
+  <h3 class="govuk-heading-m" style="margin-bottom:10px;padding-left: 15px;">Select additional conditions</h3>
+
+  <p style="margin-bottom:5px;padding-left: 15px;">Select as many additional conditions as you need to add to the project.</p>
+
+  <p style="margin-bottom:20px;padding-left: 15px;">You can also edit any of the existing additional coditions and save as new additonal condition.</p>
+
+  -->
+
+  <div class="govuk-grid-column-two-third">
+
+    <div>
+      <table class="govuk-table" style="margin-bottom: 25px">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" width="20"></th>
+            <th scope="col" class="govuk-table__header" width="950"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="apple" name="" type="checkbox" value="" data-aria-controls="conditional-apple">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Regulatory toxicology</strong></p>
+              <p style="margin-bottom:5px;">Where studies are requested in order to meet regulatory requirements, they will be performed in compliance with relevant UK and EU legislative bodies including the European Medicines Agency (EMA), European Chemicals Agency (ECHA), the Medicines and Healthcare Products Regulatory Agency (MHRA), Health and Safety Executive (HSE) and the Veterinary Medicines Directorate (VMD) in the UK. The guidance given in the various guidelines of the International Conference of Harmonisation (ICH) and The Organisation for Economic Co-operation and Development (OECD) are followed in the design of safety evaluation programmes and studies.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-apple" style="margin-left: 0px;padding-left: 0px;border-left: 0px solid #bfc1c3;">
+                <div class="govuk-form-group" style="margin-bottom: 10px;">
+                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="orange" name="contact" type="checkbox" value="email" data-aria-controls="conditional-orange">
+                        <label class="govuk-label govuk-checkboxes__label" for="orange">
+                          Set a reminder for deadlines associated with this condition
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-orange">
+                        <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+                        <div class="govuk-body">
+                          Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a reminder when the deadline has passed.
+                        </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                            <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+                            <div id="passport-issued-hint" class="govuk-hint">
+                              For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="passport-issued">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="sugar" name="" type="checkbox" value="" data-aria-controls="conditional-sugar">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Antibody generation</strong></p>
+              <p style="margin-bottom:5px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed.</p>
+              <p style="margin-bottom:10px;"><a href="page_3.html" style="color: #005ea5;">Edit</a></p>
+              
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-sugar" style="margin-left: 0px;padding-left: 0px;border-left: 0px solid #bfc1c3;">
+                <div class="govuk-form-group" style="margin-bottom: 10px;">
+                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="salt" name="contact" type="checkbox" value="email" data-aria-controls="conditional-salt">
+                        <label class="govuk-label govuk-checkboxes__label" for="salt">
+                          Set a reminder for deadlines associated with this condition
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-salt">
+                        <label class="govuk-label" for="contact-by-email"><strong>Condition reminders</strong></label>
+                        <div class="govuk-body">
+                          Licence holders will receive reminders a month before, a week before and on the day the condition is due to be met. ASRU will receive a reminder when the deadline has passed.
+                        </div>
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                            <label class="govuk-label" for="contact-by-email"><strong>Enter condition deadline</strong></label>
+                            <div id="passport-issued-hint" class="govuk-hint">
+                              For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="passport-issued">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+          <!--
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Antibody generation</strong></p>
+              <p style="margin-bottom:5px;">Unless otherwise specified, antibodies can only be generated using animals when a non-animal alternative has been tried (including taking expert advice) and has failed.</p>
+              <p style="margin-bottom:10px;"><a href="page_3.html" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          -->
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="" disabled checked>
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Retrospective assessment</strong>&nbsp;&nbsp;&nbsp;<strong class="govuk-tag govuk-tag--red">APPLIED</strong></p>
+              <p style="margin-bottom:5px;">The Secretary of State has determined that a retrospective assessment of this licence is required, and should be submitted within 6 months of the licence's revocation date.</p>
+              <p style="margin-bottom:5px;color: #70777b;">Reminder: 28/11/23</p>
+              <!--<p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>-->
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Inspection requirement</strong></p>
+              <p style="margin-bottom:5px;">The licence holder shall ensure that ASRU is notified via ASRUEnforcement@homeoffice.gov.uk before regulated procedures are applied at any place specified in this licence to enable an inspector to be present if ASRU wishes. The minimum periods of notice to be given, the information to be provided, and the means of notification shall be agreed in writing with ASRU at least 7 days before commencement of regulated procedures in this project.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Batch testing</strong></p>
+              <p style="margin-bottom:5px;">For all batch quality control testing using live animals, the substance or product to be tested must be named in the licence providing scientific justification for such a test. You must notify the Home Office when an alternative non-animal test for a substance or product becomes validated and accepted in order that the authorisation for the ongoing use of the live animal test can be withdrawn for the particular substance or product.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Testing household products</strong></p>
+              <p style="margin-bottom:5px;">The following conditions apply to the testing of finished household products or their ingredients:
+              <ul class="govuk-list govuk-list--bullet" style="padding-left:40px;">
+                <li>The use of animals in testing finished household products under this licence is prohibited;</li>
+                <li>The testing of substances under this licence is prohibited where more than fifty per cent of the substance is intended or expected, at the time of testing, to be used as an ingredient in a household product unless there is a regulatory requirement under national or international legislation for testing which is authorised by a project licence or a non-regulatory requirement which is specifically authorised by the Secretary of State;</li>
+                <li>If testing is carried out for a regulatory purpose, the licence holder must notify the Home Office of all such testing within 30 days of the first animal test, using the form of notification required by the Secretary of State;</li>
+                <li>If testing of a substance is proposed under this licence where more than fifty per cent of the substance is intended or expected, at the time of testing, to be used as an ingredient in a household product and the testing is not for a regulatory purpose, the licence holder must apply for prospective authorisation to carry out such testing which, if granted, will be specific to the substance and purpose for which the application is made.</li>
+              </ul>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="" disabled checked>
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Reporting requirement</strong>&nbsp;&nbsp;&nbsp;<strong class="govuk-tag govuk-tag--red">APPLIED</strong></p>
+              <p style="margin-bottom:5px;">A report in writing to ASRUEnforcement@homeoffice.gov.uk on the project shall be made by Inspector Morse or after 10 animals have been used or the 1 Feb 2023 whichever is the sooner. The report shall contain an explanation.</p>
+              <p style="margin-bottom:5px;color: #70777b;">Reminder: 11/09/23</p>
+              <!--<p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>-->
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Minimising suffering for wild or feral animals</strong></p>
+              <p style="margin-bottom:5px;">In accordance with paragraph 25(5) of Schedule 2C to the Act, the words “...and, unless the Secretary of State has agreed otherwise, action has been taken to minimise the suffering of the animal” in part (b) of Standard Condition 14 (b) of this licence shall not apply to wild <<<INSERT animal type(s) HERE>>> or feral <<<INSERT animal type(s) HERE>>> undergoing procedures under protocol <<<INSERT protocol number(s) HERE>>> of the licence for the purpose of the programme of work specified and justified in the licence.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Cosmetic use</strong></p>
+              <p style="margin-bottom:5px;">The testing in animals of cosmetic ingredients or finished cosmetic products for meeting the requirements of the Cosmetics Regulations themselves is not authorised, unless it is for the testing of cosmetic ingredients and products to meet the requirements of other UK Regulations for example UK REACH provided all other requirements under ASPA are met.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Neuromuscular blocking agents (NMBAs)</strong></p>
+              <p style="margin-bottom:5px;">All work under authority of this licence involving the use of neuromuscular blocking agents must be carried out in accordance with the Home Office guidelines.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Marmosets</strong></p>
+              <p style="margin-bottom:5px;">Standard condition 13(c) of this licence shall not apply in cases when marmosets that are offspring of marmosets bred in captivity or sourced from a self-sustaining colony are not suitable for the purpose of the programme of work specified in the licence, as justified in the licence.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Animals taken from the wild</strong></p>
+              <p style="margin-bottom:5px;">Standard condition 13(b) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" style="padding-right:0px;padding-top: 12px;" width="0">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="1" name="" type="checkbox" value="">
+                  <label class="govuk-label--s govuk-checkboxes__label" for="" style="padding-right: 0px;"></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <p style="margin-bottom:5px;margin-top:10px;"><strong>Feral animals</strong></p>
+              <p style="margin-bottom:5px;">Standard condition 13(a) of this licence shall not apply in cases when <<<INSERT animal type(s) HERE>>> bred for use in procedures are not suitable for the purpose of the programme of work specified in the licence as justified in the project licence application.</p>
+              <p style="margin-bottom:10px;"><a href="#0" style="color: #005ea5;">Edit</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <span><a href="#0" class="govuk-button govuk-button--secondary">Create your own condition</a></span>
+
+    <div style="margin-top: 20px;margin-bottom: 60px;">
+      <a href="page_4.html"><button class="govuk-button">Continue</button></a>
+      <a href="#0" class="secondary-link" style="color: #005ea5;">Cancel and return</a>
+    </div>
+
+  </div>
+
+</div>
+
+  
+
+
+
+
+<style type="text/css">
+
+dt {
+  font-weight: bold;
+  padding-bottom: 30px;
+  width: 25%;
+}
+
+.download-header {
+  background-color: white;
+  border-bottom: 4px solid #005ea5;
+  margin-bottom: 30px;
+  padding: 15px;
+  position: relative;
+}
+
+
+.govuk-tabs ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border-bottom: 2px solid #bfc1c3;
+  list-style: none;
+}
+.govuk-tabs ul li {
+  display: inline-block;
+}
+.govuk-tabs ul li a, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li h3, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li .title, .govuk-tabs ul li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li .govuk-button.link, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li legend:visited {
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -2px;
+  padding: 0 30px;
+}
+.govuk-tabs ul li.active a, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li.active h3, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li.active .title, .govuk-tabs ul li.active #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li.active .govuk-button.link, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li.active legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active legend:visited {
+  border: solid 2px #bfc1c3;
+  border-bottom: none;
+  padding-bottom: 2px;
+  color: #0b0c0c;
+  text-decoration: none;
+  pointer-events: none;
+  background-color: #f3f3f3;
+  cursor: default;
+}
+
+.govuk-checkboxes__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+}
+
+</style>
+
+    
+
+{% endblock %}
