@@ -1,6 +1,6 @@
 
 
-{% extends "layout_corporate_4.html" %}
+{% extends "layout_pile_1.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,7 +13,9 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl" style="margin-bottom:30px;">Hello Inspector</h1>
+    <span class="govuk-caption-xl" style="color: #000">University of Croydon &nbsp; <strong class="govuk-tag">non-profit</strong></span> 
+
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Personal licences</h1>
 
   </div>
 
@@ -24,23 +26,13 @@
         <style type="text/css">.active:after { content: "";}</style>
         <ul>
           <li class="">
-            <a href="#0">
-              <span>Tasks</span>
+            <a href="#0" style="color: #005ea5;">
+              <span>General</span>
             </a>
           </li>
           <li class="active">
-            <a href="#0" style="color: #005ea5;">
-              <span>Establishments</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="#0">
-              <span>People</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="#0">
-              <span>Projects</span>
+            <a href="#0" style="color: #000000;">
+              <span>Category E</span>
             </a>
           </li>
         </ul>
@@ -48,95 +40,114 @@
 
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-form-group search-box">
-          <h1 class="govuk-heading-l" style="margin-bottom:30px;">Establishments</h1>
-          <h3 class="govuk-heading-s" style="margin-bottom: 10px;">Search by establishment name, PEL number, inspector name or SPoC name</h3>
-          <input type="text" class="govuk-input" id="filter-*" name="filter-*" value="" style="display: inline-block; width: 95%; margin-right: 0px">
-          <button data-module="govuk-button" style="height: 40px; width: 40px;background-color: #025EA6;display: inline-block;position: absolute; border: solid 3px black; border-left: 0px;"></button>
+          <h1 class="govuk-heading-m" style="margin-bottom:10px;">Category E</h1>
+          <p style="margin-bottom: 20px;">Apply for category E licences on behalf of people attending a course.</p>
+          <span><a href="#0" class="govuk-button govuk-button">Add new course</a></span>
+          <!--
+          <span><a href="#" class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;">Save changes</a></span>
+          -->
         </div>
       </div>
 
       <div class="govuk-grid-column-full">
 
-        <p>Filter by: &nbsp; <strong>Active</strong> &nbsp;&nbsp; <a href="#0">Draft</a> &nbsp;&nbsp; <a href="#0">Revoked</a> &nbsp;&nbsp; <a href="#0">Show all</a></p>
-
-        <p><strong>Showing 17 results</strong></p>
-
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="col" width="900"><a href="#">Name</a></th>
-              <th class="govuk-table__header" scope="col" width="200">PPL number</th>
-              <th class="govuk-table__header" scope="col" width="200"><a href="#">Status</a></th>
+              <th class="govuk-table__header" scope="col" width="900"><a href="#">Course name</a></th>
+              <th class="govuk-table__header" scope="col" width="350"><a href="#">Start date</a></th>
+              <th class="govuk-table__header" scope="col" width="350"><a href="#">End date</a></th>
+              <th class="govuk-table__header" scope="col" width="200"><a href="#">Participants</a></th>
+              <th class="govuk-table__header" scope="col" width="320"><a href="#">Licences granted</a></th>
+              <th class="govuk-table__header" scope="col" width="70"><a href="#">Status</a></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Farm Pharma</a></td>
-              <td class="govuk-table__cell" scope="col">X19804669</td>
+              <td class="govuk-table__cell" scope="col"><a href="page_2.html">Lorum ipsum est</a></td>
+              <td class="govuk-table__cell" scope="col">14 Sep 2022</td>
+              <td class="govuk-table__cell" scope="col">26 Apr 2023</td>
+              <td class="govuk-table__cell" scope="col">5</td>
+              <td class="govuk-table__cell" scope="col">4</td>
               <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Marvell Pharmaceutical</a> &nbsp; <strong class="govuk-tag">corporate</strong></td>
-              <td class="govuk-table__cell" scope="col">X19804523</td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Vinculas tentare</a></td>
+              <td class="govuk-table__cell" scope="col">25 Aug 2022</td>
+              <td class="govuk-table__cell" scope="col">14 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">4</td>
+              <td class="govuk-table__cell" scope="col">3</td>
               <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Royal Westhamptonshire University</a></td>
-              <td class="govuk-table__cell" scope="col">X19804017</td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Supra et malicius contreras</a></td>
+              <td class="govuk-table__cell" scope="col">7 Sep 2022</td>
+              <td class="govuk-table__cell" scope="col">15 Feb 2022</td>
+              <td class="govuk-table__cell" scope="col">2</td>
+              <td class="govuk-table__cell" scope="col">2</td>
               <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Norton Labs UK</a></td>
-              <td class="govuk-table__cell" scope="col">X19804229</td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Roman senatus sumus</a></td>
+              <td class="govuk-table__cell" scope="col">13 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">25 Mar 2023</td>
+              <td class="govuk-table__cell" scope="col">1</td>
+              <td class="govuk-table__cell" scope="col">1</td>
               <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">University of Croydon</a></td>
-              <td class="govuk-table__cell" scope="col">X19804402</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #b10e1e;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">revoked</strong></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Johnson & Johnson Pharmaceutical</a></td>
-              <td class="govuk-table__cell" scope="col">X19804265</td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Aliquam doloris sempre et comlumpias</a></td>
+              <td class="govuk-table__cell" scope="col">27 Nov 2022</td>
+              <td class="govuk-table__cell" scope="col">18 Apr 2023</td>
+              <td class="govuk-table__cell" scope="col">3</td>
+              <td class="govuk-table__cell" scope="col">0</td>
               <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Pandora Labs & Partners</a></td>
-              <td class="govuk-table__cell" scope="col">X19804117</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Colabra tauras sentara</a></td>
+              <td class="govuk-table__cell" scope="col">19 Oct 2022</td>
+              <td class="govuk-table__cell" scope="col">17 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">1</td>
+              <td class="govuk-table__cell" scope="col">1</td>
+              <td class="govuk-table__cell" scope="col"><strong style="background: #b10e1e;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">ENDED</strong></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">University of London</a></td>
-              <td class="govuk-table__cell" scope="col">X19804385</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Smith & Silverstain Associates</a></td>
-              <td class="govuk-table__cell" scope="col">X19804669462</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#">Cardiff University</a></td>
-              <td class="govuk-table__cell" scope="col">X19804084</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#">Pendulas corintias</a></td>
+              <td class="govuk-table__cell" scope="col">14 Sep 2022</td>
+              <td class="govuk-table__cell" scope="col">26 Nov 2022</td>
+              <td class="govuk-table__cell" scope="col">5</td>
+              <td class="govuk-table__cell" scope="col">5</td>
+              <td class="govuk-table__cell" scope="col"><strong style="background: #b10e1e;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">ENDED</strong></td>
             </tr>
           </tbody>
         </table>
 
         <nav role="navigation" aria-label="Pagination">
+          <div class="pagination__summary">Showing 1 – 7</div>
+          <!--
           <div class="pagination__summary">Showing 1 – 10 of 17 results</div>
+          -->
           <ul class="pagination">
+            <!--
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
+            -->
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page" style="color: #6f777b"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
+            <li class="pagination__item">1</li>
+            <!--
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">»</span></a></li>
+            -->
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page" style="color: #6f777b">Next <span aria-hidden="true" role="presentation">»</span></a></li>
           </ul>
         </nav>  
 
+        <!--
         <span><a href="#0" class="govuk-button govuk-button--secondary">Create inactive establishment</a></span>
+        -->
 
         <br><br>
 
