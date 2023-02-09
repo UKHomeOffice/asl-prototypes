@@ -1,5 +1,5 @@
 
-{% extends "layout_manage_conditions_2.html" %}
+{% extends "layout_conditions_project.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -7,49 +7,102 @@
 
 {% block content %}
 
-<div class="govuk-grid-row" style="padding-top: 0px;">
+<div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
+  <strong>
+    <p style="margin-bottom: 0px;"><strong>Establishment amended successfully. </strong></p>
+  </strong>
+</div>
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    {% include "includes/project_licence_banner.html" %}
+  </div>
+</div> 
 
-    <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+<div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
 
-      <span class="govuk-caption-l">Manage project conditions</span>
+  <!--
+  <h1 class="govuk-heading-xl" style="margin-bottom:30px;padding-left: 15px;">Conditions</h1>
+  -->
 
-      <h1 class="govuk-heading-l" style="margin-bottom:20px;">Reason for change conditions</h1>
+  <nav class="govuk-tabs">
+    <style type="text/css">.active:after { content: "";}</style>
+    <ul>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Project activity</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="#standard">
+          <span>Manage licence</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Reporting</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>History</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#0" style="color: #005ea5;">
+          <span>Downloads</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-      <div class="govuk-grid-column-two-thirds" style="padding-left: 0px;padding-right: 0px;">
+  <div class="govuk-grid-column-two-third">
 
-        <p><strong>Lorum ipsum est... (optional)</strong></p>
-
-        <div id="more-detail-hint" class="govuk-hint">
-          Lorum ipsum est...
-        </div>
-
-        <form action="suspend-confirm" method="post">
-          <div class="govuk-form-group">
-            <!--
-            <h1 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--s" for="event-name">Why are you suspending this licence?</label>
-            </h1>
-            -->
-            <textarea class="govuk-textarea" id="reason" name="reason" rows="5" aria-describedby="reason-hint"></textarea>
-          </div>
-        </form>
-
-        <div style="margin-top: 20px;margin-bottom: 60px;">
-          <a href="page_6.html"><button class="govuk-button">Confirm</button></a>
-          <a href="#0" class="secondary-link" style="color: #005ea5;">Cancel and return</a>
-        </div>
-
-      </div>
-
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:50px;">Amendment in progress</h2>
+      <p><span>An amendment to this licence has been submitted and is being reviewed. You can either view the details of this task, or recall the amendment.</span></p>
+      <span><a href="#0" class="govuk-button govuk-button--secondary">View task</a></span>
     </div>
 
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;">Manage conditions</h2>
+      <span>Check, edit, remove or add conditions to this project licence.</span>
+      <br><br>
+      <!--
+        <span>All standard conditions of project licences apply. <a href="https://www.gov.uk/government/publications/project-establishment-licence/project-establishment-licence" target="_blank" style="color: #005ea5;">View standard conditions</a></span>
+      <br><br>
+      -->
+      <span style="margin-bottom:0px;"><a href="page_2.html" class="govuk-button govuk-button--secondary">Manage conditions</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 10px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:20px;">Guest access</h2>
+      <p><span>Allow colleagues to view this project. Administrators and other staff with oversight of this project will have access by default.</span></p>
+      <span><a href="#0" style="color: #005ea5;">Grant access</a></span>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl" style="margin-top: 40px;margin-bottom: 30px;border-top: 1px solid #bfc1c3">
+
+    <div>
+      <h2 class="govuk-heading-m" style="margin-bottom: 20px;margin-top:30px;">Suspend licence</h2>
+      <p><span>Suspend this licence if regulated procedures should not be authorised to be carried out under this licence.</span></p>
+      <span><a href="#0" class="govuk-button button-suspend" style="background-color: #E3733B;">Suspend licence</a></span>
+    </div>
+
+    <br>
+
+
   </div>
+
 </div>
 
   
 
-
+  
 
 
 <style type="text/css">
@@ -94,18 +147,6 @@ dt {
   pointer-events: none;
   background-color: #f3f3f3;
   cursor: default;
-}
-
-.govuk-checkboxes__input {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin: 0;
-    opacity: 0;
 }
 
 </style>
