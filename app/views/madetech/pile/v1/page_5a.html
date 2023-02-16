@@ -13,56 +13,100 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details before sending your request</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:20px;">Remove participants</h1>
 
-    <table class="govuk-table" style="margin-bottom:10px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="200"> </th>
-          <th scope="col" class="govuk-table__header"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Request</th>
-          <td class="govuk-table__cell">Add new participant</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant</th>
-          <td class="govuk-table__cell">Peter Kowasky </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant licence</th>
-          <td class="govuk-table__cell">From 14 Dec 2022 to 14 Feb 2023</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="govuk-warning-text" style="margin-bottom:0px;">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Participants licences for this course will be revoked automatically.
+      </strong>
+    </div>
 
-    <br>
-    <br>
+  </div>
 
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-full">
+
+      <h4><span>Select participant to remove from this course</span></h4>
+
+      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <!--
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
+              <input class="govuk-checkboxes__input" id="countries-1" name="countries" type="checkbox" value="1" data-behaviour="exclusive" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="countries-1">
+                All participants with expired licences
+              </label>
             </div>
+            -->
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Jake Evans (licence expire on 14 Feb 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Dean Loach (licence expire on 14 Feb 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Dave Bartram (licence extension requested)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Ann Cooper (licence expire on 14 Feb 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Ray Hadfield (licence expire on 14 Feb 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Maria Shutterland (licence expired on 14 Dec 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Mike Kowasky (licence expire on 14 Feb 2022)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="3">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                Sonia Coward (licence expired on 14 Dec 2022)
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                Carla Montori (licence expire on 28 Jan 2022)
+              </label>
+            </div>        
           </div>
         </fieldset>
       </div>
-    </div>
 
-    <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_4c.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel add new participant</a>
-    </div>
+      <div style="margin-bottom:0px;margin-top:30px;">
+        <span><a href="page_5b.html" class="govuk-button govuk-button">Continue</a></span>
+        <a href="#0" class="secondary-link">Cancel remove participant</a>
+      </div>
 
-    <br><br>
+      <br><br>
+
+    </div>
 
   </div>
 
