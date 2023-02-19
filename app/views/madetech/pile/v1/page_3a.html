@@ -13,9 +13,9 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">You are about to cancel this course</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Are you sure you want to cancel this course?</h1>
 
-    <div class="govuk-warning-text">
+    <div class="govuk-warning-text" style="margin-bottom: 15px;">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-warning-text__assistive">Warning</span>
@@ -23,25 +23,28 @@
       </strong>
     </div>
 
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
-            </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Yes, I want to proceed
+            </label>
           </div>
-        </fieldset>
-      </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              No, cancel this request
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>
 
     <div style="margin-bottom:0px;margin-top:30px;">
       <span><a href="page_3b.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel to cancel this course</a>
+      <a href="#0" class="secondary-link">Cancel request</a>
     </div>
 
     <br><br>
