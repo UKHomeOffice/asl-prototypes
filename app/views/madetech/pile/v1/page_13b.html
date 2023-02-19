@@ -13,56 +13,38 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details before sending your request</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:20px;">Explain the reason for change course dates </h1>
 
-    <table class="govuk-table" style="margin-bottom:10px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header"> </th>
-          <th scope="col" class="govuk-table__header"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Request</th>
-          <td class="govuk-table__cell">Change course dates</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Start date</th>
-          <td class="govuk-table__cell">14 Sep 2022</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">End date</th>
-          <td class="govuk-table__cell">19 May 2023 </td>
-        </tr>
-      </tbody>
-    </table>
+  </div>
 
-    <br>
-    <br>
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-full">
 
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
-            </div>
+      <!--<h4><span>Explain the reason for request revoke licences</span></h4>-->
+
+      <div class="govuk-form-group">
+
+        <div class="govuk-grid-column-two-thirds" style="padding-left: 0px;padding-right: 0px;">
+
+        <form action="suspend-confirm" method="post">
+          <div class="govuk-form-group">
+            <!--
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s" for="event-name">Why are you suspending this licence?</label>
+            </h1>
+            -->
+            <textarea class="govuk-textarea" id="reason" name="reason" rows="5" aria-describedby="reason-hint"></textarea>
           </div>
-        </fieldset>
+        </form>
+
+      <div style="margin-bottom:0px;margin-top:30px;">
+        <span><a href="page_13c.html" class="govuk-button govuk-button">Continue</a></span>
+        <a href="#0" class="secondary-link">Cancel request</a>
       </div>
-    </div>
 
-    <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_13c.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel change course dates</a>
-    </div>
+      <br><br>
 
-    <br><br>
+    </div>
 
   </div>
 
