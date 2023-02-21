@@ -20,7 +20,7 @@ Navigate to `./asl-prototypes` directory
 
 Run `npm ci` to install dependencies
 
-To start the prototype run `npm start`
+To start the prototype run `npm run dev`
 
 The prototype will then be visible on [http://localhost:3000](http://localhost:3000)
 
