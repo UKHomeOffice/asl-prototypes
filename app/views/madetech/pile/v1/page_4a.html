@@ -9,13 +9,15 @@
 {% block content %}
 
 
+<link rel="stylesheet" href="/public/css/accessible-autocomplete.min.css">
+
 <div class="govuk-grid-row" style="padding-top: 0px;">
 
   <div class="govuk-grid-column-two-thirds">
 
     <span class="govuk-caption-xl">Add a new course participant</span>
 
-    <h1 class="govuk-heading-l" style="margin-bottom:0px;">Select participant to add to this course </h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:0px;">Select a participant </h1>
 
     <!--
 
@@ -42,11 +44,47 @@
 
       <!--<h4><span>Select participant to add in this course</span></h4>-->
 
+      <!--
       <div class="govuk-form-group">
         <div class="govuk-hint" for="full">
           Enter a name and select from the list of PIL-E licence holders.
         </div>
         <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+      </div>
+      -->
+
+      <div class="govuk-form-group">
+        <div class="govuk-hint" for="fruit-type">
+          Enter a name and select from the list of PIL-E licence holders.
+        </div>
+        <select name="fruit-type" id="fruit-type">
+          <option selected="selected"></option>
+          <!--
+          <option value="Apple">Apple</option>
+          <option value="Apricot">Apricot</option>
+          <option value="Avocado">Avocado</option>
+          <option value="Banana">Banana</option>
+          <option value="Blackberry">Blackberry</option>
+          <option value="Blueberry">Blueberry</option>
+          <option value="Cherry">Cherry</option>
+          <option value="Coconut">Coconut</option>
+          <option value="Date">Date</option>
+          <option value="Dragon fruit">Dragon fruit</option>
+          <option value="Grapes">Grapes</option>
+          <option value="Jack fruit">Jack fruit</option>
+          <option value="Kiwi fruit">Kiwi fruit</option>
+          <option value="Lychee">Lychee</option>
+          <option value="Mango">Mango</option>
+          <option value="Melon">Melon</option>
+          <option value="Oranges">Oranges</option>
+          <option value="Passion fruit">Passion fruit</option>
+          <option value="Strawberry">Strawberry</option>
+          -->
+          <option value="Strawberry">Peter Anderson (peter.anderson@johnsonslabs.com)</option>
+          <option value="Strawberry">Peter Coward (peter.coward@defra.gov.uk)</option>
+          <option value="Strawberry">Peter Kowasky (peter.kowasky@universitycroydon.co.uk)</option>
+          <option value="Strawberry">Laura Peterson (laura.peterson@cometindustries.com)</option>
+        </select>
       </div>
 
       <div style="margin-bottom:0px;margin-top:30px;">
@@ -61,6 +99,40 @@
   </div>
 
 </div>
+
+
+
+{% block pageScripts %}
+  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript">
+    var selectEl = document.querySelector('#fruit-type')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      defaultValue: "",
+      minLength: 2,
+      selectElement: selectEl
+    })
+  </script>
+{% endblock %}
+
+
+<style>
+  .autocomplete__input {
+    background-color: white;
+    cursor: text;
+  }
+  .autocomplete__input--show-all-values {
+    padding: 5px 34px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
+  }
+  .autocomplete__dropdown-arrow-down{
+    pointer-events: none;
+    z-index: auto;
+  }
+  .autocomplete__menu--overlay {
+      box-shadow: auto
+  }
+</style>
 
 
 
