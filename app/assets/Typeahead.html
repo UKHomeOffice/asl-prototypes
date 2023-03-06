@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://ho-snippets.herokuapp.com/examples/typeahead -->
+<html lang="en" class="govuk-template "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>
+  Typeahead - Examples - Home Office code snippets
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="https://ho-snippets.herokuapp.com/public/images/ho-favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="https://ho-snippets.herokuapp.com/public/images/ho-mask-icon.svg" color="#0b0c0c"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ho-snippets.herokuapp.com/examples/public/images/ho-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://ho-snippets.herokuapp.com/examples/public/images/ho-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ho-snippets.herokuapp.com/examples/public/images/ho-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="https://ho-snippets.herokuapp.com/examples/public/images/ho-apple-touch-icon.png">
+  <link rel="stylesheet" href="./Typeahead_files/prism.css">
+  
+<link rel="stylesheet" href="./Typeahead_files/accessible-autocomplete.min.css">
+
+<style>
+  .autocomplete__input {
+    background-color: white;
+    cursor: text;
+  }
+
+  .autocomplete__input--show-all-values {
+    padding: 5px 34px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
+  }
+
+  .autocomplete__dropdown-arrow-down{
+    pointer-events: none;
+    z-index: auto;
+  }
+
+  .autocomplete__menu--overlay {
+      box-shadow: auto
+  }
+</style>
+
+
+
+    
+  
+  
+    <link href="./Typeahead_files/application.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+
+    
+    
+  </head>
+  <body class="govuk-template__body  js-enabled">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+      <a href="https://ho-snippets.herokuapp.com/examples/typeahead#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+
+    
+  <header class="hods-header" role="banner" data-module="hods-header">
+    <div class="hods-header__container hods-width-container">
+      <div class="hods-header__main">
+        <div class="hods-header__logo">
+          <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 578 138" class="hods-header__logo-svg">
+            <title>Home Office</title>
+            <g fill="none">
+              <path fill="#7F3F98" d="M.7.1h6.9V138H.7z"></path>
+              <path d="M72.2 9.4v4.1c2.1.1 3.6.5 4.4.7-.4-2.4-2.1-4.2-4.4-4.8" fill="#000"></path>
+              <path d="M69.7 6.5c0 1.4-.3 2.3-.7 2.9 0 0 .7-.2 1.6-.2.6 0 1.5.2 1.6.2-.4-.6-.7-1.5-.7-2.9 3.1 0 3.8 1.4 3.8 2.6h.6v-7h-.6c0 1.2-.8 2.6-3.8 2.6 0-3.1 1.4-3.8 2.6-3.8V.3h-7v.6c1.2 0 2.6.8 2.6 3.8-3.1 0-3.8-1.4-3.8-2.6h-.6v7h.6c0-1.2.7-2.6 3.8-2.6M69 9.4c-2.2.6-3.9 2.5-4.4 4.8.8-.2 2.3-.6 4.4-.7V9.4zM72.8 110.9c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6-1.5.1-2.6 1.2-2.6 2.6m1.3 0c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3-.8 0-1.3-.5-1.3-1.3M68.1 77c0-1.3-1-2.3-2.3-2.3h-13c-1.1 0-2 .9-2 2 0 .8.6 1.4 1.4 1.4.8 0 1.4-.6 1.4-1.5.3.3.6.5 1 .7-.2.8-.4 1.9-.5 3.2-.2-.3-.5-.4-.8-.4-.5 0-1 .4-1 1 0 .5.4 1 1 1 .3 0 .6-.2.8-.4 0 .7 0 1.4.1 2.2-.2-.1-.4-.2-.6-.2-.5 0-1 .4-1 1 0 .5.4 1 1 1 .3 0 .7-.2.8-.5 0 .1 0 .2.1.3.2.6.4 1.2.6 1.7-.1-.1-.3-.1-.5-.1-.5 0-1 .4-1 1 0 .5.4 1 1 1 .5 0 .9-.4 1-.8.3.6.7 1.2 1.2 1.8h-.2c-.5 0-1 .4-1 1s.4 1 1 1c.5 0 1-.4 1-1V91c1.5 1.5 3.4 2.8 5.7 3.7l-.4 3s.9.4 2.3.8 2.7.6 2.7.6l.2-22.1zm-11.8 1.2s.1 0 .2.1l7.1 14.4c-8.8-4-7.9-11.2-7.3-14.5zm7.5 13.4-6.5-13.1c.4.1.8.1 1.2.1l5.6 11.3-.3 1.7zm.4-2.9-5-10.2c.4 0 .7-.1 1-.2l4.2 8.6-.2 1.8zm.4-2.9-3.8-7.6c.3-.1.6-.2.9-.4l3.1 6.2-.2 1.8zm.4-2.9-2.7-5.4c.3-.2.6-.4.8-.6l2.1 4.2-.2 1.8zm.7-5-.3 2.2-1.7-3.5c.2-.1.4-.1.6-.1.8-.1 1.5.6 1.4 1.4zM59.5 19.1c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5c0 .9-.7 1.5-1.5 1.5-.8.1-1.5-.6-1.5-1.5M39.6 29.7c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5 0 .9-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5M38.8 25.8c0-.9.7-1.5 1.5-1.5s1.5.7 1.5 1.5-.7 1.5-1.5 1.5c-.8.1-1.5-.6-1.5-1.5M39.1 21.9c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5M41.2 18.5c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5c-.8.1-1.5-.6-1.5-1.5M44.4 16.2c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5c0 .9-.7 1.5-1.5 1.5-.8.1-1.5-.6-1.5-1.5M48.3 15.5c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5c-.8.1-1.5-.6-1.5-1.5M52.1 16.3c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5c-.8.1-1.5-.6-1.5-1.5M55.8 17.8c0-.8.7-1.5 1.5-1.5.9 0 1.5.7 1.5 1.5 0 .9-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5M81.7 19.1c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5c0 .9.7 1.5 1.5 1.5.8.1 1.5-.6 1.5-1.5M101.6 29.7c0-.8-.7-1.5-1.5-1.5-.9 0-1.5.7-1.5 1.5 0 .9.7 1.5 1.5 1.5s1.5-.7 1.5-1.5M102.4 25.8c0-.9-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5.7 1.5 1.5 1.5c.8.1 1.5-.6 1.5-1.5M102 21.9c0-.8-.7-1.5-1.5-1.5-.9 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5c.9 0 1.5-.7 1.5-1.5M100 18.5c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5.7 1.5 1.5 1.5c.8.1 1.5-.6 1.5-1.5M96.8 16.2c0-.8-.7-1.5-1.5-1.5-.9 0-1.5.7-1.5 1.5 0 .9.7 1.5 1.5 1.5.8.1 1.5-.6 1.5-1.5M92.9 15.5c0-.8-.7-1.5-1.5-1.5-.9 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5c.8.1 1.5-.6 1.5-1.5M89 16.3c0-.8-.7-1.5-1.5-1.5-.9 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5c.9.1 1.5-.6 1.5-1.5M85.3 17.8c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5c0 .9.7 1.5 1.5 1.5.9 0 1.5-.7 1.5-1.5M83.8 41.2c0-.9-.8-1.7-1.7-1.7-.9 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.7-.8 1.7-1.7M72.7 51.4v19.4h17.2V51.4H72.7zm16.7 18.9H73.2V52h16.1l.1 18.3z" fill="#000"></path>
+              <path d="M74.9 52.6h-1v17h14.8v-17H74.9zm12.8.5v.5h.5v15h-.5v.5H74.9v-.5h-.5v-15h.5v-.5h12.8z" fill="#000">
+              </path>
+              <path d="m87 57.5-.8.8s-.1 0-.1.1l-1.5 1.4c-.5.4-.6 1.1-.2 1.6l.9 1.2c.1.1.1.2.1.4 0 .1-.1.3-.2.3-.1.1-.2.1-.4.1-.1 0-.3-.1-.3-.2 0 0-.9-1.2-1.3-1.8v-1.7l2.1-2V56l-.7-.7.9-.9h-3.7l-.9.9v1c.1-.1.3-.1.4-.1.4 0 .8.4.8.8s-.4.8-.8.8c-.1 0-.3 0-.4-.1v1.2h-1.3l-1.5-2.1c.2-.2.3-.5.3-.8 0-.6-.5-1-1-1-.2 0-.4.1-.6.2V56.9h.1l1.4 2 .7 1H80.7l-.9.9H78c-.1-.4-.5-.6-.9-.6s-.8.3-.9.6c0 .1-.1.2-.1.4s.1.5.2.6h4.1l.7 1h-2.8l1.1 1.5.6.8h-1.4c-.1-.4-.5-.7-1-.7-.4 0-.8.3-1 .7v.3c0 .3.1.5.3.7H82l-.7-1-.6-.8h1.6l.6.8.7 1H86v1.1h-.3c-.1-.4-.5-.7-1-.7s-.8.3-1 .7v.3c0 .3.1.5.3.7h3V65h-2l-1-1.3c.2.2.4.4.7.4.3 0 .6 0 .9-.2.3-.2.4-.5.5-.8 0-.3 0-.6-.2-.9L85 61c-.2-.2-.1-.6.1-.7l.4-.4c.4.3.9.3 1.3 0 .2-.2.3-.4.3-.7l-.1-1.7zM68.3 41.2l2.3-2.3 2.3 2.3-2.3 2.3zM57.4 41.2c0-.9.8-1.7 1.7-1.7.9 0 1.7.8 1.7 1.7 0 .9-.8 1.7-1.7 1.7-.9 0-1.7-.8-1.7-1.7M88.7 84.8v-.5c0-.7-.5-1.2-1.2-1.2h-4.3c0-.5-.5-1-1-1-.3 0-.5.1-.7.3l-1.3 1.3h7.3c.3 0 .5.2.5.5s-.2.5-.5.5H79v-1.2l1.5-1.5h-5.9l1.5 1.5v2.2l-2.4-1.9c.2-.2.3-.5.3-.8 0-.6-.5-1-1-1-.2 0-.5.1-.7.2V84l3.7 3-1.7.5c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .2.1.5.2.6h2.1l9.2-2.9v1.4l-1.2.5c-.1-.5-.5-.8-1-.8-.6 0-1 .5-1 1 0 .2.1.5.2.6h2.3l1.4-.7.9-.4-.4-.9V86h3.4c0 .1-.1.3-.1.4-.1.2-.2.5-.3.7-.2-.2-.5-.3-.8-.3-.6 0-1 .5-1 1 0 .2.1.5.2.6h2.1c.3-.6.5-1.3.6-1.7.3-.9.5-1.7.5-2 .1.1-.9.1-.9.1zm-11.1.1-1-1h2l-1 1zM88.8 77.4c.1-.2.1-.3.1-.5 0-.7-.5-1.2-1.2-1.2h-4.5c0-.5-.5-1-1-1-.3 0-.5.1-.7.3l-1.3 1.3h7.6c.3 0 .5.2.5.5s-.2.5-.5.5H79v-1.2l1.5-1.5h-5.9l1.5 1.5v2.2l-2.4-1.9c.2-.2.3-.5.3-.7 0-.6-.5-1-1-1-.2 0-.5.1-.7.2v1.8l3.6 2.9-1.7.5c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .2.1.5.2.7h2.1l9.2-2.9v1.5l-1.2.4c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .2.1.5.2.7H83l2.3-.7 1.1-.4-.9-.8-.6-.6H89v1.1c-.2-.2-.5-.4-.8-.4-.6 0-1 .5-1 1 0 .2.1.5.2.7H90v-3.7l-1.2.1zm-11.2.1-1-1h2l-1 1zM85 90.4h-1.8c0-.5-.5-1-1-1-.3 0-.5.1-.7.3L80.2 91h4.9c.3 0 .5.2.5.5s-.2.5-.5.5h-5.9v-1l1.5-1.5h-5.9l1.5 1.5v2.5l-2.4-2.2c.2-.2.4-.5.4-.8 0-.6-.5-1-1-1-.2 0-.5.1-.7.2V91.4l3.8 3.5.2-.2-2.4 2.9c-.2-.2-.5-.2-.7-.2-.6.1-1 .6-.9 1.1 0 .2.1.4.2.6.4 0 .9-.1 1.7-.2l2.7-3.2c.4-.1.7-.3 1.1-.4l1.1 1-.6.3c-.3-.2-.7-.3-1-.2-.5.2-.8.8-.6 1.3.1.2.2.3.3.4 0 0 .4-.1.8-.3.4-.2.8-.3.8-.3.5-.2.9-.4 1.3-.6v-2.7c.7-.4 1.3-.8 1.8-1.3l1 .9c-.2.2-.4.3-.7.5-.3-.2-.7-.2-1 0-.2.1-.4.4-.5.6v.4c0 .1.1.3.1.4.1.2.3.3.5.4.5-.3.9-.6 1.4-.9.3-.2.7-.5 1-.8l.3-.3v-1.3h.7c.7 0 1.2-.5 1.2-1.2 0-.6-.5-1.2-1.2-1.2zm-7.4 1.9-1-1h2l-1 1zM67.4 67.7c.1-.2.1-.3.1-.5 0-.7-.5-1.2-1.2-1.2h-4.5c0-.5-.5-1-1-1-.3 0-.5.1-.7.3l-1.3 1.3h7.6c.3 0 .5.2.5.5s-.2.5-.5.5h-8.7v-1.2l1.5-1.5h-5.9l1.5 1.5v2.2l-2.4-1.9c.2-.2.3-.5.3-.7 0-.6-.5-1-1-1-.3 0-.5.1-.7.2V67l3.6 2.9-1.7.5c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.1l9.2-2.9V70l-1.2.4c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.1l2.3-.7 1.1-.3-.9-.8-.6-.6h4.1v1.1c-.2-.2-.5-.4-.8-.4-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.6v-3.7h-1.1zm-11.3.1-1-1h2l-1 1zM67.4 60.6c.1-.2.1-.3.1-.5 0-.7-.5-1.2-1.2-1.2h-4.5c0-.5-.5-1-1-1-.3 0-.5.1-.7.3l-1.3 1.3h7.5c.3 0 .5.2.5.5s-.2.5-.5.5h-8.7v-1.2l1.5-1.5h-5.9l1.5 1.5v2.2l-2.4-1.9c.2-.2.3-.5.3-.7 0-.6-.5-1-1-1-.3 0-.5.1-.7.2v1.8l3.6 2.9-1.7.5c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .2.1.5.2.7h2.1l9.2-2.9v1.5l-1.2.4c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .2.1.5.2.7h2.2l2.3-.7 1.1-.4-.9-.8-.6-.6h4.1v1.1c-.2-.2-.5-.4-.8-.4-.6 0-1 .5-1 1 0 .2.1.5.2.7h2.6v-3.8h-1.1v.2zm-11.3.1-1-1h2l-1 1zM67.4 53.4c.1-.2.1-.3.1-.5 0-.7-.5-1.2-1.2-1.2h-4.5c0-.5-.5-1-1-1-.3 0-.5.1-.7.3l-1.3 1.3h7.5c.3 0 .5.2.5.5s-.2.5-.5.5h-8.7v-1.2l1.5-1.5h-5.9l1.5 1.5v2.2l-2.4-1.9c.2-.2.3-.5.3-.7 0-.6-.5-1-1-1-.3 0-.5.1-.7.2v1.8l3.6 2.9-1.7.5c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.1l9.2-2.9v1.5l-1.2.4c-.1-.4-.5-.7-1-.7-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.1l2.3-.7 1.1-.3-.9-.8-.6-.6h4.1v1.1c-.2-.2-.5-.4-.8-.4-.6 0-1 .5-1 1 0 .3.1.5.2.7h2.6v-3.8l-1 .1zm-11.3.2-1-1h2l-1 1zM98.7 71.7c.7-.2 1-.9.8-1.5-.1-.3-.3-.6-.6-.7-.3-.2-.6-.2-.9-.1-.3.1-.6.3-.7.6-.2.3-.2.6-.1.9.2.6.9.9 1.5.8M95.2 74.4l.2 1.1 4-.6c.1 0 4 2 4 2l-.2-1.4-2.8-1.4c.2-.2 2.3-2.1 2.3-2.1l-.2-1.4-.1.1s-3.1 2.9-3.2 3c0 .1-4 .7-4 .7M98.3 78.3c0 .3.1.6.4.9.2.2.5.4.9.3.3 0 .6-.1.9-.4.2-.2.3-.5.3-.9 0-.3-.1-.6-.4-.9-.2-.2-.5-.4-.9-.4-.7.1-1.2.7-1.2 1.4M95.5 80.3l-.1 1.1s3.1.4 3.3.5c0 .1-.1.9-.1.9v.5c0 .5.1 1 .4 1.4.3.4.8.7 1.5.8 1.4.2 2.4-.5 2.6-1.9l.3-2.2-7.9-1.1zm6.4 2c0 .1-.1 1.1-.1 1.1-.1 1-.9 1-1.2.9-.6-.1-1-.5-1-1v-.2s.1-.8.1-1c.2-.1 2.1.1 2.2.2zM94.8 84.8l-1.3 3.8 1.1.4s.9-2.7.9-2.8c.1.1 1.9.6 2.1.7-.1.2-.9 2.6-.9 2.6l1.1.4s.8-2.5.9-2.6c.1.1 1.9.6 2 .7-.1.2-.9 2.7-.9 2.7l1.1.4 1.3-3.8-7.4-2.5zM93.3 89.3l-.5.8s4.4 2.8 4.8 3.1c-.5 0-7.1.6-7.1.6l-.5.8 6.6 4.2.6-.9s-4.4-2.8-4.8-3.1c.5 0 7.2-.7 7.2-.7l.5-.8-6.8-4zM90.7 98.7c-.8.1-1.5.3-2-.2-.2-.2-.4-.8.1-1.3s1.2-.6 2-.5h.3l-1.2-1.2c-.8.1-1.4.3-1.9.9-.4.4-.6.9-.6 1.4 0 .6.2 1.1.7 1.6 1 1 2.1.8 3.1.6.7-.2 1.3-.3 1.8.1.1.2.2.3.2.5 0 .3-.1.5-.4.8-.4.4-.9.6-1.6.5H91l1.1 1.1c.6-.1 1.1-.3 1.5-.7.5-.5.7-1 .7-1.5s-.2-1.1-.7-1.5c-.9-1-2-.8-2.9-.6M85.9 98.3l-3.3 2.2.6 1s2.3-1.6 2.5-1.7c.1.1 1.1 1.7 1.2 1.8-.1.1-2.3 1.6-2.3 1.6l.6 1s2.2-1.5 2.3-1.5c.1.1 1.1 1.6 1.2 1.8-.1.1-2.4 1.6-2.4 1.6l.6 1 3.3-2.2-4.3-6.6zM57 103.5c-.1-.1-3-1.9-3.1-2 .1-.1 1.8-2.8 1.8-2.8l-1-.6v.1l-4.1 6.5 1 .6s1.7-2.7 1.8-2.8c.1.1 3 1.9 3.1 2-.1.1-1.8 2.8-1.8 2.8l1 .6 4.2-6.6-1-.6c-.1 0-1.8 2.6-1.9 2.8M53 97.7c.1-1-.3-1.9-.9-2.6-1.7-1.9-4-1.5-5.5-.2-.9.8-1.4 1.8-1.4 2.8-.1 1 .3 1.9 1 2.7 1.4 1.6 3.8 1.7 5.5.2.7-.8 1.2-1.8 1.3-2.9m-1.2 0c0 .7-.4 1.5-1 2-1.2 1.1-2.8 1.1-3.8-.1-.5-.5-.7-1.2-.6-1.8 0-.7.4-1.4 1-2 .6-.5 1.4-.8 2.1-.8.7 0 1.3.3 1.7.8.4.6.6 1.2.6 1.9M48.9 91.2s-4.8 2.2-5.2 2.4c.2-.4 3.3-6.5 3.3-6.5l-.4-.9h-.1l-7 3.3.5 1s4.8-2.2 5.2-2.4c-.2.4-3.3 6.5-3.3 6.5l.4.8 7-3.3-.4-.9zM46.3 84.1l-.1.1-7.5 1.8.3 1.2 7.5-1.9zM42.7 81.6c-.3-.2-.6-.3-.9-.2-.3 0-.6.2-.8.5-.2.3-.3.6-.2.9 0 .3.2.6.5.8.3.2.6.3.9.2.7-.1 1.1-.7 1-1.4-.1-.4-.3-.6-.5-.8M42.2 78.6c.5-.7.9-1.3 1.6-1.3.2 0 .4.1.6.3.2.2.3.5.3.8 0 .6-.4 1.2-1.1 1.7l-.2.2h1.7c.5-.6.7-1.2.7-2 0-.5-.2-1-.5-1.4-.4-.4-1-.6-1.6-.6-1.4 0-2 .9-2.6 1.8-.4.6-.7 1.2-1.3 1.2-.2 0-.4-.1-.5-.2-.2-.2-.3-.5-.3-.8 0-.5.3-1.1.8-1.5l.2-.1h-1.5c-.4.5-.6 1-.6 1.6 0 .7.2 1.2.6 1.6.4.4.9.6 1.5.6 1-.2 1.6-1.1 2.2-1.9M41.7 75.3c1.1.3 2.2.1 3.1-.4.8-.5 1.4-1.3 1.6-2.3.2-1 .1-2-.4-2.8-.5-.9-1.5-1.6-2.6-1.8-2.2-.6-4.3.6-4.8 2.7-.1.3-.1.6-.1.9 0 .7.2 1.3.5 1.8.7 1 1.6 1.7 2.7 1.9M39.9 71c.2-.7.6-1.2 1.1-1.6.6-.4 1.4-.5 2.2-.3.8.2 1.5.7 1.8 1.3.3.6.4 1.2.3 1.9-.4 1.4-1.8 2.2-3.4 1.8-1.5-.3-2.4-1.6-2-3.1" fill="#000"></path>
+              <path d="M106.5 78.6c0-9.6-3.7-18.6-10.5-25.4-.8-.8-1.6-1.5-2.5-2.3v-1.4c1.4-.1 2.6-1.3 2.6-2.7 0-1.5-1.2-2.7-2.7-2.7h-.2l2.6-1.2-1-2.2 3.9-9.1-1.7-.7-4 9.3-2.1 1 1.4 3H48.9l1.4-3-2.2-1-4-9.3-1.7.7 3.9 9.1-1 2.2 2.6 1.2h-.1c-1.5 0-2.7 1.2-2.7 2.7 0 1.4 1.1 2.6 2.5 2.7v1.4c-.8.7-1.7 1.5-2.5 2.3C38.3 60 34.6 69 34.6 78.6c0 7.4 2.2 14.5 6.5 20.6 4.2 5.9 9.9 10.4 16.7 12.9 0 0 .4.1 1 .4.1 1 .7 1.9 1.6 2.2 1 .4 2.1 0 2.7-.7h.1v10.2c0 3.8 3.2 6.8 7.2 6.8s7.2-3.1 7.2-6.8v-6.8l17.6-8.4c.6-.2 1.1-.5 1.6-.9 1.4-1.3 1.6-3.3.7-5.9 1.6-1.8 3-3.7 4.1-5.8 3.2-5.4 4.9-11.5 4.9-17.8zM87.8 45.8l5.2 1.1-5.2 1.1v-2.2zm-16.7 54.6v-27h20.6v5.1c0 5-.9 8.4-2.2 10.9-1.1 1.8-2.4 3.5-4 5l-.3.3c-3.8 3.6-8.9 5.6-14.1 5.7zm6.2.9c-.4.9-.7 1.9-.9 3-2-.7-3.9-1.4-5.8-2.1 2.3.1 4.6-.3 6.7-.9zm-6.2-28.8V49.6H91.7v22.9H71.1zm7.2-26.7 5.2 1.1-5.2 1.1v-2.2zm-9.6 0 5.2 1.1-5.2 1.1v-2.2zm-9.7 0 5.2 1.1L59 48v-2.2zm-9.4 0 5.2 1.1-5.2 1.1v-2.2zm0 21.8v-18H70.2v22.9H49.6v-4.9zm0 5.8h20.6v27c-4.2-.1-8.3-1.4-11.8-3.8-.1-.1-.3-.2-.4-.3l-.1-.1c-.1-.1-.2-.1-.3-.2-.1-.1-.2-.2-.3-.2l-.1-.1c-2.2-1.7-4.1-3.9-5.5-6.4-1.3-2.5-2.1-5.9-2.1-10.8v-5.1zm9.8 37.4c-.3-.1-.6-.2-.8-.3-6.4-2.4-11.9-6.7-15.8-12.3-4-5.7-6.2-12.5-6.2-19.6 0-9.1 3.5-17.6 10-24.1.4-.4.8-.8 1.2-1.1v9.3c-1.4-1-3-2-3.1-2.1.1-.1 1.3-2 1.3-2l-1-.6v.1l-3.2 4.8 1 .6s1.2-1.8 1.3-2c.1.1 2.2 1.4 3.7 2.5v3.3l-6.6-3v.1l-.5 1 7.1 3.3v4c-.5 1.9-.8 3.9-.8 6 0 4.3 1.2 8.3 3.2 11.8 1.3 2.5 3 4.2 4.6 5.7.7.6 1.4 1.2 2.2 1.8.1 0 .1.1.2.1.1.1.2.1.3.2.1.1.2.1.3.2l.1.1c.6.4 1.2.8 1.9 1.1.9.4 2.1 1 3.5 1.6l-1.5 3.7-.7-.3c-.4-.2-.9 0-1.1.4-.2.4 0 .9.4 1.1l.7.3-1.7 4.3zM76 124.3c0 .7-.2 1.4-.5 2-.3.5-.8.8-1.3.8-.7 0-1.3-.4-1.5-1.1 0-.1-.1-.4-.2-.9.2.1.4.1.6.1.9 0 1.6-.7 1.6-1.5 0-.9-.7-1.5-1.6-1.5-.5 0-.9.2-1.2.5-.5-2-1-4.2-1-4.2h-.7s-.5 2.2-1 4.2c-.3-.3-.7-.5-1.1-.5-.9 0-1.5.7-1.5 1.5 0 .9.7 1.5 1.5 1.5.2 0 .4 0 .6-.1-.1.4-.2.8-.2.9-.2.6-.8 1.1-1.5 1.1-.6 0-1.1-.3-1.4-.8-.3-.6-.4-1.3-.4-2v-9.6c3.2 1 7.2 2.2 10.9 3l-.1 6.6zm.8-8.4c-5.6-1.2-12.1-3.3-15.9-4.6.4-.9 1-2.5 1.7-4.2l1 .4v.2c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6-.8 0-1.4.3-1.9.9l-1.1-.5c.6-1.5 1.1-2.9 1.5-3.7 3.8 1.6 8.7 3.5 13.4 5 5 1.5 9 2.4 12 2.7-5.3 2.6-12.9 6.2-13.3 6.4zm18.9-9.2c-.5.5-1.7 1-4.2 1 1.7-1.2 3.2-2.5 4.6-4 .4 1.4.3 2.4-.4 3zm-7.1.8c-2.4-.3-5.7-1.1-10-2.4-.2-.1-.4-.1-.6-.2.4-2.5 1.2-4.1 2.6-4.9 2.2-1 4.2-2.4 6-4.1 1.6-1.4 3.2-3.1 4.4-5.5 2-3.5 3.2-7.6 3.2-11.9 0-2-.3-4.1-.8-6v-3.8l1.1 2.8 1.1-.4s-1.1-2.7-1.1-2.8c.2-.1 6.2-2.5 6.2-2.5l-.4-1.1h-.1l-6.7 2.7v-.5l4.5-6.4-.4-.7h-.1l-4 .9v-7.5c.4.4.8.7 1.2 1.1 6.4 6.4 10 15 10 24.1 0 5.9-1.5 11.8-4.5 16.9-2.8 5.1-6.8 9.2-11.6 12.2zm5.3-42.9-.4.6V64l.4.6zm-.3-2.6c.2 0 2.2-.5 2.5-.6-.2.3-1.4 2-1.5 2.1-.1-.1-.9-1.3-1-1.5z" fill="#000"></path>
+              <path d="M97.4 21c-1.4-2.1-3.7-3-5.4-3-2.4 0-4.9 1-7.3 2-2.7 1.1-5.5 2.2-8.3 2 .3-1 .7-2 1.2-2.8l-1.7-.8c.3-.6.6-1.3.7-2.1-.2-.1-2.5-.9-6.2-.9s-5.8.8-6 .9c.1.8.3 1.5.7 2.1l-1.7.8c.5.8.9 1.8 1.2 2.8-2.8.3-5.6-.9-8.3-2-2.4-1-4.9-2-7.3-2-1.7 0-4 .9-5.4 3-1.1 1.7-2 4.9.4 10v-.1l3.5-1.5.2.6c-1.1.5-2.2 1.8-.9 4.8 3-1.3 3.1-3 2.6-4.1l.6-.2 1.5 3.4 1.5 3.4-.6.2c-.5-1.1-1.8-2.2-4.8-.9 1.3 3 3.6 4.2 5.4 4.2 3.1 0 5.3-1.9 5-3.8-.2-1.4-1.5-1.9-2-1.8-.6.1-1 .8-.9 1.2 0 .1.1.2.1.3l-.1.1c-.8-.1-1.5-.7-1.7-1.5-.2-1 .5-2 1.5-2.2.6-.1 1.2.1 1.7.5l.2-.3c-.6-.3-1-.8-1.1-1.5-.3-1.6 1.5-3.2 1.6-3.2 0 0 2.3.8 2.6 2.4.1.7-.1 1.3-.5 1.8l.3.2c.2-.5.7-1 1.4-1.1 1-.2 2 .5 2.2 1.5.2.8-.3 1.7-1 2l-.1-.1V35c-.1-.5-.7-.9-1.3-.8-.5.1-1.5 1-1.2 2.4.5 2.4 2.5 4.1 4.9 4.1 2.4 0 5-2 5-5-3.5 0-4.3 1.6-4.3 3h-.7v-8h.7c0 1.3.9 3 4.3 3 0-3.5-1.6-4.3-3-4.3v-.7h7.9v.7c-1.3 0-3 .9-3 4.3 3.5 0 4.3-1.6 4.3-3h.7v8H76c0-1.3-.9-3-4.3-3 0 3 2.5 5 5 5 2.4 0 4.5-1.7 4.9-4.1.3-1.4-.7-2.4-1.2-2.4-.6-.1-1.2.3-1.3.8v.3l-.1.1c-.7-.4-1.2-1.2-1-2 .2-1 1.2-1.7 2.2-1.5.6.1 1.1.5 1.4 1.1l.3-.2c-.4-.5-.6-1.1-.5-1.8.3-1.6 2.6-2.4 2.6-2.4s1.9 1.6 1.6 3.2c-.1.7-.6 1.2-1.1 1.5l.2.3c.4-.4 1-.6 1.7-.5 1 .2 1.7 1.2 1.5 2.2-.2.9-.9 1.5-1.7 1.5l-.1-.1c.1-.1.1-.2.1-.3.1-.5-.3-1.1-.9-1.2-.5-.1-1.8.4-2 1.8-.3 1.9 2 3.8 5 3.8 1.8 0 4.1-1.2 5.4-4.2-3-1.3-4.3-.2-4.8.9l-.6-.2 1.5-3.4 1.5-3.4.6.2c-.5 1.1-.4 2.8 2.6 4.1 1.3-3 .2-4.3-.9-4.8l.2-.6 3.5 1.5v.1c2.1-5.2 1.2-8.3.1-10m-32.1 4.4c-1.7 0-3.1.9-3.9 2.3-.9-1.6-2.9-2.6-4.8-2.2-1.4.3-2.6 1.3-3.1 2.5-.8-1.3-2.2-2.1-3.8-2.1-2 0-3.7 1.3-4.3 3.1-1.1-2.9-1.1-5.3 0-7 1.1-1.7 3-2.2 3.8-2.2 2.1 0 4.3.9 6.6 1.8 3 1.2 6.1 2.5 9.5 2 .1.6.2 1.1.3 1.7-.1.1-.2.1-.3.1m5.3-9.3c.9 0 1.7.7 1.8 1.6-.5-.4-1.1-.7-1.8-.7s-1.3.3-1.8.7c.1-.9.9-1.6 1.8-1.6m0 1.7c.9 0 1.7.7 1.8 1.6-.5-.4-1.1-.7-1.8-.7s-1.3.3-1.8.7c.1-.9.9-1.6 1.8-1.6m0 10.1c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8m1.7-3.9c-.5-.4-1.1-.6-1.7-.6-.7 0-1.2.2-1.7.6-.1-.2-.1-.4-.1-.6 0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8c0 .2 0 .4-.1.6m.1-2.5c-.5-.4-1.1-.7-1.8-.7s-1.3.3-1.8.7v-.1c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v.1M95.8 29c-.6-1.8-2.3-3.1-4.3-3.1-1.6 0-3 .8-3.8 2.1-.6-1.2-1.7-2.2-3.1-2.5-2-.4-3.9.5-4.8 2.2-.8-1.3-2.2-2.3-3.9-2.3h-.3c.1-.5.2-1.1.3-1.7 3.4.5 6.5-.8 9.5-2 2.3-.9 4.5-1.8 6.6-1.8.8 0 2.7.5 3.8 2.2 1.1 1.6 1.1 4 0 6.9M81.3 50.9h-.7l.4.8h.4l-.1.3.1-.2h.1l.1-.1.4-.8zM73 51.6l-.1.1v.3l-.7-.1v-.5l-.5-.9.1-.1.9.5h.5v.7l-.2-.1" fill="#000"></path>
+              <path d="M73.5 51.4c-.1 0-.2-.1-.2-.2s.1-.2.2-.2.1 0 .2.1h.1v-.2c0-.3-.2-.5-.5-.5s-.5.2-.5.5.2.5.5.5h.2M72.7 52.2c0-.1-.1-.2-.2-.2s-.2.1-.2.2 0 .1.1.2v.1h-.2c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5v.2M73 70.7l-.1-.1v-.3l-.7.1v.4l-.5.9.1.2.9-.6h.5v-.7l-.2.1" fill="#000"></path>
+              <path d="M73.5 70.8c-.1 0-.2.1-.2.2s.1.2.2.2.1 0 .2-.1h.1v.2c0 .3-.2.5-.5.5s-.5-.2-.5-.5.2-.5.5-.5h.2M72.7 70.1c0 .1-.1.2-.2.2s-.2-.1-.2-.2 0-.1.1-.2v-.1h-.2c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5v-.2M89.6 70.7l.1-.1v-.3l.7.1v.4l.5.9-.1.2-.9-.6h-.5v-.7l.2.1" fill="#000"></path>
+              <path d="M89.1 70.8c.1 0 .2.1.2.2s-.1.2-.2.2-.1 0-.2-.1h-.1v.2c0 .3.2.5.5.5s.5-.2.5-.5-.2-.5-.5-.5h-.2M89.9 70.1c0 .1.1.2.2.2s.2-.1.2-.2 0-.1-.1-.2v-.1h.2c.3 0 .5.2.5.5s-.2.5-.5.5-.5-.2-.5-.5v-.2M89.6 51.6l.1.1v.3l.7-.1v-.5l.5-.9-.1-.1-.9.5h-.5v.7l.2-.1" fill="#000"></path>
+              <path d="M89.1 51.4c.1 0 .2-.1.2-.2s-.1-.2-.2-.2-.1 0-.2.1h-.1v-.2c0-.3.2-.5.5-.5s.5.2.5.5-.2.5-.5.5h-.2M89.9 52.2c0-.1.1-.2.2-.2s.2.1.2.2 0 .1-.1.2v.1h.2c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5v.2zM80.5 52.8H82v1h-1.5z" fill="#000"></path>
+              <path fill="#000" d="M81.4 54.1h-.2l-.3-.6h.8zM82.4 53.4l-.1.1c-.1 0-.2-.1-.2-.2s.1-.2.2-.2h-.2c-.2 0-.4.2-.4.4s.2.4.4.4.4-.2.4-.4c-.1 0-.1 0-.1-.1zM80.2 53.4l.1.1c.1 0 .2-.1.2-.2s-.1-.2-.2-.2h.2c.2 0 .4.2.4.4s-.2.4-.4.4-.4-.2-.4-.4c.1 0 .1 0 .1-.1zM81.3 71.4h.7l-.4-.8-.3-.1h-.1l.2-.2-.2.2h-.1l-.1.1-.4.8zM80.6 68.7h1.5v1h-1.5z">
+              </path>
+              <path fill="#000" d="M81.2 68.1h.2l.3.7h-.8zM80.2 68.9l.1-.1c.1 0 .2.1.2.2s-.1.2-.2.2h.2c.2 0 .4-.2.4-.4s-.2-.4-.4-.4-.4.2-.4.4c.1 0 .1 0 .1.1zM82.4 68.9l-.1-.1c-.1 0-.2.1-.2.2s.1.2.2.2h-.2c-.2 0-.4-.2-.4-.4s.2-.4.4-.4.4.2.4.4c-.1 0-.1 0-.1.1zM90.4 61.1v-.7l-.8.4v.4l-.2-.1.2.2h-.1l.1.1.8.4zM87.8 60.4h1v1.5h-1zM87.2 61.2V61l.6-.3v.8zM88.2 62.1V62v.1">
+              </path>
+              <path d="m88 62.2-.1-.1c0-.1.1-.2.2-.2s.2.1.2.2v-.2c0-.2-.2-.4-.4-.4s-.4.2-.4.4.2.4.4.4l.1-.1zM88 60.1l-.1.1c0 .1.1.2.2.2s.2-.1.2-.2v.2c0 .2-.2.4-.4.4s-.4-.2-.4-.4.2-.4.4-.4l.1.1zM72.2 61.1v-.7l.8.4v.4l.2-.1-.2.2h.1l-.1.1-.8.4zM74.1 60.4h1v1.5h-1z" fill="#000"></path>
+              <path fill="#000" d="M75.4 61.2V61l-.6-.3v.8zM74.4 62.1V62v.1"></path>
+              <path d="m74.7 62.2.1-.1c0-.1-.1-.2-.2-.2s-.2.1-.2.2v-.2c0-.2.2-.4.4-.4s.4.2.4.4-.2.4-.4.4c0 0-.1 0-.1-.1zM74.7 60.1l.1.1c0 .1-.1.2-.2.2s-.2-.1-.2-.2v.2c0 .2.2.4.4.4s.4-.2.4-.4-.2-.4-.4-.4c0 0-.1 0-.1.1z" fill="#000"></path>
+              <g fill="#000">
+                <path d="M145.6 38.9V64h30.8V38.9h7.8v58.4h-7.8V70.6h-30.8v26.7h-7.8V38.9zM193.8 67.5c.9-2.7 2.2-5 3.9-7 1.7-2 3.9-3.6 6.5-4.7s5.5-1.7 8.8-1.7c3.4 0 6.3.6 8.9 1.7 2.5 1.1 4.7 2.7 6.4 4.7 1.7 2 3.1 4.3 3.9 7 .9 2.7 1.3 5.6 1.3 8.7 0 3.1-.4 6-1.3 8.7-.9 2.7-2.2 5-3.9 7-1.7 2-3.9 3.5-6.4 4.7-2.5 1.1-5.5 1.7-8.9 1.7-3.3 0-6.3-.6-8.8-1.7-2.6-1.1-4.7-2.7-6.5-4.7-1.7-2-3.1-4.3-3.9-7-.9-2.7-1.3-5.6-1.3-8.7 0-3.1.4-6 1.3-8.7zm7.1 15.5c.7 2 1.6 3.7 2.8 5 1.2 1.3 2.6 2.4 4.2 3.1 1.6.7 3.3 1.1 5.1 1.1 1.8 0 3.5-.4 5.1-1.1 1.6-.7 3-1.7 4.2-3.1 1.2-1.3 2.1-3 2.8-5 .7-2 1-4.3 1-6.8 0-2.6-.3-4.8-1-6.8s-1.6-3.7-2.8-5c-1.2-1.4-2.6-2.4-4.2-3.1-1.6-.7-3.3-1.1-5.1-1.1-1.8 0-3.5.4-5.1 1.1-1.6.7-3 1.7-4.2 3.1-1.2 1.4-2.1 3-2.8 5-.7 2-1 4.3-1 6.8s.3 4.8 1 6.8zM247.3 55v6.2h.2c3.2-4.8 7.7-7.2 13.7-7.2 2.6 0 5 .5 7.1 1.6 2.1 1.1 3.6 2.9 4.5 5.6 1.4-2.3 3.3-4.1 5.6-5.3 2.3-1.3 4.9-1.9 7.6-1.9 2.1 0 4 .2 5.8.7 1.7.5 3.2 1.2 4.4 2.2 1.2 1 2.2 2.2 2.9 3.8.7 1.6 1 3.4 1 5.6v31h-7V69.6c0-1.3-.1-2.5-.3-3.7-.2-1.1-.6-2.1-1.2-3-.6-.8-1.4-1.5-2.5-2s-2.4-.7-4.1-.7c-3.4 0-6.1 1-8.1 2.9S274 67.7 274 71v26.3h-7V69.6c0-1.4-.1-2.6-.4-3.8-.2-1.1-.7-2.1-1.3-3-.6-.8-1.4-1.5-2.4-2s-2.3-.7-3.9-.7c-2 0-3.7.4-5.2 1.2-1.4.8-2.6 1.8-3.5 2.9-.9 1.1-1.6 2.3-2 3.6-.4 1.2-.6 2.2-.6 3.1v26.3h-7V55h6.6zM339.5 94.6c-3.2 2.4-7.1 3.6-11.9 3.6-3.4 0-6.3-.5-8.8-1.6-2.5-1.1-4.6-2.6-6.3-4.6-1.7-2-3-4.3-3.8-7-.8-2.7-1.3-5.7-1.4-8.9 0-3.2.5-6.2 1.5-8.8 1-2.7 2.4-5 4.1-7 1.8-2 3.9-3.5 6.3-4.6 2.4-1.1 5.1-1.6 8-1.6 3.8 0 6.9.8 9.4 2.3 2.5 1.6 4.5 3.5 6 5.9 1.5 2.4 2.5 5 3.1 7.9.6 2.8.8 5.5.7 8.1h-31.7c-.1 1.9.2 3.6.7 5.3.5 1.7 1.3 3.1 2.4 4.4 1.1 1.3 2.5 2.3 4.2 3.1 1.7.8 3.7 1.1 6 1.1 2.9 0 5.4-.7 7.2-2 1.9-1.4 3.1-3.4 3.7-6.2h6.9c-1.1 4.6-3.2 8.2-6.3 10.6zm-1.7-27.2c-.6-1.5-1.5-2.7-2.5-3.8-1.1-1.1-2.3-1.9-3.8-2.5-1.4-.6-3-.9-4.8-.9-1.8 0-3.4.3-4.9.9-1.4.6-2.7 1.5-3.7 2.6s-1.9 2.4-2.5 3.8c-.6 1.4-1 3-1.1 4.6h24.3c0-1.6-.4-3.2-1-4.7zM373.9 56.6c1.2-3.7 2.9-6.9 5.3-9.8 2.3-2.8 5.3-5.1 8.8-6.8 3.5-1.7 7.6-2.5 12.2-2.5s8.7.8 12.2 2.5 6.4 4 8.8 6.8c2.3 2.8 4.1 6.1 5.3 9.8 1.2 3.7 1.8 7.5 1.8 11.5s-.6 7.8-1.8 11.5c-1.2 3.7-2.9 6.9-5.3 9.8-2.3 2.8-5.3 5.1-8.8 6.7-3.5 1.7-7.6 2.5-12.2 2.5s-8.7-.8-12.2-2.5-6.4-3.9-8.8-6.7c-2.3-2.8-4.1-6.1-5.3-9.8-1.2-3.7-1.8-7.5-1.8-11.5s.6-7.8 1.8-11.5zm7.1 20.2c.8 2.9 2 5.4 3.6 7.7s3.7 4.1 6.3 5.5c2.6 1.4 5.6 2.1 9.2 2.1 3.5 0 6.6-.7 9.2-2.1 2.6-1.4 4.7-3.2 6.3-5.5 1.6-2.3 2.8-4.9 3.6-7.7.8-2.9 1.1-5.8 1.1-8.7 0-2.9-.4-5.8-1.1-8.7-.8-2.9-2-5.4-3.6-7.7s-3.7-4.1-6.3-5.5c-2.6-1.4-5.6-2.1-9.2-2.1-3.5 0-6.6.7-9.2 2.1-2.6 1.4-4.7 3.2-6.3 5.5-1.6 2.3-2.8 4.9-3.6 7.7-.8 2.9-1.1 5.8-1.1 8.7 0 2.9.4 5.8 1.1 8.7zM431.2 61.1V55h7.1v-6.3c0-3.4 1-6 3-7.8 2-1.8 4.9-2.7 8.7-2.7.7 0 1.4.1 2.2.2.8.1 1.6.3 2.2.5V45c-.6-.2-1.3-.4-2-.4-.7-.1-1.4-.1-2-.1-1.7 0-3 .3-3.9 1-.9.7-1.4 1.9-1.4 3.8v5.9h8.2v6.1h-8.2v36.2h-7V61.3h-6.9v-.2z">
+                </path>
+                <path d="M452.9 61.1V55h7.1v-6.3c0-3.4 1-6 3-7.8 2-1.8 4.9-2.7 8.7-2.7.7 0 1.4.1 2.2.2.8.1 1.6.3 2.2.5V45c-.6-.2-1.3-.4-2-.4-.7-.1-1.4-.1-2-.1-1.7 0-3 .3-3.9 1-.9.7-1.4 1.9-1.4 3.8v5.9h8.2v6.1h-8v36.2h-7V61.3h-7.1v-.2zM480.8 47.4v-8.5h7v8.5h-7zm7 7.6v42.3h-7V55h7zM522.8 62.4c-1.7-1.5-4.1-2.2-7-2.2-2.5 0-4.6.5-6.3 1.4-1.7.9-3 2.2-4 3.7s-1.7 3.3-2.2 5.3c-.4 2-.7 4-.7 6.2 0 2 .2 3.9.7 5.7.5 1.9 1.2 3.5 2.2 4.9 1 1.4 2.3 2.6 3.8 3.5 1.6.9 3.5 1.3 5.6 1.3 3.4 0 6.1-.9 8.1-2.7 1.9-1.8 3.1-4.3 3.6-7.6h7.1c-.8 5.2-2.7 9.3-5.8 12.1-3.1 2.8-7.4 4.3-12.8 4.3-3.2 0-6.1-.5-8.5-1.6-2.5-1-4.6-2.5-6.2-4.4-1.7-1.9-2.9-4.2-3.8-6.8-.8-2.6-1.3-5.5-1.3-8.7 0-3.2.4-6.1 1.2-8.9.8-2.8 2.1-5.2 3.7-7.2 1.7-2 3.7-3.7 6.3-4.8 2.5-1.2 5.4-1.8 8.8-1.8 2.4 0 4.6.3 6.7.9 2.1.6 4 1.5 5.6 2.7 1.6 1.2 2.9 2.7 4 4.5 1 1.8 1.7 4 2 6.5h-7.2c-.7-2.8-1.8-4.9-3.6-6.3zM570.4 94.6c-3.2 2.4-7.1 3.6-11.9 3.6-3.4 0-6.3-.5-8.8-1.6-2.5-1.1-4.6-2.6-6.3-4.6-1.7-2-3-4.3-3.8-7-.8-2.7-1.3-5.7-1.4-8.9 0-3.2.5-6.2 1.5-8.8 1-2.7 2.4-5 4.1-7 1.8-2 3.9-3.5 6.3-4.6 2.4-1.1 5.1-1.6 8-1.6 3.8 0 6.9.8 9.4 2.3 2.5 1.6 4.5 3.5 6 5.9 1.5 2.4 2.5 5 3.1 7.9.6 2.8.8 5.5.7 8.1h-31.7c-.1 1.9.2 3.6.7 5.3.5 1.7 1.3 3.1 2.4 4.4 1.1 1.3 2.5 2.3 4.2 3.1 1.7.8 3.7 1.1 6 1.1 2.9 0 5.4-.7 7.2-2 1.9-1.4 3.1-3.4 3.7-6.2h6.9c-1.1 4.6-3.1 8.2-6.3 10.6zm-1.6-27.2c-.6-1.5-1.5-2.7-2.5-3.8-1.1-1.1-2.3-1.9-3.8-2.5-1.4-.6-3-.9-4.8-.9-1.8 0-3.4.3-4.9.9-1.4.6-2.7 1.5-3.7 2.6s-1.9 2.4-2.5 3.8c-.6 1.4-1 3-1.1 4.6h24.3c0-1.6-.4-3.2-1-4.7z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="hods-header__title">
+          <a aria-current="page" class="hods-header__link hods-header__link--service-name hods-header__link--active" href="https://ho-snippets.herokuapp.com/">
+            Prototype coding examples
+          </a>
+        </div>
+      </div>
+      <nav class="hods-header__navigation">
+        <ul aria-label="Top Level Navigation" class="hods-header__navigation-list">
+          <li class="hods-header__navigation-list__item hods-header__navigation-list__item--active" id="examples"><a class="hods-header__navigation-list__link" href="https://ho-snippets.herokuapp.com/examples">Examples</a></li>
+          <li class="hods-header__navigation-list__item" id="contribute"><a class="hods-header__navigation-list__link" href="https://ho-snippets.herokuapp.com/contribute">Contribute</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    
+      <div class="govuk-width-container ">
+        
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      
+        <nav class="not-govuk-navigation-menu">
+  <ul class="not-govuk-navigation-menu__list">
+    <!-- Add another -->
+    <li class="not-govuk-navigation-menu__list__item" id="add-another">
+      <a href="https://ho-snippets.herokuapp.com/examples/add-another" class="not-govuk-navigation-menu__list__link">Add another</a>
+    </li>
+
+    <!-- Current date -->
+    <li id="current-date" class="not-govuk-navigation-menu__list__item">
+      <a href="https://ho-snippets.herokuapp.com/examples/current-date" class="not-govuk-navigation-menu__list__link">Current date</a>
+    </li>
+
+    <!-- Nunjucks - passing data-->
+    <li class="not-govuk-navigation-menu__list__item" id="nun-pd">
+      <a href="https://ho-snippets.herokuapp.com/examples/nun-passing-data" class="not-govuk-navigation-menu__list__link">Nunjunks - passing through data</a>
+    </li>
+
+    <!-- Filtering-->
+    <!--<li class="moj-side-navigation__item">
+      <a href="#3">Filtering</a>
+    </li>-->
+
+      <!-- Routing-->
+    <li class="not-govuk-navigation-menu__list__item" id="routing">
+      <a href="https://ho-snippets.herokuapp.com/examples/routing" class="not-govuk-navigation-menu__list__link">Routing - radio button redirect</a>
+    </li>
+
+    <li class="not-govuk-navigation-menu__list__item" id="routing-other">
+      <a href="https://ho-snippets.herokuapp.com/examples/routing-other" class="not-govuk-navigation-menu__list__link">Routing - other fields</a>
+    </li>
+
+    <!-- Show password -->
+    <li class="not-govuk-navigation-menu__list__item" id="show-pass">
+      <a href="https://ho-snippets.herokuapp.com/examples/show-pass" class="not-govuk-navigation-menu__list__link">Show password</a>
+    </li>
+
+
+    <!-- Table sort-->
+    <!--<li class="not-govuk-navigation-menu__list__item" id="tableexpand">
+        <a href="/examples/typeahead" class="not-govuk-navigation-menu__list__link">Table sort - columns</a>
+      </li>-->
+
+    <!-- Typeahead-->
+    <li class="not-govuk-navigation-menu__list__item not-govuk-navigation-menu__list__item--active" id="typeahead">
+      <a href="https://ho-snippets.herokuapp.com/examples/typeahead" class="not-govuk-navigation-menu__list__link">Typeahead</a>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      
+
+  <h1 class="govuk-heading-xl">
+    Typeahead
+  </h1>
+
+  <p class="govuk-body">Also known as autocomplete. They can help users choose from a long list.</p>
+  <p class="govuk-body">This is a text input that behaves like a select element, but you can also type in it to filter the options.</p>
+  <h2 class="govuk-heading-l">Preview</h2>
+  <div class="info-box">
+    <label class="govuk-label" for="fruit-type">
+      <strong>What fruits do you like?</strong>
+    </label>
+    <div><div class="autocomplete__wrapper"><div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"><div id="fruit-type__status--A" role="status" aria-atomic="true" aria-live="polite"></div><div id="fruit-type__status--B" role="status" aria-atomic="true" aria-live="polite"></div></div><input aria-expanded="false" aria-owns="fruit-type__listbox" aria-autocomplete="both" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="fruit-type" name="" placeholder="" type="text" role="combobox"><ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="fruit-type__listbox" role="listbox"><li aria-selected="false" class="autocomplete__option" id="fruit-type__option--0" role="option" tabindex="-1" aria-posinset="1" aria-setsize="1">Grapes</li></ul><span style="display: none;" id="fruit-type__assistiveHint">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span></div></div><select name="last-location" id="fruit-type-select" style="display: none;">
+      <option value="territory:AE-AZ" selected="selected"></option>
+      <option value="Apple">Apple</option>
+      <option value="Apricot">Apricot</option>
+      <option value="Avocado">Avocado</option>
+      <option value="Banana">Banana</option>
+      <option value="Blackberry">Blackberry</option>
+      <option value="Blueberry">Blueberry</option>
+      <option value="Cherry">Cherry</option>
+      <option value="Coconut">Coconut</option>
+      <option value="Date">Date</option>
+      <option value="Dragon fruit">Dragon fruit</option>
+      <option value="Grapes">Grapes</option>
+      <option value="Jack fruit">Jack fruit</option>
+      <option value="Kiwi fruit">Kiwi fruit</option>
+      <option value="Lychee">Lychee</option>
+      <option value="Mango">Mango</option>
+      <option value="Melon">Melon</option>
+      <option value="Oranges">Oranges</option>
+      <option value="Passion fruit">Passion fruit</option>
+      <option value="Strawberry">Strawberry</option>
+    </select>
+  </div>
+
+  <h2 class="govuk-heading-l">How to use</h2>
+  <h3 class="govuk-heading-m">1. Download the CSS file</h3>
+  <p class="govuk-body"><a href="./Typeahead_files/accessible-autocomplete.min.css" download=""><strong>Download accessible-autocomplete.min.css</strong></a> file and add to <strong>app/assets/css</strong> in this project.  If the folder "css" does not exist, create it.
+  </p><h3 class="govuk-heading-m">2. Download the JavaScript file</h3>
+  <p class="govuk-body"><a href="./Typeahead_files/accessible-autocomplete.min.js" download=""><strong>Download accessible-autocomplete.min.js</strong></a> file from <strong>app/assets/javascripts</strong> in this project.
+  </p><p class="govuk-body"><a href="https://ho-snippets.herokuapp.com/public/javascripts/accessible-autocomplete.min.js.map" download=""><strong>Download accessible-autocomplete.min.js.map</strong></a> file from <strong>app/assets/javascripts</strong> in this project.
+  </p><h3 class="govuk-heading-m">3. Add this HTML to your HTML page</h3>
+  <p class="govuk-body">Add this HTML to the page you want to add the component to:</p>
+  <div class="inline">
+    <div class="code-toolbar"><pre class="language-javascript" tabindex="0"><code class="language-javascript">
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"/public/css/accessible-autocomplete.min.css"</span><span class="token operator">&gt;</span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+  </div>
+
+  <h3 class="govuk-heading-m">4. Create the select box</h3>
+  <p class="govuk-body">Add the select component you want to include on the page:</p>
+  <div class="inline">
+    <div class="code-toolbar"><pre class="language-html" tabindex="0"><code class="language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>govuk-form-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>govuk-label<span class="token punctuation">"</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fruit-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>What fruits do you like?<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fruit-type<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fruit-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">selected</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selected<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Apple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Apple<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Apricot<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Apricot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Avocado<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Avocado<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Banana<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Banana<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Blackberry<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Blackberry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Blueberry<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Blueberry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Cherry<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Cherry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Coconut<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Coconut<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Date<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Dragon fruit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dragon fruit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Grapes<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Grapes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Jack fruit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Jack fruit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Kiwi fruit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Kiwi fruit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Lychee<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lychee<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Mango<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Mango<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Melon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Melon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Oranges<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Oranges<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Passion fruit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Passion fruit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Strawberry<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Strawberry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+  </div>
+  <p class="govuk-body">You can also use a nunjucks select box:</p>
+  <div class="code-toolbar"><pre class="language-javascript" tabindex="0"><code class="language-javascript">
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function">govukSelect</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"fruit-type"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"fruit-type"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Fruit type"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> data<span class="token punctuation">[</span><span class="token string">'fruit-type'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">items</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Apple"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Apple"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Apricot"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Apricot"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Avocado"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Avocado"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Banana"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Banana"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Blackberry"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Blackberry"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Blueberry"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Blueberry"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Cherry"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Cherry"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Date"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Date"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Dragon fruit"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Dragon fruit"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Grapes"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Grapes"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Jack fruit"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Jack fruit"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Kiwi fruit"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Kiwi fruit"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Lychee"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Lychee"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Mango"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Mango"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Melon"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Melon"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Oranges"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Oranges"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Passion fruit"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Passion fruit"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Strawberry"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">"Strawberry"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+
+  <h3 class="govuk-heading-m">5. Add JavaScript to the HTML page</h3>
+  <p class="govuk-body">Add this JavaScript to the HTML page.  You will need to change the <strong>fruit-type</strong> reference to the id of your select componement.</p>
+  <p class="govuk-body">If you already have a pageScripts block then just add this content to the block.</p>
+  <div class="inline">
+    <div class="code-toolbar"><pre class="language-javascript" tabindex="0"><code class="language-javascript">
+  <span class="token punctuation">{</span><span class="token operator">%</span> block pageScripts <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"/public/javascripts/accessible-autocomplete.min.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
+      <span class="token keyword">var</span> selectEl <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#fruit-type'</span><span class="token punctuation">)</span>
+      accessibleAutocomplete<span class="token punctuation">.</span><span class="token function">enhanceSelectElement</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">autoselect</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">confirmOnBlur</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">defaultValue</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">minLength</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">selectElement</span><span class="token operator">:</span> selectEl
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+  <span class="token punctuation">{</span><span class="token operator">%</span> endblock <span class="token operator">%</span><span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+  </div>
+  <p class="govuk-body">There are a few different <a href="https://github.com/alphagov/accessible-autocomplete/blob/main/README.md">options for enhanceSelectElement</a>. This is a selection:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>showAllValues - when selected the typeahead shows all possible values (without typing anything)</li>
+    <li>minLength - the number of characters types before the filtering of options happens</li>
+    <li>dropdownArrow - the SVG shown as the dropdown arrow</li> 
+    <li>source - use this to change how the filtering works, and the order of results</li>
+  </ul>
+  <p class="govuk-body">For dropdown arrow, you could use:</p>
+  <div class="code-toolbar"><pre class="language-html" tabindex="0"><code class="language-html">
+function (config) {return '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + config.className + '<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">top</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">viewBox</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0 0 512 512<span class="token punctuation">"</span></span><span class="token attr-name">$gt;&lt;path</span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>'}</code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+  <p class="govuk-body">which looks like:</p>
+  <div class="info-box">
+      
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="fruit-type-dropdown">
+    Fruit type (dropdown)
+  </label>
+
+
+  <div><div class="autocomplete__wrapper"><div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"><div id="fruit-type-dropdown__status--A" role="status" aria-atomic="true" aria-live="polite"></div><div id="fruit-type-dropdown__status--B" role="status" aria-atomic="true" aria-live="polite"></div></div><input aria-expanded="false" aria-owns="fruit-type-dropdown__listbox" aria-autocomplete="both" autocomplete="off" class="autocomplete__input autocomplete__input--show-all-values" id="fruit-type-dropdown" name="" placeholder="" type="text" role="combobox"><div class="autocomplete__dropdown-arrow-down-wrapper"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div><ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="fruit-type-dropdown__listbox" role="listbox"><li aria-selected="false" class="autocomplete__option" id="fruit-type-dropdown__option--0" role="option" tabindex="-1" aria-posinset="1" aria-setsize="1">Apple</li></ul><span style="display: none;" id="fruit-type-dropdown__assistiveHint">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span></div></div><select class="govuk-select" id="fruit-type-dropdown-select" name="fruit-type-dropdown" style="display: none;">
+  
+    
+      <option value=""></option>
+    
+  
+    
+      <option value="Apple">Apple</option>
+    
+  
+    
+      <option value="Apricot">Apricot</option>
+    
+  
+    
+      <option value="Avocado">Avocado</option>
+    
+  
+    
+      <option value="Banana">Banana</option>
+    
+  
+    
+      <option value="Blackberry">Blackberry</option>
+    
+  
+    
+      <option value="Blueberry">Blueberry</option>
+    
+  
+    
+      <option value="Cherry">Cherry</option>
+    
+  
+    
+      <option value="Date">Date</option>
+    
+  
+    
+      <option value="Dragon fruit">Dragon fruit</option>
+    
+  
+    
+      <option value="Grapes">Grapes</option>
+    
+  
+    
+      <option value="Jack fruit">Jack fruit</option>
+    
+  
+    
+      <option value="Kiwi fruit">Kiwi fruit</option>
+    
+  
+    
+      <option value="Lychee">Lychee</option>
+    
+  
+    
+      <option value="Mango">Mango</option>
+    
+  
+    
+      <option value="Melon">Melon</option>
+    
+  
+    
+      <option value="Oranges">Oranges</option>
+    
+  
+    
+      <option value="Passion fruit">Passion fruit</option>
+    
+  
+    
+      <option value="Strawberry">Strawberry</option>
+    
+  
+  </select>
+</div>
+
+  </div>
+  <p class="govuk-body">You'll need to add this css styling, either to <strong>app/assets/sass/application.scss</strong> or in &lt;style&gt; tags on your HTML page.</p>
+  <div class="code-toolbar"><pre class="language-css" tabindex="0"><code class="language-css">
+<span class="token selector">.autocomplete__input</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> text<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.autocomplete__input--show-all-values</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 5px 34px 5px 5px<span class="token punctuation">;</span> <span class="token comment">/* Space for arrow. Other padding should match .autocomplete__input--default. */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.autocomplete__dropdown-arrow-down</span><span class="token punctuation">{</span>
+  <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.autocomplete__menu--overlay</span> <span class="token punctuation">{</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> auto
+<span class="token punctuation">}</span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div>
+  </div>
+
+    </div>
+  </main></div>
+
+        
+      
+    
+
+    
+  <footer class="hods-footer" role="contentinfo">
+    <div class="hods-footer__inner">
+      <div class="hods-footer__container hods-width-container">
+        <div class="hods-footer__content">
+          A Home Office Digital, Data and Technology service
+        </div>
+        <div class="hods-footer__navigation">
+          <ul id="navigation" class="hods-footer__navigation-list">
+            
+              <li class="hods-footer__navigation-item">
+                <a class="hods-footer__link" href="https://ho-snippets.herokuapp.com/manage-prototype/clear-data">
+                  Clear data
+                </a>
+              </li>
+            
+            <li class="hods-footer__navigation-item">
+              <a class="hods-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                GOV.UK Prototype Kit v13.2.4
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    
+  
+    
+  <script src="./Typeahead_files/kit.js"></script>
+
+  <script src="./Typeahead_files/auto-store-data.js"></script>
+
+  <script src="./Typeahead_files/all.js"></script>
+
+  <script src="./Typeahead_files/init.js"></script>
+
+  <script src="./Typeahead_files/step-by-step-navigation.js"></script>
+
+  <script src="./Typeahead_files/step-by-step-polyfills.js"></script>
+
+  <script src="./Typeahead_files/jquery.js"></script>
+
+  <script src="./Typeahead_files/application.js"></script>
+
+
+    <script type="text/javascript" src="./Typeahead_files/accessible-autocomplete.min.js"></script>
+    <script src="./Typeahead_files/prism.js"></script>
+    <script type="text/javascript">
+      var test = document.getElementsByTagName('body')[0];
+      test.onload = function() {myFunction()};
+
+      function myFunction() {
+        
+          var thenav = document.getElementById('typeahead');
+          thenav.className += " not-govuk-navigation-menu__list__item--active";
+        
+        var topnav = document.getElementById('examples');
+        topnav.className += " hods-header__navigation-list__item--active";
+      }
+    </script>
+    
+  <script type="text/javascript" src="./Typeahead_files/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript">
+    // Accessibile autocomplete script
+    var selectEl = document.querySelector('#fruit-type')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      defaultValue: "",
+      minLength: 2,
+      selectElement: selectEl
+    })
+  </script>
+  <script type="text/javascript">
+    // Accessibile autocomplete script
+    var selectEl = document.querySelector('#fruit-type-dropdown')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      selectElement: selectEl,
+      showAllValues: true,
+      dropdownArrow: function (config) {return '<svg class="' + config.className + '" style="top: 8px;" viewBox="0 0 512 512" ><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"/></svg>'}
+    })
+  </script>
+
+  
+
+  
+
+</body></html>
