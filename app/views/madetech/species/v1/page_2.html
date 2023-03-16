@@ -1,0 +1,1009 @@
+
+
+{% extends "layout_species_1.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="padding-top: 0px;">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Section 2 of 4</span>
+
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Set up return: Animals</h1>
+
+    <h3 class="govuk-heading-s"><span>This licence authorises or previously authorised use of the following animal types:</span></h3>
+
+    <ul style="padding-left: 20px;">
+      <li>Mice</li>
+      <li>Rats</li>
+      <li>Marmosets</li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-form-group" style="margin-bottom: 0px;">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" style="margin-bottom: 0px;">
+            <h3 class="govuk-heading-s">
+              Were any other animal types used in procedures in 2021?
+            </h3>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact" style="font-weight: 400;">
+                No, other animal types were not used
+              </label>
+            </div>
+            <!--
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Text
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+              </div>
+            </div>
+            -->
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 400;">
+                Yes, other animal types were used
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone" style="font-weight: 700;margin-bottom: 15px;">
+                  Select animal types used
+                </label>
+
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 10px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Mammals
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="border-left: none;padding-left: 0px;">
+                    
+                    <table class="govuk-table">
+                      <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
+                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="300">Generic name</th>
+                          <th class="govuk-table__header" scope="col" width="200">Country origin</th>
+                          <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
+                          <th class="govuk-table__header" scope="col" width="150">ASPEL code</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Cattle</a></td>
+                          <td class="govuk-table__cell" scope="col">Bos taurus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061123</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Camelids</a></td>
+                          <td class="govuk-table__cell" scope="col">Camelidae</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061104</td>
+                          <td class="govuk-table__cell" scope="col">23456</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Cats</a></td>
+                          <td class="govuk-table__cell" scope="col">Felis catus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061127</td>
+                          <td class="govuk-table__cell" scope="col">34567</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Cynomolgus macaques</a></td>
+                          <td class="govuk-table__cell" scope="col">Macaca fascicularis</td>
+                          <td class="govuk-table__cell" scope="col">Malaysia</td>
+                          <td class="govuk-table__cell" scope="col">01061139</td>
+                          <td class="govuk-table__cell" scope="col">80246</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Dogs</a></td>
+                          <td class="govuk-table__cell" scope="col">Beagles</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061187</td>
+                          <td class="govuk-table__cell" scope="col">45678</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Donkey</a></td>
+                          <td class="govuk-table__cell" scope="col">Equus asinus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061123</td>
+                          <td class="govuk-table__cell" scope="col">56789</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked disabled>
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Ferrets</a></td>
+                          <td class="govuk-table__cell" scope="col">Mustela furo </td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061187</td>
+                          <td class="govuk-table__cell" scope="col">67890</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Gerbils</a></td>
+                          <td class="govuk-table__cell" scope="col">Gerbillinae</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061192</td>
+                          <td class="govuk-table__cell" scope="col">78901</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Goats</a></td>
+                          <td class="govuk-table__cell" scope="col">Capra hircus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061114</td>
+                          <td class="govuk-table__cell" scope="col">89012</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Guinea pig</a></td>
+                          <td class="govuk-table__cell" scope="col">Cavia porcellus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061136</td>
+                          <td class="govuk-table__cell" scope="col">90123</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Hamster</a></td>
+                          <td class="govuk-table__cell" scope="col">Mesocricetus auratus </td>
+                          <td class="govuk-table__cell" scope="col">Syria </td>
+                          <td class="govuk-table__cell" scope="col">01061129</td>
+                          <td class="govuk-table__cell" scope="col">98765</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Hamster</a></td>
+                          <td class="govuk-table__cell" scope="col">Cricetulus griseus</td>
+                          <td class="govuk-table__cell" scope="col">China </td>
+                          <td class="govuk-table__cell" scope="col">01061101</td>
+                          <td class="govuk-table__cell" scope="col">87654</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Horses</a></td>
+                          <td class="govuk-table__cell" scope="col">Equus ferus caballus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061175</td>
+                          <td class="govuk-table__cell" scope="col">76543</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked disabled>
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Mice</a></td>
+                          <td class="govuk-table__cell" scope="col">Rodentia </td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061158</td>
+                          <td class="govuk-table__cell" scope="col">65432</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Mini pigs</a></td>
+                          <td class="govuk-table__cell" scope="col">Miniature Pigs</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061139</td>
+                          <td class="govuk-table__cell" scope="col">54321</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Pigs</a></td>
+                          <td class="govuk-table__cell" scope="col">Sus domesticus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061188</td>
+                          <td class="govuk-table__cell" scope="col">10987</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Ponies</a></td>
+                          <td class="govuk-table__cell" scope="col">Equus ferus caballus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061169</td>
+                          <td class="govuk-table__cell" scope="col">13579</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rabits</a></td>
+                          <td class="govuk-table__cell" scope="col">Leporidae</td>
+                          <td class="govuk-table__cell" scope="col">Ireland </td>
+                          <td class="govuk-table__cell" scope="col">01061110</td>
+                          <td class="govuk-table__cell" scope="col">24680</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked disabled>
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rats</a></td>
+                          <td class="govuk-table__cell" scope="col">Rattus rattus </td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061130</td>
+                          <td class="govuk-table__cell" scope="col">35791</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked disabled>
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rhesus macaques</a></td>
+                          <td class="govuk-table__cell" scope="col">Macaca mulatta</td>
+                          <td class="govuk-table__cell" scope="col">India </td>
+                          <td class="govuk-table__cell" scope="col">01061122</td>
+                          <td class="govuk-table__cell" scope="col">68024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Sheep</a></td>
+                          <td class="govuk-table__cell" scope="col">Ovis aries</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061121</td>
+                          <td class="govuk-table__cell" scope="col">46802</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Tamarins</a></td>
+                          <td class="govuk-table__cell" scope="col">Saguinus</td>
+                          <td class="govuk-table__cell" scope="col">Colombia</td>
+                          <td class="govuk-table__cell" scope="col">01061176</td>
+                          <td class="govuk-table__cell" scope="col">24680</td>
+                        </tr>
+                        <!--
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other carnivores</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other dogs</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other equidaes</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        -->
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other mammals</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <!--
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other primates</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other rodents</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        -->
+                      </tbody>
+                    </table>
+
+                  </div>
+                </details>
+
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 10px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Birds
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="border-left: none;padding-left: 0px;">
+                    <table class="govuk-table">
+                      <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
+                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="300">Generic name</th>
+                          <th class="govuk-table__header" scope="col" width="200">Country origin</th>
+                          <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
+                          <th class="govuk-table__header" scope="col" width="150">ASPEL code</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Domestic fowl</a></td>
+                          <td class="govuk-table__cell" scope="col">Gallus gallus domesticus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061191</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Common quail</a></td>
+                          <td class="govuk-table__cell" scope="col">Coturnix coturnix</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061194</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other birds</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 10px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Fish, reptiles and aquatic species
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="border-left: none;padding-left: 0px;">
+                    <table class="govuk-table">
+                      <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
+                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="300">Generic name</th>
+                          <th class="govuk-table__header" scope="col" width="200">Country origin</th>
+                          <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
+                          <th class="govuk-table__header" scope="col" width="150">ASPEL code</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">African clawed frog</a></td>
+                          <td class="govuk-table__cell" scope="col">Xenopus laevis</td>
+                          <td class="govuk-table__cell" scope="col">Nigeria</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Atlantic salmon</a></td>
+                          <td class="govuk-table__cell" scope="col">Salmo salar</td>
+                          <td class="govuk-table__cell" scope="col">Norway</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Brown trout</a></td>
+                          <td class="govuk-table__cell" scope="col">Salmo trutta</td>
+                          <td class="govuk-table__cell" scope="col">Norway</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Japanese rice fish (Medaca) </a></td>
+                          <td class="govuk-table__cell" scope="col">Oryzias latipes</td>
+                          <td class="govuk-table__cell" scope="col">Japan</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rainbow trout</a></td>
+                          <td class="govuk-table__cell" scope="col">Oncorhynchus mykiss</td>
+                          <td class="govuk-table__cell" scope="col">Australia</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rana</a></td>
+                          <td class="govuk-table__cell" scope="col">Rana pipiens</td>
+                          <td class="govuk-table__cell" scope="col">Canada</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Rana</a></td>
+                          <td class="govuk-table__cell" scope="col">Rana temporaria</td>
+                          <td class="govuk-table__cell" scope="col">Italy</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Reptiles</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Western clawed frog</a></td>
+                          <td class="govuk-table__cell" scope="col">Xenopus tropicalis</td>
+                          <td class="govuk-table__cell" scope="col">Senegal</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Zebrafish </a></td>
+                          <td class="govuk-table__cell" scope="col">Danio rerio</td>
+                          <td class="govuk-table__cell" scope="col">Pakistan</td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other fish</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other reptiles </a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Other aquatic species</a></td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                          <td class="govuk-table__cell" scope="col"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <!--
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 10px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Non-human primates
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="border-left: none;padding-left: 0px;">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
+                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="300">Generic name</th>
+                          <th class="govuk-table__header" scope="col" width="200">Country origin</th>
+                          <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
+                          <th class="govuk-table__header" scope="col" width="150">ASPEL code</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Donkey</a></td>
+                          <td class="govuk-table__cell" scope="col">Equus asinus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+                -->
+
+                <!--
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 10px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Other
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="border-left: none;padding-left: 0px;">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
+                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="300">Generic name</th>
+                          <th class="govuk-table__header" scope="col" width="200">Country origin</th>
+                          <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
+                          <th class="govuk-table__header" scope="col" width="150">ASPEL code</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="govuk-table__cell" scope="col">Donkey</a></td>
+                          <td class="govuk-table__cell" scope="col">Equus asinus</td>
+                          <td class="govuk-table__cell" scope="col">United Kingdom </td>
+                          <td class="govuk-table__cell" scope="col">01061100</td>
+                          <td class="govuk-table__cell" scope="col">12345</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+                -->
+
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div style="margin-bottom:0px;margin-top:20px;">
+        <span><a href="#0" class="govuk-button govuk-button">Continue</a></span>
+        <a href="#0" class="secondary-link">Back </a>
+      </div>
+
+      <br><br>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<style type="text/css">
+.govuk-radios__item label {
+  font-weight: bold;
+}
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .date {
+      float: right;
+    }
+dl {
+  width: 100%;
+}
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+dt {
+  font-weight: bold;
+  padding-bottom: 30px;
+  width: 25%;
+}
+
+.download-header {
+  background-color: white;
+  border-bottom: 4px solid #005ea5;
+  margin-bottom: 30px;
+  padding: 15px;
+  position: relative;
+}
+
+
+.govuk-tabs ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border-bottom: 2px solid #bfc1c3;
+  list-style: none;
+}
+.govuk-tabs ul li {
+  display: inline-block;
+}
+.govuk-tabs ul li a, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li h3, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li .title, .govuk-tabs ul li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li .govuk-button.link, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li legend:visited {
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -2px;
+  padding: 0 30px;
+}
+.govuk-tabs ul li.active a, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li.active h3, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li.active .title, .govuk-tabs ul li.active #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li.active .govuk-button.link, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li.active legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active legend:visited {
+  border: solid 2px #bfc1c3;
+  border-bottom: none;
+  padding-bottom: 2px;
+  color: #0b0c0c;
+  text-decoration: none;
+  pointer-events: none;
+  background-color: #f3f3f3;
+  cursor: default;
+}
+
+</style>
+
+
+{% endblock %}
