@@ -9,6 +9,8 @@
 {% block content %}
 
 
+<link rel="stylesheet" href="/public/css/accessible-autocomplete-codes.min.css">
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     {% include "includes/return_procedures_1.html" %}
@@ -84,8 +86,8 @@
                       <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
-                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="30">Select </th>
+                          <th class="govuk-table__header" scope="col" width="300">Type</a></th>
                           <th class="govuk-table__header" scope="col" width="300">Generic name</th>
                           <th class="govuk-table__header" scope="col" width="200">Country origin</th>
                           <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
@@ -471,20 +473,74 @@
                         </tr>
                         -->
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;" colspan="6">
                             <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
                               <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                                <input class="govuk-checkboxes__input" id="orange" name="" type="checkbox" value="" data-aria-controls="conditional-orange">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other mammals</label>
                               </div>
+
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-orange" style="text-align: left;">
+                                <div class="govuk-form-group">
+                                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                    <p></p>
+                                    <label class="govuk-label" for="contact-by-email" style="margin-bottom: 20px;"><strong>Enter animal details</strong></label>
+                                    <!--
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                      For example, 27 3 2007
+                                    </div>
+                                    -->
+                                    <div class="govuk-date-input" id="passport-issued">
+                                      <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                          
+                                          <div class="govuk-form-group" style="margin-bottom: 20px;">
+                                            <label class="govuk-label" for="one-half">
+                                              Type
+                                            </label>
+                                            <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text" style="width: 500px!important;">
+                                          </div>
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label" for="one-half">
+                                              Generic name
+                                            </label>
+                                            <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text" style="width: 500px!important;">
+                                          </div>
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label" for="one-half">
+                                              Country origin
+                                            </label>
+                                            <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text" style="width: 500px!important;">
+                                          </div>
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label" for="one-half">
+                                              Commodity code
+                                            </label>
+                                            <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text" style="width: 200px!important;">
+                                          </div>
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label" for="one-half">
+                                              ASPEL code
+                                            </label>
+                                            <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text" style="width: 200px!important;">
+                                          </div>
+                                          <div>
+                                              <span><a href="#0" class="govuk-button govuk-button" style="margin-bottom: 0px;">Add</a></span>
+                                              <a href="#0" class="secondary-link">Cancel </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p></p>
+                                  </fieldset>
+                                </div>
+                              </div>
+
                             </div>
                           </td>
-                          <td class="govuk-table__cell" scope="col">Other mammals</a></td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
+
                         </tr>
+
                         <!--
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
@@ -517,6 +573,7 @@
                           <td class="govuk-table__cell" scope="col"> </td>
                         </tr>
                         -->
+
                       </tbody>
                     </table>
 
@@ -534,8 +591,8 @@
                       <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
-                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="30">Select </th>
+                          <th class="govuk-table__header" scope="col" width="300">Type</a></th>
                           <th class="govuk-table__header" scope="col" width="300">Generic name</th>
                           <th class="govuk-table__header" scope="col" width="200">Country origin</th>
                           <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
@@ -574,19 +631,54 @@
                           <td class="govuk-table__cell" scope="col">32804</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;" colspan="6">
                             <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              
                               <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                                <input class="govuk-checkboxes__input" id="apple" name="" type="checkbox" value="" data-aria-controls="conditional-apple">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other birds</label>
                               </div>
+
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-apple" style="text-align: left;">
+                                <div class="govuk-form-group">
+                                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                    <p></p>
+                                    <label class="govuk-label" for="contact-by-email" style="margin-bottom: 20px;"><strong>Enter name or commodity code, and select from the list of results</strong></label>
+                                    <!--
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                      For example, 27 3 2007
+                                    </div>
+                                    -->
+                                    <div class="govuk-date-input" id="passport-issued">
+                                      <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                          
+                                          <div class="govuk-form-group" style="margin-bottom: 20px;width: 600px;">
+                                            <select name="fruit-type" id="fruit-type" class="govuk-input govuk-!-width-one-half">
+                                              <option selected="selected"></option>
+                                              <option value="Strawberry">Black-headed duck - Heteronetta - 01061191</option>
+                                              <option value="Strawberry">Brazilian duck - Amazonetta brasiliensis - 01061198</option>
+                                              <option value="Strawberry">Domestic duck - Anas platyrhynchos domesticus - 01061195</option>
+                                              <option value="Strawberry">Whistling duck - Dendrocygna - 01061196</option>
+                                            </select>
+                                          </div>
+
+                                          <div>
+                                              <span><a href="#0" class="govuk-button govuk-button" style="margin-bottom: 0px;">Add</a></span>
+                                              <a href="#0" class="secondary-link">Cancel </a>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p></p>
+                                  </fieldset>
+                                </div>
+                              </div>
+
                             </div>
                           </td>
-                          <td class="govuk-table__cell" scope="col">Other birds</a></td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
+
                         </tr>
                       </tbody>
                     </table>
@@ -604,8 +696,8 @@
                       <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col" width="70"><a href="#0" style="color: #1d70ba">All </a></th>
-                          <th class="govuk-table__header" scope="col" width="250">Type</a></th>
+                          <th class="govuk-table__header" scope="col" width="30">Select</th>
+                          <th class="govuk-table__header" scope="col" width="300">Type</a></th>
                           <th class="govuk-table__header" scope="col" width="300">Generic name</th>
                           <th class="govuk-table__header" scope="col" width="200">Country origin</th>
                           <th class="govuk-table__header" scope="col" width="200">Commodity code</th>
@@ -764,49 +856,67 @@
                           <td class="govuk-table__cell" scope="col">51877</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
+                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;" colspan="6">
                             <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                              
                               <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+                                <input class="govuk-checkboxes__input" id="banana" name="" type="checkbox" value="" data-aria-controls="conditional-banana">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other</label>
                               </div>
+
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-banana" style="text-align: left;">
+                                <div class="govuk-form-group">
+                                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                    <p></p>
+                                    <label class="govuk-label" for="contact-by-email" style="margin-bottom: 20px;"><strong>Enter animal details</strong></label>
+                                    <!--
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                      For example, 27 3 2007
+                                    </div>
+                                    -->
+                                    <div class="govuk-date-input" id="passport-issued">
+                                      <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+
+                                          <div class="govuk-form-group" style="margin-bottom: 15px;">
+                                            <label class="govuk-label" for="sort">
+                                              Animal type
+                                            </label>
+                                            <select class="govuk-select" id="sort" name="sort" style="width: 300px;">
+                                              <option value="published" selected>Select</option>
+                                              <option value="published">Aquatic specie</option>
+                                              <option value="updated">Fish</option>
+                                              <option value="views">Reptil</option>
+                                            </select>
+                                          </div>
+                                          
+                                          <div class="govuk-form-group" style="margin-bottom: 20px;width: 600px;">
+                                            <label class="govuk-label" for="sort">
+                                              Animal name
+                                            </label>
+                                            <select name="fruit-type" id="fruit-type-2" class="govuk-input govuk-!-width-one-half" style="width: 600px;">
+                                              <option selected="selected"></option>
+                                              <option value="Strawberry">Atlantic cod - Gadus morhua - 01061146</option>
+                                              <option value="Strawberry">Greenland cod - Gadus ogac - 01061141</option>
+                                              <option value="Strawberry">Pacific cod - Gadus macrocephalus - 01061149</option>
+                                            </select>
+                                          </div>
+
+                                          <div>
+                                              <span><a href="#0" class="govuk-button govuk-button" style="margin-bottom: 0px;">Add</a></span>
+                                              <a href="#0" class="secondary-link">Cancel </a>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p></p>
+                                  </fieldset>
+                                </div>
+                              </div>
+
                             </div>
                           </td>
-                          <td class="govuk-table__cell" scope="col">Other fish</a></td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
-                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
-                              <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="govuk-table__cell" scope="col">Other reptiles </a></td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;">
-                            <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
-                              <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="govuk-table__cell" scope="col">Other aquatic species</a></td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
-                          <td class="govuk-table__cell" scope="col"> </td>
                         </tr>
                       </tbody>
                     </table>
@@ -916,10 +1026,57 @@
 
 
 
+{% block pageScripts %}
+  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript">
+    var selectEl = document.querySelector('#fruit-type')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      defaultValue: "",
+      minLength: 2,
+      selectElement: selectEl
+    })
+  </script>
+
+  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script type="text/javascript">
+    var selectEl = document.querySelector('#fruit-type-2')
+    accessibleAutocomplete.enhanceSelectElement({
+      autoselect: true,
+      confirmOnBlur: true,
+      defaultValue: "",
+      minLength: 2,
+      selectElement: selectEl
+    })
+  </script>
+{% endblock %}
+
+
+<style>
+  .autocomplete__input {
+    background-color: white;
+    cursor: text;
+    width:100%
+  }
+  .autocomplete__input--show-all-values {
+    padding: 5px 34px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
+  }
+  .autocomplete__dropdown-arrow-down{
+    pointer-events: none;
+    z-index: auto;
+  }
+  .autocomplete__menu--overlay {
+      box-shadow: auto
+  }
+</style>
+
+
 <style type="text/css">
 .govuk-radios__item label {
   font-weight: bold;
 }
+
 .govuk-radios__item .govuk-hint {
   padding-left: 15px;
 }
@@ -1007,6 +1164,18 @@ dt {
   pointer-events: none;
   background-color: #f3f3f3;
   cursor: default;
+}
+
+.govuk-checkboxes__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
 }
 
 </style>
