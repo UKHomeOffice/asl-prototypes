@@ -25,47 +25,47 @@
 
     <h1 class="govuk-heading-l" style="margin-bottom:30px;">Set up return: Animals</h1>
 
-    <h3 class="govuk-heading-m" style="margin-bottom:10px;"><span>Animal types used in procedures in 2021</span></h3>
+    <h3 class="govuk-heading-m" style="margin-bottom:10px;"><span>Select animal type used in procedures in 2021</span></h3>
 
 
       <div class="govuk-form-group" style="margin-bottom: 0px;">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-
-          <div style="border-left: none;padding-left: 0px;margin-bottom: 0px;">
-            <table class="govuk-table" style="margin-bottom: 20px;">
-              <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col" width="400">Common name</a></th>
-                  <th class="govuk-table__header" scope="col" width="400">Generic name</th>
-                  <th class="govuk-table__header" scope="col" width="400">Country origin</th>
-                  <th class="govuk-table__header" scope="col" width="400">Protection</th>
-                  <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0"></a></td>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell" scope="col">Black-headed duck</a></td>
-                  <td class="govuk-table__cell" scope="col">Heteronetta</td>
-                  <td class="govuk-table__cell" scope="col">Germany</td>
-                  <td class="govuk-table__cell" scope="col">Schedule II</td>
-                  <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="page_9.html" style="color: #005ea5;">Remove</a></td>
-                </tr>
-              </tbody>
-            </table>
+          <label class="govuk-label" for="contact-by-email" style="margin-bottom: 10px;">Start to type the animal name and select an option</label>
+          <!--
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
           </div>
+          -->
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                
+                <div class="govuk-form-group" style="margin-bottom: 20px;width: 600px;margin-bottom: 0px">
+                  <select name="fruit-type" id="fruit-type" class="govuk-input govuk-!-width-one-half">
+                    <option selected="selected"></option>
+                    <option value="Strawberry">Black-headed duck - Heteronetta - Schedule II</option>
+                    <option value="Strawberry">Brazilian duck - Amazonetta brasiliensis - Schedule II</option>
+                    <option value="Strawberry">Domestic duck - Anas platyrhynchos domesticus</option>
+                    <option value="Strawberry">Whistling duck - Dendrocygna - Endangered</option>
+                  </select>
+                </div>
 
-          <div>
-            <span><a class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;" onclick="toggle(this)">Add another animal type</a></span>
+                <!--
+                <div>
+                    <span><a class="govuk-button govuk-button--secondary" style="margin-bottom: 10px;" onclick="toggle(this)">Add animal</a></span>
+                    <a href="#0" class="secondary-link">Cancel </a>
+                </div>
+                -->
+
+              </div>
+            </div>
           </div>
-          
           <p></p>
-
         </fieldset>
       </div>
 
-      <div style="margin-bottom:0px;margin-top:0px;">
-        <span><a href="#0" class="govuk-button govuk-button">Continue</a></span>
+      <div style="margin-bottom:0px;margin-top:10px;">
+        <span><a href="page_10.html" class="govuk-button govuk-button">Continue</a></span>
         <a href="#0" class="secondary-link">Back </a>
       </div>
 
