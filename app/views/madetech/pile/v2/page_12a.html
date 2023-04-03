@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_8.html" %}
+{% extends "layout_pile_11.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,63 +13,40 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-xl">Cancel course</span>
+    <span class="govuk-caption-xl">Revoke licence</span>
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details and submit request</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Are you sure you want to revoke Jake Evans's licence?</h1>
 
     <div class="govuk-warning-text" style="margin-bottom: 15px;">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-warning-text__assistive">Warning</span>
-        Cancelling a course cannot be undone. The course licence and all participant licences will be revoked as soon as the cancellation request is approved.
+        The participant licence will be immediately revoked as soon as you make this change.
       </strong>
     </div>
 
-    <table class="govuk-table" style="margin-bottom:10px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="200"> </th>
-          <th scope="col" class="govuk-table__header"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Are you sure you want to cancel this course?</th>
-          <td class="govuk-table__cell">Yes, I want to proceed</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Reasons for making this change</th>
-          <td class="govuk-table__cell">Roman senatus et dolore provocas penta colabra sumus et penurias lamentas sempre et sopara aliquam</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant to be revoked</th>
-          <td class="govuk-table__cell">Jake Evans<br>Dean Loach <br>Dave Bartram <br> Ann Cooper<br>Ray Hadfield-Petersons <br>Mike Kowasky <br>Sonia Coward <br>Carla Montoni  </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br>
-    <br>
-
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
-            </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Yes, I want to proceed
+            </label>
           </div>
-        </fieldset>
-      </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              No, cancel request
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>
 
     <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_3d.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel</a>
+      <span><a href="page_12b.html" class="govuk-button govuk-button">Continue</a></span>
+      <a href="#0" class="secondary-link">Cancel </a>
     </div>
 
     <br><br>

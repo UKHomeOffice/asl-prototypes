@@ -1,6 +1,6 @@
 
 
-{% extends "layout_species_2.html" %}
+{% extends "layout_pile_5.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -9,173 +9,157 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="/public/css/accessible-autocomplete-codes.min.css">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    {% include "includes/return_procedures_1.html" %}
-  </div>
-</div> 
-
 <div class="govuk-grid-row" style="padding-top: 0px;">
 
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-xl">Section 2 of 4</span>
+    <span class="govuk-caption-xl">Create a new course</span>
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Set up return: Animals</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Add course details</h1>
 
-    <h3 class="govuk-heading-s"><span>This licence authorises or previously authorised use of the following animal types:</span></h3>
-
-    <ul style="padding-left: 20px;">
-      <li>Mice</li>
-      <li>Rats</li>
-      <li>Marmosets</li>
-    </ul>
+    <div class="govuk-inset-text" style="margin-bottom: 30px;">
+      <strong>Licence name:</strong> Lorum ipsum est romanus sumus
+      <br>
+      <strong>Licence number:</strong> 12345678
+      <br>
+      <strong>Expire date:</strong> 26 April 2023
+    </div>
 
   </div>
 
   <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
     <div class="govuk-grid-column-full">
 
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" style="margin-bottom: 0px;">
-            <h3 class="govuk-heading-s">
-              Were any other animal types used in procedures in 2021?
-            </h3>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          <strong>Course name</strong>
+        </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text" style="width: 50% !important;">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <p class="govuk-fieldset__heading"><strong>Course start date</strong></p>
           </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-radios__label" for="contact" style="font-weight: 400;">
-                No, other animal types were not used
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 400;">
-                Yes, other animal types were used
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 14 8 2023
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-
-                <label class="govuk-label" for="contact-by-phone" style="font-weight: 700;margin-bottom: 10px;">
-                  Select animal
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
                 </label>
-
-                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                  <label class="govuk-label" for="contact-by-email" style="margin-bottom: 10px;">Start to type the animal name and select an option</label>
-                  <!--
-                  <div id="passport-issued-hint" class="govuk-hint">
-                    For example, 27 3 2007
-                  </div>
-                  -->
-                  <div class="govuk-date-input" id="passport-issued">
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        
-                        <div class="govuk-form-group" style="margin-bottom: 20px;width: 600px;">
-                          <select name="fruit-type" id="fruit-type" class="govuk-input govuk-!-width-one-half">
-                            <option selected="selected"></option>
-                            <option value="Strawberry">Black-headed duck - Heteronetta - Schedule II</option>
-                            <option value="Strawberry">Brazilian duck - Amazonetta brasiliensis - Schedule II</option>
-                            <option value="Strawberry">Domestic duck - Anas platyrhynchos domesticus - Schedule II</option>
-                            <option value="Strawberry">Whistling duck - Dendrocygna - Endangered</option>
-                          </select>
-                        </div>
-
-                        <div>
-                            <span><a class="govuk-button govuk-button--secondary" style="margin-bottom: 10px;" onclick="toggle(this)">Add animal</a></span>
-                            <a href="#0" class="secondary-link">Cancel </a>
-                        </div>
-
-                        <script>
-                          let toggle = button => {
-                            let element = document.getElementById("mydiv");
-                            let hidden = element.getAttribute("hidden");
-
-                            let element2 = document.getElementById("mydiv2");
-                            let hidden2 = element2.getAttribute("hidden");
-
-                            if (hidden) {
-                               element.removeAttribute("hidden");
-                               button.innerText = "Add animal";
-                            } else {
-                               element.setAttribute("hidden", "hidden");
-                            }
-
-                            if (hidden2) {
-                               element2.removeAttribute("hidden");
-                            } else {
-                               element2.setAttribute("hidden", "hidden");
-                            }
-
-                          }
-                        </script>
-
-                        <div style="border-left: none;padding-left: 0px;">
-                          <table class="govuk-table">
-                            <!--<label class="govuk-label govuk-radios__label" for="contact-2" style="font-weight: 700;padding-left: 0px;">Mammals:</label>-->
-                            <thead class="govuk-table__head">
-                              <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="col" width="400">Common name</a></th>
-                                <th class="govuk-table__header" scope="col" width="400">Generic name</th>
-                                <th class="govuk-table__header" scope="col" width="400">Type of animal</th>
-                                <th class="govuk-table__header" scope="col" width="400">Country origin</th>
-                                <th class="govuk-table__header" scope="col" width="400">Protection</th>
-                                <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0"></a></td>
-                              </tr>
-                            </thead>
-                            <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row" id="mydiv2">
-                                <td class="govuk-table__cell" scope="col">No animals added yet</td>
-                                <td class="govuk-table__cell" scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                <td class="govuk-table__cell" scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                <td class="govuk-table__cell" scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                <td class="govuk-table__cell" scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                <td class="govuk-table__cell" scope="col" style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                              </tr>
-                              <tr class="govuk-table__row" id="mydiv" hidden="hidden">
-                                <td class="govuk-table__cell" scope="col">Black-headed duck</a></td>
-                                <td class="govuk-table__cell" scope="col">Heteronetta</td>
-                                <td class="govuk-table__cell" scope="col">Bird</td>
-                                <td class="govuk-table__cell" scope="col">Germany</td>
-                                <td class="govuk-table__cell" scope="col">Schedule II</td>
-                                <td class="govuk-table__cell" scope="col" style="text-align: right;"><a onclick="toggle(this)" style="color: #005ea5;">Remove</a></td>
-                              </tr>
-                              <!--
-                              <tr class="govuk-table__row" id="mydiv" hidden>
-                                <td class="govuk-table__cell" scope="col">Brazilian duck</a></td>
-                                <td class="govuk-table__cell" scope="col">Amazonetta brasiliensis</td>
-                                <td class="govuk-table__cell" scope="col">Brazil</td>
-                                <td class="govuk-table__cell" scope="col">Schedule II</td>
-                                <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0">Remove</a></td>
-                              </tr>
-                              -->
-                            </tbody>
-                          </table>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                  <p></p>
-                </fieldset>
-                
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
               </div>
             </div>
           </div>
         </fieldset>
       </div>
 
-      <div style="margin-bottom:0px;margin-top:20px;">
-        <span><a href="#0" class="govuk-button govuk-button">Continue</a></span>
-        <a href="#0" class="secondary-link">Back </a>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <p class="govuk-fieldset__heading"><strong>Course end date</strong></p>
+          </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 14 9 2023
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
-      <br>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <p class="govuk-fieldset__heading"><strong>Animals used</strong></p>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Ferrets (Mustela furo)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Hamster (Mesocricetus auratus)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Hamster (Cricetulus griseus)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Mice (Rodentia)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Rat (Rattus rattus)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div style="margin-bottom:0px;margin-top:40px;">
+        <span><a href="page_5.html" class="govuk-button govuk-button">Continue</a></span>
+        <a href="#0" class="secondary-link">Cancel</a>
+      </div>
+
+      <br><br>
 
     </div>
 
@@ -185,57 +169,10 @@
 
 
 
-{% block pageScripts %}
-  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
-  <script type="text/javascript">
-    var selectEl = document.querySelector('#fruit-type')
-    accessibleAutocomplete.enhanceSelectElement({
-      autoselect: true,
-      confirmOnBlur: true,
-      defaultValue: "",
-      minLength: 2,
-      selectElement: selectEl
-    })
-  </script>
-
-  <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
-  <script type="text/javascript">
-    var selectEl = document.querySelector('#fruit-type-2')
-    accessibleAutocomplete.enhanceSelectElement({
-      autoselect: true,
-      confirmOnBlur: true,
-      defaultValue: "",
-      minLength: 2,
-      selectElement: selectEl
-    })
-  </script>
-{% endblock %}
-
-
-<style>
-  .autocomplete__input {
-    background-color: white;
-    cursor: text;
-    width:100%
-  }
-  .autocomplete__input--show-all-values {
-    padding: 5px 34px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
-  }
-  .autocomplete__dropdown-arrow-down{
-    pointer-events: none;
-    z-index: auto;
-  }
-  .autocomplete__menu--overlay {
-      box-shadow: auto
-  }
-</style>
-
-
 <style type="text/css">
 .govuk-radios__item label {
   font-weight: bold;
 }
-
 .govuk-radios__item .govuk-hint {
   padding-left: 15px;
 }
@@ -323,18 +260,6 @@ dt {
   pointer-events: none;
   background-color: #f3f3f3;
   cursor: default;
-}
-
-.govuk-checkboxes__input {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin: 0;
-    opacity: 0;
 }
 
 </style>

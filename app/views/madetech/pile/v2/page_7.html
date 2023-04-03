@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_8.html" %}
+{% extends "layout_pile_5.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,66 +13,192 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-xl">Cancel course</span>
+    <span class="govuk-caption-xl">Create a new course</span>
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details and submit request</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details before sending the application</h1>
 
-    <div class="govuk-warning-text" style="margin-bottom: 15px;">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Cancelling a course cannot be undone. The course licence and all participant licences will be revoked as soon as the cancellation request is approved.
-      </strong>
-    </div>
+  </div>
 
-    <table class="govuk-table" style="margin-bottom:10px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="200"> </th>
-          <th scope="col" class="govuk-table__header"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Are you sure you want to cancel this course?</th>
-          <td class="govuk-table__cell">Yes, I want to proceed</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Reasons for making this change</th>
-          <td class="govuk-table__cell">Roman senatus et dolore provocas penta colabra sumus et penurias lamentas sempre et sopara aliquam</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant to be revoked</th>
-          <td class="govuk-table__cell">Jake Evans<br>Dean Loach <br>Dave Bartram <br> Ann Cooper<br>Ray Hadfield-Petersons <br>Mike Kowasky <br>Sonia Coward <br>Carla Montoni  </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-two-thirds">
 
-    <br>
-    <br>
+      <h2 class="govuk-heading-m" style="margin-bottom: 0px;">Licence details</h2>
 
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
-      <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
-            </div>
-          </div>
-        </fieldset>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key"></dt>
+          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Licence name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorum ipsum est romanus sumus
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Licence number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12345678
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Expire date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            26 April 2023
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m" style="margin-top: 40px;margin-bottom: 0px;">Course details</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key"></dt>
+          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Dragon flight school
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            14 August 2023
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course end date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            28 September 2023
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Animals used
+          </dt>
+          <dd class="govuk-summary-list__value">
+            &#8226; Hamster (Mesocricetus auratus)
+            <br>
+            &#8226; Mice (Rodentia)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m" style="margin-top: 40px;margin-bottom: 0px;">Invited participants</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key"></dt>
+          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Participant 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Peter Smith-Johnson
+            <br>
+            25 January 1995
+            <br>
+            peter.smith@acme.com
+            <br>
+            ACME Limited
+            <br>
+            Lorum ipsum colabra sentare estas
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Participant 2
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Maria summerland
+            <br>
+            25 January 1995
+            <br>
+            maria.summerland@colabra.co.uk
+            <br>
+            ACME Limited
+            <br>
+            Vinculas pensata et colaboras sinus aliquam 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#0" style="color: #1d70b8;">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m" style="margin-top: 40px;">Now send your application</h2>
+      
+      <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <div style="margin-bottom:0px;margin-top:30px;">
+        <span><a href="page_8.html" class="govuk-button govuk-button">Send application</a></span>
+        <a href="#0" class="secondary-link">Cancel</a>
       </div>
-    </div>
 
-    <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_3d.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel</a>
-    </div>
+      <br><br>
 
-    <br><br>
+    </div>
 
   </div>
 

@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_2.html" %}
+{% extends "layout_pile_7.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -8,178 +8,67 @@
 
 {% block content %}
 
-<div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
-  <strong><p style="margin-bottom: 0px;"><strong>Change course dates has been requested successfully. <a href="#0" style="color: #1d70ba">View task</a></strong></p></strong>
-</div>
-
-<div class="notification-banner" style="padding: 0px 0px 0px 10px">
-  <div class="govuk-warning-text" style="margin-bottom: 0px;">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <span class="govuk-warning-text__text">
-      Some licences in this course need some actions: 
-      <br>
-      &#8226; 2 licences already expired - <a href="#0" style="color: #1d70ba">Reactivate licences now</a>
-      <br>
-      &#8226; 1 licence for this course will expire soon - <a href="#0" style="color: #1d70ba">Extend licence now</a>
-    </span>
-  </div>
-</div>
 
 <div class="govuk-grid-row" style="padding-top: 0px;">
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Course details</h1>
+    <span class="govuk-caption-xl">Change course dates</span>
 
-    <dl class="model-summary inline" style="margin-bottom: 10px;">
-      <dt style="width: 220px;"><span>Course title</span></dt>
-      <dd>Lorum ipsum est</dd>
-      <dt style="width: 220px;"><span>Course dates</span></dt>
-      <dd>14 Sep 2022 - 26 Apr 2023 <!--&nbsp;&nbsp;<a href="#">Change</a>--></dd>
-      <dt style="width: 220px;"><span>Animals to be used</span></dt>
-      <dd>Dragons</dd>
-      <dt style="width: 220px;"><span>Project licence number</span></dt>
-      <dd><a href="#0" style="color: #1d70ba">12555462438</a></dd>
-      <dt style="width: 220px;"><span>Project licence title</span></dt>
-      <dd>Test Project to test legacy NTS</dd>
-    </dl>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details and submit request</h1>
 
-    <span><a href="#0" class="govuk-button govuk-button--secondary">Cancel course </a></span>
-
-  </div>
-
-  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
-    <div class="govuk-grid-column-full">
-
-      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 1px solid #bfc1c3; margin-top: 10px; margin-bottom: 30px;">
-
-      <h3><span>Manage course participants</span></h3>
-
-      <!--
-      <p><span>Licences will be valid for 3 months from the date of approval.</span></p>
-      -->
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          Licences are valid for 3 months from the date of approval.
-        </strong>
-      </div>
-
-      <span><a href="#0" class="govuk-button govuk-button--secondary">Add new participant</a></span>
-      &nbsp;
-      <span><a href="#0" class="govuk-button govuk-button--secondary">Remove participants</a></span>
-      &nbsp;
-      <span><a href="#0" class="govuk-button govuk-button--secondary">Extend licences</a></span>
-      &nbsp;
-      <span><a href="#0" class="govuk-button govuk-button--secondary">Revoke licences</a></span>
-      &nbsp;
-      <span><a href="#0" class="govuk-button govuk-button--secondary">Reactivate licences</a></span>
-
-      <div>
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="col" width="300"><a href="#" style="color: #1d70ba">Participant name</a></th>
-              <th class="govuk-table__header" scope="col" width="150"><a href="#" style="color: #1d70ba">Details</a></th>
-              <th class="govuk-table__header" scope="col" width="320"><a href="#" style="color: #1d70ba">Licence approval date</a></th>
-              <th class="govuk-table__header" scope="col" width="320"><a href="#" style="color: #1d70ba">Licence expiration date</a></th>
-              <th class="govuk-table__header" scope="col" width="250"><a href="#" style="color: #1d70ba">Licence status</a></th>
-              <th class="govuk-table__header" scope="col" width="170"><a href="#" style="color: #1d70ba">Actions</a></th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Jake Evans</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Feb 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Revoke</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Dean Loach</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Feb 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Revoke</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Dave Bartram</a></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">View task</a></td>
-              <td class="govuk-table__cell" scope="col">21 Jan 2023</td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #6F777B;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">awaiting decision</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">View details</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Ann Cooper</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Feb 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #6F777B;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">REVOKED</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Reactivate</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Ray Hadfield</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Feb 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Revoke</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Maria Shutterland</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Sep 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #b10e1e;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">expired</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Reactivate</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Mike Kowasky</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Feb 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Revoke</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Sonia Coward</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">14 Sep 2022</td>
-              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #b10e1e;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">expired</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Reactivate</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Carla Montoni</a></td>
-              <td class="govuk-table__cell" scope="col"></td>
-              <td class="govuk-table__cell" scope="col">28 Nov 2022</td>
-              <td class="govuk-table__cell" scope="col">28 Jan 2022</td>
-              <td class="govuk-table__cell" scope="col"><strong style="background: #6F777B;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">TO BE EXPIRED</strong></td>
-              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #1d70ba">Extend licence</a></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <nav role="navigation" aria-label="Pagination">
-          <div class="pagination__summary">Showing 1 – 9</div>
-          <ul class="pagination">
-            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page" style="color: #6f777b"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
-            <li class="pagination__item">1</li>
-            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page" style="color: #6f777b">Next <span aria-hidden="true" role="presentation">»</span></a></li>
-          </ul>
-        </nav>  
-
-        <br><br>
-
-      </div>
-
+    <div class="govuk-warning-text" style="margin-bottom:0px;">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Participants licences will be extended or reduced to the new course end date.
+      </strong>
     </div>
+
+    <table class="govuk-table" style="margin-bottom:10px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"> </th>
+          <th scope="col" class="govuk-table__header"> </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Course dates</th>
+          <td class="govuk-table__cell">Start date: 14 Sep 2022 <br>End date: 26 May 2023<br>New end date: 14 Jun 2023</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reasons for making this change</th>
+          <td class="govuk-table__cell">Roman senatus et dolore provocas penta colabra sumus et penurias lamentas sempre et sopara aliquam</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <div class="application-confirm" style="margin-bottom: 40px;">
+      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
+      <div class="govuk-form-group" style="margin-bottom: 0px;">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
+              </label> 
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div style="margin-bottom:0px;margin-top:30px;">
+      <span><a href="page_13e.html" class="govuk-button govuk-button">Submit</a></span>
+      <a href="#0" class="secondary-link">Cancel </a>
+    </div>
+
+    <br><br>
 
   </div>
 

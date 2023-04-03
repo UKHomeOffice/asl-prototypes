@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_8.html" %}
+{% extends "layout_pile_10.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,15 +13,15 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-xl">Cancel course</span>
+    <span class="govuk-caption-xl">Reactivate licence</span>
 
     <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details and submit request</h1>
 
-    <div class="govuk-warning-text" style="margin-bottom: 15px;">
+    <div class="govuk-warning-text" style="margin-bottom:0px;">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-warning-text__assistive">Warning</span>
-        Cancelling a course cannot be undone. The course licence and all participant licences will be revoked as soon as the cancellation request is approved.
+        Licence will be valid for the course dates.
       </strong>
     </div>
 
@@ -34,16 +34,18 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Are you sure you want to cancel this course?</th>
-          <td class="govuk-table__cell">Yes, I want to proceed</td>
+          <th scope="row" class="govuk-table__header">Participant name</th>
+          <td class="govuk-table__cell">Maria Shutterland </td>
         </tr>
+        <!--
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Licence duration</th>
+          <td class="govuk-table__cell">3 months from the date this request is approved</td>
+        </tr>
+        -->
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Reasons for making this change</th>
           <td class="govuk-table__cell">Roman senatus et dolore provocas penta colabra sumus et penurias lamentas sempre et sopara aliquam</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant to be revoked</th>
-          <td class="govuk-table__cell">Jake Evans<br>Dean Loach <br>Dave Bartram <br> Ann Cooper<br>Ray Hadfield-Petersons <br>Mike Kowasky <br>Sonia Coward <br>Carla Montoni  </td>
         </tr>
       </tbody>
     </table>
@@ -68,8 +70,8 @@
     </div>
 
     <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_3d.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel</a>
+      <span><a href="page_14d.html" class="govuk-button govuk-button">Submit</a></span>
+      <a href="#0" class="secondary-link">Cancel </a>
     </div>
 
     <br><br>

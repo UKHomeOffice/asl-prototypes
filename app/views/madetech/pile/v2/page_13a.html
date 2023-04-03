@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_2.html" %}
+{% extends "layout_pile_7.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,7 +13,9 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Change course dates</h1>
+    <span class="govuk-caption-xl">Change course dates</span>
+
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Enter a new date</h1>
 
     <div class="govuk-inset-text" style="margin-bottom:10px;">
       <span>Current start date: <strong>14 Sep 2022</strong> <br>Current end date: <strong>26 Apr 2023</strong></span>
@@ -36,7 +38,7 @@
             <p class="govuk-fieldset__heading"><strong>Start date</strong></p>
           </legend>
           <div id="passport-issued-hint" class="govuk-hint">
-            The start date cannot be change this time because this course already started.
+            This course has already started. The start date cannot be changed.
           </div>
           <div class="govuk-date-input" id="passport-issued">
             <div class="govuk-date-input__item">
@@ -70,7 +72,7 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-            <p class="govuk-fieldset__heading"><strong>Enter your proposed new end date</strong></p>
+            <p class="govuk-fieldset__heading"><strong>New end date</strong></p>
           </legend>
           <div id="passport-issued-hint" class="govuk-hint">
             For example, 14 8 2022
@@ -81,7 +83,7 @@
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="26">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -89,7 +91,7 @@
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="5">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -97,7 +99,7 @@
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2023">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
               </div>
             </div>
           </div>
@@ -106,7 +108,7 @@
 
       <div style="margin-bottom:0px;margin-top:40px;">
         <span><a href="page_13b.html" class="govuk-button govuk-button">Continue</a></span>
-        <a href="#0" class="secondary-link">Cancel request</a>
+        <a href="#0" class="secondary-link">Cancel </a>
       </div>
 
       <br><br>

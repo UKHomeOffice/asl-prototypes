@@ -1,6 +1,6 @@
 
 
-{% extends "layout_pile_8.html" %}
+{% extends "layout_pile_5.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -13,66 +13,84 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-xl">Cancel course</span>
+    <span class="govuk-caption-xl">Create a new course</span>
 
-    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Check details and submit request</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Invited participants</h1>
 
-    <div class="govuk-warning-text" style="margin-bottom: 15px;">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Cancelling a course cannot be undone. The course licence and all participant licences will be revoked as soon as the cancellation request is approved.
-      </strong>
-    </div>
+  </div>
 
-    <table class="govuk-table" style="margin-bottom:10px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" width="200"> </th>
-          <th scope="col" class="govuk-table__header"> </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Are you sure you want to cancel this course?</th>
-          <td class="govuk-table__cell">Yes, I want to proceed</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Reasons for making this change</th>
-          <td class="govuk-table__cell">Roman senatus et dolore provocas penta colabra sumus et penurias lamentas sempre et sopara aliquam</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Participant to be revoked</th>
-          <td class="govuk-table__cell">Jake Evans<br>Dean Loach <br>Dave Bartram <br> Ann Cooper<br>Ray Hadfield-Petersons <br>Mike Kowasky <br>Sonia Coward <br>Carla Montoni  </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-full">
 
-    <br>
-    <br>
-
-    <div class="application-confirm" style="margin-bottom: 40px;">
-      <h2 class="govuk-heading-m">Please confirm that you understand</h2>
       <div class="govuk-form-group" style="margin-bottom: 0px;">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-               By submitting this change, I confirm that I also have the consent of the Establishment Licence holder.
-              </label> 
-            </div>
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+
+          <div style="border-left: none;padding-left: 0px;margin-bottom: 0px;">
+            <table class="govuk-table" style="margin-bottom: 20px;">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="col" width="400">Participant name</th>
+                  <th class="govuk-table__header" scope="col" width="400">DoB</th>
+                  <th class="govuk-table__header" scope="col" width="300">Email</th>
+                  <th class="govuk-table__header" scope="col" width="300">Organisation</th>
+                  <th class="govuk-table__header" scope="col" width="400">Estatement</th>
+                  <th class="govuk-table__header" scope="col" width="200"> </th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="mydiv2">
+                  <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">Peter Smith-Johnson</a></td>
+                  <td class="govuk-table__cell" scope="col">25 January 1995</td>
+                  <td class="govuk-table__cell" scope="col">peter.smith@acme.com</td>
+                  <td class="govuk-table__cell" scope="col">ACME Limited</td>
+                  <td class="govuk-table__cell" scope="col">Lorum ipsum colabra</td>
+                  <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0" style="color: #005ea5;">Remove</a></td>
+                </tr>
+                <tr class="govuk-table__row" id="mydiv" hidden="hidden">
+                  <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">Maria Summerland</a></td>
+                  <td class="govuk-table__cell" scope="col">19 September 1987</td>
+                  <td class="govuk-table__cell" scope="col">maria.summerland@colabra.co.uk</td>
+                  <td class="govuk-table__cell" scope="col">Colabra Associated</td>
+                  <td class="govuk-table__cell" scope="col">Vincula supra maligna</td>
+                  <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0" style="color: #005ea5;">Remove</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <div>
+            <span><a class="govuk-button govuk-button--secondary" style="margin-bottom: 20px;" onclick="toggle(this)">Invite another participant</a></span>
+          </div>
+          <script>
+            let toggle = button => {
+              let element = document.getElementById("mydiv");
+              let hidden = element.getAttribute("hidden");
+
+              let element2 = document.getElementById("mydiv2");
+              let hidden2 = element2.getAttribute("hidden");
+
+              if (hidden) {
+                 element.removeAttribute("hidden");
+                 button.innerText = "Invite another participant";
+              } else {
+                 element.setAttribute("hidden", "hidden");
+              }
+
+ 
+
+            }
+          </script>
+          <p></p>
         </fieldset>
       </div>
-    </div>
 
-    <div style="margin-bottom:0px;margin-top:30px;">
-      <span><a href="page_3d.html" class="govuk-button govuk-button">Submit</a></span>
-      <a href="#0" class="secondary-link">Cancel</a>
-    </div>
+      <div style="margin-bottom:0px;margin-top:10px;">
+        <span><a href="page_7.html" class="govuk-button govuk-button">Continue</a></span>
+        <a href="#0" class="secondary-link">Cancel</a>
+      </div>
 
-    <br><br>
+      <br><br>
+
+    </div>
 
   </div>
 
