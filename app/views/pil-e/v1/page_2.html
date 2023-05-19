@@ -1,0 +1,367 @@
+
+
+{% extends "layout_pile_2.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!--
+div class="govuk-warning-text info" style="background: white;border: 5px solid #00703c;padding: 15px;width: 1160px;">
+  <strong><p style="margin-bottom: 0px;"><strong>2 conditions added successfully to licence PP6807005. </strong></p></strong>
+</div>
+-->
+
+<div class="notification-banner" style="padding: 0px 0px 0px 10px">
+  <div class="govuk-warning-text" style="margin-bottom: 0px;">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <span class="govuk-warning-text__text">
+      &#8226; 2 licences have expired - <a href="#0" style="color: #class="govuk-link"">Reactivate licences</a>
+      <br>
+      &#8226; 1 licence will expire in 2 days - <a href="#0" style="color: #class="govuk-link"">Extend licence</a><br>
+      &#8226; 2 licences will expire in 5 days - <a href="#0" style="color: #class="govuk-link"">Extend licences</a>
+      
+    </span>
+  </div>
+</div>
+
+<div class="govuk-grid-row" style="padding-top: 0px;">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l" style="margin-bottom:30px;">Course details</h1>
+
+    <dl class="model-summary inline" style="margin-bottom: 10px;">
+      <dt style="width: 220px;"><span>Course title</span></dt>
+      <dd>Dragon flight school</dd>
+      <dt style="width: 220px;"><span>Course dates</span></dt>
+      <dd>05 Sep 2022 - 26 Apr 2023 &nbsp;&nbsp;<a href="page_13a.html" style="color: #class="govuk-link"">Change</a></dd>
+      <dt style="width: 220px;"><span>Animals to be used</span></dt>
+      <dd>Dragons</dd>
+      <dt style="width: 220px;"><span>Project licence number</span></dt>
+      <dd><a href="#0" style="color: #class="govuk-link"">12555462438</a></dd>
+      <dt style="width: 220px;"><span>Project licence title</span></dt>
+      <dd>Test Project to test legacy NTS</dd>
+    </dl>
+
+    <span><a href="page_3a.html" class="govuk-button govuk-button--secondary">Cancel course </a></span>
+
+  </div>
+
+  <div class="govuk-grid-row" style="padding-left: 15px;padding-right: 15px;">
+    <div class="govuk-grid-column-full">
+
+      <hr class="govuk-section-break govuk-section-break--xl" style="border-top: 1px solid #bfc1c3; margin-top: 10px; margin-bottom: 30px;">
+
+      <!--
+      <p><span>Licences will be valid for 3 months from the date of approval.</span></p>
+      -->
+
+      <!--
+      <span><a href="page_6a.html" class="govuk-button govuk-button--secondary">Cancel requests</a></span>
+      -->
+
+      <div>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Course participants
+            <br>
+            <span><a href="page_4a.html" class="govuk-button govuk-button--secondary" style="margin-top:10px">+ Add participants</a></span>
+            &nbsp;<a href="page_10a" class="govuk-button govuk-button--secondary" style="margin-top:10px">- Revoke a licence</a>
+          </caption>
+          
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col" width="50">Select
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item" style="margin-bottom:7px">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="Select">
+                    <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                  </div>
+              </th>
+              <th class="govuk-table__header" scope="col" width="250"><a href="#0" style="color: #class="govuk-link"">Name</a></th>
+              <th class="govuk-table__header" scope="col" width="200"><a href="#0" style="color: #class="govuk-link"">Licence approval date</a></th>
+              <th class="govuk-table__header" scope="col" width="200"><a href="#0" style="color: #class="govuk-link"">Licence expiration date</a></th>
+              <th class="govuk-table__header" scope="col" width="150"><a href="#0" style="color: #class="govuk-link"">Days remaining</a></th>
+              <th class="govuk-table__header" scope="col" width="200"><a href="#0" style="color: #class="govuk-link"">Licence status</a></th>
+              <!-- <th class="govuk-table__header" scope="col" width="210"><a href="#0" style="color: #class="govuk-link"">Actions</a></th> -->
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Maria Shutterland</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">05 Sep 2022</td>
+              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col"><strong class="govuk-tag govuk-tag--red">  Expired </strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Expired</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="page_7a.html" style="color: #class="govuk-link"">Reactivate licence</a></td> -->
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Sonia Coward</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">05 Sep 2022</td>
+              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col"><strong class="govuk-tag govuk-tag--red">  Expired </strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Expired</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Reactivate licence</a></td> -->
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small ">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Carla Montoni</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">28 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">28 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">2</td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Active</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Extend licence</a></td> -->
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Jake Evans</a></td> 
+              <td class="govuk-table__cell" scope="col">23 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">23 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">5</td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Active</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="page_9a.html" style="color: #class="govuk-link"">Extend licence</a></td> -->
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Dean Loach</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">23 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">23 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">5</td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Active</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Extend licence</a></td> -->
+            </tr>
+         
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Ann Cooper</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">14 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">14 May 2023</td>
+              <td class="govuk-table__cell" scope="col"><strong class="govuk-tag govuk-tag--orange">Revoked </strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Revoked</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Reactivate licence</a></td> -->
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Ray Hadfield</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">14 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">270</td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Active</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Extend licence</a></td> -->
+            </tr>
+          
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Mike Kowasky</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"></td> -->
+              <td class="govuk-table__cell" scope="col">14 Dec 2022</td>
+              <td class="govuk-table__cell" scope="col">14 Feb 2023</td>
+              <td class="govuk-table__cell" scope="col">270</td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Active</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Extend licence</a></td> -->
+            </tr>
+      
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="col">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="select" name="select" type="checkbox" value="Maria Shuttera">
+                  <label class="govuk-label govuk-checkboxes__label" for="select"></label> 
+                </div>
+              </div></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Dave Bartram</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">View task</a></td> -->
+              <td class="govuk-table__cell" scope="col">21 Jan 2023</td>
+              <td class="govuk-table__cell" scope="col"></td>
+              <td class="govuk-table__cell" scope="col"> <strong class="govuk-tag govuk-tag--blue">Pending</strong></td>
+              <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">Extension approval requested</a></td>
+              <!-- <td class="govuk-table__cell" scope="col"><a href="#0" style="color: #class="govuk-link"">View task</a></td> -->
+            </tr>
+          </tbody>
+        </table>
+
+        <span><a href="page_8b.html" class="govuk-button govuk-button--secondary">Extend licences</a></span>
+      &nbsp;
+      <span><a href="page_6b.html" class="govuk-button govuk-button--secondary">Reinstate licences</a></span>
+      &nbsp;
+      <!-- <span><a href="page_10a.html" class="govuk-button govuk-button--secondary">Revoke licences</a></span>
+      &nbsp; -->
+
+        <!-- <nav role="navigation" aria-label="Pagination">
+          <div class="pagination__summary">Showing 1 – 9</div>
+          <ul class="pagination">
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page" style="color: #6f777b"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
+            <li class="pagination__item">1</li>
+            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page" style="color: #6f777b">Next <span aria-hidden="true" role="presentation">»</span></a></li>
+          </ul>
+        </nav>   -->
+
+        <br><br>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<style type="text/css">
+.govuk-radios__item label {
+  font-weight: bold;
+}
+.govuk-radios__item .govuk-hint {
+  padding-left: 15px;
+}
+    .sticky-nav a{
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+   .active{
+      color: #fff;
+      background-color: #005ea5;
+    }
+    .badge {
+      padding: 3px 6px;
+      background: #999;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .date {
+      float: right;
+    }
+dl {
+  width: 100%;
+}
+dt {
+  font-weight: normal;
+  clear: left;
+  display: inline-block;
+  width: 35%;
+  padding-bottom:5px;
+}
+dd {
+  padding-bottom:5px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /*font-weight: 400;*/
+  /*background-color: red;*/
+}
+  .highlight {
+    border-bottom: 3px solid #ffbf47;
+    margin-right: 1px;
+    background-color: #fff2d3;
+    padding: 2px 0px 0px;
+}
+
+dt {
+  font-weight: bold;
+  padding-bottom: 30px;
+  width: 25%;
+}
+
+.download-header {
+  background-color: white;
+  border-bottom: 4px solid #005ea5;
+  margin-bottom: 30px;
+  padding: 15px;
+  position: relative;
+}
+
+
+.govuk-tabs ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  border-bottom: 2px solid #bfc1c3;
+  list-style: none;
+}
+.govuk-tabs ul li {
+  display: inline-block;
+}
+.govuk-tabs ul li a, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li h3, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li h2, .govuk-tabs ul li #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li legend, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li legend, .govuk-tabs ul li #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li .title, .govuk-tabs ul li #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li .govuk-button.link, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li legend:visited {
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -2px;
+  padding: 0 30px;
+}
+.govuk-tabs ul li.active a, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header h3, #ppl-drafting-tool .expanding-panel header .govuk-tabs ul li.active h3, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review h2, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header h2, #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active h2, .govuk-tabs ul li.active #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm legend, #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .application-confirm .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header legend, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review legend, .application-confirm #ppl-drafting-tool .expanding-panel header .granted-page.action-plan .objective-review .govuk-tabs ul li.active legend, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header legend, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .expanding-panel header .govuk-tabs ul li.active legend, .govuk-tabs ul li.active #ppl-drafting-tool .expandable > .header .title, #ppl-drafting-tool .expandable > .header .govuk-tabs ul li.active .title, .govuk-tabs ul li.active #ppl-drafting-tool .govuk-button.link, #ppl-drafting-tool .govuk-tabs ul li.active .govuk-button.link, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link h3:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link h2:visited, .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review .application-confirm legend:visited, .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .section-nav .step-link .granted-page.action-plan .objective-review legend:visited, .govuk-tabs ul li.active .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, .application-confirm .govuk-tabs ul li.active #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link legend:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active h3:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review h2:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active h2:visited, #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review .application-confirm legend:visited, #ppl-drafting-tool .granted-page.action-plan .objective-review .application-confirm .section-nav .step-link .govuk-tabs ul li.active legend:visited, .application-confirm #ppl-drafting-tool .section-nav .step-link .govuk-tabs ul li.active .granted-page.action-plan .objective-review legend:visited, .application-confirm #ppl-drafting-tool .granted-page.action-plan .objective-review .section-nav .step-link .govuk-tabs ul li.active legend:visited {
+  border: solid 2px #bfc1c3;
+  border-bottom: none;
+  padding-bottom: 2px;
+  color: #0b0c0c;
+  text-decoration: none;
+  pointer-events: none;
+  background-color: #f3f3f3;
+  cursor: default;
+}
+
+</style>
+
+
+{% endblock %}
